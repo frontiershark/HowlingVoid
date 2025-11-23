@@ -46,9 +46,9 @@
 
 /datum/species/akula/get_default_mutant_bodyparts()
 	return list(
-		"ears" = list("None", FALSE),
-		"tail" = list("Akula", TRUE),
-		"legs" = list("Normal Legs", FALSE),
+		FEATURE_EARS = list("None", FALSE),
+		FEATURE_TAIL = list("Akula", TRUE),
+		FEATURE_LEGS = list("Normal Legs", FALSE),
 	)
 
 /datum/species/akula/get_species_description()
@@ -69,44 +69,44 @@
 	perks += list(list(
 		SPECIES_PERK_TYPE = SPECIES_POSITIVE_PERK,
 		SPECIES_PERK_ICON = FA_ICON_TOOTH,
-		SPECIES_PERK_NAME = "Big Bites",
-		SPECIES_PERK_DESC = "Instead of throwing punches, you use your sharp teeth to bite for more damage."
+		SPECIES_PERK_NAME = "Челюсти",
+		SPECIES_PERK_DESC = "Вместо того, чтобы просто бить своих врагов, вы используете свои мощные челюсти.",
 	))
 	perks += list(list(
 		SPECIES_PERK_TYPE = SPECIES_POSITIVE_PERK,
 		SPECIES_PERK_ICON = FA_ICON_PERSON_WALKING,
-		SPECIES_PERK_NAME = "Space Walking",
-		SPECIES_PERK_DESC = "You can move around in zero-gravity environments, just like your ancestors."
+		SPECIES_PERK_NAME = "Как рыба в воде",
+		SPECIES_PERK_DESC = "Ты двигаться в нулевой гравитации так же легко, как и в воде.",
 	))
 	perks += list(list(
 		SPECIES_PERK_TYPE = SPECIES_POSITIVE_PERK,
 		SPECIES_PERK_ICON = FA_ICON_HAND,
-		SPECIES_PERK_NAME = "Slippery Skin",
-		SPECIES_PERK_DESC = "When sufficiently wet, you have a bonus chance to escape from grabs."
+		SPECIES_PERK_NAME = "Скользкая кожа",
+		SPECIES_PERK_DESC = "Если вы достаточно мокрые, у вас есть дополнительный шанс вырваться из захвата."
 	))
 	perks += list(list(
 		SPECIES_PERK_TYPE = SPECIES_NEUTRAL_PERK,
 		SPECIES_PERK_ICON = FA_ICON_SHIRT,
-		SPECIES_PERK_NAME = "Wetsuits",
-		SPECIES_PERK_DESC = "You spawn with clothing that will keep you perpetually wet if not removed."
+		SPECIES_PERK_NAME = "Гидрокостюмы",
+		SPECIES_PERK_DESC = "Вы появляетесь в одежде, которая будет держать вас постоянно мокрой, если ее не снять."
 	))
 	perks += list(list(
 		SPECIES_PERK_TYPE = SPECIES_NEGATIVE_PERK,
 		SPECIES_PERK_ICON = FA_ICON_LUNGS,
-		SPECIES_PERK_NAME = "Gills",
-		SPECIES_PERK_DESC = "If you are not wet, you will not be able to breathe oxygen!",
+		SPECIES_PERK_NAME = "Жабры",
+		SPECIES_PERK_DESC = "Если вы не мокрые, вы не сможете дышать кислородом!",
 	))
 	perks += list(list(
 		SPECIES_PERK_TYPE = SPECIES_NEGATIVE_PERK,
 		SPECIES_PERK_ICON = FA_ICON_ARROW_DOWN,
-		SPECIES_PERK_NAME = "Nomadic DNA",
-		SPECIES_PERK_DESC = "You never want to stay in one place."
+		SPECIES_PERK_NAME = "ДНК кочевников",
+		SPECIES_PERK_DESC = "Никогда не хочется оставаться на одном месте."
 	))
 	perks += list(list(
 		SPECIES_PERK_TYPE = SPECIES_NEGATIVE_PERK,
 		SPECIES_PERK_ICON = FA_ICON_PERSON_FALLING,
-		SPECIES_PERK_NAME = "Slippery Soles",
-		SPECIES_PERK_DESC = "When sufficiently wet, all slips will send you flying, even just a wet floor.",
+		SPECIES_PERK_NAME = "Скользкие ступни",
+		SPECIES_PERK_DESC = "Когда вы достаточно мокрые, все скольжения отправят вас в полет, даже просто мокрый пол.",
 	))
 	return perks
 
@@ -133,20 +133,20 @@
 			main_color = "#DB35DE"
 			secondary_color = "#BE3AFE"
 			tertiary_color = "#F5E2EE"
-	features["mcolor"] = main_color
-	features["mcolor2"] = secondary_color
-	features["mcolor3"] = tertiary_color
+	features[FEATURE_MUTANT_COLOR] = main_color
+	features[FEATURE_MUTANT_COLOR_TWO] = secondary_color
+	features[FEATURE_MUTANT_COLOR_THREE] = tertiary_color
 	return features
 
 /datum/species/akula/prepare_human_for_preview(mob/living/carbon/human/akula)
 	var/main_color = "#1CD3E5"
 	var/secondary_color = "#6AF1D6"
 	var/tertiary_color = "#CCF6E2"
-	akula.dna.features["mcolor"] = main_color
-	akula.dna.features["mcolor2"] = secondary_color
-	akula.dna.features["mcolor3"] = tertiary_color
-	akula.dna.mutant_bodyparts["tail"] = list(MUTANT_INDEX_NAME = "Akula", MUTANT_INDEX_COLOR_LIST = list(main_color, secondary_color, tertiary_color))
-	akula.dna.features["legs"] = "Normal Legs"
+	akula.dna.features[FEATURE_MUTANT_COLOR] = main_color
+	akula.dna.features[FEATURE_MUTANT_COLOR_TWO] = secondary_color
+	akula.dna.features[FEATURE_MUTANT_COLOR_THREE] = tertiary_color
+	akula.dna.mutant_bodyparts[FEATURE_TAIL] = list(MUTANT_INDEX_NAME = "Akula", MUTANT_INDEX_COLOR_LIST = list(main_color, secondary_color, tertiary_color))
+	akula.dna.features[FEATURE_LEGS] = "Normal Legs"
 	regenerate_organs(akula, src, visual_only = TRUE)
 	akula.update_body(TRUE)
 
@@ -254,12 +254,12 @@
 	// Relieve the negative moodlet
 	akula.clear_mood_event("dry_skin")
 	// The timer which will initiate above 10 wet_stacks, and call dried() once the timer runs out
-	dry_up_timer = addtimer(CALLBACK(src, PROC_REF(dried), akula), DRY_UP_TIME, TIMER_UNIQUE | TIMER_STOPPABLE)
+	dry_up_timer = addtimer(CALLBACK(src, PROC_REF(dried), akula), DRY_UP_TIME, TIMER_UNIQUE | TIMER_STOPPABLE | TIMER_DELETE_ME)
 
 /// This proc is called after a mob with the TRAIT_SLIPPERY has its related timer run out
 /datum/species/akula/proc/dried(mob/living/carbon/akula)
 	// A moodlet which will not go away until the user gets wet
-	akula.add_mood_event("dry_skin", /datum/mood_event/dry_skin)
+	akula?.add_mood_event("dry_skin", /datum/mood_event/dry_skin)
 
 /// A simple overwrite which calls parent to listen to wet_stacks
 /datum/status_effect/fire_handler/wet_stacks/tick(delta_time)

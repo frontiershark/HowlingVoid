@@ -34,10 +34,10 @@
 
 /datum/species/vulpkanin/get_default_mutant_bodyparts()
 	return list(
-		"tail" = list("Fox", TRUE),
-		"snout" = list("Mammal, Long", TRUE),
-		"ears" = list("Fox", TRUE),
-		"legs" = list("Normal Legs", FALSE),
+		FEATURE_TAIL = list("Fox", TRUE),
+		FEATURE_SNOUT = list("Mammal, Long", TRUE),
+		FEATURE_EARS = list("Fox", TRUE),
+		FEATURE_LEGS = list("Normal Legs", FALSE),
 	)
 
 /obj/item/organ/tongue/vulpkanin
@@ -68,9 +68,9 @@
 		if(5)
 			main_color = "#999999"
 			second_color = "#EEEEEE"
-	features["mcolor"] = main_color
-	features["mcolor2"] = second_color
-	features["mcolor3"] = second_color
+	features[FEATURE_MUTANT_COLOR] = main_color
+	features[FEATURE_MUTANT_COLOR_TWO] = second_color
+	features[FEATURE_MUTANT_COLOR_THREE] = second_color
 	return features
 
 /datum/species/vulpkanin/get_random_body_markings(list/passed_features)
@@ -91,12 +91,12 @@
 	var/main_color = "#FF8800"
 	var/second_color = "#FFFFFF"
 
-	vulp.dna.features["mcolor"] = main_color
-	vulp.dna.features["mcolor2"] = second_color
-	vulp.dna.features["mcolor3"] = second_color
-	vulp.dna.mutant_bodyparts["snout"] = list(MUTANT_INDEX_NAME = "Mammal, Long", MUTANT_INDEX_COLOR_LIST = list(main_color, main_color, main_color))
-	vulp.dna.mutant_bodyparts["tail"] = list(MUTANT_INDEX_NAME = "Husky", MUTANT_INDEX_COLOR_LIST = list(second_color, main_color, main_color))
-	vulp.dna.mutant_bodyparts["ears"] = list(MUTANT_INDEX_NAME = "Wolf", MUTANT_INDEX_COLOR_LIST = list(main_color, second_color, second_color))
+	vulp.dna.features[FEATURE_MUTANT_COLOR] = main_color
+	vulp.dna.features[FEATURE_MUTANT_COLOR_TWO] = second_color
+	vulp.dna.features[FEATURE_MUTANT_COLOR_THREE] = second_color
+	vulp.dna.mutant_bodyparts[FEATURE_SNOUT] = list(MUTANT_INDEX_NAME = "Mammal, Long", MUTANT_INDEX_COLOR_LIST = list(main_color, main_color, main_color))
+	vulp.dna.mutant_bodyparts[FEATURE_TAIL] = list(MUTANT_INDEX_NAME = "Husky", MUTANT_INDEX_COLOR_LIST = list(second_color, main_color, main_color))
+	vulp.dna.mutant_bodyparts[FEATURE_EARS] = list(MUTANT_INDEX_NAME = "Wolf", MUTANT_INDEX_COLOR_LIST = list(main_color, second_color, second_color))
 	regenerate_organs(vulp, src, visual_only = TRUE)
 	vulp.update_body(TRUE)
 
@@ -134,6 +134,12 @@
 	if(ears)
 		var/datum/action/cooldown/spell/teshari_hearing/hearing_action = new
 		hearing_action.Grant(H)
+
+	// === Вульпиный нюх ===
+	var/datum/action/cooldown/scent_scan/vulp/scent = new()
+	scent.Grant(H)
+	var/datum/action/cooldown/scent_tracking/track = new()
+	track.Grant(H)
 
 
 /datum/species/vulpkanin/on_species_loss(mob/living/carbon/human/H, datum/species/new_species, pref_load)
@@ -176,15 +182,9 @@
 		),
 		list(
 			SPECIES_PERK_TYPE = SPECIES_NEUTRAL_PERK,
-			SPECIES_PERK_ICON = FA_ICON_ANGRY,
+			SPECIES_PERK_ICON = FA_ICON_LINES_LEANING,
 			SPECIES_PERK_NAME = "Острые когти",
 			SPECIES_PERK_DESC = "У вульп очень острые когти.",
-		),
-		list(
-			SPECIES_PERK_TYPE = SPECIES_NEUTRAL_PERK,
-			SPECIES_PERK_ICON = FA_ICON_ANGRY,
-			SPECIES_PERK_NAME = "Шерсть",
-			SPECIES_PERK_DESC = "Вы хорошо переносите холод, но вам тяжело в жару. Интересный факт, а вы знали что шерсть хорошо горит? :)",
 		),
 		list(
 			SPECIES_PERK_TYPE = SPECIES_NEUTRAL_PERK,

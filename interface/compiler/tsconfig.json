@@ -1,0 +1,32 @@
+{
+	"compilerOptions": {
+		"allowJs": true,
+		"allowSyntheticDefaultImports": true,
+		"baseUrl": ".",
+		"checkJs": false,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"isolatedModules": true,
+		"jsx": "preserve",
+		"lib": ["DOM", "DOM.Iterable", "ESNext", "ScriptHost"],
+		"module": "ESNext",
+		"moduleResolution": "Bundler",
+		"noEmit": true,
+		"paths": {
+			"app": ["src/app"],
+			"app/*": ["src/app/*"],
+			"chat-panel": ["src/chat-panel"],
+			"chat-panel/*": ["src/chat-panel/*"],
+			"chat-input": ["src/chat-input"],
+			"chat-input/*": ["src/chat-input/*"],
+			"dev-server": ["src/dev-server"],
+			"dev-server/*": ["src/dev-server/*"]
+		},
+		"resolveJsonModule": true,
+		"skipLibCheck": true,
+		"strict": false,
+		"strictNullChecks": true,
+		"target": "ESNext"
+	},
+	"include": ["./global.d.ts", "./src"]
+}

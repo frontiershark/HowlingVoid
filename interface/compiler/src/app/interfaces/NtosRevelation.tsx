@@ -1,0 +1,56 @@
+import { Button, LabeledList, Section } from 'tgui-core/components';
+import type { BooleanLike } from 'tgui-core/react';
+
+import { useBackend } from '../backend';
+import { NtosWindow } from '../layouts';
+import { usePreferencesLocalization } from './localization';
+
+type Data = {
+  armed: BooleanLike;
+};
+
+export const NtosRevelation = (props) => {
+  const { act, data } = useBackend<Data>();
+  const { t } = usePreferencesLocalization(data);
+  const { armed } = data;
+
+  return (
+    <NtosWindow width={400} height={250}>
+      <NtosWindow.Content>
+        <Section>
+          <Button.Input
+            fluid
+            buttonText="Obfuscate Name..."
+            onCommit={(value) =>
+              act('PRG_obfuscate', {
+                new_name: value,
+              })
+            }
+            mb={1}
+          />
+          <LabeledList>
+            <LabeledList.Item
+              label={t('ui.ntos_revelation.payload_status')}
+              buttons={
+                <Button
+                  content={armed ? 'ARMED' : 'DISARMED'}
+                  color={armed ? 'bad' : 'average'}
+                  onClick={() => act('PRG_arm')}
+                />
+              }
+            />
+          </LabeledList>
+          <Button
+            fluid
+            bold
+            content="ACTIVATE"
+            textAlign="center"
+            color="bad"
+            disabled={!armed}
+            onClick={() => act('PRG_activate')}
+          />
+        </Section>
+      </NtosWindow.Content>
+    </NtosWindow>
+  );
+};

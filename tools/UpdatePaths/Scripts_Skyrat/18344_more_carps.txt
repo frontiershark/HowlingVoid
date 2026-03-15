@@ -1,1 +1,0 @@
-/mob/living/simple_animal/hostile/carp/megacarp/shorki : /mob/living/basic/carp/mega/shorki{@OLD}

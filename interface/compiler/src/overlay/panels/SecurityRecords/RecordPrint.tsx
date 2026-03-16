@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useBackend, useLocalState } from 'tgui/backend';
+import { useBackend, useLocalState } from 'overlay/backend';
 import { Box, Button, Input, Section, Stack } from 'tgui-core/components';
 
 import { usePreferencesLocalization } from '../localization';

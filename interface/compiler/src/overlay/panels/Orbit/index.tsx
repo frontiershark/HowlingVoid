@@ -4,7 +4,7 @@ import {
   type SetStateAction,
   useState,
 } from 'react';
-import { Window } from 'tgui/layouts';
+import { Window } from 'overlay/layouts';
 import { Stack } from 'tgui-core/components';
 
 import { usePreferencesLocalization } from '../localization';

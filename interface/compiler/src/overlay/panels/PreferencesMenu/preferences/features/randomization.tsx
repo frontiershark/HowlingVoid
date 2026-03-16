@@ -1,4 +1,4 @@
-import { useBackend } from 'tgui/backend';
+import { useBackend } from 'overlay/backend';
 import { Button, Stack } from 'tgui-core/components';
 
 import { RandomizationButton } from '../../components/RandomizationButton';

@@ -1,6 +1,6 @@
-import { useBackend } from 'tgui/backend';
-import { BotControl, BotSettings } from 'tgui/interfaces/SimpleBot';
-import { Window } from 'tgui/layouts';
+import { useBackend } from 'overlay/backend';
+import { BotControl, BotSettings } from 'overlay/interfaces/SimpleBot';
+import { Window } from 'overlay/layouts';
 import {
   Button,
   DmIcon,

@@ -4,8 +4,6 @@
  * @license MIT
  */
 
-import { sendLogEntry } from 'tgui-dev-server/link/client';
-
 const LEVEL_DEBUG = 0;
 const LEVEL_LOG = 1;
 const LEVEL_INFO = 2;
@@ -21,10 +19,6 @@ interface Logger {
 }
 
 const log = (level: number, namespace = 'Generic', ...args: any[]): void => {
-  // Send logs to a remote log collector
-  if (process.env.NODE_ENV !== 'production') {
-    sendLogEntry(level, namespace, ...args);
-  }
   // Send important logs to the backend
   if (level >= LEVEL_INFO) {
     const logEntry =

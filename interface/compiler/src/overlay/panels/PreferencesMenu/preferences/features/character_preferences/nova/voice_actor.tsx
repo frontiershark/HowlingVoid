@@ -1,5 +1,5 @@
 // THIS IS A NOVA SECTOR UI FILE
-import { useBackend } from 'tgui/backend';
+import { useBackend } from 'overlay/backend';
 import { Button, Stack } from 'tgui-core/components';
 
 import {

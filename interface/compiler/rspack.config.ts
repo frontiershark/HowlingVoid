@@ -129,12 +129,15 @@ export default defineConfig({
   ],
   resolve: {
     extensions: ['.tsx', '.ts', '.js', '.jsx'],
-    alias: Object.fromEntries(
-      Object.entries(entries).map(([name, entry]) => [
-        name,
-        path.resolve(dirname, entry),
-      ]),
-    ),
+    alias: {
+      ...Object.fromEntries(
+        Object.entries(entries).map(([name, entry]) => [
+          name,
+          path.resolve(dirname, entry),
+        ]),
+      ),
+      common: path.resolve(dirname, './src/common'),
+    },
   },
   stats: createStats(true),
   target: ['web', 'browserslist:edge >= 123'],

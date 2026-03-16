@@ -4,16 +4,15 @@
  * @license MIT
  */
 
-import './styles/main.scss';
-import './styles/themes/light.scss';
+import './common/styles/main.scss';
+import './common/styles/themes/light.scss';
 
 import { createRoot } from 'react-dom/client';
 import { setupGlobalEvents } from 'tgui-core/events';
 import { captureExternalLinks } from 'tgui-core/links';
-import { setupHotReloading } from 'tgui-dev-server/link/client';
-import { App } from './app';
-import { bus } from './events/listeners';
-import { setupPanelFocusHacks } from './panelFocus';
+import { App } from './core/app';
+import { bus } from './core/events/listeners';
+import { setupPanelFocusHacks } from './layout/panel/panelFocus';
 
 const root = createRoot(document.getElementById('react-root')!);
 
@@ -54,9 +53,7 @@ function setupApp() {
 
   // Enable hot module reloading
   if (import.meta.webpackHot) {
-    setupHotReloading();
-
-    import.meta.webpackHot.accept(['./app'], () => {
+    import.meta.webpackHot.accept(['./core/app'], () => {
       render(<App />);
     });
   }

@@ -5,17 +5,16 @@
  */
 
 // Themes
-import './styles/main.scss';
+import './common/styles/main.scss';
 
 import { setupGlobalEvents } from 'tgui-core/events';
 import { setupHotKeys } from 'tgui-core/hotkeys';
 import { captureExternalLinks } from 'tgui-core/links';
-import { setupHotReloading } from 'tgui-dev-server/link/client';
-import { App } from './App';
-import { setDebugHotKeys } from './debug/use-debug';
-import { bus } from './events/listeners';
-import { render } from './renderer';
-import { createStackAugmentor } from './stack';
+import { App } from './core/App';
+import { setDebugHotKeys } from './test/debug/use-debug';
+import { bus } from './core/events/listeners';
+import { render } from './core/renderer';
+import { createStackAugmentor } from './core/stack';
 
 function setupApp() {
   // Delay setup
@@ -41,8 +40,7 @@ function setupApp() {
   // Enable hot module reloading
   if (import.meta.webpackHot) {
     setDebugHotKeys();
-    setupHotReloading();
-    import.meta.webpackHot.accept(['./layouts', './routes', './App'], () =>
+    import.meta.webpackHot.accept(['./layouts', './core/routes', './core/App'], () =>
       render(<App />),
     );
   }

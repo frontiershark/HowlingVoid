@@ -5,7 +5,7 @@
  */
 
 import { storage } from 'common/storage';
-import { createLogger } from 'tgui/logging';
+import { createLogger } from 'overlay/logging';
 import { MAX_CONNECTIONS_STORED } from './constants';
 import { type ConnectionRecord, connectionsMatch } from './helpers';
 

@@ -1,5 +1,5 @@
 import type { Dispatch, SetStateAction } from 'react';
-import { useBackend } from 'tgui/backend';
+import { useBackend } from 'overlay/backend';
 import { Button, Stack } from 'tgui-core/components';
 
 import type { AirAlarmData, AlarmScreen } from '../types';

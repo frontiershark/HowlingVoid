@@ -4,7 +4,7 @@
   useEffect,
   useState,
 } from 'react';
-import { useBackend } from 'tgui/backend';
+import { useBackend } from 'overlay/backend';
 import { Box, Dropdown, Stack } from 'tgui-core/components';
 import { classes } from 'tgui-core/react';
 import { capitalizeFirst } from 'tgui-core/string';

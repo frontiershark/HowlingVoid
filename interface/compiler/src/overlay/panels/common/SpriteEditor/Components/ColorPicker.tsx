@@ -1,5 +1,5 @@
 import { type ReactNode, useCallback, useRef, useState } from 'react';
-import transparency_checkerboard from 'tgui/assets/transparency_checkerboard.svg';
+import transparency_checkerboard from 'overlay/assets/transparency_checkerboard.svg';
 import {
   Box,
   Input,

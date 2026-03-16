@@ -2,7 +2,7 @@
 // Ported from Bubberstation: https://github.com/Bubberstation/Bubberstation/commit/07daef9517a879f04281fe4b97b69d4f9a6d2338
 
 import { type ComponentProps, type ReactNode, useRef, useState } from 'react';
-import { useBackend } from 'tgui/backend';
+import { useBackend } from 'overlay/backend';
 import { type Box, Button, Floating, Icon } from 'tgui-core/components';
 import { KEY } from 'tgui-core/keys';
 import { classes } from 'tgui-core/react';

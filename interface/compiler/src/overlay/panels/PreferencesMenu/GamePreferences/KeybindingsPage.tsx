@@ -1,7 +1,7 @@
 import { range, sortBy } from 'es-toolkit';
 import { Component } from 'react';
-import { resolveAsset } from 'tgui/assets';
-import { useBackend } from 'tgui/backend';
+import { resolveAsset } from 'overlay/assets';
+import { useBackend } from 'overlay/backend';
 import {
   Box,
   Button,

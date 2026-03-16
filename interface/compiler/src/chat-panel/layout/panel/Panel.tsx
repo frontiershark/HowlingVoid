@@ -5,7 +5,7 @@
  */
 
 import { useAtom, useAtomValue } from 'jotai';
-import { Pane } from 'tgui/layouts';
+import { Pane } from 'overlay/layouts';
 import { Button, Section, Stack } from 'tgui-core/components';
 import { visibleAtom } from './audio/atoms';
 import { NowPlayingWidget } from './audio/NowPlayingWidget';

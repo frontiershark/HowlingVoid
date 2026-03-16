@@ -1,5 +1,5 @@
 import type { Dispatch, SetStateAction } from 'react';
-import { useBackend } from 'tgui/backend';
+import { useBackend } from 'overlay/backend';
 import { Box, Button, Icon, Input, Section, Stack } from 'tgui-core/components';
 import type { BooleanStyleMap, StringStyleMap } from 'tgui-core/ui';
 import { usePreferencesLocalization } from '../../../localization';

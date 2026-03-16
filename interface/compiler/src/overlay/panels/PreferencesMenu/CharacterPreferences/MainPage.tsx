@@ -1,8 +1,8 @@
 import { sortBy } from 'es-toolkit';
 import { filter, map } from 'es-toolkit/compat';
 import { type ReactNode, useState } from 'react';
-import { useBackend } from 'tgui/backend';
-import { sendAct } from 'tgui/events/act';
+import { useBackend } from 'overlay/backend';
+import { sendAct } from 'overlay/events/act';
 import {
   Box,
   Button,

@@ -1,7 +1,7 @@
 import { Fragment, useState } from 'react';
-import { useBackend } from 'tgui/backend';
-import { CharacterPreview } from 'tgui/interfaces/common/CharacterPreview';
-import { removeAllSkiplines } from 'tgui/interfaces/TextInputModal'; // NOVA EDIT ADDITION: Multiple loadout presets
+import { useBackend } from 'overlay/backend';
+import { CharacterPreview } from 'overlay/interfaces/common/CharacterPreview';
+import { removeAllSkiplines } from 'overlay/interfaces/TextInputModal'; // NOVA EDIT ADDITION: Multiple loadout presets
 import {
   Box,
   Button,

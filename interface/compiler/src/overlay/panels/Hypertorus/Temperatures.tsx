@@ -1,4 +1,4 @@
-import { useBackend } from 'tgui/backend';
+import { useBackend } from 'overlay/backend';
 import { Box, Flex, Icon, Section, Stack, Tooltip } from 'tgui-core/components';
 
 import type { HypertorusFuel } from '.';

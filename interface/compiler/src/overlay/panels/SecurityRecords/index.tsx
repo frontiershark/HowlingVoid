@@ -1,5 +1,5 @@
-import { useBackend } from 'tgui/backend';
-import { Window } from 'tgui/layouts';
+import { useBackend } from 'overlay/backend';
+import { Window } from 'overlay/layouts';
 import { Box, Button, Icon, NoticeBox, Stack } from 'tgui-core/components';
 
 import { usePreferencesLocalization } from '../localization';

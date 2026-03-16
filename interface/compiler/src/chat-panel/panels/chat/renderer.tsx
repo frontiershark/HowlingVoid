@@ -5,7 +5,7 @@
  */
 
 import { createRoot } from 'react-dom/client';
-import { createLogger } from 'tgui/logging';
+import { createLogger } from 'overlay/logging';
 import { Tooltip } from 'tgui-core/components';
 import { EventEmitter } from 'tgui-core/events';
 import { classes } from 'tgui-core/react';

@@ -1,5 +1,5 @@
-import { useBackend } from 'tgui/backend';
-import { Window } from 'tgui/layouts';
+import { useBackend } from 'overlay/backend';
+import { Window } from 'overlay/layouts';
 import { Button, LabeledList, Section, Stack } from 'tgui-core/components';
 import type { BooleanLike } from 'tgui-core/react';
 import { capitalizeAll } from 'tgui-core/string';

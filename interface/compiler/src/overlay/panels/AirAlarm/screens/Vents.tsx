@@ -1,4 +1,4 @@
-import { useBackend } from 'tgui/backend';
+import { useBackend } from 'overlay/backend';
 import { NoticeBox, VirtualList } from 'tgui-core/components';
 
 import { Vent } from '../../common/AtmosControls';

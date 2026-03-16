@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { useBackend } from 'tgui/backend';
-import { sanitizeText } from 'tgui/sanitize';
+import { useBackend } from 'overlay/backend';
+import { sanitizeText } from 'overlay/sanitize';
 import {
   Box,
   Button,

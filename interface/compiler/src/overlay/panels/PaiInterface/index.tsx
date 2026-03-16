@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Window } from 'tgui/layouts';
+import { Window } from 'overlay/layouts';
 import { Stack, Tabs } from 'tgui-core/components';
 
 import { usePreferencesLocalization } from '../localization';

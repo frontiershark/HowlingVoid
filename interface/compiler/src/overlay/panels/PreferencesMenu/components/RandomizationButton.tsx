@@ -1,4 +1,4 @@
-import { useBackend } from 'tgui/backend';
+import { useBackend } from 'overlay/backend';
 import { Dropdown } from 'tgui-core/components';
 import { exhaustiveCheck } from 'tgui-core/exhaustive';
 

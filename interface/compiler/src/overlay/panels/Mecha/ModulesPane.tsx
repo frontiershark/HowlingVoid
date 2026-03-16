@@ -1,4 +1,4 @@
-import { GasmixParser } from 'tgui/interfaces/common/GasmixParser';
+import { GasmixParser } from 'overlay/interfaces/common/GasmixParser';
 import {
   Box,
   Button,

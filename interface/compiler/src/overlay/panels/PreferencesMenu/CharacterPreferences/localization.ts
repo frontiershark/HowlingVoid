@@ -1,5 +1,5 @@
 import { useCallback } from 'react';
-import { useBackend } from 'tgui/backend';
+import { useBackend } from 'overlay/backend';
 
 import type { PreferencesMenuData } from '../types';
 import { features } from '../preferences/features';

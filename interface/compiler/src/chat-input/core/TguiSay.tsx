@@ -1,7 +1,7 @@
 import './styles/main.scss';
 
 import { useEffect, useRef, useState } from 'react';
-import { dragStartHandler } from 'tgui/drag';
+import { dragStartHandler } from 'overlay/drag';
 import { isEscape, KEY } from 'tgui-core/keys';
 import { type BooleanLike, classes } from 'tgui-core/react';
 

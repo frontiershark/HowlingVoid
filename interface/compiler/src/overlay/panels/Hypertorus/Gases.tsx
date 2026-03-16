@@ -1,7 +1,7 @@
 import { sortBy } from 'es-toolkit';
 import { filter } from 'es-toolkit/compat';
-import { useBackend } from 'tgui/backend';
-import { getGasColor, getGasLabel } from 'tgui/constants';
+import { useBackend } from 'overlay/backend';
+import { getGasColor, getGasLabel } from 'overlay/constants';
 import {
   Box,
   Button,

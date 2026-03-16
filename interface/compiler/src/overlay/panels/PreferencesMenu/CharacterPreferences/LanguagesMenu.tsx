@@ -1,4 +1,4 @@
-﻿import { useBackend } from 'tgui/backend';
+﻿import { useBackend } from 'overlay/backend';
 import { BlockQuote, Box, Button, Section, Stack } from 'tgui-core/components';
 
 import type { Language, PreferencesMenuData } from '../types';

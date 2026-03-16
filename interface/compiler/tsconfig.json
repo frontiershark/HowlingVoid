@@ -14,11 +14,13 @@
 		"noEmit": true,
 		"paths": {
 			"overlay": ["src/overlay"],
-			"app/*": ["src/app/*"],
+			"overlay/*": ["src/overlay/*"],
 			"chat-panel": ["src/chat-panel"],
 			"chat-panel/*": ["src/chat-panel/*"],
 			"chat-input": ["src/chat-input"],
 			"chat-input/*": ["src/chat-input/*"],
+			"common": ["src/common"],
+			"common/*": ["src/common/*"]
 		},
 		"resolveJsonModule": true,
 		"skipLibCheck": true,

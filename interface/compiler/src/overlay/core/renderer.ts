@@ -1,4 +1,4 @@
-import { perf } from 'common/perf';
+import { perf } from 'common/helpers/perf';
 import type { ReactNode } from 'react';
 import { createRoot, type Root } from 'react-dom/client';
 import { createLogger } from './logging';

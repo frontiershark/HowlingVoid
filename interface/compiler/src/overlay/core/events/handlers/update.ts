@@ -1,4 +1,4 @@
-import { perf } from 'common/perf';
+import { perf } from 'common/helpers/perf';
 import { setupDrag } from '../../drag';
 import { logger } from '../../logging';
 import { resumeRenderer } from '../../renderer';

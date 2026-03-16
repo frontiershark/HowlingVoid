@@ -1,5 +1,5 @@
-import { storage } from 'common/storage';
-import { smoothMerge } from 'common/type-safety';
+import { storage } from 'common/core/storage';
+import { smoothMerge } from 'common/helpers/type-safety';
 import { omit, pick } from 'es-toolkit';
 import { setMusicVolume } from '../../partial/audio/handlers';
 import { chatRenderer } from '../chat/renderer';

@@ -1,8 +1,8 @@
 @use 'sass:color';
 
-@use '../base.scss';
-@use '../colors.scss';
-@use '../functions.scss' as *;
+@use '../common/styles/base.scss';
+@use '../common/styles/colors.scss';
+@use '../common/styles/functions.scss' as *;
 
 :root {
   --nuclear-beige: hsl(50, 33%, 84%);

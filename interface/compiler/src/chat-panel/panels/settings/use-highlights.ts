@@ -1,4 +1,4 @@
-import { storage } from 'common/storage';
+import { storage } from 'common/core/storage';
 import { useAtom, useAtomValue } from 'jotai';
 import { createUuid } from 'tgui-core/uuid';
 import { chatRenderer } from '../chat/renderer';

@@ -4,7 +4,7 @@
  * @license MIT
  */
 
-import { storage } from 'common/storage';
+import { storage } from 'common/core/storage';
 import { vecAdd, vecMultiply, vecScale, vecSubtract } from 'tgui-core/vector';
 import type { BooleanLike } from 'tgui-core/react';
 import { createLogger } from './logging';

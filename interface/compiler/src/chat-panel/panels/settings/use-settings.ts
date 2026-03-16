@@ -1,4 +1,4 @@
-import { storage } from 'common/storage';
+import { storage } from 'common/core/storage';
 import { useAtom, useAtomValue } from 'jotai';
 import { useEffect } from 'react';
 import { highlightsAtom, settingsAtom, settingsLoadedAtom } from './atoms';

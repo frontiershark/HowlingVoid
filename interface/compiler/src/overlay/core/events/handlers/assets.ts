@@ -1,4 +1,4 @@
-import { loadMappings } from 'common/assets';
+import { loadMappings } from 'common/core/assets';
 import { fetchRetry } from 'tgui-core/http';
 import { loadedMappings } from '../../assets';
 

@@ -4,7 +4,7 @@
  * @license MIT
  */
 
-import { createLogger } from 'overlay/logging';
+import { createLogger } from 'overlay/core/logging';
 
 const logger = createLogger('AudioPlayer');
 

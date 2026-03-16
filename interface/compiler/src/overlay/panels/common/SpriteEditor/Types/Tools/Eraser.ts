@@ -1,4 +1,4 @@
-import { sendAct as act } from 'overlay/events/act';
+import { sendAct as act } from 'overlay/core/events/act';
 import { parseHexColorString } from '../../colorSpaces';
 import { constrainToIconGrid, copyLayer, getDataPixel } from '../../helpers';
 import { Tool } from '../Tool';

@@ -1,4 +1,4 @@
-import { useBackend, useLocalState } from 'overlay/backend';
+import { useBackend, useLocalState } from 'overlay/core/backend';
 
 import type { MedicalRecord, MedicalRecordData } from './types';
 

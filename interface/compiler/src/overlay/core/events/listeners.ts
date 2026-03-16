@@ -1,4 +1,4 @@
-import { loadStyleSheet } from 'common/assets';
+import { loadStyleSheet } from 'common/core/assets';
 import { EventBus } from 'tgui-core/eventbus';
 import { handleLoadAssets } from './handlers/assets';
 import {

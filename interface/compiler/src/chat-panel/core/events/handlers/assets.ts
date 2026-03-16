@@ -1,4 +1,4 @@
-import { loadMappings } from 'common/assets';
+import { loadMappings } from 'common/core/assets';
 
 const loadedMappings = {} as Record<string, string>;
 

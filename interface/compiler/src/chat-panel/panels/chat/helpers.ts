@@ -1,4 +1,4 @@
-import { storage } from 'common/storage';
+import { storage } from 'common/core/storage';
 import { store } from '../../core/events/store';
 import {
   allChatAtom,

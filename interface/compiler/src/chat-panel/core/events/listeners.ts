@@ -1,4 +1,4 @@
-import { loadStyleSheet } from 'common/assets';
+import { loadStyleSheet } from 'common/core/assets';
 import { EventBus } from 'tgui-core/eventbus';
 import { playMusic, stopMusic } from '../../partial/audio/handlers';
 import { chatMessage } from '../../panels/chat/handlers';

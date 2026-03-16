@@ -164,7 +164,7 @@
 
 /datum/asset/simple/lobby
 	assets = list(
-		"FixedsysExcelsior3.01Regular.ttf" = 'html/browser/FixedsysExcelsior3.01Regular.ttf',
+		"FixedsysExcelsior3.01Regular.ttf" = '../assets/fonts/FixedsysExcelsior3.01Regular.ttf',
 	)
 
 // Howling Void Edit start

@@ -228,8 +228,8 @@
 						"}
 					output += "<hr style='background:#000000; border:0; height:3px'>"
 	var/datum/browser/panel = new(usr, "pmpanel", "Poll Management Panel", 780, 640)
-	panel.add_stylesheet("admin_panelscss", 'html/admin/admin_panels.css')
-	panel.add_stylesheet("admin_panelscss3", 'html/admin/admin_panels_css3.css')
+	panel.add_stylesheet("admin_panelscss", '../interface/native/panels/admin/admin_panels.css')
+	panel.add_stylesheet("admin_panelscss3", '../interface/native/panels/admin/admin_panels_css3.css')
 	panel.set_content(jointext(output, ""))
 	panel.open()
 
@@ -525,8 +525,8 @@
 	if(poll.poll_type == POLLTYPE_RATING)
 		panel_height = 320
 	var/datum/browser/panel = new(usr, "popanel", "Poll Option Panel", 370, panel_height)
-	panel.add_stylesheet("admin_panelscss", 'html/admin/admin_panels.css')
-	panel.add_stylesheet("admin_panelscss3", 'html/admin/admin_panels_css3.css')
+	panel.add_stylesheet("admin_panelscss", '../interface/native/panels/admin/admin_panels.css')
+	panel.add_stylesheet("admin_panelscss3", '../interface/native/panels/admin/admin_panels_css3.css')
 	panel.set_content(jointext(output, ""))
 	panel.open()
 

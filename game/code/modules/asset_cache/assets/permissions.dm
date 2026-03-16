@@ -1,7 +1,7 @@
 /datum/asset/simple/permissions
 	assets = list(
-		"search.js" = 'html/admin/search.js',
-		"panels.css" = 'html/admin/panels.css'
+		"search.js" = '../interface/native/panels/admin/search.js',
+		"panels.css" = '../interface/native/panels/admin/panels.css'
 	)
 
 /datum/asset/group/permissions

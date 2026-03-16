@@ -425,9 +425,9 @@ GLOBAL_LIST_INIT(unrecommended_builds, list(
 
 	// Initialize stat panel
 	stat_panel.initialize(
-		inline_html = file("html/statbrowser.html"),
-		inline_js = file("html/statbrowser.js"),
-		inline_css = file("html/statbrowser.css"),
+		inline_html = file("../interface/native/panels/dashboard/statbrowser.html"),
+		inline_js = file("../interface/native/panels/dashboard/statbrowser.js"),
+		inline_css = file("../interface/native/panels/dashboard/statbrowser.css"),
 	)
 	addtimer(CALLBACK(src, PROC_REF(check_panel_loaded)), 30 SECONDS)
 

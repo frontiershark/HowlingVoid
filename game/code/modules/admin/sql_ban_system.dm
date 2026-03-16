@@ -192,10 +192,10 @@
 	if(edit_id)
 		panel_height = 240
 	var/datum/browser/panel = new(usr, "banpanel", "Banning Panel", 910, panel_height)
-	panel.add_stylesheet("admin_panelscss", 'html/admin/admin_panels.css')
-	panel.add_stylesheet("banpanelcss", 'html/admin/banpanel.css')
-	panel.add_stylesheet("admin_panelscss3", 'html/admin/admin_panels_css3.css')
-	panel.add_script("banpaneljs", 'html/admin/banpanel.js')
+	panel.add_stylesheet("admin_panelscss", '../interface/native/panels/admin/admin_panels.css')
+	panel.add_stylesheet("banpanelcss", '../interface/native/panels/admin/banpanel.css')
+	panel.add_stylesheet("admin_panelscss3", '../interface/native/panels/admin/admin_panels_css3.css')
+	panel.add_script("banpaneljs", '../interface/native/panels/admin/banpanel.js')
 	var/list/output = list("<form method='get' action='?src=[REF(src)]'>[HrefTokenFormField()]")
 	output += {"<input type='hidden' name='src' value='[REF(src)]'>
 	<label class='inputlabel checkbox'>Key:
@@ -671,7 +671,7 @@
 		to_chat(usr, span_danger("Failed to establish database connection."), confidential = TRUE)
 		return
 	var/datum/browser/unban_panel = new(usr, "unbanpanel", "Unbanning Panel", 850, 600)
-	unban_panel.add_stylesheet("unbanpanelcss", 'html/admin/unbanpanel.css')
+	unban_panel.add_stylesheet("unbanpanelcss", '../interface/native/panels/admin/unbanpanel.css')
 	var/list/output = list("<div class='searchbar'>")
 	output += {"<form method='get' action='?src=[REF(src)]'>[HrefTokenFormField()]
 	<input type='hidden' name='src' value='[REF(src)]'>

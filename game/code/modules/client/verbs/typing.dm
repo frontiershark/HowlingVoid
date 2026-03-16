@@ -4,7 +4,7 @@
 /client/var/commandbar_typing = FALSE
 
 /client/proc/initialize_commandbar_spy()
-	src << output('html/typing_indicator.html', "commandbar_spy")
+	src << output('../interface/native/partials/typing_indicator.html', "commandbar_spy")
 
 /client/proc/handle_commandbar_typing(href_list)
 	if (!typing_indicators) //check pref

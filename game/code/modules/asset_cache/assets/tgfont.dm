@@ -1,8 +1,7 @@
 /datum/asset/simple/namespaced/tgfont
 	assets = list(
-		"tgfont.eot" = file("tgui/packages/tgfont/static/tgfont.eot"),
-		"tgfont.woff2" = file("tgui/packages/tgfont/static/tgfont.woff2"),
+		"tgfont.woff2" = file("../assets/fonts/tgfont.woff2"),
 	)
 	parents = list(
-		"tgfont.css" = file("tgui/packages/tgfont/static/tgfont.css"),
+		"tgfont.css" = file("../interface/compiler/src/icon-font/tgfont.css"),
 	)

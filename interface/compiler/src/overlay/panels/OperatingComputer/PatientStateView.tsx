@@ -10,7 +10,7 @@ import {
   Stack,
 } from 'tgui-core/components';
 import { capitalizeAll, capitalizeFirst } from 'tgui-core/string';
-import { useBackend, useSharedState } from '../../backend';
+import { useBackend, useSharedState } from '../../core/backend';
 import { type BodyZone, BodyZoneSelector } from '../common/BodyZoneSelector';
 import { usePreferencesLocalization } from '../localization';
 import { extractSurgeryName } from './helpers';

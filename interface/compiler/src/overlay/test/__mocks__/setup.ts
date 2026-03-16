@@ -11,11 +11,11 @@ const logger = {
   warn: () => {},
 };
 
-mock.module('../logging', () => ({
+mock.module('../../core/logging', () => ({
   createLogger: () => logger,
   logger,
 }));
 
-mock.module('../events/act', () => ({
+mock.module('../../core/events/act', () => ({
   sendAct: () => ({}),
 }));

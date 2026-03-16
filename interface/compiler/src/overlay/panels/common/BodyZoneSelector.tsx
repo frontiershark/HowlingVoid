@@ -1,7 +1,7 @@
 import { Component, createRef } from 'react';
 import { Image } from 'tgui-core/components';
 
-import { resolveAsset } from '../../assets';
+import { resolveAsset } from '../../core/assets';
 
 export enum BodyZone {
   Head = 'head',

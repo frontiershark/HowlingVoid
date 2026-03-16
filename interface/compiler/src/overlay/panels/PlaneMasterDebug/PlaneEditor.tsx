@@ -7,7 +7,7 @@ import {
   Tooltip,
 } from 'tgui-core/components';
 
-import { useBackend } from '../../backend';
+import { useBackend } from '../../core/backend';
 import { usePreferencesLocalization } from '../localization';
 import type { Plane } from './types';
 import { usePlaneDebugContext } from './usePlaneDebug';

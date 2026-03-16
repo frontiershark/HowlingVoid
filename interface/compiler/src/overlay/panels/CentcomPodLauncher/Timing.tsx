@@ -1,6 +1,6 @@
 import { Button, Divider, Section } from 'tgui-core/components';
 
-import { useBackend } from '../../backend';
+import { useBackend } from '../../core/backend';
 import { usePreferencesLocalization } from '../localization';
 import { DELAYS, REV_DELAYS } from './constants';
 import { DelayHelper } from './DelayHelper';

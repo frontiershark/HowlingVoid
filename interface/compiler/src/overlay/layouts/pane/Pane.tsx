@@ -6,8 +6,8 @@
 
 import { Box } from 'tgui-core/components';
 import { classes } from 'tgui-core/react';
-import { useBackend } from '../backend';
-import { Layout } from './Layout';
+import { useBackend } from '../../core/backend';
+import { Layout } from '../layout/Layout';
 
 type BoxProps = React.ComponentProps<typeof Box>;
 

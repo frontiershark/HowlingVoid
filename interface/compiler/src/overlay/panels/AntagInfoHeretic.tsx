@@ -11,9 +11,9 @@ import {
 } from 'tgui-core/components';
 import type { BooleanLike } from 'tgui-core/react';
 
-import { useBackend } from '../backend';
+import { useBackend } from '../core/backend';
 import { Window } from '../layouts';
-import { logger } from '../logging';
+import { logger } from '../core/logging';
 import { usePreferencesLocalization } from './localization';
 import { Rules } from './AntagInfoRules'; // NOVA EDIT ADDITION
 import {

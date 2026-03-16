@@ -14,7 +14,7 @@ import {
 } from 'tgui-core/components';
 
 import '../styles/interfaces/GreyscaleModifyMenu.scss';
-import { useBackend } from '../backend';
+import { useBackend } from '../core/backend';
 import { Window } from '../layouts';
 import { usePreferencesLocalization } from './localization';
 

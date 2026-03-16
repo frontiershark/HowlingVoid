@@ -3,7 +3,7 @@ import { useBackend } from 'overlay/backend';
 import { Box, Button, Section, Stack } from 'tgui-core/components';
 import { Window } from '../layouts';
 import { usePreferencesLocalization } from './localization';
-import deforest_logo from '../styles/assets/bg-deforest.svg';
+import deforest_logo from '../common/styles/assets/bg-deforest.svg';
 
 type Trauma = {
   full_name: string; // full "medical" name

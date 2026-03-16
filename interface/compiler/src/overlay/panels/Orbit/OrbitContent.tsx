@@ -7,7 +7,7 @@ import {
 } from 'tgui-core/components';
 import { toTitleCase } from 'tgui-core/string';
 
-import { useBackend } from '../../backend';
+import { useBackend } from '../../core/backend';
 import { ANTAG2COLOR } from './constants';
 import { getAntagCategories } from './helpers';
 import { OrbitCollapsible } from './OrbitCollapsible';

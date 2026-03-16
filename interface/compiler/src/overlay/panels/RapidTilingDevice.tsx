@@ -3,7 +3,7 @@ import { Box, Button, Section, Stack, Tabs } from 'tgui-core/components';
 import { classes } from 'tgui-core/react';
 import { capitalizeAll } from 'tgui-core/string';
 
-import { useBackend } from '../backend';
+import { useBackend } from '../core/backend';
 import { Window } from '../layouts';
 import { InfoSection } from './RapidConstructionDevice';
 

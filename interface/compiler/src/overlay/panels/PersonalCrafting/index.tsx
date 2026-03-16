@@ -15,7 +15,7 @@ import {
 } from 'tgui-core/components';
 import { createSearch } from 'tgui-core/string';
 
-import { useBackend } from '../../backend';
+import { useBackend } from '../../core/backend';
 import { Window } from '../../layouts';
 import { CATEGORY_ICONS_COOKING, CATEGORY_ICONS_CRAFTING } from './constants';
 import { FoodtypeContent } from './content/FoodtypeContent';

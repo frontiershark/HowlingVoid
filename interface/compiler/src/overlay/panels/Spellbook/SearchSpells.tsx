@@ -1,6 +1,6 @@
 import { useAtom } from 'jotai';
 import { Box, NoticeBox, Stack } from 'tgui-core/components';
-import { useBackend } from '../../backend';
+import { useBackend } from '../../core/backend';
 import { usePreferencesLocalization } from '../localization';
 import { spellSearchAtom } from '.';
 import { SpellTabDisplay } from './SpellTabDisplay';

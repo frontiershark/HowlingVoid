@@ -1,7 +1,7 @@
 import { Button, NoticeBox, Section, Table } from 'tgui-core/components';
 import type { BooleanLike } from 'tgui-core/react';
 
-import { useBackend } from '../backend';
+import { useBackend } from '../core/backend';
 import { Window } from '../layouts';
 import { usePreferencesLocalization } from './localization';
 

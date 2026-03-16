@@ -1,7 +1,7 @@
 import { Button, Table } from 'tgui-core/components';
 import { classes } from 'tgui-core/react';
 
-import { useBackend } from '../../backend';
+import { useBackend } from '../../core/backend';
 
 type Props = {
   color: string;

@@ -1,7 +1,7 @@
 import { Fragment, useState } from 'react';
 import { useBackend } from 'overlay/backend';
-import { CharacterPreview } from 'overlay/interfaces/common/CharacterPreview';
-import { removeAllSkiplines } from 'overlay/interfaces/TextInputModal'; // NOVA EDIT ADDITION: Multiple loadout presets
+import { CharacterPreview } from 'overlay/panels/common/CharacterPreview';
+import { removeAllSkiplines } from 'overlay/panels/TextInputModal'; // NOVA EDIT ADDITION: Multiple loadout presets
 import {
   Box,
   Button,

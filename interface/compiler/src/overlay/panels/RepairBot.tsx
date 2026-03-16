@@ -1,5 +1,5 @@
 import { useBackend } from 'overlay/backend';
-import { BotControl, BotSettings } from 'overlay/interfaces/SimpleBot';
+import { BotControl, BotSettings } from 'overlay/panels/SimpleBot';
 import { Window } from 'overlay/layouts';
 import {
   Button,

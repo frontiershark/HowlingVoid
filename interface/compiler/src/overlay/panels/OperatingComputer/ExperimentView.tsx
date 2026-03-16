@@ -1,5 +1,5 @@
 import { Button, NoticeBox, Section, Stack } from 'tgui-core/components';
-import { useBackend } from '../../backend';
+import { useBackend } from '../../core/backend';
 import { usePreferencesLocalization } from '../localization';
 import { Experiment, TechwebServer } from '../ExperimentConfigure';
 import type { OperatingComputerData } from './types';

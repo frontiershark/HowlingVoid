@@ -1,4 +1,4 @@
-import { useBackend } from '../../backend';
+import { useBackend } from '../../core/backend';
 import { GenericUplink, type Item } from '../Uplink/GenericUplink';
 
 type Category = {

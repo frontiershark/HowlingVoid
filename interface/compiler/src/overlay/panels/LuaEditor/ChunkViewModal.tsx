@@ -2,7 +2,7 @@ import hljs from 'highlight.js/lib/core';
 import type { Dispatch, SetStateAction } from 'react';
 import { Box, Button, Modal, Section } from 'tgui-core/components';
 
-import { sanitizeText } from '../../sanitize';
+import { sanitizeText } from '../../core/sanitize';
 import { usePreferencesLocalization } from '../localization';
 import type { LuaEditorModal } from './types';
 

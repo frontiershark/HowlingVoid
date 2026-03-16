@@ -15,7 +15,7 @@ import {
 import type { BooleanLike } from 'tgui-core/react';
 import { createSearch, toTitleCase } from 'tgui-core/string';
 
-import { useBackend, useSharedState } from '../backend';
+import { useBackend, useSharedState } from '../core/backend';
 import { Window } from '../layouts';
 import { type Beaker, BeakerDisplay } from './common/BeakerDisplay';
 import { bitflagInfo } from './Reagents/types';

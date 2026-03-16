@@ -1,7 +1,7 @@
 import { Box, Button, Section, Table } from 'tgui-core/components';
 import { toTitleCase } from 'tgui-core/string';
 
-import { useBackend } from '../backend';
+import { useBackend } from '../core/backend';
 import { Window } from '../layouts';
 import { usePreferencesLocalization } from './localization';
 

@@ -1,8 +1,8 @@
 import { Button, ColorBox, Section, Stack, Table } from 'tgui-core/components';
 
-import { useBackend } from '../backend';
+import { useBackend } from '../core/backend';
 import { NtosWindow } from '../layouts';
-import type { NTOSData } from '../layouts/NtosWindow';
+import type { NTOSData } from '../layouts/ntos-window/NtosWindow';
 import { usePreferencesLocalization } from './localization';
 
 export enum alert_relevancies {

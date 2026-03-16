@@ -1,5 +1,5 @@
 // THIS IS A NOVA SECTOR UI FILE
-import { useBackend } from '../../backend';
+import { useBackend } from '../../core/backend';
 import { BooleanLike } from 'tgui-core/react';
 import { useState } from 'react';
 import {

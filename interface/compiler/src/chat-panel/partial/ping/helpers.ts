@@ -1,5 +1,5 @@
 import { scale } from 'tgui-core/math';
-import { store } from '../events/store';
+import { store } from '../../core/events/store';
 import { lastPingedAtAtom, pingAtom } from './atoms';
 import {
   PING_QUEUE_SIZE,

@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Box, Button, Flex, Stack } from 'tgui-core/components';
 
-import { useBackend } from '../../backend';
+import { useBackend } from '../../core/backend';
 import type { Coordinates } from '../common/Connections';
 import { Pin } from './Pin';
 import type { DataEvidence, EvidenceFn } from './types';

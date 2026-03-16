@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Button, NoticeBox, Section, Table, Tabs } from 'tgui-core/components';
 import type { BooleanLike } from 'tgui-core/react';
 
-import { useBackend } from '../backend';
+import { useBackend } from '../core/backend';
 import { Window } from '../layouts';
 import { usePreferencesLocalization } from './localization';
 import { ShuttleConsoleContent } from './ShuttleConsole';

@@ -1,7 +1,7 @@
 import { Box, Button, Section } from 'tgui-core/components';
 import { classes } from 'tgui-core/react';
 
-import { useBackend } from '../../backend';
+import { useBackend } from '../../core/backend';
 import { usePreferencesLocalization } from '../localization';
 import type { PodLauncherData } from './types';
 

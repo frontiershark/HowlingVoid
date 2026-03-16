@@ -11,7 +11,7 @@ import {
 } from 'tgui-core/components';
 import { createSearch, decodeHtmlEntities } from 'tgui-core/string';
 
-import { useBackend } from '../backend';
+import { useBackend } from '../core/backend';
 import { Window } from '../layouts';
 import { InputButtons } from './common/InputButtons';
 import { Loader } from './common/Loader';

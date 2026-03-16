@@ -6,8 +6,8 @@ import {
 } from 'tgui-core/components';
 import type { BooleanLike } from 'tgui-core/react';
 
-import { useBackend } from '../backend';
-import { getGasLabel } from '../constants';
+import { useBackend } from '../core/backend';
+import { getGasLabel } from '../common/constants/constants';
 import { Window } from '../layouts';
 import { usePreferencesLocalization } from './localization';
 

@@ -11,7 +11,7 @@ import {
   Tooltip,
 } from 'tgui-core/components';
 
-import { useBackend } from '../../backend';
+import { useBackend } from '../../core/backend';
 
 /**
  * This describes something that influences a particular reaction

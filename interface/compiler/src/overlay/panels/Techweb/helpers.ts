@@ -1,6 +1,6 @@
 import { map } from 'es-toolkit/compat';
 
-import { useBackend } from '../../backend';
+import { useBackend } from '../../core/backend';
 import type { NodeCache, TechWebData } from './types';
 
 type Cost = {

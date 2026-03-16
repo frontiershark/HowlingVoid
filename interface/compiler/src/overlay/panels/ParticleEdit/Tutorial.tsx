@@ -9,7 +9,7 @@ import {
   Stack,
 } from 'tgui-core/components';
 
-import { resolveAsset } from '../../assets';
+import { resolveAsset } from '../../core/assets';
 import { usePreferencesLocalization } from '../localization';
 import { ParticleContext } from '.';
 

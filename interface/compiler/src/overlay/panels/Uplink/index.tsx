@@ -12,8 +12,8 @@ import {
 import { fetchRetry } from 'tgui-core/http';
 import type { BooleanLike } from 'tgui-core/react';
 
-import { resolveAsset } from '../../assets';
-import { useBackend } from '../../backend';
+import { resolveAsset } from '../../core/assets';
+import { useBackend } from '../../core/backend';
 import { Window } from '../../layouts';
 import { getPreferencesLocalization } from '../localization';
 import {

@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react';
 import { Button, Modal, Section, Stack } from 'tgui-core/components';
 import { fetchRetry } from 'tgui-core/http';
 
-import { resolveAsset } from '../../assets';
+import { resolveAsset } from '../../core/assets';
 import { Window } from '../../layouts';
-import { logger } from '../../logging';
+import { logger } from '../../core/logging';
 import { usePreferencesLocalization } from '../localization';
 import { CreateObject } from './CreateObject';
 import { CreateObjectAdvancedSettings } from './CreateObjectAdvancedSettings';

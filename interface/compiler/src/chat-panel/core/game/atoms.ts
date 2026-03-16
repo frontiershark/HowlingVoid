@@ -1,5 +1,5 @@
 import { atom } from 'jotai';
-import { lastPingedAtAtom } from '../ping/atoms';
+import { lastPingedAtAtom } from '../../partial/ping/atoms';
 import { CONNECTION_LOST_AFTER } from './constants';
 
 export const roundRestartedAtAtom = atom<number | null>(null);

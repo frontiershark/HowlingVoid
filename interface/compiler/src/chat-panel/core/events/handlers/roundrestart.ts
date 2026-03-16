@@ -1,4 +1,4 @@
-import { saveChatToStorage } from '../../chat/helpers';
+import { saveChatToStorage } from '../../../panels/chat/helpers';
 import { roundRestartedAtAtom } from '../../game/atoms';
 import { store } from '../store';
 

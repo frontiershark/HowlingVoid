@@ -1,5 +1,5 @@
 import { storage } from 'common/storage';
-import { store } from '../events/store';
+import { store } from '../../core/events/store';
 import {
   allChatAtom,
   chatLoadedAtom,

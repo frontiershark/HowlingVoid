@@ -10,7 +10,7 @@ import {
 } from 'tgui-core/components';
 import { createSearch, toTitleCase } from 'tgui-core/string';
 
-import { useBackend } from '../backend';
+import { useBackend } from '../core/backend';
 import { Window } from '../layouts';
 import { usePreferencesLocalization } from './localization';
 

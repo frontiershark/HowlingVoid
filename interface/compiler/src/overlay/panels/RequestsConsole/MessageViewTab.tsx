@@ -8,7 +8,7 @@ import {
 } from 'tgui-core/components';
 import { decodeHtmlEntities } from 'tgui-core/string';
 
-import { useBackend } from '../../backend';
+import { useBackend } from '../../core/backend';
 import { usePreferencesLocalization } from '../localization';
 import {
   type RequestMessage,

@@ -25,7 +25,7 @@ function Content(props: PropsWithChildren) {
 
 Window.Content = Content;
 
-mock.module('../layouts', () => ({
+mock.module('../../layouts', () => ({
   Window,
   Layout: Window,
   Pane: Window,

@@ -1,6 +1,6 @@
 import { Button, DmIcon, Stack } from 'tgui-core/components';
 
-import { useBackend, useSharedState } from '../../backend';
+import { useBackend, useSharedState } from '../../core/backend';
 import { Window } from '../../layouts';
 import { AuditScreen } from './AuditScreen';
 import { FakeDesktopButton } from './FakeDesktopButton';

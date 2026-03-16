@@ -9,7 +9,7 @@ import {
 } from 'tgui-core/components';
 import { classes } from 'tgui-core/react';
 
-import { useSharedState } from '../../backend';
+import { useSharedState } from '../../core/backend';
 import { usePreferencesLocalization } from '../localization';
 import { SearchBar } from '../common/SearchBar';
 import type { Design, MaterialMap } from './Types';

@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { Collapsible, Stack } from 'tgui-core/components';
 
-import { useBackend } from '../../backend';
+import { useBackend } from '../../core/backend';
 import { OrbitContext } from '.';
 import { VIEWMODE } from './constants';
 import {

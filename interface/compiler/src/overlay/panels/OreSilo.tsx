@@ -16,7 +16,7 @@ import {
 import { useFuzzySearch } from 'tgui-core/fuzzysearch';
 import { type BooleanLike, classes } from 'tgui-core/react';
 import { capitalize } from 'tgui-core/string';
-import { useBackend } from '../backend';
+import { useBackend } from '../core/backend';
 import { Window } from '../layouts';
 import { MaterialAccessBar } from './Fabrication/MaterialAccessBar';
 import type { Material } from './Fabrication/Types';

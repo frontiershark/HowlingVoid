@@ -7,7 +7,7 @@ import {
   Stack,
 } from 'tgui-core/components';
 import { capitalizeAll, capitalizeFirst } from 'tgui-core/string';
-import { useBackend, useSharedState } from '../../backend';
+import { useBackend, useSharedState } from '../../core/backend';
 import { usePreferencesLocalization } from '../localization';
 import { extractRequirementMap, extractSurgeryName } from './helpers';
 import type { OperatingComputerData, OperationData } from './types';

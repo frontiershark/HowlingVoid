@@ -8,7 +8,7 @@ import {
   TextArea,
 } from 'tgui-core/components';
 
-import { useBackend, useLocalState } from '../../backend';
+import { useBackend, useLocalState } from '../../core/backend';
 import { usePreferencesLocalization } from '../localization';
 import { RequestPriority, type RequestsData, RequestType } from './types';
 

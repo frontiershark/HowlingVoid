@@ -1,6 +1,6 @@
 import { Button, Section, Stack } from 'tgui-core/components';
 
-import { useBackend } from '../../backend';
+import { useBackend } from '../../core/backend';
 import { usePreferencesLocalization } from '../localization';
 import { ReagentLookup } from '../common/ReagentLookup';
 import { RecipeLookup } from '../common/RecipeLookup';

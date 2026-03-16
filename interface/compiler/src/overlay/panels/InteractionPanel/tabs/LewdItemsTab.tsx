@@ -1,7 +1,7 @@
 // THIS IS A NOVA SECTOR UI FILE
 import { Box, Button, Icon, Stack } from 'tgui-core/components';
 
-import { useBackend } from '../../../backend';
+import { useBackend } from '../../../core/backend';
 
 type LewdSlot = {
     img: string;

@@ -4,7 +4,7 @@ import { Box, Button, LabeledList, Section, Stack } from 'tgui-core/components';
 import { classes } from 'tgui-core/react';
 import { capitalize } from 'tgui-core/string';
 
-import { useBackend } from '../backend';
+import { useBackend } from '../core/backend';
 import { Window } from '../layouts';
 import { usePreferencesLocalization } from './localization';
 

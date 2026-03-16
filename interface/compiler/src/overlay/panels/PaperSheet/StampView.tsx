@@ -1,4 +1,4 @@
-import { useBackend } from '../../backend';
+import { useBackend } from '../../core/backend';
 import { Stamp } from './Stamp';
 import type { PaperContext } from './types';
 

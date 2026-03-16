@@ -7,7 +7,7 @@ import {
 } from 'tgui-core/components';
 import type { BooleanLike } from 'tgui-core/react';
 
-import { useBackend, useSharedState } from '../backend';
+import { useBackend, useSharedState } from '../core/backend';
 import { Window } from '../layouts';
 import { usePreferencesLocalization } from './localization';
 import { GenericUplink, type Item } from './Uplink/GenericUplink';

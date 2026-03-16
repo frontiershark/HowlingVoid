@@ -1,7 +1,7 @@
 import { Component, type RefObject } from 'react';
 import { clamp } from 'tgui-core/math';
 
-import { useBackend } from '../../backend';
+import { useBackend } from '../../core/backend';
 import { Stamp } from './Stamp';
 import type { PaperContext } from './types';
 

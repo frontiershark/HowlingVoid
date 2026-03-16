@@ -10,7 +10,7 @@ import {
 } from 'tgui-core/components';
 import { createUuid } from 'tgui-core/uuid';
 
-import { useBackend } from '../../backend';
+import { useBackend } from '../../core/backend';
 import { usePreferencesLocalization } from '../localization';
 import { POD_GREY } from './constants';
 import type { PodLauncherData } from './types';

@@ -12,8 +12,8 @@ import {
 import { toFixed } from 'tgui-core/math';
 import type { BooleanLike } from 'tgui-core/react';
 
-import { useBackend } from '../backend';
-import { getGasFromPath } from '../constants';
+import { useBackend } from '../core/backend';
+import { getGasFromPath } from '../common/constants/constants';
 import { Window } from '../layouts';
 import { usePreferencesLocalization } from './localization';
 

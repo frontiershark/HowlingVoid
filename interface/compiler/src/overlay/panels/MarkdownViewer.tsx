@@ -1,8 +1,8 @@
 import { marked } from 'marked';
 
-import { useBackend } from '../backend';
+import { useBackend } from '../core/backend';
 import { Window } from '../layouts';
-import { sanitizeText } from '../sanitize';
+import { sanitizeText } from '../core/sanitize';
 
 type MarkdownViewerData = {
   title: string;

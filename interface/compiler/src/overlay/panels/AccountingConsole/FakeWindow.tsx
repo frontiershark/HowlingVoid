@@ -1,5 +1,5 @@
 import { Box, Button, DmIcon, Stack } from 'tgui-core/components';
-import { useBackend } from '../../backend';
+import { useBackend } from '../../core/backend';
 import { type Data, SCREENS } from './types';
 
 type FakeWindowProps = {

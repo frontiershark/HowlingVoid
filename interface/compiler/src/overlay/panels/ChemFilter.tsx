@@ -1,8 +1,8 @@
 import { Fragment } from 'react';
 import { Button, Section, Stack } from 'tgui-core/components';
 
-import { useBackend } from '../backend';
-import type { CssColor } from '../constants';
+import { useBackend } from '../core/backend';
+import type { CssColor } from '../common/constants/constants';
 import { Window } from '../layouts';
 import { usePreferencesLocalization } from './localization';
 

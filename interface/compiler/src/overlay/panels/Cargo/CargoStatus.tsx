@@ -7,7 +7,7 @@ import {
 } from 'tgui-core/components';
 import { formatMoney } from 'tgui-core/format';
 
-import { useBackend } from '../../backend';
+import { useBackend } from '../../core/backend';
 import { usePreferencesLocalization } from '../localization';
 import type { CargoData } from './types';
 

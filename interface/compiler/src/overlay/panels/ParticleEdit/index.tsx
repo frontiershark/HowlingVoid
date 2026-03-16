@@ -6,7 +6,7 @@ import {
 } from 'react';
 import { Button, LabeledList, Section } from 'tgui-core/components';
 
-import { useBackend } from '../../backend';
+import { useBackend } from '../../core/backend';
 import { Window } from '../../layouts';
 import { usePreferencesLocalization } from '../localization';
 import type { ParticleUIData } from './data';

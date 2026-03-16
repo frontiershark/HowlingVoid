@@ -2,10 +2,10 @@
 import { exhaustiveCheck } from 'tgui-core/exhaustive';
 import { fetchRetry } from 'tgui-core/http';
 
-import { resolveAsset } from '../../assets';
-import { useBackend } from '../../backend';
+import { resolveAsset } from '../../core/assets';
+import { useBackend } from '../../core/backend';
 import { Window } from '../../layouts';
-import { logger } from '../../logging';
+import { logger } from '../../core/logging';
 import { LoadingScreen } from '../common/LoadingScreen';
 import { CharacterPreferenceWindow } from './CharacterPreferences';
 import { usePreferencesLocalization } from './localization';

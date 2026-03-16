@@ -12,7 +12,7 @@ import {
   Tabs,
 } from 'tgui-core/components';
 
-import { useBackend, useLocalState } from '../backend';
+import { useBackend, useLocalState } from '../core/backend';
 import { Window } from '../layouts';
 import { usePreferencesLocalization } from './localization';
 

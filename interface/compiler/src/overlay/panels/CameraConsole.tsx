@@ -12,7 +12,7 @@ import {
 import { type BooleanLike, classes } from 'tgui-core/react';
 import { createSearch } from 'tgui-core/string';
 
-import { useBackend } from '../backend';
+import { useBackend } from '../core/backend';
 import { Window } from '../layouts';
 import { usePreferencesLocalization } from './localization';
 

@@ -2,7 +2,7 @@ import { sortBy } from 'es-toolkit';
 import { map } from 'es-toolkit/compat';
 import { Button, Section, Stack } from 'tgui-core/components';
 
-import { useBackend } from '../backend';
+import { useBackend } from '../core/backend';
 import { Window } from '../layouts';
 import { usePreferencesLocalization } from './localization';
 

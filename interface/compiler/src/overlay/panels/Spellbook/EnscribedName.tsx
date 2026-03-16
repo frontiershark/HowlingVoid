@@ -1,5 +1,5 @@
 import { Box, Divider } from 'tgui-core/components';
-import { useBackend } from '../../backend';
+import { useBackend } from '../../core/backend';
 import type { SpellbookData } from './types';
 
 export function EnscribedName(props) {

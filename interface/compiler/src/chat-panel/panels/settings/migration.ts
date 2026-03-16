@@ -1,9 +1,9 @@
 import { storage } from 'common/storage';
 import { smoothMerge } from 'common/type-safety';
 import { omit, pick } from 'es-toolkit';
-import { setMusicVolume } from '../audio/handlers';
+import { setMusicVolume } from '../../partial/audio/handlers';
 import { chatRenderer } from '../chat/renderer';
-import { store } from '../events/store';
+import { store } from '../../core/events/store';
 import {
   defaultHighlightSetting,
   type defaultHighlights,

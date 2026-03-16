@@ -8,7 +8,7 @@ import {
   Tooltip,
 } from 'tgui-core/components';
 
-import { useBackend } from '../../backend';
+import { useBackend } from '../../core/backend';
 import { usePreferencesLocalization } from '../localization';
 import { SORTING_TYPES } from './contants';
 import { SortType, type SubsystemData } from './types';

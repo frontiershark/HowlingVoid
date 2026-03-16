@@ -1,7 +1,7 @@
 import { Box, Button, Stack } from 'tgui-core/components';
 import { classes } from 'tgui-core/react';
 
-import { getWindowPosition, setWindowPosition } from '../../drag';
+import { getWindowPosition, setWindowPosition } from '../../core/drag';
 import { usePreferencesLocalization } from '../localization';
 import { Port } from './Port';
 import type { Filter, Plane, PlaneConnectorsMap, Relay } from './types';

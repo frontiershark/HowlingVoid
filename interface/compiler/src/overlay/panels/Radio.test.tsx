@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'bun:test';
 import { act, render, screen } from '@testing-library/react';
-import { gameDataAtom, store } from '../events/store';
+import { gameDataAtom, store } from '../core/events/store';
 
 import { Radio } from './Radio';
 

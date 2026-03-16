@@ -10,7 +10,7 @@ import {
 import { formatPower } from 'tgui-core/format';
 import { round } from 'tgui-core/math';
 
-import { useBackend } from '../backend';
+import { useBackend } from '../core/backend';
 import { Window } from '../layouts';
 import { usePreferencesLocalization } from './localization';
 

@@ -3,8 +3,8 @@ import { Box, Button, Icon, Input, Section, Table } from 'tgui-core/components';
 import type { BooleanLike } from 'tgui-core/react';
 import { createSearch } from 'tgui-core/string';
 
-import { useBackend } from '../backend';
-import { COLORS } from '../constants';
+import { useBackend } from '../core/backend';
+import { COLORS } from '../common/constants/constants';
 import { Window } from '../layouts';
 import { usePreferencesLocalization } from './localization';
 

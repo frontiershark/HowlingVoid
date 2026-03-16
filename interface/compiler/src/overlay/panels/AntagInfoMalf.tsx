@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { BlockQuote, Button, Section, Stack, Tabs } from 'tgui-core/components';
 import type { BooleanLike } from 'tgui-core/react';
 
-import { useBackend } from '../backend';
+import { useBackend } from '../core/backend';
 import { Window } from '../layouts';
 import { Rules } from './AntagInfoRules'; // NOVA EDIT ADDITION
 import { usePreferencesLocalization } from './localization';

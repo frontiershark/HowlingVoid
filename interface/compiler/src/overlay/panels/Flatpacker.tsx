@@ -12,7 +12,7 @@ import {
 import type { BooleanLike } from 'tgui-core/react';
 import { toTitleCase } from 'tgui-core/string';
 
-import { useBackend } from '../backend';
+import { useBackend } from '../core/backend';
 import { Window } from '../layouts';
 import { MaterialAccessBar } from './Fabrication/MaterialAccessBar';
 import { MaterialIcon } from './Fabrication/MaterialIcon';

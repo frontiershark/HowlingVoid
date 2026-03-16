@@ -8,8 +8,8 @@ import {
   Stack,
 } from 'tgui-core/components';
 
-import { useBackend } from '../../backend';
-import { logger } from '../../logging';
+import { useBackend } from '../../core/backend';
+import { logger } from '../../core/logging';
 import { usePreferencesLocalization } from '../localization';
 import { ListMapper } from './ListMapper';
 import type { LuaEditorData, LuaEditorModal } from './types';

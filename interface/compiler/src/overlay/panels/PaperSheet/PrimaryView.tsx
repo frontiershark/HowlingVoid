@@ -1,7 +1,7 @@
 import { Component, createRef, type RefObject } from 'react';
 import { Box, Button, Flex, Section, TextArea } from 'tgui-core/components';
 
-import { useBackend, useLocalState } from '../../backend';
+import { useBackend, useLocalState } from '../../core/backend';
 import { usePreferencesLocalization } from '../localization';
 import { TEXTAREA_INPUT_HEIGHT } from './constants';
 import { PreviewView } from './Preview';

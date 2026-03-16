@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Icon, Input } from 'tgui-core/components';
-import { useBackend } from '../backend';
+import { useBackend } from '../core/backend';
 import { Window } from '../layouts';
 import { usePreferencesLocalization } from './localization';
 

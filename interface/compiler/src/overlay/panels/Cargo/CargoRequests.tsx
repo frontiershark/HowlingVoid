@@ -2,7 +2,7 @@ import { Button, NoticeBox, Section, Table } from 'tgui-core/components';
 import { formatMoney } from 'tgui-core/format';
 import { decodeHtmlEntities } from 'tgui-core/string';
 
-import { useBackend } from '../../backend';
+import { useBackend } from '../../core/backend';
 import { usePreferencesLocalization } from '../localization';
 import type { CargoData } from './types';
 

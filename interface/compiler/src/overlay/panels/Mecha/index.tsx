@@ -9,10 +9,10 @@ import {
 } from 'tgui-core/components';
 import { formatSiUnit } from 'tgui-core/format';
 
-import { useBackend } from '../../backend';
+import { useBackend } from '../../core/backend';
 import { Window } from '../../layouts';
 import { usePreferencesLocalization } from '../localization';
-import { logger } from '../../logging';
+import { logger } from '../../core/logging';
 import { AccessConfig } from '../common/AccessConfig';
 import { AlertPane } from './AlertPane';
 import type { MainData } from './data';

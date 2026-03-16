@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Stack } from 'tgui-core/components';
 
-import { useBackend } from '../../backend';
+import { useBackend } from '../../core/backend';
 import { Window } from '../../layouts';
 import { InterfaceLockNoticeBox } from '../common/InterfaceLockNoticeBox';
 import { AirAlarmControl } from './AlarmControl';

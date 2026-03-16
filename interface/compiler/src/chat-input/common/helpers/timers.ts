@@ -1,6 +1,6 @@
 import { debounce, throttle } from 'tgui-core/timer';
 
-import type { Channel } from './ChannelIterator';
+import type { Channel } from '../../core/channel/ChannelIterator';
 
 const SECONDS = 1000;
 

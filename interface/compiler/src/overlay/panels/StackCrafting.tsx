@@ -10,7 +10,7 @@ import {
 import { clamp } from 'tgui-core/math';
 import { createSearch, toTitleCase } from 'tgui-core/string';
 
-import { useBackend } from '../backend';
+import { useBackend } from '../core/backend';
 import { Window } from '../layouts';
 import { usePreferencesLocalization } from './localization';
 import { SearchBar } from './common/SearchBar';

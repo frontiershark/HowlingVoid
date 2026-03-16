@@ -3,7 +3,7 @@ import { Box, Section, Stack, TextArea } from 'tgui-core/components';
 import { isEscape } from 'tgui-core/keys';
 import { KEY } from 'tgui-core/keys';
 
-import { useBackend } from '../backend';
+import { useBackend } from '../core/backend';
 import { Window } from '../layouts';
 import { usePreferencesLocalization } from './localization';
 import { InputButtons } from './common/InputButtons';

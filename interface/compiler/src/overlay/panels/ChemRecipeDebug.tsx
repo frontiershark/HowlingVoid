@@ -11,7 +11,7 @@ import {
 } from 'tgui-core/components';
 import type { BooleanLike } from 'tgui-core/react';
 
-import { useBackend } from '../backend';
+import { useBackend } from '../core/backend';
 import { Window } from '../layouts';
 import { type ActiveReaction, ReactionDisplay } from './ChemHeater';
 import { type Beaker, BeakerSectionDisplay } from './common/BeakerDisplay';

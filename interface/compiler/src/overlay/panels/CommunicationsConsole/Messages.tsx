@@ -1,8 +1,8 @@
 import type { ReactNode } from 'react';
 import { Box, Button, Section } from 'tgui-core/components';
 
-import { useBackend } from '../../backend';
-import { sanitizeText } from '../../sanitize';
+import { useBackend } from '../../core/backend';
+import { sanitizeText } from '../../core/sanitize';
 import { usePreferencesLocalization } from '../localization';
 import { type CommsConsoleData, ShuttleState } from './types';
 

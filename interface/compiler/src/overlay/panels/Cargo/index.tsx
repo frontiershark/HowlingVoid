@@ -1,7 +1,7 @@
 import { Button, Section, Stack, Tabs } from 'tgui-core/components';
 import { toTitleCase } from 'tgui-core/string';
 
-import { useBackend, useSharedState } from '../../backend';
+import { useBackend, useSharedState } from '../../core/backend';
 import { Window } from '../../layouts';
 import { CargoCartButtons } from './CargoButtons';
 import { CargoCart } from './CargoCart';

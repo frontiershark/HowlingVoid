@@ -5,13 +5,13 @@
  */
 
 import { useAtomValue } from 'jotai';
-import { KitchenSink } from './debug/KitchenSink';
+import { KitchenSink } from '../test/debug/KitchenSink';
 import { backendStateAtom } from './events/store';
-import { LoadingScreen } from './interfaces/common/LoadingScreen';
-import { Window } from './layouts';
+import { LoadingScreen } from '../panels/common/LoadingScreen';
+import { Window } from '../layouts';
 
 const requireInterface = require.context(
-  './interfaces',
+  '../panels',
   true,
   /^(?!.*\.test\.(tsx?|jsx?)).*\.(tsx?|jsx?)$/,
 );

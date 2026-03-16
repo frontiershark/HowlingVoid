@@ -7,7 +7,7 @@ import {
 } from 'tgui-core/components';
 import { BooleanLike } from 'tgui-core/react';
 
-import { useBackend } from '../../backend';
+import { useBackend } from '../../core/backend';
 
 type HeaderInfo = {
   isTargetSelf: BooleanLike;

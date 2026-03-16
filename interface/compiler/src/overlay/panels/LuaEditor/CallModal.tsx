@@ -1,7 +1,7 @@
 import type { Dispatch, SetStateAction } from 'react';
 import { Button, Modal, Section } from 'tgui-core/components';
 
-import { useBackend } from '../../backend';
+import { useBackend } from '../../core/backend';
 import { usePreferencesLocalization } from '../localization';
 import { ListMapper } from './ListMapper';
 import type { CallInfo, LuaEditorData, LuaEditorModal } from './types';

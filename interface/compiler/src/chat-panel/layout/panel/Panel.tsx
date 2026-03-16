@@ -7,19 +7,19 @@
 import { useAtom, useAtomValue } from 'jotai';
 import { Pane } from 'overlay/layouts';
 import { Button, Section, Stack } from 'tgui-core/components';
-import { visibleAtom } from './audio/atoms';
-import { NowPlayingWidget } from './audio/NowPlayingWidget';
-import { ChatPanel } from './chat/ChatPanel';
-import { ChatTabs } from './chat/ChatTabs';
-import { useChatPersistence } from './chat/use-chat-persistence';
-import { gameAtom } from './game/atoms';
-import { useKeepAlive } from './game/use-keep-alive';
-import { Notifications } from './Notifications';
-import { PingIndicator } from './ping/PingIndicator';
-import { ReconnectButton } from './reconnect';
-import { settingsVisibleAtom } from './settings/atoms';
-import { SettingsPanel } from './settings/SettingsPanel';
-import { useSettings } from './settings/use-settings';
+import { visibleAtom } from '../../partial/audio/atoms';
+import { NowPlayingWidget } from '../../partial/audio/NowPlayingWidget';
+import { ChatPanel } from '../../panels/chat/ChatPanel';
+import { ChatTabs } from '../../panels/chat/ChatTabs';
+import { useChatPersistence } from '../../panels/chat/use-chat-persistence';
+import { gameAtom } from '../../core/game/atoms';
+import { useKeepAlive } from '../../core/game/use-keep-alive';
+import { Notifications } from '../../core/Notifications';
+import { PingIndicator } from '../../partial/ping/PingIndicator';
+import { ReconnectButton } from '../../partial/reconnect';
+import { settingsVisibleAtom } from '../../panels/settings/atoms';
+import { SettingsPanel } from '../../panels/settings/SettingsPanel';
+import { useSettings } from '../../panels/settings/use-settings';
 
 export function Panel(props) {
   const [audioVisible, setAudioVisible] = useAtom(visibleAtom);

@@ -1,7 +1,7 @@
 import { Button, Icon, Stack, Tooltip } from 'tgui-core/components';
 import { capitalizeFirst } from 'tgui-core/string';
 
-import { useBackend } from '../../backend';
+import { useBackend } from '../../core/backend';
 import { getDisplayColor, getDisplayName } from './helpers';
 import { JobIcon } from './JobIcon';
 import { OrbitTooltip } from './OrbitTooltip';

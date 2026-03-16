@@ -1,6 +1,6 @@
 import { Button, Stack } from 'tgui-core/components';
 
-import { useBackend } from '../../backend';
+import { useBackend } from '../../core/backend';
 import type { SCREENS } from './types';
 
 type FakeDesktopButtonProps = {

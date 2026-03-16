@@ -1,7 +1,7 @@
 // THIS IS A NOVA SECTOR UI FILE
 import { Button, Section, Stack } from 'tgui-core/components';
 
-import { useBackend } from '../backend';
+import { useBackend } from '../core/backend';
 import { Window } from '../layouts';
 
 export const AntagInfoOpfor = (props) => {

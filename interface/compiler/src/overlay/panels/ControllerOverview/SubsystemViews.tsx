@@ -1,7 +1,7 @@
 import { type Dispatch, useEffect, useState } from 'react';
 import { Button, Section, Stack, Table } from 'tgui-core/components';
 
-import { useBackend } from '../../backend';
+import { useBackend } from '../../core/backend';
 import { usePreferencesLocalization } from '../localization';
 import { SORTING_TYPES } from './contants';
 import type { FilterState } from './filters';

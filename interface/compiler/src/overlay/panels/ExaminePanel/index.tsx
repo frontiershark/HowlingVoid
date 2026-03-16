@@ -2,8 +2,8 @@
 import { type ReactNode, useState } from 'react';
 import { Button, ByondUi, Section, Stack } from 'tgui-core/components';
 
-import { resolveAsset } from '../../assets';
-import { useBackend } from '../../backend';
+import { resolveAsset } from '../../core/assets';
+import { useBackend } from '../../core/backend';
 import { Window } from '../../layouts';
 import { usePreferencesLocalization } from '../localization';
 import type { ExaminePanelData } from './data';

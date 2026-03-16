@@ -1,7 +1,7 @@
 import { globalEvents } from 'tgui-core/events';
 import { acquireHotKey } from 'tgui-core/hotkeys';
 import { KEY_BACKSPACE, KEY_F11, KEY_F12 } from 'tgui-core/keycodes';
-import { kitchenSinkAtom, store } from '../events/store';
+import { kitchenSinkAtom, store } from '../../core/events/store';
 
 export function setDebugHotKeys(): void {
   acquireHotKey(KEY_F11);

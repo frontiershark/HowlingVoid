@@ -1,6 +1,6 @@
 import { Button, Flex, Input, Section } from 'tgui-core/components';
 
-import { useBackend, useSharedState } from '../../backend';
+import { useBackend, useSharedState } from '../../core/backend';
 import { usePreferencesLocalization } from '../localization';
 
 type Data = {

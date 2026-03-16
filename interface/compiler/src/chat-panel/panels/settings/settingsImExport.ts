@@ -2,7 +2,7 @@ import { omit } from 'es-toolkit';
 import { chatPagesRecordAtom, mainPage } from '../chat/atom';
 import { startChatStateMigration } from '../chat/migration';
 import type { Page, StoredChatSettings } from '../chat/types';
-import { store } from '../events/store';
+import { store } from '../../core/events/store';
 import { storedSettingsAtom } from './atoms';
 import { startSettingsMigration } from './migration';
 import type { ExportedSettings } from './types';

@@ -3,7 +3,7 @@ import { Button, Input, Section, Stack } from 'tgui-core/components';
 import { isEscape } from 'tgui-core/keys';
 import { clamp } from 'tgui-core/math';
 
-import { useBackend } from '../../backend';
+import { useBackend } from '../../core/backend';
 import { Window } from '../../layouts';
 import { usePreferencesLocalization } from '../localization';
 import { GroupedContents } from './GroupedContents';

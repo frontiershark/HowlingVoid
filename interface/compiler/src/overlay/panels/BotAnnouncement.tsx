@@ -11,8 +11,8 @@ import {
 } from 'tgui-core/components';
 import { createSearch } from 'tgui-core/string';
 
-import { useBackend } from '../backend';
-import { RADIO_CHANNELS } from '../constants';
+import { useBackend } from '../core/backend';
+import { RADIO_CHANNELS } from '../common/constants/constants';
 import { Window } from '../layouts';
 import { usePreferencesLocalization } from './localization';
 

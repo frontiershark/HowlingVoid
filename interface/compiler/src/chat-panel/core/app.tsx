@@ -1,6 +1,6 @@
 import { Provider } from 'jotai';
 import { store } from './events/store';
-import { Panel } from './Panel';
+import { Panel } from '../layout/panel/Panel';
 
 /** Just an expandable wrapper for setup shenanigans and providers */
 export function App() {

@@ -7,9 +7,9 @@
 import { Box, Button } from 'tgui-core/components';
 import type { BooleanLike } from 'tgui-core/react';
 
-import { resolveAsset } from '../assets';
-import { useBackend } from '../backend';
-import { Window } from './Window';
+import { resolveAsset } from '../../core/assets';
+import { useBackend } from '../../core/backend';
+import { Window } from '../window/Window';
 
 export type NTOSData = {
   comp_light_color: string;

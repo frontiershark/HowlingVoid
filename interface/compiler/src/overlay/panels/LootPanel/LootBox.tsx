@@ -2,7 +2,7 @@ import { Button, Stack } from 'tgui-core/components';
 import type { BooleanLike } from 'tgui-core/react';
 import { capitalizeFirst } from 'tgui-core/string';
 
-import { useBackend } from '../../backend';
+import { useBackend } from '../../core/backend';
 import { IconDisplay } from './IconDisplay';
 import type { SearchGroup, SearchItem } from './types';
 

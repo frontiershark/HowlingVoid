@@ -1,4 +1,4 @@
-import { store } from '../events/store';
+import { store } from '../../core/events/store';
 import { lastPingedAtAtom } from './atoms';
 import { pingSuccess, pings, sendPing } from './helpers';
 

@@ -1,4 +1,4 @@
-import { store } from '../events/store';
+import { store } from '../../core/events/store';
 import { type Meta, metaAtom, playingAtom, visibleAtom } from './atoms';
 import { AudioPlayer } from './player';
 

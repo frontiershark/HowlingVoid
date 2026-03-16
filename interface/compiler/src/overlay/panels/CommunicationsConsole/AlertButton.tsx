@@ -1,7 +1,7 @@
 import { Button } from 'tgui-core/components';
 import { capitalize } from 'tgui-core/string';
 
-import { useBackend } from '../../backend';
+import { useBackend } from '../../core/backend';
 import { usePreferencesLocalization } from '../localization';
 import { SWIPE_NEEDED } from './constants';
 import type { CommsConsoleData } from './types';

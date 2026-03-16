@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Button, Flex, Modal, TextArea } from 'tgui-core/components';
 
-import { useBackend } from '../../backend';
+import { useBackend } from '../../core/backend';
 import { usePreferencesLocalization } from '../localization';
 import type { CommsConsoleData } from './types';
 

@@ -1,15 +1,15 @@
-import './styles/main.scss';
+import '../common/styles/main.scss';
 
 import { useEffect, useRef, useState } from 'react';
 import { dragStartHandler } from 'overlay/drag';
 import { isEscape, KEY } from 'tgui-core/keys';
 import { type BooleanLike, classes } from 'tgui-core/react';
 
-import { type Channel, ChannelIterator } from './ChannelIterator';
-import { ChatHistory } from './ChatHistory';
-import { LineLength, RADIO_PREFIXES, WindowSize } from './constants';
-import { getPrefix, windowClose, windowOpen, windowSet } from './helpers';
-import { byondMessages } from './timers';
+import { type Channel, ChannelIterator } from './channel/ChannelIterator';
+import { ChatHistory } from './chat/ChatHistory';
+import { LineLength, RADIO_PREFIXES, WindowSize } from '../common/constants/constants';
+import { getPrefix, windowClose, windowOpen, windowSet } from '../common/helpers/helpers';
+import { byondMessages } from '../common/helpers/timers';
 
 type ByondOpen = {
   channel: Channel;

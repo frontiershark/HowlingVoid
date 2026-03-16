@@ -7,10 +7,10 @@
 import { useRef, useState } from 'react';
 import { Box, Dialog, Divider, MenuBar, Section } from 'tgui-core/components';
 
-import { useBackend } from '../backend';
+import { useBackend } from '../core/backend';
 import { NtosWindow } from '../layouts';
-import type { NTOSData } from '../layouts/NtosWindow';
-import { createLogger } from '../logging';
+import type { NTOSData } from '../layouts/ntos-window/NtosWindow';
+import { createLogger } from '../core/logging';
 import { usePreferencesLocalization } from './localization';
 
 const logger = createLogger('NtosNotepad');

@@ -1,4 +1,4 @@
-import { useBackend } from '../../backend';
+import { useBackend } from '../../core/backend';
 import { Window } from '../../layouts';
 import { Loader } from '../common/Loader';
 import { ListInputModal } from './ListInputModal';

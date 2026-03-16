@@ -15,7 +15,7 @@ import {
 import type { BooleanLike } from 'tgui-core/react';
 import { createSearch } from 'tgui-core/string';
 
-import { useBackend } from '../../backend';
+import { useBackend } from '../../core/backend';
 import { NtosWindow } from '../../layouts';
 import { usePreferencesLocalization } from '../localization';
 import { ChatScreen } from './ChatScreen';

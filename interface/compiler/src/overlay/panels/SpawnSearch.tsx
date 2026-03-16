@@ -20,10 +20,10 @@ import {
   KEY_UP,
 } from 'tgui-core/keycodes';
 import type { BooleanLike } from 'tgui-core/react';
-import { resolveAsset } from '../assets';
-import { useBackend } from '../backend';
+import { resolveAsset } from '../core/assets';
+import { useBackend } from '../core/backend';
 import { Window } from '../layouts';
-import { logger } from '../logging';
+import { logger } from '../core/logging';
 import { usePreferencesLocalization } from './localization';
 
 type SpawnSearchData = {

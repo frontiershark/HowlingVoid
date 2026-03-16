@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Box, Button, NumberInput, Stack, Table } from 'tgui-core/components';
 import { type BooleanLike, classes } from 'tgui-core/react';
 
-import { useBackend } from '../../backend';
+import { useBackend } from '../../core/backend';
 import { getNumberColor } from './helpers';
 
 type Data = {

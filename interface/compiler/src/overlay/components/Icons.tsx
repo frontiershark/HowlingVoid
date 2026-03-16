@@ -1,7 +1,7 @@
 import { Suspense, useEffect } from 'react';
 import { fetchRetry } from 'tgui-core/http';
-import { resolveAsset } from './assets';
-import { logger } from './logging';
+import { resolveAsset } from '../core/assets';
+import { logger } from '../core/logging';
 
 function setIconRefMap(map: Record<string, string>): void {
   Byond.iconRefMap = map;

@@ -1,5 +1,5 @@
 import { Box, Button, Divider, Section, Stack } from 'tgui-core/components';
-import { useBackend } from '../../backend';
+import { useBackend } from '../../core/backend';
 import { PointLocked } from './Locked';
 import type { SpellbookData } from './types';
 

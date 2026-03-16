@@ -9,7 +9,7 @@ import {
   Stack,
 } from 'tgui-core/components';
 
-import { useBackend } from '../../backend';
+import { useBackend } from '../../core/backend';
 import { usePreferencesLocalization } from '../localization';
 import { CharacterPreview } from '../common/CharacterPreview';
 import { EditableText } from '../common/EditableText';

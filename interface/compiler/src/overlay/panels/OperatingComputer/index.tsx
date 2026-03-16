@@ -2,7 +2,7 @@ import '../../styles/interfaces/OperatingComputer.scss';
 
 import { Section, Stack, Tabs } from 'tgui-core/components';
 import { useFuzzySearch } from 'tgui-core/fuzzysearch';
-import { useBackend, useSharedState } from '../../backend';
+import { useBackend, useSharedState } from '../../core/backend';
 import { Window } from '../../layouts';
 import { usePreferencesLocalization } from '../localization';
 import { ExperimentView } from './ExperimentView';

@@ -11,7 +11,7 @@ import {
 } from 'tgui-core/components';
 import { round, toFixed } from 'tgui-core/math';
 
-import { useBackend } from '../backend';
+import { useBackend } from '../core/backend';
 import { Window } from '../layouts';
 import type { MixingData, Reagent } from './ChemMixingChamber';
 import { usePreferencesLocalization } from './localization';

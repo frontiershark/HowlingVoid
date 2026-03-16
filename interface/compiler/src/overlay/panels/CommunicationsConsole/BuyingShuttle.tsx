@@ -1,7 +1,7 @@
 import { sortBy } from 'es-toolkit';
 import { Box, Button, Icon, Section, Stack } from 'tgui-core/components';
 
-import { useBackend } from '../../backend';
+import { useBackend } from '../../core/backend';
 import { usePreferencesLocalization } from '../localization';
 import { EMAG_SHUTTLE_NOTICE } from './constants';
 import { type CommsConsoleData, type Shuttle, ShuttleState } from './types';

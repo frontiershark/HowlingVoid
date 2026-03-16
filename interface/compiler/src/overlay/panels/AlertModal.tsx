@@ -3,7 +3,7 @@ import { Autofocus, Box, Button, Section, Stack } from 'tgui-core/components';
 import { isEscape, KEY } from 'tgui-core/keys';
 import type { BooleanLike } from 'tgui-core/react';
 
-import { useBackend } from '../backend';
+import { useBackend } from '../core/backend';
 import { Window } from '../layouts';
 import { Loader } from './common/Loader';
 

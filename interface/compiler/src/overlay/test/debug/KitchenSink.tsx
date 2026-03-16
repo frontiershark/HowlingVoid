@@ -6,9 +6,9 @@
 import { useState } from 'react';
 import { JSONTree } from 'react-json-tree';
 import { Divider, NoticeBox, Section, Stack, Tabs } from 'tgui-core/components';
-import { useBackend } from '../backend';
-import { tgui16 } from '../constants/theme';
-import { Pane, Window } from '../layouts';
+import { useBackend } from '../../core/backend';
+import { tgui16 } from '../../common/constants/theme';
+import { Pane, Window } from '../../layouts';
 
 type Props = {
   panel?: boolean;

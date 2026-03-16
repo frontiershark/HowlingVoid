@@ -17,7 +17,7 @@ import { UI_DISABLED, UI_INTERACTIVE } from 'tgui-core/constants';
 import { KEY_ALT } from 'tgui-core/keycodes';
 import { type BooleanLike, classes } from 'tgui-core/react';
 import { decodeHtmlEntities } from 'tgui-core/string';
-import { useBackend } from '../backend';
+import { useBackend } from '../../core/backend';
 import {
   dragStartHandler,
   recallWindowGeometry,
@@ -25,11 +25,11 @@ import {
   setWindowKey,
   setWindowPosition,
   storeWindowGeometry,
-} from '../drag';
-import { suspendStart } from '../events/handlers/suspense';
-import { createLogger } from '../logging';
-import { Layout } from './Layout';
-import { TitleBar } from './TitleBar';
+} from '../../core/drag';
+import { suspendStart } from '../../core/events/handlers/suspense';
+import { createLogger } from '../../core/logging';
+import { Layout } from '../layout/Layout';
+import { TitleBar } from '../titlebar/TitleBar';
 
 const logger = createLogger('Window');
 const DEFAULT_SIZE: [number, number] = [400, 600];

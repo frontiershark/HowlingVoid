@@ -4,8 +4,8 @@ import { markedSmartypants } from 'marked-smartypants';
 import { Component, type RefObject } from 'react';
 import { Box, Section } from 'tgui-core/components';
 
-import { useBackend, useLocalState } from '../../backend';
-import { sanitizeText } from '../../sanitize';
+import { useBackend, useLocalState } from '../../core/backend';
+import { sanitizeText } from '../../core/sanitize';
 import { tokenizer, walkTokens } from './helpers';
 import { StampView } from './StampView';
 import { type FieldInput, InteractionType, type PaperContext } from './types';

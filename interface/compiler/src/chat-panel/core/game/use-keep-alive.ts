@@ -1,6 +1,6 @@
 import { useAtomValue, useSetAtom } from 'jotai';
 import { useEffect } from 'react';
-import { lastPingedAtAtom } from '../ping/atoms';
+import { lastPingedAtAtom } from '../../partial/ping/atoms';
 import { connectionLostAtAtom } from './atoms';
 
 /** Custom hook that checks whether the panel is still receiving pings */

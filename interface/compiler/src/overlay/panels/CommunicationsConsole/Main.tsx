@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Box, Button, Flex, Modal, Section } from 'tgui-core/components';
 import { capitalize } from 'tgui-core/string';
 
-import { useBackend } from '../../backend';
+import { useBackend } from '../../core/backend';
 import { usePreferencesLocalization } from '../localization';
 import { AlertButton } from './AlertButton';
 import { MessageModal } from './MessageModal';

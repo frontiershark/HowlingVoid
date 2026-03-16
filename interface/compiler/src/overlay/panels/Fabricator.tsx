@@ -9,7 +9,7 @@ import {
 } from 'tgui-core/components';
 import { classes } from 'tgui-core/react';
 
-import { useBackend } from '../backend';
+import { useBackend } from '../core/backend';
 import { Window } from '../layouts';
 import { DesignBrowser } from './Fabrication/DesignBrowser';
 import { MaterialAccessBar } from './Fabrication/MaterialAccessBar';

@@ -11,7 +11,7 @@ import {
 import { formatSiUnit } from 'tgui-core/format';
 import { toTitleCase } from 'tgui-core/string';
 
-import { useBackend } from '../backend';
+import { useBackend } from '../core/backend';
 import { Window } from '../layouts';
 import type { Material } from './Fabrication/Types';
 import { usePreferencesLocalization } from './localization';

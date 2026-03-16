@@ -17,7 +17,7 @@ import {
 import type { BooleanLike } from 'tgui-core/react';
 import { capitalize, createSearch } from 'tgui-core/string';
 
-import { useBackend } from '../backend';
+import { useBackend } from '../core/backend';
 import { Window } from '../layouts';
 import { usePreferencesLocalization } from './localization';
 

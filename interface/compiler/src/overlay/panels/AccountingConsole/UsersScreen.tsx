@@ -7,7 +7,7 @@ import {
   Stack,
   Table,
 } from 'tgui-core/components';
-import { useBackend, useSharedState } from '../../backend';
+import { useBackend, useSharedState } from '../../core/backend';
 import { getRandomDoomMessage } from './helpers';
 import { SortButton } from './Sort';
 import { type Data, SORTING } from './types';

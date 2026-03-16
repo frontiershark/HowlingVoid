@@ -7,8 +7,8 @@ import {
 import type { BooleanLike } from 'tgui-core/react';
 import { decodeHtmlEntities } from 'tgui-core/string';
 
-import { useBackend } from '../../backend';
-import { getGasLabel } from '../../constants';
+import { useBackend } from '../../core/backend';
+import { getGasLabel } from '../../common/constants/constants';
 import { usePreferencesLocalization } from '../localization';
 
 export type VentProps = {

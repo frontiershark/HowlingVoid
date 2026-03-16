@@ -9,7 +9,7 @@ import { createLogger } from 'overlay/logging';
 import { Tooltip } from 'tgui-core/components';
 import { EventEmitter } from 'tgui-core/events';
 import { classes } from 'tgui-core/react';
-import { store } from '../events/store';
+import { store } from '../../core/events/store';
 import { scrollTrackingAtom } from './atom';
 import {
   COMBINE_MAX_MESSAGES,

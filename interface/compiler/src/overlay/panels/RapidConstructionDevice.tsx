@@ -10,7 +10,7 @@ import {
 import { type BooleanLike, classes } from 'tgui-core/react';
 import { capitalizeAll } from 'tgui-core/string';
 
-import { useBackend } from '../backend';
+import { useBackend } from '../core/backend';
 import { Window } from '../layouts';
 import { AirLockMainSection } from './AirlockElectronics';
 import { usePreferencesLocalization } from './localization';

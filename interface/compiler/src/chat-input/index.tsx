@@ -1,6 +1,6 @@
 import { createRoot, type Root } from 'react-dom/client';
 
-import { TguiSay } from './TguiSay';
+import { TguiSay } from './core/TguiSay';
 
 let reactRoot: Root | null = null;
 

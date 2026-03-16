@@ -1,5 +1,5 @@
 import { Box, Dimmer, Icon, Stack } from 'tgui-core/components';
-import { useBackend } from '../../backend';
+import { useBackend } from '../../core/backend';
 import { SpellTabDisplay } from './SpellTabDisplay';
 import type { SpellbookData, TabType } from './types';
 

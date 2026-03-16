@@ -11,8 +11,8 @@ import {
 import { toFixed } from 'tgui-core/math';
 import type { BooleanLike } from 'tgui-core/react';
 
-import { useBackend } from '../backend';
-import { RADIO_CHANNELS } from '../constants';
+import { useBackend } from '../core/backend';
+import { RADIO_CHANNELS } from '../common/constants/constants';
 import { Window } from '../layouts';
 import { usePreferencesLocalization } from './localization';
 

@@ -1,4 +1,4 @@
-import { useLocalState } from '../../backend';
+import { useLocalState } from '../../core/backend';
 
 export function useCompact() {
   return useLocalState('compact', false);

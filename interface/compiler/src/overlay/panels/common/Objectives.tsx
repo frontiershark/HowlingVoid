@@ -2,7 +2,7 @@ import type { ReactNode } from 'react';
 import { Button, Stack } from 'tgui-core/components';
 import type { BooleanLike } from 'tgui-core/react';
 
-import { useBackend } from '../../backend';
+import { useBackend } from '../../core/backend';
 
 export type Objective = {
   // The title of the objective, not actually displayed so optional

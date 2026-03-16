@@ -15,7 +15,7 @@ import { formatSiUnit } from 'tgui-core/format';
 import type { BooleanLike } from 'tgui-core/react';
 import { createSearch, toTitleCase } from 'tgui-core/string';
 
-import { useBackend, useSharedState } from '../backend';
+import { useBackend, useSharedState } from '../core/backend';
 import { Window } from '../layouts';
 import { SearchBar } from './common/SearchBar';
 import { usePreferencesLocalization } from './localization';

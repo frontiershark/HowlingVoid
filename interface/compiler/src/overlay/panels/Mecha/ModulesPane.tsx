@@ -1,4 +1,4 @@
-import { GasmixParser } from 'overlay/interfaces/common/GasmixParser';
+import { GasmixParser } from 'overlay/panels/common/GasmixParser';
 import {
   Box,
   Button,
@@ -15,7 +15,7 @@ import { formatPower } from 'tgui-core/format';
 import { toFixed } from 'tgui-core/math';
 import { classes } from 'tgui-core/react';
 
-import { useBackend } from '../../backend';
+import { useBackend } from '../../core/backend';
 import { usePreferencesLocalization } from '../localization';
 import type { MainData, MechModule } from './data';
 

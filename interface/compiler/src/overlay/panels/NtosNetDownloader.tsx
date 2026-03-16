@@ -17,7 +17,7 @@ import { scale, toFixed } from 'tgui-core/math';
 import type { BooleanLike } from 'tgui-core/react';
 import { createSearch } from 'tgui-core/string';
 
-import { useBackend } from '../backend';
+import { useBackend } from '../core/backend';
 import { NtosWindow } from '../layouts';
 import { usePreferencesLocalization } from './localization';
 

@@ -4,7 +4,7 @@
  * @license MIT
  */
 
-export { Layout } from './Layout';
-export { NtosWindow } from './NtosWindow';
-export { Pane } from './Pane';
-export { Window } from './Window';
+export { Layout } from './layout/Layout';
+export { NtosWindow } from './ntos-window/NtosWindow';
+export { Pane } from './pane/Pane';
+export { Window } from './window/Window';

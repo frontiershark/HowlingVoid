@@ -1,5 +1,5 @@
-import type { Channel } from './ChannelIterator';
-import { RADIO_PREFIXES, WindowSize } from './constants';
+import type { Channel } from '../../core/channel/ChannelIterator';
+import { RADIO_PREFIXES, WindowSize } from '../constants/constants';
 
 /**
  * Once byond signals this via keystroke, it

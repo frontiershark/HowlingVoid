@@ -1,4 +1,4 @@
-import { useBackend, useLocalState } from '../../backend';
+import { useBackend, useLocalState } from '../../core/backend';
 import { Window } from '../../layouts';
 import { TEXTAREA_INPUT_HEIGHT } from './constants';
 import { canEdit } from './helpers';

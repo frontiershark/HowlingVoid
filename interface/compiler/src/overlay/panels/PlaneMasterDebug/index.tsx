@@ -6,8 +6,8 @@ import {
   Stack,
   Tooltip,
 } from 'tgui-core/components';
-import { resolveAsset } from '../../assets';
-import { useBackend } from '../../backend';
+import { resolveAsset } from '../../core/assets';
+import { useBackend } from '../../core/backend';
 import { Window } from '../../layouts';
 import { usePreferencesLocalization } from '../localization';
 import {

@@ -13,8 +13,8 @@ import {
 } from 'tgui-core/components';
 import type { BooleanLike } from 'tgui-core/react';
 
-import { useBackend } from '../../backend';
-import { logger } from '../../logging';
+import { useBackend } from '../../core/backend';
+import { logger } from '../../core/logging';
 import { usePreferencesLocalization } from '../localization';
 import type { CallInfo, LuaEditorModal, Variant, VariantList } from './types';
 import type { ListElement, ListPath } from './types';

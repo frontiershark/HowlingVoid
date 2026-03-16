@@ -13,8 +13,8 @@ import {
 import { round, toFixed } from 'tgui-core/math';
 import type { BooleanLike } from 'tgui-core/react';
 
-import { useBackend } from '../backend';
-import { COLORS } from '../constants';
+import { useBackend } from '../core/backend';
+import { COLORS } from '../common/constants/constants';
 import { Window } from '../layouts';
 import { type Beaker, BeakerSectionDisplay } from './common/BeakerDisplay';
 import { usePreferencesLocalization } from './localization';

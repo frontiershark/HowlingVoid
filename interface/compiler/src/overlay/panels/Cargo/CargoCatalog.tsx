@@ -13,7 +13,7 @@ import {
 } from 'tgui-core/components';
 import { formatMoney } from 'tgui-core/format';
 
-import { useBackend, useSharedState } from '../../backend';
+import { useBackend, useSharedState } from '../../core/backend';
 import { SearchBar } from '../common/SearchBar';
 import { usePreferencesLocalization } from '../localization';
 import { searchForSupplies } from './helpers';

@@ -1,7 +1,7 @@
 import { Box, Flex } from 'tgui-core/components';
 import type { BooleanLike } from 'tgui-core/react';
 
-import { useBackend } from '../backend';
+import { useBackend } from '../core/backend';
 import { Window } from '../layouts';
 import { NukeKeypad } from './NuclearBomb';
 

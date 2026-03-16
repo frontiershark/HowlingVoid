@@ -2,7 +2,7 @@ import { BlockQuote, LabeledList, Section, Stack } from 'tgui-core/components';
 
 import { Window } from '../layouts';
 import { Rules } from './AntagInfoRules'; // NOVA EDIT ADDITION
-import { useBackend } from '../backend';
+import { useBackend } from '../core/backend';
 import { usePreferencesLocalization } from './localization';
 
 const tipstyle = {

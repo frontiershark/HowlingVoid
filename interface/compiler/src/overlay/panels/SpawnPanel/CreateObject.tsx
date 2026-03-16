@@ -11,7 +11,7 @@ import {
 } from 'tgui-core/components';
 import { useFuzzySearch } from 'tgui-core/fuzzysearch';
 
-import { useBackend } from '../../backend';
+import { useBackend } from '../../core/backend';
 import { usePreferencesLocalization } from '../localization';
 import { CreateObjectSettings } from './CreateObjectSettings';
 import { listNames, listTypes } from './constants';

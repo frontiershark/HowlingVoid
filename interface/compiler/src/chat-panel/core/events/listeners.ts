@@ -1,8 +1,8 @@
 import { loadStyleSheet } from 'common/assets';
 import { EventBus } from 'tgui-core/eventbus';
-import { playMusic, stopMusic } from '../audio/handlers';
-import { chatMessage } from '../chat/handlers';
-import { pingReply, pingSoft } from '../ping/handlers';
+import { playMusic, stopMusic } from '../../partial/audio/handlers';
+import { chatMessage } from '../../panels/chat/handlers';
+import { pingReply, pingSoft } from '../../partial/ping/handlers';
 import {
   handleTelemetryData,
   telemetryRequest,

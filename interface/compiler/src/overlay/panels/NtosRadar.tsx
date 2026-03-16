@@ -8,8 +8,8 @@ import {
 } from 'tgui-core/components';
 import { type BooleanLike, classes } from 'tgui-core/react';
 
-import { resolveAsset } from '../assets';
-import { useBackend } from '../backend';
+import { resolveAsset } from '../core/assets';
+import { useBackend } from '../core/backend';
 import { NtosWindow } from '../layouts';
 import { usePreferencesLocalization } from './localization';
 

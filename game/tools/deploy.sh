@@ -13,11 +13,11 @@ mkdir -p \
     $1/_maps \
     $1/code/datums/greyscale/json_configs \
     $1/data/spritesheets \
-    $1/icons \
-    $1/sound/runtime \
+    $1/../assets/icons \
+    $1/../assets/sound/runtime \
     $1/strings \
-    $1/tgui/public \
-    $1/tgui/packages/tgfont/dist
+    $1/../interface/compiled \
+    $1/../assets/fonts
 
 if [ -d ".git" ]; then
   mkdir -p $1/.git/logs
@@ -25,23 +25,23 @@ if [ -d ".git" ]; then
 fi
 # NOVA EDIT ADDITION START - Get all the .dmis and json configs from modular_nova
 mkdir -p \
-		$1/modular_nova \
-		$1/modular_nova/modules/GAGS/json_configs \
-		$1/modular_nova/modules/GAGS/nsfw/json_configs
+		$1/../shared/modular_nova \
+		$1/../shared/modular_nova/modules/GAGS/json_configs \
+		$1/../shared/modular_nova/modules/GAGS/nsfw/json_configs
 
-find modular_nova/ -name \*.dmi -exec cp --parents {} $1 \;
-find modular_nova/modules/GAGS/json_configs -name \*.json -exec cp --parents {} $1 \;
-find modular_nova/modules/GAGS/nsfw/json_configs -name \*.json -exec cp --parents {} $1 \;
+find ../shared/modular_nova/ -name \*.dmi -exec cp --parents {} $1/.. \;
+find ../shared/modular_nova/modules/GAGS/json_configs -name \*.json -exec cp --parents {} $1/.. \;
+find ../shared/modular_nova/modules/GAGS/nsfw/json_configs -name \*.json -exec cp --parents {} $1/.. \;
 # NOVA EDIT ADDITION END
 
 cp tgstation.dmb tgstation.rsc $1/
 cp -r _maps/* $1/_maps/
 cp -r code/datums/greyscale/json_configs/* $1/code/datums/greyscale/json_configs/
-cp -r icons/* $1/icons/
-cp -r sound/runtime/* $1/sound/runtime/
+cp -r ../assets/icons/* $1/../assets/icons/
+cp -r ../assets/sound/runtime/* $1/../assets/sound/runtime/
 cp -r strings/* $1/strings/
-cp -r tgui/public/* $1/tgui/public/
-cp -r tgui/packages/tgfont/dist/* $1/tgui/packages/tgfont/dist/
+cp -r ../interface/compiled/* $1/../interface/compiled/
+cp -r ../assets/fonts/* $1/../assets/fonts/
 
 #remove .dm files from _maps
 

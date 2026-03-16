@@ -106,23 +106,23 @@ export const IconCutterTarget = new Juke.Target({
   dependsOn: () => [CutterTarget],
   inputs: () => {
     const standard_inputs = [
-      `icons/**/*.png.toml`,
-      `icons/**/*.dmi.toml`,
+      `../assets/icons/**/*.png.toml`,
+      `../assets/icons/**/*.dmi.toml`,
       `cutter_templates/**/*.toml`,
       // NOVA EDIT ADDITION START - Making it work in our nova master files
-      `modular_nova/**/*.png.toml`,
-      `modular_nova/**/*.dmi.toml`,
+      `../shared/modular_nova/**/*.png.toml`,
+      `../shared/modular_nova/**/*.dmi.toml`,
       // NOVA EDIT ADDITION END
       cutter_path,
     ];
     // Alright we're gonna search out any existing toml files and convert
     // them to their matching .dmi or .png file
     const existing_configs = [
-      ...Juke.glob(`icons/**/*.png.toml`),
-      ...Juke.glob(`icons/**/*.dmi.toml`),
+      ...Juke.glob(`../assets/icons/**/*.png.toml`),
+      ...Juke.glob(`../assets/icons/**/*.dmi.toml`),
       // NOVA EDIT ADDITION START - Making it work in our nova master files
-      ...Juke.glob(`modular_nova/**/*.png.toml`),
-      ...Juke.glob(`modular_nova/**/*.dmi.toml`),
+      ...Juke.glob(`../shared/modular_nova/**/*.png.toml`),
+      ...Juke.glob(`../shared/modular_nova/**/*.dmi.toml`),
       // NOVA EDIT ADDITION END
     ];
     return [
@@ -133,11 +133,11 @@ export const IconCutterTarget = new Juke.Target({
   outputs: ({ get }) => {
     if (get(ForceRecutParameter)) return [];
     const folders = [
-      ...Juke.glob(`icons/**/*.png.toml`),
-      ...Juke.glob(`icons/**/*.dmi.toml`),
+      ...Juke.glob(`../assets/icons/**/*.png.toml`),
+      ...Juke.glob(`../assets/icons/**/*.dmi.toml`),
       // NOVA EDIT ADDITION START - Making it work in our nova master files
-      ...Juke.glob(`modular_nova/**/*.png.toml`),
-      ...Juke.glob(`modular_nova/**/*.dmi.toml`),
+      ...Juke.glob(`../shared/modular_nova/**/*.png.toml`),
+      ...Juke.glob(`../shared/modular_nova/**/*.dmi.toml`),
       // NOVA EDIT ADDITION END
     ];
     return folders
@@ -149,8 +149,8 @@ export const IconCutterTarget = new Juke.Target({
       '--dont-wait',
       '--templates',
       'cutter_templates',
-      'icons',
-      'modular_nova', // NOVA EDIT ADDITION - Making the cutter actually work
+      '../assets/icons',
+      '../shared/modular_nova', // NOVA EDIT ADDITION - Making the cutter actually work
     ]);
   },
 });
@@ -215,12 +215,12 @@ export const DmTarget = new Juke.Target({
     '_maps/map_files/generic/**',
     'maps/**/*.dm',
     'code/**',
-    'html/**',
-    'icons/**',
-    'interface/**',
-    'sound/**',
-    'tgui/public/tgui.html',
-    "modular_nova/**", ///NOVA EDIT ADDITION - Making the CBT work
+    '../interface/native/**',
+    '../assets/icons/**',
+    '../interface/**',
+    '../assets/sound/**',
+    '../interface/compiled/tgui.html',
+    "../shared/modular_nova/**", ///NOVA EDIT ADDITION - Making the CBT work
     `${DME_NAME}.dme`,
     NamedVersionFile,
   ],
@@ -329,7 +329,7 @@ export const AutowikiTarget = new Juke.Target({
 
 export const BunTarget = new Juke.Target({
   parameters: [CiParameter],
-  inputs: ['tgui/**/package.json'],
+  inputs: ['../interface/compiler/package.json'],
   executes: () => {
     return bun('install', '--frozen-lockfile', '--ignore-scripts');
   },
@@ -337,85 +337,56 @@ export const BunTarget = new Juke.Target({
 
 export const BiomeInstallTarget = new Juke.Target({
   dependsOn: [BunTarget],
-  inputs: ['package.json', 'bun.lock'],
+  inputs: ['../interface/compiler/package.json', '../interface/compiler/bun.lock'],
   onlyWhen: () => {
-    return Juke.glob('node_modules/@biomejs/**').length === 0;
+    return Juke.glob('../interface/compiler/node_modules/@biomejs/**').length === 0;
   },
   executes: () => {
     return bunRoot('install');
   },
 });
 
-export const TgFontTarget = new Juke.Target({
-  dependsOn: [BunTarget],
-  inputs: [
-    'tgui/packages/tgfont/**/*.+(js|mjs|svg)',
-    'tgui/packages/tgfont/package.json',
-  ],
-  outputs: [
-    'tgui/packages/tgfont/dist/tgfont.css',
-    'tgui/packages/tgfont/dist/tgfont.woff2',
-  ],
-  executes: async () => {
-    await bun('tgfont:build');
-    fs.mkdirSync('tgui/packages/tgfont/static', { recursive: true });
-    fs.copyFileSync(
-      'tgui/packages/tgfont/dist/tgfont.css',
-      'tgui/packages/tgfont/static/tgfont.css',
-    );
-    fs.copyFileSync(
-      'tgui/packages/tgfont/dist/tgfont.woff2',
-      'tgui/packages/tgfont/static/tgfont.woff2',
-    );
-  },
-});
-
 export const TguiTarget = new Juke.Target({
   dependsOn: [BunTarget, BiomeInstallTarget],
   inputs: [
-    'tgui/rspack.config.ts',
-    'tgui/**/package.json',
-    'tgui/packages/**/*.+(js|cjs|ts|tsx|jsx|scss)',
+    '../interface/compiler/rspack.config.ts',
+    '../interface/compiler/package.json',
+    '../interface/compiler/src/**/*.+(js|cjs|ts|tsx|jsx|scss)',
   ],
   outputs: [
-    'tgui/public/tgui.bundle.css',
-    'tgui/public/tgui.bundle.js',
-    'tgui/public/tgui-panel.bundle.css',
-    'tgui/public/tgui-panel.bundle.js',
-    'tgui/public/tgui-say.bundle.css',
-    'tgui/public/tgui-say.bundle.js',
+    '../interface/compiled/overlay/overlay.bundle.css',
+    '../interface/compiled/overlay/overlay.bundle.js',
+    '../interface/compiled/chat-panel/chat-panel.bundle.css',
+    '../interface/compiled/chat-panel/chat-panel.bundle.js',
+    '../interface/compiled/chat-input/chat-input.bundle.css',
+    '../interface/compiled/chat-input/chat-input.bundle.js',
   ],
-  executes: () => bun('tgui:build'),
-});
-
-export const TguiTscTarget = new Juke.Target({
-  dependsOn: [BunTarget],
-  executes: () => bun('tgui:tsc'),
+  executes: () => bun('build'),
 });
 
 export const TguiTestTarget = new Juke.Target({
   parameters: [CiParameter],
   dependsOn: [BunTarget],
-  executes: () => bun('tgui:test'),
+  executes: () => bun('test'),
 });
 
 export const BiomeCheckTarget = new Juke.Target({
   dependsOn: [BunTarget, BiomeInstallTarget],
-  executes: () => bunRoot('tgui:lint'),
+  executes: () => bunRoot('lint'),
 });
 
 export const TguiLintTarget = new Juke.Target({
-  dependsOn: [BunTarget, BiomeCheckTarget, TguiTscTarget],
+  dependsOn: [BunTarget, BiomeCheckTarget],
 });
 
 export const TguiDevTarget = new Juke.Target({
   dependsOn: [BunTarget],
-  executes: ({ args }) => bun('tgui:dev', ...args),
+  executes: ({ args }) => bun('watch', ...args),
 });
 
 export const TguiAnalyzeTarget = new Juke.Target({
   dependsOn: [BunTarget],
-  executes: () => bun('tgui:analyze'),
+  executes: () => bun('analyze'),
 });
 
 export const TestTarget = new Juke.Target({
@@ -449,12 +420,10 @@ export const AllTarget = new Juke.Target({
 
 export const TguiCleanTarget = new Juke.Target({
   executes: async () => {
-    Juke.rm('tgui/public/.tmp', { recursive: true });
-    Juke.rm('tgui/public/*.map');
-    Juke.rm('tgui/public/*.{chunk,bundle,hot-update}.*');
-    Juke.rm('tgui/packages/tgfont/dist', { recursive: true });
-    Juke.rm('tgui/node_modules', { recursive: true });
-    Juke.rm('tgui/packages/*/node_modules', { recursive: true });
+    Juke.rm('../interface/compiled/.tmp', { recursive: true });
+    Juke.rm('../interface/compiled/**/*.map');
+    Juke.rm('../interface/compiled/**/*.{chunk,bundle,hot-update}.*');
+    Juke.rm('../interface/compiler/node_modules', { recursive: true });
   },
 });
 

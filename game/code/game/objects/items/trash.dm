@@ -1,8 +1,8 @@
 //Added by Jack Rost
 /obj/item/trash
-	icon = 'icons/obj/service/janitor.dmi'
-	lefthand_file = 'icons/mob/inhands/items/food_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/food_righthand.dmi'
+	icon = '../assets/icons/obj/service/janitor.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/food_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/food_righthand.dmi'
 	abstract_type = /obj/item/trash
 	desc = "This is rubbish."
 	w_class = WEIGHT_CLASS_TINY
@@ -114,7 +114,7 @@
 
 /obj/item/trash/candle
 	name = "melted candle"
-	icon = 'icons/obj/candle.dmi'
+	icon = '../assets/icons/obj/candle.dmi'
 	icon_state = "candle4"
 	custom_materials = null
 
@@ -124,7 +124,7 @@
 
 /obj/item/trash/flare
 	name = "burnt flare"
-	icon = 'icons/obj/lighting.dmi'
+	icon = '../assets/icons/obj/lighting.dmi'
 	icon_state = "flare-empty"
 	custom_materials = list(/datum/material/iron=SMALL_MATERIAL_AMOUNT*2,/datum/material/glass=SMALL_MATERIAL_AMOUNT,)
 
@@ -138,7 +138,7 @@
 	return list(/datum/reagent/aluminium = 10)
 
 /obj/item/trash/can/food
-	icon = 'icons/obj/food/canned.dmi'
+	icon = '../assets/icons/obj/food/canned.dmi'
 	icon_state = "peachcan_empty"
 
 /obj/item/trash/can/food/peaches

@@ -2,7 +2,7 @@
 /mob/living/basic/mining/watcher
 	name = "watcher"
 	desc = "A levitating, monocular creature held aloft by wing-like veins. A sharp spine of crystal protrudes from its body."
-	icon = 'icons/mob/simple/lavaland/lavaland_monsters_wide.dmi'
+	icon = '../assets/icons/mob/simple/lavaland/lavaland_monsters_wide.dmi'
 	icon_state = "watcher"
 	icon_living = "watcher"
 	icon_dead = "watcher_dead"
@@ -15,7 +15,7 @@
 	health = 160
 	melee_damage_lower = 15
 	melee_damage_upper = 15
-	attack_sound = 'sound/items/weapons/bladeslice.ogg'
+	attack_sound = '../assets/sound/items/weapons/bladeslice.ogg'
 	attack_verb_continuous = "buffets"
 	attack_verb_simple = "buffet"
 	crusher_loot = /obj/item/crusher_trophy/watcher_wing
@@ -32,7 +32,7 @@
 	/// Icon state for our eye overlay
 	var/eye_glow = "watcher_glow"
 	/// Sound to play when we shoot
-	var/shoot_sound = 'sound/items/weapons/pierce.ogg'
+	var/shoot_sound = '../assets/sound/items/weapons/pierce.ogg'
 	/// Typepath of our gaze ability
 	var/gaze_attack = /datum/action/cooldown/mob_cooldown/watcher_gaze
 	// We attract and eat these things for some reason

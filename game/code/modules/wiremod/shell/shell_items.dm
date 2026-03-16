@@ -6,7 +6,7 @@
 /obj/item/shell
 	name = "assembly"
 	desc = "A shell assembly that can be completed by screwdrivering it."
-	icon = 'icons/obj/science/circuits.dmi'
+	icon = '../assets/icons/obj/science/circuits.dmi'
 	abstract_type = /obj/item/shell
 	var/shell_to_spawn
 	var/screw_delay = 3 SECONDS
@@ -50,7 +50,7 @@
 
 /obj/item/shell/airlock
 	name = "circuit airlock assembly"
-	icon = 'icons/obj/doors/airlocks/station/public.dmi'
+	icon = '../assets/icons/obj/doors/airlocks/station/public.dmi'
 	icon_state = "construction"
 	shell_to_spawn = /obj/machinery/door/airlock/shell
 	screw_delay = 10 SECONDS
@@ -69,6 +69,6 @@
 
 /obj/item/shell/scanner_gate
 	name = "scanner gate assembly"
-	icon = 'icons/obj/machines/scangate.dmi'
+	icon = '../assets/icons/obj/machines/scangate.dmi'
 	icon_state = "scangate_black_open"
 	shell_to_spawn = /obj/structure/scanner_gate_shell

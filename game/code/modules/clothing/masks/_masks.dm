@@ -1,8 +1,8 @@
 /obj/item/clothing/mask
 	name = "mask"
-	icon = 'icons/obj/clothing/masks.dmi'
-	lefthand_file = 'icons/mob/inhands/clothing/masks_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/clothing/masks_righthand.dmi'
+	icon = '../assets/icons/obj/clothing/masks.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/clothing/masks_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/clothing/masks_righthand.dmi'
 	abstract_type = /obj/item/clothing/mask
 	body_parts_covered = HEAD
 	slot_flags = ITEM_SLOT_MASK
@@ -31,7 +31,7 @@
 	if(isinhands || !(body_parts_covered & HEAD))
 		return
 	if(damaged_clothes)
-		. += mutable_appearance('icons/effects/item_damage.dmi', "damagedmask")
+		. += mutable_appearance('../assets/icons/effects/item_damage.dmi', "damagedmask")
 
 /obj/item/clothing/mask/separate_worn_overlays(mutable_appearance/standing, mutable_appearance/draw_target, isinhands, icon_file, mutant_styles) // NOVA EDIT CHANGE - ORIGINAL: /obj/item/clothing/gloves/separate_worn_overlays(mutable_appearance/standing, mutable_appearance/draw_target, isinhands, icon_file)
 	. = ..()

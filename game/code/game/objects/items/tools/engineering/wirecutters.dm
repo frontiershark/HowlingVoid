@@ -1,12 +1,12 @@
 /obj/item/wirecutters
 	name = "wirecutters"
 	desc = "This cuts wires."
-	icon = 'icons/obj/tools.dmi'
+	icon = '../assets/icons/obj/tools.dmi'
 	icon_state = "cutters_map"
 	worn_icon_state = "cutters"
 	inhand_icon_state = "cutters"
-	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/tools_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/tools_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/tools_righthand.dmi'
 	flags_1 = IS_PLAYER_COLORABLE_1|NO_NEW_GAGS_PREVIEW_1
 	greyscale_config = /datum/greyscale_config/wirecutters
 	greyscale_config_belt = /datum/greyscale_config/wirecutters_belt_overlay
@@ -22,11 +22,11 @@
 	custom_materials = list(/datum/material/iron=SMALL_MATERIAL_AMOUNT*0.8)
 	attack_verb_continuous = list("pinches", "nips")
 	attack_verb_simple = list("pinch", "nip")
-	hitsound = 'sound/items/tools/wirecutter.ogg'
-	usesound = 'sound/items/tools/wirecutter.ogg'
-	operating_sound = 'sound/items/tools/wirecutter_cut.ogg'
-	drop_sound = 'sound/items/handling/tools/wirecutter_drop.ogg'
-	pickup_sound = 'sound/items/handling/tools/wirecutter_pickup.ogg'
+	hitsound = '../assets/sound/items/tools/wirecutter.ogg'
+	usesound = '../assets/sound/items/tools/wirecutter.ogg'
+	operating_sound = '../assets/sound/items/tools/wirecutter_cut.ogg'
+	drop_sound = '../assets/sound/items/handling/tools/wirecutter_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/tools/wirecutter_pickup.ogg'
 	tool_behaviour = TOOL_WIRECUTTER
 	toolspeed = 1
 	armor_type = /datum/armor/item_wirecutters
@@ -67,7 +67,7 @@
 /obj/item/wirecutters/abductor
 	name = "alien wirecutters"
 	desc = "Extremely sharp wirecutters, made out of a silvery-green metal."
-	icon = 'icons/obj/antags/abductor.dmi' //NOVA EDIT - ICON OVERRIDDEN IN AESTHETICS MODULE
+	icon = '../assets/icons/obj/antags/abductor.dmi' //NOVA EDIT - ICON OVERRIDDEN IN AESTHETICS MODULE
 	custom_materials = list(/datum/material/iron =SHEET_MATERIAL_AMOUNT * 2.5, /datum/material/silver = SHEET_MATERIAL_AMOUNT*1.25, /datum/material/plasma =HALF_SHEET_MATERIAL_AMOUNT, /datum/material/titanium =SHEET_MATERIAL_AMOUNT, /datum/material/diamond =SHEET_MATERIAL_AMOUNT)
 	icon_state = "cutters"
 	toolspeed = 0.1
@@ -81,7 +81,7 @@
 /obj/item/wirecutters/cyborg
 	name = "powered wirecutters"
 	desc = "Cuts wires with the power of ELECTRICITY. Faster than normal wirecutters."
-	icon = 'icons/obj/items_cyborg.dmi'
+	icon = '../assets/icons/obj/items_cyborg.dmi'
 	icon_state = "toolkit_engiborg_cutters"
 	worn_icon_state = "cutters"
 	toolspeed = 0.5

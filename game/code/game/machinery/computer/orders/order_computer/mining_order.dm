@@ -3,7 +3,7 @@
 /obj/machinery/computer/order_console/mining
 	name = "mining equipment order console"
 	desc = "An equipment shop for miners, points collected at an ore redemption machine can be spent here."
-	icon = 'icons/obj/machines/mining_machines.dmi'
+	icon = '../assets/icons/obj/machines/mining_machines.dmi'
 	icon_state = "mining"
 	icon_keyboard = null
 	icon_screen = null
@@ -81,7 +81,7 @@
 /obj/item/mining_voucher
 	name = "mining voucher"
 	desc = "A token to redeem a piece of equipment. Use it on a mining equipment vendor."
-	icon = 'icons/obj/mining.dmi'
+	icon = '../assets/icons/obj/mining.dmi'
 	icon_state = "mining_voucher"
 	w_class = WEIGHT_CLASS_TINY
 

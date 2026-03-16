@@ -10,7 +10,7 @@
 //for ghosts/admins
 /obj/mafia_game_board
 	name = "Mafia Game Board"
-	icon = 'icons/obj/mafia.dmi'
+	icon = '../assets/icons/obj/mafia.dmi'
 	icon_state = "board"
 	anchored = TRUE
 	var/datum/mafia_controller/MF

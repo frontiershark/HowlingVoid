@@ -5,8 +5,8 @@
 	inhand_icon_state = "b_suit"
 	sensor_mode = SENSOR_COORDS
 	random_sensor = FALSE
-	icon = 'icons/obj/clothing/under/captain.dmi'
-	worn_icon = 'icons/mob/clothing/under/captain.dmi'
+	icon = '../assets/icons/obj/clothing/under/captain.dmi'
+	worn_icon = '../assets/icons/mob/clothing/under/captain.dmi'
 	armor_type = /datum/armor/clothing_under/rank_captain
 
 /datum/armor/clothing_under/rank_captain

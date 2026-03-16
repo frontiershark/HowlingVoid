@@ -76,7 +76,7 @@ at the cost of risking a vicious bite.**/
 		to_chat(user, span_warning("You need to lie down to reach into [src]."))
 		return
 	to_chat(user, span_notice("You reach down into the cold water of the basin."))
-	playsound(src,'sound/effects/submerge.ogg', 25, TRUE)
+	playsound(src,'../assets/sound/effects/submerge.ogg', 25, TRUE)
 	if(!do_after(user, 2 SECONDS, target = src))
 		return
 	if(hidden_item)
@@ -89,7 +89,7 @@ at the cost of risking a vicious bite.**/
 		var/obj/item/bodypart/affecting = bite_victim.get_active_hand()
 		to_chat(user, span_danger("You feel a sharp pain as an unseen creature sinks its [pick("fangs", "beak", "proboscis")] into your [affecting.plaintext_zone]!"))
 		bite_victim.apply_damage(30, BRUTE, affecting)
-		playsound(src,'sound/items/weapons/bite.ogg', 70, TRUE)
+		playsound(src,'../assets/sound/items/weapons/bite.ogg', 70, TRUE)
 		return
 	to_chat(user, span_warning("You find nothing of value..."))
 
@@ -115,7 +115,7 @@ at the cost of risking a vicious bite.**/
 		return
 	hidden_item = I
 	to_chat(user, span_notice("You hide [I] inside the basin."))
-	playsound(src,'sound/effects/splash.ogg', 55, TRUE)
+	playsound(src,'../assets/sound/effects/splash.ogg', 55, TRUE)
 
 #define ALTAR_INACTIVE 0
 #define ALTAR_STAGEONE 1
@@ -129,7 +129,7 @@ at the cost of risking a vicious bite.**/
 	icon_state = "altar"
 	cult_examine_tip = "Even you don't understand the eldritch magic behind this."
 	break_message = span_warning("The structure shatters, leaving only a demonic screech!")
-	break_sound = 'sound/effects/magic/demon_dies.ogg'
+	break_sound = '../assets/sound/effects/magic/demon_dies.ogg'
 	light_color = LIGHT_COLOR_BLOOD_MAGIC
 	light_range = 2
 	use_cooldown_duration = 1 MINUTES
@@ -149,8 +149,8 @@ at the cost of risking a vicious bite.**/
 	if(.)
 		return
 	var/list/altar_options = list(
-		"Change Color" = image(icon = 'icons/hud/radial.dmi', icon_state = "radial_recolor"),
-		"Create Artefact" = image(icon = 'icons/hud/radial.dmi', icon_state = "radial_create")
+		"Change Color" = image(icon = '../assets/icons/hud/radial.dmi', icon_state = "radial_recolor"),
+		"Create Artefact" = image(icon = '../assets/icons/hud/radial.dmi', icon_state = "radial_create")
 	)
 	var/altar_result = show_radial_menu(user, src, altar_options, custom_check = CALLBACK(src, PROC_REF(check_menu), user), require_near = TRUE, tooltips = TRUE)
 	switch(altar_result)
@@ -193,7 +193,7 @@ at the cost of risking a vicious bite.**/
 	status = ALTAR_STAGEONE
 	update_icon()
 	visible_message(span_warning("[src] starts creating something..."))
-	playsound(src, 'sound/effects/magic/pantsaltar.ogg', 60)
+	playsound(src, '../assets/sound/effects/magic/pantsaltar.ogg', 60)
 	addtimer(CALLBACK(src, PROC_REF(pants_stagetwo)), ALTAR_TIME)
 
 /// Continues the creation, making every mob nearby nauseous.
@@ -306,7 +306,7 @@ at the cost of risking a vicious bite.**/
 		balloon_alert(user, "must be off!")
 		return
 	if(tool.use_tool(src, user, 3 SECONDS))
-		playsound(loc, 'sound/items/deconstruct.ogg', 50, TRUE)
+		playsound(loc, '../assets/sound/items/deconstruct.ogg', 50, TRUE)
 		deconstruct()
 		return TRUE
 
@@ -326,7 +326,7 @@ at the cost of risking a vicious bite.**/
 	if(!ismob(leaving))
 		return
 	do_smoke(1, src, loc)
-	playsound(src, 'sound/machines/steam_hiss.ogg', 75, TRUE, -2)
+	playsound(src, '../assets/sound/machines/steam_hiss.ogg', 75, TRUE, -2)
 	COOLDOWN_START(src, steam_vent_interact, steam_speed)
 
 /obj/structure/steam_vent/update_icon_state()

@@ -8,7 +8,7 @@
 	initial_language_holder = /datum/language_holder/synthetic/silicon
 	bubble_icon = "machine"
 	mob_biotypes = MOB_ROBOTIC
-	death_sound = 'sound/mobs/non-humanoids/cyborg/borg_deathsound.ogg'
+	death_sound = '../assets/sound/mobs/non-humanoids/cyborg/borg_deathsound.ogg'
 	speech_span = SPAN_ROBOT
 	flags_1 = PREVENT_CONTENTS_EXPLOSION_1
 	examine_cursor_icon = null
@@ -465,7 +465,7 @@
 	return // Silicons are always standing by default.
 
 /mob/living/silicon/get_butt_sprite()
-	return icon('icons/mob/butts.dmi', BUTT_SPRITE_QR_CODE)
+	return icon('../assets/icons/mob/butts.dmi', BUTT_SPRITE_QR_CODE)
 
 /**
  * Records an IC event log entry in the cyborg's internal tablet.

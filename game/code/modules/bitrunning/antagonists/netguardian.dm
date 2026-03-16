@@ -6,7 +6,7 @@
 /mob/living/basic/netguardian
 	name = "netguardian prime"
 	desc = "The last line of defense against organic intrusion. It doesn't appear happy to see you."
-	icon = 'icons/mob/nonhuman-player/netguardian.dmi'
+	icon = '../assets/icons/mob/nonhuman-player/netguardian.dmi'
 	icon_state = "netguardian"
 	icon_living = "netguardian"
 	icon_dead = "crash"
@@ -22,7 +22,7 @@
 
 	attack_verb_continuous = "drills"
 	attack_verb_simple = "drills"
-	attack_sound = 'sound/items/weapons/drill.ogg'
+	attack_sound = '../assets/sound/items/weapons/drill.ogg'
 	attack_vis_effect = ATTACK_EFFECT_MECHFIRE
 	verb_say = "states"
 	verb_ask = "queries"
@@ -58,7 +58,7 @@
 	ADD_TRAIT(src, TRAIT_NO_FLOATING_ANIM, INNATE_TRAIT)
 	AddComponent(/datum/component/ranged_attacks, \
 		casing_type = /obj/item/ammo_casing/c46x30mm, \
-		projectile_sound = 'sound/items/weapons/gun/smg/shot.ogg', \
+		projectile_sound = '../assets/sound/items/weapons/gun/smg/shot.ogg', \
 		burst_shots = 6 \
 	)
 
@@ -71,7 +71,7 @@
 
 /mob/living/basic/netguardian/death(gibbed)
 	do_sparks(number = 3, cardinal_only = TRUE, source = src)
-	playsound(src, 'sound/vehicles/mecha/weapdestr.ogg', 100)
+	playsound(src, '../assets/sound/vehicles/mecha/weapdestr.ogg', 100)
 	return ..()
 
 /mob/living/basic/netguardian/update_overlays()
@@ -82,7 +82,7 @@
 
 /datum/action/cooldown/mob_cooldown/projectile_attack/rapid_fire/netguardian
 	name = "2E Rocket Launcher"
-	button_icon = 'icons/obj/weapons/guns/ammo.dmi'
+	button_icon = '../assets/icons/obj/weapons/guns/ammo.dmi'
 	button_icon_state = "rocketbundle"
 	cooldown_time = 30 SECONDS
 	default_projectile_spread = 15
@@ -91,10 +91,10 @@
 
 /datum/action/cooldown/mob_cooldown/projectile_attack/rapid_fire/netguardian/Activate(atom/target_atom)
 	var/mob/living/player = owner
-	playsound(player, 'sound/vehicles/mecha/skyfall_power_up.ogg', 120)
+	playsound(player, '../assets/sound/vehicles/mecha/skyfall_power_up.ogg', 120)
 	player.say("target acquired.", "machine")
 
-	var/overlay_icon = 'icons/mob/nonhuman-player/netguardian.dmi'
+	var/overlay_icon = '../assets/icons/mob/nonhuman-player/netguardian.dmi'
 	var/list/overlays = list()
 	overlays += mutable_appearance(overlay_icon, "scan")
 	overlays += mutable_appearance(overlay_icon, "rockets")

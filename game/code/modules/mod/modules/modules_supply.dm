@@ -64,7 +64,7 @@
 		var/atom/movable/picked_crate = target
 		if(!check_crate_pickup(picked_crate))
 			return
-		playsound(src, 'sound/vehicles/mecha/hydraulic.ogg', 25, TRUE)
+		playsound(src, '../assets/sound/vehicles/mecha/hydraulic.ogg', 25, TRUE)
 		if(!do_after(mod.wearer, load_time, target = target))
 			balloon_alert(mod.wearer, "interrupted!")
 			return
@@ -78,7 +78,7 @@
 		var/turf/target_turf = get_turf(target)
 		if(target_turf.is_blocked_turf())
 			return
-		playsound(src, 'sound/vehicles/mecha/hydraulic.ogg', 25, TRUE)
+		playsound(src, '../assets/sound/vehicles/mecha/hydraulic.ogg', 25, TRUE)
 		if(!do_after(mod.wearer, load_time, target = target))
 			balloon_alert(mod.wearer, "interrupted!")
 			return
@@ -201,7 +201,7 @@
 		return
 
 	COOLDOWN_START(src, gibtonite_warning_cd, 3 SECONDS)
-	playsound(bumper, 'sound/machines/scanner/scanbuzz.ogg', 25, TRUE, SILENCED_SOUND_EXTRARANGE)
+	playsound(bumper, '../assets/sound/machines/scanner/scanbuzz.ogg', 25, TRUE, SILENCED_SOUND_EXTRARANGE)
 	to_chat(bumper, span_warning("[icon2html(src, bumper)] Unstable gibtonite ore deposit detected!"))
 
 /obj/item/mod/module/drill/proc/on_module_activated(datum/source, obj/item/mod/module/module)
@@ -329,8 +329,8 @@
 	var/current_time = world.time
 	mod.wearer.visible_message(span_warning("[mod.wearer] starts whirring!"), \
 		blind_message = span_hear("You hear a whirring sound."))
-	playsound(src, 'sound/items/modsuit/loader_charge.ogg', 75, TRUE)
-	lightning = mutable_appearance('icons/effects/effects.dmi', "electricity3", layer = LOW_MOB_LAYER)
+	playsound(src, '../assets/sound/items/modsuit/loader_charge.ogg', 75, TRUE)
+	lightning = mutable_appearance('../assets/icons/effects/effects.dmi', "electricity3", layer = LOW_MOB_LAYER)
 	mod.wearer.add_overlay(lightning)
 	balloon_alert(mod.wearer, "you start charging...")
 	var/power = launch_time
@@ -339,7 +339,7 @@
 		animate(game_renderer)
 	drain_power(use_energy_cost)
 	new /obj/effect/temp_visual/mook_dust(get_turf(src))
-	playsound(src, 'sound/items/modsuit/loader_launch.ogg', 75, TRUE)
+	playsound(src, '../assets/sound/items/modsuit/loader_launch.ogg', 75, TRUE)
 	game_renderer.transform = game_renderer.transform.Scale(0.8, 0.8)
 	mod.wearer.cut_overlay(lightning)
 	var/angle = get_angle(mod.wearer, target)
@@ -409,7 +409,7 @@
 		return
 	if(istype(mod.wearer.pulling, /obj/structure/closet))
 		var/obj/structure/closet/locker = mod.wearer.pulling
-		playsound(locker, 'sound/effects/gravhit.ogg', 75, TRUE)
+		playsound(locker, '../assets/sound/effects/gravhit.ogg', 75, TRUE)
 		locker.forceMove(mod.wearer.loc)
 		locker.throw_at(target, range = 7, speed = 4, thrower = mod.wearer)
 		return
@@ -421,7 +421,7 @@
 		balloon_alert(mod.wearer, "target anchored!")
 		return
 	new /obj/effect/temp_visual/mook_dust(get_turf(locker))
-	playsound(locker, 'sound/effects/gravhit.ogg', 75, TRUE)
+	playsound(locker, '../assets/sound/effects/gravhit.ogg', 75, TRUE)
 	locker.throw_at(mod.wearer, range = 7, speed = 3, force = MOVE_FORCE_WEAK, \
 		callback = CALLBACK(src, PROC_REF(check_locker), locker))
 
@@ -542,7 +542,7 @@
 		var/cur_color = mod.wearer.color
 		mod.wearer.color = list(1,0,0,0, 0,1,0,0, 0,0,1,0, 0,0,0,3) // Make them super light
 		animate(mod.wearer, 1 SECONDS, color = cur_color, flags = ANIMATION_PARALLEL)
-		playsound(src, 'sound/effects/sparks/sparks1.ogg', 100, TRUE)
+		playsound(src, '../assets/sound/effects/sparks/sparks1.ogg', 100, TRUE)
 		mod.update_speed()
 		return
 
@@ -637,8 +637,8 @@
 	return ..()
 
 /obj/item/mod/module/sphere_transform/on_activation(mob/activator)
-	playsound(src, 'sound/items/modsuit/ballin.ogg', 100, TRUE)
-	mod.wearer.add_filter("mod_ball", 1, alpha_mask_filter(icon = icon('icons/mob/clothing/modsuit/mod_modules.dmi', "ball_mask"), flags = MASK_INVERSE))
+	playsound(src, '../assets/sound/items/modsuit/ballin.ogg', 100, TRUE)
+	mod.wearer.add_filter("mod_ball", 1, alpha_mask_filter(icon = icon('../assets/icons/mob/clothing/modsuit/mod_modules.dmi', "ball_mask"), flags = MASK_INVERSE))
 	mod.wearer.add_filter("mod_blur", 2, angular_blur_filter(size = 15))
 	mod.wearer.add_filter("mod_outline", 3, outline_filter(color = "#000000AA"))
 	mod.wearer.add_offsets(REF(src), y_add = -4)
@@ -654,7 +654,7 @@
 
 /obj/item/mod/module/sphere_transform/on_deactivation(mob/activator, display_message = TRUE, deleting = FALSE)
 	if(!deleting)
-		playsound(src, 'sound/items/modsuit/ballin.ogg', 100, TRUE, frequency = -1)
+		playsound(src, '../assets/sound/items/modsuit/ballin.ogg', 100, TRUE, frequency = -1)
 	mod.wearer.remove_offsets(REF(src))
 	addtimer(CALLBACK(mod.wearer, TYPE_PROC_REF(/datum, remove_filter), list("mod_ball", "mod_blur", "mod_outline")), animate_time)
 	mod.wearer.remove_traits(user_traits, REF(src))
@@ -670,7 +670,7 @@
 /obj/item/mod/module/sphere_transform/used(mob/activator)
 	if(!lavaland_equipment_pressure_check(get_turf(src)))
 		balloon_alert(activator, "too much pressure!")
-		playsound(src, 'sound/items/weapons/gun/general/dry_fire.ogg', 25, TRUE)
+		playsound(src, '../assets/sound/items/weapons/gun/general/dry_fire.ogg', 25, TRUE)
 		return FALSE
 	return ..()
 
@@ -681,7 +681,7 @@
 	var/obj/projectile/bullet/mining_bomb/bomb = new(mod.wearer.loc)
 	bomb.aim_projectile(target, mod.wearer)
 	bomb.firer = mod.wearer
-	playsound(src, 'sound/items/weapons/gun/general/grenade_launch.ogg', 75, TRUE)
+	playsound(src, '../assets/sound/items/weapons/gun/general/grenade_launch.ogg', 75, TRUE)
 	INVOKE_ASYNC(bomb, TYPE_PROC_REF(/obj/projectile, fire))
 	drain_power(use_energy_cost)
 
@@ -698,7 +698,7 @@
 	name = "mining bomb"
 	desc = "A bomb. Why are you examining this?"
 	icon_state = "mine_bomb"
-	icon = 'icons/obj/clothing/modsuit/mod_modules.dmi'
+	icon = '../assets/icons/obj/clothing/modsuit/mod_modules.dmi'
 	damage = 0
 	range = 6
 	suppressed = SUPPRESSED_VERY
@@ -723,7 +723,7 @@
 	name = "mining bomb"
 	desc = "A bomb. Why are you examining this?"
 	icon_state = "mine_bomb"
-	icon = 'icons/obj/clothing/modsuit/mod_modules.dmi'
+	icon = '../assets/icons/obj/clothing/modsuit/mod_modules.dmi'
 	anchored = TRUE
 	resistance_flags = FIRE_PROOF|LAVA_PROOF
 	light_system = OVERLAY_LIGHT
@@ -740,7 +740,7 @@
 	var/fauna_boost = 4
 
 /obj/structure/mining_bomb/proc/prime(atom/movable/firer)
-	var/mutable_appearance/explosion_image = mutable_appearance('icons/effects/96x96.dmi', "judicial_explosion", FLOAT_LAYER, src, ABOVE_GAME_PLANE)
+	var/mutable_appearance/explosion_image = mutable_appearance('../assets/icons/effects/96x96.dmi', "judicial_explosion", FLOAT_LAYER, src, ABOVE_GAME_PLANE)
 	explosion_image.pixel_w = -32
 	explosion_image.pixel_z = -32
 	var/turf/our_loc = get_turf(src)
@@ -749,7 +749,7 @@
 
 /obj/structure/mining_bomb/proc/boom(atom/movable/firer)
 	visible_message(span_danger("[src] explodes!"))
-	playsound(src, 'sound/effects/magic/magic_missile.ogg', 200, vary = TRUE)
+	playsound(src, '../assets/sound/effects/magic/magic_missile.ogg', 200, vary = TRUE)
 	for(var/turf/closed/mineral/rock in circle_range_turfs(src, 1))
 		rock.gets_drilled()
 	for(var/mob/living/victim in range(1, src))

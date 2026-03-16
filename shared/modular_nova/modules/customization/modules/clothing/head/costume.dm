@@ -12,7 +12,7 @@
 /obj/item/clothing/head/costume/nova/papakha
 	name = "papakha"
 	desc = "A big wooly clump of fur designed to go on your head."
-	icon = 'icons/map_icons/clothing/head/_head.dmi'
+	icon = '../assets/icons/map_icons/clothing/head/_head.dmi'
 	icon_state = "/obj/item/clothing/head/costume/nova/papakha"
 	post_init_icon_state = "papakha"
 	greyscale_config = /datum/greyscale_config/papakha
@@ -25,7 +25,7 @@
 /obj/item/clothing/head/costume/nova/flowerpin
 	name = "flower pin"
 	desc = "A small, colourable flower pin"
-	icon = 'icons/map_icons/clothing/head/_head.dmi'
+	icon = '../assets/icons/map_icons/clothing/head/_head.dmi'
 	icon_state = "/obj/item/clothing/head/costume/nova/flowerpin"
 	post_init_icon_state = "flowerpin"
 	greyscale_config = /datum/greyscale_config/flowerpin
@@ -110,7 +110,7 @@
 /obj/item/clothing/head/maid_headband
 	name = "maid headband"
 	desc = "Just like from one of those Chinese cartoons!"
-	icon = 'icons/map_icons/clothing/head/_head.dmi'
+	icon = '../assets/icons/map_icons/clothing/head/_head.dmi'
 	icon_state = "/obj/item/clothing/head/maid_headband"
 	post_init_icon_state = "maid_headband"
 	greyscale_config = /datum/greyscale_config/maid_costume_headband

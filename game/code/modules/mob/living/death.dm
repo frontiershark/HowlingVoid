@@ -131,7 +131,7 @@
 
 /// Holds the dust animation filter effect, so we can animate it
 /obj/effect/temp_visual/dust_animation_filter
-	icon = 'icons/mob/dust_animation.dmi'
+	icon = '../assets/icons/mob/dust_animation.dmi'
 	icon_state = "dust.1"
 	duration = DUST_ANIMATION_TIME
 	randomdir = FALSE

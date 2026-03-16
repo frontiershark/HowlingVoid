@@ -203,7 +203,7 @@
 	span_notice("You jam your hand into the core, feeling for the densest point! Your arm is covered in slime!"),
 	span_notice("You hear an obscene squelching sound.")
 	)
-	playsound(user, 'sound/items/handling/surgery/organ1.ogg', 80, TRUE)
+	playsound(user, '../assets/sound/items/handling/surgery/organ1.ogg', 80, TRUE)
 
 	if(!do_after(user, 30 SECONDS, src))
 		user.visible_message(span_warning("[user]'s hand slips out of the core before [user.p_they()] can cause any harm!'"),
@@ -215,7 +215,7 @@
 	user.visible_message(span_warning("[user] crunches something deep in the slime core! It gradually stops glowing..."),
 	span_notice("You find the densest point, crushing it in your palm. The blinking light in the core slowly dissipates."),
 	span_notice("You hear a wet crunching sound."))
-	playsound(user, 'sound/effects/wounds/crackandbleed.ogg', 80, TRUE)
+	playsound(user, '../assets/sound/effects/wounds/crackandbleed.ogg', 80, TRUE)
 	gps_active = FALSE
 	qdel(GetComponent(/datum/component/gps))
 
@@ -270,7 +270,7 @@
 	new death_melt_type(death_loc, victim.dir)
 
 	do_steam_effects(get_turf(victim))
-	playsound(victim, 'sound/effects/blob/blobattack.ogg', 80, TRUE)
+	playsound(victim, '../assets/sound/effects/blob/blobattack.ogg', 80, TRUE)
 
 	if(gps_active) // adding the gps signal if they have activated the ability
 		AddComponent(/datum/component/gps, "[victim]'s Core")
@@ -425,7 +425,7 @@
 /datum/action/cooldown/spell/slime_washing
 	name = "Toggle Slime Cleaning"
 	desc = "Filter grime through your outer membrane, cleaning yourself and your equipment for sustenance. Also cleans the floor, providing your feet are uncovered. For sustenance."
-	button_icon = 'icons/mob/actions/actions_silicon.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_silicon.dmi'
 	button_icon_state = "activate_wash"
 
 	cooldown_time = 1 SECONDS
@@ -482,7 +482,7 @@
 /datum/action/cooldown/spell/slime_hydrophobia
 	name = "Toggle Hydrophobia"
 	desc = "Develop an oily layer on your outer membrane, repelling water at the cost of lower viscosity."
-	button_icon = 'icons/mob/actions/actions_items.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_items.dmi'
 	button_icon_state = "bci_shield"
 
 	cooldown_time = 1 MINUTES

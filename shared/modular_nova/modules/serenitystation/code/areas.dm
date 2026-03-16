@@ -1,13 +1,13 @@
 /area/forestplanet
 	name = "Forest Planet"
-	icon = 'icons/area/areas_station.dmi'
+	icon = '../assets/icons/area/areas_station.dmi'
 	icon_state = "explored"
 	default_gravity = STANDARD_GRAVITY
 	flags_1 = NONE
 	area_flags_mapping = UNIQUE_AREA | FLORA_ALLOWED
 	ambience_index = AMBIENCE_FOREST
 	sound_environment = SOUND_AREA_FOREST
-	ambient_buzz = 'sound/ambience/lavaland/magma.ogg'
+	ambient_buzz = '../assets/sound/ambience/lavaland/magma.ogg'
 	always_unpowered = TRUE
 	power_environ = FALSE
 	power_equip = FALSE

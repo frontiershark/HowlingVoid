@@ -1,6 +1,6 @@
 /obj/item/mod/construction
 	desc = "A part used in MOD construction."
-	icon = 'icons/obj/clothing/modsuit/mod_construction.dmi'
+	icon = '../assets/icons/obj/clothing/modsuit/mod_construction.dmi'
 	inhand_icon_state = "rack_parts"
 
 /obj/item/mod/construction/helmet
@@ -167,7 +167,7 @@
 			if(!user.transferItemToLoc(part, src))
 				balloon_alert(user, "it's stuck!")
 				return
-			playsound(src, 'sound/machines/click.ogg', 30, TRUE)
+			playsound(src, '../assets/sound/machines/click.ogg', 30, TRUE)
 			balloon_alert(user, "core inserted")
 			core = part
 			step = CORE_STEP
@@ -186,7 +186,7 @@
 				if(!user.transferItemToLoc(part, src))
 					balloon_alert(user, "it's stuck!")
 					return
-				playsound(src, 'sound/machines/click.ogg', 30, TRUE)
+				playsound(src, '../assets/sound/machines/click.ogg', 30, TRUE)
 				balloon_alert(user, "helmet added")
 				helmet = part
 				step = HELMET_STEP
@@ -199,7 +199,7 @@
 				if(!user.transferItemToLoc(part, src))
 					balloon_alert(user, "it's stuck!")
 					return
-				playsound(src, 'sound/machines/click.ogg', 30, TRUE)
+				playsound(src, '../assets/sound/machines/click.ogg', 30, TRUE)
 				balloon_alert(user, "chestplate added")
 				chestplate = part
 				step = CHESTPLATE_STEP
@@ -214,7 +214,7 @@
 				if(!user.transferItemToLoc(part, src))
 					balloon_alert(user, "it's stuck!")
 					return
-				playsound(src, 'sound/machines/click.ogg', 30, TRUE)
+				playsound(src, '../assets/sound/machines/click.ogg', 30, TRUE)
 				balloon_alert(user, "gauntlets added")
 				gauntlets = part
 				step = GAUNTLETS_STEP
@@ -229,7 +229,7 @@
 				if(!user.transferItemToLoc(part, src))
 					balloon_alert(user, "it's stuck!")
 					return
-				playsound(src, 'sound/machines/click.ogg', 30, TRUE)
+				playsound(src, '../assets/sound/machines/click.ogg', 30, TRUE)
 				balloon_alert(user, "boots added")
 				boots = part
 				step = BOOTS_STEP
@@ -265,7 +265,7 @@
 				if(!user.transferItemToLoc(part, src))
 					balloon_alert(user, "it's stuck!")
 					return
-				playsound(src, 'sound/machines/click.ogg', 30, TRUE)
+				playsound(src, '../assets/sound/machines/click.ogg', 30, TRUE)
 				var/obj/item/mod = new /obj/item/mod/control(drop_location(), external_plating.theme, null, core)
 				core = null
 				qdel(src)

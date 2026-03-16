@@ -89,7 +89,7 @@
 		log_combat(src, victim, "crashed into")
 
 	if(oof_noise)
-		playsound(src,'sound/items/weapons/punch1.ogg',50,TRUE)
+		playsound(src,'../assets/sound/items/weapons/punch1.ogg',50,TRUE)
 
 /mob/living/carbon/proc/canBeHandcuffed()
 	return FALSE
@@ -328,7 +328,7 @@
 	if(knockdown)
 		Knockdown(8 SECONDS)
 
-	playsound(src, 'sound/effects/splat.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/effects/splat.ogg', 50, TRUE)
 
 	var/need_mob_update = FALSE
 	var/turf/location = get_turf(src)

@@ -1,11 +1,11 @@
 /obj/item/storage/toolbox
 	name = "toolbox"
 	desc = "Danger. Very robust."
-	icon = 'icons/obj/storage/toolbox.dmi'
+	icon = '../assets/icons/obj/storage/toolbox.dmi'
 	icon_state = "toolbox_default"
 	inhand_icon_state = "toolbox_default"
-	lefthand_file = 'icons/mob/inhands/equipment/toolbox_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/toolbox_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/toolbox_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/toolbox_righthand.dmi'
 	obj_flags = CONDUCTS_ELECTRICITY
 	force = 13
 	throwforce = 13
@@ -16,9 +16,9 @@
 	custom_materials = list(/datum/material/iron = SMALL_MATERIAL_AMOUNT*5)
 	attack_verb_continuous = list("robusts")
 	attack_verb_simple = list("robust")
-	hitsound = 'sound/items/weapons/smash.ogg'
-	drop_sound = 'sound/items/handling/toolbox/toolbox_drop.ogg'
-	pickup_sound = 'sound/items/handling/toolbox/toolbox_pickup.ogg'
+	hitsound = '../assets/sound/items/weapons/smash.ogg'
+	drop_sound = '../assets/sound/items/handling/toolbox/toolbox_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/toolbox/toolbox_pickup.ogg'
 	material_flags = MATERIAL_EFFECTS | MATERIAL_COLOR | MATERIAL_AFFECT_STATISTICS
 	wound_bonus = 5
 	storage_type = /datum/storage/toolbox
@@ -74,12 +74,12 @@
 	if (!length(item_radial))
 		return NONE
 
-	playsound(user, 'sound/items/handling/toolbox/toolbox_open.ogg', 50)
+	playsound(user, '../assets/sound/items/handling/toolbox/toolbox_open.ogg', 50)
 	var/obj/item/picked_item = show_radial_menu(user, interacting_with, item_radial, require_near = TRUE)
 	if (!picked_item)
 		return ITEM_INTERACT_BLOCKING
 
-	playsound(user, 'sound/items/handling/toolbox/toolbox_rustle.ogg', 50)
+	playsound(user, '../assets/sound/items/handling/toolbox/toolbox_rustle.ogg', 50)
 	if (!user.put_in_inactive_hand(picked_item))
 		return ITEM_INTERACT_BLOCKING
 

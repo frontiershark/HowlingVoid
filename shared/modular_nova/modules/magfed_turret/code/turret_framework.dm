@@ -136,7 +136,7 @@
 			COMBAT_MESSAGE_RANGE,
 		)
 
-		playsound(src, 'sound/items/tools/drill_use.ogg', 80, TRUE, -1)
+		playsound(src, '../assets/sound/items/tools/drill_use.ogg', 80, TRUE, -1)
 		deploy_turret(user, loc)
 		return ITEM_INTERACT_SUCCESS
 	return ..()
@@ -149,7 +149,7 @@
 		balloon_alert(user, "area is unfit for deployment.")
 		return
 	balloon_alert(user, "deploying...")
-	playsound(src, 'sound/items/tools/ratchet.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/tools/ratchet.ogg', 50, TRUE)
 	if(!do_after(user, easy_deploy_timer))
 		return
 	deploy_turret(user, chosen_spot)
@@ -161,7 +161,7 @@
 	if(target_area.is_blocked_turf(TRUE, src))
 		balloon_alert(user, "deployment area is unfit for deploying.")
 		return
-	playsound(src, 'sound/items/tools/drill_use.ogg', 80, TRUE, -1)
+	playsound(src, '../assets/sound/items/tools/drill_use.ogg', 80, TRUE, -1)
 	var/obj/machinery/porta_turret/syndicate/toolbox/mag_fed/turret = new turret_type(target_area)
 	if(user) //We do this so those deployed via disposal throws dont runtime.
 		set_faction(turret, user)
@@ -308,9 +308,9 @@
 	uses_stored = FALSE
 	stored_gun = null
 	stun_projectile = null
-	stun_projectile_sound = 'sound/items/weapons/gun/pistol/shot.ogg'
+	stun_projectile_sound = '../assets/sound/items/weapons/gun/pistol/shot.ogg'
 	lethal_projectile = null
-	lethal_projectile_sound = 'sound/items/weapons/gun/pistol/shot.ogg'
+	lethal_projectile_sound = '../assets/sound/items/weapons/gun/pistol/shot.ogg'
 	subsystem_type = /datum/controller/subsystem/processing/projectiles
 	turret_flags = TURRET_FLAG_SHOOT_ALL | TURRET_FLAG_SHOOT_ANOMALOUS
 	ignore_faction = TRUE
@@ -533,7 +533,7 @@
 		if(isnull(casing))
 			chambered = null
 		casing.forceMove(src)
-		playsound(src, 'sound/items/weapons/gun/general/bolt_rack.ogg', 10, TRUE)
+		playsound(src, '../assets/sound/items/weapons/gun/general/bolt_rack.ogg', 10, TRUE)
 		if(replace_new_round) //For edge-case additions later in the road.
 			mag.give_round(new casing.type)
 
@@ -551,7 +551,7 @@
 				UnregisterSignal(magazine_ref, COMSIG_MOVABLE_MOVED)
 		magazine_ref = null
 	load_mag()
-	playsound(src, 'sound/items/weapons/gun/general/chunkyrack.ogg', 30, TRUE)
+	playsound(src, '../assets/sound/items/weapons/gun/general/chunkyrack.ogg', 30, TRUE)
 	return
 
 /// loads a magazine from the base storage box
@@ -903,7 +903,7 @@
 	if(quick_retract)
 		if(smart_retract && !in_faction(user))
 			return
-		playsound(src, 'sound/items/tools/ratchet.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/items/tools/ratchet.ogg', 50, TRUE)
 		if(!do_after(user, retract_timer))
 			return
 		deconstruct(TRUE)

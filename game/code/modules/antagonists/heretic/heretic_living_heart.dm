@@ -70,7 +70,7 @@
 	desc = "LMB: Chose one of your sacrifice targets to track. RMB: Repeats last target you chose to track."
 	check_flags = AB_CHECK_CONSCIOUS
 	background_icon_state = "bg_heretic"
-	button_icon = 'icons/obj/antags/eldritch.dmi'
+	button_icon = '../assets/icons/obj/antags/eldritch.dmi'
 	button_icon_state = "living_heart"
 	cooldown_time = 4 SECONDS
 
@@ -167,7 +167,7 @@
 		last_tracked_name = null
 		return FALSE
 
-	playsound(owner, 'sound/effects/singlebeat.ogg', 50, TRUE, SILENCED_SOUND_EXTRARANGE)
+	playsound(owner, '../assets/sound/effects/singlebeat.ogg', 50, TRUE, SILENCED_SOUND_EXTRARANGE)
 	owner.balloon_alert(owner, get_balloon_message(tracked_thing))
 
 	// Let them know how to sacrifice people if they're able to be sac'd
@@ -259,7 +259,7 @@
 	return balloon_message
 
 /atom/movable/screen/navigate_arrow
-	icon = 'icons/effects/96x96.dmi'
+	icon = '../assets/icons/effects/96x96.dmi'
 	name = "farsight arrow"
 	icon_state = "navigate_arrow_appear"
 	pixel_x = -32

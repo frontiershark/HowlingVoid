@@ -210,18 +210,18 @@ GLOBAL_LIST_INIT(immerse_ignored_movable, typecacheof(list(
 		return target_mask
 
 	if (width == ICON_SIZE_X && height == ICON_SIZE_Y)
-		target_mask = mutable_appearance('icons/effects/effects.dmi', mask_icon, alpha = alpha)
+		target_mask = mutable_appearance('../assets/icons/effects/effects.dmi', mask_icon, alpha = alpha)
 		immersion_masks[mask_key] = target_mask
 		return target_mask
 
-	var/icon/column_icon = icon('icons/effects/effects.dmi', mask_icon)
+	var/icon/column_icon = icon('../assets/icons/effects/effects.dmi', mask_icon)
 	var/y_tiles = 1
 	if (height != ICON_SIZE_Y)
 		column_icon.Crop(1, 1, ICON_SIZE_X, ICON_SIZE_Y) // Use base icon and crop it out so animation frames respect dmi's delays
 		y_tiles = ceil((height / ICON_SIZE_Y - 1) / 2) + 1
 		column_icon.Scale(ICON_SIZE_X, y_tiles * ICON_SIZE_Y)
-		var/icon/effect_icon = icon('icons/effects/effects.dmi', mask_icon)
-		var/icon/fill_icon = icon('icons/effects/alphacolors.dmi', "white")
+		var/icon/effect_icon = icon('../assets/icons/effects/effects.dmi', mask_icon)
+		var/icon/fill_icon = icon('../assets/icons/effects/alphacolors.dmi', "white")
 		for (var/y_tile in 1 to y_tiles - 1)
 			column_icon.Blend(fill_icon, ICON_OVERLAY, 1, 1 + (y_tile - 1) * ICON_SIZE_Y)
 		column_icon.Blend(effect_icon, ICON_OVERLAY, 1, 1 + (y_tiles - 1) * ICON_SIZE_Y)
@@ -230,7 +230,7 @@ GLOBAL_LIST_INIT(immerse_ignored_movable, typecacheof(list(
 	if (width == ICON_SIZE_X)
 		immerse_icon = column_icon
 	else
-		immerse_icon = icon('icons/effects/effects.dmi', mask_icon) // Use base icon and crop it out so animation frames respect dmi's delays
+		immerse_icon = icon('../assets/icons/effects/effects.dmi', mask_icon) // Use base icon and crop it out so animation frames respect dmi's delays
 		immerse_icon.Crop(1, 1, ICON_SIZE_X, ICON_SIZE_Y)
 		immerse_icon.Scale(ceil(width / ICON_SIZE_X) * ICON_SIZE_X, ceil(height / ICON_SIZE_Y) * ICON_SIZE_Y)
 		for (var/x_tile in 1 to ceil(width / ICON_SIZE_X))

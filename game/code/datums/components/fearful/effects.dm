@@ -144,7 +144,7 @@
 		to_chat(owner, span_userdanger("You feel your heart racing!"))
 		owner.add_fov_trait(type, FOV_270_DEGREES) // Terror induced tunnel vision
 
-	owner.playsound_local(owner, 'sound/effects/health/slowbeat.ogg', 40, FALSE, channel = CHANNEL_HEARTBEAT, use_reverb = FALSE)
+	owner.playsound_local(owner, '../assets/sound/effects/health/slowbeat.ogg', 40, FALSE, channel = CHANNEL_HEARTBEAT, use_reverb = FALSE)
 	if (SPT_PROB(5, seconds_per_tick))
 		owner.set_eye_blur_if_lower(10 SECONDS)
 

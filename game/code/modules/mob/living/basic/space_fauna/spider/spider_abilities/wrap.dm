@@ -6,10 +6,10 @@
 		Activate this ability and then click on an adjacent target to begin wrapping them."
 	background_icon_state = "bg_alien"
 	overlay_icon_state = "bg_alien_border"
-	button_icon = 'icons/mob/actions/actions_animal.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_animal.dmi'
 	button_icon_state = "wrap_0"
 	click_to_activate = TRUE
-	ranged_mousepointer = 'icons/effects/mouse_pointers/wrap_target.dmi'
+	ranged_mousepointer = '../assets/icons/effects/mouse_pointers/wrap_target.dmi'
 	shared_cooldown = NONE
 	/// The time it takes to wrap something.
 	var/wrap_time = 5 SECONDS

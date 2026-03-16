@@ -3,7 +3,7 @@
 	name = "Vomit"
 	check_flags = AB_CHECK_CONSCIOUS | AB_CHECK_INCAPACITATED
 	button_icon_state = "vomit"
-	button_icon = 'icons/mob/simple/animal.dmi'
+	button_icon = '../assets/icons/mob/simple/animal.dmi'
 	cooldown_time = INFINITY // We reset the cooldown when we are done throwing up
 	text_cooldown = FALSE
 	melee_cooldown_time = 0
@@ -149,7 +149,7 @@
 /datum/status_effect/goose_vomit/proc/make_mess(turf/open/drop_turf)
 	if (!istype(drop_turf))
 		return
-	playsound(drop_turf, 'sound/effects/splat.ogg', 50, TRUE)
+	playsound(drop_turf, '../assets/sound/effects/splat.ogg', 50, TRUE)
 	drop_turf.add_vomit_floor(owner)
 
 

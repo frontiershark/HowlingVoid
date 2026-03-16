@@ -139,12 +139,12 @@
 /obj/item/crusher_trophy/brimdemon_fang/on_mark_detonation(mob/living/target, mob/living/user)
 	. = ..()
 	target.loc.balloon_alert_to_viewers("[pick(comic_phrases)]!")
-	playsound(target, 'sound/mobs/non-humanoids/brimdemon/brimdemon_crush.ogg', 100)
+	playsound(target, '../assets/sound/mobs/non-humanoids/brimdemon/brimdemon_crush.ogg', 100)
 
 // Bileworm
 /obj/item/crusher_trophy/bileworm_spewlet
 	name = "bileworm spewlet"
-	icon = 'icons/mob/simple/lavaland/bileworm.dmi'
+	icon = '../assets/icons/mob/simple/lavaland/bileworm.dmi'
 	icon_state = "bileworm_spewlet"
 	desc = "A baby bileworm. Suitable as a trophy for a kinetic crusher."
 	denied_type = /obj/item/crusher_trophy/bileworm_spewlet
@@ -187,7 +187,7 @@
 	owner_has_control = FALSE
 	cooldown_time = 10 SECONDS
 	projectile_type = /obj/projectile/bileworm_acid/crusher
-	projectile_sound = 'sound/mobs/non-humanoids/bileworm/bileworm_spit.ogg'
+	projectile_sound = '../assets/sound/mobs/non-humanoids/bileworm/bileworm_spit.ogg'
 
 /datum/action/cooldown/mob_cooldown/projectile_attack/dir_shots/spewlet/New(Target)
 	firing_directions = GLOB.cardinals.Copy()

@@ -55,9 +55,9 @@
 
 	linked_alert?.update_appearance(UPDATE_ICON_STATE|UPDATE_DESC)
 	owner.remove_alt_appearance("heretic_status")
-	stacks_overlay = image('icons/effects/effects.dmi', owner, "void_chill_partial")
+	stacks_overlay = image('../assets/icons/effects/effects.dmi', owner, "void_chill_partial")
 	if(stacks >= 5)
-		stacks_overlay = image('icons/effects/effects.dmi', owner, "void_chill_oh_fuck")
+		stacks_overlay = image('../assets/icons/effects/effects.dmi', owner, "void_chill_oh_fuck")
 	owner.add_alt_appearance(/datum/atom_hud/alternate_appearance/basic/heretic, "heretic_status", stacks_overlay, NONE)
 
 /**

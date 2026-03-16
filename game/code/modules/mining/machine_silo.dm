@@ -26,7 +26,7 @@
 /obj/machinery/ore_silo
 	name = "ore silo"
 	desc = "An all-in-one bluespace storage and transmission system for the station's mineral distribution needs."
-	icon = 'icons/obj/machines/ore_silo.dmi'
+	icon = '../assets/icons/obj/machines/ore_silo.dmi'
 	icon_state = "silo"
 	density = TRUE
 	circuit = /obj/item/circuitboard/machine/ore_silo

@@ -36,10 +36,10 @@
 			computer.remove_id(usr)
 		if("selectid")
 			if(!computer.stored_id.registered_account)
-				playsound(get_turf(computer.ui_host()), 'sound/machines/buzz/buzz-sigh.ogg', 50, TRUE, -1)
+				playsound(get_turf(computer.ui_host()), '../assets/sound/machines/buzz/buzz-sigh.ogg', 50, TRUE, -1)
 				return TRUE
 			payments_acc = computer.stored_id.registered_account
-			playsound(get_turf(computer.ui_host()), 'sound/machines/ping.ogg', 50, TRUE, -1)
+			playsound(get_turf(computer.ui_host()), '../assets/sound/machines/ping.ogg', 50, TRUE, -1)
 		if("resetid")
 			payments_acc = null
 		if("setsplit")

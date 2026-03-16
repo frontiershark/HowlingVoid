@@ -1,7 +1,7 @@
 /obj/machinery/computer/security/telescreen
 	name = "\improper Telescreen"
 	desc = "Used for watching an empty arena."
-	icon = 'icons/obj/wallmounts.dmi'
+	icon = '../assets/icons/obj/wallmounts.dmi'
 	icon_state = "telescreen"
 	icon_keyboard = null
 	icon_screen = null
@@ -22,7 +22,7 @@
 /obj/item/wallframe/telescreen
 	name = "telescreen frame"
 	desc = "A wall-mountable telescreen frame. Apply to wall to use."
-	icon = 'icons/obj/wallmounts.dmi'
+	icon = '../assets/icons/obj/wallmounts.dmi'
 	icon_state = "telescreen"
 	result_path = /obj/machinery/computer/security/telescreen
 	pixel_shift = 32
@@ -39,7 +39,7 @@
 /obj/machinery/computer/security/telescreen/entertainment
 	name = "entertainment monitor"
 	desc = "Damn, they better have the /tg/ channel on these things."
-	icon = 'icons/obj/machines/status_display.dmi'
+	icon = '../assets/icons/obj/machines/status_display.dmi'
 	icon_state = "entertainment_frame"
 	icon_screen = "entertainment_blank"
 	network = list()
@@ -65,7 +65,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/computer/security/telescreen/entertai
 
 /obj/item/wallframe/telescreen/entertainment
 	name = "entertainment telescreen frame"
-	icon = 'icons/obj/machines/status_display.dmi'
+	icon = '../assets/icons/obj/machines/status_display.dmi'
 	icon_state = "entertainment_frame"
 	result_path = /obj/machinery/computer/security/telescreen/entertainment
 

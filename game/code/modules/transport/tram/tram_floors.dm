@@ -1,13 +1,13 @@
 /turf/open/floor/noslip/tram
 	name = "high-traction tram platform"
-	icon = 'icons/turf/tram.dmi'
+	icon = '../assets/icons/turf/tram.dmi'
 	icon_state = "noslip_tram"
 	base_icon_state = "noslip_tram"
 	floor_tile = /obj/item/stack/tile/noslip/tram
 
 /turf/open/floor/tram
 	name = "tram guideway"
-	icon = 'icons/turf/tram.dmi'
+	icon = '../assets/icons/turf/tram.dmi'
 	icon_state = "tram_platform"
 	base_icon_state = "tram_platform"
 	floor_tile = /obj/item/stack/tile/tram
@@ -90,7 +90,7 @@
 /turf/open/floor/tram/plate
 	name = "linear induction plate"
 	desc = "The linear induction plate that powers the tram."
-	icon = 'icons/turf/tram.dmi'
+	icon = '../assets/icons/turf/tram.dmi'
 	icon_state = "tram_plate"
 	base_icon_state = "tram_plate"
 	flags_1 = NONE
@@ -141,7 +141,7 @@
 // Resetting the tram contents to its original state needs the turf to be there
 /turf/open/indestructible/tram
 	name = "tram guideway"
-	icon = 'icons/turf/tram.dmi'
+	icon = '../assets/icons/turf/tram.dmi'
 	icon_state = "tram_platform"
 	base_icon_state = "tram_platform"
 	footstep = FOOTSTEP_CATWALK
@@ -174,7 +174,7 @@
 /obj/structure/thermoplastic
 	name = "tram floor"
 	desc = "A lightweight thermoplastic flooring."
-	icon = 'icons/turf/tram.dmi'
+	icon = '../assets/icons/turf/tram.dmi'
 	icon_state = "tram_dark"
 	base_icon_state = "tram_dark"
 	density = FALSE
@@ -285,9 +285,9 @@
 	name = "thermoplastic tram tile"
 	singular_name = "thermoplastic tram tile"
 	desc = "A high-traction floor tile. It sparkles in the light."
-	icon = 'icons/obj/tiles.dmi'
-	lefthand_file = 'icons/mob/inhands/items/tiles_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/tiles_righthand.dmi'
+	icon = '../assets/icons/obj/tiles.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/tiles_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/tiles_righthand.dmi'
 	icon_state = "tile_tram_dark"
 	inhand_icon_state = "tile-tram"
 	color = COLOR_TRAM_BLUE

@@ -6,7 +6,7 @@
 /obj/machinery/power/emitter/energycannon
 	name = "Energy Cannon"
 	desc = "A heavy duty industrial laser."
-	icon = 'icons/obj/machines/engine/singularity.dmi'
+	icon = '../assets/icons/obj/machines/engine/singularity.dmi'
 	anchored = TRUE
 	density = TRUE
 	resistance_flags = INDESTRUCTIBLE | FIRE_PROOF | ACID_PROOF
@@ -27,7 +27,7 @@
 	name = "wabbajack statue"
 	desc = "Who am I? What is my purpose in life? What do I mean by who am I?"
 	projectile_type = /obj/projectile/magic/change
-	icon = 'icons/obj/machines/magic_emitter.dmi'
+	icon = '../assets/icons/obj/machines/magic_emitter.dmi'
 	icon_state = "wabbajack_statue"
 	icon_state_on = "wabbajack_statue_on"
 	base_icon_state = "wabbajack_statue"
@@ -400,7 +400,7 @@
 /obj/effect/decal/hammerandsickle
 	name = "hammer and sickle"
 	desc = "Communism powerful force."
-	icon = 'icons/effects/96x96.dmi'
+	icon = '../assets/icons/effects/96x96.dmi'
 	icon_state = "communist"
 	pixel_x = -32
 	pixel_y = -32

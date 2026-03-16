@@ -14,12 +14,12 @@
 	var/max_power = 500
 	/// List of things that the fabricator can build for the radial menu
 	var/static/list/crafting_possibilities = list(
-		"floor" = image(icon = 'icons/turf/floors.dmi', icon_state = "clockwork_floor"),
-		"wall" = image(icon = 'icons/turf/walls/clockwork_wall.dmi', icon_state = "clockwork_wall-0"),
-		"wall gear" = image(icon = 'icons/obj/structures.dmi', icon_state = "wall_gear"),
-		"window" = image(icon = 'icons/obj/smooth_structures/clockwork_window.dmi', icon_state = "clockwork_window-0"),
-		"airlock" = image(icon = 'icons/obj/doors/airlocks/clockwork/pinion_airlock.dmi', icon_state = "closed"),
-		"glass airlock" = image(icon = 'icons/obj/doors/airlocks/clockwork/pinion_airlock.dmi', icon_state = "construction"),
+		"floor" = image(icon = '../assets/icons/turf/floors.dmi', icon_state = "clockwork_floor"),
+		"wall" = image(icon = '../assets/icons/turf/walls/clockwork_wall.dmi', icon_state = "clockwork_wall-0"),
+		"wall gear" = image(icon = '../assets/icons/obj/structures.dmi', icon_state = "wall_gear"),
+		"window" = image(icon = '../assets/icons/obj/smooth_structures/clockwork_window.dmi', icon_state = "clockwork_window-0"),
+		"airlock" = image(icon = '../assets/icons/obj/doors/airlocks/clockwork/pinion_airlock.dmi', icon_state = "closed"),
+		"glass airlock" = image(icon = '../assets/icons/obj/doors/airlocks/clockwork/pinion_airlock.dmi', icon_state = "construction"),
 	)
 	/// List of initialized fabrication datums, created on Initialize
 	var/static/list/fabrication_datums = list()
@@ -112,7 +112,7 @@
 
 	var/obj/item/stack/sheet/bronze/sheet_stack = new(null, sheets)
 	user.put_in_hands(sheet_stack)
-	playsound(src, 'sound/machines/click.ogg', 50, 1)
+	playsound(src, '../assets/sound/machines/click.ogg', 50, 1)
 	to_chat(user, span_clockyellow("You fabricate [sheets] bronze."))
 
 
@@ -159,7 +159,7 @@
 			power += bronze_stack.amount * BRASS_POWER_COST
 			qdel(bronze_stack)
 
-		playsound(src, 'sound/machines/click.ogg', 50, 1)
+		playsound(src, '../assets/sound/machines/click.ogg', 50, 1)
 		to_chat(user, span_clockyellow("You convert [bronze_stack.amount] bronze into [bronze_stack.amount * BRASS_POWER_COST] watts of power."))
 
 		return TRUE
@@ -181,7 +181,7 @@
 			power += stack.amount * REGULAR_POWER_COST
 			qdel(stack)
 
-		playsound(src, 'sound/machines/click.ogg', 50, 1)
+		playsound(src, '../assets/sound/machines/click.ogg', 50, 1)
 		to_chat(user, span_clockyellow("You convert [stack.amount] [stack.name] into [stack.amount * REGULAR_POWER_COST] watts of power."))
 
 		return TRUE
@@ -209,7 +209,7 @@
 /// Any extra actions that need to be taken when an object is created
 /datum/replica_fabricator_output/proc/on_create(atom/created_atom, turf/creation_turf, mob/creator)
 	SHOULD_CALL_PARENT(TRUE)
-	playsound(creation_turf, 'sound/machines/clockcult/integration_cog_install.ogg', 50, 1) // better sound?
+	playsound(creation_turf, '../assets/sound/machines/clockcult/integration_cog_install.ogg', 50, 1) // better sound?
 	to_chat(creator, span_clockyellow("You create \an [name] for [cost]W of power."))
 
 

@@ -2,7 +2,7 @@
 	name = "damp rag"
 	desc = "For cleaning up messes, you suppose."
 	w_class = WEIGHT_CLASS_TINY
-	icon = 'icons/obj/toys/toy.dmi'
+	icon = '../assets/icons/obj/toys/toy.dmi'
 	icon_state = "rag"
 	item_flags = NOBLUDGEON
 	resistance_flags = FLAMMABLE

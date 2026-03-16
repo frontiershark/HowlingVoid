@@ -187,7 +187,7 @@
 /turf/open/indestructible
 	name = "floor"
 	desc = "The floor you walk on. It looks near-impervious to damage."
-	icon = 'icons/turf/floors.dmi'
+	icon = '../assets/icons/turf/floors.dmi'
 	icon_state = "floor"
 	footstep = FOOTSTEP_FLOOR
 	barefootstep = FOOTSTEP_HARD_BAREFOOT
@@ -247,7 +247,7 @@
 	barefootstep = null
 	clawfootstep = null
 	heavyfootstep = null
-	var/sound = 'sound/effects/footstep/clownstep1.ogg'
+	var/sound = '../assets/sound/effects/footstep/clownstep1.ogg'
 
 /turf/open/indestructible/honk/Initialize(mapload)
 	. = ..()
@@ -261,7 +261,7 @@
 /turf/open/indestructible/necropolis
 	name = "necropolis floor"
 	desc = "It's regarding you suspiciously."
-	icon = 'icons/turf/floors.dmi'
+	icon = '../assets/icons/turf/floors.dmi'
 	icon_state = "necro1"
 	baseturfs = /turf/open/indestructible/necropolis
 	initial_gas_mix = LAVALAND_DEFAULT_ATMOS
@@ -281,7 +281,7 @@
 
 /turf/open/indestructible/boss //you put stone tiles on this and use it as a base
 	name = "necropolis floor"
-	icon = 'icons/turf/boss_floors.dmi'
+	icon = '../assets/icons/turf/boss_floors.dmi'
 	icon_state = "boss"
 	baseturfs = /turf/open/indestructible/boss
 	planetary_atmos = TRUE
@@ -293,7 +293,7 @@
 /turf/open/indestructible/hierophant
 	name = "palestone floor"
 	desc = "A tiled floor made out of an odd pale stone."
-	icon = 'icons/turf/floors/hierophant_floor.dmi'
+	icon = '../assets/icons/turf/floors/hierophant_floor.dmi'
 	icon_state = "hierophant_floor-255"
 	base_icon_state = "hierophant_floor"
 	planetary_atmos = TRUE
@@ -303,7 +303,7 @@
 	smoothing_groups = SMOOTH_GROUP_TURF_OPEN + SMOOTH_GROUP_HIEROPHANT
 	canSmoothWith = SMOOTH_GROUP_HIEROPHANT
 	/// Icon for the emissive overlay
-	var/emissive_icon = 'icons/turf/floors/hierophant_floor_e.dmi'
+	var/emissive_icon = '../assets/icons/turf/floors/hierophant_floor_e.dmi'
 
 /turf/open/indestructible/hierophant/set_smoothed_icon_state(new_junction)
 	. = ..()
@@ -316,10 +316,10 @@
 /turf/open/indestructible/hierophant/two
 	name = "runic palestone floor"
 	desc = "A tiled floor made out of an odd pale stone, inscribed with odd runes."
-	icon = 'icons/turf/floors/hierophant_floor_alt.dmi'
+	icon = '../assets/icons/turf/floors/hierophant_floor_alt.dmi'
 	icon_state = "hierophant_floor_alt-255"
 	base_icon_state = "hierophant_floor_alt"
-	emissive_icon = 'icons/turf/floors/hierophant_floor_alt_e.dmi'
+	emissive_icon = '../assets/icons/turf/floors/hierophant_floor_alt_e.dmi'
 
 /turf/open/indestructible/hierophant/get_smooth_underlay_icon(mutable_appearance/underlay_appearance, turf/asking_turf, adjacency_dir)
 	return FALSE
@@ -467,7 +467,7 @@
 	if(!(lube & SLIDE_ICE))
 		// Ice slides are intended to be combo'd so don't give the feedback
 		to_chat(slipper, span_notice("You slipped[ slippable ? " on \the [slippable]" : ""]!"))
-		playsound(slipper.loc, 'sound/misc/slip.ogg', 50, TRUE, -3)
+		playsound(slipper.loc, '../assets/sound/misc/slip.ogg', 50, TRUE, -3)
 
 	SEND_SIGNAL(slipper, COMSIG_ON_CARBON_SLIP)
 	if(force_drop && iscarbon(slipper)) //carbon specific behavior that living doesn't have
@@ -527,7 +527,7 @@
 	if(catwalk_bait)
 		if(used_rods.use(1))
 			to_chat(user, span_notice("You construct a catwalk."))
-			playsound(src, 'sound/items/weapons/genhit.ogg', 50, TRUE)
+			playsound(src, '../assets/sound/items/weapons/genhit.ogg', 50, TRUE)
 			catwalk_bait.replace_with_catwalk()
 		else
 			to_chat(user, span_warning("You need two rods to build a catwalk!"))
@@ -535,7 +535,7 @@
 
 	if(used_rods.use(1))
 		to_chat(user, span_notice("You construct a lattice."))
-		playsound(src, 'sound/items/weapons/genhit.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/items/weapons/genhit.ogg', 50, TRUE)
 		var/obj/structure/lattice/new_lattice = new (src)
 		if(istype(used_rods, /obj/item/stack/rods/shuttle) && !istype(loc, /area/shuttle))
 			new_lattice.AddElement(/datum/element/shuttle_construction_lattice)
@@ -553,7 +553,7 @@
 		balloon_alert(user, "need a floor tile to build!")
 		return
 
-	playsound(src, 'sound/items/weapons/genhit.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/weapons/genhit.ogg', 50, TRUE)
 	var/turf/open/floor/plating/new_plating = place_on_top(/turf/open/floor/plating, flags = CHANGETURF_INHERIT_AIR)
 	if(istype(loc, /area/shuttle))
 		new_plating.insert_baseturf(turf_type = /turf/baseturf_skipover/shuttle)
@@ -579,7 +579,7 @@
 		balloon_alert(user, "no tile!")
 		return
 
-	playsound(src, 'sound/items/weapons/genhit.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/weapons/genhit.ogg', 50, TRUE)
 	new used_tiles.tile_type(src)
 
 /turf/open/apply_main_material_effects(datum/material/main_material, amount, multipier)
@@ -601,5 +601,5 @@
 		balloon_alert(user, "not enough titanium!")
 		return
 
-	playsound(src, 'sound/items/weapons/genhit.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/weapons/genhit.ogg', 50, TRUE)
 	new /obj/structure/girder/tram(src)

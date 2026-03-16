@@ -1,7 +1,7 @@
 /obj/structure/altar
 	name = "\improper Altar"
 	desc = "A religious structure. You could lie on it if you wanted to."
-	icon = 'icons/obj/service/hand_of_god_structures.dmi'
+	icon = '../assets/icons/obj/service/hand_of_god_structures.dmi'
 	icon_state = "convertaltar"
 	density = TRUE
 	anchored = TRUE
@@ -96,11 +96,11 @@
 /obj/item/ritual_totem
 	name = "ritual totem"
 	desc = "A wooden totem with strange carvings on it."
-	icon = 'icons/obj/service/hand_of_god_structures.dmi'
+	icon = '../assets/icons/obj/service/hand_of_god_structures.dmi'
 	icon_state = "ritual_totem"
 	inhand_icon_state = "sheet-wood"
-	lefthand_file = 'icons/mob/inhands/items/sheets_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/sheets_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/sheets_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/sheets_righthand.dmi'
 	//made out of a single sheet of wood
 	custom_materials = list(/datum/material/wood = SHEET_MATERIAL_AMOUNT)
 	item_flags = NO_PIXEL_RANDOM_DROP

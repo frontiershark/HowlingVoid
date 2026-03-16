@@ -1,14 +1,14 @@
 /obj/effect/decal/cleanable/generic
 	name = "clutter"
 	desc = "Someone should clean that up."
-	icon = 'icons/obj/debris.dmi'
+	icon = '../assets/icons/obj/debris.dmi'
 	icon_state = "shards"
 	beauty = -50
 
 /obj/effect/decal/cleanable/ash
 	name = "ashes"
 	desc = "Ashes to ashes, dust to dust, and into space."
-	icon = 'icons/obj/debris.dmi'
+	icon = '../assets/icons/obj/debris.dmi'
 	icon_state = "ash"
 	plane = GAME_PLANE
 	layer = CLEANABLE_OBJECT_LAYER
@@ -35,7 +35,7 @@
 /obj/effect/decal/cleanable/glass
 	name = "tiny shards"
 	desc = "Back to sand."
-	icon = 'icons/obj/debris.dmi'
+	icon = '../assets/icons/obj/debris.dmi'
 	icon_state = "tiny"
 	beauty = -100
 
@@ -64,7 +64,7 @@
 /obj/effect/decal/cleanable/dirt
 	name = "dirt"
 	desc = "Someone should clean that up."
-	icon = 'icons/effects/dirt_misc.dmi'
+	icon = '../assets/icons/effects/dirt_misc.dmi'
 	icon_state = "dirt-flat-0"
 	base_icon_state = "dirt"
 	smoothing_flags = NONE
@@ -83,7 +83,7 @@
 		return
 	var/turf/T = get_turf(src)
 	if(T.tiled_turf && is_tileable)
-		icon = 'icons/effects/dirt.dmi'
+		icon = '../assets/icons/effects/dirt.dmi'
 		icon_state = "dirt-0"
 		smoothing_flags = SMOOTH_BITMASK
 		QUEUE_SMOOTH(src)
@@ -154,7 +154,7 @@
 	gender = NEUTER
 	plane = GAME_PLANE
 	layer = WALL_OBJ_LAYER
-	icon = 'icons/effects/web.dmi'
+	icon = '../assets/icons/effects/web.dmi'
 	icon_state = "cobweb1"
 	resistance_flags = FLAMMABLE
 	beauty = -100
@@ -168,7 +168,7 @@
 	name = "gooey grey mass"
 	desc = "It looks like a melted... something."
 	gender = NEUTER
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	icon_state = "molten"
 	plane = GAME_PLANE
 	layer = CLEANABLE_OBJECT_LAYER
@@ -185,7 +185,7 @@
 /obj/effect/decal/cleanable/vomit
 	name = "vomit"
 	desc = "Gosh, how unpleasant."
-	icon = 'icons/effects/blood.dmi'
+	icon = '../assets/icons/effects/blood.dmi'
 	icon_state = "vomit_1"
 	random_icon_states = list("vomit_1", "vomit_2", "vomit_3", "vomit_4")
 	beauty = -150
@@ -198,7 +198,7 @@
 	var/obj/item/organ/tongue/user_tongue = user.get_organ_slot(ORGAN_SLOT_TONGUE)
 	if(!istype(user_tongue, /obj/item/organ/tongue/fly))
 		return
-	playsound(get_turf(src), 'sound/items/drink.ogg', 50, TRUE) //slurp
+	playsound(get_turf(src), '../assets/sound/items/drink.ogg', 50, TRUE) //slurp
 	as_human.visible_message(span_alert("[as_human] extends a small proboscis into the vomit pool, sucking it with a slurping sound."))
 	lazy_init_reagents()?.trans_to(as_human, reagents.total_volume, transferred_by = user, methods = INGEST)
 	qdel(src)
@@ -269,7 +269,7 @@ GLOBAL_LIST_EMPTY(nebula_vomits)
 	gender = NEUTER
 	plane = GAME_PLANE
 	layer = CLEANABLE_OBJECT_LAYER
-	icon = 'icons/obj/debris.dmi'
+	icon = '../assets/icons/obj/debris.dmi'
 	icon_state = "ash"
 
 /obj/effect/decal/cleanable/shreds
@@ -296,26 +296,26 @@ GLOBAL_LIST_EMPTY(nebula_vomits)
 /obj/effect/decal/cleanable/glitter
 	name = "generic glitter pile"
 	desc = "The herpes of arts and crafts."
-	icon = 'icons/effects/glitter.dmi'
+	icon = '../assets/icons/effects/glitter.dmi'
 	icon_state = "glitter"
 	gender = NEUTER
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 
 /obj/effect/decal/cleanable/glitter/Initialize(mapload, list/datum/disease/diseases)
 	. = ..()
-	add_overlay(mutable_appearance('icons/effects/glitter.dmi', "glitter_sparkle[rand(1,9)]", appearance_flags = EMISSIVE_APPEARANCE_FLAGS))
+	add_overlay(mutable_appearance('../assets/icons/effects/glitter.dmi', "glitter_sparkle[rand(1,9)]", appearance_flags = EMISSIVE_APPEARANCE_FLAGS))
 
 /obj/effect/decal/cleanable/plasma
 	name = "stabilized plasma"
 	desc = "A puddle of stabilized plasma."
 	icon_state = "flour"
-	icon = 'icons/effects/tomatodecal.dmi'
+	icon = '../assets/icons/effects/tomatodecal.dmi'
 	color = "#2D2D2D"
 
 /obj/effect/decal/cleanable/insectguts
 	name = "insect guts"
 	desc = "One bug squashed. Four more will rise in its place."
-	icon = 'icons/effects/blood.dmi'
+	icon = '../assets/icons/effects/blood.dmi'
 	icon_state = "floor1"
 	random_icon_states = list("floor1", "floor2", "floor3", "floor4", "floor5", "floor6", "floor7")
 	color = BLOOD_COLOR_XENO
@@ -323,21 +323,21 @@ GLOBAL_LIST_EMPTY(nebula_vomits)
 /obj/effect/decal/cleanable/confetti
 	name = "confetti"
 	desc = "Tiny bits of colored paper thrown about for the janitor to enjoy!"
-	icon = 'icons/effects/confetti_and_decor.dmi'
+	icon = '../assets/icons/effects/confetti_and_decor.dmi'
 	icon_state = "confetti"
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT //the confetti itself might be annoying enough
 
 /obj/effect/decal/cleanable/plastic
 	name = "plastic shreds"
 	desc = "Bits of torn, broken, worthless plastic."
-	icon = 'icons/obj/debris.dmi'
+	icon = '../assets/icons/obj/debris.dmi'
 	icon_state = "shards"
 	color = "#c6f4ff"
 
 /obj/effect/decal/cleanable/wrapping
 	name = "wrapping shreds"
 	desc = "Torn pieces of cardboard and paper, left over from a package."
-	icon = 'icons/obj/debris.dmi'
+	icon = '../assets/icons/obj/debris.dmi'
 	icon_state = "paper_shreds"
 	plane = GAME_PLANE
 	layer = CLEANABLE_OBJECT_LAYER
@@ -356,7 +356,7 @@ GLOBAL_LIST_EMPTY(nebula_vomits)
 /obj/effect/decal/cleanable/garbage
 	name = "decomposing garbage"
 	desc = "A split open garbage bag, its stinking content seems to be partially liquified. Yuck!"
-	icon = 'icons/obj/debris.dmi'
+	icon = '../assets/icons/obj/debris.dmi'
 	icon_state = "garbage"
 	plane = GAME_PLANE
 	layer = CLEANABLE_OBJECT_LAYER
@@ -370,7 +370,7 @@ GLOBAL_LIST_EMPTY(nebula_vomits)
 /obj/effect/decal/cleanable/rubble
 	name = "rubble"
 	desc = "A pile of rubble."
-	icon = 'icons/obj/debris.dmi'
+	icon = '../assets/icons/obj/debris.dmi'
 	icon_state = "rubble"
 	mergeable_decal = FALSE
 	beauty = -10

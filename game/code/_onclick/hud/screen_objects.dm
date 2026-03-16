@@ -8,7 +8,7 @@
 */
 /atom/movable/screen
 	name = ""
-	icon = 'icons/hud/screen_gen.dmi'
+	icon = '../assets/icons/hud/screen_gen.dmi'
 	// NOTE: screen objects do NOT change their plane to match the z layer of their owner
 	// You shouldn't need this, but if you ever do and it's widespread, reconsider what you're doing.
 	plane = HUD_PLANE
@@ -121,7 +121,7 @@
 
 /atom/movable/screen/navigate
 	name = "navigate"
-	icon = 'icons/hud/screen_midnight.dmi'
+	icon = '../assets/icons/hud/screen_midnight.dmi'
 	icon_state = "navigate"
 	screen_loc = ui_navigate_menu
 	mouse_over_pointer = MOUSE_HAND_POINTER
@@ -134,14 +134,14 @@
 
 /atom/movable/screen/craft
 	name = "crafting menu"
-	icon = 'icons/hud/screen_midnight.dmi'
+	icon = '../assets/icons/hud/screen_midnight.dmi'
 	icon_state = "craft"
 	screen_loc = ui_crafting
 	mouse_over_pointer = MOUSE_HAND_POINTER
 
 /atom/movable/screen/area_creator
 	name = "create new area"
-	icon = 'icons/hud/screen_midnight.dmi'
+	icon = '../assets/icons/hud/screen_midnight.dmi'
 	icon_state = "area_edit"
 	screen_loc = ui_building
 	mouse_over_pointer = MOUSE_HAND_POINTER
@@ -157,7 +157,7 @@
 
 /atom/movable/screen/language_menu
 	name = "language menu"
-	icon = 'icons/hud/screen_midnight.dmi'
+	icon = '../assets/icons/hud/screen_midnight.dmi'
 	icon_state = "talk_wheel"
 	screen_loc = ui_language_menu
 	mouse_over_pointer = MOUSE_HAND_POINTER
@@ -166,7 +166,7 @@
 	usr.get_language_holder().open_language_menu(usr)
 
 /atom/movable/screen/language_menu/ghost
-	icon = 'icons/hud/screen_ghost.dmi'
+	icon = '../assets/icons/hud/screen_ghost.dmi'
 
 /atom/movable/screen/inventory
 	/// The identifier for the slot. It has nothing to do with ID cards.
@@ -241,7 +241,7 @@
 
 /atom/movable/screen/inventory/hand
 	var/mutable_appearance/handcuff_overlay
-	var/static/mutable_appearance/blocked_overlay = mutable_appearance('icons/hud/screen_gen.dmi', "blocked")
+	var/static/mutable_appearance/blocked_overlay = mutable_appearance('../assets/icons/hud/screen_gen.dmi', "blocked")
 	var/held_index = 0
 	interaction_flags_atom = NONE //so dragging objects into hands icon don't skip adjacency & other checks
 
@@ -250,7 +250,7 @@
 
 	if(!handcuff_overlay)
 		var/state = IS_RIGHT_INDEX(held_index) ? "markus" : "gabrielle"
-		handcuff_overlay = mutable_appearance('icons/hud/screen_gen.dmi', state)
+		handcuff_overlay = mutable_appearance('../assets/icons/hud/screen_gen.dmi', state)
 
 	if(!hud?.mymob)
 		return
@@ -291,7 +291,7 @@
 /atom/movable/screen/close
 	name = "close"
 	plane = ABOVE_HUD_PLANE
-	icon = 'icons/hud/screen_midnight.dmi'
+	icon = '../assets/icons/hud/screen_midnight.dmi'
 	icon_state = "storage_close"
 	mouse_over_pointer = MOUSE_HAND_POINTER
 
@@ -308,7 +308,7 @@
 
 /atom/movable/screen/drop
 	name = "drop"
-	icon = 'icons/hud/screen_midnight.dmi'
+	icon = '../assets/icons/hud/screen_midnight.dmi'
 	icon_state = "act_drop"
 	plane = HUD_PLANE
 	mouse_over_pointer = MOUSE_HAND_POINTER
@@ -319,7 +319,7 @@
 
 /atom/movable/screen/combattoggle
 	name = "toggle combat mode"
-	icon = 'icons/hud/screen_midnight.dmi'
+	icon = '../assets/icons/hud/screen_midnight.dmi'
 	icon_state = "combat_off"
 	screen_loc = ui_combat_toggle
 	mouse_over_pointer = MOUSE_HAND_POINTER
@@ -356,17 +356,17 @@
 		return
 
 	if(!flashy)
-		flashy = mutable_appearance('icons/hud/screen_gen.dmi', "togglefull_flash")
+		flashy = mutable_appearance('../assets/icons/hud/screen_gen.dmi', "togglefull_flash")
 		flashy.color = "#C62727"
 	. += flashy
 
 /atom/movable/screen/combattoggle/robot
-	icon = 'icons/hud/screen_cyborg.dmi'
+	icon = '../assets/icons/hud/screen_cyborg.dmi'
 	screen_loc = ui_borg_intents
 
 /atom/movable/screen/floor_changer
 	name = "change floor"
-	icon = 'icons/hud/screen_midnight.dmi'
+	icon = '../assets/icons/hud/screen_midnight.dmi'
 	icon_state = "floor_change"
 	screen_loc = ui_above_intent
 	mouse_over_pointer = MOUSE_HAND_POINTER
@@ -394,7 +394,7 @@
 	vertical = TRUE
 
 /atom/movable/screen/floor_changer/vertical/ghost
-	icon = 'icons/hud/screen_ghost.dmi'
+	icon = '../assets/icons/hud/screen_ghost.dmi'
 
 /atom/movable/screen/spacesuit
 	name = "Space suit cell status"
@@ -403,7 +403,7 @@
 
 /atom/movable/screen/mov_intent
 	name = "run/walk toggle"
-	icon = 'icons/hud/screen_midnight.dmi'
+	icon = '../assets/icons/hud/screen_midnight.dmi'
 	icon_state = "running"
 	mouse_over_pointer = MOUSE_HAND_POINTER
 
@@ -428,7 +428,7 @@
 
 /atom/movable/screen/pull
 	name = "stop pulling"
-	icon = 'icons/hud/screen_midnight.dmi'
+	icon = '../assets/icons/hud/screen_midnight.dmi'
 	icon_state = "pull"
 	base_icon_state = "pull"
 	mouse_over_pointer = MOUSE_HAND_POINTER
@@ -444,7 +444,7 @@
 
 /atom/movable/screen/resist
 	name = "resist"
-	icon = 'icons/hud/screen_midnight.dmi'
+	icon = '../assets/icons/hud/screen_midnight.dmi'
 	icon_state = "act_resist"
 	base_icon_state = "act_resist"
 	plane = HUD_PLANE
@@ -458,7 +458,7 @@
 
 /atom/movable/screen/rest
 	name = "rest"
-	icon = 'icons/hud/screen_midnight.dmi'
+	icon = '../assets/icons/hud/screen_midnight.dmi'
 	icon_state = "act_rest"
 	base_icon_state = "act_rest"
 	plane = HUD_PLANE
@@ -478,7 +478,7 @@
 
 /atom/movable/screen/sleep
 	name = "sleep"
-	icon = 'icons/hud/screen_midnight.dmi'
+	icon = '../assets/icons/hud/screen_midnight.dmi'
 	icon_state = "act_sleep"
 	base_icon_state = "act_sleep"
 	plane = HUD_PLANE
@@ -504,7 +504,7 @@
 
 /atom/movable/screen/storage
 	name = "storage"
-	icon = 'icons/hud/screen_midnight.dmi'
+	icon = '../assets/icons/hud/screen_midnight.dmi'
 	icon_state = "storage_cell"
 	plane = HUD_PLANE
 
@@ -571,7 +571,7 @@
 
 /atom/movable/screen/throw_catch
 	name = "throw/catch"
-	icon = 'icons/hud/screen_midnight.dmi'
+	icon = '../assets/icons/hud/screen_midnight.dmi'
 	icon_state = "act_throw"
 	mouse_over_pointer = MOUSE_HAND_POINTER
 
@@ -585,7 +585,7 @@
 	icon_state = "zone_sel"
 	screen_loc = ui_zonesel
 	mouse_over_pointer = MOUSE_HAND_POINTER
-	var/overlay_icon = 'icons/hud/screen_gen.dmi'
+	var/overlay_icon = '../assets/icons/hud/screen_gen.dmi'
 	var/static/list/hover_overlays_cache = list()
 	var/hovering
 
@@ -629,7 +629,7 @@
 	vis_contents += overlay_object
 
 /obj/effect/overlay/zone_sel
-	icon = 'icons/hud/screen_gen.dmi'
+	icon = '../assets/icons/hud/screen_gen.dmi'
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	alpha = 128
 	anchored = TRUE
@@ -698,11 +698,11 @@
 	. += mutable_appearance(overlay_icon, "[hud.mymob.zone_selected]")
 
 /atom/movable/screen/zone_sel/alien
-	icon = 'icons/hud/screen_alien.dmi'
-	overlay_icon = 'icons/hud/screen_alien.dmi'
+	icon = '../assets/icons/hud/screen_alien.dmi'
+	overlay_icon = '../assets/icons/hud/screen_alien.dmi'
 
 /atom/movable/screen/zone_sel/robot
-	icon = 'icons/hud/screen_cyborg.dmi'
+	icon = '../assets/icons/hud/screen_cyborg.dmi'
 
 /atom/movable/screen/flash
 	name = "flash"
@@ -713,7 +713,7 @@
 	plane = FULLSCREEN_PLANE
 
 /atom/movable/screen/damageoverlay
-	icon = 'icons/hud/screen_full.dmi'
+	icon = '../assets/icons/hud/screen_full.dmi'
 	icon_state = "oxydamageoverlay0"
 	name = "dmg"
 	blend_mode = BLEND_MULTIPLY
@@ -728,11 +728,11 @@
 	screen_loc = ui_health
 
 /atom/movable/screen/healths/alien
-	icon = 'icons/hud/screen_alien.dmi'
+	icon = '../assets/icons/hud/screen_alien.dmi'
 	screen_loc = ui_alien_health
 
 /atom/movable/screen/healths/robot
-	icon = 'icons/hud/screen_cyborg.dmi'
+	icon = '../assets/icons/hud/screen_cyborg.dmi'
 	screen_loc = ui_borg_health
 
 /atom/movable/screen/healths/blob
@@ -743,19 +743,19 @@
 
 /atom/movable/screen/healths/blob/overmind
 	name = "overmind health"
-	icon = 'icons/hud/blob.dmi'
+	icon = '../assets/icons/hud/blob.dmi'
 	icon_state = "corehealth"
 	screen_loc = ui_blobbernaut_overmind_health
 
 /atom/movable/screen/healths/guardian
 	name = "summoner health"
-	icon = 'icons/hud/guardian.dmi'
+	icon = '../assets/icons/hud/guardian.dmi'
 	icon_state = "base"
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 
 /atom/movable/screen/healths/revenant
 	name = "essence"
-	icon = 'icons/mob/actions/backgrounds.dmi'
+	icon = '../assets/icons/mob/actions/backgrounds.dmi'
 	icon_state = "bg_revenant"
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 
@@ -873,7 +873,7 @@
 	mouse_over_pointer = MOUSE_HAND_POINTER
 
 /atom/movable/screen/splash
-	icon = 'icons/blanks/blank_title.png'
+	icon = '../assets/icons/blanks/blank_title.png'
 	icon_state = ""
 	screen_loc = "1,1"
 	plane = SPLASHSCREEN_PLANE
@@ -986,7 +986,7 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/splash)
 	/// What was the last fullness we recorded?
 	VAR_PRIVATE/fullness
 	/// What food icon do we show by the bar
-	var/food_icon = 'icons/obj/food/burgerbread.dmi'
+	var/food_icon = '../assets/icons/obj/food/burgerbread.dmi'
 	/// What food icon state do we show by the bar
 	var/food_icon_state = "hburger"
 	/// The image shown by the bar.

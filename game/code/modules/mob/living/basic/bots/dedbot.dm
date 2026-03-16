@@ -21,7 +21,7 @@
 	sharpness = SHARP_EDGED
 	attack_verb_continuous = "eviscerates"
 	attack_verb_simple = "eviscerate"
-	attack_sound = 'sound/items/weapons/bladeslice.ogg'
+	attack_sound = '../assets/sound/items/weapons/bladeslice.ogg'
 	attack_vis_effect = ATTACK_EFFECT_SLASH
 	gold_core_spawnable = HOSTILE_SPAWN
 	limb_destroyer = TRUE
@@ -77,10 +77,10 @@
 /datum/action/cooldown/mob_cooldown/exenterate
 	name = "Exenterate"
 	desc = "Disembowel every living thing in range with your blades."
-	button_icon = 'icons/obj/weapons/stabby.dmi'
+	button_icon = '../assets/icons/obj/weapons/stabby.dmi'
 	button_icon_state = "huntingknife"
 	click_to_activate = FALSE
-	background_icon = 'icons/hud/guardian.dmi'
+	background_icon = '../assets/icons/hud/guardian.dmi'
 	background_icon_state = "base"
 	cooldown_time = 0.5 SECONDS
 	// radius in tiles of AOE effect
@@ -103,7 +103,7 @@
 		return FALSE
 	caster.Shake(1.4, 0.8, 0.3 SECONDS)
 	caster.visible_message(span_danger("[caster] shakes violently!"))
-	playsound(caster, 'sound/items/weapons/drill.ogg', 120 , TRUE)
+	playsound(caster, '../assets/sound/items/weapons/drill.ogg', 120 , TRUE)
 	slash_em(caster)
 	StartCooldown(cooldown_time)
 

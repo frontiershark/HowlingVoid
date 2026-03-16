@@ -1,7 +1,7 @@
 /obj/machinery/ecto_sniffer
 	name = "ectoscopic sniffer"
 	desc = "A highly sensitive parascientific instrument calibrated to detect the slightest whiff of ectoplasm."
-	icon = 'icons/obj/machines/research.dmi'
+	icon = '../assets/icons/obj/machines/research.dmi'
 	icon_state = "ecto_sniffer"
 	density = FALSE
 	anchored = FALSE
@@ -32,7 +32,7 @@
 	if(!use_energy(active_power_usage, force = FALSE))
 		return
 	flick("ecto_sniffer_flick", src)
-	playsound(loc, 'sound/machines/ectoscope_beep.ogg', 75)
+	playsound(loc, '../assets/sound/machines/ectoscope_beep.ogg', 75)
 	say("Reporting [pick(world.file2list("strings/spook_levels.txt"))] levels of paranormal activity!")
 	if(activator?.ckey)
 		ectoplasmic_residues += activator.ckey

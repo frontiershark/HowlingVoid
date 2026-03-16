@@ -17,7 +17,7 @@
 	desc = "goliath DNA infused into what was once some normal eyes."
 
 	iris_overlay = null
-	icon = 'icons/map_icons/items/_item.dmi'
+	icon = '../assets/icons/map_icons/items/_item.dmi'
 	icon_state = "/obj/item/organ/eyes/night_vision/goliath"
 	post_init_icon_state = "eyes"
 	greyscale_config = /datum/greyscale_config/mutant_organ
@@ -41,7 +41,7 @@
 	name = "mutated goliath-lungs"
 	desc = "goliath DNA infused into what was once some normal lungs."
 
-	icon = 'icons/map_icons/items/_item.dmi'
+	icon = '../assets/icons/map_icons/items/_item.dmi'
 	icon_state = "/obj/item/organ/lungs/lavaland/goliath"
 	post_init_icon_state = "lungs"
 	greyscale_config = /datum/greyscale_config/mutant_organ
@@ -57,7 +57,7 @@
 	name = "mutated goliath-brain"
 	desc = "goliath DNA infused into what was once a normal brain."
 
-	icon = 'icons/map_icons/items/_item.dmi'
+	icon = '../assets/icons/map_icons/items/_item.dmi'
 	icon_state = "/obj/item/organ/brain/goliath"
 	post_init_icon_state = "brain"
 	greyscale_config = /datum/greyscale_config/mutant_organ
@@ -101,12 +101,12 @@
 /obj/item/goliath_infuser_hammer
 	name = "tendril hammer"
 	desc = "A mass of plates held by tendrils has replaced an arm."
-	icon = 'icons/obj/weapons/goliath_hammer.dmi'
+	icon = '../assets/icons/obj/weapons/goliath_hammer.dmi'
 	icon_state = "goliath_hammer"
 	inhand_icon_state = "goliath_hammer"
 	icon_angle = -90
-	lefthand_file = 'icons/mob/inhands/weapons/goliath_hammer_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/goliath_hammer_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/goliath_hammer_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/goliath_hammer_righthand.dmi'
 	item_flags = ABSTRACT | DROPDEL
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
 	w_class = WEIGHT_CLASS_HUGE
@@ -116,7 +116,7 @@
 	throw_speed = 0
 	attack_verb_continuous = list("smashes", "bashes", "hammers", "crunches", "punches")
 	attack_verb_simple = list("smash", "bash", "hammer", "crunch")
-	hitsound = 'sound/effects/bamf.ogg'
+	hitsound = '../assets/sound/effects/bamf.ogg'
 	tool_behaviour = TOOL_MINING
 	toolspeed = 0.1
 	/// Amount of damage we deal to the mining and boss factions.
@@ -169,7 +169,7 @@
 	name = "mutated goliath-heart"
 	desc = "goliath DNA infused into what was once a normal heart."
 
-	icon = 'icons/map_icons/items/_item.dmi'
+	icon = '../assets/icons/map_icons/items/_item.dmi'
 	icon_state = "/obj/item/organ/heart/goliath"
 	post_init_icon_state = "heart"
 	greyscale_config = /datum/greyscale_config/mutant_organ

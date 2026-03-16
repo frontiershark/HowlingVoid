@@ -1,11 +1,11 @@
 /obj/item/reagent_containers/hypospray
 	name = "hypospray"
 	desc = "The DeForest Medical Corporation hypospray is a sterile, air-needle autoinjector for rapid administration of drugs to patients."
-	icon = 'icons/obj/medical/syringe.dmi'
+	icon = '../assets/icons/obj/medical/syringe.dmi'
 	inhand_icon_state = "hypo"
 	worn_icon_state = "hypo"
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/medical_righthand.dmi'
 	icon_state = "hypo"
 	amount_per_transfer_from_this = 5
 	volume = 30
@@ -48,7 +48,7 @@
 		to_chat(affected_mob, span_warning("You feel a tiny prick!"))
 		to_chat(user, span_notice("You inject [affected_mob] with [src]."))
 		if(!stealthy)
-			playsound(affected_mob, 'sound/items/hypospray.ogg', 50, TRUE)
+			playsound(affected_mob, '../assets/sound/items/hypospray.ogg', 50, TRUE)
 		var/fraction = min(amount_per_transfer_from_this/reagents.total_volume, 1)
 
 
@@ -119,8 +119,8 @@
 	inhand_icon_state = "medipen"
 	worn_icon_state = "medipen"
 	base_icon_state = "medipen"
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/medical_righthand.dmi'
 	amount_per_transfer_from_this = 15
 	has_variable_transfer_amount = FALSE
 	volume = 15

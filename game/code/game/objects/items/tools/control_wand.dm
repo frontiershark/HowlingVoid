@@ -8,14 +8,14 @@
 	icon_state = "remote"
 	base_icon_state = "remote"
 	inhand_icon_state = "electronic"
-	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
-	icon = 'icons/obj/devices/remote.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/devices_righthand.dmi'
+	icon = '../assets/icons/obj/devices/remote.dmi'
 	name = "control wand"
 	desc = "A remote for controlling a set of airlocks."
 	w_class = WEIGHT_CLASS_TINY
-	drop_sound = 'sound/items/door_remote/door_remote_drop1.ogg'
-	pickup_sound = 'sound/items/door_remote/door_remote_pick_up1.ogg'
+	drop_sound = '../assets/sound/items/door_remote/door_remote_drop1.ogg'
+	pickup_sound = '../assets/sound/items/door_remote/door_remote_pick_up1.ogg'
 
 	var/department = "civilian"
 	var/mode = WAND_OPEN

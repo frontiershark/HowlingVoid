@@ -1,14 +1,14 @@
 /obj/item/gun/magic/wand/arcane_barrage
 	name = "arcane barrage"
 	desc = "Pew Pew Pew."
-	fire_sound = 'sound/items/weapons/emitter.ogg'
-	icon = 'icons/obj/weapons/guns/ballistic.dmi'
+	fire_sound = '../assets/sound/items/weapons/emitter.ogg'
+	icon = '../assets/icons/obj/weapons/guns/ballistic.dmi'
 	icon_state = "arcane_barrage"
 	inhand_icon_state = "arcane_barrage"
 	base_icon_state = "arcane_barrage"
 	icon_angle = 90
-	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/guns_righthand.dmi'
 	slot_flags = null
 	item_flags = NEEDS_PERMIT | DROPDEL | ABSTRACT | NOBLUDGEON
 	flags_1 = NONE

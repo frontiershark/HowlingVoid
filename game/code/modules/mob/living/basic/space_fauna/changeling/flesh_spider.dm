@@ -6,7 +6,7 @@
 /mob/living/basic/flesh_spider
 	name = "flesh spider"
 	desc = "A odd fleshy creature in the shape of a spider. Its eyes are pitch black and soulless."
-	icon = 'icons/mob/simple/arachnoid.dmi'
+	icon = '../assets/icons/mob/simple/arachnoid.dmi'
 	icon_state = "flesh"
 	icon_living = "flesh"
 	icon_dead = "flesh_dead"
@@ -28,7 +28,7 @@
 	melee_attack_cooldown = CLICK_CD_MELEE
 	attack_verb_continuous = "bites"
 	attack_verb_simple = "bite"
-	attack_sound = 'sound/items/weapons/bite.ogg'
+	attack_sound = '../assets/sound/items/weapons/bite.ogg'
 	attack_vis_effect = ATTACK_EFFECT_BITE
 	unsuitable_cold_damage = 4
 	unsuitable_heat_damage = 4

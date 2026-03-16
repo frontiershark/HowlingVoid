@@ -11,7 +11,7 @@
 	/// Typepath of custom material to use for objects.
 	var/datum/material/material
 	/// Sound to play when transforming a tile
-	var/sound = 'sound/effects/magic/blind.ogg'
+	var/sound = '../assets/sound/effects/magic/blind.ogg'
 	/// Weighted list of turfs to replace the floor with.
 	var/list/replace_floors = list(/turf/open/floor/material = 1)
 	/// Typepath of turf to replace walls with.
@@ -246,7 +246,7 @@
 
 /datum/dimension_theme/gold
 	name = "Gold"
-	icon = 'icons/obj/stack_objects.dmi'
+	icon = '../assets/icons/obj/stack_objects.dmi'
 	icon_state = "sheet-gold_2"
 	material = /datum/material/gold
 	replace_objs = list(
@@ -259,37 +259,37 @@
 
 /datum/dimension_theme/plasma
 	name = "Plasma"
-	icon = 'icons/obj/clothing/masks.dmi'
+	icon = '../assets/icons/obj/clothing/masks.dmi'
 	icon_state = "gas_alt"
 	material = /datum/material/plasma
 
 /datum/dimension_theme/clown
 	name = "Clown"
-	icon = 'icons/obj/clothing/masks.dmi'
+	icon = '../assets/icons/obj/clothing/masks.dmi'
 	icon_state = "clown"
 	material = /datum/material/bananium
-	sound = 'sound/items/bikehorn.ogg'
+	sound = '../assets/sound/items/bikehorn.ogg'
 
 /datum/dimension_theme/radioactive
 	name = "Radioactive"
-	icon = 'icons/obj/ore.dmi'
+	icon = '../assets/icons/obj/ore.dmi'
 	icon_state = "uranium"
 	material = /datum/material/uranium
-	sound = 'sound/items/tools/welder.ogg'
+	sound = '../assets/sound/items/tools/welder.ogg'
 
 /datum/dimension_theme/meat
 	name = "Meat"
-	icon = 'icons/obj/food/meat.dmi'
+	icon = '../assets/icons/obj/food/meat.dmi'
 	icon_state = "meat"
 	material = /datum/material/meat
-	sound = 'sound/items/eatfood.ogg'
+	sound = '../assets/sound/items/eatfood.ogg'
 
 /datum/dimension_theme/pizza
 	name = "Pizza"
-	icon = 'icons/obj/food/pizza.dmi'
+	icon = '../assets/icons/obj/food/pizza.dmi'
 	icon_state = "pizzamargherita"
 	material = /datum/material/pizza
-	sound = 'sound/items/eatfood.ogg'
+	sound = '../assets/sound/items/eatfood.ogg'
 	replace_objs = list(
 		/obj/structure/chair = list(/obj/structure/chair/greyscale = 1),
 		/obj/machinery/door/airlock = list(/obj/machinery/door/airlock/material = 1, /obj/machinery/door/airlock/material/glass = 1),
@@ -300,7 +300,7 @@
 
 /datum/dimension_theme/natural
 	name = "Natural"
-	icon = 'icons/obj/service/hydroponics/harvest.dmi'
+	icon = '../assets/icons/obj/service/hydroponics/harvest.dmi'
 	icon_state = "map_flower"
 	window_colour = "#00f7ff"
 	replace_floors = list(/turf/open/floor/grass = 1)
@@ -314,7 +314,7 @@
 
 /datum/dimension_theme/bamboo
 	name = "Bamboo"
-	icon = 'icons/obj/service/hydroponics/harvest.dmi'
+	icon = '../assets/icons/obj/service/hydroponics/harvest.dmi'
 	icon_state = "bamboo"
 	replace_floors = list(/turf/open/floor/bamboo = 1)
 	replace_walls = /turf/closed/wall/mineral/bamboo
@@ -328,7 +328,7 @@
 
 /datum/dimension_theme/icebox
 	name = "Winter"
-	icon = 'icons/obj/clothing/head/costume.dmi'
+	icon = '../assets/icons/obj/clothing/head/costume.dmi'
 	icon_state = "snowman_h"
 	window_colour = "#00f7ff"
 	material = /datum/material/snow
@@ -343,7 +343,7 @@
 
 /datum/dimension_theme/icebox/winter_cabin
 	name = "Winter Cabin"
-	icon = 'icons/obj/clothing/shoes.dmi'
+	icon = '../assets/icons/obj/clothing/shoes.dmi'
 	icon_state = "iceboots"
 	replace_walls = /turf/closed/wall/mineral/wood
 	replace_objs = list(
@@ -355,7 +355,7 @@
 
 /datum/dimension_theme/lavaland
 	name = "Lavaland"
-	icon = 'icons/obj/stack_objects.dmi'
+	icon = '../assets/icons/obj/stack_objects.dmi'
 	icon_state = "goliath_hide"
 	window_colour = "#860000"
 	replace_floors = list(/turf/open/floor/fakebasalt = 5, /turf/open/floor/fakepit = 1)
@@ -369,7 +369,7 @@
 
 /datum/dimension_theme/space
 	name = "Space"
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	icon_state = "blessed"
 	window_colour = COLOR_BLACK
 	material = /datum/material/glass
@@ -379,7 +379,7 @@
 
 /datum/dimension_theme/glass
 	name = "Glass"
-	icon = 'icons/obj/debris.dmi'
+	icon = '../assets/icons/obj/debris.dmi'
 	icon_state = "small"
 	material = /datum/material/glass
 	replace_floors = list(/turf/open/floor/glass = 1)
@@ -387,7 +387,7 @@
 
 /datum/dimension_theme/fancy
 	name = "Fancy"
-	icon = 'icons/obj/clothing/head/costume.dmi'
+	icon = '../assets/icons/obj/clothing/head/costume.dmi'
 	icon_state = "fancycrown"
 	replace_floors = null
 	replace_walls = /turf/closed/wall/mineral/wood/nonmetal
@@ -434,7 +434,7 @@
 
 /datum/dimension_theme/disco
 	name = "Disco"
-	icon = 'icons/obj/lighting.dmi'
+	icon = '../assets/icons/obj/lighting.dmi'
 	icon_state = "lbulb"
 	material = /datum/material/glass
 	replace_floors = list(/turf/open/floor/light = 1)
@@ -449,7 +449,7 @@
 
 /datum/dimension_theme/jungle
 	name = "Jungle"
-	icon = 'icons/obj/tiles.dmi'
+	icon = '../assets/icons/obj/tiles.dmi'
 	icon_state = "tile_grass"
 	sound = SFX_CRUNCHY_BUSH_WHACK
 	replace_floors = list(/turf/open/floor/grass = 1)
@@ -473,7 +473,7 @@
 
 /datum/dimension_theme/ayylmao
 	name = "Alien"
-	icon = 'icons/obj/antags/abductor.dmi'
+	icon = '../assets/icons/obj/antags/abductor.dmi'
 	icon_state = "sheet-abductor"
 	material = /datum/material/alloy/alien
 	replace_walls = /turf/closed/wall/mineral/abductor
@@ -488,7 +488,7 @@
 
 /datum/dimension_theme/bronze
 	name = "Bronze"
-	icon = 'icons/obj/weapons/spear.dmi'
+	icon = '../assets/icons/obj/weapons/spear.dmi'
 	icon_state = "ratvarian_spear"
 	material = /datum/material/bronze
 	replace_walls = /turf/closed/wall/mineral/bronze
@@ -505,4 +505,4 @@
 		/obj/machinery/door/airlock = list(/obj/machinery/door/airlock/bronze = 1),
 		/obj/structure/platform = list(/obj/structure/platform/bronze = 1),
 	)
-	sound = 'sound/effects/magic/clockwork/fellowship_armory.ogg'
+	sound = '../assets/sound/effects/magic/clockwork/fellowship_armory.ogg'

@@ -30,7 +30,7 @@
 /obj/machinery/door/poddoor/ancient_milsim
 	name = "fog of war"
 	desc = "'Best' game mechanic ever. At least it keeps you protected, you know? Deletes itself when the button is pushed."
-	icon = 'icons/effects/anomalies.dmi'
+	icon = '../assets/icons/effects/anomalies.dmi'
 	icon_state = "pyroclastic"
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
 

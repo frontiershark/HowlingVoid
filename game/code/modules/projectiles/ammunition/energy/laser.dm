@@ -12,7 +12,7 @@
 /obj/item/ammo_casing/energy/laser/accelerator
 	projectile_type = /obj/projectile/beam/laser/accelerator
 	select_name = "accelerator"
-	fire_sound = 'sound/items/weapons/lasercannonfire.ogg'
+	fire_sound = '../assets/sound/items/weapons/lasercannonfire.ogg'
 
 /obj/item/ammo_casing/energy/lasergun
 	projectile_type = /obj/projectile/beam/laser
@@ -31,13 +31,13 @@
 	projectile_type = /obj/projectile/beam/laser/rapid
 	e_cost = LASER_SHOTS(26, STANDARD_CELL_CHARGE)
 	select_name = "kill"
-	fire_sound = 'sound/items/weapons/laser2.ogg'
+	fire_sound = '../assets/sound/items/weapons/laser2.ogg'
 
 /obj/item/ammo_casing/energy/lasergun/cybersun
 	projectile_type = /obj/projectile/beam/laser/cybersun
 	e_cost = LASER_SHOTS(54, STANDARD_CELL_CHARGE)
 	select_name = "rapid fire"
-	fire_sound = 'sound/items/weapons/laser2.ogg'
+	fire_sound = '../assets/sound/items/weapons/laser2.ogg'
 
 /obj/item/ammo_casing/energy/lasergun/carbine/practice
 	projectile_type = /obj/projectile/beam/laser/rapid/practice
@@ -65,7 +65,7 @@
 	projectile_type = /obj/projectile/beam/laser/repeater
 	pellets = 2
 	variance = 10
-	fire_sound = 'sound/items/weapons/thermalpistol.ogg'
+	fire_sound = '../assets/sound/items/weapons/thermalpistol.ogg'
 	e_cost = LASER_SHOTS(6, STANDARD_CELL_CHARGE)
 
 /obj/item/ammo_casing/energy/laser/musket/repeater/handheld
@@ -117,13 +117,13 @@
 /obj/item/ammo_casing/energy/laser/heavy
 	projectile_type = /obj/projectile/beam/laser/heavylaser
 	select_name = "anti-vehicle"
-	fire_sound = 'sound/items/weapons/lasercannonfire.ogg'
+	fire_sound = '../assets/sound/items/weapons/lasercannonfire.ogg'
 
 /obj/item/ammo_casing/energy/laser/pulse
 	projectile_type = /obj/projectile/beam/pulse
 	e_cost = LASER_SHOTS(200, STANDARD_CELL_CHARGE * 40)
 	select_name = "DESTROY"
-	fire_sound = 'sound/items/weapons/pulse.ogg'
+	fire_sound = '../assets/sound/items/weapons/pulse.ogg'
 	firing_effect_type = /obj/effect/temp_visual/dir_setting/firing_effect/blue
 	muzzle_flash_color = LIGHT_COLOR_BLUE
 
@@ -146,12 +146,12 @@
 /obj/item/ammo_casing/energy/xray
 	projectile_type = /obj/projectile/beam/xray
 	e_cost = LASER_SHOTS(20, STANDARD_CELL_CHARGE)
-	fire_sound = 'sound/items/weapons/laser3.ogg'
+	fire_sound = '../assets/sound/items/weapons/laser3.ogg'
 
 /obj/item/ammo_casing/energy/mindflayer
 	projectile_type = /obj/projectile/beam/mindflayer
 	select_name = "MINDFUCK"
-	fire_sound = 'sound/items/weapons/laser.ogg'
+	fire_sound = '../assets/sound/items/weapons/laser.ogg'
 
 /obj/item/ammo_casing/energy/laser/minigun
 	select_name = "kill"
@@ -162,7 +162,7 @@
 	projectile_type = /obj/projectile/bullet/c10mm //henk
 	select_name = "bullet"
 	e_cost = LASER_SHOTS(8, STANDARD_CELL_CHARGE)
-	fire_sound = 'sound/items/weapons/thermalpistol.ogg'
+	fire_sound = '../assets/sound/items/weapons/thermalpistol.ogg'
 
 /obj/item/ammo_casing/energy/nanite/inferno
 	projectile_type = /obj/projectile/energy/inferno
@@ -182,7 +182,7 @@
 	base_icon_state = "s-casing-live"
 	slot_flags = null
 	projectile_type = /obj/projectile/beam
-	fire_sound = 'sound/items/weapons/laser.ogg'
+	fire_sound = '../assets/sound/items/weapons/laser.ogg'
 	firing_effect_type = /obj/effect/temp_visual/dir_setting/firing_effect/red
 
 /obj/item/ammo_casing/laser/Initialize(mapload)

@@ -13,7 +13,7 @@
 
 	// This is a little wiggley extension to make wallmounts like sinks and showers visually link to the pipe
 	if(overlays.len)
-		var/image/edge_overlay = image('icons/obj/pipes_n_cables/hydrochem/connects.dmi', "edge-extension", layer = PLUMBING_PIPE_VISIBILE_LAYER + ducting_layer * 0.0003)
+		var/image/edge_overlay = image('../assets/icons/obj/pipes_n_cables/hydrochem/connects.dmi', "edge-extension", layer = PLUMBING_PIPE_VISIBILE_LAYER + ducting_layer * 0.0003)
 		edge_overlay.dir = parent_movable.dir
 		edge_overlay.color = demand_color
 		edge_overlay.pixel_w = -parent_movable.pixel_x - parent_movable.pixel_w

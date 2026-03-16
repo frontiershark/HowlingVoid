@@ -10,10 +10,10 @@
 /datum/scripture/integration_cog/invoke_success()
 	if(invoker.put_in_hands(new /obj/item/clockwork/integration_cog))
 		to_chat(invoker, span_brass("You summon an integration cog into your hands."))
-		playsound(src, 'sound/machines/click.ogg', 50)
+		playsound(src, '../assets/sound/machines/click.ogg', 50)
 		return TRUE
 
 	else
 		to_chat(invoker, span_brass("You summon an integration cog on the floor."))
-		playsound(src, 'sound/machines/click.ogg', 50)
+		playsound(src, '../assets/sound/machines/click.ogg', 50)
 		return FALSE

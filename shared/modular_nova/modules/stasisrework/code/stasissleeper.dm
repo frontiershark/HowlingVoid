@@ -26,13 +26,13 @@
 		if(occupant)
 			thaw_them(occupant)
 			play_power_sound()
-		playsound(src, 'sound/machines/click.ogg', 60, TRUE)
+		playsound(src, '../assets/sound/machines/click.ogg', 60, TRUE)
 		flick("[initial(icon_state)]-anim", src)
 		..()
 
 /obj/machinery/stasissleeper/close_machine(atom/movable/target, density_to_set = TRUE)
 	if((isnull(target) || istype(target)) && state_open && !panel_open)
-		playsound(src, 'sound/machines/click.ogg', 60, TRUE)
+		playsound(src, '../assets/sound/machines/click.ogg', 60, TRUE)
 		flick("[initial(icon_state)]-anim", src)
 		..(target)
 		var/mob/living/mob_occupant = occupant
@@ -46,9 +46,9 @@
 	if(last_stasis_sound != _running)
 		var/sound_freq = rand(5120, 8800)
 		if(!(_running))
-			playsound(src, 'sound/machines/synth/synth_yes.ogg', 50, TRUE, frequency = sound_freq)
+			playsound(src, '../assets/sound/machines/synth/synth_yes.ogg', 50, TRUE, frequency = sound_freq)
 		else
-			playsound(src, 'sound/machines/synth/synth_no.ogg', 50, TRUE, frequency = sound_freq)
+			playsound(src, '../assets/sound/machines/synth/synth_no.ogg', 50, TRUE, frequency = sound_freq)
 		last_stasis_sound = _running
 
 /obj/machinery/stasissleeper/click_alt(mob/user)
@@ -90,7 +90,7 @@
 	if(target != occupant)
 		return
 	var/freq = rand(24750, 26550)
-	playsound(src, 'sound/effects/spray.ogg', 5, TRUE, 2, frequency = freq)
+	playsound(src, '../assets/sound/effects/spray.ogg', 5, TRUE, 2, frequency = freq)
 	target.apply_status_effect(/datum/status_effect/grouped/stasis, STASIS_MACHINE_EFFECT)
 	ADD_TRAIT(target, TRAIT_TUMOR_SUPPRESSED, TRAIT_GENERIC)
 	target.extinguish_mob()

@@ -18,7 +18,7 @@
 
 /obj/item/gun/energy/ionrifle/add_seclight_point()
 	AddComponent(/datum/component/seclite_attachable, \
-		light_overlay_icon = 'icons/obj/weapons/guns/flashlights.dmi', \
+		light_overlay_icon = '../assets/icons/obj/weapons/guns/flashlights.dmi', \
 		light_overlay = "flight", \
 		overlay_x = 17, \
 		overlay_y = 9)
@@ -62,12 +62,12 @@
 /obj/item/gun/energy/meteorgun/pen
 	name = "meteor pen"
 	desc = "The pen is mightier than the sword."
-	icon = 'icons/obj/service/bureaucracy.dmi'
+	icon = '../assets/icons/obj/service/bureaucracy.dmi'
 	icon_state = "pen"
 	inhand_icon_state = "pen"
 	worn_icon_state = "pen"
-	lefthand_file = 'icons/mob/inhands/items_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items_righthand.dmi'
 	w_class = WEIGHT_CLASS_TINY
 	automatic_charge_overlays = FALSE
 
@@ -97,7 +97,7 @@
 	can_charge = FALSE
 	gun_flags = NOT_A_REAL_GUN
 	heat = 3800
-	usesound = list('sound/items/tools/welder.ogg', 'sound/items/tools/welder2.ogg')
+	usesound = list('../assets/sound/items/tools/welder.ogg', '../assets/sound/items/tools/welder2.ogg')
 	tool_behaviour = TOOL_WELDER
 	toolspeed = 0.7 //plasmacutters can be used as welders, and are faster than standard welders
 
@@ -108,7 +108,7 @@
 		speed = 2.5 SECONDS, \
 		effectiveness = 105, \
 		bonus_modifier = 0, \
-		butcher_sound = 'sound/items/weapons/plasma_cutter.ogg', \
+		butcher_sound = '../assets/sound/items/weapons/plasma_cutter.ogg', \
 	)
 	AddElement(/datum/element/tool_flash, 1)
 
@@ -165,7 +165,7 @@
 /obj/item/gun/energy/plasmacutter/use_tool(atom/target, mob/living/user, delay, amount=1, volume=0, datum/callback/extra_checks)
 
 	if(amount)
-		var/mutable_appearance/sparks = mutable_appearance('icons/effects/welding_effect.dmi', "welding_sparks", GASFIRE_LAYER, src, ABOVE_LIGHTING_PLANE)
+		var/mutable_appearance/sparks = mutable_appearance('../assets/icons/effects/welding_effect.dmi', "welding_sparks", GASFIRE_LAYER, src, ABOVE_LIGHTING_PLANE)
 		target.add_overlay(sparks)
 		LAZYADD(update_overlays_on_z, sparks)
 		. = ..()
@@ -212,7 +212,7 @@
 	if(istype(C, /obj/item/assembly/signaler/anomaly/bluespace))
 		to_chat(user, span_notice("You insert [C] into the wormhole projector and the weapon gently hums to life."))
 		firing_core = TRUE
-		playsound(src.loc, 'sound/machines/click.ogg', 50, TRUE)
+		playsound(src.loc, '../assets/sound/machines/click.ogg', 50, TRUE)
 		qdel(C)
 		return
 
@@ -304,7 +304,7 @@
 	name = "cyborg lmg"
 	desc = "An LMG that fires 3D-printed flechettes. They are slowly resupplied using the cyborg's internal power source."
 	icon_state = "l6_cyborg"
-	icon = 'icons/obj/weapons/guns/ballistic.dmi'
+	icon = '../assets/icons/obj/weapons/guns/ballistic.dmi'
 	cell_type = /obj/item/stock_parts/power_store/cell/secborg
 	ammo_type = list(/obj/item/ammo_casing/energy/c3dbullet)
 	can_charge = FALSE
@@ -353,7 +353,7 @@
 	if(istype(C, /obj/item/assembly/signaler/anomaly/grav))
 		to_chat(user, span_notice("You insert [C] into the gravitational manipulator and the weapon gently hums to life."))
 		firing_core = TRUE
-		playsound(src.loc, 'sound/machines/click.ogg', 50, TRUE)
+		playsound(src.loc, '../assets/sound/machines/click.ogg', 50, TRUE)
 		qdel(C)
 		return
 	return ..()
@@ -376,10 +376,10 @@ it is often confused with the mech weapon of the same name, since it is a bit mo
 **/
 /obj/item/gun/energy/tesla_cannon
 	name = "tesla cannon"
-	icon = 'icons/obj/weapons/guns/wide_guns.dmi'
+	icon = '../assets/icons/obj/weapons/guns/wide_guns.dmi'
 	icon_state = "tesla"
-	lefthand_file = 'icons/mob/inhands/weapons/64x_guns_left.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/64x_guns_right.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/64x_guns_left.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/64x_guns_right.dmi'
 	inhand_icon_state = null //null so we build the correct inhand.
 	desc = "A high voltage flux projector prototype created using the latest advancements in the anomaly science.\n\nThe anomalous nature of the flux core allows the tesla arc to be guided from the electrode to the target without being diverted to stray conductors outside the target field."
 	SET_BASE_VISUAL_PIXEL(-8, 0)
@@ -406,7 +406,7 @@ it is often confused with the mech weapon of the same name, since it is a bit mo
 		balloon_alert(user, "electricity arcing to stock!")
 
 		if(prob(75)) //fake sparks to cut on spark spam
-			playsound(user, 'sound/effects/sparks/sparks1.ogg', 50, TRUE)
+			playsound(user, '../assets/sound/effects/sparks/sparks1.ogg', 50, TRUE)
 		else
 			do_sparks(3, FALSE, user)
 	return FALSE
@@ -417,16 +417,16 @@ it is often confused with the mech weapon of the same name, since it is a bit mo
 		w_class = WEIGHT_CLASS_NORMAL
 		ready_to_fire = FALSE
 		icon_state = "tesla"
-		playsound(user, 'sound/items/weapons/gun/tesla/squeak_latch.ogg', 100)
+		playsound(user, '../assets/sound/items/weapons/gun/tesla/squeak_latch.ogg', 100)
 
 	else
-		playsound(user, 'sound/items/weapons/gun/tesla/click_creak.ogg', 100)
+		playsound(user, '../assets/sound/items/weapons/gun/tesla/click_creak.ogg', 100)
 		if(!do_after(user, 1.5 SECONDS))
 			return
 		w_class = WEIGHT_CLASS_BULKY
 		ready_to_fire = TRUE
 		icon_state = "tesla_unfolded"
-		playsound(user, 'sound/items/weapons/gun/tesla/squeak_latch.ogg', 100)
+		playsound(user, '../assets/sound/items/weapons/gun/tesla/squeak_latch.ogg', 100)
 
 	update_appearance()
 	balloon_alert_to_viewers("[ready_to_fire ? "unfolded" : "folded"] stock")
@@ -434,10 +434,10 @@ it is often confused with the mech weapon of the same name, since it is a bit mo
 /obj/item/gun/energy/marksman_revolver
 	name = "marksman revolver"
 	desc = "Uses electric pulses to fire microscopic pieces of metal at incredibly high speeds. Alternate fire flips a coin that can be targeted for extra firepower."
-	icon = 'icons/obj/weapons/guns/ballistic.dmi'
+	icon = '../assets/icons/obj/weapons/guns/ballistic.dmi'
 	icon_state = "revolver"
 	ammo_type = list(/obj/item/ammo_casing/energy/marksman)
-	fire_sound = 'sound/items/weapons/gun/revolver/shot_alt.ogg'
+	fire_sound = '../assets/sound/items/weapons/gun/revolver/shot_alt.ogg'
 	automatic_charge_overlays = FALSE
 	/// How many coins we can have at a time. Set to 0 for infinite
 	var/max_coins = 4
@@ -467,7 +467,7 @@ it is often confused with the mech weapon of the same name, since it is a bit mo
 	if(COOLDOWN_FINISHED(src, coin_regen_cd))
 		if(ismob(loc))
 			var/mob/owner = loc
-			owner.playsound_local(owner, 'sound/machines/ding.ogg', 20)
+			owner.playsound_local(owner, '../assets/sound/machines/ding.ogg', 20)
 		coin_count++
 		COOLDOWN_START(src, coin_regen_cd, coin_regen_rate)
 
@@ -486,7 +486,7 @@ it is often confused with the mech weapon of the same name, since it is a bit mo
 		coin_count = max(0, coin_count - 1)
 
 	var/turf/target_turf = get_offset_target_turf(target, rand(-1, 1), rand(-1, 1)) // choose a random tile adjacent to the clicked one
-	playsound(user.loc, 'sound/effects/coin2.ogg', 50, TRUE)
+	playsound(user.loc, '../assets/sound/effects/coin2.ogg', 50, TRUE)
 	user.visible_message(span_warning("[user] flips a coin towards [target]!"), span_danger("You flip a coin towards [target]!"))
 	var/obj/projectile/bullet/coin/new_coin = new(get_turf(user), target_turf, user)
 	new_coin.aim_projectile(target_turf, user)
@@ -498,7 +498,7 @@ it is often confused with the mech weapon of the same name, since it is a bit mo
 	desc = "A competitive design to the tesla cannon, that instead of charging latent electrons, releases energy into photons. Eye protection is recommended."
 	icon_state = "photon"
 	inhand_icon_state = "tesla"
-	fire_sound = 'sound/items/weapons/lasercannonfire.ogg'
+	fire_sound = '../assets/sound/items/weapons/lasercannonfire.ogg'
 	ammo_type = list(/obj/item/ammo_casing/energy/photon)
 	shaded_charge = TRUE
 	weapon_weight = WEAPON_HEAVY

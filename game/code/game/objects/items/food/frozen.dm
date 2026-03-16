@@ -1,7 +1,7 @@
 /obj/item/food/icecreamsandwich
 	name = "ice cream sandwich"
 	desc = "Portable ice cream in its own packaging."
-	icon = 'icons/obj/food/frozen_treats.dmi'
+	icon = '../assets/icons/obj/food/frozen_treats.dmi'
 	icon_state = "icecreamsandwich"
 	w_class = WEIGHT_CLASS_TINY
 	food_reagents = list(
@@ -17,7 +17,7 @@
 /obj/item/food/strawberryicecreamsandwich
 	name = "strawberry ice cream sandwich"
 	desc = "Portable ice cream in its own packaging of the strawberry variety."
-	icon = 'icons/obj/food/frozen_treats.dmi'
+	icon = '../assets/icons/obj/food/frozen_treats.dmi'
 	icon_state = "strawberryicecreamsandwich"
 	w_class = WEIGHT_CLASS_TINY
 	food_reagents = list(
@@ -33,7 +33,7 @@
 /obj/item/food/spacefreezy
 	name = "space freezy"
 	desc = "The best ice cream in space."
-	icon = 'icons/obj/food/frozen_treats.dmi'
+	icon = '../assets/icons/obj/food/frozen_treats.dmi'
 	icon_state = "spacefreezy"
 	w_class = WEIGHT_CLASS_TINY
 	food_reagents = list(
@@ -53,7 +53,7 @@
 /obj/item/food/sundae
 	name = "sundae"
 	desc = "A classic dessert."
-	icon = 'icons/obj/food/frozen_treats.dmi'
+	icon = '../assets/icons/obj/food/frozen_treats.dmi'
 	icon_state = "sundae"
 	w_class = WEIGHT_CLASS_SMALL
 	food_reagents = list(
@@ -73,7 +73,7 @@
 /obj/item/food/honkdae
 	name = "honkdae"
 	desc = "The clown's favorite dessert."
-	icon = 'icons/obj/food/frozen_treats.dmi'
+	icon = '../assets/icons/obj/food/frozen_treats.dmi'
 	icon_state = "honkdae"
 	w_class = WEIGHT_CLASS_SMALL
 	food_reagents = list(
@@ -97,7 +97,7 @@
 /obj/item/food/snowcones //We use this as a base for all other snowcones
 	name = "flavorless snowcone"
 	desc = "It's just shaved ice. Still fun to chew on."
-	icon = 'icons/obj/food/frozen_treats.dmi'
+	icon = '../assets/icons/obj/food/frozen_treats.dmi'
 	icon_state = "flavorless_sc"
 	w_class = WEIGHT_CLASS_SMALL
 	trash_type = /obj/item/reagent_containers/cup/glass/sillycup //We dont eat paper cups
@@ -321,7 +321,7 @@
 /obj/item/food/popsicle
 	name = "bug popsicle"
 	desc = "Mmmm, this should not exist."
-	icon = 'icons/obj/food/frozen_treats.dmi'
+	icon = '../assets/icons/obj/food/frozen_treats.dmi'
 	icon_state = "popsicle_stick_s"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 4,
@@ -364,7 +364,7 @@
 
 /obj/item/popsicle_stick
 	name = "popsicle stick"
-	icon = 'icons/obj/food/frozen_treats.dmi'
+	icon = '../assets/icons/obj/food/frozen_treats.dmi'
 	icon_state = "popsicle_stick"
 	desc = "This humble little stick usually carries a frozen treat, at the moment it seems freed from this Atlassian burden."
 	custom_materials = list(/datum/material/wood = SMALL_MATERIAL_AMOUNT * 0.20)
@@ -426,7 +426,7 @@
 /obj/item/food/cornuto
 	name = "cornuto"
 	w_class = WEIGHT_CLASS_SMALL
-	icon = 'icons/obj/food/frozen_treats.dmi'
+	icon = '../assets/icons/obj/food/frozen_treats.dmi'
 	icon_state = "cornuto"
 	desc = "A neapolitan vanilla and chocolate ice cream cone. It menaces with a sprinkling of caramelized nuts."
 	food_reagents = list(

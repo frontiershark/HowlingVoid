@@ -17,7 +17,7 @@
 	attack_verb_continuous = "bites into"
 	attack_verb_simple = "bite into"
 	throw_blocked_message = "bounces off the shell of"
-	attack_sound = 'sound/items/weapons/bladeslice.ogg'
+	attack_sound = '../assets/sound/items/weapons/bladeslice.ogg'
 	attack_vis_effect = ATTACK_EFFECT_BITE
 	ai_controller = /datum/ai_controller/basic_controller/basilisk
 	butcher_results = list(
@@ -30,7 +30,7 @@
 
 /mob/living/basic/mining/basilisk/Initialize(mapload)
 	. = ..()
-	ranged_attacks = AddComponent(/datum/component/ranged_attacks, projectile_type = /obj/projectile/temp/watcher, projectile_sound = 'sound/items/weapons/pierce.ogg')
+	ranged_attacks = AddComponent(/datum/component/ranged_attacks, projectile_type = /obj/projectile/temp/watcher, projectile_sound = '../assets/sound/items/weapons/pierce.ogg')
 	RegisterSignal(src, COMSIG_MOVABLE_MOVED, PROC_REF(check_lava))
 
 /mob/living/basic/mining/basilisk/Destroy()

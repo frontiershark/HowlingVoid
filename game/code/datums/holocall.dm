@@ -161,7 +161,7 @@
 
 	hangup = new(eye, src)
 	hangup.Grant(user)
-	playsound(answering_holopad, 'sound/machines/ping.ogg', 100)
+	playsound(answering_holopad, '../assets/sound/machines/ping.ogg', 100)
 	answering_holopad.say("Connection established.")
 
 //Checks the validity of a holocall and qdels itself if it's not. Returns TRUE if valid, FALSE otherwise
@@ -187,7 +187,7 @@
 
 /datum/action/innate/end_holocall
 	name = "End Holocall"
-	button_icon = 'icons/mob/actions/actions_silicon.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_silicon.dmi'
 	button_icon_state = "camera_off"
 	var/datum/holocall/hcall
 
@@ -290,7 +290,7 @@
 				if(ispath(preset_type,/datum/preset_holoimage))
 					record.entries += list(list(HOLORECORD_PRESET,preset_type))
 	if(!preset_image_type)
-		record.caller_image = image('icons/mob/simple/animal.dmi',"old")
+		record.caller_image = image('../assets/icons/mob/simple/animal.dmi',"old")
 	else
 		var/datum/preset_holoimage/H = new preset_image_type
 		record.caller_image = H.build_image()

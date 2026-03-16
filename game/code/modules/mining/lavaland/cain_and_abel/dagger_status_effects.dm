@@ -27,7 +27,7 @@
 		mob_hit = TRUE
 
 	if(mob_hit)
-		playsound(owner, 'sound/items/weapons/bladeslice.ogg', 75, FALSE) //just play it once
+		playsound(owner, '../assets/sound/items/weapons/bladeslice.ogg', 75, FALSE) //just play it once
 
 /datum/status_effect/dagger_swinging/proc/hit_by_projectile(mob/living/swinger, obj/projectile/projectile, hit_area)
 	SIGNAL_HANDLER
@@ -35,7 +35,7 @@
 	if(!isturf(owner.loc))
 		return NONE
 
-	playsound(swinger, 'sound/items/weapons/parry.ogg', 75, TRUE)
+	playsound(swinger, '../assets/sound/items/weapons/parry.ogg', 75, TRUE)
 
 	var/obj/effect/temp_visual/guardian/phase/out/parry_effect = new
 	parry_effect.pixel_x = rand(-4, 4)
@@ -61,7 +61,7 @@
 	if(attack_type == PROJECTILE_ATTACK || damage >= 75 || damage <= 0 || damage_type == STAMINA)
 		return NONE
 
-	playsound(owner, 'sound/items/weapons/parry.ogg', 75, TRUE)
+	playsound(owner, '../assets/sound/items/weapons/parry.ogg', 75, TRUE)
 	new /obj/effect/temp_visual/guardian/phase/out(get_turf(owner))
 	return SUCCESSFUL_BLOCK
 
@@ -76,7 +76,7 @@
 	duration = 2 SECONDS
 	alert_type = null
 	///overlay we apply to stunned enemies
-	var/static/mutable_appearance/stun_lightning = mutable_appearance('icons/effects/effects.dmi', "lightning", layer = ABOVE_ALL_MOB_LAYER)
+	var/static/mutable_appearance/stun_lightning = mutable_appearance('../assets/icons/effects/effects.dmi', "lightning", layer = ABOVE_ALL_MOB_LAYER)
 
 /datum/status_effect/dagger_stun/on_apply()
 	. = ..()

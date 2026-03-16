@@ -2,8 +2,8 @@
 //If any new staple chaplain items get added, put them in these lists
 /obj/item/clothing/suit/chaplainsuit
 	allowed = null
-	icon = 'icons/obj/clothing/suits/chaplain.dmi'
-	worn_icon = 'icons/mob/clothing/suits/chaplain.dmi'
+	icon = '../assets/icons/obj/clothing/suits/chaplain.dmi'
+	worn_icon = '../assets/icons/mob/clothing/suits/chaplain.dmi'
 
 /obj/item/clothing/suit/chaplainsuit/Initialize(mapload)
 	. = ..()
@@ -84,8 +84,8 @@
 	name = "monk's habit"
 	desc = "A few steps above rended sackcloth."
 	icon_state = "monkfrock"
-	icon = 'icons/obj/clothing/suits/chaplain.dmi'
-	worn_icon = 'icons/mob/clothing/suits/chaplain.dmi'
+	icon = '../assets/icons/obj/clothing/suits/chaplain.dmi'
+	worn_icon = '../assets/icons/mob/clothing/suits/chaplain.dmi'
 	inhand_icon_state = "monkfrock"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	hoodtype = /obj/item/clothing/head/hooded/monkhabit
@@ -93,8 +93,8 @@
 /obj/item/clothing/head/hooded/monkhabit
 	name = "monk's hood"
 	desc = "For when a man wants to cover up his tonsure."
-	icon = 'icons/obj/clothing/head/chaplain.dmi'
-	worn_icon = 'icons/mob/clothing/head/chaplain.dmi'
+	icon = '../assets/icons/obj/clothing/head/chaplain.dmi'
+	worn_icon = '../assets/icons/mob/clothing/head/chaplain.dmi'
 	icon_state = "monkhood"
 	inhand_icon_state = null
 	body_parts_covered = HEAD
@@ -149,8 +149,8 @@
 /obj/item/clothing/head/helmet/chaplain
 	name = "crusader helmet"
 	desc = "Deus Vult."
-	icon = 'icons/obj/clothing/head/chaplain.dmi'
-	worn_icon = 'icons/mob/clothing/head/chaplain.dmi'
+	icon = '../assets/icons/obj/clothing/head/chaplain.dmi'
+	worn_icon = '../assets/icons/mob/clothing/head/chaplain.dmi'
 	icon_state = "knight_templar"
 	inhand_icon_state = null
 	armor_type = /datum/armor/chaplainsuit_armor
@@ -266,8 +266,8 @@
 	name = "follower hoodie"
 	desc = "Hoodie made for acolytes of the chaplain."
 	icon_state = "chaplain_hoodie"
-	icon = 'icons/obj/clothing/suits/chaplain.dmi'
-	worn_icon = 'icons/mob/clothing/suits/chaplain.dmi'
+	icon = '../assets/icons/obj/clothing/suits/chaplain.dmi'
+	worn_icon = '../assets/icons/mob/clothing/suits/chaplain.dmi'
 	inhand_icon_state = null
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	allowed = null
@@ -280,8 +280,8 @@
 /obj/item/clothing/head/hooded/chaplain_hood
 	name = "follower hood"
 	desc = "Hood made for acolytes of the chaplain."
-	icon = 'icons/obj/clothing/head/chaplain.dmi'
-	worn_icon = 'icons/mob/clothing/head/chaplain.dmi'
+	icon = '../assets/icons/obj/clothing/head/chaplain.dmi'
+	worn_icon = '../assets/icons/mob/clothing/head/chaplain.dmi'
 	icon_state = "chaplain_hood"
 	body_parts_covered = HEAD
 	flags_inv = HIDEHAIR|HIDEFACE|HIDEEARS

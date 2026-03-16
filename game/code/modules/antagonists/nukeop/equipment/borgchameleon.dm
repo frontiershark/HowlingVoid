@@ -3,13 +3,13 @@
 
 /obj/item/borg_chameleon
 	name = "cyborg chameleon projector"
-	icon = 'icons/obj/devices/syndie_gadget.dmi'
+	icon = '../assets/icons/obj/devices/syndie_gadget.dmi'
 	icon_state = "shield0"
 	obj_flags = CONDUCTS_ELECTRICITY
 	item_flags = NOBLUDGEON
 	inhand_icon_state = "electronic"
-	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/devices_righthand.dmi'
 	w_class = WEIGHT_CLASS_SMALL
 	var/friendlyName
 	var/savedName
@@ -55,7 +55,7 @@
 
 /obj/item/borg_chameleon/proc/toggle(mob/living/silicon/robot/user)
 	if(active)
-		playsound(src, 'sound/effects/pop.ogg', 100, TRUE, -6)
+		playsound(src, '../assets/sound/effects/pop.ogg', 100, TRUE, -6)
 		to_chat(user, span_notice("You deactivate \the [src]."))
 		deactivate(user)
 	else
@@ -64,10 +64,10 @@
 			return
 		animation_playing = TRUE
 		to_chat(user, span_notice("You activate \the [src]."))
-		playsound(src, 'sound/effects/seedling_chargeup.ogg', 100, TRUE, -6)
+		playsound(src, '../assets/sound/effects/seedling_chargeup.ogg', 100, TRUE, -6)
 		apply_wibbly_filters(user)
 		if (do_after(user, 5 SECONDS, target = user, hidden = TRUE) && user.cell.use(ACTIVATION_COST))
-			playsound(src, 'sound/effects/bamf.ogg', 100, TRUE, -6)
+			playsound(src, '../assets/sound/effects/bamf.ogg', 100, TRUE, -6)
 			to_chat(user, span_notice("You are now disguised as the Nanotrasen engineering borg \"[friendlyName]\"."))
 			activate(user)
 		else

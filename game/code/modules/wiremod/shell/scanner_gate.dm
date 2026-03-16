@@ -1,7 +1,7 @@
 /obj/structure/scanner_gate_shell
 	name = "circuit scanner gate"
 	desc = "A gate able to perform mid-depth scans on any organisms who pass under it."
-	icon = 'icons/obj/machines/scangate.dmi'
+	icon = '../assets/icons/obj/machines/scangate.dmi'
 	icon_state = "scangate_black"
 	var/locked = FALSE
 

@@ -9,7 +9,7 @@
 	lifespan = 55
 	endurance = 35
 	yield = 5
-	growing_icon = 'icons/obj/service/hydroponics/growing_fruits.dmi'
+	growing_icon = '../assets/icons/obj/service/hydroponics/growing_fruits.dmi'
 	icon_grow = "apple-grow"
 	icon_dead = "apple-dead"
 	genes = list(/datum/plant_gene/trait/repeated_harvest, /datum/plant_gene/trait/one_bite)
@@ -58,7 +58,7 @@
 /// Provide an important insight
 /obj/item/food/grown/apple/proc/gravity_reminder(mob/living/einstein)
 	einstein.do_alert_animation()
-	playsound(einstein, 'sound/machines/chime.ogg', 50, TRUE)
+	playsound(einstein, '../assets/sound/machines/chime.ogg', 50, TRUE)
 	einstein.say(pick_list_replacements(VISTA_FILE, "ballmer_good_msg"), forced = "apple inspiration")
 
 // Gold Apple

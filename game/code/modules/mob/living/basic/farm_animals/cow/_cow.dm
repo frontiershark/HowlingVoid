@@ -2,7 +2,7 @@
 /mob/living/basic/cow
 	name = "cow"
 	desc = "Known for their milk, just don't tip them over."
-	icon = 'icons/mob/simple/cows.dmi'
+	icon = '../assets/icons/mob/simple/cows.dmi'
 	icon_state = "cow"
 	icon_living = "cow"
 	icon_dead = "cow_dead"
@@ -20,7 +20,7 @@
 	response_harm_simple = "kick"
 	attack_verb_continuous = "kicks"
 	attack_verb_simple = "kick"
-	attack_sound = 'sound/items/weapons/punch1.ogg'
+	attack_sound = '../assets/sound/items/weapons/punch1.ogg'
 	attack_vis_effect = ATTACK_EFFECT_KICK
 	health = 50
 	maxHealth = 50
@@ -47,7 +47,7 @@
 	message = "moos happily!"
 	emote_type = EMOTE_VISIBLE | EMOTE_AUDIBLE
 	vary = TRUE
-	sound = 'sound/mobs/non-humanoids/cow/cow.ogg'
+	sound = '../assets/sound/mobs/non-humanoids/cow/cow.ogg'
 
 /mob/living/basic/cow/Initialize(mapload)
 	AddComponent(/datum/component/tippable, \

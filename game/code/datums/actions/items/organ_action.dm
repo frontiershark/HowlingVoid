@@ -26,7 +26,7 @@
 
 /datum/action/item_action/organ_action/go_feral
 	name = "Go Feral"
-	button_icon = 'icons/mob/actions/actions_items.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_items.dmi'
 	button_icon_state = "feral_mode_off"
 	var/list/ability_name = list("Go Feral", "Bite the Hand that Feeds", "Unleash Id", "Activate Catbrain", "Gremlin Mode", "Nom Mode", "Dehumanize Yourself", "Misbehave")
 

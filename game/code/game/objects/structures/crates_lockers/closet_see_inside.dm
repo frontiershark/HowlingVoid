@@ -45,7 +45,7 @@
 		1,
 		list(
 			type = "alpha",
-			icon = icon('icons/effects/closet_see_inside_mask.dmi', "mask"),
+			icon = icon('../assets/icons/effects/closet_see_inside_mask.dmi', "mask"),
 			y = -3,
 		)
 	)

@@ -1,8 +1,8 @@
 /obj/item/clothing/head/cone
 	desc = "This cone is trying to warn you of something!"
 	name = "warning cone"
-	icon = 'icons/obj/service/janitor.dmi'
-	worn_icon = 'icons/mob/clothing/head/utility.dmi'
+	icon = '../assets/icons/obj/service/janitor.dmi'
+	worn_icon = '../assets/icons/mob/clothing/head/utility.dmi'
 	icon_state = "cone"
 	inhand_icon_state = null
 	worn_y_offset = 1
@@ -13,8 +13,8 @@
 	w_class = WEIGHT_CLASS_SMALL
 	attack_verb_continuous = list("warns", "cautions", "smashes")
 	attack_verb_simple = list("warn", "caution", "smash")
-	pickup_sound = 'sound/items/handling/materials/plastic_pick_up.ogg'
-	drop_sound = 'sound/items/handling/materials/plastic_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/materials/plastic_pick_up.ogg'
+	drop_sound = '../assets/sound/items/handling/materials/plastic_drop.ogg'
 	resistance_flags = NONE
 	custom_materials = list(/datum/material/plastic = SHEET_MATERIAL_AMOUNT * 2)
 

@@ -35,10 +35,10 @@
 /obj/item/duty_checker //Test item
 	name = "duty checker"
 	desc = "Checks if the mob this is used on is off-duty. You probably shouldn't see this in-game..."
-	icon = 'icons/obj/devices/remote.dmi'
+	icon = '../assets/icons/obj/devices/remote.dmi'
 	icon_state = "generic_delivery"
-	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/devices_righthand.dmi'
 	inhand_icon_state = "electronic"
 
 /obj/item/duty_checker/attack(mob/living/carbon/human/target_human, mob/living/user, params)

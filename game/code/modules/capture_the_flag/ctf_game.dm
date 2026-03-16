@@ -9,7 +9,7 @@
 /obj/machinery/ctf
 	name = "CTF Controller"
 	desc = "Used for running friendly games of capture the flag."
-	icon = 'icons/obj/machines/beacon.dmi'
+	icon = '../assets/icons/obj/machines/beacon.dmi'
 	icon_state = "syndbeacon"
 	density = TRUE
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
@@ -181,11 +181,11 @@
 ///A flag used for the CTF minigame.
 /obj/item/ctf_flag
 	name = "banner"
-	icon = 'icons/obj/banner.dmi'
+	icon = '../assets/icons/obj/banner.dmi'
 	icon_state = "banner"
 	inhand_icon_state = "banner"
-	lefthand_file = 'icons/mob/inhands/equipment/banners_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/banners_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/banners_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/banners_righthand.dmi'
 	desc = "A banner with Nanotrasen's logo on it."
 	slowdown = 2
 	throw_speed = 0
@@ -275,7 +275,7 @@
 	var/obj/item/ctf_flag/flag = item
 	if(flag.team != team)
 		to_chat(user, span_userdanger("Take \the [initial(flag.name)] to your team's controller!"))
-		user.playsound_local(get_turf(user), 'sound/machines/buzz/buzz-sigh.ogg', 100, vary = FALSE, use_reverb = FALSE)
+		user.playsound_local(get_turf(user), '../assets/sound/machines/buzz/buzz-sigh.ogg', 100, vary = FALSE, use_reverb = FALSE)
 
 /obj/item/ctf_flag/dropped(mob/user)
 	..()
@@ -324,7 +324,7 @@
 
 /obj/effect/ctf/flag_reset
 	name = "banner landmark"
-	icon = 'icons/obj/banner.dmi'
+	icon = '../assets/icons/obj/banner.dmi'
 	icon_state = "banner"
 	desc = "This is where a CTF flag will respawn."
 	layer = LOW_ITEM_LAYER
@@ -340,7 +340,7 @@
 /obj/machinery/ctf/control_point
 	name = "control point"
 	desc = "You should capture this"
-	icon = 'icons/obj/machines/dominator.dmi'
+	icon = '../assets/icons/obj/machines/dominator.dmi'
 	icon_state = "dominator"
 	///Team that is currently controlling this point.
 	var/controlling_team
@@ -440,7 +440,7 @@
 /obj/effect/ctf/dead_barricade
 	name = "dead barrier"
 	desc = "It provided cover in fire fights. And now it's gone."
-	icon = 'icons/obj/structures.dmi'
+	icon = '../assets/icons/obj/structures.dmi'
 	icon_state = "barrier0"
 	var/game_id = CTF_GHOST_CTF_GAME_ID
 	var/datum/ctf_controller/ctf_game
@@ -521,7 +521,7 @@
 		message_admins("CTF has finished a round and automatically restarted.")
 		notify_ghosts(
 			"CTF has automatically restarted after a round finished in [initial(ctf_area.name)]!",
-			ghost_sound = 'sound/effects/ghost2.ogg',
+			ghost_sound = '../assets/sound/effects/ghost2.ogg',
 			header = "CTF Restarted"
 		)
 	else
@@ -529,7 +529,7 @@
 	if(!automated)
 		notify_ghosts(
 			"CTF has been [ctf_enabled? "enabled" : "disabled"] in [initial(ctf_area.name)]!",
-			ghost_sound = 'sound/effects/ghost2.ogg',
+			ghost_sound = '../assets/sound/effects/ghost2.ogg',
 			header = "CTF [ctf_enabled? "Enabled" : "Disabled"]"
 		)
 

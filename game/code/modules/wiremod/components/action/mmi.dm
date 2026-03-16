@@ -3,7 +3,7 @@
 /datum/action/innate/mmi_comp_disconnect
 	name = "Disconnect from remote circuit"
 	desc = "Stop controlling an integrated circuit"
-	button_icon = 'icons/mob/actions/actions_AI.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_AI.dmi'
 	button_icon_state = "ai_core"
 
 /datum/action/innate/mmi_comp_disconnect/Trigger(trigger_flags)

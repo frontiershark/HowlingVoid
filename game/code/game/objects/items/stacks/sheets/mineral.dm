@@ -81,7 +81,7 @@ GLOBAL_LIST_INIT(sandbag_recipes, list ( \
 /obj/item/emptysandbag
 	name = "empty sandbag"
 	desc = "A bag to be filled with sand."
-	icon = 'icons/obj/stack_objects.dmi'
+	icon = '../assets/icons/obj/stack_objects.dmi'
 	icon_state = "sandbag"
 	w_class = WEIGHT_CLASS_TINY
 
@@ -403,8 +403,8 @@ GLOBAL_LIST_INIT(plastitanium_recipes, list ( \
 	merge_type = /obj/item/stack/sheet/mineral/snow
 	walltype = /turf/closed/wall/mineral/snow
 	material_type = /datum/material/snow
-	pickup_sound = 'sound/items/handling/materials/snow_pick_up.ogg'
-	drop_sound = 'sound/items/handling/materials/snow_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/materials/snow_pick_up.ogg'
+	drop_sound = '../assets/sound/items/handling/materials/snow_drop.ogg'
 
 GLOBAL_LIST_INIT(snow_recipes, list ( \
 	new/datum/stack_recipe("snow wall", /turf/closed/wall/mineral/snow, 5, time = 4 SECONDS, crafting_flags = CRAFT_CHECK_DENSITY | CRAFT_ONE_PER_TURF | CRAFT_ON_SOLID_GROUND, category = CAT_STRUCTURE), \
@@ -479,7 +479,7 @@ GLOBAL_LIST_INIT(adamantine_recipes, list(
  */
 /obj/item/stack/sheet/mineral/abductor
 	name = "alien alloy"
-	icon = 'icons/obj/antags/abductor.dmi'
+	icon = '../assets/icons/obj/antags/abductor.dmi'
 	icon_state = "sheet-abductor"
 	inhand_icon_state = "sheet-abductor"
 	singular_name = "alien alloy sheet"
@@ -510,7 +510,7 @@ GLOBAL_LIST_INIT(abductor_recipes, list ( \
 /obj/item/stack/sheet/mineral/coal
 	name = "coal"
 	desc = "Someone's gotten on the naughty list."
-	icon = 'icons/obj/ore.dmi'
+	icon = '../assets/icons/obj/ore.dmi'
 	icon_state = "slag"
 	singular_name = "coal lump"
 	merge_type = /obj/item/stack/sheet/mineral/coal

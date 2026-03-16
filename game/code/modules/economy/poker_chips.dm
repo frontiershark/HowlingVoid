@@ -1,7 +1,7 @@
 /obj/item/poker_chip
 	name = "poker chip"
 	desc = "A small plastic chip used for gambling. A clever substitution to make the gambling addict feel like his losses are less real."
-	icon = 'icons/obj/economy.dmi'
+	icon = '../assets/icons/obj/economy.dmi'
 	icon_state = "pokerchip_white_black"
 	w_class = WEIGHT_CLASS_TINY
 	custom_materials = list(/datum/material/plastic = COIN_MATERIAL_AMOUNT)

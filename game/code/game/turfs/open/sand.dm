@@ -1,7 +1,7 @@
 /turf/open/misc/beach
 	name = "beach"
 	desc = "Sandy."
-	icon = 'icons/turf/sand.dmi'
+	icon = '../assets/icons/turf/sand.dmi'
 	flags_1 = NONE
 	bullet_bounce_sound = null
 	footstep = FOOTSTEP_SAND
@@ -36,7 +36,7 @@
 /turf/open/misc/beach/coast
 	name = "coastline"
 	desc = "Tide's high tonight. Charge your batons."
-	icon = 'icons/turf/beach.dmi'
+	icon = '../assets/icons/turf/beach.dmi'
 	icon_state = "beach"
 	base_icon_state = "beach"
 	footstep = FOOTSTEP_WATER
@@ -64,8 +64,8 @@
 	gender = PLURAL
 	name = "dirt"
 	desc = "Upon closer examination, it's still dirt."
-	icon = 'icons/turf/floors.dmi'
-	damaged_dmi = 'icons/turf/damaged.dmi'
+	icon = '../assets/icons/turf/floors.dmi'
+	damaged_dmi = '../assets/icons/turf/damaged.dmi'
 	icon_state = "sand"
 	base_icon_state = "sand"
 	bullet_bounce_sound = null

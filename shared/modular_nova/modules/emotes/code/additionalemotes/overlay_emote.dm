@@ -32,7 +32,7 @@
 		overlay.pixel_x = 10
 		overlay.pixel_y = 28
 		user.flick_overlay_static(overlay, 50)
-		playsound(get_turf(user), 'sound/machines/chime.ogg', 25, TRUE)
+		playsound(get_turf(user), '../assets/sound/machines/chime.ogg', 25, TRUE)
 
 /datum/emote/living/question
 	key = "question"

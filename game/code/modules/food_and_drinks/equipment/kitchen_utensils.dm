@@ -10,9 +10,9 @@
 #define PLASTIC_BREAK_PROBABILITY 25
 
 /obj/item/kitchen
-	icon = 'icons/obj/service/kitchen.dmi'
-	lefthand_file = 'icons/mob/inhands/equipment/kitchen_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/kitchen_righthand.dmi'
+	icon = '../assets/icons/obj/service/kitchen.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/kitchen_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/kitchen_righthand.dmi'
 	abstract_type = /obj/item/kitchen
 	worn_icon_state = "kitchen_tool"
 
@@ -34,7 +34,7 @@
 	obj_flags = CONDUCTS_ELECTRICITY
 	attack_verb_continuous = list("attacks", "stabs", "pokes")
 	attack_verb_simple = list("attack", "stab", "poke")
-	hitsound = 'sound/items/weapons/bladeslice.ogg'
+	hitsound = '../assets/sound/items/weapons/bladeslice.ogg'
 	armor_type = /datum/armor/kitchen_fork
 	sharpness = SHARP_POINTY
 	var/datum/reagent/forkload //used to eat omelette
@@ -53,7 +53,7 @@
 
 /obj/item/kitchen/fork/suicide_act(mob/living/carbon/user)
 	user.visible_message(span_suicide("[user] stabs \the [src] into [user.p_their()] chest! It looks like [user.p_theyre()] trying to take a bite out of [user.p_them()]self!"))
-	playsound(src, 'sound/items/eatfood.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/eatfood.ogg', 50, TRUE)
 	return BRUTELOSS
 
 /obj/item/kitchen/fork/attack(mob/living/carbon/M, mob/living/carbon/user)
@@ -115,14 +115,14 @@
 
 /obj/item/knife/kitchen/silicon
 	name = "Kitchen Toolset"
-	icon = 'icons/obj/items_cyborg.dmi'
+	icon = '../assets/icons/obj/items_cyborg.dmi'
 	icon_state = "sili_knife"
 	icon_angle = 0
 	desc = "A breakthrough in synthetic engineering, this tool is a knife programmed to dull when not used for cooking purposes, and can exchange the blade for a rolling pin"
 	force = 0
 	throwforce = 0
 	sharpness = SHARP_EDGED
-	hitsound = 'sound/items/weapons/bladeslice.ogg'
+	hitsound = '../assets/sound/items/weapons/bladeslice.ogg'
 	attack_verb_continuous = list("prods", "whiffs", "scratches", "pokes")
 	attack_verb_simple = list("prod", "whiff", "scratch", "poke")
 	tool_behaviour = TOOL_KNIFE
@@ -135,7 +135,7 @@
 	. += "It's fitted with a [tool_behaviour] head."
 
 /obj/item/knife/kitchen/silicon/attack_self(mob/user)
-	playsound(get_turf(user), 'sound/items/tools/change_drill.ogg', 50, TRUE)
+	playsound(get_turf(user), '../assets/sound/items/tools/change_drill.ogg', 50, TRUE)
 	if(tool_behaviour != TOOL_ROLLINGPIN)
 		tool_behaviour = TOOL_ROLLINGPIN
 		to_chat(user, span_notice("You attach the rolling pin bit to the [src]."))
@@ -152,14 +152,14 @@
 		icon_state = "sili_knife"
 		force = 0
 		sharpness = SHARP_EDGED
-		hitsound = 'sound/items/weapons/bladeslice.ogg'
+		hitsound = '../assets/sound/items/weapons/bladeslice.ogg'
 		attack_verb_continuous = list("prods", "whiffs", "scratches", "pokes")
 		attack_verb_simple = list("prod", "whiff", "scratch", "poke")
 
 /obj/item/kitchen/rollingpin
 	name = "rolling pin"
 	desc = "Used to knock out the Bartender."
-	icon = 'icons/obj/service/kitchen.dmi'
+	icon = '../assets/icons/obj/service/kitchen.dmi'
 	icon_state = "rolling_pin"
 	worn_icon_state = "rolling_pin"
 	inhand_icon_state = "rolling_pin"
@@ -282,7 +282,7 @@
 			span_notice("You scoop a spoonful into [target_mob]'s mouth.")
 		)
 
-	playsound(target_mob, 'sound/items/drink.ogg', rand(10,50), vary = TRUE)
+	playsound(target_mob, '../assets/sound/items/drink.ogg', rand(10,50), vary = TRUE)
 	reagents.trans_to(target_mob, spoon_sip_size, methods = INGEST)
 	return TRUE
 
@@ -370,7 +370,7 @@
 	/// What are we holding in our tongs?
 	var/obj/item/tonged
 	/// Sound to play when we click our tongs together
-	var/clack_sound = 'sound/items/handling/component_drop.ogg'
+	var/clack_sound = '../assets/sound/items/handling/component_drop.ogg'
 	/// Time to wait between clacking sounds
 	var/clack_delay = 2 SECONDS
 	/// Have we clacked recently?

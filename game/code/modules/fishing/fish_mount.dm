@@ -1,7 +1,7 @@
 /obj/item/wallframe/fish
 	name = "fish mount"
 	desc = "The frame of a mount for trophy fish, to show off your proudest catch."
-	icon = 'icons/obj/wallmounts.dmi'
+	icon = '../assets/icons/obj/wallmounts.dmi'
 	icon_state = "fish_mount_item"
 	result_path = /obj/structure/fish_mount
 	custom_materials = list(/datum/material/wood = SHEET_MATERIAL_AMOUNT * 2)
@@ -17,7 +17,7 @@
 /obj/structure/fish_mount
 	name = "fish mount"
 	desc = "A mount for trophy fish, to show off your proudest catch."
-	icon = 'icons/obj/wallmounts.dmi'
+	icon = '../assets/icons/obj/wallmounts.dmi'
 	icon_state = "fish_mount"
 	anchored = TRUE
 	opacity = FALSE
@@ -63,7 +63,7 @@
 	balloon_alert(user, "removing mount...")
 	if(!item.use_tool(src, user, 3 SECONDS, volume = 50))
 		return ITEM_INTERACT_BLOCKING
-	playsound(src, 'sound/items/deconstruct.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/deconstruct.ogg', 50, TRUE)
 	balloon_alert_to_viewers("fish mount removed")
 	deconstruct()
 	return ITEM_INTERACT_SUCCESS
@@ -100,7 +100,7 @@
 		return ITEM_INTERACT_BLOCKING
 	add_fish(item, catcher = user.name)
 	balloon_alert_to_viewers("fish mounted")
-	playsound(loc, 'sound/machines/click.ogg', 30, TRUE)
+	playsound(loc, '../assets/sound/machines/click.ogg', 30, TRUE)
 	return ITEM_INTERACT_SUCCESS
 
 /obj/structure/fish_mount/IsContainedAtomAccessible(atom/contained, atom/movable/user)

@@ -8,7 +8,7 @@
 	name = "Vibe"
 	desc = "Use on yourself to remove color!"
 	click_to_activate = TRUE
-	button_icon = 'icons/mob/actions/actions_minor_antag.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_minor_antag.dmi'
 	button_icon_state = "funk"
 	///cooldown to apply a new mood
 	COOLDOWN_DECLARE(change_mood)

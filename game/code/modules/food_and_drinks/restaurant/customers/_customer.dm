@@ -35,11 +35,11 @@
 	///Prefix file to uise
 	var/prefix_file = "strings/names/american_prefix.txt"
 	///Base icon for the customer
-	var/base_icon = 'icons/mob/simple/tourists.dmi'
+	var/base_icon = '../assets/icons/mob/simple/tourists.dmi'
 	///Base icon state for the customer
 	var/base_icon_state = "amerifat"
 	///Sound to use when this robot type speaks
-	var/speech_sound = 'sound/mobs/non-humanoids/tourist/tourist_talk.ogg'
+	var/speech_sound = '../assets/sound/mobs/non-humanoids/tourist/tourist_talk.ogg'
 
 	/// Is this unique once per venue?
 	var/is_unique = FALSE
@@ -161,7 +161,7 @@
 	first_warning_line = "Get your hands off of me!"
 	second_warning_line = "Do not touch me you filthy animal, last warning!"
 	self_defense_line = "I will break you like a baguette!"
-	speech_sound = 'sound/mobs/non-humanoids/tourist/tourist_talk_french.ogg'
+	speech_sound = '../assets/sound/mobs/non-humanoids/tourist/tourist_talk_french.ogg'
 	orderable_objects = list(
 		VENUE_RESTAURANT = list(
 			/obj/item/food/baguette = 20,
@@ -204,7 +204,7 @@
 	first_warning_line = "Don't touch me you pervert!"
 	second_warning_line = "I'm going to go super saiyan if you touch me again! Last warning!"
 	self_defense_line = "OMAE WA MO, SHINDEROU!"
-	speech_sound = 'sound/mobs/non-humanoids/tourist/tourist_talk_japanese1.ogg'
+	speech_sound = '../assets/sound/mobs/non-humanoids/tourist/tourist_talk_japanese1.ogg'
 	orderable_objects = list(
 		VENUE_RESTAURANT = list(
 			/datum/custom_order/icecream = 4,
@@ -232,7 +232,7 @@
 /datum/customer_data/japanese/get_overlays(mob/living/basic/robot_customer/customer)
 	//leaving and eaten
 	if(type == /datum/customer_data/japanese && customer.ai_controller.blackboard[BB_CUSTOMER_LEAVING] && customer.ai_controller.blackboard[BB_CUSTOMER_EATING])
-		return mutable_appearance('icons/effects/effects.dmi', "love_hearts", appearance_flags = RESET_COLOR|KEEP_APART)
+		return mutable_appearance('../assets/icons/effects/effects.dmi', "love_hearts", appearance_flags = RESET_COLOR|KEEP_APART)
 
 /datum/customer_data/japanese/salaryman
 	clothing_sets = list("japanese_salary")
@@ -246,7 +246,7 @@
 	first_warning_line = "Hey, only my employer gets to mess with me like that."
 	second_warning_line = "Leave me be, I'm trying to focus. Last warning!"
 	self_defense_line = "I didn't want it to end up like this."
-	speech_sound = 'sound/mobs/non-humanoids/tourist/tourist_talk_japanese2.ogg'
+	speech_sound = '../assets/sound/mobs/non-humanoids/tourist/tourist_talk_japanese2.ogg'
 	orderable_objects = list(
 		VENUE_RESTAURANT = list(
 			/datum/reagent/consumable/nutriment/soup/miso = 6,
@@ -281,7 +281,7 @@
 	second_warning_line = "Last warning! I'll destroy you!"
 	self_defense_line = "Flap attack!"
 
-	speech_sound = 'sound/mobs/non-humanoids/tourist/tourist_talk_moth.ogg'
+	speech_sound = '../assets/sound/mobs/non-humanoids/tourist/tourist_talk_moth.ogg'
 
 	orderable_objects = list(
 		VENUE_RESTAURANT = list(
@@ -317,21 +317,21 @@
 	var/list/underlays = list()
 
 	var/datum/sprite_accessory/moth_wings/wings = get_wings(customer)
-	underlays += mutable_appearance(icon = 'icons/mob/human/species/moth/moth_wings.dmi', icon_state = "m_moth_wings_[wings.icon_state]_BEHIND", appearance_flags = RESET_COLOR|KEEP_APART)
+	underlays += mutable_appearance(icon = '../assets/icons/mob/human/species/moth/moth_wings.dmi', icon_state = "m_moth_wings_[wings.icon_state]_BEHIND", appearance_flags = RESET_COLOR|KEEP_APART)
 	return underlays
 
 /datum/customer_data/moth/get_overlays(mob/living/basic/robot_customer/customer)
 	var/list/overlays = list()
 
 	var/datum/sprite_accessory/moth_wings/wings = get_wings(customer)
-	overlays += mutable_appearance(icon = 'icons/mob/human/species/moth/moth_wings.dmi', icon_state = "m_moth_wings_[wings.icon_state]_FRONT", appearance_flags = RESET_COLOR|KEEP_APART)
+	overlays += mutable_appearance(icon = '../assets/icons/mob/human/species/moth/moth_wings.dmi', icon_state = "m_moth_wings_[wings.icon_state]_FRONT", appearance_flags = RESET_COLOR|KEEP_APART)
 	overlays += mutable_appearance(icon = customer.icon, icon_state = "mothbot_jetpack", appearance_flags = RESET_COLOR|KEEP_APART)
 	return overlays
 
 /datum/customer_data/mexican
 	base_icon_state = "mexican"
 	prefix_file = "strings/names/mexican_prefix.txt"
-	speech_sound = 'sound/mobs/non-humanoids/tourist/tourist_talk_mexican.ogg'
+	speech_sound = '../assets/sound/mobs/non-humanoids/tourist/tourist_talk_mexican.ogg'
 	clothing_sets = list("mexican_poncho")
 	orderable_objects = list(
 		VENUE_RESTAURANT = list(
@@ -371,7 +371,7 @@
 /datum/customer_data/british
 	base_icon_state = "british"
 	prefix_file = "strings/names/british_prefix.txt"
-	speech_sound = 'sound/mobs/non-humanoids/tourist/tourist_talk_british.ogg'
+	speech_sound = '../assets/sound/mobs/non-humanoids/tourist/tourist_talk_british.ogg'
 
 	friendly_pull_line = "I don't enjoy being pulled around like this."
 	first_warning_line = "Our sovereign lord the Queen chargeth and commandeth all persons, being assembled, immediately to disperse themselves."
@@ -427,7 +427,7 @@
 /datum/customer_data/malfunction
 	base_icon_state = "defect"
 	prefix_file = "strings/names/malf_prefix.txt"
-	speech_sound = 'sound/effects/clang.ogg'
+	speech_sound = '../assets/sound/effects/clang.ogg'
 	clothing_sets = list("defect_wires", "defect_bad_takes")
 	is_unique = TRUE
 	orderable_objects = list(

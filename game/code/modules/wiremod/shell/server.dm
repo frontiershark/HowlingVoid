@@ -6,7 +6,7 @@
  */
 /obj/structure/server
 	name = "server"
-	icon = 'icons/obj/science/circuits.dmi'
+	icon = '../assets/icons/obj/science/circuits.dmi'
 	icon_state = "setup_stationary"
 
 	density = TRUE

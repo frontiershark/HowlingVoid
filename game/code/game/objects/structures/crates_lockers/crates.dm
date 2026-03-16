@@ -1,7 +1,7 @@
 /obj/structure/closet/crate
 	name = "crate"
 	desc = "A rectangular steel crate."
-	icon = 'icons/obj/storage/crates.dmi'
+	icon = '../assets/icons/obj/storage/crates.dmi'
 	icon_state = "crate"
 	base_icon_state = "crate"
 	req_access = null
@@ -10,8 +10,8 @@
 	allow_dense = TRUE
 	dense_when_open = TRUE
 	delivery_icon = "deliverycrate"
-	open_sound = 'sound/machines/crate/crate_open.ogg'
-	close_sound = 'sound/machines/crate/crate_close.ogg'
+	open_sound = '../assets/sound/machines/crate/crate_open.ogg'
+	close_sound = '../assets/sound/machines/crate/crate_close.ogg'
 	open_sound_volume = 35
 	close_sound_volume = 50
 	drag_slowdown = 0
@@ -28,7 +28,7 @@
 	/// The reference of the manifest paper attached to the cargo crate.
 	var/datum/weakref/manifest
 	/// Where the Icons for lids are located.
-	var/lid_icon = 'icons/obj/storage/crates.dmi'
+	var/lid_icon = '../assets/icons/obj/storage/crates.dmi'
 	/// Icon state to use for lid to display when opened. Leave undefined if there isn't one.
 	var/lid_icon_state
 	/// Controls the X value of the lid, allowing left and right pixel movement.
@@ -155,7 +155,7 @@
 		return
 	if(user)
 		to_chat(user, span_notice("You tear the manifest off of [src]."))
-	playsound(src, 'sound/items/poster/poster_ripped.ogg', 75, TRUE)
+	playsound(src, '../assets/sound/items/poster/poster_ripped.ogg', 75, TRUE)
 
 	our_manifest.forceMove(drop_location(src))
 	if(ishuman(user))
@@ -176,8 +176,8 @@
 	max_integrity = 70
 	material_drop = /obj/item/stack/sheet/mineral/wood
 	material_drop_amount = 5
-	open_sound = 'sound/machines/closet/wooden_closet_open.ogg'
-	close_sound = 'sound/machines/closet/wooden_closet_close.ogg'
+	open_sound = '../assets/sound/machines/closet/wooden_closet_open.ogg'
+	close_sound = '../assets/sound/machines/closet/wooden_closet_close.ogg'
 	open_sound_volume = 25
 	close_sound_volume = 50
 	can_install_electronics = FALSE

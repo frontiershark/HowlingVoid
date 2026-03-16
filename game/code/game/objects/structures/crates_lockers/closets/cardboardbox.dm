@@ -13,8 +13,8 @@
 	custom_materials = list(/datum/material/cardboard = SHEET_MATERIAL_AMOUNT * 4)
 	delivery_icon = "deliverybox"
 	anchorable = FALSE
-	open_sound = 'sound/machines/cardboard_box.ogg'
-	close_sound = 'sound/machines/cardboard_box.ogg'
+	open_sound = '../assets/sound/machines/cardboard_box.ogg'
+	close_sound = '../assets/sound/machines/cardboard_box.ogg'
 	open_sound_volume = 35
 	close_sound_volume = 35
 	has_closed_overlay = FALSE
@@ -88,11 +88,11 @@
 		alerted_mob.do_alert_animation()
 
 	alerted.Cut()
-	playsound(loc, 'sound/machines/chime.ogg', 50, FALSE, -5)
+	playsound(loc, '../assets/sound/machines/chime.ogg', 50, FALSE, -5)
 
 /// Does the MGS ! animation
 /atom/proc/do_alert_animation()
-	var/mutable_appearance/alert = mutable_appearance('icons/obj/storage/closet.dmi', "cardboard_special")
+	var/mutable_appearance/alert = mutable_appearance('../assets/icons/obj/storage/closet.dmi', "cardboard_special")
 	SET_PLANE_EXPLICIT(alert, ABOVE_LIGHTING_PLANE, src)
 	var/atom/movable/flick_visual/exclamation = flick_overlay_view(alert, 1 SECONDS)
 	exclamation.alpha = 0
@@ -116,8 +116,8 @@
 	resistance_flags = NONE
 	move_speed_multiplier = 2
 	cutting_tool = /obj/item/weldingtool
-	open_sound = 'sound/machines/crate/crate_open.ogg'
-	close_sound = 'sound/machines/crate/crate_close.ogg'
+	open_sound = '../assets/sound/machines/crate/crate_open.ogg'
+	close_sound = '../assets/sound/machines/crate/crate_close.ogg'
 	open_sound_volume = 35
 	close_sound_volume = 50
 	custom_materials = list(/datum/material/alloy/plasteel = SHEET_MATERIAL_AMOUNT * 4)

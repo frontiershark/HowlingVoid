@@ -40,50 +40,50 @@
 
 		var/icon_file //checks against all the default icon locations if one isn't defined.
 		if(cached_slot_flags & ITEM_SLOT_BACK)
-			icon_file = 'icons/mob/clothing/back.dmi'
+			icon_file = '../assets/icons/mob/clothing/back.dmi'
 
 			if(!(icon_state in icon_states(icon_file, 1)))
 				already_warned_icons += icon_state
 				TEST_FAIL("[item_path] using invalid [worn_icon_state ? "worn_icon_state" : "icon_state"], \"[icon_state]\" in '[icon_file]'[match_message]")
 
 		if(cached_slot_flags & ITEM_SLOT_ID)
-			icon_file = 'icons/mob/clothing/id.dmi'
+			icon_file = '../assets/icons/mob/clothing/id.dmi'
 			if(!(icon_state in icon_states(icon_file, 1)))
 				already_warned_icons += icon_state
 				TEST_FAIL("[item_path] using invalid [worn_icon_state ? "worn_icon_state" : "icon_state"], \"[icon_state]\" in '[icon_file]'[match_message]")
 
 		if(cached_slot_flags & ITEM_SLOT_GLOVES)
-			icon_file = 'icons/mob/clothing/hands.dmi'
+			icon_file = '../assets/icons/mob/clothing/hands.dmi'
 			if(!(icon_state in icon_states(icon_file, 1)))
 				already_warned_icons += icon_state
 				TEST_FAIL("[item_path] using invalid [worn_icon_state ? "worn_icon_state" : "icon_state"], \"[icon_state]\" in '[icon_file]'[match_message]")
 
 		if(cached_slot_flags & ITEM_SLOT_EYES)
-			icon_file = 'icons/mob/clothing/eyes.dmi'
+			icon_file = '../assets/icons/mob/clothing/eyes.dmi'
 			if(!(icon_state in icon_states(icon_file, 1)))
 				already_warned_icons += icon_state
 				TEST_FAIL("[item_path] using invalid [worn_icon_state ? "worn_icon_state" : "icon_state"], \"[icon_state]\" in '[icon_file]'[match_message]")
 
 		if(cached_slot_flags & ITEM_SLOT_EARS)
-			icon_file = 'icons/mob/clothing/ears.dmi'
+			icon_file = '../assets/icons/mob/clothing/ears.dmi'
 			if(!(icon_state in icon_states(icon_file, 1)))
 				already_warned_icons += icon_state
 				TEST_FAIL("[item_path] using invalid [worn_icon_state ? "worn_icon_state" : "icon_state"], \"[icon_state]\" in '[icon_file]'[match_message]")
 
 		if(cached_slot_flags & ITEM_SLOT_NECK)
-			icon_file = 'icons/mob/clothing/neck.dmi'
+			icon_file = '../assets/icons/mob/clothing/neck.dmi'
 			if(!(icon_state in icon_states(icon_file, 1)))
 				already_warned_icons += icon_state
 				TEST_FAIL("[item_path] using invalid [worn_icon_state ? "worn_icon_state" : "icon_state"], \"[icon_state]\" in '[icon_file]'[match_message]")
 
 		if(cached_slot_flags & ITEM_SLOT_MASK)
-			icon_file = 'icons/mob/clothing/mask.dmi'
+			icon_file = '../assets/icons/mob/clothing/mask.dmi'
 			if(!(icon_state in icon_states(icon_file, 1)))
 				already_warned_icons += icon_state
 				TEST_FAIL("[item_path] using invalid [worn_icon_state ? "worn_icon_state" : "icon_state"], \"[icon_state]\" in '[icon_file]'[match_message]")
 
 		if(cached_slot_flags & ITEM_SLOT_BELT)
-			icon_file = 'icons/mob/clothing/belt.dmi'
+			icon_file = '../assets/icons/mob/clothing/belt.dmi'
 			if(!(icon_state in icon_states(icon_file, 1)))
 				already_warned_icons += icon_state
 				TEST_FAIL("[item_path] using invalid [worn_icon_state ? "worn_icon_state" : "icon_state"], \"[icon_state]\" in '[icon_file]'[match_message]")

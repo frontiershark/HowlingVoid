@@ -3,7 +3,7 @@
 	name = "legion tumour"
 	desc = "A mass of pulsing flesh and dark tendrils, containing the power to regenerate flesh at a terrible cost."
 	failing_desc = "pulses and writhes with horrible life, reaching towards you with its tendrils!"
-	icon = 'icons/obj/medical/organs/mining_organs.dmi'
+	icon = '../assets/icons/obj/medical/organs/mining_organs.dmi'
 	icon_state = "legion_remains"
 	zone = BODY_ZONE_CHEST
 	slot = ORGAN_SLOT_PARASITE_EGG
@@ -21,10 +21,10 @@
 	var/spawn_type = /mob/living/basic/mining/legion
 	/// Spooky sounds to play as you start to turn
 	var/static/list/spooky_sounds = list(
-		'sound/mobs/non-humanoids/hiss/lowHiss1.ogg',
-		'sound/mobs/non-humanoids/hiss/lowHiss2.ogg',
-		'sound/mobs/non-humanoids/hiss/lowHiss3.ogg',
-		'sound/mobs/non-humanoids/hiss/lowHiss4.ogg',
+		'../assets/sound/mobs/non-humanoids/hiss/lowHiss1.ogg',
+		'../assets/sound/mobs/non-humanoids/hiss/lowHiss2.ogg',
+		'../assets/sound/mobs/non-humanoids/hiss/lowHiss3.ogg',
+		'../assets/sound/mobs/non-humanoids/hiss/lowHiss4.ogg',
 	)
 
 /obj/item/organ/legion_tumour/Initialize(mapload)
@@ -113,7 +113,7 @@
 				to_chat(owner, span_danger("Something flexes under your skin."))
 			if(SPT_PROB(2, seconds_per_tick))
 				if (prob(40))
-					SEND_SOUND(owner, sound('sound/music/antag/bloodcult/ghost_whisper.ogg'))
+					SEND_SOUND(owner, sound('../assets/sound/music/antag/bloodcult/ghost_whisper.ogg'))
 				else
 					SEND_SOUND(owner, sound(pick(spooky_sounds)))
 			if(SPT_PROB(3, seconds_per_tick))

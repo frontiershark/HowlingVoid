@@ -14,7 +14,7 @@
 	potency = 50
 	instability = 15
 	growthstages = 3
-	growing_icon = 'icons/obj/service/hydroponics/growing.dmi'
+	growing_icon = '../assets/icons/obj/service/hydroponics/growing.dmi'
 	icon_dead = "cotton-dead"
 	mutatelist = list(/obj/item/seeds/cotton/durathread)
 
@@ -59,7 +59,7 @@
 	yield = 2
 	potency = 50
 	growthstages = 3
-	growing_icon = 'icons/obj/service/hydroponics/growing.dmi'
+	growing_icon = '../assets/icons/obj/service/hydroponics/growing.dmi'
 	icon_dead = "cotton-dead"
 	mutatelist = null
 

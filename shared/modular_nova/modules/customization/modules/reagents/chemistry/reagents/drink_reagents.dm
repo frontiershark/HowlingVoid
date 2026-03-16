@@ -74,7 +74,7 @@
 
 /datum/glass_style/drinking_glass/beerbatter
 	required_drink_type = /datum/reagent/consumable/ethanol/beerbatter
-	icon = 'icons/obj/drinks/shakes.dmi'
+	icon = '../assets/icons/obj/drinks/shakes.dmi'
 	icon_state = "chocolatepudding"
 	name = "glass of beer batter"
 	desc = "Used in cooking, pure cholesterol, Scottish people eat it."

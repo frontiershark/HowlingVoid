@@ -102,7 +102,7 @@
 
 		// Not enough charges - warn and eject if needed
 		visible_message(span_warning("[src] emits a low power warning!"))
-		playsound(src, 'sound/items/weapons/gun/general/empty_alarm.ogg', 40, TRUE)
+		playsound(src, '../assets/sound/items/weapons/gun/general/empty_alarm.ogg', 40, TRUE)
 		if(casing_ejector || !from_firing)
 			casing.forceMove(drop_location())
 			if(!QDELETED(casing))
@@ -162,7 +162,7 @@
 	var/obj/item/ammo_casing/pulse/casing = chambered
 	if(istype(casing) && casing.remaining_uses < shots_per_fire)
 		visible_message(span_warning("[src] emits a low power warning!"))
-		playsound(src, 'sound/items/weapons/gun/general/empty_alarm.ogg', 40, TRUE)
+		playsound(src, '../assets/sound/items/weapons/gun/general/empty_alarm.ogg', 40, TRUE)
 		return
 	..()
 

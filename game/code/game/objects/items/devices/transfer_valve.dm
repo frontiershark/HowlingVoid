@@ -1,12 +1,12 @@
 /obj/item/transfer_valve
-	icon = 'icons/obj/devices/assemblies.dmi'
+	icon = '../assets/icons/obj/devices/assemblies.dmi'
 	name = "tank transfer valve"
 	icon_state = "valve_1"
 	base_icon_state = "valve"
 	inhand_icon_state = "ttv"
-	lefthand_file = 'icons/mob/inhands/weapons/bombs_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/bombs_righthand.dmi'
-	worn_icon = 'icons/mob/clothing/back/backpack.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/bombs_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/bombs_righthand.dmi'
+	worn_icon = '../assets/icons/mob/clothing/back/backpack.dmi'
 	worn_icon_state = "ttv"
 	desc = "Regulates the transfer of air between two tanks."
 	w_class = WEIGHT_CLASS_BULKY
@@ -268,7 +268,7 @@
 	it explodes properly when it gets a signal (and it does).
 */
 /obj/item/transfer_valve/proc/toggle_valve(obj/item/tank/target, change_volume = TRUE)
-	playsound(src, 'sound/effects/valve_opening.ogg', 50)
+	playsound(src, '../assets/sound/effects/valve_opening.ogg', 50)
 	if(!valve_open && tank_one && tank_two)
 		var/turf/bombturf = get_turf(src)
 

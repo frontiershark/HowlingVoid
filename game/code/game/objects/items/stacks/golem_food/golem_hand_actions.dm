@@ -7,10 +7,10 @@
 /obj/item/gibtonite_hand
 	name = "stabilised gibtonite fist"
 	desc = "You had better launch this at something before it comes out the other end of your body."
-	icon = 'icons/obj/ore.dmi'
+	icon = '../assets/icons/obj/ore.dmi'
 	icon_state = "Gibtonite ore"
-	lefthand_file = 'icons/mob/inhands/golem_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/golem_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/golem_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/golem_righthand.dmi'
 	inhand_icon_state = "gibtonite_hand"
 	item_flags = ABSTRACT
 	w_class = WEIGHT_CLASS_HUGE
@@ -35,7 +35,7 @@
 		qdel(src)
 		return ITEM_INTERACT_BLOCKING
 
-	playsound(src, 'sound/items/weapons/sonic_jackhammer.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/weapons/sonic_jackhammer.ogg', 50, TRUE)
 	held_gibtonite.forceMove(get_turf(src))
 	held_gibtonite.det_time = 2 SECONDS
 	held_gibtonite.GibtoniteReaction(user, "A [src] has targeted [interacting_with] with a thrown and primed")
@@ -59,10 +59,10 @@
 /obj/item/bluespace_finger
 	name = "bluespace knot"
 	desc = "Firmly grasp reality and pull yourself to a nearby location."
-	icon = 'icons/obj/weapons/guns/projectiles.dmi'
+	icon = '../assets/icons/obj/weapons/guns/projectiles.dmi'
 	icon_state = "bluespace"
-	lefthand_file = 'icons/mob/inhands/golem_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/golem_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/golem_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/golem_righthand.dmi'
 	inhand_icon_state = "bluespace_hand"
 	item_flags = ABSTRACT | DROPDEL
 	/// How far away can you point?
@@ -104,7 +104,7 @@
 	var/turf/final_destination = pick(valid_landing_tiles)
 	for (var/mob/living/telefrag in final_destination)
 		telefrag.Knockdown(2 SECONDS)
-	do_teleport(user, final_destination, asoundin = 'sound/effects/phasein.ogg', no_effects = TRUE)
+	do_teleport(user, final_destination, asoundin = '../assets/sound/effects/phasein.ogg', no_effects = TRUE)
 	qdel(src)
 	return ITEM_INTERACT_SUCCESS
 

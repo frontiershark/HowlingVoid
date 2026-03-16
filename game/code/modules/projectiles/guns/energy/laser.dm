@@ -24,7 +24,7 @@
 
 /obj/item/gun/energy/laser/add_seclight_point()
 	AddComponent(/datum/component/seclite_attachable, \
-		light_overlay_icon = 'icons/obj/weapons/guns/flashlights.dmi', \
+		light_overlay_icon = '../assets/icons/obj/weapons/guns/flashlights.dmi', \
 		light_overlay = "flight", \
 		overlay_x = 18, \
 		overlay_y = 12)
@@ -46,7 +46,7 @@
 	name = "\improper Type 5/A assault laser rifle"
 	desc = "The Type 5 Heat Delivery System, Assault Variant, developed by Nanotrasen. The workhorse of Nanotrasen's security forces and paramilitary organizations. \
 		While it sacrifices some stopping power and ease of use, its laser system is remarkably efficient and it boasts some resistance against electromagnetic interference."
-	icon = 'icons/obj/weapons/guns/wide_guns.dmi'
+	icon = '../assets/icons/obj/weapons/guns/wide_guns.dmi'
 	icon_state = "assault_laser"
 	inhand_icon_state = "assault_laser"
 	worn_icon_state = "assault_laser"
@@ -61,7 +61,7 @@
 
 /obj/item/gun/energy/laser/assault/add_seclight_point()
 	AddComponent(/datum/component/seclite_attachable, \
-		light_overlay_icon = 'icons/obj/weapons/guns/flashlights.dmi', \
+		light_overlay_icon = '../assets/icons/obj/weapons/guns/flashlights.dmi', \
 		light_overlay = "flight", \
 		overlay_x = 18, \
 		overlay_y = 30)
@@ -206,7 +206,7 @@
 
 /obj/item/gun/energy/laser/scatter/shotty
 	name = "energy shotgun"
-	icon = 'icons/obj/weapons/guns/ballistic.dmi'
+	icon = '../assets/icons/obj/weapons/guns/ballistic.dmi'
 	icon_state = "cshotgun"
 	inhand_icon_state = "shotgun"
 	desc = "A combat shotgun gutted and refitted with an internal energy emission system. Can switch between scattered disabler shots and taser electrodes."

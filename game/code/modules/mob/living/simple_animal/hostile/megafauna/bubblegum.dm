@@ -34,14 +34,14 @@ Difficulty: Hard
 	maxHealth = 2500
 	attack_verb_continuous = "rends"
 	attack_verb_simple = "rend"
-	attack_sound = 'sound/effects/magic/demon_attack1.ogg'
+	attack_sound = '../assets/sound/effects/magic/demon_attack1.ogg'
 	icon_state = "bubblegum"
 	icon_living = "bubblegum"
 	icon_dead = ""
 	health_doll_icon = "bubblegum"
 	friendly_verb_continuous = "stares down"
 	friendly_verb_simple = "stare down"
-	icon = 'icons/mob/simple/lavaland/96x96megafauna.dmi'
+	icon = '../assets/icons/mob/simple/lavaland/96x96megafauna.dmi'
 	speak_emote = list("gurgles")
 	armour_penetration = 40
 	melee_damage_lower = 40
@@ -67,7 +67,7 @@ Difficulty: Hard
 	crusher_achievement_type = /datum/award/achievement/boss/bubblegum_crusher
 	score_achievement_type = /datum/award/score/bubblegum_score
 	death_message = "sinks into a pool of blood, fleeing the battle. You've won, for now... "
-	death_sound = 'sound/effects/magic/enter_blood.ogg'
+	death_sound = '../assets/sound/effects/magic/enter_blood.ogg'
 	faction = list(FACTION_MINING, FACTION_BOSS, FACTION_HELL)
 	summon_line = "GRAAAAAAAHHHHHHHHH!"
 	/// Check to see if we should spawn blood
@@ -103,7 +103,7 @@ Difficulty: Hard
 	if(spawn_blood)
 		AddComponent(/datum/component/blood_walk, \
 			blood_type = /obj/effect/decal/cleanable/blood/bubblegum, \
-			sound_played = 'sound/effects/meteorimpact.ogg', \
+			sound_played = '../assets/sound/effects/meteorimpact.ogg', \
 			sound_volume = 200)
 
 /mob/living/simple_animal/hostile/megafauna/bubblegum/Destroy()
@@ -222,10 +222,10 @@ Difficulty: Hard
 		if(!faction_check_atom(L))
 			if(L.stat != CONSCIOUS)
 				to_chat(L, span_userdanger("[src] drags you through the blood!"))
-				playsound(T, 'sound/effects/magic/enter_blood.ogg', 100, TRUE, -1)
+				playsound(T, '../assets/sound/effects/magic/enter_blood.ogg', 100, TRUE, -1)
 				var/turf/targetturf = get_step(src, dir)
 				L.forceMove(targetturf)
-				playsound(targetturf, 'sound/effects/magic/exit_blood.ogg', 100, TRUE, -1)
+				playsound(targetturf, '../assets/sound/effects/magic/exit_blood.ogg', 100, TRUE, -1)
 				addtimer(CALLBACK(src, PROC_REF(devour), L), 0.2 SECONDS)
 	SLEEP_CHECK_DEATH(1, src)
 
@@ -328,7 +328,7 @@ Difficulty: Hard
 	crusher_achievement_type = null
 	score_achievement_type = null
 	death_message = "Explodes into a pool of blood!"
-	death_sound = 'sound/effects/splat.ogg'
+	death_sound = '../assets/sound/effects/splat.ogg'
 	true_spawn = FALSE
 	var/move_through_mob
 
@@ -375,7 +375,7 @@ Difficulty: Hard
 	duration = 10
 
 /obj/effect/temp_visual/bubblegum_hands
-	icon = 'icons/effects/bubblegum.dmi'
+	icon = '../assets/icons/effects/bubblegum.dmi'
 	duration = 9
 
 /obj/effect/temp_visual/bubblegum_hands/rightthumb

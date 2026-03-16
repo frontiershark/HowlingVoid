@@ -64,7 +64,7 @@
 		blind_message = span_hear("You hear squeezing."),
 	)
 
-	playsound(user, 'sound/effects/footstep/gib_step.ogg', vol = 50, vary = TRUE, ignore_walls = FALSE)
+	playsound(user, '../assets/sound/effects/footstep/gib_step.ogg', vol = 50, vary = TRUE, ignore_walls = FALSE)
 
 	if (!do_after(user, slide_in_delay, door, extra_checks = CALLBACK(src, PROC_REF(can_slide_under_door), user, door)))
 		return
@@ -100,7 +100,7 @@
 		blind_message = span_hear("You hear a pop."),
 	)
 
-	playsound(user, 'sound/effects/meatslap.ogg', vol = 50, vary = TRUE, ignore_walls = FALSE)
+	playsound(user, '../assets/sound/effects/meatslap.ogg', vol = 50, vary = TRUE, ignore_walls = FALSE)
 
 	user.forceMove(door)
 
@@ -119,7 +119,7 @@
 			ignored_mobs = current_user,
 		)
 
-		playsound(visible_turf, 'sound/effects/footstep/gib_step.ogg', vol = 50, vary = TRUE, ignore_walls = FALSE)
+		playsound(visible_turf, '../assets/sound/effects/footstep/gib_step.ogg', vol = 50, vary = TRUE, ignore_walls = FALSE)
 
 	to_chat(current_user, span_notice("You start sliding out from under \the [current_door]."))
 
@@ -146,7 +146,7 @@
 		blind_message = span_hear("You hear a pop."),
 	)
 
-	playsound(user, 'sound/effects/meatslap.ogg', vol = 50, vary = TRUE, ignore_walls = FALSE)
+	playsound(user, '../assets/sound/effects/meatslap.ogg', vol = 50, vary = TRUE, ignore_walls = FALSE)
 
 /datum/component/slide_under_doors/proc/register_user_and_door(mob/living/user, obj/machinery/door/door)
 	ADD_TRAIT(user, TRAIT_INCAPACITATED, UNDER_DOOR_TRAIT)

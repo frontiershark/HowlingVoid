@@ -3,7 +3,7 @@
 /obj/item/food/bread
 	name = "bread?"
 	desc = "You shouldn't see this, call the coders."
-	icon = 'icons/obj/food/burgerbread.dmi'
+	icon = '../assets/icons/obj/food/burgerbread.dmi'
 	abstract_type = /obj/item/food/bread
 	max_volume = 80
 	tastes = list("bread" = 10)
@@ -29,7 +29,7 @@
 /obj/item/food/breadslice
 	name = "breadslice?"
 	desc = "You shouldn't see this, call the coders."
-	icon = 'icons/obj/food/burgerbread.dmi'
+	icon = '../assets/icons/obj/food/burgerbread.dmi'
 	abstract_type = /obj/item/food/breadslice
 	foodtypes = GRAIN
 	food_flags = FOOD_FINGER_FOOD
@@ -341,7 +341,7 @@
 /obj/item/food/baguette
 	name = "baguette"
 	desc = "Bon appetit!"
-	icon = 'icons/obj/food/burgerbread.dmi'
+	icon = '../assets/icons/obj/food/burgerbread.dmi'
 	icon_state = "baguette"
 	inhand_icon_state = null
 	worn_icon_state = "baguette"
@@ -393,7 +393,7 @@
 	ADD_TRAIT(src, TRAIT_CUSTOM_TAP_SOUND, SWORDPLAY_TRAIT)
 	attack_verb_continuous = list("slashes", "cuts")
 	attack_verb_simple = list("slash", "cut")
-	hitsound = 'sound/items/weapons/rapierhit.ogg'
+	hitsound = '../assets/sound/items/weapons/rapierhit.ogg'
 	fake_swordplay = TRUE
 
 	RegisterSignal(src, COMSIG_ITEM_EQUIPPED, PROC_REF(on_sword_equipped))
@@ -427,7 +427,7 @@
 
 /// Deadly bread used by a mime
 /obj/item/food/baguette/combat
-	block_sound = 'sound/items/weapons/parry.ogg'
+	block_sound = '../assets/sound/items/weapons/parry.ogg'
 	sharpness = SHARP_EDGED
 	icon_angle = -45
 	/// Force when wielded as a sword by a mime
@@ -448,7 +448,7 @@
 /obj/item/food/garlicbread
 	name = "garlic bread"
 	desc = "Alas, it is limited."
-	icon = 'icons/obj/food/burgerbread.dmi'
+	icon = '../assets/icons/obj/food/burgerbread.dmi'
 	icon_state = "garlicbread"
 	inhand_icon_state = null
 	food_reagents = list(
@@ -465,7 +465,7 @@
 /obj/item/food/butterbiscuit
 	name = "butter biscuit"
 	desc = "Well butter my biscuit!"
-	icon = 'icons/obj/food/food.dmi'
+	icon = '../assets/icons/obj/food/food.dmi'
 	icon_state = "butterbiscuit"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 6,
@@ -480,7 +480,7 @@
 /obj/item/food/butterdog
 	name = "butterdog"
 	desc = "Made from exotic butters."
-	icon = 'icons/obj/food/food.dmi'
+	icon = '../assets/icons/obj/food/food.dmi'
 	icon_state = "butterdog"
 	bite_consumption = 1
 	food_reagents = list(
@@ -500,7 +500,7 @@
 /obj/item/food/raw_frenchtoast
 	name = "raw french toast"
 	desc = "A slice of bread soaked in a beaten egg mixture. Put it on a griddle to start cooking!"
-	icon = 'icons/obj/food/burgerbread.dmi'
+	icon = '../assets/icons/obj/food/burgerbread.dmi'
 	icon_state = "raw_frenchtoast"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 10,
@@ -517,7 +517,7 @@
 /obj/item/food/frenchtoast
 	name = "french toast"
 	desc = "A slice of bread soaked in an egg mixture and grilled until golden-brown. Drizzle with syrup!"
-	icon = 'icons/obj/food/burgerbread.dmi'
+	icon = '../assets/icons/obj/food/burgerbread.dmi'
 	icon_state = "frenchtoast"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 10,
@@ -531,7 +531,7 @@
 /obj/item/food/raw_breadstick
 	name = "raw breadstick"
 	desc = "An uncooked strip of dough in the shape of a breadstick."
-	icon = 'icons/obj/food/burgerbread.dmi'
+	icon = '../assets/icons/obj/food/burgerbread.dmi'
 	icon_state = "raw_breadstick"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 4,
@@ -548,7 +548,7 @@
 /obj/item/food/breadstick
 	name = "breadstick"
 	desc = "A delicious, buttery breadstick. Highly addictive, but oh-so worth it."
-	icon = 'icons/obj/food/burgerbread.dmi'
+	icon = '../assets/icons/obj/food/burgerbread.dmi'
 	icon_state = "breadstick"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 4,
@@ -562,7 +562,7 @@
 /obj/item/food/raw_croissant
 	name = "raw croissant"
 	desc = "Folded dough ready to bake into a croissant."
-	icon = 'icons/obj/food/burgerbread.dmi'
+	icon = '../assets/icons/obj/food/burgerbread.dmi'
 	icon_state = "raw_croissant"
 	food_reagents = list(/datum/reagent/consumable/nutriment = 4, /datum/reagent/consumable/nutriment/vitamin = 2)
 	tastes = list("raw dough" = 1)
@@ -576,7 +576,7 @@
 /obj/item/food/croissant
 	name = "croissant"
 	desc = "A delicious, buttery croissant. The perfect start to the day."
-	icon = 'icons/obj/food/burgerbread.dmi'
+	icon = '../assets/icons/obj/food/burgerbread.dmi'
 	icon_state = "croissant"
 	food_reagents = list(/datum/reagent/consumable/nutriment = 4, /datum/reagent/consumable/nutriment/vitamin = 2)
 	tastes = list("fluffy bread" = 1, "butter" = 2)

@@ -49,7 +49,7 @@
 	icon_state = "naval_fleet_admiral"
 
 /obj/item/clothing/head/hats/caphat/naval/custom
-	icon = 'icons/map_icons/clothing/head/_head.dmi'
+	icon = '../assets/icons/map_icons/clothing/head/_head.dmi'
 	icon_state = "/obj/item/clothing/head/hats/caphat/naval/custom"
 	post_init_icon_state = "naval_silver"
 	greyscale_config = /datum/greyscale_config/naval
@@ -59,7 +59,7 @@
 	armor_type = /datum/armor/none
 
 /obj/item/clothing/head/hats/caphat/naval/custom/gold
-	icon = 'icons/map_icons/clothing/head/_head.dmi'
+	icon = '../assets/icons/map_icons/clothing/head/_head.dmi'
 	icon_state = "/obj/item/clothing/head/hats/caphat/naval/custom/gold"
 	post_init_icon_state = "naval_gold"
 	greyscale_config = /datum/greyscale_config/naval_gold
@@ -110,6 +110,6 @@
 /obj/item/clothing/glasses/hud/security/sunglasses/black
 	name = "black security sunglasses"
 	desc = "A pair of black sunglasses worn by Naval Command officers."
-	icon = 'icons/obj/clothing/glasses.dmi'
-	worn_icon = 'icons/mob/clothing/eyes.dmi'
+	icon = '../assets/icons/obj/clothing/glasses.dmi'
+	worn_icon = '../assets/icons/mob/clothing/eyes.dmi'
 	icon_state = "sun"

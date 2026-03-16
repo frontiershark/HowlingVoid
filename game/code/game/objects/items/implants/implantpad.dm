@@ -1,12 +1,12 @@
 /obj/item/implantpad
 	name = "implant pad"
 	desc = "Used to modify implants."
-	icon = 'icons/obj/devices/tool.dmi' //NOVA EDIT - ICON OVERRIDDEN IN AESTHETICS MODULE
+	icon = '../assets/icons/obj/devices/tool.dmi' //NOVA EDIT - ICON OVERRIDDEN IN AESTHETICS MODULE
 	icon_state = "implantpad-0"
 	base_icon_state = "implantpad"
 	inhand_icon_state = "electronic"
-	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/devices_righthand.dmi'
 	throw_speed = 3
 	throw_range = 5
 	w_class = WEIGHT_CLASS_SMALL

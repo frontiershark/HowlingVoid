@@ -6,7 +6,7 @@
  * unless you want to!
  */
 /turf/open/floor/catwalk_floor	//the base type, meant to look like a maintenance panel
-	icon = 'icons/turf/floors/catwalk_plating.dmi'
+	icon = '../assets/icons/turf/floors/catwalk_plating.dmi'
 	icon_state = "maint_above"
 	name = "catwalk floor"
 	desc = "Flooring that shows its contents underneath. Engineers love it!"

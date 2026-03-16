@@ -133,11 +133,11 @@
 				source = src,
 				header = "Tick Tick Tick...",
 				notify_flags = NOTIFY_CATEGORY_NOFLASH,
-				ghost_sound = 'sound/machines/warning-buzzer.ogg',
+				ghost_sound = '../assets/sound/machines/warning-buzzer.ogg',
 				notify_volume = 75,
 			)
 
-	playsound(loc, 'sound/items/timer.ogg', 30, FALSE)
+	playsound(loc, '../assets/sound/items/timer.ogg', 30, FALSE)
 	if(!panic_beep_sound)
 		sleep(delay * 0.25)
 	if(imp_in && !imp_in.stat && !no_paralyze)
@@ -148,14 +148,14 @@
 		for(var/index in 1 to 3) // Total of 4 bomb beeps, and we've already beeped once
 			//for extra spice
 			var/beep_volume = 30 + (5 * index)
-			playsound(loc, 'sound/items/timer.ogg', beep_volume, vary = FALSE)
+			playsound(loc, '../assets/sound/items/timer.ogg', beep_volume, vary = FALSE)
 			sleep(delay * 0.25)
 		explode()
 	else
 		addtimer(CALLBACK(src, PROC_REF(explode)), delay)
 		while(delay > 1) //so we dont accidentally enter an infinite sleep
 			var/beep_volume = 35
-			playsound(loc, 'sound/items/timer.ogg', beep_volume, vary = FALSE)
+			playsound(loc, '../assets/sound/items/timer.ogg', beep_volume, vary = FALSE)
 			sleep(delay * 0.2)
 			delay -= delay * 0.2
 			beep_volume += 5

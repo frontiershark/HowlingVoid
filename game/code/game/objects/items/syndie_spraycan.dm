@@ -4,12 +4,12 @@
 /obj/item/traitor_spraycan
 	name = "seditious spraycan"
 	desc = "This spraycan deploys a subversive pattern containing subliminal priming agents over a 3x3 area. Contains enough primer for just one final coating."
-	icon = 'icons/obj/art/crayons.dmi'
+	icon = '../assets/icons/obj/art/crayons.dmi'
 	icon_state = "deathcan"
 	worn_icon_state = "spraycan"
 	inhand_icon_state = "spraycan"
-	lefthand_file = 'icons/mob/inhands/equipment/hydroponics_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/hydroponics_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/hydroponics_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/hydroponics_righthand.dmi'
 	w_class = WEIGHT_CLASS_SMALL
 	var/paint_color = "#780000"
 	var/static/list/no_draw_turfs = typecacheof(list(/turf/open/space, /turf/open/openspace, /turf/open/lava, /turf/open/chasm))
@@ -90,7 +90,7 @@
 		drawing_rune = FALSE
 		return FALSE
 
-	playsound(src, 'sound/effects/spray.ogg', 5, TRUE, 5)
+	playsound(src, '../assets/sound/effects/spray.ogg', 5, TRUE, 5)
 	drawing_rune = FALSE
 	return TRUE
 
@@ -142,7 +142,7 @@
 	var/mob/living/carbon/human/suicider = user
 	user.visible_message(span_suicide("[user] shakes up [src] with a rattle and lifts it to [user.p_their()] mouth, spraying paint across [user.p_their()] teeth!"))
 	user.say("WITNESS ME!!", forced="spraycan suicide")
-	playsound(src, 'sound/effects/spray.ogg', 5, TRUE, 5)
+	playsound(src, '../assets/sound/effects/spray.ogg', 5, TRUE, 5)
 	suicider.AddComponent(/datum/component/face_decal, "spray", EXTERNAL_ADJACENT, paint_color)
 	return OXYLOSS
 
@@ -156,7 +156,7 @@
 /obj/effect/decal/cleanable/traitor_rune
 	name = "syndicate graffiti"
 	desc = "It looks like it's going to be... the Syndicate logo?"
-	icon = 'icons/effects/96x96.dmi'
+	icon = '../assets/icons/effects/96x96.dmi'
 	icon_state = "traitor_rune_outline"
 	pixel_x = -32
 	pixel_y = -32

@@ -5,8 +5,8 @@
 	icon_state = "RPED"
 	inhand_icon_state = "RPED"
 	worn_icon_state = "RPED"
-	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/devices_righthand.dmi'
 	w_class = WEIGHT_CLASS_HUGE
 	storage_type = /datum/storage/rped
 
@@ -26,7 +26,7 @@
 
 ///Plays the sound & flick animation for RPED exhanging or installing parts.
 /obj/item/storage/part_replacer/proc/play_rped_effect()
-	playsound(src, 'sound/items/tools/rped.ogg', 40, TRUE)
+	playsound(src, '../assets/sound/items/tools/rped.ogg', 40, TRUE)
 	flick("[icon_state]_active", src)
 
 /**
@@ -75,9 +75,9 @@
 
 /obj/item/storage/part_replacer/bluespace/play_rped_effect()
 	if(prob(1))
-		playsound(src, 'sound/items/pshoom/pshoom_2.ogg', 40, TRUE)
+		playsound(src, '../assets/sound/items/pshoom/pshoom_2.ogg', 40, TRUE)
 	else
-		playsound(src, 'sound/items/pshoom/pshoom.ogg', 40, TRUE)
+		playsound(src, '../assets/sound/items/pshoom/pshoom.ogg', 40, TRUE)
 	flick("[icon_state]_active", src)
 
 /**
@@ -166,8 +166,8 @@
 	desc = "Special mechanical module made to store, sort, and apply standard machine parts. This one has an extra large compartment for more parts."
 	icon_state = "borgrped"
 	inhand_icon_state = "RPED"
-	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/devices_righthand.dmi'
 	storage_type = /datum/storage/rped/bluespace
 
 /obj/item/storage/part_replacer/cyborg/small

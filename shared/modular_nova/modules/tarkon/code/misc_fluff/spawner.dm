@@ -3,7 +3,7 @@
 /obj/effect/mob_spawn/ghost_role/human/tarkon
 	name = "Port Tarkon Crew Member"
 	prompt_name = "a port deck worker"
-	icon = 'icons/obj/machines/sleeper.dmi'
+	icon = '../assets/icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
 	you_are_text = "You are a member of Tarkon Industries, recently assigned to a recently recovered asset known as Port Tarkon. Your supervisors are the Ensign and Site Director."
 	flavour_text = "On the recently reclaimed Port Tarkon, You are tasked to help finish construction and carry on any tasks given by the site director. It may be best to look at your departmental noteboard."
@@ -171,7 +171,7 @@
 /obj/effect/mob_spawn/ghost_role/human/tarkon/ensign
 	name = "Port Tarkon Ensign"
 	prompt_name = "an abandoned ensign"
-	icon = 'icons/obj/machines/sleeper.dmi'
+	icon = '../assets/icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper-o"
 	you_are_text = "You were tasked by Tarkon Industries to Port Tarkon as a low-level command member. Your superior is the site director."
 	flavour_text = "Second in command, you are usually tasked with outward missions with other Tarkon members while the site director stays at the port. "
@@ -190,7 +190,7 @@
 /obj/effect/mob_spawn/ghost_role/human/tarkon/director
 	name = "Port Tarkon Site Director"
 	prompt_name = "a port site director"
-	icon = 'icons/obj/machines/sleeper.dmi'
+	icon = '../assets/icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
 	you_are_text = "You are a newly assigned Site Director for Port Tarkon. Your superiors are none except the will of yourself and Tarkon Industries."
 	flavour_text = "On the recently reclaimed Port Tarkon, You are tasked with overlooking your crew and keeping the port up and running."
@@ -233,7 +233,7 @@
 	name = "infested warren"
 	desc = "A deep tunnel that goes deeper than any light can reach. A distant roaring could be heard within..."
 	icon_state = "hole"
-	icon = 'icons/mob/simple/lavaland/nest.dmi'
+	icon = '../assets/icons/mob/simple/lavaland/nest.dmi'
 	max_integrity = 500
 	max_mobs = 4
 	spawn_time = 30 SECONDS
@@ -255,7 +255,7 @@
 	name = "collapsing infested nest"
 	desc = "Stop standing and get clear!"
 	layer = TABLE_LAYER
-	icon = 'icons/mob/simple/lavaland/nest.dmi'
+	icon = '../assets/icons/mob/simple/lavaland/nest.dmi'
 	icon_state = "hole"
 	anchored = TRUE
 	density = TRUE
@@ -265,7 +265,7 @@
 /obj/effect/nest_break/proc/rustle()
 	for(var/mob/shooken in range(7,src))
 		shake_camera(shooken, 15, 1)
-	playsound(get_turf(src),'sound/effects/explosion/explosionfar.ogg', 200, TRUE)
+	playsound(get_turf(src),'../assets/sound/effects/explosion/explosionfar.ogg', 200, TRUE)
 	visible_message(span_boldannounce("The nest's entrance starts to crumble before something charges forth!"))
 	var/mob/living/basic/boss_baby = new boss_mob(loc)
 	boss_baby.set_faction(faction)
@@ -277,7 +277,7 @@
 	src.loot_drop = loot_drop
 	src.boss_mob = boss_mob
 	visible_message(span_boldannounce("The nest rumbles violently as the entrance begins to crack and break apart!"))
-	playsound(loc,'sound/effects/tendril_destroyed.ogg', 200, FALSE, 50, TRUE, TRUE)
+	playsound(loc,'../assets/sound/effects/tendril_destroyed.ogg', 200, FALSE, 50, TRUE, TRUE)
 	addtimer(CALLBACK(src, PROC_REF(rustle)), 5 SECONDS, TIMER_DELETE_ME)
 	do_jiggle_nova()
 
@@ -285,7 +285,7 @@
 	name = "infested nest"
 	desc = "A deep tunnel lined with weeds, something can be heard stirring within..."
 	icon_state = "hole"
-	icon = 'icons/mob/simple/lavaland/nest.dmi'
+	icon = '../assets/icons/mob/simple/lavaland/nest.dmi'
 	max_integrity = 300
 	max_mobs = 2
 	spawn_time = 40 SECONDS
@@ -296,7 +296,7 @@
 	name = "infested tunnel"
 	desc = "A tunnel lined with weeds, something can be heard clicking deep within..."
 	icon_state = "hole"
-	icon = 'icons/mob/simple/lavaland/nest.dmi'
+	icon = '../assets/icons/mob/simple/lavaland/nest.dmi'
 	max_integrity = 150
 	max_mobs = 1
 	spawn_time = 40 SECONDS

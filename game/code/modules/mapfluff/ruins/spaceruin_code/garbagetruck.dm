@@ -1,12 +1,12 @@
 /obj/item/eyesnatcher
 	name = "portable eyeball extractor"
 	desc = "An overly complicated device that can pierce target's skull and extract their eyeballs if enough brute force is applied."
-	icon = 'icons/obj/medical/surgery_tools.dmi'
+	icon = '../assets/icons/obj/medical/surgery_tools.dmi'
 	icon_state = "eyesnatcher"
 	base_icon_state = "eyesnatcher"
 	inhand_icon_state = "hypo"
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/medical_righthand.dmi'
 	throwforce = 0
 	w_class = WEIGHT_CLASS_SMALL
 	throw_speed = 3
@@ -53,7 +53,7 @@
 	)
 	eyeballies.apply_organ_damage(eyeballies.maxHealth)
 	target.emote("scream")
-	playsound(target, 'sound/effects/wounds/crackandbleed.ogg', 100)
+	playsound(target, '../assets/sound/effects/wounds/crackandbleed.ogg', 100)
 	log_combat(user, target, "cracked the skull of (eye snatching)", src)
 
 	if(!do_after(user, eye_snatch_enthusiasm, target = target, extra_checks = CALLBACK(src, PROC_REF(eyeballs_exist), eyeballies, head, target)))
@@ -67,8 +67,8 @@
 		target.equip_to_slot_if_possible(new_patch, ITEM_SLOT_EYES, disable_warning = TRUE)
 
 	to_chat(user, span_notice("You successfully extract [target]'s eyeballs."))
-	playsound(target, 'sound/items/handling/surgery/retractor2.ogg', 100, TRUE)
-	playsound(target, 'sound/effects/pop.ogg', 100, TRAIT_MUTE)
+	playsound(target, '../assets/sound/items/handling/surgery/retractor2.ogg', 100, TRUE)
+	playsound(target, '../assets/sound/effects/pop.ogg', 100, TRAIT_MUTE)
 	eyeballies.Remove(target)
 	eyeballies.forceMove(get_turf(target))
 	notify_ghosts(

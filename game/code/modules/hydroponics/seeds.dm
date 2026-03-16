@@ -3,7 +3,7 @@
 // ********************************************************
 
 /obj/item/seeds
-	icon = 'icons/obj/service/hydroponics/seeds.dmi'
+	icon = '../assets/icons/obj/service/hydroponics/seeds.dmi'
 	icon_state = "seed" // Unknown plant seed - these shouldn't exist in-game.
 	worn_icon_state = "seed"
 	abstract_type = /obj/item/seeds
@@ -19,7 +19,7 @@
 	/// Used to update icons. Should match the name in the sprites unless all icon_* are overridden.
 	var/species = ""
 	///the file that stores the sprites of the growing plant from this seed.
-	var/growing_icon = 'icons/obj/service/hydroponics/growing.dmi'
+	var/growing_icon = '../assets/icons/obj/service/hydroponics/growing.dmi'
 	/// Used to override grow icon (default is `"[species]-grow"`). You can use one grow icon for multiple closely related plants with it.
 	var/icon_grow
 	/// Used to override dead icon (default is `"[species]-dead"`). You can use one dead icon for multiple closely related plants with it.
@@ -308,14 +308,14 @@
 			T.reagents.remove_reagent(/datum/reagent/consumable/nutriment, num_nutriment)
 			T.reagents.chem_temp = min(1000, (T.reagents.chem_temp + num_nutriment * 25))
 			T.reagents.handle_reactions()
-			playsound(T.loc, 'sound/effects/wounds/sizzle2.ogg', 5)
+			playsound(T.loc, '../assets/sound/effects/wounds/sizzle2.ogg', 5)
 		// Cools down the plant's contents by 5 kelvin per 1 unit of nutriment. Mutually exclusive with heating.
 		else if(get_gene(/datum/plant_gene/trait/chem_cooling))
 			T.visible_message(span_notice("[T] releases a blast of hot air, consuming its nutriments to cool its contents."))
 			T.reagents.remove_reagent(/datum/reagent/consumable/nutriment, num_nutriment)
 			T.reagents.chem_temp = max(3, (T.reagents.chem_temp + num_nutriment * -5))
 			T.reagents.handle_reactions()
-			playsound(T.loc, 'sound/effects/space_wind.ogg', 50)
+			playsound(T.loc, '../assets/sound/effects/space_wind.ogg', 50)
 
 /// Returns reagent purity based on seed stats
 /obj/item/seeds/proc/get_reagent_purity()

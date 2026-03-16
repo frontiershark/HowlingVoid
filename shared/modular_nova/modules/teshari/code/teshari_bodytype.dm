@@ -55,7 +55,7 @@
 			return cached_icon
 
 		// Generate muzzled icon, but offset
-		var/icon/new_icon = icon('icons/blanks/32x32.dmi', "nothing")
+		var/icon/new_icon = icon('../assets/icons/blanks/32x32.dmi', "nothing")
 		new_icon.Blend(icon(human_icon, human_icon_state), ICON_OVERLAY, x = selected_offset.offset_x["north"], y = selected_offset.offset_y["north"])
 		new_icon.Insert(new_icon, human_icon_state)
 		new_icon = fcopy_rsc(new_icon)

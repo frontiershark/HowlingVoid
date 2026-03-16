@@ -5,8 +5,8 @@
 	desc = "A Spessman's best friend, a beautifully packed lunch."
 
 	inhand_icon_state = "toolbox_default"
-	lefthand_file = 'icons/mob/inhands/equipment/toolbox_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/toolbox_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/toolbox_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/toolbox_righthand.dmi'
 
 
 	material_flags = NONE
@@ -22,15 +22,15 @@
 	custom_materials = list(/datum/material/iron = SMALL_MATERIAL_AMOUNT*5)
 	attack_verb_continuous = list("bonks")
 	attack_verb_simple = list("bonks")
-	hitsound = 'sound/items/weapons/smash.ogg'
-	drop_sound = 'sound/items/handling/toolbox/toolbox_drop.ogg'
-	pickup_sound = 'sound/items/handling/toolbox/toolbox_pickup.ogg'
+	hitsound = '../assets/sound/items/weapons/smash.ogg'
+	drop_sound = '../assets/sound/items/handling/toolbox/toolbox_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/toolbox/toolbox_pickup.ogg'
 	wound_bonus = 5
 	storage_type = /datum/storage/lunchbox
 
 /datum/storage/lunchbox
-	open_sound = 'sound/items/handling/toolbox/toolbox_open.ogg'
-	rustle_sound = 'sound/items/handling/toolbox/toolbox_rustle.ogg'
+	open_sound = '../assets/sound/items/handling/toolbox/toolbox_open.ogg'
+	rustle_sound = '../assets/sound/items/handling/toolbox/toolbox_rustle.ogg'
 
 /datum/storage/lunchbox/New(atom/parent, max_slots, max_specific_storage, max_total_storage, rustle_sound, remove_rustle_sound)
 	. = ..()

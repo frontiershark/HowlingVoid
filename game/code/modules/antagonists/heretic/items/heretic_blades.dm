@@ -2,12 +2,12 @@
 /obj/item/melee/sickly_blade
 	name = "\improper sickly blade"
 	desc = "A sickly green crescent blade, decorated with an ornamental eye. You feel like you're being watched..."
-	icon = 'icons/obj/weapons/khopesh.dmi'
+	icon = '../assets/icons/obj/weapons/khopesh.dmi'
 	icon_state = "eldritch_blade"
 	inhand_icon_state = "eldritch_blade"
 	icon_angle = -45
-	lefthand_file = 'icons/mob/inhands/64x64_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/64x64_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/64x64_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/64x64_righthand.dmi'
 	inhand_x_dimension = 64
 	inhand_y_dimension = 64
 	obj_flags = CONDUCTS_ELECTRICITY
@@ -20,7 +20,7 @@
 	exposed_wound_bonus = 15
 	toolspeed = 0.375
 	demolition_mod = 0.8
-	hitsound = 'sound/items/weapons/bladeslice.ogg'
+	hitsound = '../assets/sound/items/weapons/bladeslice.ogg'
 	armour_penetration = 35
 	attack_verb_continuous = list("attacks", "slashes", "slices", "tears", "lacerates", "rips", "dices", "rends")
 	attack_verb_simple = list("attack", "slash", "slice", "tear", "lacerate", "rip", "dice", "rend")
@@ -188,7 +188,7 @@
 	living_target.AdjustParalyzed(1.5 SECONDS)
 	living_target.apply_damage(10, BRUTE, wound_bonus = CANT_WOUND)
 	living_target.balloon_alert(user, "backstab!")
-	playsound(living_target, 'sound/items/weapons/guillotine.ogg', 100, TRUE)
+	playsound(living_target, '../assets/sound/items/weapons/guillotine.ogg', 100, TRUE)
 
 /obj/item/melee/sickly_blade/dark/dropped(mob/user, silent)
 	. = ..()

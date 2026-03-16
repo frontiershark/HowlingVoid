@@ -5,7 +5,7 @@
 /datum/action/cooldown/mob_cooldown/set_spider_directive
 	name = "Set Directive"
 	desc = "Set a directive for your future children to follow."
-	button_icon = 'icons/mob/actions/actions_animal.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_animal.dmi'
 	button_icon_state = "directive"
 	background_icon_state = "bg_alien"
 	overlay_icon_state = "bg_alien_border"
@@ -33,7 +33,7 @@
 /datum/action/cooldown/mob_cooldown/command_spiders
 	name = "Command"
 	desc = "Send a command to all living spiders."
-	button_icon = 'icons/mob/actions/actions_animal.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_animal.dmi'
 	button_icon_state = "command"
 	background_icon_state = "bg_alien"
 	overlay_icon_state = "bg_alien_border"
@@ -79,7 +79,7 @@
 /datum/action/cooldown/mob_cooldown/command_spiders/communication_spiders
 	name = "Communication"
 	desc = "Send a report to all living spiders."
-	button_icon = 'icons/mob/actions/actions_animal.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_animal.dmi'
 	button_icon_state = "message"
 
 /datum/action/cooldown/mob_cooldown/command_spiders/communication_spiders/format_message(mob/living/user, message)
@@ -91,7 +91,7 @@
 /datum/action/cooldown/mob_cooldown/command_spiders/warning_spiders
 	name = "Warning"
 	desc = "Send a warning to all living spiders."
-	button_icon = 'icons/mob/actions/actions_animal.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_animal.dmi'
 	button_icon_state = "warning"
 
 /datum/action/cooldown/mob_cooldown/command_spiders/warning_spiders/format_message(mob/living/user, message)

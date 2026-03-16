@@ -1,6 +1,6 @@
 /obj/item/clothing/neck
 	name = "necklace"
-	icon = 'icons/obj/clothing/neck.dmi'
+	icon = '../assets/icons/obj/clothing/neck.dmi'
 	abstract_type = /obj/item/clothing/neck
 	body_parts_covered = NECK
 	slot_flags = ITEM_SLOT_NECK
@@ -13,7 +13,7 @@
 	if(isinhands || !(body_parts_covered & HEAD))
 		return
 	if(damaged_clothes)
-		. += mutable_appearance('icons/effects/item_damage.dmi', "damagedmask")
+		. += mutable_appearance('../assets/icons/effects/item_damage.dmi', "damagedmask")
 
 /obj/item/clothing/neck/separate_worn_overlays(mutable_appearance/standing, mutable_appearance/draw_target, isinhands, icon_file, mutant_styles) // NOVA EDIT CHANGE - ORIGINAL: /obj/item/clothing/gloves/separate_worn_overlays(mutable_appearance/standing, mutable_appearance/draw_target, isinhands, icon_file)
 	. = ..()
@@ -29,7 +29,7 @@
 	inhand_icon_state = "" //no inhands
 	w_class = WEIGHT_CLASS_SMALL
 	custom_price = PAYCHECK_CREW
-	icon = 'icons/map_icons/clothing/neck.dmi'
+	icon = '../assets/icons/map_icons/clothing/neck.dmi'
 	icon_state = "/obj/item/clothing/neck/bowtie"
 	post_init_icon_state = "bowtie_greyscale"
 	greyscale_config = /datum/greyscale_config/ties
@@ -40,7 +40,7 @@
 /obj/item/clothing/neck/bowtie/rainbow
 	name = "rainbow bow tie"
 	desc = "An extremely large neosilk rainbow-colored bowtie."
-	icon = 'icons/obj/clothing/neck.dmi'
+	icon = '../assets/icons/obj/clothing/neck.dmi'
 	icon_state = "bowtie_rainbow"
 	post_init_icon_state = null
 	greyscale_config = null
@@ -54,7 +54,7 @@
 	alternate_worn_layer = LOW_NECK_LAYER // So that it renders below suit jackets, MODsuits, etc
 	w_class = WEIGHT_CLASS_SMALL
 	custom_price = PAYCHECK_CREW
-	icon = 'icons/map_icons/clothing/neck.dmi'
+	icon = '../assets/icons/map_icons/clothing/neck.dmi'
 	icon_state = "/obj/item/clothing/neck/tie"
 	post_init_icon_state = "tie_greyscale_tied"
 	greyscale_config = /datum/greyscale_config/ties
@@ -194,7 +194,7 @@
 /obj/item/clothing/neck/tie/horrible
 	name = "horrible tie"
 	desc = "A neosilk tie. This one is disgusting."
-	icon = 'icons/obj/clothing/neck.dmi'
+	icon = '../assets/icons/obj/clothing/neck.dmi'
 	icon_state = "horribletie"
 	post_init_icon_state = null
 	clip_on = TRUE
@@ -205,10 +205,10 @@
 /obj/item/clothing/neck/robe_cape
 	name = "robe cape"
 	desc = "A comfortable cape, draped down your back and held around your neck with a brooch."
-	icon = 'icons/obj/clothing/neck.dmi'
+	icon = '../assets/icons/obj/clothing/neck.dmi'
 	icon_state = "/obj/item/clothing/neck/robe_cape"
 	post_init_icon_state = "robe_cape"
-	worn_icon = 'icons/mob/clothing/neck.dmi'
+	worn_icon = '../assets/icons/mob/clothing/neck.dmi'
 	worn_icon_state = "robe_cape"
 	abstract_type = /obj/item/clothing/neck
 	greyscale_config = /datum/greyscale_config/robe_cape
@@ -223,7 +223,7 @@
 /obj/item/clothing/neck/tie/detective
 	name = "loose tie"
 	desc = "A loosely tied necktie, a perfect accessory for the over-worked detective."
-	icon = 'icons/obj/clothing/neck.dmi'
+	icon = '../assets/icons/obj/clothing/neck.dmi'
 	icon_state = "detective"
 	post_init_icon_state = null
 	clip_on = TRUE
@@ -380,7 +380,7 @@
 /obj/item/clothing/neck/scarf
 	name = "scarf"
 	desc = "A stylish scarf. The perfect winter accessory for those with a keen fashion sense, and those who just can't handle a cold breeze on their necks."
-	icon = 'icons/map_icons/clothing/neck.dmi'
+	icon = '../assets/icons/map_icons/clothing/neck.dmi'
 	icon_state = "/obj/item/clothing/neck/scarf"
 	post_init_icon_state = "scarf"
 	w_class = WEIGHT_CLASS_TINY
@@ -447,7 +447,7 @@
 
 /obj/item/clothing/neck/large_scarf
 	name = "large scarf"
-	icon = 'icons/map_icons/clothing/neck.dmi'
+	icon = '../assets/icons/map_icons/clothing/neck.dmi'
 	icon_state = "/obj/item/clothing/neck/large_scarf"
 	post_init_icon_state = "large_scarf"
 	w_class = WEIGHT_CLASS_TINY
@@ -481,7 +481,7 @@
 
 /obj/item/clothing/neck/infinity_scarf
 	name = "infinity scarf"
-	icon = 'icons/map_icons/clothing/neck.dmi'
+	icon = '../assets/icons/map_icons/clothing/neck.dmi'
 	icon_state = "/obj/item/clothing/neck/infinity_scarf"
 	post_init_icon_state = "infinity_scarf"
 	w_class = WEIGHT_CLASS_TINY
@@ -525,7 +525,7 @@
 /obj/item/clothing/neck/necklace/dope
 	name = "gold necklace"
 	desc = "Damn, it feels good to be a gangster."
-	icon = 'icons/obj/clothing/neck.dmi'
+	icon = '../assets/icons/obj/clothing/neck.dmi'
 	icon_state = "bling"
 
 /obj/item/clothing/neck/necklace/dope/merchant
@@ -560,7 +560,7 @@
 /obj/item/clothing/neck/beads
 	name = "plastic bead necklace"
 	desc = "A cheap, plastic bead necklace. Show team spirit! Collect them! Throw them away! The possibilities are endless!"
-	icon = 'icons/obj/clothing/neck.dmi'
+	icon = '../assets/icons/obj/clothing/neck.dmi'
 	icon_state = "beads"
 	color = "#ffffff"
 	custom_price = PAYCHECK_CREW * 0.2

@@ -1,7 +1,7 @@
 /// An info button that, when clicked, puts some text in the user's chat
 /obj/effect/abstract/info
 	name = "info"
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	icon_state = "info"
 
 	/// What should the info button display when clicked?

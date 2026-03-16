@@ -4,7 +4,7 @@
 	complexity = "Easy"
 	complexity_color = COLOR_GREEN
 	icon = list(
-		"icon" = 'icons/obj/weapons/khopesh.dmi',
+		"icon" = '../assets/icons/obj/weapons/khopesh.dmi',
 		"state" = "void_blade",
 		"frame" = 1,
 		"dir" = SOUTH,
@@ -56,7 +56,7 @@
 		I start to realize the emptiness of existence. Something's watching me."
 	required_atoms = list(/obj/item/knife = 1)
 	result_atoms = list(/obj/item/melee/sickly_blade/void)
-	research_tree_icon_path = 'icons/obj/weapons/khopesh.dmi'
+	research_tree_icon_path = '../assets/icons/obj/weapons/khopesh.dmi'
 	research_tree_icon_state = "void_blade"
 	mark_type = /datum/status_effect/eldritch/void
 	eldritch_passive = /datum/status_effect/heretic_passive/void
@@ -149,7 +149,7 @@
 	gain_text = "Fleeting memories, fleeting feet. I mark my way with frozen blood upon the snow. Covered and forgotten."
 
 
-	research_tree_icon_path = 'icons/ui_icons/antags/heretic/knowledge.dmi'
+	research_tree_icon_path = '../assets/icons/ui_icons/antags/heretic/knowledge.dmi'
 	research_tree_icon_state = "blade_upgrade_void"
 
 /datum/heretic_knowledge/blade_upgrade/void/do_melee_effects(mob/living/source, mob/living/target, obj/item/melee/sickly_blade/blade)
@@ -193,7 +193,7 @@
 
 	ascension_achievement = /datum/award/achievement/misc/void_ascension
 	announcement_text = "%SPOOKY% The nobleman of void %NAME% has arrived, stepping along the Waltz that ends worlds! %SPOOKY%"
-	announcement_sound = 'sound/music/antag/heretic/ascend_void.ogg'
+	announcement_sound = '../assets/sound/music/antag/heretic/ascend_void.ogg'
 	///soundloop for the void theme
 	var/datum/looping_sound/void_loop/sound_loop
 	///Reference to the ongoing voidstrom that surrounds the heretic

@@ -22,8 +22,8 @@
 	icon = 'modular_nova/modules/paycheck_rations/icons/food_containers.dmi'
 	icon_state = "flour_korta"
 	inhand_icon_state = "carton"
-	lefthand_file = 'icons/mob/inhands/items/drinks_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/drinks_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/drinks_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/drinks_righthand.dmi'
 	list_reagents = list(/datum/reagent/consumable/korta_flour = 10)
 	fill_icon_thresholds = null
 

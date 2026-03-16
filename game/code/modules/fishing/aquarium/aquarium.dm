@@ -4,7 +4,7 @@
 	density = TRUE
 	anchored = FALSE
 
-	icon = 'icons/obj/aquarium/tanks.dmi'
+	icon = '../assets/icons/obj/aquarium/tanks.dmi'
 	icon_state = "aquarium_map"
 	base_icon_state = "aquarium"
 
@@ -93,7 +93,7 @@
 		possible_destinations_for_fish = get_adjacent_open_turfs(droploc)
 	else
 		possible_destinations_for_fish = list(droploc)
-	playsound(src, 'sound/effects/glass/glassbr3.ogg', 100, TRUE)
+	playsound(src, '../assets/sound/effects/glass/glassbr3.ogg', 100, TRUE)
 	for(var/atom/movable/content as anything in contents)
 		content.forceMove(pick(possible_destinations_for_fish))
 	if(fluid_type != AQUARIUM_FLUID_AIR)
@@ -122,7 +122,7 @@
 /obj/item/fish_tank
 	name = "fish tank"
 	desc = "A more portable sort of aquarium to store various fishes in, unless they're too big or there're too many of them."
-	icon = 'icons/obj/aquarium/tanks.dmi'
+	icon = '../assets/icons/obj/aquarium/tanks.dmi'
 	icon_state = "fish_tank_map"
 	base_icon_state = "fish_tank"
 	force = 5

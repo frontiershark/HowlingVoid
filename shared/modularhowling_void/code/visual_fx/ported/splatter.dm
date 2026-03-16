@@ -1,5 +1,5 @@
 /particles/splatter
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	icon_state = "smoke"
 	width = 500
 	height = 500

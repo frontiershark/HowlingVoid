@@ -37,7 +37,7 @@
 			granted_loadout = new loadout()
 
 	balloon_alert(user, "selected")
-	playsound(user, 'sound/items/click.ogg', 50, TRUE)
+	playsound(user, '../assets/sound/items/click.ogg', 50, TRUE)
 	choice_made = choice
 
 

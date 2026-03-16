@@ -18,32 +18,32 @@
 	name = "colossal rib"
 	desc = "It's staggering to think that something this big could have lived, let alone died."
 	custom_materials = list(/datum/material/bone=SHEET_MATERIAL_AMOUNT * 10)
-	icon = 'icons/obj/art/statuelarge.dmi'
+	icon = '../assets/icons/obj/art/statuelarge.dmi'
 	icon_state = "rib"
-	icon_preview = 'icons/obj/fluff/previews.dmi'
+	icon_preview = '../assets/icons/obj/fluff/previews.dmi'
 	icon_state_preview = "rib"
 
 /obj/structure/statue/bone/skull
 	name = "colossal skull"
 	desc = "The gaping maw of a dead, titanic monster."
 	custom_materials = list(/datum/material/bone=SHEET_MATERIAL_AMOUNT * 6)
-	icon = 'icons/obj/art/statuelarge.dmi'
+	icon = '../assets/icons/obj/art/statuelarge.dmi'
 	icon_state = "skull"
-	icon_preview = 'icons/obj/fluff/previews.dmi'
+	icon_preview = '../assets/icons/obj/fluff/previews.dmi'
 	icon_state_preview = "skull"
 
 /obj/structure/statue/bone/skull/half
 	desc = "The gaping maw of a dead, titanic monster. This one is cracked in half."
 	custom_materials = list(/datum/material/bone=SHEET_MATERIAL_AMOUNT * 3)
-	icon = 'icons/obj/art/statuelarge.dmi'
+	icon = '../assets/icons/obj/art/statuelarge.dmi'
 	icon_state = "skull-half"
-	icon_preview = 'icons/obj/fluff/previews.dmi'
+	icon_preview = '../assets/icons/obj/fluff/previews.dmi'
 	icon_state_preview = "halfskull"
 
 //***Wasteland floor and rock turfs here.
 /turf/open/misc/asteroid/basalt/wasteland //Like a more fun version of living in Arizona.
 	name = "cracked earth"
-	icon = 'icons/turf/floors.dmi'
+	icon = '../assets/icons/turf/floors.dmi'
 	icon_state = "wasteland"
 	base_icon_state = "wasteland"
 	baseturfs = /turf/open/misc/asteroid/basalt/wasteland
@@ -71,7 +71,7 @@
 	color = "#B5651D"
 	turf_type = /turf/open/misc/asteroid/basalt/wasteland
 	baseturfs = /turf/open/misc/asteroid/basalt/wasteland
-	icon = 'icons/turf/walls/rock_wall.dmi'
+	icon = '../assets/icons/turf/walls/rock_wall.dmi'
 	base_icon_state = "rock_wall"
 	smoothing_flags = SMOOTH_BITMASK | SMOOTH_BORDER
 
@@ -87,7 +87,7 @@
 /obj/structure/sink/oil_well //You're not going to enjoy bathing in this...
 	name = "oil well"
 	desc = "A bubbling pool of oil. This would probably be valuable, had bluespace technology not destroyed the need for fossil fuels 200 years ago."
-	icon = 'icons/obj/watercloset.dmi'
+	icon = '../assets/icons/obj/watercloset.dmi'
 	icon_state = "puddle-oil"
 	capacity = 20
 	dispensedreagent = /datum/reagent/fuel/oil
@@ -129,7 +129,7 @@
 /obj/structure/closet/crate/grave
 	name = "burial mound"
 	desc = "A marked patch of soil, showing signs of a burial long ago. You wouldn't disturb a grave... right?"
-	icon = 'icons/obj/storage/crates.dmi'
+	icon = '../assets/icons/obj/storage/crates.dmi'
 	icon_state = "grave"
 	base_icon_state = "grave"
 	density = FALSE
@@ -139,8 +139,8 @@
 	anchored = TRUE
 	divable = FALSE //As funny as it may be, it would make little sense how you got yourself inside it in first place.
 	breakout_time = 2 MINUTES
-	open_sound = 'sound/effects/shovel_dig.ogg'
-	close_sound = 'sound/effects/shovel_dig.ogg'
+	open_sound = '../assets/sound/effects/shovel_dig.ogg'
+	close_sound = '../assets/sound/effects/shovel_dig.ogg'
 	can_install_electronics = FALSE
 	can_weld_shut = FALSE
 	cutting_tool = null
@@ -307,7 +307,7 @@
 /obj/structure/closet/crate/grave/fresh
 	name = "makeshift grave"
 	desc = "A hastily-dug grave. This is definitely not six feet deep, but it'll hold a body."
-	icon = 'icons/obj/storage/crates.dmi'
+	icon = '../assets/icons/obj/storage/crates.dmi'
 	icon_state = "grave_fresh"
 	base_icon_state = "grave_fresh"
 	material_drop_amount = 0
@@ -315,7 +315,7 @@
 /obj/structure/closet/crate/grave/filled/lead_researcher
 	name = "ominous burial mound"
 	desc = "Even in a place filled to the brim with graves, this one shows a level of preparation and planning that fills you with dread."
-	icon = 'icons/obj/storage/crates.dmi'
+	icon = '../assets/icons/obj/storage/crates.dmi'
 	icon_state = "grave_lead"
 	lead_tomb = TRUE
 	first_open = TRUE

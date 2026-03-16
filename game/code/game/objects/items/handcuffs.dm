@@ -12,7 +12,7 @@
 	abstract_type = /obj/item/restraints
 	breakouttime = 1 MINUTES
 	dye_color = DYE_PRISONER
-	icon = 'icons/obj/weapons/restraints.dmi'
+	icon = '../assets/icons/obj/weapons/restraints.dmi'
 
 /obj/item/restraints/suicide_act(mob/living/carbon/user)
 	user.visible_message(span_suicide("[user] is strangling [user.p_them()]self with [src]! It looks like [user.p_theyre()] trying to commit suicide!"))
@@ -37,8 +37,8 @@
 	icon_state = "handcuff"
 	worn_icon_state = "handcuff"
 	inhand_icon_state = "handcuff"
-	lefthand_file = 'icons/mob/inhands/equipment/security_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/security_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/security_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/security_righthand.dmi'
 	obj_flags = CONDUCTS_ELECTRICITY
 	slot_flags = ITEM_SLOT_BELT | ITEM_SLOT_HANDCUFFED
 	throwforce = 0
@@ -49,16 +49,16 @@
 	breakouttime = 1 MINUTES
 	armor_type = /datum/armor/restraints_handcuffs
 	custom_price = PAYCHECK_COMMAND * 0.35
-	pickup_sound = 'sound/items/handling/handcuffs/handcuffs_pick_up.ogg'
-	drop_sound = 'sound/items/handling/handcuffs/handcuffs_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/handcuffs/handcuffs_pick_up.ogg'
+	drop_sound = '../assets/sound/items/handling/handcuffs/handcuffs_drop.ogg'
 	sound_vary = TRUE
 
 	///How long it takes to handcuff someone
 	var/handcuff_time = 4 SECONDS
 	///Sound that plays when starting to put handcuffs on someone
-	var/cuffsound = 'sound/items/weapons/handcuffs.ogg'
+	var/cuffsound = '../assets/sound/items/weapons/handcuffs.ogg'
 	///Sound that plays when restrain is successful
-	var/cuffsuccesssound = 'sound/items/handcuff_finish.ogg'
+	var/cuffsuccesssound = '../assets/sound/items/handcuff_finish.ogg'
 	/// How strong the cuffs are. Weak cuffs can be broken with wirecutters or boxcutters.
 	var/restraint_strength = HANDCUFFS_TYPE_STRONG
 
@@ -206,11 +206,11 @@
 	color = CABLE_HEX_COLOR_RED
 	///for generating the correct icons based off the original cable's color.
 	var/cable_color = CABLE_COLOR_RED
-	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/tools_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/tools_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/tools_righthand.dmi'
 	custom_materials = list(/datum/material/iron= SMALL_MATERIAL_AMOUNT * 1.5, /datum/material/glass = SMALL_MATERIAL_AMOUNT * 1.5)
 	breakouttime = 30 SECONDS
-	cuffsound = 'sound/items/weapons/cablecuff.ogg'
+	cuffsound = '../assets/sound/items/weapons/cablecuff.ogg'
 	pickup_sound = null
 	drop_sound = null
 	restraint_strength = HANDCUFFS_TYPE_WEAK
@@ -347,8 +347,8 @@
 	desc = "Plastic, disposable zipties that can be used to restrain temporarily but are destroyed after use."
 	icon_state = "cuff"
 	inhand_icon_state = "cuff_white"
-	lefthand_file = 'icons/mob/inhands/equipment/security_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/security_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/security_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/security_righthand.dmi'
 	custom_materials = null
 	breakouttime = 45 SECONDS
 	color = null
@@ -411,8 +411,8 @@
 	gender = PLURAL
 	icon_state = "handcuff"
 	inhand_icon_state = "handcuff"
-	lefthand_file = 'icons/mob/inhands/equipment/security_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/security_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/security_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/security_righthand.dmi'
 	obj_flags = CONDUCTS_ELECTRICITY
 	throwforce = 0
 	w_class = WEIGHT_CLASS_NORMAL
@@ -453,7 +453,7 @@
 
 /obj/item/restraints/legcuffs/beartrap/suicide_act(mob/living/user)
 	user.visible_message(span_suicide("[user] is sticking [user.p_their()] head in \the [src]! It looks like [user.p_theyre()] trying to commit suicide!"))
-	playsound(loc, 'sound/items/weapons/bladeslice.ogg', 50, TRUE, -1)
+	playsound(loc, '../assets/sound/items/weapons/bladeslice.ogg', 50, TRUE, -1)
 	return BRUTELOSS
 
 /obj/item/restraints/legcuffs/beartrap/attack_self(mob/user)
@@ -473,7 +473,7 @@
 /obj/item/restraints/legcuffs/beartrap/proc/close_trap()
 	armed = FALSE
 	update_appearance()
-	playsound(src, 'sound/effects/snap.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/effects/snap.ogg', 50, TRUE)
 
 /obj/item/restraints/legcuffs/beartrap/proc/trap_stepped_on(datum/source, atom/movable/entering, ...)
 	SIGNAL_HANDLER
@@ -568,8 +568,8 @@
 	icon_state = "bola"
 	icon_state_preview = "bola_preview"
 	inhand_icon_state = "bola"
-	lefthand_file = 'icons/mob/inhands/weapons/thrown_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/thrown_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/thrown_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/thrown_righthand.dmi'
 	breakouttime = 3.5 SECONDS//easy to apply, easy to break out of
 	gender = NEUTER
 	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 6.1, /datum/material/glass = SMALL_MATERIAL_AMOUNT * 1.5)
@@ -581,7 +581,7 @@
 /obj/item/restraints/legcuffs/bola/throw_at(atom/target, range, speed, mob/thrower, spin=1, diagonals_first = 0, datum/callback/callback, gentle = FALSE, quickstart = TRUE, throw_type_path = /datum/thrownthing)
 	if(!..())
 		return
-	playsound(src.loc,'sound/items/weapons/bolathrow.ogg', 75, TRUE)
+	playsound(src.loc,'../assets/sound/items/weapons/bolathrow.ogg', 75, TRUE)
 
 /obj/item/restraints/legcuffs/bola/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum)
 	if(..() || !iscarbon(hit_atom))//if it gets caught or the target can't be cuffed,
@@ -611,7 +611,7 @@
 	snared_mob.equip_to_slot(src, ITEM_SLOT_LEGCUFFED)
 	SSblackbox.record_feedback("tally", "handcuffs", 1, type)
 	snared_mob.Knockdown(knockdown)
-	playsound(src, 'sound/effects/snap.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/effects/snap.ogg', 50, TRUE)
 
 /**
  * A traitor variant of the bola.
@@ -637,7 +637,7 @@
 	desc = "A specialized hard-light bola designed to ensnare fleeing criminals and aid in arrests."
 	icon_state = "ebola"
 	inhand_icon_state = "ebola"
-	hitsound = 'sound/items/weapons/taserhit.ogg'
+	hitsound = '../assets/sound/items/weapons/taserhit.ogg'
 	w_class = WEIGHT_CLASS_SMALL
 	breakouttime = 6 SECONDS
 	custom_price = PAYCHECK_COMMAND * 0.35

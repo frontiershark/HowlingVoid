@@ -162,7 +162,7 @@
 			user.balloon_alert(user, "lungs must be organic!")
 			return
 		var/location = get_turf(target_lungs)
-		playsound(location, 'sound/effects/slosh.ogg', 25, TRUE)
+		playsound(location, '../assets/sound/effects/slosh.ogg', 25, TRUE)
 		user.visible_message(span_notice("[user] pours a strange blue liquid over the set of lungs. The flesh starts glistening in a strange cyan light, transforming before your very eyes!"),
 			span_notice("Recalling the instructions for the lung transfiguration ritual, you pour the liquid over the flesh of the organ. Soon, the lungs glow in a mute cyan light, before they turn dim and change form before your very eyes!"))
 		var/obj/item/organ/lungs/icebox_adapted/new_lungs = new(location)

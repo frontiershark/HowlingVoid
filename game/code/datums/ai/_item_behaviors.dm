@@ -50,7 +50,7 @@
 	controller.set_blackboard_key(throw_count_key, 0)
 
 /datum/ai_behavior/item_move_close_and_attack/ghostly
-	attack_sound = 'sound/items/haunted/ghostitemattack.ogg'
+	attack_sound = '../assets/sound/items/haunted/ghostitemattack.ogg'
 	max_attempts = 4
 
 /datum/ai_behavior/item_move_close_and_attack/ghostly/haunted

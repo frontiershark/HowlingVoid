@@ -35,7 +35,7 @@
 "j" = (
 /turf/closed/wall/mineral/wood{
 	desc = "A door that goes nowhere. How kafkaesque.";
-	icon = 'icons/obj/doors/mineral_doors.dmi';
+	icon = '../assets/icons/obj/doors/mineral_doors.dmi';
 	icon_state = "paperframe";
 	name = "Door"
 	},
@@ -67,7 +67,7 @@
 	name = "Station Night Shutters"
 	},
 /turf/closed/indestructible/fakeglass{
-	icon = 'icons/obj/smooth_structures/structure_variations.dmi';
+	icon = '../assets/icons/obj/smooth_structures/structure_variations.dmi';
 	icon_state = "paper-whole"
 	},
 /area/centcom/mafia)

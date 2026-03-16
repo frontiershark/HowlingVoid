@@ -14,11 +14,11 @@
 	force = 8 //Very heavy
 	attack_verb_continuous = list("bludgeons", "smashes", "beats")
 	attack_verb_simple = list("bludgeon", "smash", "beat")
-	icon = 'icons/obj/weapons/pneumaticCannon.dmi'
+	icon = '../assets/icons/obj/weapons/pneumaticCannon.dmi'
 	icon_state = "pneumaticCannon"
 	inhand_icon_state = "bulldog"
-	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/guns_righthand.dmi'
 	armor_type = /datum/armor/item_pneumatic_cannon
 	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 6)
 	var/maxWeightClass = 20 //The max weight of items that can fit into the cannon
@@ -40,7 +40,7 @@
 	var/charge_tick = 0
 	var/charge_type
 	var/selfcharge = FALSE
-	var/fire_sound = 'sound/items/weapons/sonic_jackhammer.ogg'
+	var/fire_sound = '../assets/sound/items/weapons/sonic_jackhammer.ogg'
 	var/spin_item = TRUE //Do the projectiles spin when launched?
 	trigger_guard = TRIGGER_GUARD_NORMAL
 
@@ -104,7 +104,7 @@
 /obj/item/pneumatic_cannon/wrench_act(mob/living/user, obj/item/tool)
 	if(needs_air == FALSE)
 		return
-	playsound(src, 'sound/items/tools/ratchet.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/tools/ratchet.ogg', 50, TRUE)
 	pressure_setting = pressure_setting >= HIGH_PRESSURE ? LOW_PRESSURE : pressure_setting + 1
 	balloon_alert(user, "output level set to [pressure_setting_to_text(pressure_setting)]")
 	return TRUE

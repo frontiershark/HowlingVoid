@@ -1,11 +1,11 @@
 /obj/item/keyboard_shell
 	name = "Keyboard Shell"
-	icon = 'icons/obj/science/circuits.dmi'
+	icon = '../assets/icons/obj/science/circuits.dmi'
 	icon_state = "setup_small_keyboard"
 	inhand_icon_state = "electronic"
 	worn_icon_state = "electronic"
-	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/devices_righthand.dmi'
 	light_system = OVERLAY_LIGHT_DIRECTIONAL
 	light_on = FALSE
 	w_class = WEIGHT_CLASS_SMALL

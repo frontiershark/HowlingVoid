@@ -8,7 +8,7 @@
 	desc = "Holemaker Deluxe: A sporty model with a good stop power. Any cannon enthusiast should be expected to start here."
 	density = TRUE
 	anchored = TRUE
-	icon = 'icons/obj/weapons/cannons.dmi'
+	icon = '../assets/icons/obj/weapons/cannons.dmi'
 	icon_state = "falconet_patina"
 	max_integrity = 300
 	///whether the cannon can be unwrenched from the ground.
@@ -17,7 +17,7 @@
 	var/charge_ignited = FALSE
 	var/fire_delay = 1.5 SECONDS
 	var/charge_size = 15
-	var/fire_sound = 'sound/items/weapons/gun/general/cannon.ogg'
+	var/fire_sound = '../assets/sound/items/weapons/gun/general/cannon.ogg'
 
 /obj/structure/cannon/Initialize(mapload)
 	. = ..()

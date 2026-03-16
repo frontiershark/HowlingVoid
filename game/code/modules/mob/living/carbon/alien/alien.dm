@@ -1,7 +1,7 @@
 /mob/living/carbon/alien
 	abstract_type = /mob/living/carbon/alien
 	name = "alien"
-	icon = 'icons/mob/nonhuman-player/alien.dmi'
+	icon = '../assets/icons/mob/nonhuman-player/alien.dmi'
 	gender = FEMALE //All xenos are girls!!
 	dna = null
 	faction = list(ROLE_ALIEN)
@@ -106,7 +106,7 @@ Des: Gives the client of the alien an image on each infected mob.
 		if(HAS_TRAIT(target, TRAIT_XENO_HOST))
 			var/obj/item/organ/body_egg/alien_embryo/embryo = target.get_organ_by_type(/obj/item/organ/body_egg/alien_embryo)
 			if(embryo)
-				client.images += image('icons/mob/nonhuman-player/alien.dmi', loc = target, icon_state = "infected[embryo.stage]")
+				client.images += image('../assets/icons/mob/nonhuman-player/alien.dmi', loc = target, icon_state = "infected[embryo.stage]")
 
 /*----------------------------------------
 Proc: RemoveInfectionImages()

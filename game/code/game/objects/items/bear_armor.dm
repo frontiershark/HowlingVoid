@@ -2,7 +2,7 @@
 	name = "pile of bear armor"
 	desc = "A scattered pile of various shaped armor pieces fitted for a bear, some duct tape, and a nail filer. Crude instructions \
 		are written on the back of one of the plates in Russian. This seems like an awful idea."
-	icon = 'icons/obj/tools.dmi'
+	icon = '../assets/icons/obj/tools.dmi'
 	icon_state = "bear_armor_upgrade"
 
 /obj/item/bear_armor/interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)

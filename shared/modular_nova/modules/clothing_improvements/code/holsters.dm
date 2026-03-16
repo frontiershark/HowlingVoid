@@ -19,7 +19,7 @@
 
 	if (do_after(user, 1.5 SECONDS))
 		clothing_to_mod.allowed += list(/obj/item/storage/belt/holster)
-		playsound(user.loc, 'sound/items/equip/toolbelt_equip.ogg', 50)
+		playsound(user.loc, '../assets/sound/items/equip/toolbelt_equip.ogg', 50)
 		balloon_alert(user, "adjusted to fit!")
 	else
 		balloon_alert(user, "interrupted!")

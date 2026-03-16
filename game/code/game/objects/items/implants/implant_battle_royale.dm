@@ -63,7 +63,7 @@
 		return
 	if (!special && prob(removed_explode_chance))
 		target.visible_message(span_boldwarning("[src] beeps ominously."))
-		playsound(loc, 'sound/items/timer.ogg', 50, vary = FALSE)
+		playsound(loc, '../assets/sound/items/timer.ogg', 50, vary = FALSE)
 		explode(target)
 	target?.mind?.remove_antag_datum(/datum/antagonist/survivalist/battle_royale)
 
@@ -101,7 +101,7 @@
 		emp_proof = TRUE, \
 	)
 	AddComponent(/datum/component/gps, "Rumble Royale - [imp_in.real_name]")
-	playsound(loc, 'sound/items/timer.ogg', 50, vary = FALSE)
+	playsound(loc, '../assets/sound/items/timer.ogg', 50, vary = FALSE)
 
 /// Limit the owner to the specified area
 /obj/item/implant/explosive/battle_royale/proc/limit_areas()
@@ -119,7 +119,7 @@
 		return
 	if (is_type_in_list(get_area(source), limited_areas))
 		return
-	playsound(imp_in, 'sound/items/timer.ogg', 50, vary = FALSE)
+	playsound(imp_in, '../assets/sound/items/timer.ogg', 50, vary = FALSE)
 	to_chat(imp_in, span_boldwarning("You are out of bounds! Get to the [target_area_name] quickly!"))
 	addtimer(CALLBACK(src, PROC_REF(check_area_deadly)), 5 SECONDS, TIMER_DELETE_ME)
 

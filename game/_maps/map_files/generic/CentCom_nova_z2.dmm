@@ -200,7 +200,7 @@
 /obj/effect/spawner/liquids_spawner,
 /obj/structure/railing/corner,
 /turf/open/floor/iron/pool/cobble{
-	icon = 'icons/turf/mining.dmi';
+	icon = '../assets/icons/turf/mining.dmi';
 	icon_state = "wateryrock7"
 	},
 /area/centcom/holding/cafepark)
@@ -565,7 +565,7 @@
 /obj/effect/spawner/liquids_spawner,
 /obj/structure/flora/bush/grassy,
 /turf/open/floor/iron/pool/cobble{
-	icon = 'icons/turf/mining.dmi';
+	icon = '../assets/icons/turf/mining.dmi';
 	icon_state = "wateryrock6"
 	},
 /area/centcom/holding/cafepark)
@@ -827,7 +827,7 @@
 	},
 /obj/structure/flora/bush/sparsegrass/style_2,
 /turf/open/floor/iron/pool/cobble{
-	icon = 'icons/turf/mining.dmi';
+	icon = '../assets/icons/turf/mining.dmi';
 	icon_state = "wateryrock4"
 	},
 /area/centcom/holding/cafepark)
@@ -844,7 +844,7 @@
 	dir = 4
 	},
 /turf/open/floor/iron/pool/cobble{
-	icon = 'icons/turf/mining.dmi';
+	icon = '../assets/icons/turf/mining.dmi';
 	icon_state = "wateryrock4"
 	},
 /area/centcom/holding/cafepark)
@@ -2882,7 +2882,7 @@
 	},
 /obj/structure/flora/bush/grassy,
 /turf/open/floor/iron/pool/cobble{
-	icon = 'icons/turf/mining.dmi';
+	icon = '../assets/icons/turf/mining.dmi';
 	icon_state = "wateryrock7"
 	},
 /area/centcom/holding/cafepark)
@@ -6116,7 +6116,7 @@
 "dEE" = (
 /obj/effect/spawner/liquids_spawner,
 /turf/open/floor/iron/pool/cobble{
-	icon = 'icons/turf/mining.dmi';
+	icon = '../assets/icons/turf/mining.dmi';
 	icon_state = "wateryrock6"
 	},
 /area/centcom/holding/cafepark)
@@ -6690,7 +6690,7 @@
 "eyq" = (
 /obj/effect/spawner/liquids_spawner,
 /turf/open/floor/iron/pool/cobble{
-	icon = 'icons/turf/mining.dmi';
+	icon = '../assets/icons/turf/mining.dmi';
 	icon_state = "wateryrock7"
 	},
 /area/centcom/holding/cafepark)
@@ -7078,7 +7078,7 @@
 /obj/effect/turf_decal/bot,
 /obj/structure/grandfatherclock{
 	desc = "An alien console, it's completely holographic and is complete gibberish with phrases like 'Bogos Binted' flying across the screen.";
-	icon = 'icons/obj/antags/abductor.dmi';
+	icon = '../assets/icons/obj/antags/abductor.dmi';
 	icon_state = "console";
 	name = "alien console"
 	},
@@ -7317,7 +7317,7 @@
 /area/centcom/holding/cafe)
 "fza" = (
 /obj/structure/dresser{
-	icon = 'icons/obj/antags/abductor.dmi';
+	icon = '../assets/icons/obj/antags/abductor.dmi';
 	icon_state = "dispenser";
 	name = "organ storage"
 	},
@@ -7456,7 +7456,7 @@
 	},
 /obj/structure/flora/bush/fullgrass,
 /turf/open/floor/iron/pool/cobble{
-	icon = 'icons/turf/mining.dmi';
+	icon = '../assets/icons/turf/mining.dmi';
 	icon_state = "wateryrock4"
 	},
 /area/centcom/holding/cafepark)
@@ -7548,7 +7548,7 @@
 	dir = 1
 	},
 /turf/open/floor/iron/pool/cobble{
-	icon = 'icons/turf/mining.dmi';
+	icon = '../assets/icons/turf/mining.dmi';
 	icon_state = "wateryrock4"
 	},
 /area/centcom/holding/cafepark)
@@ -8059,7 +8059,7 @@
 /obj/effect/spawner/liquids_spawner,
 /obj/structure/flora/bush/fullgrass,
 /turf/open/floor/iron/pool/cobble{
-	icon = 'icons/turf/mining.dmi';
+	icon = '../assets/icons/turf/mining.dmi';
 	icon_state = "wateryrock6"
 	},
 /area/centcom/holding/cafepark)
@@ -8885,7 +8885,7 @@
 /obj/structure/flora/bush/fullgrass,
 /obj/structure/flora/bush/lavendergrass/style_2,
 /turf/open/floor/iron/pool/cobble{
-	icon = 'icons/turf/mining.dmi';
+	icon = '../assets/icons/turf/mining.dmi';
 	icon_state = "wateryrock7"
 	},
 /area/centcom/holding/cafepark)
@@ -10023,7 +10023,7 @@
 /obj/effect/spawner/liquids_spawner,
 /obj/structure/railing/below_trees,
 /turf/open/floor/iron/pool/cobble{
-	icon = 'icons/turf/mining.dmi';
+	icon = '../assets/icons/turf/mining.dmi';
 	icon_state = "wateryrock4"
 	},
 /area/centcom/holding/cafepark)
@@ -13025,7 +13025,7 @@
 "njQ" = (
 /obj/effect/turf_decal/bot,
 /obj/structure/showcase/machinery/implanter{
-	icon = 'icons/obj/antags/abductor.dmi';
+	icon = '../assets/icons/obj/antags/abductor.dmi';
 	icon_state = "experiment";
 	name = "pod"
 	},
@@ -13313,7 +13313,7 @@
 	dir = 1
 	},
 /turf/open/floor/iron/pool/cobble{
-	icon = 'icons/turf/mining.dmi';
+	icon = '../assets/icons/turf/mining.dmi';
 	icon_state = "wateryrock6"
 	},
 /area/centcom/holding/cafepark)
@@ -16404,7 +16404,7 @@
 /obj/structure/railing,
 /obj/structure/flora/bush/fullgrass,
 /turf/open/floor/iron/pool/cobble{
-	icon = 'icons/turf/mining.dmi';
+	icon = '../assets/icons/turf/mining.dmi';
 	icon_state = "wateryrock4"
 	},
 /area/centcom/holding/cafepark)
@@ -18078,7 +18078,7 @@
 /obj/structure/flora/bush/grassy,
 /obj/structure/flora/bush/lavendergrass/style_2,
 /turf/open/floor/iron/pool/cobble{
-	icon = 'icons/turf/mining.dmi';
+	icon = '../assets/icons/turf/mining.dmi';
 	icon_state = "wateryrock4"
 	},
 /area/centcom/holding/cafepark)
@@ -18471,7 +18471,7 @@
 	},
 /obj/item/clothing/mask/gas/tiki_mask,
 /obj/structure/rack{
-	icon = 'icons/obj/fluff/general.dmi';
+	icon = '../assets/icons/obj/fluff/general.dmi';
 	icon_state = "minibar_left";
 	name = "skeletal minibar"
 	},
@@ -19353,7 +19353,7 @@
 	dir = 1
 	},
 /obj/structure/rack{
-	icon = 'icons/obj/fluff/general.dmi';
+	icon = '../assets/icons/obj/fluff/general.dmi';
 	icon_state = "minibar_right";
 	name = "skeletal minibar"
 	},
@@ -20883,7 +20883,7 @@
 /obj/structure/railing,
 /obj/structure/flora/bush/sparsegrass/style_2,
 /turf/open/floor/iron/pool/cobble{
-	icon = 'icons/turf/mining.dmi';
+	icon = '../assets/icons/turf/mining.dmi';
 	icon_state = "wateryrock4"
 	},
 /area/centcom/holding/cafepark)
@@ -21366,7 +21366,7 @@
 	dir = 8
 	},
 /turf/open/floor/iron/pool/cobble{
-	icon = 'icons/turf/mining.dmi';
+	icon = '../assets/icons/turf/mining.dmi';
 	icon_state = "wateryrock4"
 	},
 /area/centcom/holding/cafepark)

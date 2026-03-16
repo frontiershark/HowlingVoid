@@ -61,7 +61,7 @@
 
 /obj/item/gun/energy/recharge/kinetic_accelerator/add_seclight_point()
 	AddComponent(/datum/component/seclite_attachable, \
-		light_overlay_icon = 'icons/obj/weapons/guns/flashlights.dmi', \
+		light_overlay_icon = '../assets/icons/obj/weapons/guns/flashlights.dmi', \
 		light_overlay = "flight", \
 		overlay_x = 15, \
 		overlay_y = 9)
@@ -173,7 +173,7 @@
 	projectile_type = /obj/projectile/kinetic
 	select_name = "kinetic"
 	e_cost = LASER_SHOTS(1, STANDARD_CELL_CHARGE * 0.5)
-	fire_sound = 'sound/items/weapons/kinetic_accel.ogg'
+	fire_sound = '../assets/sound/items/weapons/kinetic_accel.ogg'
 	newtonian_force = 1
 
 /obj/item/ammo_casing/energy/kinetic/ready_proj(atom/target, mob/living/user, quiet, zone_override = "")
@@ -283,7 +283,7 @@
 /obj/item/borg/upgrade/modkit
 	name = "kinetic accelerator modification kit"
 	desc = "An upgrade for kinetic accelerators."
-	icon = 'icons/obj/mining.dmi'
+	icon = '../assets/icons/obj/mining.dmi'
 	icon_state = "modkit"
 	w_class = WEIGHT_CLASS_SMALL
 	require_model = TRUE
@@ -345,7 +345,7 @@
 			if(transfer_to_loc && !user.transferItemToLoc(src, KA))
 				return
 			to_chat(user, span_notice("You install the modkit."))
-			playsound(loc, 'sound/items/tools/screwdriver.ogg', 100, TRUE)
+			playsound(loc, '../assets/sound/items/tools/screwdriver.ogg', 100, TRUE)
 			KA.modkits |= src
 		else
 			to_chat(user, span_notice("The modkit you're trying to install would conflict with an already installed modkit. Remove existing modkits first."))
@@ -425,7 +425,7 @@
 	name = "minebot cooldown decrease"
 	desc = "Decreases the cooldown of a kinetic accelerator. Only rated for minebot use."
 	icon_state = "door_electronics"
-	icon = 'icons/obj/devices/circuitry_n_data.dmi'
+	icon = '../assets/icons/obj/devices/circuitry_n_data.dmi'
 	denied_type = /obj/item/borg/upgrade/modkit/cooldown/minebot
 	modifier = 10
 	cost = 0

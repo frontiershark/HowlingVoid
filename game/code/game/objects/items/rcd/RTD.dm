@@ -13,19 +13,19 @@
 /obj/item/construction/rtd
 	name = "rapid-tiling-device (RTD)"
 	desc = "Used for fast placement & destruction of floor tiles."
-	icon = 'icons/obj/tools.dmi'
+	icon = '../assets/icons/obj/tools.dmi'
 	icon_state = "rtd"
 	worn_icon_state = "RCD"
-	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/tools_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/tools_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/tools_righthand.dmi'
 	custom_premium_price = PAYCHECK_COMMAND * 3
 	max_matter = 350
 	slot_flags = ITEM_SLOT_BELT
 	item_flags = NO_MAT_REDEMPTION | NOBLUDGEON
 	has_ammobar = TRUE
 	banned_upgrades = RCD_ALL_UPGRADES & ~RCD_UPGRADE_SILO_LINK
-	drop_sound = 'sound/items/handling/tools/rcd_drop.ogg'
-	pickup_sound = 'sound/items/handling/tools/rcd_pickup.ogg'
+	drop_sound = '../assets/sound/items/handling/tools/rcd_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/tools/rcd_pickup.ogg'
 	sound_vary = TRUE
 
 	/// main category for tile design
@@ -292,9 +292,9 @@
 	var/beam
 	if(ranged)
 		beam = user.Beam(floor, icon_state = "light_beam", time = delay)
-		playsound(loc, 'sound/effects/light_flicker.ogg', 50, FALSE)
+		playsound(loc, '../assets/sound/effects/light_flicker.ogg', 50, FALSE)
 	else
-		playsound(loc, 'sound/machines/click.ogg', 50, TRUE)
+		playsound(loc, '../assets/sound/machines/click.ogg', 50, TRUE)
 	if(!build_delay(user, delay, target = floor))
 		qdel(beam)
 		qdel(rcd_effect)
@@ -361,9 +361,9 @@
 	var/beam
 	if(ranged)
 		beam = user.Beam(floor, icon_state = "light_beam", time = delay)
-		playsound(loc, 'sound/effects/light_flicker.ogg', 50, FALSE)
+		playsound(loc, '../assets/sound/effects/light_flicker.ogg', 50, FALSE)
 	else
-		playsound(loc, 'sound/machines/click.ogg', 50, TRUE)
+		playsound(loc, '../assets/sound/machines/click.ogg', 50, TRUE)
 	if(!do_after(user, delay, target = floor))
 		qdel(beam)
 		qdel(rcd_effect)
@@ -420,7 +420,7 @@
 		balloon_alert(user, "insufficient charge!")
 		return FALSE
 	if(!dry_run)
-		playsound(loc, 'sound/items/deconstruct.ogg', 50, TRUE)
+		playsound(loc, '../assets/sound/items/deconstruct.ogg', 50, TRUE)
 		return borgy.cell.use(amount * RTD_BORG_ENERGY_FACTOR)
 	return TRUE
 

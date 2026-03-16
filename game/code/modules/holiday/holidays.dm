@@ -297,7 +297,7 @@ GLOBAL_LIST_INIT(holiday_mail, list())
 /datum/holiday/april_fools/celebrate()
 	. = ..()
 	SSjob.set_overflow_role(/datum/job/clown)
-	SSticker.set_lobby_music('sound/music/lobby_music/clown.ogg', override = TRUE)
+	SSticker.set_lobby_music('../assets/sound/music/lobby_music/clown.ogg', override = TRUE)
 	for(var/i in GLOB.new_player_list)
 		var/mob/dead/new_player/P = i
 		if(P.client)

@@ -113,7 +113,7 @@
 		human_owner.physiology.oxy_mod *= 0.1
 		human_owner.physiology.stamina_mod *= 0.1
 	owner.add_stun_absorption(source = id, priority = 4)
-	owner.playsound_local(get_turf(owner), 'sound/effects/singlebeat.ogg', 40, 1, use_reverb = FALSE)
+	owner.playsound_local(get_turf(owner), '../assets/sound/effects/singlebeat.ogg', 40, 1, use_reverb = FALSE)
 	return TRUE
 
 /datum/status_effect/blooddrunk/on_remove()
@@ -382,7 +382,7 @@
 	name = "Regenerative Core Tendrils"
 	desc = "You can move faster than your broken body could normally handle!"
 	use_user_hud_icon = TRUE
-	overlay_icon = 'icons/obj/medical/organs/mining_organs.dmi'
+	overlay_icon = '../assets/icons/obj/medical/organs/mining_organs.dmi'
 	overlay_state = "legion_core_stable"
 
 /datum/status_effect/regenerative_core
@@ -439,7 +439,7 @@
 /datum/status_effect/mayhem/on_apply()
 	. = ..()
 	to_chat(owner, "<span class='reallybig redtext'>RIP AND TEAR</span>")
-	SEND_SOUND(owner, sound('sound/effects/hallucinations/veryfar_noise.ogg'))
+	SEND_SOUND(owner, sound('../assets/sound/effects/hallucinations/veryfar_noise.ogg'))
 	owner.cause_hallucination( \
 		/datum/hallucination/delusion/preset/demon, \
 		"[id] status effect", \
@@ -486,7 +486,7 @@
 	if(isnum(set_duration))
 		duration = set_duration
 	new_owner.do_alert_animation()
-	playsound(new_owner, 'sound/machines/chime.ogg', 50, FALSE, -5)
+	playsound(new_owner, '../assets/sound/machines/chime.ogg', 50, FALSE, -5)
 	. = ..()
 
 /datum/status_effect/speed_boost/on_apply()
@@ -593,7 +593,7 @@
 	owner.add_stun_absorption(source = id, priority = 4)
 	owner.add_movespeed_mod_immunities(id, /datum/movespeed_modifier/damage_slowdown)
 	ADD_TRAIT(owner, TRAIT_FREE_HYPERSPACE_MOVEMENT, TRAIT_STATUS_EFFECT(id))
-	owner.playsound_local(get_turf(owner), 'sound/effects/chemistry/ahaha.ogg', vol = 100, vary = TRUE, use_reverb = TRUE)
+	owner.playsound_local(get_turf(owner), '../assets/sound/effects/chemistry/ahaha.ogg', vol = 100, vary = TRUE, use_reverb = TRUE)
 	return TRUE
 
 /datum/status_effect/blessing_of_insanity/on_remove()

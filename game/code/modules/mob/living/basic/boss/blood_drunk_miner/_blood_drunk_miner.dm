@@ -16,7 +16,7 @@ Difficulty: Medium
 	maxHealth = 900
 	icon_state = "miner"
 	icon_living = "miner"
-	icon = 'icons/mob/simple/broadMobs.dmi'
+	icon = '../assets/icons/mob/simple/broadMobs.dmi'
 	health_doll_icon = "miner"
 	mob_biotypes = MOB_ORGANIC|MOB_HUMANOID|MOB_SPECIAL|MOB_MINING
 	light_color = COLOR_LIGHT_GRAYISH_RED
@@ -71,7 +71,7 @@ Difficulty: Medium
 
 	RegisterSignal(src, COMSIG_LIVING_DROP_LOOT, PROC_REF(death_effect))
 
-	AddComponent(/datum/component/boss_music, 'sound/music/boss/bdm_boss.ogg', COMSIG_AI_BLACKBOARD_KEY_SET(BB_BASIC_MOB_CURRENT_TARGET))
+	AddComponent(/datum/component/boss_music, '../assets/sound/music/boss/bdm_boss.ogg', COMSIG_AI_BLACKBOARD_KEY_SET(BB_BASIC_MOB_CURRENT_TARGET))
 
 /// Block deletion of their saw under normal circumstances. It is fused to their hands as far as we're concerned.
 /mob/living/basic/boss/blood_drunk_miner/proc/on_saw_deleted(datum/source, force)

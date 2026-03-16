@@ -3,7 +3,7 @@
 /obj/machinery/recycler
 	name = "recycler"
 	desc = "A large crushing machine used to recycle small items inefficiently. There are lights on the side."
-	icon = 'icons/obj/machines/recycling.dmi'
+	icon = '../assets/icons/obj/machines/recycling.dmi'
 	icon_state = "grinder-o0"
 	layer = ABOVE_ALL_MOB_LAYER // Overhead
 	plane = ABOVE_GAME_PLANE
@@ -15,7 +15,7 @@
 	var/amount_produced = 50
 	var/crush_damage = 1000
 	var/eat_victim_items = TRUE
-	var/item_recycle_sound = 'sound/items/tools/welder.ogg'
+	var/item_recycle_sound = '../assets/sound/items/tools/welder.ogg'
 	var/datum/material_container/materials
 
 /obj/machinery/recycler/Initialize(mapload)
@@ -228,7 +228,7 @@
 	if(not_eaten)
 		var/sound_volume = clamp(not_eaten * 5, 50, 100)
 		var/walls_ignoring = max(not_eaten - 10, 0)
-		playsound(src, 'sound/machines/buzz/buzz-sigh.ogg', sound_volume, FALSE, not_eaten, ignore_walls = walls_ignoring) // Ditto.
+		playsound(src, '../assets/sound/machines/buzz/buzz-sigh.ogg', sound_volume, FALSE, not_eaten, ignore_walls = walls_ignoring) // Ditto.
 
 /// Determines if the target should trigger an emergency stop due to safety concerns.
 /obj/machinery/recycler/proc/triggers_safety_shutdown(atom/movable/target)
@@ -265,21 +265,21 @@
 	return FALSE
 
 /obj/machinery/recycler/proc/emergency_stop()
-	playsound(src, 'sound/machines/buzz/buzz-sigh.ogg', 50, FALSE)
+	playsound(src, '../assets/sound/machines/buzz/buzz-sigh.ogg', 50, FALSE)
 	safety_mode = TRUE
 	update_appearance()
 	addtimer(CALLBACK(src, PROC_REF(reboot)), SAFETY_COOLDOWN)
 
 /obj/machinery/recycler/proc/reboot()
-	playsound(src, 'sound/machines/ping.ogg', 50, FALSE)
+	playsound(src, '../assets/sound/machines/ping.ogg', 50, FALSE)
 	safety_mode = FALSE
 	update_appearance()
 
 /obj/machinery/recycler/proc/crush_living(mob/living/living_mob)
 	if(issilicon(living_mob))
-		playsound(src, 'sound/items/tools/welder.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/items/tools/welder.ogg', 50, TRUE)
 	else
-		playsound(src, 'sound/effects/splat.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/effects/splat.ogg', 50, TRUE)
 
 	if(iscarbon(living_mob) && living_mob.stat == CONSCIOUS)
 		living_mob.say("ARRRRRRRRRRRGH!!!", forced= "recycler grinding")

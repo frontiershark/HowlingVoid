@@ -5,12 +5,12 @@
 //Add lead material to this once implemented.
 /obj/item/lead_pipe
 	name = "lead pipe"
-	icon = 'icons/obj/maintenance_loot.dmi'
+	icon = '../assets/icons/obj/maintenance_loot.dmi'
 	icon_state = "lead_pipe"
 	inhand_icon_state = "lead_pipe"
 	icon_angle = -45
-	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/melee_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/melee_righthand.dmi'
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	//wow, lore
 	desc = "A hefty lead pipe.\nLead is an uncommon sight in this sector after being phased out due to employee health concerns. \
@@ -21,10 +21,10 @@
 	w_class = WEIGHT_CLASS_BULKY
 	wound_bonus = 20
 	demolition_mod = 1.25
-	pickup_sound = 'sound/items/handling/lead_pipe/lead_pipe_pickup.ogg'
-	drop_sound = 'sound/items/handling/materials/metal_drop.ogg'
-	throw_drop_sound = 'sound/items/handling/lead_pipe/lead_pipe_drop.ogg'
-	hitsound = 'sound/items/lead_pipe_hit.ogg'
+	pickup_sound = '../assets/sound/items/handling/lead_pipe/lead_pipe_pickup.ogg'
+	drop_sound = '../assets/sound/items/handling/materials/metal_drop.ogg'
+	throw_drop_sound = '../assets/sound/items/handling/lead_pipe/lead_pipe_drop.ogg'
+	hitsound = '../assets/sound/items/lead_pipe_hit.ogg'
 
 /obj/item/lead_pipe/grind_results()
 	return list(/datum/reagent/lead = 20)
@@ -34,7 +34,7 @@
 /obj/item/stock_parts/power_store/cell/lead
 	name = "lead-acid battery"
 	desc = "A primitive battery. It is quite large and feels unexpectedly heavy."
-	icon = 'icons/obj/maintenance_loot.dmi'
+	icon = '../assets/icons/obj/maintenance_loot.dmi'
 	icon_state = "lead_battery"
 	force = 10 // double the force of a normal cell
 	throwforce = 10

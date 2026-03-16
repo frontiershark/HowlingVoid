@@ -20,7 +20,7 @@ Slimecrossing Weapons
 /obj/item/knife/rainbowknife
 	name = "rainbow knife"
 	desc = "A strange, transparent knife which constantly shifts color. It hums slightly when moved."
-	icon = 'icons/obj/weapons/stabby.dmi'
+	icon = '../assets/icons/obj/weapons/stabby.dmi'
 	icon_state = "rainbowknife"
 	inhand_icon_state = "rainbowknife"
 	force = 15
@@ -32,19 +32,19 @@ Slimecrossing Weapons
 		damtype = pick(BRUTE, BURN, TOX, OXY)
 	switch(damtype)
 		if(BRUTE)
-			hitsound = 'sound/items/weapons/bladeslice.ogg'
+			hitsound = '../assets/sound/items/weapons/bladeslice.ogg'
 			attack_verb_continuous = string_list(list("slashes", "slices", "cuts"))
 			attack_verb_simple = string_list(list("slash", "slice", "cut"))
 		if(BURN)
-			hitsound = 'sound/items/weapons/sear.ogg'
+			hitsound = '../assets/sound/items/weapons/sear.ogg'
 			attack_verb_continuous = string_list(list("burns", "singes", "heats"))
 			attack_verb_simple = string_list(list("burn", "singe", "heat"))
 		if(TOX)
-			hitsound = 'sound/items/weapons/pierce.ogg'
+			hitsound = '../assets/sound/items/weapons/pierce.ogg'
 			attack_verb_continuous = string_list(list("poisons", "doses", "toxifies"))
 			attack_verb_simple = string_list(list("poison", "dose", "toxify"))
 		if(OXY)
-			hitsound = 'sound/effects/space_wind.ogg'
+			hitsound = '../assets/sound/effects/space_wind.ogg'
 			attack_verb_continuous = string_list(list("suffocates", "winds", "vacuums"))
 			attack_verb_simple = string_list(list("suffocate", "wind", "vacuum"))
 
@@ -52,7 +52,7 @@ Slimecrossing Weapons
 /obj/item/shield/adamantineshield
 	name = "adamantine shield"
 	desc = "A gigantic shield made of solid adamantium."
-	icon = 'icons/obj/weapons/shields.dmi'
+	icon = '../assets/icons/obj/weapons/shields.dmi'
 	icon_state = "adamshield"
 	inhand_icon_state = "adamshield"
 	w_class = WEIGHT_CLASS_HUGE
@@ -66,7 +66,7 @@ Slimecrossing Weapons
 	attack_verb_simple = list("bash", "pound", "slam")
 	item_flags = SLOWS_WHILE_IN_HAND
 	breakable_by_damage = FALSE
-	shield_bash_sound = 'sound/effects/glass/glassknock.ogg'
+	shield_bash_sound = '../assets/sound/effects/glass/glassknock.ogg'
 
 /datum/armor/shield_adamantineshield
 	melee = 50
@@ -84,12 +84,12 @@ Slimecrossing Weapons
 /obj/item/gun/magic/bloodchill
 	name = "blood chiller"
 	desc = "A horrifying weapon made of your own bone and blood vessels. It shoots slowing globules of your own blood. Ech."
-	icon = 'icons/obj/science/slimecrossing.dmi'
+	icon = '../assets/icons/obj/science/slimecrossing.dmi'
 	icon_state = "bloodgun"
 	inhand_icon_state = "bloodgun"
 	icon_angle = 180
-	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/guns_righthand.dmi'
 	item_flags = ABSTRACT | DROPDEL
 	w_class = WEIGHT_CLASS_HUGE
 	slot_flags = NONE
@@ -98,7 +98,7 @@ Slimecrossing Weapons
 	max_charges = 1 //Recharging costs blood.
 	recharge_rate = 1
 	ammo_type = /obj/item/ammo_casing/magic/bloodchill
-	fire_sound = 'sound/effects/blob/attackblob.ogg'
+	fire_sound = '../assets/sound/effects/blob/attackblob.ogg'
 
 /obj/item/gun/magic/bloodchill/Initialize(mapload)
 	. = ..()
@@ -127,7 +127,7 @@ Slimecrossing Weapons
 /obj/projectile/magic/bloodchill
 	name = "blood ball"
 	icon_state = "pulse0_bl"
-	hitsound = 'sound/effects/splat.ogg'
+	hitsound = '../assets/sound/effects/splat.ogg'
 
 /obj/projectile/magic/bloodchill/on_hit(mob/living/target, blocked = 0, pierce_hit)
 	. = ..()

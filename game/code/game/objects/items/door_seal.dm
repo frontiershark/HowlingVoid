@@ -1,11 +1,11 @@
 /obj/item/door_seal
 	name = "pneumatic airlock seal"
 	desc = "A brace used to seal and reinforce an airlock. Useful for making areas inaccessible to those without opposable thumbs."
-	icon = 'icons/obj/machines/wallmounts.dmi'
+	icon = '../assets/icons/obj/machines/wallmounts.dmi'
 	icon_state = "pneumatic_seal"
 	inhand_icon_state = "pneumatic_seal"
-	lefthand_file = 'icons/mob/inhands/items_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items_righthand.dmi'
 	obj_flags = CONDUCTS_ELECTRICITY
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	force = 5
@@ -21,6 +21,6 @@
 
 /obj/item/door_seal/suicide_act(mob/living/user)
 	user.visible_message(span_suicide("[user] is sealing [user.p_them()]self off from the world with [src]! It looks like [user.p_theyre()] trying to commit suicide!"))
-	playsound(src, 'sound/items/tools/jaws_pry.ogg', 30, TRUE)
+	playsound(src, '../assets/sound/items/tools/jaws_pry.ogg', 30, TRUE)
 	return BRUTELOSS
 

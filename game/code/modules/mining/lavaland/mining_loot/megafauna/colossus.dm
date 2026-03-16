@@ -58,7 +58,7 @@
 	return owner.can_speak()
 
 /obj/item/organ/vocal_cords/colossus/handle_speech(message)
-	playsound(get_turf(owner), 'sound/effects/magic/clockwork/invoke_general.ogg', 300, TRUE, 5)
+	playsound(get_turf(owner), '../assets/sound/effects/magic/clockwork/invoke_general.ogg', 300, TRUE, 5)
 	return //voice of god speaks for us
 
 /obj/item/organ/vocal_cords/colossus/speak_with(message)
@@ -81,7 +81,7 @@
 	name = "anomalous crystal"
 	desc = "A strange chunk of crystal, being in the presence of it fills you with equal parts excitement and dread."
 	var/observer_desc = "Anomalous crystals have descriptions that only observers can see. But this one hasn't been changed from the default."
-	icon = 'icons/obj/mining_zones/artefacts.dmi'
+	icon = '../assets/icons/obj/mining_zones/artefacts.dmi'
 	icon_state = "anomaly_crystal"
 	light_range = 8
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | ACID_PROOF
@@ -97,7 +97,7 @@
 	var/use_time = 0
 	/// If we are being used
 	var/active = FALSE
-	var/activation_sound = 'sound/effects/break_stone.ogg'
+	var/activation_sound = '../assets/sound/effects/break_stone.ogg'
 	COOLDOWN_DECLARE(cooldown_timer)
 
 /obj/machinery/anomalous_crystal/Initialize(mapload)
@@ -158,7 +158,7 @@
 	active = TRUE
 	set_anchored(TRUE)
 	balloon_alert_to_viewers("charging...")
-	playsound(src, 'sound/effects/magic/disable_tech.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/effects/magic/disable_tech.ogg', 50, TRUE)
 	sleep(use_time)
 	icon_state = initial(icon_state)
 	active = FALSE
@@ -177,7 +177,7 @@
 /obj/machinery/anomalous_crystal/honk //Revives the dead, but strips and equips them as a clown
 	observer_desc = "This crystal revives targets around it as clowns. Oh, that's horrible...."
 	activation_method = ACTIVATE_TOUCH
-	activation_sound = 'sound/items/bikehorn.ogg'
+	activation_sound = '../assets/sound/items/bikehorn.ogg'
 	use_time = 3 SECONDS
 	/// List of REFs to mobs that have been turned into a clown
 	var/list/clowned_mob_refs = list()
@@ -264,7 +264,7 @@
 /obj/machinery/anomalous_crystal/dark_reprise //Revives anyone nearby, but turns them into shadowpeople and renders them uncloneable, so the crystal is your only hope of getting up again if you go down.
 	observer_desc = "When activated, this crystal revives anyone nearby, but turns them into Shadowpeople and makes them unclonable, making the crystal their only hope of getting up again."
 	activation_method = ACTIVATE_TOUCH
-	activation_sound = 'sound/effects/hallucinations/growl1.ogg'
+	activation_sound = '../assets/sound/effects/hallucinations/growl1.ogg'
 	use_time = 3 SECONDS
 
 /obj/machinery/anomalous_crystal/dark_reprise/ActivationReaction(mob/user, method)
@@ -296,7 +296,7 @@
 /obj/machinery/anomalous_crystal/helpers //Lets ghost spawn as helpful creatures that can only heal people slightly. Incredibly fragile and they can't converse with humans
 	observer_desc = "This crystal allows ghosts to turn into a fragile creature that can heal people."
 	activation_method = ACTIVATE_TOUCH
-	activation_sound = 'sound/effects/ghost2.ogg'
+	activation_sound = '../assets/sound/effects/ghost2.ogg'
 	use_time = 5 SECONDS
 	var/ready_to_deploy = FALSE
 
@@ -309,7 +309,7 @@
 			source = src,
 			header = "Anomalous crystal activated",
 			click_interact = TRUE,
-			ghost_sound = 'sound/effects/ghost2.ogg',
+			ghost_sound = '../assets/sound/effects/ghost2.ogg',
 		)
 
 /obj/machinery/anomalous_crystal/helpers/attack_ghost(mob/dead/observer/user)
@@ -411,7 +411,7 @@
 /datum/action/exit_possession
 	name = "Exit Possession"
 	desc = "Exits the body you are possessing. They will explode violently when this occurs."
-	button_icon = 'icons/mob/actions/actions_spells.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_spells.dmi'
 	button_icon_state = "exit_possession"
 
 /datum/action/exit_possession/IsAvailable(feedback = FALSE)

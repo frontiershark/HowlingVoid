@@ -1,7 +1,7 @@
 /obj/machinery/power/emitter
 	name = "emitter"
 	desc = "A heavy-duty industrial laser, often used in containment fields and power generation."
-	icon = 'icons/obj/machines/engine/singularity.dmi' //NOVA EDIT - ICON OVERRIDDEN IN AESTHETICS MODULE
+	icon = '../assets/icons/obj/machines/engine/singularity.dmi' //NOVA EDIT - ICON OVERRIDDEN IN AESTHETICS MODULE
 	icon_state = "emitter"
 	base_icon_state = "emitter"
 
@@ -44,7 +44,7 @@
 	///What projectile type are we shooting?
 	var/projectile_type = /obj/projectile/beam/emitter/hitscan
 	///What's the projectile sound?
-	var/projectile_sound = 'sound/items/weapons/emitter.ogg'
+	var/projectile_sound = '../assets/sound/items/weapons/emitter.ogg'
 	///Sparks emitted with every shot
 	var/datum/effect_system/basic/spark_spread/sparks
 	///Stores the type of gun we are using inside the emitter
@@ -380,7 +380,7 @@
 		projectile_sound = diskie.stored_sound
 		fire_rate_mod = diskie.fire_rate_mod
 		no_shot_counter = diskie.no_shot_counter
-		playsound(src, 'sound/machines/card_slide.ogg', 50)
+		playsound(src, '../assets/sound/machines/card_slide.ogg', 50)
 		to_chat(user, span_notice("You update the [src]'s diode configuration with the [config_disk]."))
 		update_appearance()
 		if(diskie.consumable)
@@ -408,7 +408,7 @@
 		return
 	user.put_in_hands(gun)
 	gun = null
-	playsound(src, 'sound/items/deconstruct.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/deconstruct.ogg', 50, TRUE)
 	gun_properties = list()
 	set_projectile()
 	return TRUE
@@ -421,7 +421,7 @@
 	else
 		user.put_in_hands(diskie)
 	diskie = null
-	playsound(src, 'sound/machines/card_slide.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/machines/card_slide.ogg', 50, TRUE)
 	update_appearance()
 	set_projectile()
 	return TRUE
@@ -452,7 +452,7 @@
 
 /obj/machinery/power/emitter/prototype
 	name = "Prototype Emitter"
-	icon = 'icons/obj/weapons/turrets.dmi'
+	icon = '../assets/icons/obj/weapons/turrets.dmi'
 	icon_state = "protoemitter"
 	base_icon_state = "protoemitter"
 	icon_state_on = "protoemitter_+a"
@@ -467,7 +467,7 @@
 //BUCKLE HOOKS
 
 /obj/machinery/power/emitter/prototype/unbuckle_mob(mob/living/buckled_mob, force = FALSE, can_fall = TRUE)
-	playsound(src,'sound/vehicles/mecha/mechmove01.ogg', 50, TRUE)
+	playsound(src,'../assets/sound/vehicles/mecha/mechmove01.ogg', 50, TRUE)
 	manual = FALSE
 	for(var/obj/item/item in buckled_mob.held_items)
 		if(istype(item, /obj/item/turret_control))
@@ -488,7 +488,7 @@
 			return
 	buckled_mob.forceMove(get_turf(src))
 	..()
-	playsound(src, 'sound/vehicles/mecha/mechmove01.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/vehicles/mecha/mechmove01.ogg', 50, TRUE)
 	buckled_mob.pixel_y = 14
 	layer = 4.1
 	if(buckled_mob.client)
@@ -521,7 +521,7 @@
 
 /datum/action/innate/proto_emitter/firing/Activate()
 	if(proto_emitter.manual)
-		playsound(proto_emitter,'sound/vehicles/mecha/mechmove01.ogg', 50, TRUE)
+		playsound(proto_emitter,'../assets/sound/vehicles/mecha/mechmove01.ogg', 50, TRUE)
 		proto_emitter.manual = FALSE
 		name = "Switch to Manual Firing"
 		desc = "The emitter will only fire on your command and at your designated target"
@@ -531,7 +531,7 @@
 				qdel(item)
 		build_all_button_icons()
 		return
-	playsound(proto_emitter,'sound/vehicles/mecha/mechmove01.ogg', 50, TRUE)
+	playsound(proto_emitter,'../assets/sound/vehicles/mecha/mechmove01.ogg', 50, TRUE)
 	name = "Switch to Automatic Firing"
 	desc = "Emitters will switch to periodic firing at your last target"
 	button_icon_state = "mech_zoom_off"
@@ -551,7 +551,7 @@
 
 /obj/item/turret_control
 	name = "turret controls"
-	icon = 'icons/obj/weapons/hand.dmi'
+	icon = '../assets/icons/obj/weapons/hand.dmi'
 	icon_state = "offhand"
 	w_class = WEIGHT_CLASS_HUGE
 	item_flags = ABSTRACT | NOBLUDGEON
@@ -613,7 +613,7 @@
 		emitter.fire_beam(user)
 		delay = world.time + 10
 	else if (emitter.charge < 10)
-		playsound(src,'sound/machines/buzz/buzz-sigh.ogg', 50, TRUE)
+		playsound(src,'../assets/sound/machines/buzz/buzz-sigh.ogg', 50, TRUE)
 	return ITEM_INTERACT_SUCCESS
 
 /obj/machinery/power/emitter/ctf
@@ -629,11 +629,11 @@
 /obj/item/emitter_disk
 	name = "\improper Diode Disk: Debugger"
 	desc = "This disk can be used on an emitter with an open panel to reset its projectile. Unless this was handed to you by an admin, you should report this on github."
-	icon = 'icons/obj/devices/floppy_disks.dmi'
+	icon = '../assets/icons/obj/devices/floppy_disks.dmi'
 	icon_state = "datadisk6"
 	var/laser_color = COLOR_VIBRANT_LIME
 	var/stored_proj = /obj/projectile/beam/emitter/hitscan
-	var/stored_sound = 'sound/items/weapons/emitter.ogg'
+	var/stored_sound = '../assets/sound/items/weapons/emitter.ogg'
 	var/consumed_on_removal = TRUE
 	var/consumable = TRUE
 	var/fire_rate_mod = 1

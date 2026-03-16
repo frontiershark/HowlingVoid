@@ -51,7 +51,7 @@
 /obj/machinery/computer/arcade/orion_trail/kobayashi
 	name = "Kobayashi Maru control computer"
 	desc = "A test for cadets."
-	icon = 'icons/obj/machines/particle_accelerator.dmi'
+	icon = '../assets/icons/obj/machines/particle_accelerator.dmi'
 	icon_keyboard = null
 	icon_screen = null
 	icon_state = "control_boxp"
@@ -416,7 +416,7 @@
 	var/sheriff = remove_crewmember(target) //I shot the sheriff
 	if(target)
 		killed_crew += 1 //if there was no suspected lings, this is just plain murder
-	playsound(loc,'sound/items/weapons/gun/pistol/shot.ogg', 100, TRUE)
+	playsound(loc,'../assets/sound/items/weapons/gun/pistol/shot.ogg', 100, TRUE)
 	if(!settlers.len || !alive)
 		say("The last crewmember [sheriff], shot themselves, GAME OVER!")
 		if(obj_flags & EMAGGED)
@@ -496,7 +496,7 @@
 /obj/item/orion_ship
 	name = "model settler ship"
 	desc = "A model spaceship, it looks like those used back in the day when travelling to Orion! It even has a miniature FX-293 reactor, which was renowned for its instability and tendency to explode..."
-	icon = 'icons/obj/toys/toy.dmi'
+	icon = '../assets/icons/obj/toys/toy.dmi'
 	icon_state = "ship"
 	w_class = WEIGHT_CLASS_SMALL
 	///Boolean on whether the ship is active, setting itself off for destruction.
@@ -532,7 +532,7 @@
 			time_for_next_level = 3 SECONDS
 		if(2)
 			say("Oh, God! Code Eight! CODE EIGHT! IT'S GONNA BL-")
-			playsound(loc, 'sound/machines/buzz/buzz-sigh.ogg', 25, TRUE)
+			playsound(loc, '../assets/sound/machines/buzz/buzz-sigh.ogg', 25, TRUE)
 			time_for_next_level = 0.36 SECONDS
 		if(3 to INFINITY)
 			visible_message(span_userdanger("[src] explodes!"))

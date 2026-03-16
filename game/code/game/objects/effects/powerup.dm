@@ -1,6 +1,6 @@
 /obj/effect/powerup
 	name = "power-up"
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	density = FALSE
 	anchored = TRUE
 	resistance_flags = INDESTRUCTIBLE
@@ -55,11 +55,11 @@
 /obj/effect/powerup/health
 	name = "health pickup"
 	desc = "Blessing from the havens."
-	icon = 'icons/obj/storage/backpack.dmi'
+	icon = '../assets/icons/obj/storage/backpack.dmi'
 	icon_state = "backpack-medical"
 	respawn_time = 30 SECONDS
 	pickup_message = "Health restored!"
-	pickup_sound = 'sound/effects/magic/staff_healing.ogg'
+	pickup_sound = '../assets/sound/effects/magic/staff_healing.ogg'
 	/// How much the pickup heals when picked up
 	var/heal_amount = 50
 	/// Does this pickup fully heal when picked up
@@ -85,11 +85,11 @@
 /obj/effect/powerup/ammo
 	name = "ammo pickup"
 	desc = "You like revenge, right? Everybody likes revenge! Well, let's go get some!"
-	icon = 'icons/obj/storage/toolbox.dmi'
+	icon = '../assets/icons/obj/storage/toolbox.dmi'
 	icon_state = "ammobox"
 	respawn_time = 30 SECONDS
 	pickup_message = "Ammunition reloaded!"
-	pickup_sound = 'sound/items/weapons/gun/shotgun/rack.ogg'
+	pickup_sound = '../assets/sound/items/weapons/gun/shotgun/rack.ogg'
 
 /obj/effect/powerup/ammo/trigger(mob/living/target)
 	. = ..()
@@ -101,7 +101,7 @@
 		SEND_SIGNAL(gun, COMSIG_ITEM_RECHARGED)
 
 /obj/effect/powerup/ammo/ctf
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	icon_state = "at_shield1"
 	respawn_time = FALSE
 	lifetime = 30 SECONDS
@@ -110,7 +110,7 @@
 	name = "Lightning Orb"
 	desc = "You feel faster just looking at it."
 	icon_state = "speed"
-	pickup_sound = 'sound/effects/magic/lightningshock.ogg'
+	pickup_sound = '../assets/sound/effects/magic/lightningshock.ogg'
 
 /obj/effect/powerup/speed/trigger(mob/living/target)
 	. = ..()

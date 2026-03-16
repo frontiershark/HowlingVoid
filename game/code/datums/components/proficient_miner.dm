@@ -50,7 +50,7 @@
 
 	var/mining_delay = mineral_wall.tool_mine_speed * mining_speed
 	TIMER_COOLDOWN_START(mineral_wall, REF(user), mining_delay)
-	var/static/list/mine_sounds = list('sound/effects/pickaxe/picaxe1.ogg', 'sound/effects/pickaxe/picaxe2.ogg', 'sound/effects/pickaxe/picaxe3.ogg')
+	var/static/list/mine_sounds = list('../assets/sound/effects/pickaxe/picaxe1.ogg', '../assets/sound/effects/pickaxe/picaxe2.ogg', '../assets/sound/effects/pickaxe/picaxe3.ogg')
 	playsound(user, pick(mine_sounds), 50)
 
 	var/mob/living/driver = null

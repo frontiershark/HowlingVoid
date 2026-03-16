@@ -157,9 +157,9 @@
 				continue
 			//I want this modifier to be compatible with 'Mounts' and 'Paraplegic' wheelchairs.
 			var/atom/movable/currently_buckled = player.buckled
-			do_teleport(player, destination, 0, asoundin = 'sound/effects/phasein.ogg', forced = TRUE)
+			do_teleport(player, destination, 0, asoundin = '../assets/sound/effects/phasein.ogg', forced = TRUE)
 			if(currently_buckled && !currently_buckled.anchored)
-				do_teleport(currently_buckled, destination, 0, asoundin = 'sound/effects/phasein.ogg', forced = TRUE)
+				do_teleport(currently_buckled, destination, 0, asoundin = '../assets/sound/effects/phasein.ogg', forced = TRUE)
 				currently_buckled.buckle_mob(player)
 
 	COOLDOWN_START(src, teleport_cd, rand(12 SECONDS, 24 SECONDS))

@@ -501,7 +501,7 @@
 /obj/structure/fluff{
 	density = 1;
 	desc = "Ha ha ha, you fool!";
-	icon = 'icons/obj/stack_objects.dmi';
+	icon = '../assets/icons/obj/stack_objects.dmi';
 	icon_state = "sheet-gold_3";
 	name = "fool's gold"
 	},
@@ -587,7 +587,7 @@
 /obj/structure/fluff{
 	density = 1;
 	desc = "Ha ha ha, you fool!";
-	icon = 'icons/obj/stack_objects.dmi';
+	icon = '../assets/icons/obj/stack_objects.dmi';
 	icon_state = "sheet-silver_2";
 	name = "fool's silver"
 	},

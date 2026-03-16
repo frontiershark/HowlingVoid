@@ -297,7 +297,7 @@
 /datum/pet_command/minebot_ability
 	command_name = "Minebot ability"
 	command_desc = "Make your minebot use one of its abilities."
-	radial_icon = 'icons/mob/actions/actions_mecha.dmi'
+	radial_icon = '../assets/icons/mob/actions/actions_mecha.dmi'
 	///the ability we will use
 	var/ability_key
 

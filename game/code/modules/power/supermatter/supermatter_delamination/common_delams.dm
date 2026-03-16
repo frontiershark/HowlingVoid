@@ -44,7 +44,7 @@
 	if(sm.final_countdown)
 		sm.add_filter(name = "icon", priority = 3, params = list(
 			type = "layer",
-			icon = new/icon('icons/effects/96x96.dmi', "singularity_s3", frame = rand(1,8)),
+			icon = new/icon('../assets/icons/effects/96x96.dmi', "singularity_s3", frame = rand(1,8)),
 			flags = FILTER_OVERLAY
 		))
 	else
@@ -99,7 +99,7 @@
 
 	sm.add_filter(name = "icon", priority = 2, params = list(
 		type = "layer",
-		icon = new/icon('icons/obj/machines/engine/energy_ball.dmi', "energy_ball", frame = rand(1,12)),
+		icon = new/icon('../assets/icons/obj/machines/engine/energy_ball.dmi', "energy_ball", frame = rand(1,12)),
 		flags = FILTER_UNDERLAY
 	))
 

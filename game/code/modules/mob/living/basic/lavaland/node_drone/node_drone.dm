@@ -12,7 +12,7 @@
 /mob/living/basic/node_drone
 	name = "NODE drone"
 	desc = "Standard in-atmosphere drone, used by Nanotrasen to operate and excavate valuable ore vents."
-	icon = 'icons/obj/mining.dmi'
+	icon = '../assets/icons/obj/mining.dmi'
 	icon_state = "mining_node_active"
 	icon_living = "mining_node_active"
 	icon_dead = "mining_node_active"
@@ -129,7 +129,7 @@
 	animate(src, pixel_z = 400, time = 2 SECONDS, easing = QUAD_EASING|EASE_IN, flags = ANIMATION_PARALLEL)
 	sleep(2 SECONDS)
 	if(funny_ending)
-		playsound(src, 'sound/effects/explosion/explosion3.ogg', 50, FALSE) //node drone died on the way back to his home planet.
+		playsound(src, '../assets/sound/effects/explosion/explosion3.ogg', 50, FALSE) //node drone died on the way back to his home planet.
 		visible_message(span_notice("...or maybe not."))
 	qdel(src)
 

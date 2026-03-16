@@ -78,7 +78,7 @@
 /datum/action/cooldown/mob_cooldown/expel_gas
 	name = "Release Gas"
 	desc = "Start or stop expelling a selected gas into the environment."
-	button_icon = 'icons/mob/actions/actions_spells.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_spells.dmi'
 	button_icon_state = "smoke"
 	cooldown_time = 0 SECONDS // We're here for the interface not the cooldown
 	click_to_activate = FALSE

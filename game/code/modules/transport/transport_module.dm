@@ -5,7 +5,7 @@
 /obj/structure/transport/linear
 	name = "linear transport module"
 	desc = "A lightweight lift platform. It moves."
-	icon = 'icons/obj/smooth_structures/catwalk.dmi'
+	icon = '../assets/icons/obj/smooth_structures/catwalk.dmi'
 	icon_state = "catwalk-0"
 	base_icon_state = "catwalk"
 	density = FALSE
@@ -329,7 +329,7 @@
 				hit_wall.dismantle_wall(devastated = TRUE)
 				for(var/mob/nearby_witness in urange(8, src))
 					shake_camera(nearby_witness, 2, 3)
-				playsound(hit_wall, 'sound/effects/meteorimpact.ogg', 100, TRUE)
+				playsound(hit_wall, '../assets/sound/effects/meteorimpact.ogg', 100, TRUE)
 
 			for(var/mob/living/crushed in dest_turf.contents)
 				to_chat(crushed, span_userdanger("You are crushed by [src]!"))
@@ -358,7 +358,7 @@
 				hit_wall.dismantle_wall(devastated = TRUE)
 				for(var/mob/client_mob in SSspatial_grid.orthogonal_range_search(src, SPATIAL_GRID_CONTENTS_TYPE_CLIENTS, 8))
 					shake_camera(client_mob, 2, 3)
-				playsound(hit_wall, 'sound/effects/meteorimpact.ogg', 100, TRUE)
+				playsound(hit_wall, '../assets/sound/effects/meteorimpact.ogg', 100, TRUE)
 
 	else
 		///potentially finds a spot to throw the victim at for daring to be hit by a tram. is null if we havent found anything to throw
@@ -375,7 +375,7 @@
 				for(var/mob/client_mob in SSspatial_grid.orthogonal_range_search(collided_wall, SPATIAL_GRID_CONTENTS_TYPE_CLIENTS, 8))
 					shake_camera(client_mob, duration = 2, strength = 3)
 
-				playsound(collided_wall, 'sound/effects/meteorimpact.ogg', 100, TRUE)
+				playsound(collided_wall, '../assets/sound/effects/meteorimpact.ogg', 100, TRUE)
 
 			if(ismineralturf(dest_turf))
 				var/turf/closed/mineral/dest_mineral_turf = dest_turf
@@ -408,7 +408,7 @@
 				if(istype(victim_machine, /obj/machinery/field)) //graceful break handles this scenario
 					continue
 				if(victim_machine.layer >= LOW_OBJ_LAYER) //avoids stuff that is probably flush with the ground
-					playsound(src, 'sound/effects/bang.ogg', 50, TRUE)
+					playsound(src, '../assets/sound/effects/bang.ogg', 50, TRUE)
 					visible_message(span_danger("[src] smashes through [victim_machine]!"))
 					qdel(victim_machine)
 
@@ -430,7 +430,7 @@
 					continue
 				to_chat(victim_living, span_userdanger("[src] collides into you!"))
 				SEND_SIGNAL(victim_living, COMSIG_LIVING_HIT_BY_TRAM, src)
-				playsound(src, 'sound/effects/splat.ogg', 50, TRUE)
+				playsound(src, '../assets/sound/effects/splat.ogg', 50, TRUE)
 				var/damage = 0
 
 				log_combat(src, victim_living, "collided with")
@@ -446,7 +446,7 @@
 				victim_living.apply_damage(0.5 * damage, BRUTE, BODY_ZONE_R_ARM, wound_bonus = 14)
 
 				if (extra_ouch)
-					playsound(src, 'sound/effects/grillehit.ogg', 50, TRUE)
+					playsound(src, '../assets/sound/effects/grillehit.ogg', 50, TRUE)
 					var/obj/item/bodypart/head/head = victim_living.get_bodypart("head")
 					if(head)
 						log_combat(src, victim_living, "beheaded")
@@ -651,14 +651,14 @@
 	if(transport_controller_datum.Check_lift_move(UP))
 		var/static/image/up_arrow
 		if(!up_arrow)
-			up_arrow = image(icon = 'icons/testing/turf_analysis.dmi', icon_state = "red_arrow", dir = NORTH)
+			up_arrow = image(icon = '../assets/icons/testing/turf_analysis.dmi', icon_state = "red_arrow", dir = NORTH)
 
 		possible_directions["Up"] = up_arrow
 
 	if(transport_controller_datum.Check_lift_move(DOWN))
 		var/static/image/down_arrow
 		if(!down_arrow)
-			down_arrow = image(icon = 'icons/testing/turf_analysis.dmi', icon_state = "red_arrow", dir = SOUTH)
+			down_arrow = image(icon = '../assets/icons/testing/turf_analysis.dmi', icon_state = "red_arrow", dir = SOUTH)
 
 		possible_directions["Down"] = down_arrow
 
@@ -773,7 +773,7 @@
 /obj/machinery/door/poddoor/lift
 	name = "elevator door"
 	desc = "Keeps idiots like you from walking into an open elevator shaft."
-	icon = 'icons/obj/doors/liftdoor.dmi'
+	icon = '../assets/icons/obj/doors/liftdoor.dmi'
 	opacity = FALSE
 	glass = TRUE
 
@@ -789,7 +789,7 @@
 
 // A subtype intended for "public use"
 /obj/structure/transport/linear/public
-	icon = 'icons/turf/floors.dmi'
+	icon = '../assets/icons/turf/floors.dmi'
 	icon_state = "rockvault"
 	base_icon_state = null
 	smoothing_flags = NONE
@@ -813,14 +813,14 @@
 		return
 //NORTH, SOUTH, EAST, WEST, NORTHEAST, NORTHWEST, SOUTHEAST, SOUTHWEST
 	var/static/list/tool_list = list(
-		"NORTH" = image(icon = 'icons/testing/turf_analysis.dmi', icon_state = "red_arrow", dir = NORTH),
-		"NORTHEAST" = image(icon = 'icons/testing/turf_analysis.dmi', icon_state = "red_arrow", dir = NORTH),
-		"EAST" = image(icon = 'icons/testing/turf_analysis.dmi', icon_state = "red_arrow", dir = EAST),
-		"SOUTHEAST" = image(icon = 'icons/testing/turf_analysis.dmi', icon_state = "red_arrow", dir = EAST),
-		"SOUTH" = image(icon = 'icons/testing/turf_analysis.dmi', icon_state = "red_arrow", dir = SOUTH),
-		"SOUTHWEST" = image(icon = 'icons/testing/turf_analysis.dmi', icon_state = "red_arrow", dir = SOUTH),
-		"WEST" = image(icon = 'icons/testing/turf_analysis.dmi', icon_state = "red_arrow", dir = WEST),
-		"NORTHWEST" = image(icon = 'icons/testing/turf_analysis.dmi', icon_state = "red_arrow", dir = WEST)
+		"NORTH" = image(icon = '../assets/icons/testing/turf_analysis.dmi', icon_state = "red_arrow", dir = NORTH),
+		"NORTHEAST" = image(icon = '../assets/icons/testing/turf_analysis.dmi', icon_state = "red_arrow", dir = NORTH),
+		"EAST" = image(icon = '../assets/icons/testing/turf_analysis.dmi', icon_state = "red_arrow", dir = EAST),
+		"SOUTHEAST" = image(icon = '../assets/icons/testing/turf_analysis.dmi', icon_state = "red_arrow", dir = EAST),
+		"SOUTH" = image(icon = '../assets/icons/testing/turf_analysis.dmi', icon_state = "red_arrow", dir = SOUTH),
+		"SOUTHWEST" = image(icon = '../assets/icons/testing/turf_analysis.dmi', icon_state = "red_arrow", dir = SOUTH),
+		"WEST" = image(icon = '../assets/icons/testing/turf_analysis.dmi', icon_state = "red_arrow", dir = WEST),
+		"NORTHWEST" = image(icon = '../assets/icons/testing/turf_analysis.dmi', icon_state = "red_arrow", dir = WEST)
 		)
 
 	var/result = show_radial_menu(user, src, tool_list, custom_check = CALLBACK(src, PROC_REF(can_open_lift_radial), user, starting_position), require_near = TRUE, tooltips = FALSE)
@@ -864,7 +864,7 @@
 /obj/structure/transport/linear/tram
 	name = "tram subfloor"
 	desc = "The subfloor lattice of the tram. You can build a tram wall frame by using <b>titanium sheets,</b> or place down <b>thermoplastic tram floor tiles.</b>"
-	icon = 'icons/obj/tram/tram_structure.dmi'
+	icon = '../assets/icons/obj/tram/tram_structure.dmi'
 	icon_state = "subfloor"
 	base_icon_state = null
 	density = FALSE

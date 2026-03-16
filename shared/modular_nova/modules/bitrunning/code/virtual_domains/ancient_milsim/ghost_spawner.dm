@@ -2,7 +2,7 @@
 	name = "lagging asset"
 	desc = "A vaguely military humanoid shape with a static texture all over it. It's having some issues with compilation, give it some time."
 	prompt_name = "a weird compound operative"
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	icon_state = "static"
 	outfit = /datum/outfit/cin_soldier_player
 	you_are_text = "You are a smart NPC guarding the exit of a simulated combat domain."

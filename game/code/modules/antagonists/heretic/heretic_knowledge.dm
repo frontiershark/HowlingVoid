@@ -479,7 +479,7 @@
 	abstract_type = /datum/heretic_knowledge/knowledge_ritual
 	cost = 1
 	priority = MAX_KNOWLEDGE_PRIORITY - 10 // A pretty important midgame ritual.
-	research_tree_icon_path = 'icons/obj/antags/eldritch.dmi'
+	research_tree_icon_path = '../assets/icons/obj/antags/eldritch.dmi'
 	research_tree_icon_state = "book_open"
 	/// Whether we've done the ritual. Only doable once.
 	var/was_completed = FALSE

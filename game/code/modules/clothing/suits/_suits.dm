@@ -1,8 +1,8 @@
 /obj/item/clothing/suit
 	name = "suit"
-	icon = 'icons/obj/clothing/suits/default.dmi'
-	lefthand_file = 'icons/mob/inhands/clothing/suits_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/clothing/suits_righthand.dmi'
+	icon = '../assets/icons/obj/clothing/suits/default.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/clothing/suits_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/clothing/suits_righthand.dmi'
 	abstract_type = /obj/item/clothing/suit
 	var/fire_resist = T0C+100
 	allowed = list(
@@ -13,8 +13,8 @@
 		/obj/item/cane, // NOVA EDIT ADDITION
 	)
 	armor_type = /datum/armor/none
-	drop_sound = 'sound/items/handling/cloth/cloth_drop1.ogg'
-	pickup_sound = 'sound/items/handling/cloth/cloth_pickup1.ogg'
+	drop_sound = '../assets/sound/items/handling/cloth/cloth_drop1.ogg'
+	pickup_sound = '../assets/sound/items/handling/cloth/cloth_pickup1.ogg'
 	slot_flags = ITEM_SLOT_OCLOTHING
 	var/blood_overlay_type = "suit"
 	limb_integrity = 0 // disabled for most exo-suits
@@ -25,9 +25,9 @@
 		return
 
 	if(damaged_clothes)
-		//. += mutable_appearance('icons/effects/item_damage.dmi', "damaged[blood_overlay_type]") // NOVA EDIT REMOVAL
+		//. += mutable_appearance('../assets/icons/effects/item_damage.dmi', "damaged[blood_overlay_type]") // NOVA EDIT REMOVAL
 		// NOVA EDIT ADDITION BEGIN
-		var/damagefile2use = (mutant_styles & STYLE_TAUR_ALL) ? 'modular_nova/master_files/icons/mob/64x32_item_damage.dmi' : 'icons/effects/item_damage.dmi'
+		var/damagefile2use = (mutant_styles & STYLE_TAUR_ALL) ? 'modular_nova/master_files/icons/mob/64x32_item_damage.dmi' : '../assets/icons/effects/item_damage.dmi'
 		. += mutable_appearance(damagefile2use, "damaged[blood_overlay_type]")
 		//NOVA EDIT ADDITION END
 

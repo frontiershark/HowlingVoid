@@ -1,14 +1,14 @@
 /obj/item/crafting_conversion_kit
 	name = "base conversion kit"
 	desc = "It's a set of parts, for something. This shouldn't be here, and you should probably throw this away, since it's not going to be very useful."
-	icon = 'icons/obj/storage/box.dmi'
+	icon = '../assets/icons/obj/storage/box.dmi'
 	icon_state = "secbox"
 	// the inhands are just what the box uses
 	inhand_icon_state = "syringe_kit"
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
-	drop_sound = 'sound/items/handling/component_drop.ogg'
-	pickup_sound = 'sound/items/handling/component_pickup.ogg'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/medical_righthand.dmi'
+	drop_sound = '../assets/sound/items/handling/component_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/component_pickup.ogg'
 	/// Optional lore blurb. If it exists, is passed along on examine.
 	var/lore_blurb
 

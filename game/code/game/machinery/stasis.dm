@@ -2,7 +2,7 @@
 /obj/machinery/stasis
 	name = "lifeform stasis unit"
 	desc = "A not so comfortable looking bed with some nozzles at the top and bottom. It will keep someone in stasis."
-	icon = 'icons/obj/machines/stasis.dmi'
+	icon = '../assets/icons/obj/machines/stasis.dmi'
 	icon_state = "stasis"
 	base_icon_state = "stasis"
 	density = FALSE
@@ -51,9 +51,9 @@
 	if(last_stasis_sound != _running)
 		var/sound_freq = rand(5120, 8800)
 		if(_running)
-			playsound(src, 'sound/machines/synth/synth_yes.ogg', 50, TRUE, frequency = sound_freq)
+			playsound(src, '../assets/sound/machines/synth/synth_yes.ogg', 50, TRUE, frequency = sound_freq)
 		else
-			playsound(src, 'sound/machines/synth/synth_no.ogg', 50, TRUE, frequency = sound_freq)
+			playsound(src, '../assets/sound/machines/synth/synth_no.ogg', 50, TRUE, frequency = sound_freq)
 		last_stasis_sound = _running
 
 /obj/machinery/stasis/click_alt(mob/user)
@@ -61,7 +61,7 @@
 		return CLICK_ACTION_BLOCKING
 	stasis_enabled = !stasis_enabled
 	stasis_can_toggle = world.time + STASIS_TOGGLE_COOLDOWN
-	playsound(src, 'sound/machines/click.ogg', 60, TRUE)
+	playsound(src, '../assets/sound/machines/click.ogg', 60, TRUE)
 	user.visible_message(span_notice("\The [src] [stasis_enabled ? "powers on" : "shuts down"]."), \
 				span_notice("You [stasis_enabled ? "power on" : "shut down"] \the [src]."), \
 				span_hear("You hear a nearby machine [stasis_enabled ? "power on" : "shut down"]."))
@@ -134,7 +134,7 @@
 	if(target != occupant)
 		return
 	var/freq = rand(24750, 26550)
-	playsound(src, 'sound/effects/spray.ogg', 5, TRUE, 2, frequency = freq)
+	playsound(src, '../assets/sound/effects/spray.ogg', 5, TRUE, 2, frequency = freq)
 	target.apply_status_effect(/datum/status_effect/grouped/stasis, STASIS_MACHINE_EFFECT)
 	target.extinguish_mob()
 	update_use_power(ACTIVE_POWER_USE)

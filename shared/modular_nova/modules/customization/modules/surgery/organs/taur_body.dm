@@ -96,7 +96,7 @@
 /datum/action/cooldown/spell/mermaid_toggle
 	name = "Grow Legs"
 	desc = "Grow legs and walk on land."
-	button_icon = 'icons/mob/actions/actions_silicon.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_silicon.dmi'
 	button_icon_state = "deactivate_wash"
 
 	cooldown_time = 5 SECONDS

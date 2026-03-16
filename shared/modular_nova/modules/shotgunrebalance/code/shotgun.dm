@@ -287,7 +287,7 @@
 	projectile_type = /obj/projectile/bullet/pellet/shotgun_buckshot/beehive
 	pellets = 4
 	variance = 15
-	fire_sound = 'sound/items/weapons/taser.ogg'
+	fire_sound = '../assets/sound/items/weapons/taser.ogg'
 	harmful = FALSE
 	custom_materials = AMMO_MATS_SHOTGUN_HIVE
 	ammo_categories = AMMO_CLASS_NICHE_LTL
@@ -319,7 +319,7 @@
 	icon_state = "lasershell"
 	projectile_type = /obj/projectile/energy/electrode
 	harmful = FALSE
-	fire_sound = 'sound/items/weapons/taser.ogg'
+	fire_sound = '../assets/sound/items/weapons/taser.ogg'
 	custom_materials = AMMO_MATS_SHOTGUN_TIDE
 	ammo_categories = AMMO_CLASS_NICHE_LTL
 
@@ -363,7 +363,7 @@
 	projectile_type = /obj/projectile/bullet/honkshot
 	pellets = 19 // The most crucial buff.
 	variance = 35
-	fire_sound = 'sound/items/bikehorn.ogg'
+	fire_sound = '../assets/sound/items/bikehorn.ogg'
 	harmful = FALSE
 	ammo_categories = AMMO_CLASS_NONE
 

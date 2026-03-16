@@ -129,7 +129,7 @@ GLOBAL_LIST_EMPTY(heretic_arenas)
 /turf/closed/indestructible/heretic_wall
 	name = "eldritch wall"
 	desc = "A wall penning in the sheep amongst the wolves. It glows with malevolent energy - prodding it is likely unwise."
-	icon = 'icons/turf/walls.dmi'
+	icon = '../assets/icons/turf/walls.dmi'
 	icon_state = "eldritch_forcewall"
 	opacity = FALSE
 	pass_flags_self = NONE // No PASSCLOSEDTURF because only arena victors are allowed to go in or out
@@ -154,7 +154,7 @@ GLOBAL_LIST_EMPTY(heretic_arenas)
 /// Called when you crit somebody to update your crown
 /datum/status_effect/arena_tracker/proc/on_crit_somebody()
 	owner.cut_overlay(crown_overlay)
-	crown_overlay = mutable_appearance('icons/mob/effects/crown.dmi', "arena_victor", -HALO_LAYER)
+	crown_overlay = mutable_appearance('../assets/icons/mob/effects/crown.dmi', "arena_victor", -HALO_LAYER)
 	crown_overlay.pixel_z = 24
 	owner.add_overlay(crown_overlay)
 	owner.remove_traits(list(TRAIT_ELDRITCH_ARENA_PARTICIPANT, TRAIT_NO_TELEPORT), TRAIT_STATUS_EFFECT(id))
@@ -201,7 +201,7 @@ GLOBAL_LIST_EMPTY(heretic_arenas)
 	RegisterSignal(owner, COMSIG_MOVABLE_IMPACT_ZONE, PROC_REF(on_impact_zone))
 	RegisterSignal(owner, COMSIG_MOB_APPLY_DAMAGE, PROC_REF(damage_taken))
 	owner.add_traits(list(TRAIT_ELDRITCH_ARENA_PARTICIPANT, TRAIT_NO_TELEPORT), TRAIT_STATUS_EFFECT(id))
-	crown_overlay = mutable_appearance('icons/mob/effects/crown.dmi', "arena_fighter", -HALO_LAYER)
+	crown_overlay = mutable_appearance('../assets/icons/mob/effects/crown.dmi', "arena_fighter", -HALO_LAYER)
 	crown_overlay.pixel_z = 24
 	owner.add_overlay(crown_overlay)
 	return TRUE

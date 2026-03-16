@@ -9,7 +9,7 @@ The console is located at computer/gulag_teleporter.dm
 /obj/machinery/gulag_teleporter
 	name = "labor camp teleporter"
 	desc = "A bluespace teleporter used for teleporting prisoners to the labor camp."
-	icon = 'icons/obj/machines/implant_chair.dmi'
+	icon = '../assets/icons/obj/machines/implant_chair.dmi'
 	icon_state = "implantchair"
 	base_icon_state = "implantchair"
 	state_open = FALSE
@@ -188,7 +188,7 @@ The console is located at computer/gulag_teleporter.dm
 /obj/structure/gulag_beacon
 	name = "labor camp bluespace beacon"
 	desc = "A receiving beacon for bluespace teleportations."
-	icon = 'icons/turf/floors.dmi'
+	icon = '../assets/icons/turf/floors.dmi'
 	icon_state = "light_on-8"
 	resistance_flags = INDESTRUCTIBLE
 	anchored = TRUE

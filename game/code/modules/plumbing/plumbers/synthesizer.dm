@@ -3,7 +3,7 @@
 	name = "chemical synthesizer"
 	desc = "Produces a single chemical at a given volume. Must be plumbed. Most effective when working in unison with other chemical synthesizers, heaters and filters."
 	icon_state = "synthesizer"
-	icon = 'icons/obj/pipes_n_cables/hydrochem/plumbers.dmi'
+	icon = '../assets/icons/obj/pipes_n_cables/hydrochem/plumbers.dmi'
 
 	///Amount we produce for every process by default.
 	var/amount = 5

@@ -13,7 +13,7 @@
 /area/virtual_domain
 	name = "Virtual Domain Ruins"
 	icon_state = "bit_ruin"
-	icon = 'icons/area/areas_station.dmi'
+	icon = '../assets/icons/area/areas_station.dmi'
 	area_flags = LOCAL_TELEPORT | EVENT_PROTECTED | HIDDEN_AREA | UNLIMITED_FISHING
 	area_flags_mapping = VIRTUAL_AREA
 	default_gravity = STANDARD_GRAVITY
@@ -49,14 +49,14 @@
 
 /area/ruin/space/virtual_domain
 	name = "Virtual Domain Unexplored Location"
-	icon = 'icons/area/areas_station.dmi'
+	icon = '../assets/icons/area/areas_station.dmi'
 	icon_state = "bit_ruin"
 	area_flags = /area/virtual_domain::area_flags
 	area_flags_mapping = /area/virtual_domain::area_flags_mapping
 
 /area/space/virtual_domain
 	name = "Virtual Domain Space"
-	icon = 'icons/area/areas_station.dmi'
+	icon = '../assets/icons/area/areas_station.dmi'
 	icon_state = "bit_space"
 	area_flags = /area/virtual_domain::area_flags
 	area_flags_mapping = /area/virtual_domain::area_flags_mapping

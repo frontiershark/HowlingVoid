@@ -4,7 +4,7 @@
 	complexity = "Hard"
 	complexity_color = COLOR_RED
 	icon = list(
-		"icon" = 'icons/obj/weapons/khopesh.dmi',
+		"icon" = '../assets/icons/obj/weapons/khopesh.dmi',
 		"state" = "cosmic_blade",
 		"frame" = 1,
 		"dir" = SOUTH,
@@ -58,7 +58,7 @@
 		/obj/item/stack/sheet/mineral/plasma = 1,
 	)
 	result_atoms = list(/obj/item/melee/sickly_blade/cosmic)
-	research_tree_icon_path = 'icons/obj/weapons/khopesh.dmi'
+	research_tree_icon_path = '../assets/icons/obj/weapons/khopesh.dmi'
 	research_tree_icon_state = "cosmic_blade"
 	mark_type = /datum/status_effect/eldritch/cosmic
 	eldritch_passive = /datum/status_effect/heretic_passive/cosmic
@@ -123,7 +123,7 @@
 		If you combo three attacks you will receive a cosmic trail and increase your combo timer up to ten seconds."
 	gain_text = "The Beast took my blades in their hand, I kneeled and felt a sharp pain. \
 		The blades now glistened with fragmented power. I fell to the ground and wept at the beast's feet."
-	research_tree_icon_path = 'icons/ui_icons/antags/heretic/knowledge.dmi'
+	research_tree_icon_path = '../assets/icons/ui_icons/antags/heretic/knowledge.dmi'
 	research_tree_icon_state = "blade_upgrade_cosmos"
 	/// Storage for the second target.
 	var/datum/weakref/second_target
@@ -171,14 +171,14 @@
 		combo_counter += 1
 	if(second_target_resolved)
 		new /obj/effect/temp_visual/cosmic_explosion(get_turf(second_target_resolved))
-		playsound(get_turf(second_target_resolved), 'sound/effects/magic/cosmic_energy.ogg', 25, FALSE)
+		playsound(get_turf(second_target_resolved), '../assets/sound/effects/magic/cosmic_energy.ogg', 25, FALSE)
 		need_mob_update = FALSE
 		need_mob_update += second_target_resolved.adjust_fire_loss(14, updating_health = FALSE)
 		if(need_mob_update)
 			second_target_resolved.updatehealth()
 		if(third_target_resolved)
 			new /obj/effect/temp_visual/cosmic_domain(get_turf(third_target_resolved))
-			playsound(get_turf(third_target_resolved), 'sound/effects/magic/cosmic_energy.ogg', 50, FALSE)
+			playsound(get_turf(third_target_resolved), '../assets/sound/effects/magic/cosmic_energy.ogg', 50, FALSE)
 			need_mob_update = FALSE
 			need_mob_update += third_target_resolved.adjust_fire_loss(28, updating_health = FALSE)
 			if(need_mob_update)
@@ -233,7 +233,7 @@
 
 	ascension_achievement = /datum/award/achievement/misc/cosmic_ascension
 	announcement_text = "%SPOOKY% A Star Gazer has arrived into the station, %NAME% has ascended! This station is the domain of the Cosmos! %SPOOKY%"
-	announcement_sound = 'sound/music/antag/heretic/ascend_cosmic.ogg'
+	announcement_sound = '../assets/sound/music/antag/heretic/ascend_cosmic.ogg'
 	/// A static list of command we can use with our mob.
 	var/static/list/star_gazer_commands = list(
 		/datum/pet_command/idle,
@@ -297,7 +297,7 @@
 /datum/action/cooldown/mob_cooldown/replace_star_gazer
 	name = "Reset Star Gazer Consciousness"
 	desc = "Replaces the mind of your summon with that of a different ghost."
-	button_icon = 'icons/mob/simple/mob.dmi'
+	button_icon = '../assets/icons/mob/simple/mob.dmi'
 	button_icon_state = "ghost"
 	background_icon_state = "bg_heretic"
 	overlay_icon_state = "bg_heretic_border"

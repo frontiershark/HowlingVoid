@@ -1,7 +1,7 @@
 /obj/machinery/satellite
 	name = "\improper Defunct Satellite"
 	desc = ""
-	icon = 'icons/obj/machines/satellite.dmi'
+	icon = '../assets/icons/obj/machines/satellite.dmi'
 	icon_state = "sat_inactive"
 	base_icon_state = "sat"
 	anchored = FALSE

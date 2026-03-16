@@ -29,7 +29,7 @@ GLOBAL_LIST_INIT(shower_mode_descriptions, list(
 /obj/machinery/shower
 	name = "shower"
 	desc = "The HS-452. Installed in the 2550s by the Nanotrasen Hygiene Division, now with 2560 lead compliance! Passively replenishes itself with water when not in use."
-	icon = 'icons/obj/watercloset.dmi'
+	icon = '../assets/icons/obj/watercloset.dmi'
 	icon_state = "shower"
 	density = FALSE
 	layer = ABOVE_WINDOW_LAYER
@@ -144,7 +144,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/shower, (-16))
 			to_chat(user, span_warning("There is already has a water recycler installed."))
 			return
 
-		playsound(src, 'sound/machines/click.ogg', 20, TRUE)
+		playsound(src, '../assets/sound/machines/click.ogg', 20, TRUE)
 		qdel(tool)
 		has_water_reclaimer = TRUE
 		begin_processing()
@@ -203,7 +203,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/shower, (-16))
 	. = ..()
 	if(!actually_on)
 		return
-	var/mutable_appearance/water_falling = mutable_appearance('icons/obj/watercloset.dmi', "water", ABOVE_MOB_LAYER, appearance_flags = KEEP_APART)
+	var/mutable_appearance/water_falling = mutable_appearance('../assets/icons/obj/watercloset.dmi', "water", ABOVE_MOB_LAYER, appearance_flags = KEEP_APART)
 	water_falling.color = mix_color_from_reagents(reagents.reagent_list)
 	switch(dir)
 		if(NORTH)
@@ -380,7 +380,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/shower, (-16))
 
 /obj/structure/showerframe
 	name = "shower frame"
-	icon = 'icons/obj/watercloset.dmi'
+	icon = '../assets/icons/obj/watercloset.dmi'
 	icon_state = "shower_frame"
 	desc = "A shower frame, that needs a water recycler to finish construction."
 	anchored = FALSE
@@ -395,7 +395,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/shower, (-16))
 		qdel(tool)
 		var/obj/machinery/shower/shower = new(loc, REVERSE_DIR(dir), TRUE)
 		qdel(src)
-		playsound(shower, 'sound/machines/click.ogg', 20, TRUE)
+		playsound(shower, '../assets/sound/machines/click.ogg', 20, TRUE)
 		return
 	return ..()
 
@@ -410,7 +410,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/shower, (-16))
 
 /obj/effect/mist
 	name = "mist"
-	icon = 'icons/obj/watercloset.dmi'
+	icon = '../assets/icons/obj/watercloset.dmi'
 	icon_state = "mist"
 	layer = FLY_LAYER
 	plane = ABOVE_GAME_PLANE

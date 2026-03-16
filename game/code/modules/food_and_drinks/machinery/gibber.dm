@@ -1,7 +1,7 @@
 /obj/machinery/gibber
 	name = "gibber"
 	desc = "The name isn't descriptive enough?"
-	icon = 'icons/obj/machines/kitchen.dmi'
+	icon = '../assets/icons/obj/machines/kitchen.dmi'
 	icon_state = "grinder"
 	density = TRUE
 	circuit = /obj/item/circuitboard/machine/gibber
@@ -172,14 +172,14 @@
 
 	if(occupant.flags_1 & HOLOGRAM_1)
 		audible_message(span_hear("You hear a very short metallic grinding sound."))
-		playsound(loc, 'sound/machines/hiss.ogg', 20, TRUE)
+		playsound(loc, '../assets/sound/machines/hiss.ogg', 20, TRUE)
 		qdel(occupant)
 		set_occupant(null)
 		return
 
 	use_energy(active_power_usage)
 	audible_message(span_hear("You hear a loud squelchy grinding sound."))
-	playsound(loc, 'sound/machines/juicer.ogg', 50, TRUE)
+	playsound(loc, '../assets/sound/machines/juicer.ogg', 50, TRUE)
 	operating = TRUE
 	update_appearance()
 	Shake(pixelshiftx = 1, pixelshifty = 0, duration = gibtime)
@@ -300,7 +300,7 @@
 		result.reagents?.add_reagent(/datum/reagent/consumable/nutriment/fat, victim.nutrition / /datum/reagent/consumable/nutriment/fat::nutriment_factor / reagents_in_produced)
 
 /obj/machinery/gibber/proc/finish_gibbing(list/obj/item/results, gibs_type, list/datum/disease/diseases)
-	playsound(src.loc, 'sound/effects/splat.ogg', 50, TRUE)
+	playsound(src.loc, '../assets/sound/effects/splat.ogg', 50, TRUE)
 	operating = FALSE
 	if (!dirty && prob(50))
 		dirty = TRUE

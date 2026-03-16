@@ -31,11 +31,11 @@
 		// Trying to turn on camera mode while you have another click intercept active, such as malf abilities
 		if(sound)
 			balloon_alert(user, "can't enable camera mode!")
-			playsound(user, 'sound/machines/buzz/buzz-sigh.ogg', 25, TRUE)
+			playsound(user, '../assets/sound/machines/buzz/buzz-sigh.ogg', 25, TRUE)
 		return
 
 	if(sound)
-		playsound(user, 'sound/items/tools/wirecutter.ogg', 50, TRUE)
+		playsound(user, '../assets/sound/items/tools/wirecutter.ogg', 50, TRUE)
 		balloon_alert(user, "camera mode [user.click_intercept == src ? "activated" : "deactivated"]")
 
 /obj/item/camera/siliconcam/proc/selectpicture(mob/user)
@@ -124,4 +124,4 @@
 	user.toner -= printcost  //All fun allowed.
 	user.visible_message(span_notice("[user.name] spits out a photograph from a narrow slot on its chassis."), span_notice("You print a photograph."))
 	balloon_alert(user, "photograph printed")
-	playsound(src, 'sound/items/taperecorder/taperecorder_print.ogg', 50, TRUE, -3)
+	playsound(src, '../assets/sound/items/taperecorder/taperecorder_print.ogg', 50, TRUE, -3)

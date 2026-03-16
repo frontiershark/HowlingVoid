@@ -1,6 +1,6 @@
 //Fans
 /obj/structure/fans
-	icon = 'icons/obj/mining_zones/survival_pod.dmi'
+	icon = '../assets/icons/obj/mining_zones/survival_pod.dmi'
 	icon_state = "fans"
 	name = "environmental regulation system"
 	desc = "A large machine releasing a constant gust of air."
@@ -46,7 +46,7 @@
 /obj/structure/fans/tiny/shield
 	name = "shuttle bay shield"
 	desc = "A tenuously thin energy shield only capable of holding in air, but not solid objects or people."
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	icon_state = "shield-old" // We should probably get these their own icon at some point
 	light_color = LIGHT_COLOR_BLUE
 	light_range = 4

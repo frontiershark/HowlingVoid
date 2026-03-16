@@ -15,12 +15,12 @@
 	name = "soap"
 	desc = "A cheap bar of soap. Doesn't smell."
 	gender = PLURAL
-	icon = 'icons/obj/watercloset.dmi'
+	icon = '../assets/icons/obj/watercloset.dmi'
 	icon_state = "soap"
 	inhand_icon_state = "soap"
 	worn_icon_state = "soap"
-	lefthand_file = 'icons/mob/inhands/equipment/custodial_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/custodial_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/custodial_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/custodial_righthand.dmi'
 	w_class = WEIGHT_CLASS_TINY
 	item_flags = NOBLUDGEON
 	throwforce = 0
@@ -191,12 +191,12 @@
 /obj/item/bikehorn
 	name = "bike horn"
 	desc = "A horn off of a bicycle. Rumour has it that they're made from recycled clowns."
-	icon = 'icons/obj/art/horn.dmi'
+	icon = '../assets/icons/obj/art/horn.dmi'
 	icon_state = "bike_horn"
 	inhand_icon_state = "bike_horn"
 	worn_icon_state = "horn"
-	lefthand_file = 'icons/mob/inhands/equipment/horns_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/horns_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/horns_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/horns_righthand.dmi'
 	throwforce = 0
 	hitsound = null //To prevent tap.ogg playing, as the item lacks of force
 	w_class = WEIGHT_CLASS_TINY
@@ -206,7 +206,7 @@
 	attack_verb_continuous = list("HONKS")
 	attack_verb_simple = list("HONK")
 	///sound file given to the squeaky component we make in Initialize() so sub-types can specify their own sound
-	var/sound_file = 'sound/items/bikehorn.ogg'
+	var/sound_file = '../assets/sound/items/bikehorn.ogg'
 
 /obj/item/bikehorn/Initialize(mapload)
 	. = ..()
@@ -223,7 +223,7 @@
 
 /obj/item/bikehorn/suicide_act(mob/living/user)
 	user.visible_message(span_suicide("[user] solemnly points [src] at [user.p_their()] temple! It looks like [user.p_theyre()] trying to commit suicide!"))
-	playsound(src, 'sound/items/bikehorn.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/bikehorn.ogg', 50, TRUE)
 	return BRUTELOSS
 
 //air horn
@@ -232,7 +232,7 @@
 	desc = "Damn son, where'd you find this?"
 	icon_state = "air_horn"
 	worn_icon_state = "horn_air"
-	sound_file = 'sound/items/airhorn/airhorn2.ogg'
+	sound_file = '../assets/sound/items/airhorn/airhorn2.ogg'
 
 /datum/crafting_recipe/airhorn
 	name = "Air Horn"
@@ -278,13 +278,13 @@
 /obj/item/bikehorn/rubberducky
 	name = "rubber ducky"
 	desc = "Rubber ducky you're so fine, you make bathtime lots of fuuun. Rubber ducky I'm awfully fooooond of yooooouuuu~" //thanks doohl
-	icon = 'icons/obj/watercloset.dmi'
+	icon = '../assets/icons/obj/watercloset.dmi'
 	icon_state = "rubberducky"
 	inhand_icon_state = "rubberducky"
-	lefthand_file = 'icons/mob/inhands/items_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items_righthand.dmi'
 	worn_icon_state = "duck"
-	sound_file = 'sound/effects/quack.ogg'
+	sound_file = '../assets/sound/effects/quack.ogg'
 
 //canned laughter
 /obj/item/reagent_containers/cup/soda_cans/canned_laughter
@@ -298,12 +298,12 @@
 /obj/item/balloon_mallet
 	name = "balloon mallet"
 	desc = "It's a mallet, a weapon known for being heavy, but made from notoriously light balloons. Air inside removes any force from the swings. It'd be quite embarrassing to get hit by this."
-	icon = 'icons/obj/weapons/hammer.dmi'
+	icon = '../assets/icons/obj/weapons/hammer.dmi'
 	icon_state = "balloon_mallet"
 	inhand_icon_state = "balloon_mallet"
 	icon_angle = -45
-	lefthand_file = 'icons/mob/inhands/weapons/hammers_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/hammers_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/hammers_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/hammers_righthand.dmi'
 	siemens_coefficient = 0
 	force = 1
 	throw_speed = 1
@@ -322,7 +322,7 @@
 		. += "A sacred weapon of the higher castes from the clown planet, used to strike fear into the hearts of their foes. Wield it with care."
 
 /obj/item/balloon_mallet/attack(mob/living/target, mob/living/user)
-	playsound(loc, 'sound/mobs/non-humanoids/clown/hehe.ogg', 20)
+	playsound(loc, '../assets/sound/mobs/non-humanoids/clown/hehe.ogg', 20)
 	if (!isliving(target))
 		return
 	switch(target.mob_mood.sanity)

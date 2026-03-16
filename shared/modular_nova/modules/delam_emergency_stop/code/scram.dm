@@ -133,13 +133,13 @@
 
 	if(admin_disabled)
 		investigate_log("Delam SCRAM tried to activate but an admin disabled it", INVESTIGATE_ATMOS)
-		playsound(src, 'sound/machines/compiler/compiler-failure.ogg', 100, FALSE, MACHINE_SOUND_RANGE, ignore_walls = TRUE, use_reverb = TRUE, falloff_distance = MACHINE_SOUND_FALLOFF_DISTANCE)
+		playsound(src, '../assets/sound/machines/compiler/compiler-failure.ogg', 100, FALSE, MACHINE_SOUND_RANGE, ignore_walls = TRUE, use_reverb = TRUE, falloff_distance = MACHINE_SOUND_FALLOFF_DISTANCE)
 		radio.talk_into(src, "System fault! Unable to trigger.", warning_channel)
 		audible_message(span_danger("[src] makes a series of sad beeps. Someone has corrupted its software!"))
 		return FALSE
 
 	if(world.time - SSticker.round_start_time > 60 MINUTES && trigger_reason != DIVINE_INTERVENTION)
-		playsound(src, 'sound/machines/compiler/compiler-failure.ogg', 100, FALSE, MACHINE_SOUND_RANGE, ignore_walls = TRUE, use_reverb = TRUE, falloff_distance = MACHINE_SOUND_FALLOFF_DISTANCE)
+		playsound(src, '../assets/sound/machines/compiler/compiler-failure.ogg', 100, FALSE, MACHINE_SOUND_RANGE, ignore_walls = TRUE, use_reverb = TRUE, falloff_distance = MACHINE_SOUND_FALLOFF_DISTANCE)
 		audible_message(span_danger("[src] makes a series of sad beeps. The internal charge only lasts about 60 minutes... what a feat of engineering!"))
 		investigate_log("Delam SCRAM signal was received but failed precondition check. (Round time or trigger reason)", INVESTIGATE_ATMOS)
 		return FALSE
@@ -154,7 +154,7 @@
 			"[src] has been activated!",
 			source = src,
 			header = "Divine Intervention",
-			ghost_sound = 'sound/machines/warning-buzzer.ogg',
+			ghost_sound = '../assets/sound/machines/warning-buzzer.ogg',
 			notify_volume = 75,
 		)
 	else
@@ -171,7 +171,7 @@
 			"[src] has been activated!",
 			source = src,
 			header = "Mistakes Were Made",
-			ghost_sound = 'sound/machines/warning-buzzer.ogg',
+			ghost_sound = '../assets/sound/machines/warning-buzzer.ogg',
 			notify_volume = 75,
 		)
 
@@ -179,7 +179,7 @@
 
 	// fight power with power
 	addtimer(CALLBACK(src, PROC_REF(put_on_a_show)), EVAC_WARNING_TIMER)
-	playsound(src, 'sound/announcer/alarm/bloblarm.ogg', 100, FALSE, MACHINE_RUMBLE_SOUND_RANGE, ignore_walls = TRUE, use_reverb = TRUE, falloff_distance = MACHINE_SOUND_FALLOFF_DISTANCE)
+	playsound(src, '../assets/sound/announcer/alarm/bloblarm.ogg', 100, FALSE, MACHINE_RUMBLE_SOUND_RANGE, ignore_walls = TRUE, use_reverb = TRUE, falloff_distance = MACHINE_SOUND_FALLOFF_DISTANCE)
 	power_fail((EVAC_WARNING_TIMER / 10) + POWER_CUT_MAX_DURATION_SECONDS, (EVAC_WARNING_TIMER / 10) + POWER_CUT_MAX_DURATION_SECONDS)
 
 /// Stop the delamination. Let the fireworks begin
@@ -191,7 +191,7 @@
 	// Fire bell close, that nice 'are we gonna die?' rumble out far
 	on = TRUE
 	SSpersistence.reset_delam_counter()
-	alert_sound_to_playing('sound/ambience/earth_rumble/earth_rumble_distant3.ogg', override_volume = TRUE)
+	alert_sound_to_playing('../assets/sound/ambience/earth_rumble/earth_rumble_distant3.ogg', override_volume = TRUE)
 	update_appearance()
 
 	// Good job at kneecapping the crystal, engineers
@@ -229,7 +229,7 @@
 /obj/machinery/atmospherics/components/unary/delam_scram/proc/goodbye_friends()
 
 	// good job buddy, sacrificing yourself for the greater good
-	playsound(src, 'sound/machines/compiler/compiler-failure.ogg', 100, FALSE, MACHINE_SOUND_RANGE, ignore_walls = TRUE, use_reverb = TRUE, falloff_distance = MACHINE_SOUND_FALLOFF_DISTANCE)
+	playsound(src, '../assets/sound/machines/compiler/compiler-failure.ogg', 100, FALSE, MACHINE_SOUND_RANGE, ignore_walls = TRUE, use_reverb = TRUE, falloff_distance = MACHINE_SOUND_FALLOFF_DISTANCE)
 	visible_message(span_danger("[src] beeps a sorrowful melody and collapses into a pile of twisted metal and foam!"), blind_message = span_danger("[src] beeps a sorrowful melody!"))
 	deconstruct(FALSE)
 
@@ -307,7 +307,7 @@
 		return
 
 	if(!validate_suppression_status())
-		playsound(src.loc, 'sound/machines/buzz/buzz-sigh.ogg', 50, FALSE, BUTTON_SOUND_RANGE, falloff_distance = BUTTON_SOUND_FALLOFF_DISTANCE)
+		playsound(src.loc, '../assets/sound/machines/buzz/buzz-sigh.ogg', 50, FALSE, BUTTON_SOUND_RANGE, falloff_distance = BUTTON_SOUND_FALLOFF_DISTANCE)
 		audible_message(span_danger("[src] makes a sad buzz and goes dark. Did someone activate it already?")) // Look through the window, buddy
 		burn_out()
 		return
@@ -329,7 +329,7 @@
 
 	// For roundstart only, after that it's on you!
 	if(world.time - SSticker.round_start_time > 60 MINUTES)
-		playsound(src.loc, 'sound/machines/compiler/compiler-failure.ogg', 50, FALSE, BUTTON_SOUND_RANGE, falloff_distance = BUTTON_SOUND_FALLOFF_DISTANCE)
+		playsound(src.loc, '../assets/sound/machines/compiler/compiler-failure.ogg', 50, FALSE, BUTTON_SOUND_RANGE, falloff_distance = BUTTON_SOUND_FALLOFF_DISTANCE)
 		audible_message(span_danger("[src] makes a series of sad beeps. The internal charge only lasts about 60 minutes... what a feat of engineering! Looks like it's all on you to save the day."))
 		burn_out()
 		return
@@ -355,7 +355,7 @@
 		return
 
 	// Make scary sound and flashing light
-	playsound(src, 'sound/machines/high_tech_confirm.ogg', 50, FALSE, BUTTON_SOUND_RANGE, ignore_walls = TRUE, use_reverb = TRUE, falloff_distance = BUTTON_SOUND_FALLOFF_DISTANCE)
+	playsound(src, '../assets/sound/machines/high_tech_confirm.ogg', 50, FALSE, BUTTON_SOUND_RANGE, ignore_walls = TRUE, use_reverb = TRUE, falloff_distance = BUTTON_SOUND_FALLOFF_DISTANCE)
 	button_stage = BUTTON_PUSHED
 	visible_message(span_danger("[user] smashes [src] with their hand!"))
 	message_admins("[ADMIN_LOOKUPFLW(user)] pushed [src]!")

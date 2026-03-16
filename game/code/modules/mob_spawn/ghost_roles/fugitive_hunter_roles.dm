@@ -25,13 +25,13 @@
 	flavour_text = "Justice has arrived. We must capture those fugitives lurking on that station!"
 	back_story = HUNTER_PACK_COPS
 	outfit = /datum/outfit/spacepol
-	icon = 'icons/obj/machines/sleeper.dmi'
+	icon = '../assets/icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
 
 /obj/effect/mob_spawn/ghost_role/human/fugitive/russian
 	name = "russian pod"
 	desc = "A small sleeper typically used to make long distance travel a bit more bearable."
-	icon = 'icons/obj/machines/sleeper.dmi'
+	icon = '../assets/icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
 	faction = list(FACTION_RUSSIAN)
 	prompt_name = "a russian"
@@ -53,7 +53,7 @@
 	flavour_text = "We got a new bounty on some fugitives, dead or alive."
 	back_story = HUNTER_PACK_BOUNTY
 	desc = "A small sleeper typically used to make long distance travel a bit more bearable."
-	icon = 'icons/obj/machines/sleeper.dmi'
+	icon = '../assets/icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
 
 /obj/effect/mob_spawn/ghost_role/human/fugitive/bounty/Destroy()
@@ -89,7 +89,7 @@
 /obj/effect/mob_spawn/ghost_role/human/fugitive/psyker/seer
 	name = "cryosleep pod"
 	desc = "A dingy, poorly maintained, but still run-of-the-mill cryo sleeper."
-	icon = 'icons/obj/machines/sleeper.dmi'
+	icon = '../assets/icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
 	prompt_name = "a psyker seer"
 	you_are_text = "Ugh, I'm the Psyker Seer."
@@ -101,7 +101,7 @@
 /obj/effect/mob_spawn/ghost_role/human/fugitive/mi13
 	name = "top-secret pod"
 	desc = "You don't have the classification to know what this pod contains or what its purpose is."
-	icon = 'icons/obj/machines/sleeper.dmi'
+	icon = '../assets/icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper_s"
 	prompt_name = "a MI13 agent"
 	you_are_text = "I am an agent sent by MI13."

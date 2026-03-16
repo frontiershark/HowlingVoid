@@ -1,7 +1,7 @@
 /obj/item/statuebust
 	name = "bust"
 	desc = "A priceless ancient marble bust, the kind that belongs in a museum." //or you can hit people with it
-	icon = 'icons/obj/art/statue.dmi'
+	icon = '../assets/icons/obj/art/statue.dmi'
 	icon_state = "bust"
 	force = 15
 	throwforce = 10
@@ -115,7 +115,7 @@
 /obj/item/maneki_neko
 	name = "Maneki-Neko"
 	desc = "A figurine of a cat holding a coin, said to bring fortune and wealth, and perpetually moving its paw in a beckoning gesture."
-	icon = 'icons/obj/fluff/general.dmi'
+	icon = '../assets/icons/obj/fluff/general.dmi'
 	icon_state = "maneki-neko"
 	w_class = WEIGHT_CLASS_SMALL
 	force = 5

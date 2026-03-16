@@ -2,14 +2,14 @@
 /obj/item/storage/box
 	name = "box"
 	desc = "It's just an ordinary box."
-	icon = 'icons/obj/storage/box.dmi'
+	icon = '../assets/icons/obj/storage/box.dmi'
 	icon_state = "box"
 	inhand_icon_state = "syringe_kit"
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/medical_righthand.dmi'
 	resistance_flags = FLAMMABLE
-	drop_sound = 'sound/items/handling/cardboard_box/cardboardbox_drop.ogg'
-	pickup_sound = 'sound/items/handling/cardboard_box/cardboardbox_pickup.ogg'
+	drop_sound = '../assets/sound/items/handling/cardboard_box/cardboardbox_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/cardboard_box/cardboardbox_pickup.ogg'
 	storage_type = /datum/storage/box
 
 	/// What material do we get when we fold this box?

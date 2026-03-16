@@ -84,7 +84,7 @@
 	for(var/skill_type in old_mind.known_skills)
 		avatar.mind.set_experience(skill_type, old_mind.get_skill_exp(skill_type), silent = TRUE)
 
-	avatar.playsound_local(avatar, 'sound/effects/magic/blink.ogg', 25, TRUE)
+	avatar.playsound_local(avatar, '../assets/sound/effects/magic/blink.ogg', 25, TRUE)
 	avatar.set_static_vision(2 SECONDS)
 	avatar.set_temp_blindness(1 SECONDS) // I'm in
 
@@ -164,7 +164,7 @@
 	SIGNAL_HANDLER
 
 	var/mob/living/avatar = parent
-	avatar.playsound_local(avatar, 'sound/machines/terminal/terminal_success.ogg', 50, vary = TRUE)
+	avatar.playsound_local(avatar, '../assets/sound/machines/terminal/terminal_success.ogg', 50, vary = TRUE)
 	avatar.throw_alert(
 		ALERT_BITRUNNER_COMPLETED,
 		/atom/movable/screen/alert/bitrunning/qserver_domain_complete,
@@ -210,7 +210,7 @@
 	SIGNAL_HANDLER
 
 	var/mob/living/avatar = parent
-	avatar.playsound_local(avatar, 'sound/machines/terminal/terminal_alert.ogg', 50, vary = TRUE)
+	avatar.playsound_local(avatar, '../assets/sound/machines/terminal/terminal_alert.ogg', 50, vary = TRUE)
 	var/atom/movable/screen/alert/bitrunning/alert = avatar.throw_alert(
 		ALERT_BITRUNNER_CROWBAR,
 		/atom/movable/screen/alert/bitrunning,
@@ -260,7 +260,7 @@
 	SIGNAL_HANDLER
 
 	var/mob/living/avatar = parent
-	avatar.playsound_local(avatar, 'sound/machines/terminal/terminal_alert.ogg', 50, vary = TRUE)
+	avatar.playsound_local(avatar, '../assets/sound/machines/terminal/terminal_alert.ogg', 50, vary = TRUE)
 	var/atom/movable/screen/alert/bitrunning/alert = avatar.throw_alert(
 		ALERT_BITRUNNER_SHUTDOWN,
 		/atom/movable/screen/alert/bitrunning,
@@ -275,7 +275,7 @@
 	SIGNAL_HANDLER
 
 	var/mob/living/avatar = parent
-	avatar.playsound_local(avatar, 'sound/machines/terminal/terminal_alert.ogg', 50, vary = TRUE)
+	avatar.playsound_local(avatar, '../assets/sound/machines/terminal/terminal_alert.ogg', 50, vary = TRUE)
 	var/atom/movable/screen/alert/bitrunning/alert = avatar.throw_alert(
 		ALERT_BITRUNNER_BREACH,
 		/atom/movable/screen/alert/bitrunning,

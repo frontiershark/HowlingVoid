@@ -4,9 +4,9 @@
 		via your Mansus Link. All minds connected to your Mansus Link will be able to communicate discreetly across great distances."
 	background_icon_state = "bg_heretic"
 	overlay_icon_state = "bg_heretic_border"
-	button_icon = 'icons/mob/actions/actions_ecult.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_ecult.dmi'
 	button_icon_state = "mansus_link"
-	ranged_mousepointer = 'icons/effects/mouse_pointers/throw_target.dmi'
+	ranged_mousepointer = '../assets/icons/effects/mouse_pointers/throw_target.dmi'
 
 	school = SCHOOL_FORBIDDEN
 	cooldown_time = 20 SECONDS

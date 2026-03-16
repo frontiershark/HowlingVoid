@@ -1,6 +1,6 @@
 /datum/action/cooldown/mob_cooldown/projectile_attack
 	name = "Projectile Attack"
-	button_icon = 'icons/mob/actions/actions_items.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_items.dmi'
 	button_icon_state = "sniper_zoom"
 	desc = "Fires a set of projectiles at a selected target."
 	cooldown_time = 1.5 SECONDS
@@ -64,7 +64,7 @@
 
 /datum/action/cooldown/mob_cooldown/projectile_attack/rapid_fire
 	name = "Rapid Fire"
-	button_icon = 'icons/obj/weapons/guns/energy.dmi'
+	button_icon = '../assets/icons/obj/weapons/guns/energy.dmi'
 	button_icon_state = "kineticgun"
 	desc = "Fires projectiles repeatedly at a given target."
 	cooldown_time = 1.5 SECONDS
@@ -86,7 +86,7 @@
 
 /datum/action/cooldown/mob_cooldown/projectile_attack/rapid_fire/shrapnel
 	name = "Shrapnel Fire"
-	button_icon = 'icons/mob/actions/actions_items.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_items.dmi'
 	button_icon_state = "sniper_zoom"
 	desc = "Fires projectiles that will split into shrapnel after a period of time."
 	cooldown_time = 6 SECONDS
@@ -121,12 +121,12 @@
 
 /datum/action/cooldown/mob_cooldown/projectile_attack/spiral_shots
 	name = "Spiral Shots"
-	button_icon = 'icons/mob/actions/actions_items.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_items.dmi'
 	button_icon_state = "sniper_zoom"
 	desc = "Fires projectiles in a spiral pattern."
 	cooldown_time = 3 SECONDS
 	projectile_type = /obj/projectile/colossus
-	projectile_sound = 'sound/effects/magic/clockwork/invoke_general.ogg'
+	projectile_sound = '../assets/sound/effects/magic/clockwork/invoke_general.ogg'
 	/// Whether or not the attack is the enraged form
 	var/enraged = FALSE
 
@@ -181,12 +181,12 @@
 
 /datum/action/cooldown/mob_cooldown/projectile_attack/random_aoe
 	name = "All Directions"
-	button_icon = 'icons/effects/effects.dmi'
+	button_icon = '../assets/icons/effects/effects.dmi'
 	button_icon_state = "at_shield2"
 	desc = "Fires projectiles in all directions."
 	cooldown_time = 3 SECONDS
 	projectile_type = /obj/projectile/colossus
-	projectile_sound = 'sound/effects/magic/clockwork/invoke_general.ogg'
+	projectile_sound = '../assets/sound/effects/magic/clockwork/invoke_general.ogg'
 
 /datum/action/cooldown/mob_cooldown/projectile_attack/random_aoe/attack_sequence(mob/living/firer, atom/target)
 	var/turf/U = get_turf(firer)
@@ -203,12 +203,12 @@
 
 /datum/action/cooldown/mob_cooldown/projectile_attack/shotgun_blast
 	name = "Shotgun Fire"
-	button_icon = 'icons/obj/weapons/guns/ballistic.dmi'
+	button_icon = '../assets/icons/obj/weapons/guns/ballistic.dmi'
 	button_icon_state = "shotgun"
 	desc = "Fires projectiles in a shotgun pattern."
 	cooldown_time = 2 SECONDS
 	projectile_type = /obj/projectile/colossus
-	projectile_sound = 'sound/effects/magic/clockwork/invoke_general.ogg'
+	projectile_sound = '../assets/sound/effects/magic/clockwork/invoke_general.ogg'
 	var/list/shot_angles = list(12.5, 7.5, 2.5, -2.5, -7.5, -12.5)
 
 /datum/action/cooldown/mob_cooldown/projectile_attack/shotgun_blast/attack_sequence(mob/living/firer, atom/target)
@@ -258,12 +258,12 @@
 
 /datum/action/cooldown/mob_cooldown/projectile_attack/dir_shots
 	name = "Directional Shots"
-	button_icon = 'icons/obj/weapons/guns/ballistic.dmi'
+	button_icon = '../assets/icons/obj/weapons/guns/ballistic.dmi'
 	button_icon_state = "pistol"
 	desc = "Fires projectiles in specific directions."
 	cooldown_time = 4 SECONDS
 	projectile_type = /obj/projectile/colossus
-	projectile_sound = 'sound/effects/magic/clockwork/invoke_general.ogg'
+	projectile_sound = '../assets/sound/effects/magic/clockwork/invoke_general.ogg'
 	var/list/firing_directions
 
 /datum/action/cooldown/mob_cooldown/projectile_attack/dir_shots/New(Target)
@@ -303,12 +303,12 @@
 
 /datum/action/cooldown/mob_cooldown/projectile_attack/kinetic_accelerator
 	name = "Fire Kinetic Accelerator"
-	button_icon = 'icons/obj/weapons/guns/energy.dmi'
+	button_icon = '../assets/icons/obj/weapons/guns/energy.dmi'
 	button_icon_state = "kineticgun"
 	desc = "Fires a kinetic accelerator projectile at the target."
 	cooldown_time = 1.5 SECONDS
 	projectile_type = /obj/projectile/kinetic/miner
-	projectile_sound = 'sound/items/weapons/kinetic_accel.ogg'
+	projectile_sound = '../assets/sound/items/weapons/kinetic_accel.ogg'
 
 /datum/action/cooldown/mob_cooldown/projectile_attack/kinetic_accelerator/Activate(atom/target_atom)
 	. = ..()
@@ -365,7 +365,7 @@
 
 /datum/action/cooldown/mob_cooldown/projectile_attack/alternating_circle
 	name = "Alternating Shots"
-	button_icon = 'icons/mob/actions/actions_items.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_items.dmi'
 	button_icon_state = "sniper_zoom"
 	desc = "Fires projectiles around you in an alternating fashion."
 	cooldown_time = 10 SECONDS
@@ -390,7 +390,7 @@
 
 /datum/action/cooldown/mob_cooldown/projectile_attack/wave
 	name = "Wave Shots"
-	button_icon = 'icons/mob/actions/actions_items.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_items.dmi'
 	button_icon_state = "sniper_zoom"
 	desc = "Fires projectiles around you in a circular wave."
 	cooldown_time = 10 SECONDS

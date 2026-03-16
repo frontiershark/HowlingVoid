@@ -1,7 +1,7 @@
 /obj/effect/decal/cleanable/ants
 	name = "space ants"
 	desc = "A small colony of space ants. They're normally used to the vacuum of space, so they can't climb too well."
-	icon = 'icons/obj/debris.dmi'
+	icon = '../assets/icons/obj/debris.dmi'
 	icon_state = "ants"
 	beauty = -150
 	plane = GAME_PLANE
@@ -9,7 +9,7 @@
 	decal_reagent = /datum/reagent/ants
 	reagent_amount = 5
 	/// Sound the ants make when biting
-	var/bite_sound = 'sound/items/weapons/bite.ogg'
+	var/bite_sound = '../assets/sound/items/weapons/bite.ogg'
 
 /obj/effect/decal/cleanable/ants/Initialize(mapload)
 	if(mapload && reagent_amount > 2)

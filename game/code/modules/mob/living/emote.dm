@@ -213,13 +213,13 @@
 	var/mob/living/carbon/human/human_user = user
 	if(human_user.gender == FEMALE) // NOVA EDIT CHANGE - ORIGINAL: if(human_user.physique == FEMALE)
 		return pick(
-			'sound/mobs/humanoids/human/gasp/gasp_female1.ogg',
-			'sound/mobs/humanoids/human/gasp/gasp_female2.ogg',
-			'sound/mobs/humanoids/human/gasp/gasp_female3.ogg',
+			'../assets/sound/mobs/humanoids/human/gasp/gasp_female1.ogg',
+			'../assets/sound/mobs/humanoids/human/gasp/gasp_female2.ogg',
+			'../assets/sound/mobs/humanoids/human/gasp/gasp_female3.ogg',
 			)
 	return pick(
-		'sound/mobs/humanoids/human/gasp/gasp_male1.ogg',
-		'sound/mobs/humanoids/human/gasp/gasp_male2.ogg',
+		'../assets/sound/mobs/humanoids/human/gasp/gasp_male1.ogg',
+		'../assets/sound/mobs/humanoids/human/gasp/gasp_male2.ogg',
 		)
 
 /datum/emote/living/gasp/shock
@@ -366,7 +366,7 @@
 					else
 						message_param = "[span_userdanger("bumps [user.p_their()] head on the ground")] trying to motion towards %t."
 						our_carbon.adjust_organ_loss(ORGAN_SLOT_BRAIN, 5)
-						playsound(user, 'sound/effects/glass/glassbash.ogg', 50, TRUE, SHORT_RANGE_SOUND_EXTRARANGE)
+						playsound(user, '../assets/sound/effects/glass/glassbash.ogg', 50, TRUE, SHORT_RANGE_SOUND_EXTRARANGE)
 						TIMER_COOLDOWN_START(src, "point_verb_emote_cooldown", 2.5 SECONDS)
 	return ..()
 
@@ -476,7 +476,7 @@
 	. = ..()
 	if(!ishuman(user))
 		return
-	var/image/emote_animation = image('icons/mob/human/emote_visuals.dmi', user, "sigh")
+	var/image/emote_animation = image('../assets/icons/mob/human/emote_visuals.dmi', user, "sigh")
 	flick_overlay_global(emote_animation, GLOB.clients, 2.0 SECONDS)
 
 /datum/emote/living/sigh/get_sound(mob/living/carbon/human/user)
@@ -825,4 +825,4 @@
 	emote_type = EMOTE_AUDIBLE | EMOTE_VISIBLE
 
 /datum/emote/living/carbon/whistle/get_sound(mob/living/user)
-	return 'sound/mobs/humanoids/human/whistle/whistle1.ogg'
+	return '../assets/sound/mobs/humanoids/human/whistle/whistle1.ogg'

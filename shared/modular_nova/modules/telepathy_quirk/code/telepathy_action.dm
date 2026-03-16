@@ -4,7 +4,7 @@
 /datum/action/cooldown/spell/pointed/telepathy
 	name = "Telepathic Communication"
 	desc = "<b>Left click</b>: point target to project a thought to them. <b>Right click</b>: project to your last thought target, if in range."
-	button_icon = 'icons/mob/actions/actions_revenant.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_revenant.dmi'
 	button_icon_state = "r_transmit"
 	spell_requirements = SPELL_REQUIRES_NO_ANTIMAGIC
 	antimagic_flags = MAGIC_RESISTANCE_MIND

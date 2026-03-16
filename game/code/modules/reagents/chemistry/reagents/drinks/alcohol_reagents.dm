@@ -13,7 +13,7 @@
 	burning_temperature = 2193//ethanol burns at 1970C (at its peak)
 	burning_volume = 0.1
 	default_container = /obj/item/reagent_containers/cup/glass/bottle/beer
-	fallback_icon = 'icons/obj/drinks/bottles.dmi'
+	fallback_icon = '../assets/icons/obj/drinks/bottles.dmi'
 	fallback_icon_state = "beer"
 	/**
 	 * Boozepwr Chart
@@ -278,7 +278,7 @@
 	if(SPT_PROB(0.5, seconds_per_tick) && iscarbon(drinker))
 		drinker.apply_status_effect(/datum/status_effect/heart_attack)
 		to_chat(drinker, span_userdanger("You're pretty sure you just felt your heart stop for a second there.."))
-		drinker.playsound_local(drinker, 'sound/effects/singlebeat.ogg', 100, 0)
+		drinker.playsound_local(drinker, '../assets/sound/effects/singlebeat.ogg', 100, 0)
 
 /datum/reagent/consumable/ethanol/vodka
 	name = "Vodka"
@@ -618,7 +618,7 @@
 		if(src == holder.get_master_reagent())
 			var/obj/item/reagent_containers/cup/glass/drinkingglass/drink = holder.my_atom
 			drink.tool_behaviour = TOOL_SCREWDRIVER
-			drink.usesound = list('sound/items/tools/screwdriver.ogg', 'sound/items/tools/screwdriver2.ogg')
+			drink.usesound = list('../assets/sound/items/tools/screwdriver.ogg', '../assets/sound/items/tools/screwdriver2.ogg')
 
 /datum/reagent/consumable/ethanol/screwdrivercocktail/Destroy()
 	var/obj/item/reagent_containers/cup/glass/drinkingglass/drink = holder.my_atom
@@ -634,7 +634,7 @@
 	var/obj/item/reagent_containers/cup/glass/drinkingglass/drink = reagents.my_atom
 	if(reagents.get_master_reagent() == src)
 		drink.tool_behaviour = TOOL_SCREWDRIVER
-		drink.usesound = list('sound/items/tools/screwdriver.ogg', 'sound/items/tools/screwdriver2.ogg')
+		drink.usesound = list('../assets/sound/items/tools/screwdriver.ogg', '../assets/sound/items/tools/screwdriver2.ogg')
 	else
 		drink.tool_behaviour = initial(drink.tool_behaviour)
 		drink.usesound = initial(drink.usesound)
@@ -854,7 +854,7 @@
 
 /datum/reagent/consumable/ethanol/b52/on_mob_metabolize(mob/living/drinker)
 	. = ..()
-	playsound(drinker, 'sound/effects/explosion/explosion_distant.ogg', 100, FALSE)
+	playsound(drinker, '../assets/sound/effects/explosion/explosion_distant.ogg', 100, FALSE)
 
 /datum/reagent/consumable/ethanol/irishcoffee
 	name = "Irish Coffee"
@@ -1091,7 +1091,7 @@
 
 		var/turf/gravity_well_turf = get_turf(drinker)
 		goonchem_vortex(gravity_well_turf, 0, suck_range)
-		playsound(get_turf(drinker), 'sound/effects/supermatter.ogg', 150, TRUE)
+		playsound(get_turf(drinker), '../assets/sound/effects/supermatter.ogg', 150, TRUE)
 		drinker.add_filter("singulo_rays", 1, ray_filter)
 		animate(drinker.get_filter("singulo_rays"), offset = 10, time = 1.5 SECONDS, loop = -1)
 		addtimer(CALLBACK(drinker, TYPE_PROC_REF(/datum, remove_filter), "singulo_rays"), 1.5 SECONDS)
@@ -1232,7 +1232,7 @@
 /datum/reagent/consumable/ethanol/syndicatebomb/on_mob_life(mob/living/carbon/drinker, seconds_per_tick, metabolization_ratio)
 	. = ..()
 	if(SPT_PROB(2.5, seconds_per_tick))
-		playsound(get_turf(drinker), 'sound/effects/explosion/explosionfar.ogg', 100, TRUE)
+		playsound(get_turf(drinker), '../assets/sound/effects/explosion/explosionfar.ogg', 100, TRUE)
 
 /datum/reagent/consumable/ethanol/hiveminderaser
 	name = "Hivemind Eraser"

@@ -1,7 +1,7 @@
 /datum/asset/simple/contracts
 	assets = list(
-		"bluespace.png" = 'icons/ui/contracts/bluespace.png',
-		"destruction.png" = 'icons/ui/contracts/destruction.png',
-		"healing.png" = 'icons/ui/contracts/healing.png',
-		"robeless.png" = 'icons/ui/contracts/robeless.png',
+		"bluespace.png" = '../assets/icons/ui/contracts/bluespace.png',
+		"destruction.png" = '../assets/icons/ui/contracts/destruction.png',
+		"healing.png" = '../assets/icons/ui/contracts/healing.png',
+		"robeless.png" = '../assets/icons/ui/contracts/robeless.png',
 	)

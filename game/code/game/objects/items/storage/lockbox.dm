@@ -1,11 +1,11 @@
 /obj/item/storage/lockbox
 	name = "lockbox"
 	desc = "A locked box."
-	icon = 'icons/obj/storage/case.dmi'
+	icon = '../assets/icons/obj/storage/case.dmi'
 	icon_state = "lockbox+l"
 	inhand_icon_state = "lockbox"
-	lefthand_file = 'icons/mob/inhands/equipment/briefcase_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/briefcase_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/briefcase_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/briefcase_righthand.dmi'
 	w_class = WEIGHT_CLASS_BULKY
 	req_access = list(ACCESS_ARMORY)
 	storage_type = /datum/storage/lockbox
@@ -115,8 +115,8 @@
 	desc = "A locked box used to store medals of honor."
 	icon_state = "medalbox+l"
 	inhand_icon_state = "syringe_kit"
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/medical_righthand.dmi'
 	w_class = WEIGHT_CLASS_NORMAL
 	req_access = list(ACCESS_CAPTAIN)
 	icon_locked = "medalbox+l"
@@ -259,8 +259,8 @@
 	icon_broken = "secure_locked"
 	icon_open = "secure"
 	inhand_icon_state = "sec-case"
-	lefthand_file = 'icons/mob/inhands/equipment/briefcase_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/briefcase_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/briefcase_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/briefcase_righthand.dmi'
 	w_class = WEIGHT_CLASS_HUGE
 	var/datum/bank_account/buyer_account
 
@@ -291,8 +291,8 @@
 	desc = "Let's solve this like gentlespacemen."
 	icon_state = "medalbox+l"
 	inhand_icon_state = "syringe_kit"
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/medical_righthand.dmi'
 	w_class = WEIGHT_CLASS_NORMAL
 	req_access = list(ACCESS_CAPTAIN)
 	icon_locked = "medalbox+l"
@@ -356,7 +356,7 @@
 	. = ..()
 
 	icon_state = icon_closed
-	playsound(src, 'sound/effects/magic/blink.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/effects/magic/blink.ogg', 50, TRUE)
 
 /obj/item/storage/lockbox/bitrunning/decrypted/PopulateContents()
 	var/choice = SSbitrunning.pick_secondary_loot(source_domain)

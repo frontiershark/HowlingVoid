@@ -50,7 +50,7 @@ SUBSYSTEM_DEF(cameras)
 /// Updates the images for new plane offsets
 /datum/controller/subsystem/cameras/proc/update_offsets(new_offset)
 	for(var/i in length(obscured_images) to new_offset)
-		var/image/obscured = new('icons/effects/cameravis.dmi')
+		var/image/obscured = new('../assets/icons/effects/cameravis.dmi')
 		SET_PLANE_W_SCALAR(obscured, CAMERA_STATIC_PLANE, i)
 		obscured.appearance_flags = RESET_TRANSFORM | RESET_ALPHA | RESET_COLOR | KEEP_APART
 		obscured.override = TRUE

@@ -49,7 +49,7 @@
 
 /obj/projectile/energy/photon/on_range()
 	do_sparks(rand(4, 9), FALSE, src)
-	playsound(loc, 'sound/items/weapons/solarflare.ogg', 100, FALSE, 8, 0.9)
+	playsound(loc, '../assets/sound/items/weapons/solarflare.ogg', 100, FALSE, 8, 0.9)
 	for(var/mob/living/flashed_mob in viewers(5, loc))
 		flashed_mob.flash_act()
 	return ..()

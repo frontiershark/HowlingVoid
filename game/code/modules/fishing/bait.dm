@@ -1,7 +1,7 @@
 /obj/item/bait_can
 	name = "can o bait"
 	desc = "there's a lot of them in there, getting them out takes a while though."
-	icon = 'icons/obj/fishing.dmi'
+	icon = '../assets/icons/obj/fishing.dmi'
 	icon_state = "bait_can"
 	base_icon_state =  "bait_can"
 	w_class = WEIGHT_CLASS_SMALL
@@ -64,7 +64,7 @@
 /obj/item/fishing_lure
 	name = "fishing lure"
 	desc = "It's just that, a plastic piece of fishing equipment, yet fish yearn with every last molecule of their bodies to take a bite of it."
-	icon = 'icons/obj/fishing.dmi'
+	icon = '../assets/icons/obj/fishing.dmi'
 	icon_state = "minnow"
 	w_class = WEIGHT_CLASS_SMALL
 	/**

@@ -25,7 +25,7 @@
 	/// The type we drop when deflated.
 	var/deflated_type = /obj/item/inflatable
 	/// The hitsound made when we're... hit...
-	var/hit_sound = 'sound/items/basketball_bounce.ogg'
+	var/hit_sound = '../assets/sound/items/basketball_bounce.ogg'
 	/// How quickly we deflate when manually deflated.
 	var/manual_deflation_time = 3 SECONDS
 	/// Whether or not the inflatable has been deflated
@@ -105,7 +105,7 @@
 		return
 	has_been_deflated = TRUE
 	if(manually)
-		playsound(src, 'sound/machines/hiss.ogg', 50)
+		playsound(src, '../assets/sound/machines/hiss.ogg', 50)
 		balloon_alert_to_viewers("slowly deflates!")
 		addtimer(CALLBACK(src, PROC_REF(slow_deflate_finish)), manual_deflation_time)
 		return
@@ -113,7 +113,7 @@
 		new torn_type(get_turf(src))
 	else
 		new /obj/effect/decal/cleanable/plastic(get_turf(src))
-	playsound(src, 'sound/items/balloon_pop.ogg', 100)
+	playsound(src, '../assets/sound/items/balloon_pop.ogg', 100)
 	qdel(src)
 
 // Called when the airbag is calmly deflated, drops a non-broken item.
@@ -188,7 +188,7 @@
 	if(locate(structure_type) in get_turf(user))
 		to_chat(user, span_warning("There is already a wall here!"))
 		return
-	playsound(loc, 'sound/items/zip/zip.ogg', 75, TRUE)
+	playsound(loc, '../assets/sound/items/zip/zip.ogg', 75, TRUE)
 	to_chat(user, span_notice("You inflate [src]."))
 	if(do_after(user, 1 SECONDS, src))
 		new structure_type(get_turf(user))
@@ -223,7 +223,7 @@
 
 /obj/item/inflatable/suicide_act(mob/living/user)
 	visible_message(user, span_danger("[user] starts shoving the [src] up [user.p_their()] ass! It looks like [user.p_their()] going to pull the cord, oh shit!"))
-	playsound(user.loc, 'sound/machines/hiss.ogg', 75, TRUE)
+	playsound(user.loc, '../assets/sound/machines/hiss.ogg', 75, TRUE)
 	new structure_type(user.loc)
 	user.gib()
 	return BRUTELOSS

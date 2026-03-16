@@ -1,11 +1,11 @@
 /obj/item/megaphone
 	name = "megaphone"
 	desc = "A device used to project your voice. Loudly."
-	icon = 'icons/obj/devices/voice.dmi'
+	icon = '../assets/icons/obj/devices/voice.dmi'
 	icon_state = "megaphone"
 	inhand_icon_state = "megaphone"
-	lefthand_file = 'icons/mob/inhands/items/megaphone_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/megaphone_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/megaphone_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/megaphone_righthand.dmi'
 	w_class = WEIGHT_CLASS_SMALL
 	siemens_coefficient = 1
 	var/spamcheck = 0
@@ -34,7 +34,7 @@
 	if(spamcheck > world.time)
 		to_chat(user, span_warning("\The [src] needs to recharge!"))
 	else
-		playsound(loc, 'sound/items/megaphone.ogg', 100, FALSE, TRUE)
+		playsound(loc, '../assets/sound/items/megaphone.ogg', 100, FALSE, TRUE)
 		speech_args[SPEECH_SPANS] |= voicespan
 
 /obj/item/megaphone/proc/add_tts_filter(mob/living/carbon/user, list/message_args)

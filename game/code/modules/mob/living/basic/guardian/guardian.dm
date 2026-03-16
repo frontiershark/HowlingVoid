@@ -6,7 +6,7 @@
 	name = "Guardian Spirit"
 	real_name = "Guardian Spirit"
 	desc = "A mysterious being that stands by its charge, ever vigilant."
-	icon = 'icons/mob/nonhuman-player/guardian.dmi'
+	icon = '../assets/icons/mob/nonhuman-player/guardian.dmi'
 	icon_state = "magicbase"
 	icon_living = "magicbase"
 	icon_dead = "magicbase"
@@ -31,7 +31,7 @@
 	response_disarm_simple = "flail at"
 	response_harm_continuous = "punches"
 	response_harm_simple = "punch"
-	attack_sound = 'sound/items/weapons/punch1.ogg'
+	attack_sound = '../assets/sound/items/weapons/punch1.ogg'
 	attack_verb_continuous = "punches"
 	attack_verb_simple = "punch"
 	combat_mode = TRUE

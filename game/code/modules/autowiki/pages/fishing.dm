@@ -294,7 +294,7 @@
 		))
 
 	///Used for stuff that isn't fish by default
-	upload_icon(icon('icons/effects/random_spawners.dmi', "questionmark"), FISH_SOURCE_AUTOWIKI_QUESTIONMARK)
+	upload_icon(icon('../assets/icons/effects/random_spawners.dmi', "questionmark"), FISH_SOURCE_AUTOWIKI_QUESTIONMARK)
 
 	return output
 
@@ -377,7 +377,7 @@
 	))
 
 	if(!generated_icons[filename])
-		upload_icon(icon(icon = 'icons/hud/radial_fishing.dmi', icon_state = reward.radial_state), filename)
+		upload_icon(icon(icon = '../assets/icons/hud/radial_fishing.dmi', icon_state = reward.radial_state), filename)
 	generated_icons[filename] = TRUE
 
 	return output

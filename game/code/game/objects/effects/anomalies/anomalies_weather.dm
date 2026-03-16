@@ -78,7 +78,7 @@
 	return ..()
 
 /obj/effect/anomaly/weather/detonate()
-	playsound(src, 'sound/effects/magic/repulse.ogg', 100, TRUE)
+	playsound(src, '../assets/sound/effects/magic/repulse.ogg', 100, TRUE)
 	for(var/atom/movable/repulsed in range(src, 5))
 		if(repulsed == src || repulsed.anchored)
 			continue

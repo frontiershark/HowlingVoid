@@ -3,7 +3,7 @@
 	desc = "I hope you're wearing eye protection."
 	damage = 0 // It's a damn toy.
 	damage_type = OXY
-	icon = 'icons/obj/weapons/guns/toy.dmi'
+	icon = '../assets/icons/obj/weapons/guns/toy.dmi'
 	icon_state = "foamdart_proj"
 	base_icon_state = "foamdart"
 	range = 10

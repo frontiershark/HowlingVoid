@@ -69,8 +69,8 @@
 
 /obj/item/clothing/head/hooded/cult_hoodie/eldritch
 	name = "ominous hood"
-	icon = 'icons/obj/clothing/head/helmet.dmi'
-	worn_icon = 'icons/mob/clothing/head/helmet.dmi'
+	icon = '../assets/icons/obj/clothing/head/helmet.dmi'
+	worn_icon = '../assets/icons/mob/clothing/head/helmet.dmi'
 	icon_state = "helmet"
 	desc = "A torn, dust-caked hood. Strange eyes line the inside."
 	flags_inv = HIDEMASK | HIDEEARS | HIDEEYES | HIDEFACE | HIDEHAIR | HIDEFACIALHAIR | HIDESNOUT
@@ -154,7 +154,7 @@
 	limb.dismember(BURN)
 
 /datum/action/item_action/toggle/flames
-	button_icon = 'icons/effects/magic.dmi'
+	button_icon = '../assets/icons/effects/magic.dmi'
 	button_icon_state = "fireball"
 
 /datum/action/item_action/toggle/flames/do_effect(trigger_flags)
@@ -273,7 +273,7 @@
 	return valid_turfs
 
 /obj/item/knife/kitchen/magic
-	icon = 'icons/effects/eldritch.dmi'
+	icon = '../assets/icons/effects/eldritch.dmi'
 	icon_state = "dio_knife"
 	name = "magic knife"
 	throwforce = 15
@@ -371,7 +371,7 @@
 	victim_brain.gain_trauma(/datum/brain_trauma/magic/stalker/cosmic, TRAUMA_RESILIENCE_MAGIC)
 
 /datum/action/item_action/toggle/gravity
-	button_icon = 'icons/effects/magic.dmi'
+	button_icon = '../assets/icons/effects/magic.dmi'
 	button_icon_state = "magicm"
 
 /datum/action/item_action/toggle/gravity/do_effect(trigger_flags)
@@ -763,7 +763,7 @@
 
 	braindead = TRUE
 	wearer.set_organ_loss(ORGAN_SLOT_BRAIN, INFINITY)
-	playsound(wearer, 'sound/effects/pope_entry.ogg', 50)
+	playsound(wearer, '../assets/sound/effects/pope_entry.ogg', 50)
 	to_chat(wearer, span_bold(span_hypnophrase("A terrible fate has befallen you.")))
 	addtimer(CALLBACK(src, PROC_REF(kill_wearer), wearer), 5 SECONDS)
 
@@ -785,7 +785,7 @@
 
 /atom/movable/screen/moon_health
 	name = "Health Level"
-	icon = 'icons/hud/moon_health_64x64.dmi'
+	icon = '../assets/icons/hud/moon_health_64x64.dmi'
 	icon_state = "moon_hud_1"
 	base_icon_state = "moon_hud"
 	screen_loc = "EAST-1:0, SOUTH+6:16"
@@ -858,13 +858,13 @@
 	if(!object_overlay)
 		object_overlay = image(icon, icon_state = "rust_armor_overlay")
 	if(!hood_object_overlay)
-		hood_object_overlay = image('icons/obj/clothing/head/helmet.dmi', icon_state = "rust_armor_overlay")
+		hood_object_overlay = image('../assets/icons/obj/clothing/head/helmet.dmi', icon_state = "rust_armor_overlay")
 
 /obj/item/clothing/suit/hooded/cultrobes/eldritch/rust/on_robes_gained(mob/living/user)
 	. = ..()
 	RegisterSignal(user, COMSIG_MOVABLE_MOVED, PROC_REF(on_move))
 	rust_overlay = new()
-	rust_overlay.icon = 'icons/mob/clothing/suits/armor.dmi'
+	rust_overlay.icon = '../assets/icons/mob/clothing/suits/armor.dmi'
 	rust_overlay.render_target = "*rust_overlay_[overlay_id]"
 	rust_overlay.vis_flags |= VIS_INHERIT_DIR | VIS_INHERIT_LAYER | VIS_INHERIT_ID
 	user.vis_contents += rust_overlay // Should be invisible, we just update the sprite as needed
@@ -1084,8 +1084,8 @@
 // Void cloak. Turns invisible with the hood up, lets you hide stuff.
 /obj/item/clothing/head/hooded/cult_hoodie/void
 	name = "void hood"
-	icon = 'icons/obj/clothing/head/helmet.dmi'
-	worn_icon = 'icons/mob/clothing/head/helmet.dmi'
+	icon = '../assets/icons/obj/clothing/head/helmet.dmi'
+	worn_icon = '../assets/icons/mob/clothing/head/helmet.dmi'
 	desc = "Black like tar, reflecting no light. Runic symbols line the outside. \
 		With each flash you lose comprehension of what you are seeing."
 	icon_state = "void_cloak"

@@ -6,7 +6,7 @@
 	desc = "Invoke your tree's special ability."
 	cooldown_time = 2 MINUTES
 	click_to_activate = FALSE
-	button_icon = 'icons/mob/simple/pets.dmi'
+	button_icon = '../assets/icons/mob/simple/pets.dmi'
 	button_icon_state = "turtle"
 	///type of effect our tree releases
 	var/effect_path

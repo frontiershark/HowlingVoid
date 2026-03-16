@@ -91,7 +91,7 @@
 	if(!facial_hair_hidden && lip_style && (head_flags & HEAD_LIPS))
 		//not a sprite accessory, don't ask
 		//Overlay
-		var/image/lip_overlay = image('icons/mob/human/human_face.dmi', "lips_[lip_style]", -BODY_LAYER, dir = image_dir)
+		var/image/lip_overlay = image('../assets/icons/mob/human/human_face.dmi', "lips_[lip_style]", -BODY_LAYER, dir = image_dir)
 		lip_overlay.color = lip_color
 		//Offsets
 		worn_face_offset?.apply_offset(lip_overlay)
@@ -204,16 +204,16 @@
 /// Returns an appropriate debrained overlay
 /obj/item/bodypart/head/proc/get_debrain_overlay(dropped)
 	RETURN_TYPE(/image)
-	var/debrain_icon = 'icons/mob/human/human_face.dmi'
+	var/debrain_icon = '../assets/icons/mob/human/human_face.dmi'
 	var/debrain_icon_state = "debrained"
 	if(bodytype & BODYTYPE_ALIEN)
-		debrain_icon = 'icons/mob/human/species/alien/bodyparts.dmi'
+		debrain_icon = '../assets/icons/mob/human/species/alien/bodyparts.dmi'
 		debrain_icon_state = "debrained_alien"
 	else if(bodytype & BODYTYPE_LARVA_PLACEHOLDER)
-		debrain_icon = 'icons/mob/human/species/alien/bodyparts.dmi'
+		debrain_icon = '../assets/icons/mob/human/species/alien/bodyparts.dmi'
 		debrain_icon_state = "debrained_larva"
 	else if(bodytype & BODYTYPE_GOLEM)
-		debrain_icon = 'icons/mob/human/species/golems.dmi'
+		debrain_icon = '../assets/icons/mob/human/species/golems.dmi'
 		debrain_icon_state = "debrained"
 
 	var/image/debrain_overlay = mutable_appearance(debrain_icon, debrain_icon_state, -HAIR_LAYER)
@@ -225,7 +225,7 @@
 /// Returns an appropriate missing eyes overlay
 /obj/item/bodypart/head/proc/get_eyeless_overlay(dropped)
 	RETURN_TYPE(/image)
-	var/eyeless_icon = 'icons/mob/human/human_eyes.dmi'
+	var/eyeless_icon = '../assets/icons/mob/human/human_eyes.dmi'
 	var/eyeless_icon_state = "eyes_missing"
 
 	var/image/eyeless_overlay = mutable_appearance(eyeless_icon, eyeless_icon_state, -HAIR_LAYER)

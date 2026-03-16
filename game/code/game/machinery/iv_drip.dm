@@ -13,7 +13,7 @@
 /obj/machinery/iv_drip
 	name = "\improper IV drip"
 	desc = "An IV drip with an advanced infusion pump that can both drain blood into and inject liquids from attached containers."
-	icon = 'icons/obj/medical/iv_drip.dmi'
+	icon = '../assets/icons/obj/medical/iv_drip.dmi'
 	icon_state = "iv_drip"
 	base_icon_state = "iv_drip"
 	anchored = FALSE
@@ -211,7 +211,7 @@
 	else
 		balloon_alert(user, "flow maximized")
 		set_transfer_rate(MAX_IV_TRANSFER_RATE)
-	playsound(src, 'sound/machines/click.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/machines/click.ogg', 50, TRUE)
 	return CLICK_ACTION_SUCCESS
 
 /obj/machinery/iv_drip/on_deconstruction(disassembled = TRUE)
@@ -262,7 +262,7 @@
 		// If the human is losing too much blood, beep.
 		if(attached_mob.get_blood_volume(apply_modifiers = TRUE) < BLOOD_VOLUME_SAFE && prob(5))
 			audible_message(span_hear("[src] beeps loudly."))
-			playsound(loc, 'sound/machines/beep/twobeep_high.ogg', 50, TRUE)
+			playsound(loc, '../assets/sound/machines/beep/twobeep_high.ogg', 50, TRUE)
 		var/atom/movable/target = use_internal_storage ? src : reagent_container
 		attached_mob.transfer_blood_to(target, amount)
 		update_appearance(UPDATE_ICON)

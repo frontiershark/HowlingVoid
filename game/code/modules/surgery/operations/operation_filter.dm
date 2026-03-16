@@ -6,7 +6,7 @@
 	time = 2.5 SECONDS
 	operation_flags = OPERATION_LOOPING
 	required_bodytype = (~BODYTYPE_ROBOTIC & ~BODYTYPE_SYNTHETIC) // NOVA EDIT CHANGE - SYNTH FLAGS  -Orginal: required_bodytype = ~BODYTYPE_ROBOTIC
-	success_sound = 'sound/machines/card_slide.ogg'
+	success_sound = '../assets/sound/machines/card_slide.ogg'
 	all_surgery_states_required = SURGERY_SKIN_OPEN
 	any_surgery_states_blocked = SURGERY_VESSELS_UNCLAMPED
 
@@ -64,7 +64,7 @@
 /datum/surgery_operation/limb/filter_blood/proc/has_filterable_chems(mob/living/carbon/target, obj/item/blood_filter/bloodfilter)
 	if(!length(target.reagents?.reagent_list))
 		bloodfilter.audible_message(span_notice("[bloodfilter] pings as it reports no chemicals detected in [target]'s blood."))
-		playsound(target, 'sound/machines/ping.ogg', 75, TRUE, falloff_exponent = 12, falloff_distance = 1)
+		playsound(target, '../assets/sound/machines/ping.ogg', 75, TRUE, falloff_exponent = 12, falloff_distance = 1)
 		return FALSE
 
 	if(!length(bloodfilter.whitelist))
@@ -83,7 +83,7 @@
 	// NOVA EDIT ADDITION BEGIN - Neuroware
 	if(!found_reagents)
 		bloodfilter.audible_message(span_notice("[bloodfilter] pings as it reports no chemicals detected in [target]'s blood."))
-		playsound(get_turf(target), 'sound/machines/ping.ogg', 75, TRUE, falloff_exponent = 12, falloff_distance = 1)
+		playsound(get_turf(target), '../assets/sound/machines/ping.ogg', 75, TRUE, falloff_exponent = 12, falloff_distance = 1)
 	// NOVA EDIT ADDITION END
 	return FALSE
 

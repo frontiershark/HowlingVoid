@@ -1,7 +1,7 @@
 /obj/item/ammo_casing/energy/ion
 	projectile_type = /obj/projectile/ion
 	select_name = "ion"
-	fire_sound = 'sound/items/weapons/ionrifle.ogg'
+	fire_sound = '../assets/sound/items/weapons/ionrifle.ogg'
 	firing_effect_type = /obj/effect/temp_visual/dir_setting/firing_effect/blue
 	muzzle_flash_color = LIGHT_COLOR_BLUE
 
@@ -12,13 +12,13 @@
 /obj/item/ammo_casing/energy/radiation
 	projectile_type = /obj/projectile/energy/radiation
 	select_name = "declone"
-	fire_sound = 'sound/items/weapons/pulse3.ogg'
+	fire_sound = '../assets/sound/items/weapons/pulse3.ogg'
 
 /obj/item/ammo_casing/energy/radiation/weak
 	projectile_type = /obj/projectile/energy/radiation/weak
 
 /obj/item/ammo_casing/energy/flora
-	fire_sound = 'sound/effects/stealthoff.ogg'
+	fire_sound = '../assets/sound/effects/stealthoff.ogg'
 	harmful = FALSE
 
 /obj/item/ammo_casing/energy/flora/yield
@@ -38,7 +38,7 @@
 	projectile_type = /obj/projectile/temp
 	select_name = "freeze"
 	e_cost = LASER_SHOTS(40, STANDARD_CELL_CHARGE * 10)
-	fire_sound = 'sound/items/weapons/pulse3.ogg'
+	fire_sound = '../assets/sound/items/weapons/pulse3.ogg'
 	firing_effect_type = /obj/effect/temp_visual/dir_setting/firing_effect/blue
 
 /obj/item/ammo_casing/energy/temp/hot
@@ -79,7 +79,7 @@
 	projectile_type = /obj/projectile/bullet/marksman
 	select_name = "marksman nanoshot"
 	e_cost = 0 // Can't use the macro
-	fire_sound = 'sound/items/weapons/gun/revolver/shot_alt.ogg'
+	fire_sound = '../assets/sound/items/weapons/gun/revolver/shot_alt.ogg'
 	newtonian_force = 1
 
 /obj/item/ammo_casing/energy/fisher
@@ -87,11 +87,11 @@
 	select_name = "light disruptor"
 	harmful = FALSE
 	e_cost = LASER_SHOTS(2, STANDARD_CELL_CHARGE * 0.5)
-	fire_sound = 'sound/items/weapons/gun/general/heavy_shot_suppressed.ogg' // fwip fwip fwip fwip
+	fire_sound = '../assets/sound/items/weapons/gun/general/heavy_shot_suppressed.ogg' // fwip fwip fwip fwip
 
 // Used by /obj/item/gun/energy/photon
 /obj/item/ammo_casing/energy/photon
-	fire_sound = 'sound/items/weapons/lasercannonfire.ogg'
+	fire_sound = '../assets/sound/items/weapons/lasercannonfire.ogg'
 	e_cost = LASER_SHOTS(4, STANDARD_CELL_CHARGE)
 	select_name = "flare"
 	projectile_type = /obj/projectile/energy/photon

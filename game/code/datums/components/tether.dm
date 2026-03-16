@@ -39,7 +39,7 @@
 	cur_dist = max_dist
 	if (start_distance != null)
 		cur_dist = start_distance
-	var/datum/beam/beam = tether_target.Beam(parent, "line", 'icons/obj/clothing/modsuit/mod_modules.dmi', emissive = FALSE, beam_type = /obj/effect/ebeam/tether)
+	var/datum/beam/beam = tether_target.Beam(parent, "line", '../assets/icons/obj/clothing/modsuit/mod_modules.dmi', emissive = FALSE, beam_type = /obj/effect/ebeam/tether)
 	tether_beam = beam
 	if (ispath(tether_name, /atom))
 		var/atom/tmp = tether_name
@@ -260,7 +260,7 @@
 
 	var/atom/atom_target = parent
 	atom_target.visible_message(span_warning("[atom_target]'s [tether_name] snaps!"), span_userdanger("Your [tether_name] snaps!"), span_hear("You hear a cable snapping."))
-	playsound(atom_target, 'sound/effects/snap.ogg', 50, TRUE)
+	playsound(atom_target, '../assets/sound/effects/snap.ogg', 50, TRUE)
 	qdel(src)
 
 /datum/component/tether/proc/on_parent_use(obj/item/mod/module/module, atom/target)

@@ -2,7 +2,7 @@
 	var/datum/universal_icon/final_icon = base_icon.copy()
 
 	if (!isnull(accessory))
-		var/datum/universal_icon/accessory_icon = uni_icon(accessory.icon, accessory.icon_state) // NOVA EDIT CHANGE - Original: var/datum/universal_icon/accessory_icon = uni_icon('icons/mob/clothing/underwear.dmi', accessory.icon_state)
+		var/datum/universal_icon/accessory_icon = uni_icon(accessory.icon, accessory.icon_state) // NOVA EDIT CHANGE - Original: var/datum/universal_icon/accessory_icon = uni_icon('../assets/icons/mob/clothing/underwear.dmi', accessory.icon_state)
 		if (color && !accessory.use_static)
 			accessory_icon.blend_color(color, ICON_MULTIPLY)
 		final_icon.blend_icon(accessory_icon, ICON_OVERLAY)
@@ -139,9 +139,9 @@
 	var/static/datum/universal_icon/lower_half
 
 	if (isnull(lower_half))
-		lower_half = uni_icon('icons/blanks/32x32.dmi', "nothing")
-		lower_half.blend_icon(uni_icon('icons/mob/human/bodyparts_greyscale.dmi', "human_r_leg"), ICON_OVERLAY)
-		lower_half.blend_icon(uni_icon('icons/mob/human/bodyparts_greyscale.dmi', "human_l_leg"), ICON_OVERLAY)
+		lower_half = uni_icon('../assets/icons/blanks/32x32.dmi', "nothing")
+		lower_half.blend_icon(uni_icon('../assets/icons/mob/human/bodyparts_greyscale.dmi', "human_r_leg"), ICON_OVERLAY)
+		lower_half.blend_icon(uni_icon('../assets/icons/mob/human/bodyparts_greyscale.dmi', "human_l_leg"), ICON_OVERLAY)
 
 	return generate_underwear_icon(SSaccessories.socks_list[value], lower_half)
 
@@ -178,19 +178,19 @@
 /datum/preference/choiced/undershirt/icon_for(value)
 	var/static/datum/universal_icon/body
 	if (isnull(body))
-		body = uni_icon('icons/mob/human/bodyparts_greyscale.dmi', "human_r_leg")
-		body.blend_icon(uni_icon('icons/mob/human/bodyparts_greyscale.dmi', "human_l_leg"), ICON_OVERLAY)
-		body.blend_icon(uni_icon('icons/mob/human/bodyparts_greyscale.dmi', "human_r_arm"), ICON_OVERLAY)
-		body.blend_icon(uni_icon('icons/mob/human/bodyparts_greyscale.dmi', "human_l_arm"), ICON_OVERLAY)
-		body.blend_icon(uni_icon('icons/mob/human/bodyparts_greyscale.dmi', "human_r_hand"), ICON_OVERLAY)
-		body.blend_icon(uni_icon('icons/mob/human/bodyparts_greyscale.dmi', "human_l_hand"), ICON_OVERLAY)
-		body.blend_icon(uni_icon('icons/mob/human/bodyparts_greyscale.dmi', "human_chest_m"), ICON_OVERLAY)
+		body = uni_icon('../assets/icons/mob/human/bodyparts_greyscale.dmi', "human_r_leg")
+		body.blend_icon(uni_icon('../assets/icons/mob/human/bodyparts_greyscale.dmi', "human_l_leg"), ICON_OVERLAY)
+		body.blend_icon(uni_icon('../assets/icons/mob/human/bodyparts_greyscale.dmi', "human_r_arm"), ICON_OVERLAY)
+		body.blend_icon(uni_icon('../assets/icons/mob/human/bodyparts_greyscale.dmi', "human_l_arm"), ICON_OVERLAY)
+		body.blend_icon(uni_icon('../assets/icons/mob/human/bodyparts_greyscale.dmi', "human_r_hand"), ICON_OVERLAY)
+		body.blend_icon(uni_icon('../assets/icons/mob/human/bodyparts_greyscale.dmi', "human_l_hand"), ICON_OVERLAY)
+		body.blend_icon(uni_icon('../assets/icons/mob/human/bodyparts_greyscale.dmi', "human_chest_m"), ICON_OVERLAY)
 
 	var/datum/universal_icon/icon_with_undershirt = body.copy()
 
 	if (value != "Nude")
 		var/datum/sprite_accessory/accessory = SSaccessories.undershirt_list[value]
-		icon_with_undershirt.blend_icon(uni_icon(accessory.icon, accessory.icon_state), ICON_OVERLAY) // NOVA EDIT CHANGE - Original: icon_with_undershirt.blend_icon(uni_icon('icons/mob/clothing/underwear.dmi', accessory.icon_state), ICON_OVERLAY)
+		icon_with_undershirt.blend_icon(uni_icon(accessory.icon, accessory.icon_state), ICON_OVERLAY) // NOVA EDIT CHANGE - Original: icon_with_undershirt.blend_icon(uni_icon('../assets/icons/mob/clothing/underwear.dmi', accessory.icon_state), ICON_OVERLAY)
 
 	icon_with_undershirt.crop(10, 11, 23, 23) // NOVA EDIT CHANGE - Original: icon_with_undershirt.crop(9, 9, 23, 23)
 	icon_with_undershirt.scale(32, 32)
@@ -218,10 +218,10 @@
 	var/static/datum/universal_icon/lower_half
 
 	if (isnull(lower_half))
-		lower_half = uni_icon('icons/blanks/32x32.dmi', "nothing")
-		lower_half.blend_icon(uni_icon('icons/mob/human/bodyparts_greyscale.dmi', "human_chest_m"), ICON_OVERLAY)
-		lower_half.blend_icon(uni_icon('icons/mob/human/bodyparts_greyscale.dmi', "human_r_leg"), ICON_OVERLAY)
-		lower_half.blend_icon(uni_icon('icons/mob/human/bodyparts_greyscale.dmi', "human_l_leg"), ICON_OVERLAY)
+		lower_half = uni_icon('../assets/icons/blanks/32x32.dmi', "nothing")
+		lower_half.blend_icon(uni_icon('../assets/icons/mob/human/bodyparts_greyscale.dmi', "human_chest_m"), ICON_OVERLAY)
+		lower_half.blend_icon(uni_icon('../assets/icons/mob/human/bodyparts_greyscale.dmi', "human_r_leg"), ICON_OVERLAY)
+		lower_half.blend_icon(uni_icon('../assets/icons/mob/human/bodyparts_greyscale.dmi', "human_l_leg"), ICON_OVERLAY)
 
 	return generate_underwear_icon(SSaccessories.underwear_list[value], lower_half, COLOR_ALMOST_BLACK, icon_offset = 5) // NOVA EDIT CHANGE : ICON_OFFSET // NOVA EDIT CHANGE - ORIGINAL: return generate_underwear_icon(SSaccessories.underwear_list[value], lower_half, COLOR_ALMOST_BLACK)
 

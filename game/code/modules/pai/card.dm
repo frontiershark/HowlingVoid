@@ -1,13 +1,13 @@
 /obj/item/pai_card
 	custom_premium_price = PAYCHECK_COMMAND * 1.25
 	desc = "Downloads personal AI assistants to accompany its owner or others."
-	icon = 'icons/obj/aicards.dmi'
+	icon = '../assets/icons/obj/aicards.dmi'
 	icon_state = "pai"
 	inhand_icon_state = "electronic"
-	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/devices_lefthand.dmi'
 	name = "personal AI device"
 	resistance_flags = FIRE_PROOF | ACID_PROOF | INDESTRUCTIBLE
-	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/devices_righthand.dmi'
 	slot_flags = ITEM_SLOT_BELT
 	w_class = WEIGHT_CLASS_SMALL
 	worn_icon_state = "electronic"
@@ -199,7 +199,7 @@
 	COOLDOWN_START(src, alert_cooldown, 5 SECONDS)
 	add_alert()
 	addtimer(CALLBACK(src, PROC_REF(remove_alert)), 5 SECONDS)
-	playsound(src, 'sound/machines/ping.ogg', 30, TRUE)
+	playsound(src, '../assets/sound/machines/ping.ogg', 30, TRUE)
 	visible_message(span_notice("[src] flashes a message across its screen: New personalities available for download!"), blind_message = span_notice("[src] vibrates with an alert."))
 
 /**
@@ -241,9 +241,9 @@
 		balloon_alert(user, "request sent too recently")
 		return FALSE
 	request_spam = TRUE
-	playsound(src, 'sound/machines/ping.ogg', 20, TRUE)
+	playsound(src, '../assets/sound/machines/ping.ogg', 20, TRUE)
 	balloon_alert(user, "pAI assistance requested")
-	var/mutable_appearance/alert_overlay = mutable_appearance('icons/obj/aicards.dmi', "pai")
+	var/mutable_appearance/alert_overlay = mutable_appearance('../assets/icons/obj/aicards.dmi', "pai")
 
 	notify_ghosts(
 		"[user.real_name] is requesting a pAI companion! Use the pAI button to submit yourself as one.",
@@ -292,6 +292,6 @@
 	RegisterSignal(pai, COMSIG_QDELETING, PROC_REF(on_pai_del))
 	screen_image = /datum/pai_screen_image/neutral
 	update_appearance()
-	playsound(src, 'sound/effects/pai_boot.ogg', 50, TRUE, -1)
+	playsound(src, '../assets/sound/effects/pai_boot.ogg', 50, TRUE, -1)
 	audible_message("[src] plays a cheerful startup noise!")
 	return TRUE

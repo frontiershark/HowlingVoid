@@ -2,8 +2,8 @@
 	name = "chrystarfish"
 	fish_id = "chrystarfish"
 	desc = "This is what happens when a cosmostarfish sneaks into the bluespace compartment of a hyperspace engine. Very pointy and damaging - leading cause of spaceship explosions in 2554."
-	icon = 'icons/obj/aquarium/rift.dmi'
-	dedicated_in_aquarium_icon = 'icons/obj/aquarium/rift.dmi'
+	icon = '../assets/icons/obj/aquarium/rift.dmi'
+	dedicated_in_aquarium_icon = '../assets/icons/obj/aquarium/rift.dmi'
 	icon_state = "chrystarfish"
 	force = 12
 	sharpness = SHARP_POINTY
@@ -18,8 +18,8 @@
 	attack_verb_continuous = list("stabs", "jabs")
 	attack_verb_simple = list("stab", "jab")
 	hitsound = SFX_SHATTER
-	pickup_sound = 'sound/items/handling/materials/glass_pick_up.ogg'
-	drop_sound = 'sound/items/handling/materials/glass_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/materials/glass_pick_up.ogg'
+	drop_sound = '../assets/sound/items/handling/materials/glass_drop.ogg'
 
 	sprite_width = 7
 	sprite_height = 9
@@ -57,7 +57,7 @@
 	jostle_pain_mult = 1
 
 /datum/embedding/chrystarfish/jostle_effects()
-	do_teleport(owner, get_turf(owner), 3, asoundin = 'sound/effects/phasein.ogg', channel = TELEPORT_CHANNEL_BLUESPACE)
+	do_teleport(owner, get_turf(owner), 3, asoundin = '../assets/sound/effects/phasein.ogg', channel = TELEPORT_CHANNEL_BLUESPACE)
 	owner.visible_message(span_danger("[owner] teleports as [parent] jostles inside of [owner.p_them()]!"))
 
 /obj/item/fish/starfish/chrystarfish/set_status(new_status, silent)
@@ -83,7 +83,7 @@
 
 	var/tp_range = 6 * clamp(weight/average_weight, 3, 9) // usually 6, plus or minus fish weight
 	// teleports itself if on a turf otherwise its container - whatever it is
-	do_teleport(isturf(loc) ? src : loc, get_turf(feeder), tp_range, asoundin = 'sound/effects/phasein.ogg', channel = TELEPORT_CHANNEL_BLUESPACE)
+	do_teleport(isturf(loc) ? src : loc, get_turf(feeder), tp_range, asoundin = '../assets/sound/effects/phasein.ogg', channel = TELEPORT_CHANNEL_BLUESPACE)
 
 /obj/item/fish/starfish/chrystarfish/suicide_act(mob/living/user)
 	visible_message(span_suicide("[user] swallows [src] whole! It looks like they're trying to commit suicide!"))
@@ -93,7 +93,7 @@
 		if(QDELETED(thing) || istype(thing, /obj/item/bodypart/chest))
 			continue // don't want a gib
 		stoplag(0.1 SECONDS)
-		playsound(src, 'sound/effects/phasein.ogg', 15, TRUE)
+		playsound(src, '../assets/sound/effects/phasein.ogg', 15, TRUE)
 		do_teleport(thing, get_turf(user), 2, asoundin = null, channel = TELEPORT_CHANNEL_BLUESPACE)
 	qdel(src)
 	return MANUAL_SUICIDE
@@ -106,11 +106,11 @@
 	name = "walro-dolphish"
 	fish_id = "walro-dolphish"
 	desc = "Strange bloodthirsty apex predator from beyond. A powerful weapon, but it -hates- being held."
-	icon = 'icons/obj/aquarium/wide.dmi'
-	dedicated_in_aquarium_icon = 'icons/obj/aquarium/rift.dmi'
+	icon = '../assets/icons/obj/aquarium/wide.dmi'
+	dedicated_in_aquarium_icon = '../assets/icons/obj/aquarium/rift.dmi'
 	icon_state = "dolphish"
-	lefthand_file = 'icons/mob/inhands/fish_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/fish_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/fish_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/fish_righthand.dmi'
 	force = 19
 	sharpness = SHARP_POINTY
 	wound_bonus = -5
@@ -121,9 +121,9 @@
 	throw_range = 4
 	attack_verb_continuous = list("bites", "impales", "rams")
 	attack_verb_simple = list("bite", "impale", "ram")
-	hitsound = 'sound/items/weapons/bladeslice.ogg'
-	block_sound = 'sound/items/weapons/parry.ogg'
-	drop_sound = 'sound/mobs/non-humanoids/fish/fish_drop1.ogg'
+	hitsound = '../assets/sound/items/weapons/bladeslice.ogg'
+	block_sound = '../assets/sound/items/weapons/parry.ogg'
+	drop_sound = '../assets/sound/mobs/non-humanoids/fish/fish_drop1.ogg'
 	pickup_sound = SFX_FISH_PICKUP
 	sound_vary = TRUE
 
@@ -268,11 +268,11 @@
 	name = "flumpulus"
 	fish_id = "flumpulus"
 	desc = "You can hardly even guess as to how this possibly counts as a fish. Inexplicably, you get the feeling that it could serve as a fantastic way to cushion a fall."
-	icon = 'icons/obj/aquarium/rift.dmi'
-	dedicated_in_aquarium_icon = 'icons/obj/aquarium/rift.dmi'
+	icon = '../assets/icons/obj/aquarium/rift.dmi'
+	dedicated_in_aquarium_icon = '../assets/icons/obj/aquarium/rift.dmi'
 	icon_state = "flumpulus"
-	lefthand_file = 'icons/mob/inhands/fish_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/fish_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/fish_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/fish_righthand.dmi'
 	attack_verb_continuous = list("splats", "splorts")
 	attack_verb_simple = list("splat", "splort")
 
@@ -317,7 +317,7 @@
 	var/obj/item/organ/eyes/new_eyes = pick(list(/obj/item/organ/eyes/snail, /obj/item/organ/eyes/night_vision/mushroom))
 	new_eyes = new new_eyes(user)
 	new_eyes.Insert(user)
-	playsound(user, 'sound/effects/cartoon_sfx/cartoon_pop.ogg', 50, TRUE)
+	playsound(user, '../assets/sound/effects/cartoon_sfx/cartoon_pop.ogg', 50, TRUE)
 	user.visible_message("[user]'s [eyes ? eyes : "eye holes"] suddenly sprout stalks and turn into [new_eyes]!")
 	ASYNC
 		user.emote("scream")
@@ -343,7 +343,7 @@
 		damage_fish(max_integrity * integrity_failure * 0.9) // very "durable"
 		AddElement(/datum/element/squish, 15 SECONDS)
 		fallen_mob.Paralyze(0.5 SECONDS)
-		playsound(src, 'sound/effects/cartoon_sfx/cartoon_splat.ogg', 75)
+		playsound(src, '../assets/sound/effects/cartoon_sfx/cartoon_splat.ogg', 75)
 
 	return FALL_INTERCEPTED | FALL_NO_MESSAGE
 
@@ -353,16 +353,16 @@
 	desc = "This crystalline fish is actually one of only two known silicon-based lifeforms. \
 		It avoids death via oxygen-silicate reactions by organically shielding its exterior, allowing the thick scales to calcify into quartz and diamond, at the cost of rendering the fish functionally blind. \
 		How xenomorphs manage is a complete mystery bordering on bullshit."
-	icon = 'icons/obj/aquarium/rift.dmi'
-	dedicated_in_aquarium_icon = 'icons/obj/aquarium/rift.dmi'
+	icon = '../assets/icons/obj/aquarium/rift.dmi'
+	dedicated_in_aquarium_icon = '../assets/icons/obj/aquarium/rift.dmi'
 	icon_state = "gullion"
-	lefthand_file = 'icons/mob/inhands/fish_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/fish_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/fish_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/fish_righthand.dmi'
 	attack_verb_continuous = list("stabs", "jabs")
 	attack_verb_simple = list("stab", "jab")
 	hitsound = SFX_DEFAULT_FISH_SLAP
-	pickup_sound = 'sound/items/handling/materials/glass_pick_up.ogg'
-	drop_sound = 'sound/items/handling/materials/glass_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/materials/glass_pick_up.ogg'
+	drop_sound = '../assets/sound/items/handling/materials/glass_drop.ogg'
 	sprite_width = 7
 	sprite_height = 5
 
@@ -414,11 +414,11 @@
 	name = "mossglob"
 	fish_id = "mossglob"
 	desc = "This dreaded, malicious, and nearly unkillable glob of moss is rumoured to be nature's revenge against fishermen."
-	icon = 'icons/obj/aquarium/rift.dmi'
-	dedicated_in_aquarium_icon = 'icons/obj/aquarium/rift.dmi'
+	icon = '../assets/icons/obj/aquarium/rift.dmi'
+	dedicated_in_aquarium_icon = '../assets/icons/obj/aquarium/rift.dmi'
 	icon_state = "mossglob"
-	lefthand_file = 'icons/mob/inhands/fish_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/fish_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/fish_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/fish_righthand.dmi'
 	attack_verb_continuous = list("stings", "pricks")
 	attack_verb_simple = list("sting", "prick")
 	force = 11
@@ -509,8 +509,8 @@
 	fish_id = "babbelfish"
 	desc = "Babbelfish are both visually -and- psychically unsettling - their psychic wails damage the minds of those nearby. The effect is negligible on humans, but deadly for fish. \
 		It is said that splitting one in two and inserting the pieces into each ear unlocks your psychic potential."
-	icon = 'icons/obj/aquarium/rift.dmi'
-	dedicated_in_aquarium_icon = 'icons/obj/aquarium/rift.dmi'
+	icon = '../assets/icons/obj/aquarium/rift.dmi'
+	dedicated_in_aquarium_icon = '../assets/icons/obj/aquarium/rift.dmi'
 	icon_state = "babbelfish"
 	force = 7
 	damtype = BRAIN
@@ -629,7 +629,7 @@
  */
 /obj/item/fish/babbelfish/proc/psy_wail()
 	manual_emote("wails!")
-	playsound(src, 'sound/mobs/non-humanoids/fish/fish_psyblast.ogg', 100)
+	playsound(src, '../assets/sound/mobs/non-humanoids/fish/fish_psyblast.ogg', 100)
 	var/list/mob/living/mobs_in_range = get_hearers_in_range(7, src)
 	for(var/mob/living/screeched in mobs_in_range)
 		if(screeched.can_block_magic(MAGIC_RESISTANCE_MIND, charge_cost = 1))
@@ -679,7 +679,7 @@
 	if(!do_after(user, 5 SECONDS, src))
 		return
 
-	playsound(get_turf(user), 'sound/effects/wounds/crack1.ogg', 60)
+	playsound(get_turf(user), '../assets/sound/effects/wounds/crack1.ogg', 60)
 	set_status(FISH_DEAD)
 	var/cracked = new /obj/item/organ/ears/babbelfish(user)
 	user.put_in_hands(cracked)
@@ -758,7 +758,7 @@
 
 	user.apply_damage(25, BRUTE, user.get_bodypart(ears.zone), attacking_item = src)
 	to_chat(user, span_notice("As you're shoving them in, the [src] take on a life of their own and brutishly crawl right into [target_mob == user ? "your" : target_mob + "'s"] ears, taking their place entirely while maiming [target_mob == user ? "your" : target_mob.p_their()]  [ears.zone]!"))
-	playsound(user, 'sound/effects/magic/demon_consume.ogg', vol = 100, falloff_exponent = 2, vary = TRUE)
+	playsound(user, '../assets/sound/effects/magic/demon_consume.ogg', vol = 100, falloff_exponent = 2, vary = TRUE)
 	// bad moodlet
 	user.temporarilyRemoveItemFromInventory(src, TRUE)
 	Insert(user, special = TRUE, movement_flags = DELETE_IF_REPLACED)

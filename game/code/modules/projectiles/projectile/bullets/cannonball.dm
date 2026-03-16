@@ -9,8 +9,8 @@
 	paralyze = 5 SECONDS
 	stutter = 20 SECONDS
 	embed_type = null
-	hitsound = 'sound/effects/meteorimpact.ogg'
-	hitsound_wall = 'sound/items/weapons/sonic_jackhammer.ogg'
+	hitsound = '../assets/sound/effects/meteorimpact.ogg'
+	hitsound_wall = '../assets/sound/items/weapons/sonic_jackhammer.ogg'
 	/// If our cannonball hits something, it reduces the damage by this value.
 	var/damage_decrease_on_hit = 10
 	/// This is the cutoff point of our cannonball, so that it stops piercing past this value.
@@ -77,7 +77,7 @@
 
 /obj/projectile/bullet/cannonball/meteorslug
 	name = "meteorslug"
-	icon = 'icons/obj/meteor.dmi'
+	icon = '../assets/icons/obj/meteor.dmi'
 	icon_state = "small"
 	damage = 40 //REALLY not as bad as a real cannonball but they'll fucking hurt
 	paralyze = 1 SECONDS //The original stunned, okay?

@@ -2,9 +2,9 @@
 /obj/item/clothing/suit/hooded/wintercoat
 	name = "winter coat"
 	desc = "A heavy jacket made from 'synthetic' animal furs."
-	icon = 'icons/obj/clothing/suits/wintercoat.dmi'
+	icon = '../assets/icons/obj/clothing/suits/wintercoat.dmi'
 	icon_state = "coatwinter"
-	worn_icon = 'icons/mob/clothing/suits/wintercoat.dmi'
+	worn_icon = '../assets/icons/mob/clothing/suits/wintercoat.dmi'
 	inhand_icon_state = "coatwinter"
 	body_parts_covered = CHEST|GROIN|ARMS
 	cold_protection = CHEST|GROIN|ARMS
@@ -49,7 +49,7 @@
 
 /obj/item/clothing/suit/hooded/wintercoat/click_alt(mob/user)
 	zipped = !zipped
-	playsound(src, 'sound/items/zip/zip_up.ogg', 30, TRUE, -3)
+	playsound(src, '../assets/sound/items/zip/zip_up.ogg', 30, TRUE, -3)
 	worn_icon_state = "[initial(post_init_icon_state) || initial(icon_state)][zipped ? "_t" : ""]"
 	balloon_alert(user, "[zipped ? "" : "un"]zipped")
 
@@ -61,9 +61,9 @@
 /obj/item/clothing/head/hooded/winterhood
 	name = "winter hood"
 	desc = "A cozy winter hood attached to a heavy winter jacket."
-	icon = 'icons/obj/clothing/head/winterhood.dmi'
+	icon = '../assets/icons/obj/clothing/head/winterhood.dmi'
 	icon_state = "hood_winter"
-	worn_icon = 'icons/mob/clothing/head/winterhood.dmi'
+	worn_icon = '../assets/icons/mob/clothing/head/winterhood.dmi'
 	body_parts_covered = HEAD
 	cold_protection = HEAD
 	min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT
@@ -663,7 +663,7 @@
 /obj/item/clothing/suit/hooded/wintercoat/custom
 	name = "tailored winter coat"
 	desc = "A heavy jacket made from 'synthetic' animal furs, with custom colors."
-	icon = 'icons/map_icons/clothing/suit/_suit.dmi'
+	icon = '../assets/icons/map_icons/clothing/suit/_suit.dmi'
 	icon_state = "/obj/item/clothing/suit/hooded/wintercoat/custom"
 	post_init_icon_state = "coatwinter"
 	hood_down_overlay_suffix = ""

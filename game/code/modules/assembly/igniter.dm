@@ -10,8 +10,8 @@
 	custom_materials = list(/datum/material/iron=SMALL_MATERIAL_AMOUNT*5, /datum/material/glass=SMALL_MATERIAL_AMOUNT*0.5)
 	var/datum/effect_system/basic/spark_spread/sparks
 	heat = 1000
-	drop_sound = 'sound/items/handling/component_drop.ogg'
-	pickup_sound = 'sound/items/handling/component_pickup.ogg'
+	drop_sound = '../assets/sound/items/handling/component_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/component_pickup.ogg'
 	assembly_flags = ASSEMBLY_NO_DUPLICATES
 
 /obj/item/assembly/igniter/suicide_act(mob/living/carbon/user)

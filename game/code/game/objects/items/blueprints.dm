@@ -19,7 +19,7 @@
 /obj/item/blueprints
 	name = "station blueprints"
 	desc = "Blueprints of the station. There is a \"Classified\" stamp and several coffee stains on it."
-	icon = 'icons/obj/scrolls.dmi'
+	icon = '../assets/icons/obj/scrolls.dmi'
 	icon_state = "blueprints"
 	inhand_icon_state = "blueprints"
 	attack_verb_continuous = list("attacks", "baps", "hits")
@@ -145,15 +145,15 @@
 					legend_viewing = setting_wireset
 					return TRUE
 		if("view_blueprints")
-			playsound(src, 'sound/items/paper_flip.ogg', 40, TRUE)
+			playsound(src, '../assets/sound/items/paper_flip.ogg', 40, TRUE)
 			user.balloon_alert_to_viewers("flips blueprints over")
 			set_viewer(user)
 		if("hide_blueprints")
-			playsound(src, 'sound/items/paper_flip.ogg', 40, TRUE)
+			playsound(src, '../assets/sound/items/paper_flip.ogg', 40, TRUE)
 			user.balloon_alert_to_viewers("flips blueprints over")
 			clear_viewer()
 		if("refresh")
-			playsound(src, 'sound/items/paper_flip.ogg', 40, TRUE)
+			playsound(src, '../assets/sound/items/paper_flip.ogg', 40, TRUE)
 			clear_viewer()
 			set_viewer(user)
 	return TRUE

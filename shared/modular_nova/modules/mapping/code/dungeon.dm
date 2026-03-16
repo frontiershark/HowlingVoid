@@ -105,8 +105,8 @@
 	desc = "A small wooden door. It probably still opens, but it's kind of small."
 	icon = 'modular_nova/modules/mapping/icons/unique/dungeon.dmi'
 	icon_state = "wall-door"
-	openSound = 'sound/effects/doorcreaky.ogg'
-	closeSound = 'sound/effects/doorcreaky.ogg'
+	openSound = '../assets/sound/effects/doorcreaky.ogg'
+	closeSound = '../assets/sound/effects/doorcreaky.ogg'
 	sheetType = /obj/item/stack/sheet/mineral/wood
 	max_integrity = 100
 

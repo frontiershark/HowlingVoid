@@ -60,7 +60,7 @@
 
 /datum/hallucination/body/husk
 	random_hallucination_weight = 8
-	body_image_file = 'icons/mob/human/human.dmi'
+	body_image_file = '../assets/icons/mob/human/human.dmi'
 	body_image_state = "husk"
 
 /datum/hallucination/body/husk/sideways
@@ -75,18 +75,18 @@
 
 /datum/hallucination/body/ghost
 	random_hallucination_weight = 2
-	body_image_file = 'icons/mob/simple/mob.dmi'
+	body_image_file = '../assets/icons/mob/simple/mob.dmi'
 	body_image_state = "ghost"
 	body_floats = TRUE
 
 /datum/hallucination/body/hole
 	random_hallucination_weight = 1
-	body_image_file = 'icons/effects/effects.dmi'
+	body_image_file = '../assets/icons/effects/effects.dmi'
 	body_image_state = "blank"
 
 /datum/hallucination/body/staticguy
 	random_hallucination_weight = 1
-	body_image_file = 'icons/effects/effects.dmi'
+	body_image_file = '../assets/icons/effects/effects.dmi'
 	body_image_state = "static"
 	/// Our QDEL_IN timer id, so we can cancel it
 	var/del_timerid
@@ -130,42 +130,42 @@
 	hallucination_tier = HALLUCINATION_TIER_RARE
 
 /datum/hallucination/body/weird/alien
-	body_image_file = 'icons/mob/nonhuman-player/alien.dmi'
+	body_image_file = '../assets/icons/mob/nonhuman-player/alien.dmi'
 	body_image_state = "alienother"
 	body_floats = TRUE
 
 /datum/hallucination/body/weird/mini_bubblegum
-	body_image_file = 'icons/mob/simple/mob.dmi'
+	body_image_file = '../assets/icons/mob/simple/mob.dmi'
 	body_image_state = "horror"
 
 /datum/hallucination/body/weird/chrono
-	body_image_file = 'icons/mob/simple/mob.dmi'
+	body_image_file = '../assets/icons/mob/simple/mob.dmi'
 	body_image_state = "chronostuck"
 	body_floats = TRUE
 	hallucination_tier = HALLUCINATION_TIER_VERYSPECIAL
 
 /datum/hallucination/body/weird/god
-	body_image_file = 'icons/mob/simple/mob.dmi'
+	body_image_file = '../assets/icons/mob/simple/mob.dmi'
 	body_image_state = "god"
 	body_floats = TRUE
 
 /datum/hallucination/body/weird/sling
-	body_image_file = 'icons/mob/simple/mob.dmi'
+	body_image_file = '../assets/icons/mob/simple/mob.dmi'
 	body_image_state = "shadowling_ascended"
 	body_floats = TRUE
 
 /datum/hallucination/body/weird/faceless
-	body_image_file = 'icons/obj/trader_signs.dmi'
+	body_image_file = '../assets/icons/obj/trader_signs.dmi'
 	body_image_state = "faceless"
 
 /datum/hallucination/body/weird/bones
-	body_image_file = 'icons/obj/trader_signs.dmi'
+	body_image_file = '../assets/icons/obj/trader_signs.dmi'
 	body_image_state = "mrbones"
 	hallucination_tier = HALLUCINATION_TIER_VERYSPECIAL
 
 /datum/hallucination/body/weird/freezer
 	random_hallucination_weight = 0.3 // Slightly more common since it's cool (heh)
-	body_image_file = 'icons/effects/effects.dmi'
+	body_image_file = '../assets/icons/effects/effects.dmi'
 	body_image_state = "the_freezer"
 	body_layer = ABOVE_ALL_MOB_LAYER
 	spawn_under_hallucinator = TRUE

@@ -17,7 +17,7 @@
 	var/obj/item/radio/headset/headset = radio // cast as headset so we can access keyslot2 var
 
 	radio.name = "internal headset"
-	icon = 'icons/obj/clothing/headsets.dmi'
+	icon = '../assets/icons/obj/clothing/headsets.dmi'
 	icon_state = "headset"
 
 	if(radio_key_2)

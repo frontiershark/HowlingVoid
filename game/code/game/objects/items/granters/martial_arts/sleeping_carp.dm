@@ -7,7 +7,7 @@
 		directed toward you while in Combat Mode. You are also able to sometimes dodge melee and unarmed attacks against you, but only as long as you dress in appropriate martial arts clothing. Or \
 		carp-themed clothing. Your body has also hardened itself, granting extra protection against lasting wounds that would otherwise mount during extended combat. However, you are also unable to \
 		use any ranged weaponry. You can learn more about your newfound art by using the Recall Teachings verb in the Sleeping Carp tab.")
-	icon = 'icons/obj/scrolls.dmi'
+	icon = '../assets/icons/obj/scrolls.dmi'
 	icon_state = "sleepingcarp"
 	worn_icon_state = "scroll"
 	remarks = list(

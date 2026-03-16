@@ -13,7 +13,7 @@
 /mob/living/basic/carp
 	name = "space carp"
 	desc = "A ferocious, fang-bearing creature that resembles a fish."
-	icon = 'icons/mob/simple/carp.dmi'
+	icon = '../assets/icons/mob/simple/carp.dmi'
 	icon_state = "base"
 	icon_living = "base"
 	icon_dead = "base_dead"
@@ -28,7 +28,7 @@
 	obj_damage = 50
 	melee_damage_lower = 20
 	melee_damage_upper = 20
-	attack_sound = 'sound/items/weapons/bite.ogg'
+	attack_sound = '../assets/sound/items/weapons/bite.ogg'
 	attack_vis_effect = ATTACK_EFFECT_BITE
 	attack_verb_continuous = "bites"
 	attack_verb_simple = "bite"
@@ -271,7 +271,7 @@
 	new_overlays += mouth_overlay
 
 	if (!disk_overlay)
-		disk_overlay = mutable_appearance('icons/mob/simple/carp.dmi', "disk_overlay")
+		disk_overlay = mutable_appearance('../assets/icons/mob/simple/carp.dmi', "disk_overlay")
 	new_overlays += disk_overlay
 
 /mob/living/basic/carp/advanced

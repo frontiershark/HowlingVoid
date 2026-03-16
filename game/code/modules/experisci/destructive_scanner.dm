@@ -6,7 +6,7 @@
 /obj/machinery/destructive_scanner
 	name = "experimental destructive scanner"
 	desc = "A much larger version of the hand-held scanner. A charred label warns about its destructive capabilities."
-	icon = 'icons/obj/machines/destructive_scanner.dmi'
+	icon = '../assets/icons/obj/machines/destructive_scanner.dmi'
 	icon_state = "tube_open"
 	circuit = /obj/item/circuitboard/machine/destructive_scanner
 	layer = MOB_LAYER
@@ -33,7 +33,7 @@
 	var/aggressive = FALSE
 	for(var/mob/living/living_mob in pickup_zone)
 		if(!(obj_flags & EMAGGED) && ishuman(living_mob)) //Can only kill humans when emagged.
-			playsound(src, 'sound/machines/buzz/buzz-sigh.ogg', 25)
+			playsound(src, '../assets/sound/machines/buzz/buzz-sigh.ogg', 25)
 			say("Cannot scan with humans inside.")
 			return
 		aggressive = TRUE
@@ -52,16 +52,16 @@
 	flick("tube_down", src)
 	scanning = TRUE
 	update_icon()
-	playsound(src, 'sound/machines/destructive_scanner/TubeDown.ogg', 100)
+	playsound(src, '../assets/sound/machines/destructive_scanner/TubeDown.ogg', 100)
 	use_energy(idle_power_usage)
 	addtimer(CALLBACK(src, PROC_REF(start_scanning), aggressive), 1.2 SECONDS)
 
 ///Starts scanning the fancy scanning effects
 /obj/machinery/destructive_scanner/proc/start_scanning(aggressive)
 	if(aggressive)
-		playsound(src, 'sound/machines/destructive_scanner/ScanDangerous.ogg', 100, extrarange = 5)
+		playsound(src, '../assets/sound/machines/destructive_scanner/ScanDangerous.ogg', 100, extrarange = 5)
 	else
-		playsound(src, 'sound/machines/destructive_scanner/ScanSafe.ogg', 100)
+		playsound(src, '../assets/sound/machines/destructive_scanner/ScanSafe.ogg', 100)
 	use_energy(active_power_usage)
 	addtimer(CALLBACK(src, PROC_REF(finish_scanning), aggressive), 6 SECONDS)
 
@@ -71,7 +71,7 @@
 	flick("tube_up", src)
 	scanning = FALSE
 	update_icon()
-	playsound(src, 'sound/machines/destructive_scanner/TubeUp.ogg', 100)
+	playsound(src, '../assets/sound/machines/destructive_scanner/TubeUp.ogg', 100)
 	addtimer(CALLBACK(src, PROC_REF(open), aggressive), 1.2 SECONDS)
 
 ///Opens the machine to let out any contents. If the scan had mobs it'll gib them.

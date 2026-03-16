@@ -145,10 +145,10 @@ GLOBAL_VAR(department_cd_override)
 		var/new_dept_type = find_department_to_link(computer.stored_id)
 		if(isnull(new_dept_type))
 			computer.physical.balloon_alert(orderer, "no department found!")
-			playsound(computer, 'sound/machines/buzz/buzz-sigh.ogg', 30, TRUE)
+			playsound(computer, '../assets/sound/machines/buzz/buzz-sigh.ogg', 30, TRUE)
 		else
 			computer.physical.balloon_alert(orderer, "linked")
-			playsound(computer, 'sound/machines/ping.ogg', 30, TRUE)
+			playsound(computer, '../assets/sound/machines/ping.ogg', 30, TRUE)
 			set_linked_department(new_dept_type)
 		return TRUE
 
@@ -160,7 +160,7 @@ GLOBAL_VAR(department_cd_override)
 
 	if(length(use_access & id_card_access) <= 0)
 		computer.physical.balloon_alert(orderer, "access denied!")
-		playsound(computer, 'sound/machines/buzz/buzz-sigh.ogg', 30, TRUE)
+		playsound(computer, '../assets/sound/machines/buzz/buzz-sigh.ogg', 30, TRUE)
 		return TRUE
 
 	if(action == "override_order")
@@ -168,7 +168,7 @@ GLOBAL_VAR(department_cd_override)
 			return TRUE
 		if(LAZYLEN(download_access & id_card_access) <= 0)
 			computer.physical.balloon_alert(orderer, "requires head of staff access!")
-			playsound(computer, 'sound/machines/buzz/buzz-sigh.ogg', 30, TRUE)
+			playsound(computer, '../assets/sound/machines/buzz/buzz-sigh.ogg', 30, TRUE)
 			return TRUE
 
 		department_cooldowns[linked_department] = 0
@@ -212,7 +212,7 @@ GLOBAL_VAR(department_cd_override)
 			break
 
 	if(SSshuttle.supply.get_order_count(pack) == OVER_ORDER_LIMIT)
-		playsound(computer, 'sound/machines/buzz/buzz-sigh.ogg', 50, FALSE)
+		playsound(computer, '../assets/sound/machines/buzz/buzz-sigh.ogg', 50, FALSE)
 		computer.physical.say("ERROR: No more then [CARGO_MAX_ORDER] of any pack may be ordered at once!")
 		return
 
@@ -256,7 +256,7 @@ GLOBAL_VAR(department_cd_override)
 	if(!check_cooldown() || alert_silenced || !alert_able)
 		return
 	aas_config_announce(/datum/aas_config_entry/department_orders, list(), computer.physical, list(radio_channel), "Cooldown Reset")
-	computer.alert_call(src, "Order cooldown expired!", 'sound/machines/ping.ogg')
+	computer.alert_call(src, "Order cooldown expired!", '../assets/sound/machines/ping.ogg')
 
 /// Checks if the cooldown is up and resets it if so.
 /datum/computer_file/program/department_order/proc/check_cooldown()

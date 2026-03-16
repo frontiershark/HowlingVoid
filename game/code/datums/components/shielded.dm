@@ -17,7 +17,7 @@
 	/// How many charges we recover on each charge increment
 	var/charge_recovery = 1
 	/// What .dmi we're pulling the shield icon from
-	var/shield_icon_file = 'icons/effects/effects.dmi'
+	var/shield_icon_file = '../assets/icons/effects/effects.dmi'
 	/// What icon is used when someone has a functional shield up
 	var/shield_icon = "shield-old"
 	/// Do we still shield if we're being held in-hand? If FALSE, it needs to be equipped to a slot to work
@@ -38,7 +38,7 @@
 	/// A callback for the sparks/message that play when a charge is used, see [/datum/component/shielded/proc/default_run_hit_callback]
 	var/datum/callback/on_hit_effects
 
-/datum/component/shielded/Initialize(max_charges = 3, recharge_start_delay = 20 SECONDS, charge_increment_delay = 1 SECONDS, charge_recovery = 1, lose_multiple_charges = FALSE, show_charge_as_alpha = FALSE, recharge_path = null, can_block_overwhelming = FALSE, starting_charges = null, shield_icon_file = 'icons/effects/effects.dmi', shield_icon = "shield-old", shield_inhand = FALSE, run_hit_callback)
+/datum/component/shielded/Initialize(max_charges = 3, recharge_start_delay = 20 SECONDS, charge_increment_delay = 1 SECONDS, charge_recovery = 1, lose_multiple_charges = FALSE, show_charge_as_alpha = FALSE, recharge_path = null, can_block_overwhelming = FALSE, starting_charges = null, shield_icon_file = '../assets/icons/effects/effects.dmi', shield_icon = "shield-old", shield_inhand = FALSE, run_hit_callback)
 	if(!isitem(parent) || max_charges <= 0)
 		return COMPONENT_INCOMPATIBLE
 
@@ -101,9 +101,9 @@
 	var/obj/item/item_parent = parent
 	COOLDOWN_START(src, charge_add_cd, charge_increment_delay)
 	adjust_charge(charge_recovery) // set the number of charges to current + recovery per increment, clamped from zero to max_charges
-	playsound(item_parent, 'sound/effects/magic/charge.ogg', 50, TRUE)
+	playsound(item_parent, '../assets/sound/effects/magic/charge.ogg', 50, TRUE)
 	if(current_charges == max_charges)
-		playsound(item_parent, 'sound/machines/ding.ogg', 50, TRUE)
+		playsound(item_parent, '../assets/sound/machines/ding.ogg', 50, TRUE)
 
 /datum/component/shielded/proc/adjust_charge(change)
 	current_charges = clamp(current_charges + change, 0, max_charges)

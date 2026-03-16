@@ -1,11 +1,11 @@
 /obj/item/trim_token
 	name = "generic trim token"
 	desc = "Base for other trim tokens, if you somehow find this, yell at your local coders."
-	icon = 'icons/obj/economy.dmi'
+	icon = '../assets/icons/obj/economy.dmi'
 	icon_state = "coin_valid"
 	w_class = WEIGHT_CLASS_SMALL
 	resistance_flags = INDESTRUCTIBLE
-	usesound = 'sound/items/weapons/taserhit.ogg'
+	usesound = '../assets/sound/items/weapons/taserhit.ogg'
 	// Name of the job of that trim. I tried to do it otherwise but it was annoying so this is how it's going to be.
 	var/assignment = "Unassigned"
 	// Trim to add to the ID.

@@ -31,7 +31,7 @@
 /obj/item/clothing/under/costume/nova/bathrobe
 	name = "bathrobe"
 	desc = "A warm fluffy bathrobe, perfect for relaxing after finally getting clean."
-	icon = 'icons/map_icons/clothing/under/costume.dmi'
+	icon = '../assets/icons/map_icons/clothing/under/costume.dmi'
 	icon_state = "/obj/item/clothing/under/costume/nova/bathrobe"
 	post_init_icon_state = "robes"
 	worn_icon = 'modular_nova/modules/GAGS/icons/suit/suit.dmi'
@@ -48,7 +48,7 @@
 	flags_1 = IS_PLAYER_COLORABLE_1
 
 /obj/item/clothing/under/costume/dutch
-	icon = 'icons/map_icons/clothing/under/costume.dmi'
+	icon = '../assets/icons/map_icons/clothing/under/costume.dmi'
 	icon_state = "/obj/item/clothing/under/costume/dutch"
 	post_init_icon_state = "dutchsuit"
 	greyscale_config = /datum/greyscale_config/dutch_outfit
@@ -65,7 +65,7 @@
 	greyscale_colors = null
 
 /obj/item/clothing/suit/costume/pg
-	icon = 'icons/map_icons/clothing/suit/costume.dmi'
+	icon = '../assets/icons/map_icons/clothing/suit/costume.dmi'
 	icon_state = "/obj/item/clothing/suit/costume/pg"
 	post_init_icon_state = "powderganger"
 	greyscale_config = /datum/greyscale_config/powderganger
@@ -74,7 +74,7 @@
 	flags_1 = IS_PLAYER_COLORABLE_1
 
 /obj/item/clothing/suit/chaplainsuit/monkrobeeast
-	icon = 'icons/map_icons/clothing/suit/_suit.dmi'
+	icon = '../assets/icons/map_icons/clothing/suit/_suit.dmi'
 	icon_state = "/obj/item/clothing/suit/chaplainsuit/monkrobeeast"
 	post_init_icon_state = "monkrobeeast"
 	greyscale_config = /datum/greyscale_config/monkrobeeast
@@ -94,7 +94,7 @@
 	body_parts_covered = CHEST|GROIN|LEGS
 	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
 	greyscale_colors = "#2b2b2b"
-	icon = 'icons/map_icons/clothing/under/costume.dmi'
+	icon = '../assets/icons/map_icons/clothing/under/costume.dmi'
 	icon_state = "/obj/item/clothing/under/costume/nova/qipao"
 	post_init_icon_state = "qipao"
 	greyscale_config = /datum/greyscale_config/qipao
@@ -105,7 +105,7 @@
 
 /obj/item/clothing/under/costume/nova/qipao/customtrim
 	greyscale_colors = "#2b2b2b#ffce5b"
-	icon = 'icons/map_icons/clothing/under/costume.dmi'
+	icon = '../assets/icons/map_icons/clothing/under/costume.dmi'
 	icon_state = "/obj/item/clothing/under/costume/nova/qipao/customtrim"
 	post_init_icon_state = "qipao"
 	greyscale_config = /datum/greyscale_config/qipao_customtrim
@@ -118,7 +118,7 @@
 	body_parts_covered = CHEST|GROIN|LEGS
 	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
 	greyscale_colors = "#2b2b2b#353535"
-	icon = 'icons/map_icons/clothing/under/costume.dmi'
+	icon = '../assets/icons/map_icons/clothing/under/costume.dmi'
 	icon_state = "/obj/item/clothing/under/costume/nova/cheongsam"
 	post_init_icon_state = "cheongsam"
 	greyscale_config = /datum/greyscale_config/cheongsam
@@ -129,7 +129,7 @@
 
 /obj/item/clothing/under/costume/nova/cheongsam/customtrim
 	greyscale_colors = "#2b2b2b#ffce5b#353535"
-	icon = 'icons/map_icons/clothing/under/costume.dmi'
+	icon = '../assets/icons/map_icons/clothing/under/costume.dmi'
 	icon_state = "/obj/item/clothing/under/costume/nova/cheongsam/customtrim"
 	post_init_icon_state = "cheongsam"
 	greyscale_config = /datum/greyscale_config/cheongsam_customtrim
@@ -141,7 +141,7 @@
 	desc = "A traditional ancient Earth Japanese yukata, typically worn in casual settings."
 	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
 	greyscale_colors = "#2b2b2b#666666"
-	icon = 'icons/map_icons/clothing/under/costume.dmi'
+	icon = '../assets/icons/map_icons/clothing/under/costume.dmi'
 	icon_state = "/obj/item/clothing/under/costume/nova/yukata"
 	post_init_icon_state = "yukata"
 	greyscale_config = /datum/greyscale_config/yukata
@@ -172,7 +172,7 @@
 /obj/item/clothing/under/costume/nova/chima_jeogori
 	name = "chima jeogori"
 	desc = "Traditional Korean clothes, often worn as formal attire."
-	icon = 'icons/map_icons/clothing/under/costume.dmi'
+	icon = '../assets/icons/map_icons/clothing/under/costume.dmi'
 	icon_state = "/obj/item/clothing/under/costume/nova/chima_jeogori"
 	post_init_icon_state = "chima_jeogori"
 	greyscale_config = /datum/greyscale_config/chima_jeogori
@@ -191,7 +191,7 @@
 	name = "christmas costume"
 	desc = "Can you believe it guys? Christmas. Just a lightyear away!" //Lightyear is a measure of distance I hate it being used for this joke :(
 	greyscale_colors = "#cc0f0f#c4c2c2"
-	icon = 'icons/map_icons/clothing/under/costume.dmi'
+	icon = '../assets/icons/map_icons/clothing/under/costume.dmi'
 	icon_state = "/obj/item/clothing/under/costume/nova/christmas"
 	post_init_icon_state = "christmas_male"
 	greyscale_config = /datum/greyscale_config/chrimbo

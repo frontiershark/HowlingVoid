@@ -3,7 +3,7 @@
 	desc = "A large metal case of anomaly grenade casings, designed to siphon the energy of contained anomaly cores \
 		and feed them into more direct, practical applications. Like grenades, evidently. \
 		It's sealed pretty shut - looks like it only opens when done charging."
-	icon = 'icons/obj/storage/case.dmi'
+	icon = '../assets/icons/obj/storage/case.dmi'
 	icon_state = "lockbox+b"
 	w_class = WEIGHT_CLASS_BULKY
 

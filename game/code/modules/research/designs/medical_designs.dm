@@ -1187,7 +1187,7 @@
 	name = "Medibot Upgrade"
 	desc = "Automatically upgrades the effectiveness of all medibots linked to the research network."
 	id = "medibot_upgrade"
-	research_icon = 'icons/mob/silicon/aibots.dmi'
+	research_icon = '../assets/icons/mob/silicon/aibots.dmi'
 	research_icon_state = "medbot_generic_idle"
 	/// Medibot healing starts at a 1x multiplier. For every tech researched, it goes up by this amount additively.
 	var/additive_multiplier = 1
@@ -1213,7 +1213,7 @@
 	id = DESIGN_ID_IGNORE
 	name = null
 	desc = null
-	research_icon = 'icons/obj/medical/surgery_ui.dmi'
+	research_icon = '../assets/icons/obj/medical/surgery_ui.dmi'
 	research_icon_state = "surgery_any"
 	/// Typepath of what operation this design unlocks
 	var/datum/surgery_operation/surgery

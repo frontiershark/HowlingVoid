@@ -1,7 +1,7 @@
 /obj/machinery/computer/order_console/bitrunning
 	name = "bitrunning supplies order console"
 	desc = "NexaCache(tm)! Dubiously authentic gear for the digital daredevil."
-	icon = 'icons/obj/machines/bitrunning.dmi'
+	icon = '../assets/icons/obj/machines/bitrunning.dmi'
 	icon_state = "vendor"
 	icon_keyboard = null
 	icon_screen = null

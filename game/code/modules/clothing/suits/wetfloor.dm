@@ -1,11 +1,11 @@
 /obj/item/clothing/suit/caution
 	name = "wet floor sign"
 	desc = "Caution! Wet Floor!"
-	icon = 'icons/obj/clothing/suits/utility.dmi'
+	icon = '../assets/icons/obj/clothing/suits/utility.dmi'
 	icon_state = "caution"
-	worn_icon = 'icons/mob/clothing/suits/utility.dmi'
-	lefthand_file = 'icons/mob/inhands/equipment/custodial_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/custodial_righthand.dmi'
+	worn_icon = '../assets/icons/mob/clothing/suits/utility.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/custodial_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/custodial_righthand.dmi'
 	force = 1
 	throwforce = 3
 	throw_speed = 2
@@ -14,8 +14,8 @@
 	body_parts_covered = CHEST|GROIN
 	attack_verb_continuous = list("warns", "cautions", "smashes")
 	attack_verb_simple = list("warn", "caution", "smash")
-	pickup_sound = 'sound/items/handling/materials/plastic_pick_up.ogg'
-	drop_sound = 'sound/items/handling/materials/plastic_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/materials/plastic_pick_up.ogg'
+	drop_sound = '../assets/sound/items/handling/materials/plastic_drop.ogg'
 	armor_type = /datum/armor/suit_caution
 	species_exception = list(/datum/species/golem)
 	allowed = list(

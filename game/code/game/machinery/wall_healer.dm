@@ -2,7 +2,7 @@
 /obj/machinery/wall_healer
 	name = "\improper DeForest first aid station"
 	desc = "A wall-mounted first aid station, designed to treat minor injuries - just stick your hand in and try to relax."
-	icon = 'icons/obj/machines/wall_healer.dmi'
+	icon = '../assets/icons/obj/machines/wall_healer.dmi'
 	icon_state = "wall_healer"
 	base_icon_state = "wall_healer"
 	density = FALSE
@@ -347,7 +347,7 @@
 		visible_message_flags = ALWAYS_SHOW_SELF_MESSAGE,
 		vision_distance = 5,
 	)
-	playsound(src, 'sound/machines/machine_vend.ogg', 50, TRUE, extrarange = SHORT_RANGE_SOUND_EXTRARANGE)
+	playsound(src, '../assets/sound/machines/machine_vend.ogg', 50, TRUE, extrarange = SHORT_RANGE_SOUND_EXTRARANGE)
 	return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
 /obj/machinery/wall_healer/on_deconstruction(disassembled)
@@ -456,7 +456,7 @@
 	if(isnull(current_user))
 		if(COOLDOWN_FINISHED(src, recharge_cooldown) && refill_healing_pool(10))
 			COOLDOWN_START(src, recharge_cooldown, recharge_cd_length)
-			playsound(src, 'sound/machines/defib/defib_ready.ogg', 50, FALSE, SHORT_RANGE_SOUND_EXTRARANGE)
+			playsound(src, '../assets/sound/machines/defib/defib_ready.ogg', 50, FALSE, SHORT_RANGE_SOUND_EXTRARANGE)
 		return
 
 	if(!COOLDOWN_FINISHED(src, injection_cooldown))
@@ -467,20 +467,20 @@
 
 	var/arm_check = isnull(current_hand) ? (current_user.mob_biotypes & MOB_ORGANIC) : IS_ORGANIC_LIMB(current_hand)
 	if(!arm_check)
-		playsound(src, 'sound/machines/defib/defib_saftyOff.ogg', 50, FALSE, SHORT_RANGE_SOUND_EXTRARANGE)
+		playsound(src, '../assets/sound/machines/defib/defib_saftyOff.ogg', 50, FALSE, SHORT_RANGE_SOUND_EXTRARANGE)
 		if(antispam_counter % 3 == 1)
 			to_chat(current_user, span_notice("Nothing happens. Seems [src] doesn't recognize non-organic [current_hand ? "limbs" : "beings"]."))
 		return
 
 	if(!current_user.can_inject(null, current_hand))
-		playsound(src, 'sound/machines/defib/defib_saftyOff.ogg', 50, FALSE, SHORT_RANGE_SOUND_EXTRARANGE)
+		playsound(src, '../assets/sound/machines/defib/defib_saftyOff.ogg', 50, FALSE, SHORT_RANGE_SOUND_EXTRARANGE)
 		if(antispam_counter % 3 == 1)
 			to_chat(current_user, span_notice("Nothing happens. Seems [src] can't find any exposed flesh to work on."))
 		return
 
 	if(obj_flags & EMAGGED)
 		current_user.apply_damage(33, BRUTE, current_hand, sharpness = SHARP_POINTY)
-		playsound(src, 'sound/machines/defib/defib_failed.ogg', 50, FALSE, SHORT_RANGE_SOUND_EXTRARANGE)
+		playsound(src, '../assets/sound/machines/defib/defib_failed.ogg', 50, FALSE, SHORT_RANGE_SOUND_EXTRARANGE)
 		if(antispam_counter % 2 == 1)
 			to_chat(current_user, span_warning("You feel a sharp pain as the machine malfunctions, stabbing you with several instruments and needles!"))
 		use_energy(500 JOULES)
@@ -494,7 +494,7 @@
 
 	var/cost = round(per_heal_cost * (brute_healing_now + burn_healing_now + tox_healing_now + blood_healing_now), 1)
 	if(attempt_charge(src, current_user, extra_fees = cost) & COMPONENT_OBJ_CANCEL_CHARGE)
-		playsound(src, 'sound/machines/defib/defib_saftyOff.ogg', 50, FALSE, SHORT_RANGE_SOUND_EXTRARANGE)
+		playsound(src, '../assets/sound/machines/defib/defib_saftyOff.ogg', 50, FALSE, SHORT_RANGE_SOUND_EXTRARANGE)
 		// attempt charge sends a chat message on fail, except if the user has no ID card
 		if((antispam_counter % 3 == 1) && !current_user.get_idcard())
 			to_chat(current_user, span_warning("No ID card found. Aborting."))
@@ -517,14 +517,14 @@
 		add_mob_blood(current_user)
 
 	if(amount_healed)
-		playsound(src, 'sound/machines/defib/defib_SaftyOn.ogg', 50, FALSE, SHORT_RANGE_SOUND_EXTRARANGE)
+		playsound(src, '../assets/sound/machines/defib/defib_SaftyOn.ogg', 50, FALSE, SHORT_RANGE_SOUND_EXTRARANGE)
 		if(antispam_counter % 2 == 1)
 			to_chat(current_user, span_notice("Several instruments and syringes work on your [current_hand?.plaintext_zone || "body"]. You feel a bit better."))
 		update_appearance()
 		use_energy(200 JOULES) // just some background power drain. we don't really care about whether this is actually successful
 		return
 
-	playsound(src, 'sound/machines/defib/defib_saftyOff.ogg', 50, FALSE, SHORT_RANGE_SOUND_EXTRARANGE)
+	playsound(src, '../assets/sound/machines/defib/defib_saftyOff.ogg', 50, FALSE, SHORT_RANGE_SOUND_EXTRARANGE)
 	if(antispam_counter % 3 != 1)
 		return
 	var/missed_brute_healing = brute_healing_now > 0 && !current_user.get_brute_loss()

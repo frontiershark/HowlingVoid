@@ -1,9 +1,9 @@
 /// Unit tests all glass style datums with icons / icon states that those are valid and not missing.
 /datum/unit_test/glass_style_icons
 	/// The generic commonplace DMI for all normal drink sprites
-	var/generic_drink_loc = 'icons/obj/drinks/drinks.dmi'
+	var/generic_drink_loc = '../assets/icons/obj/drinks/drinks.dmi'
 	/// The generic commonplace DMI for all mixed drink sprites
-	var/generic_mixed_drink_loc = 'icons/obj/drinks/mixed_drinks.dmi'
+	var/generic_mixed_drink_loc = '../assets/icons/obj/drinks/mixed_drinks.dmi'
 
 /datum/unit_test/glass_style_icons/Run()
 	for(var/container_type in GLOB.glass_style_singletons)

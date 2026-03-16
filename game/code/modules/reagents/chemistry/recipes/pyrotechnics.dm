@@ -176,7 +176,7 @@
 		var/turf/T = get_turf(holder.my_atom)
 		///special size for anti cult effect
 		var/effective_size = round(created_volume/48)
-		playsound(T, 'sound/effects/pray.ogg', 80, FALSE, effective_size)
+		playsound(T, '../assets/sound/effects/pray.ogg', 80, FALSE, effective_size)
 		for(var/mob/living/basic/revenant/ghostie in get_hearers_in_view(7,T))
 			var/deity
 			if(GLOB.deity)
@@ -243,9 +243,9 @@
 /datum/chemical_reaction/beesplosion/on_reaction(datum/reagents/holder, datum/equilibrium/reaction, created_volume)
 	var/location = holder.my_atom.drop_location()
 	if(created_volume < 5)
-		playsound(location,'sound/effects/sparks/sparks1.ogg', 100, TRUE)
+		playsound(location,'../assets/sound/effects/sparks/sparks1.ogg', 100, TRUE)
 	else
-		playsound(location,'sound/mobs/non-humanoids/bee/bee.ogg', 100, TRUE)
+		playsound(location,'../assets/sound/mobs/non-humanoids/bee/bee.ogg', 100, TRUE)
 		var/list/beeagents = list()
 		for(var/R in holder.reagent_list)
 			if(required_reagents[R])
@@ -394,7 +394,7 @@
 	holder.remove_reagent(/datum/reagent/smoke_powder, created_volume * 3)
 	var/location = get_turf(holder.my_atom)
 	do_chem_smoke(amount = created_volume * 3, holder = holder.my_atom, location = location, carry = holder, silent = FALSE, log = TRUE)
-	playsound(location, 'sound/effects/smoke.ogg', 50, TRUE, -3)
+	playsound(location, '../assets/sound/effects/smoke.ogg', 50, TRUE, -3)
 	if(holder?.my_atom)
 		holder.clear_reagents()
 	if (!iscarbon(holder?.my_atom))
@@ -414,7 +414,7 @@
 /datum/chemical_reaction/smoke_powder_smoke/on_reaction(datum/reagents/holder, datum/equilibrium/reaction, created_volume)
 	var/location = get_turf(holder.my_atom)
 	do_chem_smoke(amount = created_volume, holder = holder.my_atom, location = location, carry = holder, log = TRUE, silent = FALSE)
-	playsound(location, 'sound/effects/smoke.ogg', 50, TRUE, -3)
+	playsound(location, '../assets/sound/effects/smoke.ogg', 50, TRUE, -3)
 	if(holder?.my_atom)
 		holder.clear_reagents()
 	if(holder?.my_atom)
@@ -436,7 +436,7 @@
 		return
 	holder.remove_reagent(/datum/reagent/sonic_powder, created_volume * 3)
 	var/location = get_turf(holder.my_atom)
-	playsound(location, 'sound/effects/bang.ogg', 25, TRUE)
+	playsound(location, '../assets/sound/effects/bang.ogg', 25, TRUE)
 	for(var/mob/living/living in get_hearers_in_view(created_volume/3, location))
 		living.soundbang_act(1, 10 SECONDS, rand(0, 5))
 
@@ -447,7 +447,7 @@
 
 /datum/chemical_reaction/sonic_powder_deafen/on_reaction(datum/reagents/holder, datum/equilibrium/reaction, created_volume)
 	var/location = get_turf(holder.my_atom)
-	playsound(location, 'sound/effects/bang.ogg', 25, TRUE)
+	playsound(location, '../assets/sound/effects/bang.ogg', 25, TRUE)
 	for(var/mob/living/living in get_hearers_in_view(created_volume/10, location))
 		living.soundbang_act(1, 10 SECONDS, rand(0, 5))
 
@@ -521,7 +521,7 @@
 	if(!cryostylane)
 		return ..()
 	var/turf/local_turf = get_turf(holder.my_atom)
-	playsound(local_turf, 'sound/effects/magic/ethereal_exit.ogg', 50, 1)
+	playsound(local_turf, '../assets/sound/effects/magic/ethereal_exit.ogg', 50, 1)
 	local_turf.visible_message("The reaction frosts over, releasing its chilly contents!")
 	freeze_radius(holder, null, holder.chem_temp*2, clamp(cryostylane.volume/30, 2, 6), 120 SECONDS, 2)
 	clear_reactants(holder, 15)
@@ -531,7 +531,7 @@
 /datum/chemical_reaction/cryostylane/overly_impure(datum/reagents/holder, datum/equilibrium/equilibrium, vol_added)
 	var/datum/reagent/cryostylane/cryostylane = holder.has_reagent(/datum/reagent/cryostylane)
 	var/turf/local_turf = get_turf(holder.my_atom)
-	playsound(local_turf, 'sound/effects/magic/ethereal_exit.ogg', 50, 1)
+	playsound(local_turf, '../assets/sound/effects/magic/ethereal_exit.ogg', 50, 1)
 	local_turf.visible_message("The reaction furiously freezes up as a snowman suddenly rises out of \the [holder.my_atom]!")
 	freeze_radius(holder, equilibrium, holder.chem_temp, clamp(cryostylane.volume/15, 3, 10), 180 SECONDS, 5)
 	new /obj/structure/statue/snow/snowman(local_turf)
@@ -602,7 +602,7 @@
 	strengthdiv = 100
 	modifier = -100
 	mix_message = span_bolddanger("The teslium starts to spark as electricity arcs away from it!")
-	mix_sound = 'sound/machines/defib/defib_zap.ogg'
+	mix_sound = '../assets/sound/machines/defib/defib_zap.ogg'
 	var/zap_flags = ZAP_MOB_DAMAGE | ZAP_OBJ_DAMAGE | ZAP_MOB_STUN | ZAP_LOW_POWER_GEN
 	reaction_tags = REACTION_TAG_EASY | REACTION_TAG_EXPLOSIVE | REACTION_TAG_DANGEROUS
 
@@ -626,7 +626,7 @@
 	if(QDELETED(holder_atom))
 		return
 	tesla_zap(source = holder_atom, zap_range = 7, power = power, cutoff = 1 KILO JOULES, zap_flags = zap_flags)
-	playsound(holder_atom, 'sound/machines/defib/defib_zap.ogg', 50, TRUE)
+	playsound(holder_atom, '../assets/sound/machines/defib/defib_zap.ogg', 50, TRUE)
 
 /datum/chemical_reaction/reagent_explosion/teslium_lightning/heat
 	required_temp = 474

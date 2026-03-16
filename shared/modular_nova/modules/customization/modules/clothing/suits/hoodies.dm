@@ -7,7 +7,7 @@
 /obj/item/clothing/suit/toggle/jacket/nova/hoodie
 	name = "hoodie"
 	desc = "A warm hoodie. you cant help but mess with the zipper..."
-	icon = 'icons/map_icons/clothing/suit/_suit.dmi'
+	icon = '../assets/icons/map_icons/clothing/suit/_suit.dmi'
 	icon_state = "/obj/item/clothing/suit/toggle/jacket/nova/hoodie"
 	post_init_icon_state = "hoodie"
 	greyscale_config = /datum/greyscale_config/hoodie
@@ -71,7 +71,7 @@
 /obj/item/clothing/suit/toggle/jacket/nova/hoodie/branded
 	name = "\improper NT hoodie"
 	desc = "A warm, blue sweatshirt. It proudly bears the silver Nanotrasen insignia lettering on the back. The edges are trimmed with silver."
-	icon = 'icons/map_icons/clothing/suit/_suit.dmi'
+	icon = '../assets/icons/map_icons/clothing/suit/_suit.dmi'
 	icon_state = "/obj/item/clothing/suit/toggle/jacket/nova/hoodie/branded"
 	post_init_icon_state = "hoodie_NT"
 	greyscale_config = /datum/greyscale_config/hoodie_branded
@@ -108,7 +108,7 @@
 	greyscale_colors = "#313131#ffffff"
 
 /obj/item/clothing/suit/jacket/bomber
-	icon = 'icons/map_icons/clothing/suit/_suit.dmi'
+	icon = '../assets/icons/map_icons/clothing/suit/_suit.dmi'
 	icon_state = "/obj/item/clothing/suit/jacket/bomber"
 	post_init_icon_state = "bomberjacket"
 	greyscale_config = /datum/greyscale_config/tg_bomberjacket

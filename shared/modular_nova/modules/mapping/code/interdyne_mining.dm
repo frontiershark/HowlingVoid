@@ -34,7 +34,7 @@
 /datum/voucher_set/interdyne/minebot_kit
 	name = "Minebot Kit"
 	description = "Contains a little minebot companion that helps you in storing ore and hunting wildlife. Also comes with an upgraded industrial welding tool (80u), a welding mask and a KA modkit that allows shots to pass through the minebot."
-	icon = 'icons/mob/silicon/aibots.dmi'
+	icon = '../assets/icons/mob/silicon/aibots.dmi'
 	icon_state = "mining_drone"
 	set_items = list(
 		/mob/living/basic/mining_drone/interdyne,

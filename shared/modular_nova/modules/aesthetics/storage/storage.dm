@@ -5,7 +5,7 @@
 	icon = 'modular_nova/modules/aesthetics/storage/icons/storage.dmi'
 
 /obj/item/storage/box/donkpockets
-	icon = 'icons/obj/storage/box.dmi'
+	icon = '../assets/icons/obj/storage/box.dmi'
 
 /obj/item/storage/box/survival/syndie
 	icon_state = "syndiebox"
@@ -17,22 +17,22 @@
 	illustration = null //Included in the sprite
 
 /obj/item/storage/box/mothic_rations
-	icon = 'icons/obj/storage/box.dmi'
+	icon = '../assets/icons/obj/storage/box.dmi'
 
 /obj/item/storage/box/mothic_goods
-	icon = 'icons/obj/storage/box.dmi'
+	icon = '../assets/icons/obj/storage/box.dmi'
 
 /obj/item/storage/box/mothic_cans_sauces
-	icon = 'icons/obj/storage/box.dmi'
+	icon = '../assets/icons/obj/storage/box.dmi'
 
 /obj/item/storage/box/tiziran_meats
-	icon = 'icons/obj/storage/box.dmi'
+	icon = '../assets/icons/obj/storage/box.dmi'
 
 /obj/item/storage/box/tiziran_cans
-	icon = 'icons/obj/storage/box.dmi'
+	icon = '../assets/icons/obj/storage/box.dmi'
 
 /obj/item/storage/box/tiziran_goods
-	icon = 'icons/obj/storage/box.dmi'
+	icon = '../assets/icons/obj/storage/box.dmi'
 
 /*
 // Medical

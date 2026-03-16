@@ -5,12 +5,12 @@
  * Also fireproof for some reason.
  */
 /obj/item/pitchfork
-	icon = 'icons/obj/weapons/spear.dmi'
+	icon = '../assets/icons/obj/weapons/spear.dmi'
 	icon_state = "pitchfork0"
 	base_icon_state = "pitchfork"
 	icon_angle = -45
-	lefthand_file = 'icons/mob/inhands/weapons/polearms_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/polearms_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/polearms_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/polearms_righthand.dmi'
 	name = "pitchfork"
 	desc = "A simple tool used for moving hay."
 	force = 7
@@ -18,7 +18,7 @@
 	w_class = WEIGHT_CLASS_BULKY
 	attack_verb_continuous = list("attacks", "impales", "pierces")
 	attack_verb_simple = list("attack", "impale", "pierce")
-	hitsound = 'sound/items/weapons/bladeslice.ogg'
+	hitsound = '../assets/sound/items/weapons/bladeslice.ogg'
 	sharpness = SHARP_EDGED
 	max_integrity = 200
 	armor_type = /datum/armor/item_pitchfork

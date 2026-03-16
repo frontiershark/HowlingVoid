@@ -7,7 +7,7 @@ GLOBAL_VAR_INIT(glowshrooms, 0)
 	anchored = TRUE
 	opacity = FALSE
 	density = FALSE
-	icon = 'icons/obj/lighting.dmi'
+	icon = '../assets/icons/obj/lighting.dmi'
 	icon_state = "glowshroom" //replaced in New
 	layer = ABOVE_NORMAL_TURF_LAYER
 	max_integrity = GLOWSHROOM_BASE_INTEGRITY
@@ -246,7 +246,7 @@ GLOBAL_VAR_INIT(glowshrooms, 0)
 
 /obj/structure/glowshroom/play_attack_sound(damage_amount, damage_type = BRUTE, damage_flag = 0)
 	if(damage_type == BURN && damage_amount)
-		playsound(src.loc, 'sound/items/tools/welder.ogg', 100, TRUE)
+		playsound(src.loc, '../assets/sound/items/tools/welder.ogg', 100, TRUE)
 
 /obj/structure/glowshroom/should_atmos_process(datum/gas_mixture/air, exposed_temperature)
 	return exposed_temperature > 300

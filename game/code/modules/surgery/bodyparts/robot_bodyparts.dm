@@ -17,8 +17,8 @@
 	limb_id = BODYPART_ID_ROBOTIC
 	attack_verb_simple = list("slapped", "punched")
 	inhand_icon_state = "buildpipe"
-	icon = 'icons/mob/augmentation/augments.dmi'
-	icon_static = 'icons/mob/augmentation/augments.dmi'
+	icon = '../assets/icons/mob/augmentation/augments.dmi'
+	icon_static = '../assets/icons/mob/augmentation/augments.dmi'
 	obj_flags = CONDUCTS_ELECTRICITY
 	icon_state = "borg_l_arm"
 	is_dimorphic = FALSE
@@ -51,8 +51,8 @@
 	desc = "A skeletal limb wrapped in pseudomuscles, with a low-conductivity case."
 	attack_verb_simple = list("slapped", "punched")
 	inhand_icon_state = "buildpipe"
-	icon_static = 'icons/mob/augmentation/augments.dmi'
-	icon = 'icons/mob/augmentation/augments.dmi'
+	icon_static = '../assets/icons/mob/augmentation/augments.dmi'
+	icon = '../assets/icons/mob/augmentation/augments.dmi'
 	limb_id = BODYPART_ID_ROBOTIC
 	obj_flags = CONDUCTS_ELECTRICITY
 	icon_state = "borg_r_arm"
@@ -87,8 +87,8 @@
 	desc = "A skeletal limb wrapped in pseudomuscles, with a low-conductivity case."
 	attack_verb_simple = list("kicked", "stomped")
 	inhand_icon_state = "buildpipe"
-	icon_static = 'icons/mob/augmentation/augments.dmi'
-	icon = 'icons/mob/augmentation/augments.dmi'
+	icon_static = '../assets/icons/mob/augmentation/augments.dmi'
+	icon = '../assets/icons/mob/augmentation/augments.dmi'
 	limb_id = BODYPART_ID_ROBOTIC
 	obj_flags = CONDUCTS_ELECTRICITY
 	icon_state = "borg_l_leg"
@@ -137,8 +137,8 @@
 	desc = "A skeletal limb wrapped in pseudomuscles, with a low-conductivity case."
 	attack_verb_simple = list("kicked", "stomped")
 	inhand_icon_state = "buildpipe"
-	icon_static =  'icons/mob/augmentation/augments.dmi'
-	icon = 'icons/mob/augmentation/augments.dmi'
+	icon_static =  '../assets/icons/mob/augmentation/augments.dmi'
+	icon = '../assets/icons/mob/augmentation/augments.dmi'
 	limb_id = BODYPART_ID_ROBOTIC
 	obj_flags = CONDUCTS_ELECTRICITY
 	icon_state = "borg_r_leg"
@@ -186,8 +186,8 @@
 	name = "cyborg torso"
 	desc = "A heavily reinforced case containing cyborg logic boards, with space for a standard power cell."
 	inhand_icon_state = "buildpipe"
-	icon_static =  'icons/mob/augmentation/augments.dmi'
-	icon = 'icons/mob/augmentation/augments.dmi'
+	icon_static =  '../assets/icons/mob/augmentation/augments.dmi'
+	icon = '../assets/icons/mob/augmentation/augments.dmi'
 	limb_id = BODYPART_ID_ROBOTIC
 	obj_flags = CONDUCTS_ELECTRICITY
 	icon_state = "borg_chest"
@@ -367,8 +367,8 @@
 	name = "cyborg head"
 	desc = "A standard reinforced braincase, with spine-plugged neural socket and sensor gimbals."
 	inhand_icon_state = "buildpipe"
-	icon_static = 'icons/mob/augmentation/augments.dmi'
-	icon = 'icons/mob/augmentation/augments.dmi'
+	icon_static = '../assets/icons/mob/augmentation/augments.dmi'
+	icon = '../assets/icons/mob/augmentation/augments.dmi'
 	limb_id = BODYPART_ID_ROBOTIC
 	obj_flags = CONDUCTS_ELECTRICITY
 	icon_state = "borg_head"
@@ -488,8 +488,8 @@
 /obj/item/bodypart/arm/left/robot/surplus
 	name = "surplus prosthetic left arm"
 	desc = "A skeletal, robotic limb. Outdated and fragile, but it's still better than nothing."
-	icon_static = 'icons/mob/augmentation/surplus_augments.dmi'
-	icon = 'icons/mob/augmentation/surplus_augments.dmi'
+	icon_static = '../assets/icons/mob/augmentation/surplus_augments.dmi'
+	icon = '../assets/icons/mob/augmentation/surplus_augments.dmi'
 	burn_modifier = 1
 	brute_modifier = 1
 	unarmed_damage_low = 1
@@ -503,8 +503,8 @@
 /obj/item/bodypart/arm/right/robot/surplus
 	name = "surplus prosthetic right arm"
 	desc = "A skeletal, robotic limb. Outdated and fragile, but it's still better than nothing."
-	icon_static = 'icons/mob/augmentation/surplus_augments.dmi'
-	icon = 'icons/mob/augmentation/surplus_augments.dmi'
+	icon_static = '../assets/icons/mob/augmentation/surplus_augments.dmi'
+	icon = '../assets/icons/mob/augmentation/surplus_augments.dmi'
 	burn_modifier = 1
 	brute_modifier = 1
 	unarmed_damage_low = 1
@@ -518,8 +518,8 @@
 /obj/item/bodypart/leg/left/robot/surplus
 	name = "surplus prosthetic left leg"
 	desc = "A skeletal, robotic limb. Outdated and fragile, but it's still better than nothing."
-	icon_static = 'icons/mob/augmentation/surplus_augments.dmi'
-	icon = 'icons/mob/augmentation/surplus_augments.dmi'
+	icon_static = '../assets/icons/mob/augmentation/surplus_augments.dmi'
+	icon = '../assets/icons/mob/augmentation/surplus_augments.dmi'
 	brute_modifier = 1
 	burn_modifier = 1
 	unarmed_damage_low = 2
@@ -533,8 +533,8 @@
 /obj/item/bodypart/leg/right/robot/surplus
 	name = "surplus prosthetic right leg"
 	desc = "A skeletal, robotic limb. Outdated and fragile, but it's still better than nothing."
-	icon_static = 'icons/mob/augmentation/surplus_augments.dmi'
-	icon = 'icons/mob/augmentation/surplus_augments.dmi'
+	icon_static = '../assets/icons/mob/augmentation/surplus_augments.dmi'
+	icon = '../assets/icons/mob/augmentation/surplus_augments.dmi'
 	brute_modifier = 1
 	burn_modifier = 1
 	unarmed_damage_low = 2
@@ -550,8 +550,8 @@
 /obj/item/bodypart/arm/left/robot/advanced
 	name = "advanced robotic left arm"
 	desc = "An advanced cybernetic arm, capable of greater feats of strength and durability."
-	icon_static = 'icons/mob/augmentation/advanced_augments.dmi'
-	icon = 'icons/mob/augmentation/advanced_augments.dmi'
+	icon_static = '../assets/icons/mob/augmentation/advanced_augments.dmi'
+	icon = '../assets/icons/mob/augmentation/advanced_augments.dmi'
 	unarmed_damage_low = 5
 	unarmed_damage_high = 13
 	unarmed_effectiveness = 20
@@ -562,8 +562,8 @@
 /obj/item/bodypart/arm/right/robot/advanced
 	name = "advanced robotic right arm"
 	desc = "An advanced cybernetic arm, capable of greater feats of strength and durability."
-	icon_static = 'icons/mob/augmentation/advanced_augments.dmi'
-	icon = 'icons/mob/augmentation/advanced_augments.dmi'
+	icon_static = '../assets/icons/mob/augmentation/advanced_augments.dmi'
+	icon = '../assets/icons/mob/augmentation/advanced_augments.dmi'
 	unarmed_damage_low = 5
 	unarmed_damage_high = 13
 	unarmed_effectiveness = 20
@@ -574,8 +574,8 @@
 /obj/item/bodypart/leg/left/robot/advanced
 	name = "advanced robotic left leg"
 	desc = "An advanced cybernetic leg, capable of greater feats of strength and durability."
-	icon_static = 'icons/mob/augmentation/advanced_augments.dmi'
-	icon = 'icons/mob/augmentation/advanced_augments.dmi'
+	icon_static = '../assets/icons/mob/augmentation/advanced_augments.dmi'
+	icon = '../assets/icons/mob/augmentation/advanced_augments.dmi'
 	unarmed_damage_low = 7
 	unarmed_damage_high = 17
 	unarmed_effectiveness = 20
@@ -586,8 +586,8 @@
 /obj/item/bodypart/leg/right/robot/advanced
 	name = "advanced robotic right leg"
 	desc = "An advanced cybernetic leg, capable of greater feats of strength and durability."
-	icon_static = 'icons/mob/augmentation/advanced_augments.dmi'
-	icon = 'icons/mob/augmentation/advanced_augments.dmi'
+	icon_static = '../assets/icons/mob/augmentation/advanced_augments.dmi'
+	icon = '../assets/icons/mob/augmentation/advanced_augments.dmi'
 	unarmed_damage_low = 7
 	unarmed_damage_high = 17
 	unarmed_effectiveness = 20

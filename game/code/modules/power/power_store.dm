@@ -108,10 +108,10 @@
 /obj/item/stock_parts/power_store/update_overlays()
 	. = ..()
 	if(grown_battery)
-		. += mutable_appearance('icons/obj/machines/cell_charger.dmi', "grown_wires")
+		. += mutable_appearance('../assets/icons/obj/machines/cell_charger.dmi', "grown_wires")
 	if((charge < 0.01) || !charge_light_type)
 		return
-	. += mutable_appearance('icons/obj/machines/cell_charger.dmi', "[cell_size_prefix]-[charge_light_type]-o[(percent() >= 99.5) ? 2 : 1]")
+	. += mutable_appearance('../assets/icons/obj/machines/cell_charger.dmi', "[cell_size_prefix]-[charge_light_type]-o[(percent() >= 99.5) ? 2 : 1]")
 
 /obj/item/stock_parts/power_store/vv_edit_var(vname, vval)
 	if(vname == NAMEOF(src, charge))
@@ -263,7 +263,7 @@
 	if(!eating_success || QDELETED(src) || charge == 0)
 		user.visible_message(span_suicide("[user] chickens out!"))
 		return SHAME
-	playsound(user, 'sound/effects/sparks/sparks1.ogg', charge / maxcharge)
+	playsound(user, '../assets/sound/effects/sparks/sparks1.ogg', charge / maxcharge)
 	var/damage = charge / (1 KILO JOULES)
 	var/discharged_energy = charge
 	user.electrocute_act(damage, src, 1, SHOCK_IGNORE_IMMUNITY|SHOCK_DELAY_STUN|SHOCK_NOGLOVES)
@@ -282,7 +282,7 @@
 		return
 	user.dropItemToGround(src)
 	user.dust(just_ash = TRUE, drop_items = TRUE)
-	playsound(src, 'sound/effects/magic/lightningshock.ogg', 50, TRUE, 10)
+	playsound(src, '../assets/sound/effects/magic/lightningshock.ogg', 50, TRUE, 10)
 	tesla_zap(source = src, zap_range = 10, power = discharged_energy)
 
 /obj/item/stock_parts/power_store/attack_self(mob/user)

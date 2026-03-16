@@ -228,7 +228,7 @@
 	SHOULD_NOT_OVERRIDE(TRUE)
 
 	if(!silent)
-		playsound(src, 'sound/machines/machine_vend.ogg', 50, TRUE, extrarange = -3)
+		playsound(src, '../assets/sound/machines/machine_vend.ogg', 50, TRUE, extrarange = -3)
 
 	var/obj/item/vended_item = null
 	if(dispense_returned)

@@ -120,7 +120,7 @@
 /datum/pet_command/untargeted_ability/pet_lights
 	command_name = "Lights"
 	command_desc = "Toggle your pet's lights!"
-	radial_icon = 'icons/mob/simple/pets.dmi'
+	radial_icon = '../assets/icons/mob/simple/pets.dmi'
 	radial_icon_state = "orbie_lights_action"
 	speech_commands = list("lights", "light", "toggle")
 	ability_key = BB_LIGHTS_ABILITY
@@ -137,7 +137,7 @@
 /datum/pet_command/use_ability/take_photo
 	command_name = "Photo"
 	command_desc = "Make your pet take a photo!"
-	radial_icon = 'icons/obj/art/camera.dmi'
+	radial_icon = '../assets/icons/obj/art/camera.dmi'
 	radial_icon_state = "camera"
 	speech_commands = list("photo", "picture", "image")
 	command_feedback = "Readys camera mode"

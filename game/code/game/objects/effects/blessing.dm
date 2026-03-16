@@ -1,7 +1,7 @@
 /obj/effect/blessing
 	name = "holy blessing"
 	desc = "Holy energies interfere with ethereal travel at this location."
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	icon_state = null
 	anchored = TRUE
 	density = FALSE
@@ -17,7 +17,7 @@
 	if(invisible)
 		return
 
-	var/image/blessing_icon = image(icon = 'icons/effects/effects.dmi', icon_state = "blessed", layer = ABOVE_NORMAL_TURF_LAYER, loc = src)
+	var/image/blessing_icon = image(icon = '../assets/icons/effects/effects.dmi', icon_state = "blessed", layer = ABOVE_NORMAL_TURF_LAYER, loc = src)
 	blessing_icon.alpha = 64
 	blessing_icon.appearance_flags = RESET_ALPHA
 	add_alt_appearance(/datum/atom_hud/alternate_appearance/basic/blessed_aware, "blessing", blessing_icon)

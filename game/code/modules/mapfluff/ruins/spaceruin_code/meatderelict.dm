@@ -43,7 +43,7 @@
 /obj/machinery/door/puzzle/meatderelict
 	name = "lockdown door"
 	desc = "A beaten door, still sturdy. Impervious to conventional methods of destruction, must be a way to open it nearby."
-	icon = 'icons/obj/doors/puzzledoor/danger.dmi'
+	icon = '../assets/icons/obj/doors/puzzledoor/danger.dmi'
 	puzzle_id = "md_prevault"
 
 /mob/living/basic/meteor_heart/opens_puzzle_door
@@ -83,13 +83,13 @@
 
 /obj/machinery/puzzle/button/meatderelict/on_puzzle_complete()
 	. = ..()
-	playsound(src, 'sound/effects/alert.ogg', 100, TRUE)
+	playsound(src, '../assets/sound/effects/alert.ogg', 100, TRUE)
 	visible_message(span_warning("[src] lets out an alarm as the lockdown is lifted!"))
 
 /obj/structure/puzzle_blockade/meat
 	name = "mass of meat and teeth"
 	desc = "A horrible mass of meat and teeth. Can it see you? You hope not. Virtually indestructible, must be a way around."
-	icon = 'icons/obj/structures.dmi'
+	icon = '../assets/icons/obj/structures.dmi'
 	icon_state = "meatblockade"
 	opacity = TRUE
 
@@ -106,7 +106,7 @@
 	desc = "An overclocked SMES, bursting with power."
 	anchored = TRUE
 	density = TRUE
-	icon = 'icons/obj/machines/engine/other.dmi'
+	icon = '../assets/icons/obj/machines/engine/other.dmi'
 	icon_state = "smes"
 	/// do we currently want to shock diagonal tiles? if not, we shock cardinals
 	var/throw_diagonals = FALSE
@@ -132,7 +132,7 @@
 /obj/lightning_thrower/process(seconds_per_tick)
 	var/list/dirs = throw_diagonals ? GLOB.diagonals : GLOB.cardinals
 	throw_diagonals = !throw_diagonals
-	playsound(src, 'sound/effects/magic/lightningbolt.ogg', 25, TRUE, SHORT_RANGE_SOUND_EXTRARANGE, ignore_walls = FALSE)
+	playsound(src, '../assets/sound/effects/magic/lightningbolt.ogg', 25, TRUE, SHORT_RANGE_SOUND_EXTRARANGE, ignore_walls = FALSE)
 	if(length(signal_turfs))
 		clear_signals()
 	for(var/direction in dirs)

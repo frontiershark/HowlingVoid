@@ -3,7 +3,7 @@
 	random_hallucination_weight = 1 // really low weight, as it also has a snowflake check to trigger when bumping airlocks
 	hallucination_tier = HALLUCINATION_TIER_COMMON
 
-	var/electrocution_icon = 'icons/mob/human/human.dmi'
+	var/electrocution_icon = '../assets/icons/mob/human/human.dmi'
 	var/electrocution_icon_state = "electrocuted_base"
 	var/image/shock_image
 	var/image/electrocution_skeleton_anim

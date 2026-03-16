@@ -223,11 +223,11 @@
 	name = "anesthetic stand parts kit"
 	desc = "Contains all of the parts needed to assemble a portable anesthetic stand. Use in hand to construct."
 	w_class = WEIGHT_CLASS_BULKY
-	icon = 'icons/obj/storage/box.dmi'
+	icon = '../assets/icons/obj/storage/box.dmi'
 	icon_state = "plasticbox"
 
 /obj/item/anesthetic_machine_kit/attack_self(mob/user)
 	new /obj/machinery/anesthetic_machine(user.loc)
 
-	playsound(get_turf(user), 'sound/items/weapons/circsawhit.ogg', 50, TRUE)
+	playsound(get_turf(user), '../assets/sound/items/weapons/circsawhit.ogg', 50, TRUE)
 	qdel(src)

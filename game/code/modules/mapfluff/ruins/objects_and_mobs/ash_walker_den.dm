@@ -3,7 +3,7 @@
 /obj/structure/lavaland/ash_walker
 	name = "necropolis tendril nest"
 	desc = "A vile tendril of corruption. It's surrounded by a nest of rapidly growing eggs..."
-	icon = 'icons/mob/simple/lavaland/nest.dmi'
+	icon = '../assets/icons/mob/simple/lavaland/nest.dmi'
 	icon_state = "ash_walker_nest"
 
 	move_resist=INFINITY // just killing it tears a massive hole in the ground, let's not move it
@@ -65,7 +65,7 @@
 				else
 					deadmob = offeredmob.get_ghost(FALSE, TRUE)
 				to_chat(deadmob, "Your body has been returned to the nest. You are being remade anew, and will awaken shortly. </br><b>Your memories will remain intact in your new body, as your soul is being salvaged</b>")
-				SEND_SOUND(deadmob, sound('sound/effects/magic/enter_blood.ogg',volume=100))
+				SEND_SOUND(deadmob, sound('../assets/sound/effects/magic/enter_blood.ogg',volume=100))
 				addtimer(CALLBACK(src, PROC_REF(remake_walker), offeredmob), 20 SECONDS)
 				offeredmob.forceMove(src)
 				return
@@ -75,7 +75,7 @@
 			else
 				meat_counter++
 			visible_message(span_warning("Serrated tendrils eagerly pull [offeredmob] to [src], tearing the body apart as its blood seeps over the eggs."))
-			playsound(get_turf(src),'sound/effects/magic/demon_consume.ogg', 100, TRUE)
+			playsound(get_turf(src),'../assets/sound/effects/magic/demon_consume.ogg', 100, TRUE)
 			var/deliverykey = offeredmob.fingerprintslast //ckey of whoever brought the body
 			var/mob/living/deliverymob = get_mob_by_key(deliverykey) //mob of said ckey
 			//there is a 40% chance that the Lava Lizard unlocks their respawn with each sacrifice
@@ -103,7 +103,7 @@
 	oldmob.mind.transfer_to(newwalker)
 	newwalker.mind.grab_ghost()
 	to_chat(newwalker, "<b>You have been pulled back from beyond the grave, with a new body and renewed purpose. Glory to the Necropolis!</b>")
-	playsound(get_turf(newwalker),'sound/effects/magic/exit_blood.ogg', 100, TRUE)
+	playsound(get_turf(newwalker),'../assets/sound/effects/magic/exit_blood.ogg', 100, TRUE)
 	qdel(oldmob)
 
 /obj/structure/lavaland/ash_walker/proc/spawn_mob()
@@ -116,7 +116,7 @@
 /obj/structure/lavaland/ash_walker_fake
 	name = "necropolis tendril nest"
 	desc = "A vile tendril of corruption. It's surrounded by a nest of rapidly growing eggs..."
-	icon = 'icons/mob/simple/lavaland/nest.dmi'
+	icon = '../assets/icons/mob/simple/lavaland/nest.dmi'
 	icon_state = "ash_walker_nest"
 	move_resist = INFINITY
 	anchored = TRUE

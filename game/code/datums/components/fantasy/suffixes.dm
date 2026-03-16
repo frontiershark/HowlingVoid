@@ -196,7 +196,7 @@
 /datum/fantasy_affix/fool/apply(datum/component/fantasy/comp, newName)
 	. = ..()
 	var/obj/item/master = comp.parent
-	comp.appliedComponents += master.AddComponent(/datum/component/squeak, list('sound/items/bikehorn.ogg' = 1), 50, falloff_exponent = 20)
+	comp.appliedComponents += master.AddComponent(/datum/component/squeak, list('../assets/sound/items/bikehorn.ogg' = 1), 50, falloff_exponent = 20)
 	return "[newName] of the fool"
 
 /datum/fantasy_affix/curse_of_hunger

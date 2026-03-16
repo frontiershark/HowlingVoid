@@ -1,7 +1,7 @@
 /obj/item/organ/ears_external
 	name = "fluffy ears"
 	desc = "Wait, there's two pairs of these?"
-	icon = 'icons/obj/clothing/head/costume.dmi'
+	icon = '../assets/icons/obj/clothing/head/costume.dmi'
 	icon_state = "kitty"
 	mutantpart_key = FEATURE_EARS
 	zone = BODY_ZONE_HEAD

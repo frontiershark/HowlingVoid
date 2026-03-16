@@ -280,7 +280,7 @@
 	if(!glass.tool_start_check(user, amount = 2))
 		return FALSE
 	if(time > 0)
-		playsound(src, 'sound/items/deconstruct.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/items/deconstruct.ogg', 50, TRUE)
 		balloon_alert(user, "adding glass...")
 	if(!glass.use_tool(src, user, time, amount = 2) || state != FRAME_COMPUTER_STATE_WIRED)
 		return FALSE
@@ -329,14 +329,14 @@
 
 /// Helpers for rcd
 /obj/structure/frame/computer/rcd
-	icon = 'icons/hud/radial.dmi'
+	icon = '../assets/icons/hud/radial.dmi'
 	icon_state = "cnorth"
 	anchored = TRUE
 
 /obj/structure/frame/computer/rcd/Initialize(mapload)
 	// yeah...
 	name = "computer frame"
-	icon = 'icons/obj/devices/stock_parts.dmi'
+	icon = '../assets/icons/obj/devices/stock_parts.dmi'
 	return ..()
 
 /obj/structure/frame/computer/rcd/north

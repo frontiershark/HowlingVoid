@@ -88,12 +88,12 @@
 	desc = "Uses shearing action and growth inducers to reshape your coworkers external features!"
 
 	icon_state = "flesh_shaper"
-	icon = 'icons/obj/medical/surgery_tools.dmi'
+	icon = '../assets/icons/obj/medical/surgery_tools.dmi'
 	icon_angle = 90
 
 	inhand_icon_state = "flesh_shaper"
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/medical_righthand.dmi'
 
 	force = 5
 	w_class = WEIGHT_CLASS_SMALL

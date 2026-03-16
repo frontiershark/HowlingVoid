@@ -14,7 +14,7 @@ ADMIN_VERB(cmd_admin_say, R_NONE, "ASay", "Send a message to other admins", ADMI
 				if(!iter_admin_client?.holder)
 					continue
 				window_flash(iter_admin_client)
-				SEND_SOUND(iter_admin_client.mob, sound('sound/misc/asay_ping.ogg'))
+				SEND_SOUND(iter_admin_client.mob, sound('../assets/sound/misc/asay_ping.ogg'))
 
 	user.mob.log_talk(message, LOG_ASAY)
 	message = keywords_lookup(message)

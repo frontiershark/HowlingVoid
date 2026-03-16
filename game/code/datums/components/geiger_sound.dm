@@ -65,10 +65,10 @@
 
 /datum/looping_sound/geiger
 	mid_sounds = list(
-		list('sound/items/geiger/low1.ogg'=1, 'sound/items/geiger/low2.ogg'=1, 'sound/items/geiger/low3.ogg'=1, 'sound/items/geiger/low4.ogg'=1),
-		list('sound/items/geiger/med1.ogg'=1, 'sound/items/geiger/med2.ogg'=1, 'sound/items/geiger/med3.ogg'=1, 'sound/items/geiger/med4.ogg'=1),
-		list('sound/items/geiger/high1.ogg'=1, 'sound/items/geiger/high2.ogg'=1, 'sound/items/geiger/high3.ogg'=1, 'sound/items/geiger/high4.ogg'=1),
-		list('sound/items/geiger/ext1.ogg'=1, 'sound/items/geiger/ext2.ogg'=1, 'sound/items/geiger/ext3.ogg'=1, 'sound/items/geiger/ext4.ogg'=1)
+		list('../assets/sound/items/geiger/low1.ogg'=1, '../assets/sound/items/geiger/low2.ogg'=1, '../assets/sound/items/geiger/low3.ogg'=1, '../assets/sound/items/geiger/low4.ogg'=1),
+		list('../assets/sound/items/geiger/med1.ogg'=1, '../assets/sound/items/geiger/med2.ogg'=1, '../assets/sound/items/geiger/med3.ogg'=1, '../assets/sound/items/geiger/med4.ogg'=1),
+		list('../assets/sound/items/geiger/high1.ogg'=1, '../assets/sound/items/geiger/high2.ogg'=1, '../assets/sound/items/geiger/high3.ogg'=1, '../assets/sound/items/geiger/high4.ogg'=1),
+		list('../assets/sound/items/geiger/ext1.ogg'=1, '../assets/sound/items/geiger/ext2.ogg'=1, '../assets/sound/items/geiger/ext3.ogg'=1, '../assets/sound/items/geiger/ext4.ogg'=1)
 	)
 	mid_length = 2
 	volume = 25

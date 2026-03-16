@@ -4,7 +4,7 @@
 		RMB: Mark a secondary swap target. This secondary swap target will be discarded once you swap, \
 		or else you can click yourself with the RMB to discard your secondary target."
 	button_icon_state = "swap"
-	ranged_mousepointer = 'icons/effects/mouse_pointers/swap_target.dmi'
+	ranged_mousepointer = '../assets/icons/effects/mouse_pointers/swap_target.dmi'
 	active_overlay_icon_state = "bg_spell_border_active_blue"
 
 	school = SCHOOL_TRANSLOCATION
@@ -80,12 +80,12 @@
 		do_teleport(second_target, owner.loc, no_effects = TRUE, channel = TELEPORT_CHANNEL_MAGIC)
 		do_teleport(cast_on, second_location, no_effects = TRUE, channel = TELEPORT_CHANNEL_MAGIC)
 		do_teleport(owner, target_location, no_effects = TRUE, channel = TELEPORT_CHANNEL_MAGIC)
-		second_target.playsound_local(get_turf(second_target), 'sound/effects/magic/swap.ogg', 50, 1)
-		cast_on.playsound_local(get_turf(cast_on), 'sound/effects/magic/swap.ogg', 50, 1)
-		owner.playsound_local(get_turf(owner), 'sound/effects/magic/swap.ogg', 50, 1)
+		second_target.playsound_local(get_turf(second_target), '../assets/sound/effects/magic/swap.ogg', 50, 1)
+		cast_on.playsound_local(get_turf(cast_on), '../assets/sound/effects/magic/swap.ogg', 50, 1)
+		owner.playsound_local(get_turf(owner), '../assets/sound/effects/magic/swap.ogg', 50, 1)
 	else
 		do_teleport(cast_on, owner.loc, no_effects = TRUE, channel = TELEPORT_CHANNEL_MAGIC)
 		do_teleport(owner, target_location, no_effects = TRUE, channel = TELEPORT_CHANNEL_MAGIC)
-		cast_on.playsound_local(get_turf(cast_on), 'sound/effects/magic/swap.ogg', 50, 1)
-		owner.playsound_local(get_turf(owner), 'sound/effects/magic/swap.ogg', 50, 1)
+		cast_on.playsound_local(get_turf(cast_on), '../assets/sound/effects/magic/swap.ogg', 50, 1)
+		owner.playsound_local(get_turf(owner), '../assets/sound/effects/magic/swap.ogg', 50, 1)
 	second_target = null

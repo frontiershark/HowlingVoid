@@ -60,7 +60,7 @@
 	)
 
 /obj/item/energy_katana
-	worn_icon = 'icons/mob/clothing/belt.dmi' //makes the sword's suit-storage appearance work
+	worn_icon = '../assets/icons/mob/clothing/belt.dmi' //makes the sword's suit-storage appearance work
 
 /obj/item/storage/belt/military/cin_surplus/ninja
 	icon_state = "/obj/item/storage/belt/military/cin_surplus/ninja"

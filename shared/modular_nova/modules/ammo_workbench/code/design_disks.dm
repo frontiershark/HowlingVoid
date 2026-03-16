@@ -4,10 +4,10 @@
 	icon = 'modular_nova/modules/ammo_workbench/icons/ammo_workbench.dmi'
 	w_class = WEIGHT_CLASS_SMALL
 	inhand_icon_state = "card-id"
-	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
-	drop_sound = 'sound/items/handling/disk_drop.ogg'
-	pickup_sound = 'sound/items/handling/disk_pickup.ogg'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/idcards_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/idcards_righthand.dmi'
+	drop_sound = '../assets/sound/items/handling/disk_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/disk_pickup.ogg'
 	icon_state = "lethal_mod"
 
 	desc = "A blank hardware authentication module for inserting into ammunition workbenches. \

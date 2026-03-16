@@ -133,7 +133,7 @@
 	if(SPT_PROB(10, seconds_per_tick))
 		to_chat(affected_mob, "You feel confused and disoriented.")
 		if(prob(30))
-			SEND_SOUND(affected_mob, sound('sound/items/weapons/flash_ring.ogg'))
+			SEND_SOUND(affected_mob, sound('../assets/sound/items/weapons/flash_ring.ogg'))
 
 /datum/reagent/medicine/cryoxadone
 	name = "Cryoxadone"
@@ -698,7 +698,7 @@
 	if(SPT_PROB(1 * (1 + (1-normalise_creation_purity())), seconds_per_tick) && iscarbon(affected_mob))
 		affected_mob.apply_status_effect(/datum/status_effect/heart_attack)
 		to_chat(affected_mob, span_userdanger("You're pretty sure you just felt your heart stop for a second there.."))
-		affected_mob.playsound_local(affected_mob, 'sound/effects/singlebeat.ogg', 100, 0)
+		affected_mob.playsound_local(affected_mob, '../assets/sound/effects/singlebeat.ogg', 100, 0)
 
 	if(SPT_PROB(3.5 * (1 + (1-normalise_creation_purity())), seconds_per_tick))
 		to_chat(affected_mob, span_notice("[pick("Your head pounds.", "You feel a tight pain in your chest.", "You find it hard to stay still.", "You feel your heart practically beating out of your chest.")]"))
@@ -906,7 +906,7 @@
 	var/obj/item/organ/eyes/new_eyes = pick(eye_types)
 	new_eyes = new new_eyes(affected_mob)
 	new_eyes.Insert(affected_mob)
-	playsound(affected_mob, 'sound/effects/cartoon_sfx/cartoon_pop.ogg', 50, TRUE)
+	playsound(affected_mob, '../assets/sound/effects/cartoon_sfx/cartoon_pop.ogg', 50, TRUE)
 	affected_mob.visible_message(span_danger("[affected_mob]'s [eyes ? eyes : "eye holes"] suddenly sprout stalks and turn into [new_eyes]!"))
 	ASYNC
 		affected_mob.emote("scream")

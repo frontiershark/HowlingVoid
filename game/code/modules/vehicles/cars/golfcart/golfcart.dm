@@ -10,7 +10,7 @@
 /obj/vehicle/ridden/golfcart
 	name = "golf cart"
 	desc = "An all-purpose cargo hauling vehicle."
-	icon = 'icons/obj/toys/golfcart_split.dmi'
+	icon = '../assets/icons/obj/toys/golfcart_split.dmi'
 	icon_state = "front"
 	max_integrity = 100
 	armor_type = /datum/armor/none
@@ -59,12 +59,12 @@
 /obj/item/key/golfcart
 	name = "golfcart key"
 	desc = "A small grey key for using the golf cart."
-	icon = 'icons/obj/toys/golfcart_split.dmi'
+	icon = '../assets/icons/obj/toys/golfcart_split.dmi'
 
 /obj/item/golfcart_kit
 	name = "golfcart parts kit"
 	desc = "A box containing a golf cart. Some assembly required. Batteries not included."
-	icon = 'icons/obj/toys/golfcart_split.dmi'
+	icon = '../assets/icons/obj/toys/golfcart_split.dmi'
 	icon_state = "parts_kit"
 	w_class = WEIGHT_CLASS_HUGE
 	throw_range = 2
@@ -78,19 +78,19 @@
 
 /obj/item/golfcart_kit/proc/play_building_noises(mob/living/user, duration)
 	duration = max(duration - (1 SECONDS), 0.5 SECONDS)
-	playsound(src, 'sound/items/poster/poster_ripped.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/poster/poster_ripped.ogg', 50, TRUE)
 	sleep(1 SECONDS)
 	if (!DOING_INTERACTION_WITH_TARGET(user, src))
 		return
-	playsound(src, 'sound/items/tools/screwdriver_operating.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/tools/screwdriver_operating.ogg', 50, TRUE)
 	sleep(duration / 2)
 	if (!DOING_INTERACTION_WITH_TARGET(user, src))
 		return
-	playsound(src, 'sound/items/tools/ratchet.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/tools/ratchet.ogg', 50, TRUE)
 	sleep(duration / 2)
 	if (!DOING_INTERACTION_WITH_TARGET(user, src))
 		return
-	playsound(src, 'sound/items/tools/screwdriver.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/tools/screwdriver.ogg', 50, TRUE)
 
 /obj/item/golfcart_kit/screwdriver_act(mob/living/user, obj/item/tool)
 	if (!isturf(loc))
@@ -170,8 +170,8 @@
 		var/mob/living/carbon/person = victim
 		if (person.body_position == LYING_DOWN)
 			log_combat(src, victim, "run over", addition = "(DAMTYPE: [uppertext(BRUTE)])")
-			playsound(src, 'sound/effects/pop_expl.ogg', 50, TRUE)
-			playsound(src, 'sound/effects/splat.ogg', 50, TRUE)
+			playsound(src, '../assets/sound/effects/pop_expl.ogg', 50, TRUE)
+			playsound(src, '../assets/sound/effects/splat.ogg', 50, TRUE)
 			victim.visible_message(
 				span_danger("[src] drives over [victim]!"),
 				span_userdanger("[src] drives over you!"),
@@ -260,8 +260,8 @@
 
 /obj/vehicle/ridden/golfcart/proc/set_engine_state(state)
 	engine_state = state
-	if (engine_state == ENGINE_WELDED && icon != 'icons/obj/toys/golfcart_hotrod_split.dmi')
-		icon = 'icons/obj/toys/golfcart_hotrod_split.dmi'
+	if (engine_state == ENGINE_WELDED && icon != '../assets/icons/obj/toys/golfcart_hotrod_split.dmi')
+		icon = '../assets/icons/obj/toys/golfcart_hotrod_split.dmi'
 		update_appearance(UPDATE_ICON)
 	else if (engine_state != ENGINE_WELDED && icon != initial(icon))
 		icon = initial(icon)
@@ -276,7 +276,7 @@
 		set_engine_state(ENGINE_UNWRENCHED)
 	else if (engine_state == ENGINE_UNWRENCHED)
 		set_engine_state(ENGINE_WRENCHED)
-	playsound(src, 'sound/items/deconstruct.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/deconstruct.ogg', 50, TRUE)
 	return ITEM_INTERACT_SUCCESS
 
 /obj/vehicle/ridden/golfcart/welder_act(mob/living/user, obj/item/tool)

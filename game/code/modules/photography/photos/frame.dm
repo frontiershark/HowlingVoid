@@ -3,7 +3,7 @@
 /obj/item/wallframe/picture
 	name = "picture frame"
 	desc = "The perfect showcase for your favorite deathtrap memories."
-	icon = 'icons/obj/signs.dmi'
+	icon = '../assets/icons/obj/signs.dmi'
 	custom_materials = list(/datum/material/wood =SHEET_MATERIAL_AMOUNT)
 	resistance_flags = FLAMMABLE
 	flags_1 = 0
@@ -64,7 +64,7 @@
 /obj/structure/sign/picture_frame
 	name = "picture frame"
 	desc = "Every time you look it makes you laugh."
-	icon = 'icons/obj/signs.dmi'
+	icon = '../assets/icons/obj/signs.dmi'
 	icon_state = "frame-overlay"
 	custom_materials = list(/datum/material/wood =SHEET_MATERIAL_AMOUNT)
 	resistance_flags = FLAMMABLE
@@ -123,7 +123,7 @@
 		return FALSE
 	to_chat(user, span_notice("You start unsecuring [name]..."))
 	if(tool.use_tool(src, user, 3 SECONDS, volume=50))
-		playsound(loc, 'sound/items/deconstruct.ogg', 50, TRUE)
+		playsound(loc, '../assets/sound/items/deconstruct.ogg', 50, TRUE)
 		to_chat(user, span_notice("You unsecure [name]."))
 		deconstruct()
 	return TRUE

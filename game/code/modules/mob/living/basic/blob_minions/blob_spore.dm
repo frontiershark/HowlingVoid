@@ -4,7 +4,7 @@
 /mob/living/basic/blob_minion/spore
 	name = "blob spore"
 	desc = "A floating, fragile spore."
-	icon = 'icons/mob/nonhuman-player/blob.dmi'
+	icon = '../assets/icons/mob/nonhuman-player/blob.dmi'
 	icon_state = "blobpod"
 	base_icon_state = "blobpod"
 	icon_living = "blobpod"
@@ -20,7 +20,7 @@
 	obj_damage = 10
 	attack_verb_continuous = "batters"
 	attack_verb_simple = "batter"
-	attack_sound = 'sound/items/weapons/genhit1.ogg'
+	attack_sound = '../assets/sound/items/weapons/genhit1.ogg'
 	death_message = "explodes into a cloud of gas!"
 	gold_core_spawnable = HOSTILE_SPAWN
 	basic_mob_flags = DEL_ON_DEATH
@@ -140,4 +140,4 @@
 
 /mob/living/basic/blob_minion/spore/independent/proc/on_assumed_control()
 	to_chat(src, span_blobannounce("You are a spore born free from the shackles of an overmind.\n\nHowever this strange predicament has not muted the hostility you feel towards creatures that are not your kin, this base instinct appears to be a part of your true self."))
-	SEND_SOUND(src, sound('sound/music/antag/blobalert.ogg', volume = 50))
+	SEND_SOUND(src, sound('../assets/sound/music/antag/blobalert.ogg', volume = 50))

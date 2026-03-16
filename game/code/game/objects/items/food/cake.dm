@@ -1,5 +1,5 @@
 /obj/item/food/cake
-	icon = 'icons/obj/food/piecake.dmi'
+	icon = '../assets/icons/obj/food/piecake.dmi'
 	abstract_type = /obj/item/food/cake
 	bite_consumption = 3
 	max_volume = 80
@@ -24,7 +24,7 @@
 		AddElement(/datum/element/processable, TOOL_KNIFE, slice_type, yield, 3 SECONDS, table_required = TRUE, screentip_verb = "Slice", sound_to_play = SFX_KNIFE_SLICE)
 
 /obj/item/food/cakeslice
-	icon = 'icons/obj/food/piecake.dmi'
+	icon = '../assets/icons/obj/food/piecake.dmi'
 	abstract_type = /obj/item/food/cakeslice
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 4,
@@ -296,7 +296,7 @@
 	desc = "Just enough calories for a whole nuclear operative squad."
 	icon_state = "energycake"
 	force = 5
-	hitsound = 'sound/items/weapons/blade1.ogg'
+	hitsound = '../assets/sound/items/weapons/blade1.ogg'
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 10,
 		/datum/reagent/consumable/sprinkles = 10,
@@ -314,7 +314,7 @@
 /obj/item/food/cake/birthday/energy/proc/energy_bite(mob/living/user)
 	to_chat(user, "<font color='red' size='5'>As you eat the cake, you accidentally hurt yourself on the embedded energy sword!</font>")
 	user.apply_damage(30, BRUTE, BODY_ZONE_HEAD)
-	playsound(user, 'sound/items/weapons/blade1.ogg', 5, TRUE)
+	playsound(user, '../assets/sound/items/weapons/blade1.ogg', 5, TRUE)
 
 /obj/item/food/cake/birthday/energy/attack(mob/living/target_mob, mob/living/user)
 	. = ..()
@@ -327,7 +327,7 @@
 	desc = "For the traitor on the go."
 	icon_state = "energycakeslice"
 	force = 2
-	hitsound = 'sound/items/weapons/blade1.ogg'
+	hitsound = '../assets/sound/items/weapons/blade1.ogg'
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 4,
 		/datum/reagent/consumable/sprinkles = 2,
@@ -354,7 +354,7 @@
 	if(eater != feeder)
 		log_combat(feeder, eater, "fed an energy cake to", src)
 	eater.apply_damage(18, BRUTE, BODY_ZONE_HEAD)
-	playsound(eater, 'sound/items/weapons/blade1.ogg', 5, TRUE)
+	playsound(eater, '../assets/sound/items/weapons/blade1.ogg', 5, TRUE)
 
 /obj/item/food/cake/apple
 	name = "apple cake"

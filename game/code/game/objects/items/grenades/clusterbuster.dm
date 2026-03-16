@@ -8,7 +8,7 @@
 /obj/item/grenade/clusterbuster
 	desc = "Use of this weapon may constitute a war crime in your area, consult your local captain."
 	name = "clusterbang"
-	icon = 'icons/obj/weapons/grenade.dmi'
+	icon = '../assets/icons/obj/weapons/grenade.dmi'
 	icon_state = "clusterbang"
 	var/base_state = "clusterbang"
 	var/payload = /obj/item/grenade/flashbang/cluster
@@ -52,7 +52,7 @@
 /obj/item/grenade/clusterbuster/segment
 	desc = "A smaller segment of a clusterbang. Better run!"
 	name = "clusterbang segment"
-	icon = 'icons/obj/weapons/grenade.dmi'
+	icon = '../assets/icons/obj/weapons/grenade.dmi'
 	icon_state = "clusterbang_segment"
 	base_state = "clusterbang_segment"
 
@@ -193,7 +193,7 @@
 	icon_state = "slimebang"
 	base_state = "slimebang"
 	payload_spawner = /obj/effect/payload_spawner/random_slime
-	grenade_arm_sound = 'sound/effects/bubbles/bubbles.ogg'
+	grenade_arm_sound = '../assets/sound/effects/bubbles/bubbles.ogg'
 
 /obj/item/grenade/clusterbuster/slime/volatile
 	payload_spawner = /obj/effect/payload_spawner/random_slime/volatile

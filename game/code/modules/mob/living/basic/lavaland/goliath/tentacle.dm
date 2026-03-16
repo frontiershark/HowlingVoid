@@ -1,7 +1,7 @@
 /// A tentacle which grabs you if you don't get away from it
 /obj/effect/goliath_tentacle
 	name = "goliath tentacle"
-	icon = 'icons/mob/simple/lavaland/lavaland_monsters.dmi'
+	icon = '../assets/icons/mob/simple/lavaland/lavaland_monsters.dmi'
 	icon_state = "goliath_tentacle_spawn"
 	layer = BELOW_MOB_LAYER
 	plane = GAME_PLANE

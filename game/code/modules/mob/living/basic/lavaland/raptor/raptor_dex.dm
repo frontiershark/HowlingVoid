@@ -1,7 +1,7 @@
 /obj/item/raptor_dex
 	name = "\improper RaptorDex"
 	desc = "A device used to analyze lavaland raptors!"
-	icon = 'icons/obj/devices/scanner.dmi'
+	icon = '../assets/icons/obj/devices/scanner.dmi'
 	icon_state = "raptor_dex"
 	item_flags = NOBLUDGEON
 	/// Raptor scan data we have stored
@@ -60,7 +60,7 @@
 		for(var/index in inherit.personality_traits)
 			scan_data["inherited_traits"] += GLOB.raptor_inherit_traits[index]
 
-	playsound(src, 'sound/mobs/non-humanoids/orbie/orbie_send_out.ogg', 20)
+	playsound(src, '../assets/sound/mobs/non-humanoids/orbie/orbie_send_out.ogg', 20)
 	balloon_alert(my_raptor, "scanned")
 	ui_interact(user)
 	return ITEM_INTERACT_SUCCESS

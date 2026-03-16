@@ -6,7 +6,7 @@
 	show_in_antagpanel = FALSE
 	pref_flag = ROLE_BLOB
 	ui_name = "AntagInfoBlob"
-	stinger_sound = 'sound/music/antag/blobalert.ogg'
+	stinger_sound = '../assets/sound/music/antag/blobalert.ogg'
 	antag_hud_name = "blob"
 	/// Action to release a blob infection
 	var/datum/action/innate/blobpop/pop_action
@@ -44,9 +44,9 @@
 /datum/antagonist/blob/get_preview_icon()
 	var/datum/blobstrain/reagent/reactive_spines/reactive_spines = /datum/blobstrain/reagent/reactive_spines
 
-	var/icon/icon = icon('icons/mob/nonhuman-player/blob.dmi', "blob_core")
+	var/icon/icon = icon('../assets/icons/mob/nonhuman-player/blob.dmi', "blob_core")
 	icon.Blend(initial(reactive_spines.color), ICON_MULTIPLY)
-	icon.Blend(icon('icons/mob/nonhuman-player/blob.dmi', "blob_core_overlay"), ICON_OVERLAY)
+	icon.Blend(icon('../assets/icons/mob/nonhuman-player/blob.dmi', "blob_core_overlay"), ICON_OVERLAY)
 	icon.Scale(ANTAGONIST_PREVIEW_ICON_SIZE, ANTAGONIST_PREVIEW_ICON_SIZE)
 
 	return icon
@@ -91,7 +91,7 @@
 /datum/action/innate/blobpop
 	name = "Pop"
 	desc = "Unleash the blob!"
-	button_icon = 'icons/mob/nonhuman-player/blob.dmi'
+	button_icon = '../assets/icons/mob/nonhuman-player/blob.dmi'
 	button_icon_state = "blob"
 
 	/// The time taken before this ability is automatically activated.
@@ -134,13 +134,13 @@
 	owner.mind.transfer_to(blob_cam)
 	old_body.gib()
 	blob_cam.place_blob_core(placement_override, pop_override = TRUE)
-	playsound(get_turf(blob_cam), 'sound/music/antag/blobalert.ogg', 50, FALSE)
+	playsound(get_turf(blob_cam), '../assets/sound/music/antag/blobalert.ogg', 50, FALSE)
 	blobtag.has_already_popped = TRUE
 
 	notify_ghosts(
 		"A Blob host has burst in [get_area_name(blob_cam.blob_core)]",
 		source = blob_cam.blob_core,
-		ghost_sound = 'sound/music/antag/blobalert.ogg',
+		ghost_sound = '../assets/sound/music/antag/blobalert.ogg',
 		header = "Blob Awakening!",
 		notify_volume = 75,
 	)
@@ -162,7 +162,7 @@
 	var/icon/blob_icon = ..()
 
 	var/datum/blobstrain/reagent/reactive_spines/reactive_spines = /datum/blobstrain/reagent/reactive_spines
-	var/icon/blob_head = icon('icons/mob/nonhuman-player/blob.dmi', "blob_head")
+	var/icon/blob_head = icon('../assets/icons/mob/nonhuman-player/blob.dmi', "blob_head")
 	blob_head.Blend(initial(reactive_spines.complementary_color), ICON_MULTIPLY)
 
 	var/icon/human_icon = render_preview_outfit(/datum/outfit/job/miner)

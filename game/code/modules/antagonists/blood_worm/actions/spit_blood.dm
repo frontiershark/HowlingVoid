@@ -115,7 +115,7 @@
 	spit(target, modifiers, burst_projectile_type, count = burst_count, spread = 10)
 
 	playsound(owner, SFX_ALIEN_SPIT_ACID, vol = 40, vary = TRUE)
-	playsound(owner, 'sound/mobs/non-humanoids/bileworm/bileworm_spit.ogg', vol = 40, vary = TRUE)
+	playsound(owner, '../assets/sound/mobs/non-humanoids/bileworm/bileworm_spit.ogg', vol = 40, vary = TRUE)
 
 	owner.changeNext_move(CLICK_CD_RANGE)
 	StartCooldown(10 SECONDS)
@@ -248,8 +248,8 @@
 	damage_type = BURN
 	armor_flag = BULLET // I'm sorry. Acid armor is too nonsensical for combat, as its granted based on how easily acid should destroy objects.
 
-	hitsound = 'sound/items/weapons/sear.ogg'
-	hitsound_wall = 'sound/items/weapons/sear.ogg'
+	hitsound = '../assets/sound/items/weapons/sear.ogg'
+	hitsound_wall = '../assets/sound/items/weapons/sear.ogg'
 
 	impact_effect_type = /obj/effect/temp_visual/impact_effect/blood_worm_spit
 

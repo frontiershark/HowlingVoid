@@ -49,7 +49,7 @@
 		stored_decals = carried_decals.Copy()
 
 	if(!trapdoor_overlay)
-		trapdoor_overlay = mutable_appearance('icons/turf/overlays.dmi', "border_black", ABOVE_NORMAL_TURF_LAYER)
+		trapdoor_overlay = mutable_appearance('../assets/icons/turf/overlays.dmi', "border_black", ABOVE_NORMAL_TURF_LAYER)
 
 	var/turf/parent_turf = parent
 	if(SSshuttle.get_containing_shuttle(parent_turf))
@@ -293,7 +293,7 @@
 	///we want to save this turf's decals as they were right before deletion, so this is the point where we begin listening
 	if(assembly)
 		RegisterSignal(parent, COMSIG_TURF_DECAL_DETACHED, PROC_REF(decal_detached))
-	playsound(trapdoor_turf, 'sound/machines/trapdoor/trapdoor_open.ogg', 50)
+	playsound(trapdoor_turf, '../assets/sound/machines/trapdoor/trapdoor_open.ogg', 50)
 	trapdoor_baseturfs = trapdoor_turf.get_baseturfs_to_depth(opening_depth)
 	trapdoor_turf.visible_message(span_warning("[trapdoor_turf] swings open!"))
 	trapdoor_turf.ScrapeAway(opening_depth, flags = CHANGETURF_INHERIT_AIR | CHANGETURF_TRAPDOOR_INDUCED)
@@ -310,7 +310,7 @@
 	if(blocking)
 		trapdoor_turf.visible_message(span_warning("The trapdoor mechanism in [trapdoor_turf] tries to shut, but is jammed by [blocking]!"))
 		return
-	playsound(trapdoor_turf, 'sound/machines/trapdoor/trapdoor_shut.ogg', 50)
+	playsound(trapdoor_turf, '../assets/sound/machines/trapdoor/trapdoor_shut.ogg', 50)
 	trapdoor_turf.visible_message(span_warning("The trapdoor mechanism in [trapdoor_turf] swings shut!"))
 	var/list/new_baseturfs = list()
 	new_baseturfs += trapdoor_turf.baseturfs
@@ -363,11 +363,11 @@
 		assembly_turf.visible_message(span_warning("[src] is on cooldown! Please wait [timeleft]."), vision_distance = SAMETILE_MESSAGE_RANGE)
 		return
 	if(SEND_GLOBAL_SIGNAL(COMSIG_GLOB_TRAPDOOR_LINK, src) & LINKED_UP)
-		playsound(assembly_turf, 'sound/machines/chime.ogg', 50, TRUE)
+		playsound(assembly_turf, '../assets/sound/machines/chime.ogg', 50, TRUE)
 		assembly_turf.visible_message(span_notice("[src] has linked up to a nearby trapdoor! \
 		You may now use it to check where the trapdoor is... be careful!"), vision_distance = SAMETILE_MESSAGE_RANGE)
 	else
-		playsound(assembly_turf, 'sound/machines/buzz/buzz-sigh.ogg', 50, FALSE)
+		playsound(assembly_turf, '../assets/sound/machines/buzz/buzz-sigh.ogg', 50, FALSE)
 		assembly_turf.visible_message(span_warning("[src] has failed to find a trapdoor nearby to link to."), vision_distance = SAMETILE_MESSAGE_RANGE)
 
 /**
@@ -379,7 +379,7 @@
 /obj/item/trapdoor_remote
 	name = "trapdoor remote"
 	desc = "A small machine that interfaces with a trapdoor controller for easy use."
-	icon = 'icons/obj/devices/remote.dmi'
+	icon = '../assets/icons/obj/devices/remote.dmi'
 	icon_state = "trapdoor_remote"
 	COOLDOWN_DECLARE(trapdoor_cooldown)
 	custom_materials = list(/datum/material/iron = SMALL_MATERIAL_AMOUNT * 1.5, /datum/material/glass = SMALL_MATERIAL_AMOUNT * 0.5)
@@ -447,7 +447,7 @@
 		return TRUE
 
 	user.balloon_alert(user, "trapdoor triggered")
-	playsound(src, 'sound/machines/terminal/terminal_prompt_confirm.ogg', 50, FALSE)
+	playsound(src, '../assets/sound/machines/terminal/terminal_prompt_confirm.ogg', 50, FALSE)
 	icon_state = "trapdoor_pressed"
 	addtimer(VARSET_CALLBACK(src, icon_state, initial(icon_state)), trapdoor_cooldown_time)
 	COOLDOWN_START(src, trapdoor_cooldown, trapdoor_cooldown_time)
@@ -478,7 +478,7 @@
 /obj/item/trapdoor_kit
 	name = "trapdoor parts kit"
 	desc = "A kit containing all the parts needed to build a trapdoor. Can only be used on open space."
-	icon = 'icons/obj/weapons/improvised.dmi'
+	icon = '../assets/icons/obj/weapons/improvised.dmi'
 	icon_state = "kitsuitcase"
 	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 6.5, /datum/material/glass = SMALL_MATERIAL_AMOUNT * 2.2)
 	var/in_use = FALSE

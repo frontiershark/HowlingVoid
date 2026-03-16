@@ -3,7 +3,7 @@
 /mob/living/basic/orbie
 	name = "Orbie"
 	desc = "An orb shaped hologram."
-	icon = 'icons/mob/simple/pets.dmi'
+	icon = '../assets/icons/mob/simple/pets.dmi'
 	icon_state = "orbie"
 	icon_living = "orbie"
 	speed = 0
@@ -30,13 +30,13 @@
 	///are we happy or not?
 	var/happy_state = FALSE
 	///overlay for our neutral eyes
-	var/static/mutable_appearance/eyes_overlay = mutable_appearance('icons/mob/simple/pets.dmi', "orbie_eye_overlay")
+	var/static/mutable_appearance/eyes_overlay = mutable_appearance('../assets/icons/mob/simple/pets.dmi', "orbie_eye_overlay")
 	///overlay for when our eyes are emitting light
-	var/static/mutable_appearance/orbie_light_overlay = mutable_appearance('icons/mob/simple/pets.dmi', "orbie_light_overlay")
+	var/static/mutable_appearance/orbie_light_overlay = mutable_appearance('../assets/icons/mob/simple/pets.dmi', "orbie_light_overlay")
 	///overlay for the flame propellar
-	var/static/mutable_appearance/flame_overlay = mutable_appearance('icons/mob/simple/pets.dmi', "orbie_flame_overlay")
+	var/static/mutable_appearance/flame_overlay = mutable_appearance('../assets/icons/mob/simple/pets.dmi', "orbie_flame_overlay")
 	///overlay for our happy eyes
-	var/static/mutable_appearance/happy_eyes_overlay = mutable_appearance('icons/mob/simple/pets.dmi', "orbie_happy_eye_overlay")
+	var/static/mutable_appearance/happy_eyes_overlay = mutable_appearance('../assets/icons/mob/simple/pets.dmi', "orbie_happy_eye_overlay")
 	///commands we can give orbie
 	var/static/list/pet_commands = list(
 		/datum/pet_command/idle,

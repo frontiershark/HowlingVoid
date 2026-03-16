@@ -5,8 +5,8 @@
 
 /obj/machinery/door/airlock/tram
 	name = "tram door"
-	icon = 'icons/obj/doors/airlocks/tram/tram.dmi'
-	overlays_file = 'icons/obj/doors/airlocks/tram/tram-overlays.dmi'
+	icon = '../assets/icons/obj/doors/airlocks/tram/tram.dmi'
+	overlays_file = '../assets/icons/obj/doors/airlocks/tram/tram-overlays.dmi'
 	multi_tile = TRUE
 	opacity = FALSE
 	assemblytype = /obj/structure/door_assembly/multi_tile/door_assembly_tram
@@ -15,8 +15,8 @@
 	air_tight = TRUE
 	req_access = list(ACCESS_TCOMMS)
 	transport_linked_id = TRAMSTATION_LINE_1
-	doorOpen = 'sound/machines/tram/tramopen.ogg'
-	doorClose = 'sound/machines/tram/tramclose.ogg'
+	doorOpen = '../assets/sound/machines/tram/tramopen.ogg'
+	doorClose = '../assets/sound/machines/tram/tramclose.ogg'
 	autoclose = FALSE
 	/// Weakref to the tram we're attached
 	var/datum/weakref/transport_ref
@@ -44,7 +44,7 @@
 
 	var/passable_delay
 	if(forced >= BYPASS_DOOR_CHECKS)
-		playsound(src, 'sound/machines/airlock/airlockforced.ogg', vol = 40, vary = FALSE)
+		playsound(src, '../assets/sound/machines/airlock/airlockforced.ogg', vol = 40, vary = FALSE)
 		passable_delay = 0
 	else
 		playsound(src, doorOpen, vol = 40, vary = FALSE)
@@ -70,7 +70,7 @@
 		return
 
 	if(retry_counter == 1)
-		playsound(src, 'sound/machines/chime.ogg', 40, vary = FALSE, extrarange = SHORT_RANGE_SOUND_EXTRARANGE)
+		playsound(src, '../assets/sound/machines/chime.ogg', 40, vary = FALSE, extrarange = SHORT_RANGE_SOUND_EXTRARANGE)
 
 	addtimer(CALLBACK(src, PROC_REF(verify_status)), TRAM_DOOR_RECYCLE_TIME)
 	try_to_close()
@@ -102,7 +102,7 @@
 			for(var/atom/movable/blocker in checked_turf)
 				if(blocker.density && blocker != src) //something is blocking the door
 					say("Please stand clear of the doors!")
-					playsound(src, 'sound/machines/buzz/buzz-sigh.ogg', 60, vary = FALSE, extrarange = SHORT_RANGE_SOUND_EXTRARANGE)
+					playsound(src, '../assets/sound/machines/buzz/buzz-sigh.ogg', 60, vary = FALSE, extrarange = SHORT_RANGE_SOUND_EXTRARANGE)
 					layer = OPEN_DOOR_LAYER
 					set_airlock_state(AIRLOCK_OPEN, animated = FALSE)
 					return FALSE
@@ -184,7 +184,7 @@
 		close()
 		return
 
-	playsound(src, 'sound/machines/buzz/buzz-two.ogg', 60, vary = FALSE, extrarange = SHORT_RANGE_SOUND_EXTRARANGE)
+	playsound(src, '../assets/sound/machines/buzz/buzz-two.ogg', 60, vary = FALSE, extrarange = SHORT_RANGE_SOUND_EXTRARANGE)
 	say("YOU'RE HOLDING UP THE TRAM, ASSHOLE!")
 	close(forced = BYPASS_DOOR_CHECKS)
 

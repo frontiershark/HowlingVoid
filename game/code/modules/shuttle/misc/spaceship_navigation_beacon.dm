@@ -1,7 +1,7 @@
 /obj/machinery/spaceship_navigation_beacon
 	name = "radio navigation gigabeacon"
 	desc = "A device that constantly transmits its position over several different commonly used maritime navigation frequencies. Used to create shuttle navigation waypoints in unexplored or undeveloped areas."
-	icon = 'icons/obj/machines/navigation_beacon.dmi'
+	icon = '../assets/icons/obj/machines/navigation_beacon.dmi'
 	icon_state = "beacon_active"
 	base_icon_state = "beacon"
 	density = TRUE
@@ -96,7 +96,7 @@
 /obj/item/folded_navigation_gigabeacon
 	name = "compact radio navigation gigabeacon"
 	desc = "A compact radio navigation gigabeacon, a device used to provide shuttle navigation waypoints in unexplored areas. Must be deployed before use."
-	icon = 'icons/obj/machines/navigation_beacon.dmi'
+	icon = '../assets/icons/obj/machines/navigation_beacon.dmi'
 	icon_state = "beacon_folded"
 
 /obj/item/folded_navigation_gigabeacon/Initialize(mapload)

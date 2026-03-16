@@ -493,7 +493,7 @@
 
 	for(var/client/staff as anything in GLOB.admins)
 		if(staff?.prefs?.toggles & SOUND_ADMINHELP)
-			SEND_SOUND(staff, sound('sound/effects/adminhelp.ogg'))
+			SEND_SOUND(staff, sound('../assets/sound/effects/adminhelp.ogg'))
 		window_flash(staff)
 
 	COOLDOWN_START(src, request_update_cooldown, OPFOR_REQUEST_UPDATE_COOLDOWN)
@@ -514,7 +514,7 @@
 
 	for(var/client/staff as anything in GLOB.admins)
 		if(staff?.prefs?.toggles & SOUND_ADMINHELP)
-			SEND_SOUND(staff, sound('sound/effects/adminhelp.ogg'))
+			SEND_SOUND(staff, sound('../assets/sound/effects/adminhelp.ogg'))
 		window_flash(staff, ignorepref = TRUE)
 
 	addtimer(CALLBACK(src, PROC_REF(add_to_ping_ss)), 2 MINUTES) // this is not responsible for the notification itself, but only for adding the ticket to the list of those to notify.
@@ -844,7 +844,7 @@
 		return
 	if(user.ckey != handling_admin && GLOB.directory[handling_admin])
 		to_chat(GLOB.directory[handling_admin], span_pink("OPFOR: [user] has pinged their OPFOR admin chat! (<a href='byond://?src=[REF(src)];admin_pref=show_panel'>Show Panel</a>)"))
-		SEND_SOUND(GLOB.directory[handling_admin], sound('sound/misc/bloop.ogg'))
+		SEND_SOUND(GLOB.directory[handling_admin], sound('../assets/sound/misc/bloop.ogg'))
 		send_system_message("Handling admin pinged.")
 		COOLDOWN_START(src, ping_cooldown, OPFOR_PING_COOLDOWN)
 	else
@@ -856,7 +856,7 @@
 		return
 	send_system_message("User pinged.")
 	to_chat(mind_reference.current, span_pink("OPFOR: [get_admin_ckey(user)] has pinged your OPFOR chat, check it!"))
-	SEND_SOUND(mind_reference.current, sound('sound/misc/bloop.ogg'))
+	SEND_SOUND(mind_reference.current, sound('../assets/sound/misc/bloop.ogg'))
 
 /datum/opposing_force/proc/roundend_report()
 	var/list/report = list("<br>")

@@ -3,7 +3,7 @@
 /obj/machinery/hydroponics/soil //Not actually hydroponics at all! Honk!
 	name = "soil"
 	desc = "A patch of dirt."
-	icon = 'icons/obj/service/hydroponics/equipment.dmi'
+	icon = '../assets/icons/obj/service/hydroponics/equipment.dmi'
 	icon_state = "soil"
 	circuit = null
 	density = FALSE
@@ -114,29 +114,29 @@
 /obj/item/soil_sack
 	name = "soil sack"
 	desc = "A large plastic bag containing commercial garden soil. It is packed with sand, peat and manure. While you might not care much for such mixture, the plants have strange tastes."
-	icon = 'icons/obj/service/hydroponics/equipment.dmi'
+	icon = '../assets/icons/obj/service/hydroponics/equipment.dmi'
 	icon_state = "soil_sack"
-	lefthand_file = 'icons/mob/inhands/equipment/hydroponics_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/hydroponics_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/hydroponics_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/hydroponics_righthand.dmi'
 	base_icon_state =  "soil_sack"
 	force = 7
 	throwforce = 17
 	attack_speed = 1.2 SECONDS
 	damtype = STAMINA
-	block_sound = 'sound/effects/bodyfall/bodyfall1.ogg'
+	block_sound = '../assets/sound/effects/bodyfall/bodyfall1.ogg'
 	w_class = WEIGHT_CLASS_HUGE
 	item_flags = SLOWS_WHILE_IN_HAND
 	resistance_flags = ACID_PROOF
-	hitsound = 'sound/items/pillow/pillow_hit.ogg'
-	drop_sound = 'sound/effects/footstep/woodbarefoot3.ogg' //could use better sounds in the future.
-	throw_drop_sound = 'sound/effects/bodyfall/bodyfall3.ogg'
+	hitsound = '../assets/sound/items/pillow/pillow_hit.ogg'
+	drop_sound = '../assets/sound/effects/footstep/woodbarefoot3.ogg' //could use better sounds in the future.
+	throw_drop_sound = '../assets/sound/effects/bodyfall/bodyfall3.ogg'
 	custom_premium_price = PAYCHECK_CREW
 	throw_range =  3
 	throw_speed = 1
 	slowdown = 1
 	drag_slowdown = 1
 	var/obj/machinery/hydroponics/soil/stored_soil = /obj/machinery/hydroponics/soil
-	var/placement_sound = 'sound/effects/soil_plop.ogg'
+	var/placement_sound = '../assets/sound/effects/soil_plop.ogg'
 
 /obj/item/soil_sack/Initialize(mapload, obj/machinery/hydroponics/soil/outside_soil)
 	. = ..()
@@ -215,7 +215,7 @@
 	icon_state = "soil_sack_gel"
 	base_icon_state = "soil_sack_gel"
 	custom_premium_price = PAYCHECK_CREW * 2
-	placement_sound = 'sound/effects/meatslap.ogg'
+	placement_sound = '../assets/sound/effects/meatslap.ogg'
 	stored_soil = /obj/machinery/hydroponics/soil/gel
 
 /obj/item/soil_sack/coir

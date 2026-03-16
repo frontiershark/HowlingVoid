@@ -34,14 +34,14 @@
 	cooldown_time = 10 SECONDS
 
 /datum/action/cooldown/mob_cooldown/sneak/bitrunning
-	button_icon = 'icons/mob/actions/actions_items.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_items.dmi'
 	button_icon_state = "deploy_box"
 	sneak_alpha = 50
 
 /mob/living/basic/tree/palm
 	name = "palm tree"
 	desc = "A tree straight from the tropics."
-	icon = 'icons/obj/fluff/beach2.dmi'
+	icon = '../assets/icons/obj/fluff/beach2.dmi'
 	icon_state = "palm1"
 	icon_state = "palm1"
 	icon_living = "palm1"
@@ -65,7 +65,7 @@
 	name = "watermelon"
 	desc = "It's full of watery goodness. <br>\
 	This one has been trained to become a competition-grade racer."
-	icon = 'icons/obj/service/hydroponics/harvest.dmi'
+	icon = '../assets/icons/obj/service/hydroponics/harvest.dmi'
 	icon_state = "watermelon"
 	icon_state = "watermelon"
 	icon_living = "watermelon"

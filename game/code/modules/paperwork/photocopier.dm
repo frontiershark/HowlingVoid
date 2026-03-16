@@ -60,7 +60,7 @@ GLOBAL_LIST_INIT(paper_blanks, init_paper_blanks())
 /obj/machinery/photocopier
 	name = "photocopier"
 	desc = "Used to copy important documents and anatomy studies."
-	icon = 'icons/obj/service/library.dmi'
+	icon = '../assets/icons/obj/service/library.dmi'
 	icon_state = "photocopier"
 	density = TRUE
 	power_channel = AREA_USAGE_EQUIP
@@ -448,7 +448,7 @@ GLOBAL_LIST_INIT(paper_blanks, init_paper_blanks())
 		if(isnull(copied_obj)) // something went wrong, so other copies will go wrong too
 			break
 
-		playsound(src, 'sound/machines/printer.ogg', 50, vary = FALSE)
+		playsound(src, '../assets/sound/machines/printer.ogg', 50, vary = FALSE)
 		sleep(time_to_print)
 
 		// reveal our copied item
@@ -878,7 +878,7 @@ GLOBAL_LIST_INIT(paper_blanks, init_paper_blanks())
 /obj/item/toner
 	name = "toner cartridge"
 	desc = "A small, lightweight cartridge of Nanotrasen ValueBrand toner. Fits photocopiers and autopainters alike."
-	icon = 'icons/obj/service/bureaucracy.dmi'
+	icon = '../assets/icons/obj/service/bureaucracy.dmi'
 	icon_state = "tonercartridge"
 	w_class = WEIGHT_CLASS_SMALL
 	var/charges = 5

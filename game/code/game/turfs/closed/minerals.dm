@@ -4,7 +4,7 @@
 
 /turf/closed/mineral //wall piece
 	name = "rock"
-	icon = MAP_SWITCH('modular_nova/modules/liquids/icons/turf/smoothrocks.dmi', 'icons/turf/mining.dmi') // NOVA EDIT CHANGE - ORIGINAL: icon = MAP_SWITCH('icons/turf/smoothrocks.dmi', 'icons/turf/mining.dmi')
+	icon = MAP_SWITCH('modular_nova/modules/liquids/icons/turf/smoothrocks.dmi', '../assets/icons/turf/mining.dmi') // NOVA EDIT CHANGE - ORIGINAL: icon = MAP_SWITCH('../assets/icons/turf/smoothrocks.dmi', '../assets/icons/turf/mining.dmi')
 	icon_state = "rock"
 	smoothing_groups = SMOOTH_GROUP_CLOSED_TURFS + SMOOTH_GROUP_MINERAL_WALLS
 	canSmoothWith = SMOOTH_GROUP_MINERAL_WALLS
@@ -33,7 +33,7 @@
 	/// How much ore we spawn when we're mining a mineralType.
 	var/mineralAmt = 3
 	/// The icon of the image we display when we're pinged by a mining scanner, to be overridden if you want to use an alternate file for a subtype.
-	var/scan_icon = 'icons/effects/ore_visuals.dmi'
+	var/scan_icon = '../assets/icons/effects/ore_visuals.dmi'
 	/// Placeholder for the icon_state of the image we display when we're pinged by a mining scanner
 	var/scan_state = ""
 	/// If true, this turf will not call AfterChange during change_turf calls.
@@ -53,7 +53,7 @@
 	// So we draw them as if they were on the game plane, and then overlay a copy onto
 	// The wall plane (so emissives/light masks behave)
 	// I am so sorry
-	var/static/mutable_appearance/wall_overlay = mutable_appearance('icons/turf/mining.dmi', "rock", appearance_flags = RESET_TRANSFORM)
+	var/static/mutable_appearance/wall_overlay = mutable_appearance('../assets/icons/turf/mining.dmi', "rock", appearance_flags = RESET_TRANSFORM)
 	wall_overlay.plane = MUTATE_PLANE(WALL_PLANE, src)
 	overlays += wall_overlay
 
@@ -234,19 +234,19 @@
 		flags = CHANGETURF_DEFER_CHANGE
 	var/turf/open/mined = ScrapeAway(null, flags)
 	addtimer(CALLBACK(src, PROC_REF(AfterChange), flags, old_type), 1, TIMER_UNIQUE)
-	playsound(src, 'sound/effects/break_stone.ogg', 50, TRUE) //beautiful destruction
+	playsound(src, '../assets/sound/effects/break_stone.ogg', 50, TRUE) //beautiful destruction
 	mined.update_visuals()
 
 /turf/closed/mineral/attack_alien(mob/living/carbon/alien/user, list/modifiers)
 	balloon_alert(user, "digging...")
-	playsound(src, 'sound/effects/break_stone.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/effects/break_stone.ogg', 50, TRUE)
 	if(do_after(user, 4 SECONDS, target = src))
 		gets_drilled(user)
 
 /turf/closed/mineral/attack_hulk(mob/living/carbon/human/H)
 	..()
 	if(do_after(H, 5 SECONDS, target = src))
-		playsound(src, 'sound/effects/meteorimpact.ogg', 100, TRUE)
+		playsound(src, '../assets/sound/effects/meteorimpact.ogg', 100, TRUE)
 		H.say(pick(";RAAAAAAAARGH!", ";HNNNNNNNNNGGGGGGH!", ";GWAAAAAAAARRRHHH!", "NNNNNNNNGGGGGGGGHH!", ";AAAAAAARRRGH!" ), forced = "hulk")
 		gets_drilled(H)
 	return TRUE
@@ -429,7 +429,7 @@
 
 /turf/closed/mineral/random/snow
 	name = "snowy mountainside"
-	icon = MAP_SWITCH('icons/turf/walls/mountain_wall.dmi', 'icons/turf/mining.dmi')
+	icon = MAP_SWITCH('../assets/icons/turf/walls/mountain_wall.dmi', '../assets/icons/turf/mining.dmi')
 	icon_state = "mountainrock"
 	base_icon_state = "mountain_wall"
 	smoothing_flags = SMOOTH_BITMASK | SMOOTH_BORDER
@@ -445,7 +445,7 @@
 /turf/closed/mineral/random/snow/Change_Ore(ore_type, random = 0)
 	. = ..()
 	if(mineralType)
-		icon = 'icons/turf/walls/icerock_wall.dmi'
+		icon = '../assets/icons/turf/walls/icerock_wall.dmi'
 		icon_state = "icerock_wall-0"
 		base_icon_state = "icerock_wall"
 		smoothing_flags = SMOOTH_BITMASK | SMOOTH_BORDER
@@ -526,7 +526,7 @@
 // Subtypes for mappers placing ores manually.
 /turf/closed/mineral/random/labormineral/ice
 	name = "snowy mountainside"
-	icon = MAP_SWITCH('icons/turf/walls/mountain_wall.dmi', 'icons/turf/mining.dmi')
+	icon = MAP_SWITCH('../assets/icons/turf/walls/mountain_wall.dmi', '../assets/icons/turf/mining.dmi')
 	icon_state = "mountainrock"
 	base_icon_state = "mountain_wall"
 	smoothing_flags = SMOOTH_BITMASK | SMOOTH_BORDER
@@ -546,7 +546,7 @@
 /turf/closed/mineral/random/labormineral/ice/Change_Ore(ore_type, random = 0)
 	. = ..()
 	if(mineralType)
-		icon = 'icons/turf/walls/icerock_wall.dmi'
+		icon = '../assets/icons/turf/walls/icerock_wall.dmi'
 		icon_state = "icerock_wall-0"
 		base_icon_state = "icerock_wall"
 		smoothing_flags = SMOOTH_BITMASK | SMOOTH_BORDER
@@ -563,7 +563,7 @@
 
 /turf/closed/mineral/iron/ice
 	icon_state = "icerock_iron"
-	icon = MAP_SWITCH('icons/turf/walls/icerock_wall.dmi', 'icons/turf/mining.dmi')
+	icon = MAP_SWITCH('../assets/icons/turf/walls/icerock_wall.dmi', '../assets/icons/turf/mining.dmi')
 	base_icon_state = "icerock_wall"
 	smoothing_flags = SMOOTH_BITMASK | SMOOTH_BORDER
 	turf_type = /turf/open/misc/asteroid/snow/ice
@@ -593,7 +593,7 @@
 
 /turf/closed/mineral/diamond/ice
 	icon_state = "icerock_iron"
-	icon = MAP_SWITCH('icons/turf/walls/icerock_wall.dmi', 'icons/turf/mining.dmi')
+	icon = MAP_SWITCH('../assets/icons/turf/walls/icerock_wall.dmi', '../assets/icons/turf/mining.dmi')
 	base_icon_state = "icerock_wall"
 	smoothing_flags = SMOOTH_BITMASK | SMOOTH_BORDER
 	turf_type = /turf/open/misc/asteroid/snow/ice
@@ -648,7 +648,7 @@
 
 /turf/closed/mineral/plasma/ice
 	icon_state = "icerock_plasma"
-	icon = MAP_SWITCH('icons/turf/walls/icerock_wall.dmi', 'icons/turf/mining.dmi')
+	icon = MAP_SWITCH('../assets/icons/turf/walls/icerock_wall.dmi', '../assets/icons/turf/mining.dmi')
 	base_icon_state = "icerock_wall"
 	smoothing_flags = SMOOTH_BITMASK | SMOOTH_BORDER
 	turf_type = /turf/open/misc/asteroid/snow/ice
@@ -695,8 +695,8 @@
 
 /turf/closed/mineral/ash_rock //wall piece
 	name = "rock"
-	icon = 'icons/turf/mining.dmi'
-	icon = MAP_SWITCH('icons/turf/walls/rock_wall.dmi', 'icons/turf/mining.dmi')
+	icon = '../assets/icons/turf/mining.dmi'
+	icon = MAP_SWITCH('../assets/icons/turf/walls/rock_wall.dmi', '../assets/icons/turf/mining.dmi')
 	icon_state = "rock2"
 	base_icon_state = "rock_wall"
 	smoothing_flags = SMOOTH_BITMASK | SMOOTH_BORDER
@@ -709,7 +709,7 @@
 
 /turf/closed/mineral/snowmountain
 	name = "snowy mountainside"
-	icon = MAP_SWITCH('icons/turf/walls/mountain_wall.dmi', 'icons/turf/mining.dmi')
+	icon = MAP_SWITCH('../assets/icons/turf/walls/mountain_wall.dmi', '../assets/icons/turf/mining.dmi')
 	icon_state = "mountainrock"
 	base_icon_state = "mountain_wall"
 	smoothing_flags = SMOOTH_BITMASK | SMOOTH_BORDER
@@ -732,7 +732,7 @@
 
 /turf/closed/mineral/snowmountain/cavern
 	name = "ice cavern rock"
-	icon = MAP_SWITCH('icons/turf/walls/icerock_wall.dmi', 'icons/turf/mining.dmi')
+	icon = MAP_SWITCH('../assets/icons/turf/walls/icerock_wall.dmi', '../assets/icons/turf/mining.dmi')
 	icon_state = "icerock"
 	base_icon_state = "icerock_wall"
 	smoothing_flags = SMOOTH_BITMASK | SMOOTH_BORDER
@@ -755,12 +755,12 @@
 /turf/closed/mineral/asteroid
 	name = "iron rock"
 	icon_state = "redrock"
-	icon = MAP_SWITCH('icons/turf/walls/red_wall.dmi', 'icons/turf/mining.dmi')
+	icon = MAP_SWITCH('../assets/icons/turf/walls/red_wall.dmi', '../assets/icons/turf/mining.dmi')
 	base_icon_state = "red_wall"
 
 /turf/closed/mineral/random/stationside/asteroid
 	name = "iron rock"
-	icon = MAP_SWITCH('icons/turf/walls/red_wall.dmi', 'icons/turf/mining.dmi')
+	icon = MAP_SWITCH('../assets/icons/turf/walls/red_wall.dmi', '../assets/icons/turf/mining.dmi')
 	base_icon_state = "red_wall"
 
 /turf/closed/mineral/random/stationside/asteroid/porus
@@ -805,7 +805,7 @@
 
 /turf/closed/mineral/gibtonite/proc/explosive_reaction(mob/user = null)
 	if(stage == GIBTONITE_UNSTRUCK)
-		activated_overlay = mutable_appearance('icons/turf/smoothrocks_overlays.dmi', "rock_Gibtonite_inactive", ON_EDGED_TURF_LAYER) //shows in gaps between pulses if there are any
+		activated_overlay = mutable_appearance('../assets/icons/turf/smoothrocks_overlays.dmi', "rock_Gibtonite_inactive", ON_EDGED_TURF_LAYER) //shows in gaps between pulses if there are any
 		add_overlay(activated_overlay)
 		name = "gibtonite deposit"
 		desc = "An active gibtonite reserve. Run!"
@@ -824,7 +824,7 @@
 /turf/closed/mineral/gibtonite/proc/countdown(notify_admins = FALSE)
 	set waitfor = FALSE
 	while(istype(src, /turf/closed/mineral/gibtonite) && stage == GIBTONITE_ACTIVE && det_time > 0 && mineralAmt >= 1)
-		flick_overlay_view(mutable_appearance('icons/turf/smoothrocks_overlays.dmi', "rock_Gibtonite_active", ON_EDGED_TURF_LAYER + 0.1), 0.5 SECONDS) //makes the animation pulse one time per tick
+		flick_overlay_view(mutable_appearance('../assets/icons/turf/smoothrocks_overlays.dmi', "rock_Gibtonite_active", ON_EDGED_TURF_LAYER + 0.1), 0.5 SECONDS) //makes the animation pulse one time per tick
 		det_time--
 		sleep(0.5 SECONDS)
 	if(istype(src, /turf/closed/mineral/gibtonite))
@@ -852,7 +852,7 @@
 		SEND_SIGNAL(user, COMSIG_MOB_MINED, src, exp_multiplier)
 
 	if(stage == GIBTONITE_UNSTRUCK && mineralAmt >= 1) //Gibtonite deposit is activated
-		playsound(src,'sound/effects/hit_on_shattered_glass.ogg',50,TRUE)
+		playsound(src,'../assets/sound/effects/hit_on_shattered_glass.ogg',50,TRUE)
 		explosive_reaction(user)
 		return
 	if(stage == GIBTONITE_ACTIVE && mineralAmt >= 1) //Gibtonite deposit goes kaboom
@@ -890,7 +890,7 @@
 
 /turf/closed/mineral/gibtonite/ice
 	MAP_SWITCH(, icon_state = "icerock_Gibtonite_inactive")
-	icon = MAP_SWITCH('icons/turf/walls/icerock_wall.dmi', 'icons/turf/mining.dmi')
+	icon = MAP_SWITCH('../assets/icons/turf/walls/icerock_wall.dmi', '../assets/icons/turf/mining.dmi')
 	base_icon_state = "icerock_wall"
 	smoothing_flags = SMOOTH_BITMASK | SMOOTH_BORDER
 	turf_type = /turf/open/misc/asteroid/snow/ice
@@ -910,7 +910,7 @@
 	baseturfs = /turf/open/misc/asteroid/basalt/lava_land_surface
 	initial_gas_mix = LAVALAND_DEFAULT_ATMOS
 	defer_change = 1
-	icon = MAP_SWITCH('icons/turf/walls/rock_wall.dmi', 'icons/turf/mining.dmi')
+	icon = MAP_SWITCH('../assets/icons/turf/walls/rock_wall.dmi', '../assets/icons/turf/mining.dmi')
 	base_icon_state = "rock_wall"
 	smoothing_flags = SMOOTH_BITMASK | SMOOTH_BORDER
 
@@ -941,7 +941,7 @@
 		flags = CHANGETURF_DEFER_CHANGE
 	var/turf/open/mined = ScrapeAway(null, flags)
 	addtimer(CALLBACK(src, PROC_REF(AfterChange), flags, old_type), 1, TIMER_UNIQUE)
-	playsound(src, 'sound/effects/break_stone.ogg', 50, TRUE) //beautiful destruction
+	playsound(src, '../assets/sound/effects/break_stone.ogg', 50, TRUE) //beautiful destruction
 	mined.update_visuals()
 	H.mind?.adjust_experience(/datum/skill/mining, 100) //yay!
 

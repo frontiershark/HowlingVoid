@@ -26,7 +26,7 @@
 
 		START_PROCESSING(SSobj, src)
 		user.visible_message(span_notice("[user] finishes washing [attacking_item] in [src]."), span_notice("You finish washing [washed_towel] in [src], leaving it quite wet."))
-		playsound(loc, 'sound/effects/slosh.ogg', 25, TRUE)
+		playsound(loc, '../assets/sound/effects/slosh.ogg', 25, TRUE)
 
 		busy = FALSE
 

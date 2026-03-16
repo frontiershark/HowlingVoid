@@ -135,11 +135,11 @@
 	INVOKE_ASYNC(tajaran, TYPE_PROC_REF(/mob/living/carbon/human, emote), "jump")
 	INVOKE_ASYNC(tajaran, TYPE_PROC_REF(/mob/living/carbon/human, emote), "hiss")
 
-	playsound(tajaran, 'sound/items/weapons/thudswoosh.ogg', 35, TRUE)
+	playsound(tajaran, '../assets/sound/items/weapons/thudswoosh.ogg', 35, TRUE)
 	playsound(tajaran, get_hiss_sound(tajaran), 45, TRUE)
 
 /datum/species/tajaran/get_hiss_sound(mob/living/carbon/human/tajaran = null)
-	return 'sound/mobs/humanoids/felinid/felinid_hiss.ogg'
+	return '../assets/sound/mobs/humanoids/felinid/felinid_hiss.ogg'
 
 /datum/action/cooldown/tajaran_grooming
 	name = "Grooming"

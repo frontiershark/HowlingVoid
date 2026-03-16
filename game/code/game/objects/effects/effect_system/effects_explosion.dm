@@ -26,7 +26,7 @@
 
 /obj/effect/explosion
 	name = "fire"
-	icon = 'icons/effects/96x96.dmi'
+	icon = '../assets/icons/effects/96x96.dmi'
 	icon_state = "explosion"
 	opacity = TRUE
 	anchored = TRUE

@@ -14,7 +14,7 @@ GLOBAL_DATUM_INIT(status_font, /datum/font, new /datum/font/tiny_unicode/size_12
 /obj/machinery/status_display
 	name = "status display"
 	desc = null
-	icon = 'icons/obj/machines/status_display.dmi'
+	icon = '../assets/icons/obj/machines/status_display.dmi'
 	icon_state = "frame"
 	verb_say = "beeps"
 	verb_ask = "beeps"
@@ -60,7 +60,7 @@ GLOBAL_DATUM_INIT(status_font, /datum/font, new /datum/font/tiny_unicode/size_12
 	balloon_alert(user, "[anchored ? "un" : ""]securing...")
 	tool.play_tool_sound(src)
 	if(tool.use_tool(src, user, 6 SECONDS))
-		playsound(loc, 'sound/items/deconstruct.ogg', 50, TRUE)
+		playsound(loc, '../assets/sound/items/deconstruct.ogg', 50, TRUE)
 		balloon_alert(user, "[anchored ? "un" : ""]secured")
 		deconstruct()
 		return TRUE
@@ -295,7 +295,7 @@ GLOBAL_LIST_EMPTY(key_to_status_display)
  * Nice overlay to make text smoothly scroll with no client updates after setup.
  */
 /obj/effect/overlay/status_display_text
-	icon = 'icons/obj/machines/status_display.dmi'
+	icon = '../assets/icons/obj/machines/status_display.dmi'
 	vis_flags = VIS_INHERIT_LAYER | VIS_INHERIT_PLANE | VIS_INHERIT_ID
 	// physically shift down to render correctly
 	pixel_y = -32
@@ -900,7 +900,7 @@ GLOBAL_LIST_EMPTY_TYPED(greenscreen_displays, /obj/effect/abstract/greenscreen_d
 
 /// Used to indicate where the greenscreen is recording
 /obj/effect/abstract/greenscreen_location_indicator
-	icon = 'icons/mob/telegraphing/telegraph.dmi'
+	icon = '../assets/icons/mob/telegraphing/telegraph.dmi'
 	icon_state = "blank_semi_transparent"
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	layer = BELOW_OPEN_DOOR_LAYER
@@ -954,10 +954,10 @@ GLOBAL_LIST_EMPTY_TYPED(greenscreen_displays, /obj/effect/abstract/greenscreen_d
 	. = ..()
 	GLOB.greenscreen_displays += src
 	// crops out the bits that don't fit the screen
-	add_filter("display_mask", 1, alpha_mask_filter(x = -1 * pixel_x, y = -1 * pixel_y, icon = icon('icons/obj/machines/status_display.dmi', "outline")))
+	add_filter("display_mask", 1, alpha_mask_filter(x = -1 * pixel_x, y = -1 * pixel_y, icon = icon('../assets/icons/obj/machines/status_display.dmi', "outline")))
 	// adds some pizzazz (copied from records)
-	underlays += mutable_appearance('icons/effects/effects.dmi', "static_base", alpha = 20)
-	add_overlay(mutable_appearance(generate_icon_alpha_mask('icons/effects/effects.dmi', "scanline"), alpha = 20))
+	underlays += mutable_appearance('../assets/icons/effects/effects.dmi', "static_base", alpha = 20)
+	add_overlay(mutable_appearance(generate_icon_alpha_mask('../assets/icons/effects/effects.dmi', "scanline"), alpha = 20))
 
 /obj/effect/abstract/greenscreen_display/Destroy()
 	for(var/thing in displaying)
@@ -1010,7 +1010,7 @@ GLOBAL_LIST_EMPTY_TYPED(greenscreen_displays, /obj/effect/abstract/greenscreen_d
 	desc = "A camera that can be used to display whomever is in front of it across all status displays. \
 		Pair with a greenscreen for best results."
 	density = FALSE
-	icon = 'icons/obj/machines/stationary_camera.dmi'
+	icon = '../assets/icons/obj/machines/stationary_camera.dmi'
 	icon_state = "camera"
 	interaction_flags_atom = INTERACT_ATOM_REQUIRES_ANCHORED|INTERACT_ATOM_ATTACK_HAND|INTERACT_ATOM_ATTACK_PAW
 	interaction_flags_machine = INTERACT_MACHINE_ALLOW_SILICON
@@ -1054,14 +1054,14 @@ GLOBAL_LIST_EMPTY_TYPED(greenscreen_displays, /obj/effect/abstract/greenscreen_d
 			return
 		activate_feed()
 		if(isnull(display))
-			playsound(src, 'sound/machines/terminal/terminal_on.ogg', 33, TRUE, frequency = 0.5)
+			playsound(src, '../assets/sound/machines/terminal/terminal_on.ogg', 33, TRUE, frequency = 0.5)
 			balloon_alert_to_viewers("no backdrop, can't broadcast!")
 			return
-		playsound(src, 'sound/machines/terminal/terminal_on.ogg', 33, FALSE)
+		playsound(src, '../assets/sound/machines/terminal/terminal_on.ogg', 33, FALSE)
 		use_power = ACTIVE_POWER_USE
 	else
 		deactivate_feed()
-		playsound(src, 'sound/machines/terminal/terminal_off.ogg', 33, FALSE)
+		playsound(src, '../assets/sound/machines/terminal/terminal_off.ogg', 33, FALSE)
 		use_power = IDLE_POWER_USE
 	balloon_alert_to_viewers("feed [isnull(display) ? "de" : ""]activated")
 

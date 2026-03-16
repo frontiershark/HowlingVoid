@@ -371,7 +371,7 @@
 /obj/item/food/icecream
 	name = "waffle cone"
 	desc = "Delicious waffle cone, but no ice cream."
-	icon = 'icons/obj/service/kitchen.dmi'
+	icon = '../assets/icons/obj/service/kitchen.dmi'
 	icon_state = "icecream_cone_waffle"
 	food_reagents = list(/datum/reagent/consumable/nutriment = 5)
 	tastes = list("cream" = 2, "waffle" = 1)
@@ -442,7 +442,7 @@
 /obj/item/food/raw_brownie_batter
 	name = "raw brownie batter"
 	desc = "A sticky mixture of raw brownie batter, cook it in the oven!"
-	icon = 'icons/obj/food/food.dmi'
+	icon = '../assets/icons/obj/food/food.dmi'
 	icon_state = "raw_brownie_batter"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 4,
@@ -458,7 +458,7 @@
 /obj/item/food/brownie_sheet
 	name = "brownie sheet"
 	desc = "An uncut sheet of cooked brownie, use a knife to cut it!."
-	icon = 'icons/obj/food/food.dmi'
+	icon = '../assets/icons/obj/food/food.dmi'
 	icon_state = "brownie_sheet"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 20,
@@ -475,7 +475,7 @@
 /obj/item/food/brownie
 	name = "brownie"
 	desc = "A square slice of delicious, chewy brownie. Often the target of potheads."
-	icon = 'icons/obj/food/food.dmi'
+	icon = '../assets/icons/obj/food/food.dmi'
 	icon_state = "brownie"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 5,
@@ -489,7 +489,7 @@
 /obj/item/food/peanut_butter_brownie_batter
 	name = "raw peanut butter brownie batter"
 	desc = "A sticky mixture of raw peanut butter brownie batter, cook it in the oven!"
-	icon = 'icons/obj/food/food.dmi'
+	icon = '../assets/icons/obj/food/food.dmi'
 	icon_state = "peanut_butter_brownie_batter"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 4,
@@ -506,7 +506,7 @@
 /obj/item/food/peanut_butter_brownie_sheet
 	name = "peanut butter brownie sheet"
 	desc = "An uncut sheet of cooked peanut butter brownie, use a knife to cut it!"
-	icon = 'icons/obj/food/food.dmi'
+	icon = '../assets/icons/obj/food/food.dmi'
 	icon_state = "peanut_butter_brownie_sheet"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 24,
@@ -524,7 +524,7 @@
 /obj/item/food/peanut_butter_brownie
 	name = "peanut butter brownie"
 	desc = "A square slice of delicious, chewy peanut butter brownie. Often the target of potheads."
-	icon = 'icons/obj/food/food.dmi'
+	icon = '../assets/icons/obj/food/food.dmi'
 	icon_state = "peanut_butter_brownie"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 6,
@@ -539,7 +539,7 @@
 /obj/item/food/crunchy_peanut_butter_tart
 	name = "crunchy peanut butter tart"
 	desc = "A miniature pie with a peanut butter filling, creamy icing, and topping of chopped nuts."
-	icon = 'icons/obj/food/food.dmi'
+	icon = '../assets/icons/obj/food/food.dmi'
 	icon_state = "crunchy_peanut_butter_tart"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 8,

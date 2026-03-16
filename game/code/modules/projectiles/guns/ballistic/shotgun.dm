@@ -3,17 +3,17 @@
 	desc = "A traditional shotgun with wood furniture and a four-shell capacity underneath."
 	icon_state = "shotgun"
 	worn_icon_state = null
-	lefthand_file = 'icons/mob/inhands/weapons/64x_guns_left.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/64x_guns_right.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/64x_guns_left.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/64x_guns_right.dmi'
 	inhand_icon_state = "shotgun"
 	inhand_x_dimension = 64
 	inhand_y_dimension = 64
-	fire_sound = 'sound/items/weapons/gun/shotgun/shot.ogg'
+	fire_sound = '../assets/sound/items/weapons/gun/shotgun/shot.ogg'
 	fire_sound_volume = 90
-	rack_sound = 'sound/items/weapons/gun/shotgun/rack.ogg'
-	load_sound = 'sound/items/weapons/gun/shotgun/insert_shell.ogg'
-	drop_sound = 'sound/items/handling/gun/ballistics/shotgun/shotgun_drop1.ogg'
-	pickup_sound = 'sound/items/handling/gun/ballistics/shotgun/shotgun_pickup1.ogg'
+	rack_sound = '../assets/sound/items/weapons/gun/shotgun/rack.ogg'
+	load_sound = '../assets/sound/items/weapons/gun/shotgun/insert_shell.ogg'
+	drop_sound = '../assets/sound/items/handling/gun/ballistics/shotgun/shotgun_drop1.ogg'
+	pickup_sound = '../assets/sound/items/handling/gun/ballistics/shotgun/shotgun_pickup1.ogg'
 	w_class = WEIGHT_CLASS_BULKY
 	force = 10
 	obj_flags = CONDUCTS_ELECTRICITY
@@ -55,7 +55,7 @@
 //component for seclight attachment
 /obj/item/gun/ballistic/shotgun/riot/add_seclight_point()
 	AddComponent(/datum/component/seclite_attachable, \
-		light_overlay_icon = 'icons/obj/weapons/guns/flashlights.dmi', \
+		light_overlay_icon = '../assets/icons/obj/weapons/guns/flashlights.dmi', \
 		light_overlay = "flight", \
 		overlay_x = 20, \
 		overlay_y = 11)
@@ -78,7 +78,7 @@
 //component for seclight attachment
 /obj/item/gun/ballistic/shotgun/automatic/combat/add_seclight_point()
 	AddComponent(/datum/component/seclite_attachable, \
-		light_overlay_icon = 'icons/obj/weapons/guns/flashlights.dmi', \
+		light_overlay_icon = '../assets/icons/obj/weapons/guns/flashlights.dmi', \
 		light_overlay = "flight", \
 		overlay_x = 20, \
 		overlay_y = 11)
@@ -94,7 +94,7 @@
 //component for seclight attachment
 /obj/item/gun/ballistic/shotgun/automatic/combat/compact/add_seclight_point()
 	AddComponent(/datum/component/seclite_attachable, \
-		light_overlay_icon = 'icons/obj/weapons/guns/flashlights.dmi', \
+		light_overlay_icon = '../assets/icons/obj/weapons/guns/flashlights.dmi', \
 		light_overlay = "flight", \
 		overlay_x = 16, \
 		overlay_y = 11)
@@ -106,8 +106,8 @@
 	desc = "An advanced shotgun with two separate magazine tubes, allowing you to quickly toggle between ammo types."
 	icon_state = "cycler"
 	inhand_icon_state = "bulldog"
-	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/guns_righthand.dmi'
 	inhand_x_dimension = 32
 	inhand_y_dimension = 32
 	worn_icon_state = "cshotgun"
@@ -172,10 +172,10 @@
 		nicknamed 'Bulldog' by boarding parties. Compatible only with specialized 8-round drum magazines. \
 		Can have a secondary magazine attached to quickly swap between ammo types, or just to keep shooting."
 	icon_state = "bulldog"
-	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/guns_righthand.dmi'
 	inhand_icon_state = "bulldog"
-	worn_icon = 'icons/mob/clothing/back.dmi'
+	worn_icon = '../assets/icons/mob/clothing/back.dmi'
 	worn_icon_state = "bulldog"
 	inhand_x_dimension = 32
 	inhand_y_dimension = 32
@@ -186,7 +186,7 @@
 	burst_size = 2
 	burst_delay = 1
 	pin = /obj/item/firing_pin/implant/pindicate
-	fire_sound = 'sound/items/weapons/gun/shotgun/shot_alt.ogg'
+	fire_sound = '../assets/sound/items/weapons/gun/shotgun/shot_alt.ogg'
 	actions_types = list(/datum/action/item_action/toggle_firemode)
 	mag_display = TRUE
 	empty_indicator = TRUE
@@ -363,8 +363,8 @@
 	desc = "Range isn't an issue when you can bring your victim to you."
 	icon_state = "hookshotgun"
 	inhand_icon_state = "hookshotgun"
-	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/guns_righthand.dmi'
 	inhand_x_dimension = 32
 	inhand_y_dimension = 32
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/shot/bounty
@@ -375,7 +375,7 @@
 	sharpness = SHARP_POINTY //it does in fact, have a hook on it
 	attack_verb_continuous = list("slashes", "hooks", "stabs")
 	attack_verb_simple = list("slash", "hook", "stab")
-	hitsound = 'sound/items/weapons/bladeslice.ogg'
+	hitsound = '../assets/sound/items/weapons/bladeslice.ogg'
 	//our hook gun!
 	var/obj/item/gun/magic/hook/bounty/hook
 
@@ -402,8 +402,8 @@
 	desc = "A chimp-sized, single-shot and break-action shotgun with an unpractical stock."
 	icon_state = "chimp_shottie"
 	inhand_icon_state = "shotgun"
-	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/guns_righthand.dmi'
 	inhand_x_dimension = 32
 	inhand_y_dimension = 32
 	force = 8
@@ -424,7 +424,7 @@
 
 /obj/item/gun/ballistic/shotgun/musket
 	name = "\improper Donk Co. Musket"
-	icon = 'icons/obj/weapons/guns/ballistic.dmi'
+	icon = '../assets/icons/obj/weapons/guns/ballistic.dmi'
 	icon_state = "donk_musket"
 	inhand_icon_state = "donk_musket"
 	worn_icon_state = "donk_musket"

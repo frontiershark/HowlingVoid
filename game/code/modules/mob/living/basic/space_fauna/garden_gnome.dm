@@ -1,7 +1,7 @@
 /mob/living/basic/garden_gnome
 	name = "Garden Gnome"
 	desc = "You have been gnomed."
-	icon = 'icons/mob/simple/garden_gnome.dmi'
+	icon = '../assets/icons/mob/simple/garden_gnome.dmi'
 	icon_state = "gnome"
 	icon_living = "gnome"
 	pass_flags = PASSMOB
@@ -16,7 +16,7 @@
 	melee_damage_upper = 10
 	attack_verb_continuous = "punches"
 	attack_verb_simple = "punch"
-	attack_sound = 'sound/items/weapons/punch1.ogg'
+	attack_sound = '../assets/sound/items/weapons/punch1.ogg'
 	melee_attack_cooldown = 1.2 SECONDS
 	damage_coeff = list(BRUTE = 1, BURN = 1, TOX = 1, STAMINA = 1, OXY = 1)
 	speak_emote = list("announces")

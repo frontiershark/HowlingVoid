@@ -17,8 +17,8 @@
 		/obj/item = 3.33,
 	)
 	time = 1.6 SECONDS
-	preop_sound = 'sound/items/handling/surgery/scalpel1.ogg'
-	success_sound = 'sound/items/handling/surgery/scalpel2.ogg'
+	preop_sound = '../assets/sound/items/handling/surgery/scalpel1.ogg'
+	success_sound = '../assets/sound/items/handling/surgery/scalpel2.ogg'
 	operation_flags = OPERATION_AFFECTS_MOOD | OPERATION_NO_PATIENT_REQUIRED
 	any_surgery_states_blocked = ALL_SURGERY_SKIN_STATES
 	/// We can't cut mobs with this biostate
@@ -112,8 +112,8 @@
 		/obj/item/kitchen/fork = 2.85,
 	)
 	time = 2.4 SECONDS
-	preop_sound = 'sound/items/handling/surgery/retractor1.ogg'
-	success_sound = 'sound/items/handling/surgery/retractor2.ogg'
+	preop_sound = '../assets/sound/items/handling/surgery/retractor1.ogg'
+	success_sound = '../assets/sound/items/handling/surgery/retractor2.ogg'
 	all_surgery_states_required = SURGERY_SKIN_CUT
 
 /datum/surgery_operation/limb/retract_skin/get_default_radial_image()
@@ -158,11 +158,11 @@
 	time = 2.4 SECONDS
 	preop_sound = list(
 		/obj/item/stack/medical/suture = SFX_SUTURE_BEGIN,
-		/obj/item = 'sound/items/handling/surgery/cautery1.ogg',
+		/obj/item = '../assets/sound/items/handling/surgery/cautery1.ogg',
 	)
 	success_sound = list(
 		/obj/item/stack/medical/suture = SFX_SUTURE_END,
-		/obj/item = 'sound/items/handling/surgery/cautery2.ogg',
+		/obj/item = '../assets/sound/items/handling/surgery/cautery2.ogg',
 	)
 	any_surgery_states_required = ALL_SURGERY_SKIN_STATES
 
@@ -223,7 +223,7 @@
 		/obj/item/stack/cable_coil = 6.67,
 	)
 	time = 2.4 SECONDS
-	preop_sound = 'sound/items/handling/surgery/hemostat1.ogg'
+	preop_sound = '../assets/sound/items/handling/surgery/hemostat1.ogg'
 	all_surgery_states_required = SURGERY_SKIN_OPEN|SURGERY_VESSELS_UNCLAMPED
 
 /datum/surgery_operation/limb/clamp_bleeders/get_default_radial_image()
@@ -266,7 +266,7 @@
 		/obj/item/stack/cable_coil = 6.67,
 	)
 	time = 2.4 SECONDS
-	preop_sound = 'sound/items/handling/surgery/hemostat1.ogg'
+	preop_sound = '../assets/sound/items/handling/surgery/hemostat1.ogg'
 	all_surgery_states_required = SURGERY_SKIN_OPEN|SURGERY_VESSELS_CLAMPED
 
 /datum/surgery_operation/limb/unclamp_bleeders/get_default_radial_image()
@@ -314,14 +314,14 @@
 	)
 	time = 5.4 SECONDS
 	preop_sound = list(
-		/obj/item/circular_saw = 'sound/items/handling/surgery/saw.ogg',
-		/obj/item/melee/arm_blade = 'sound/items/handling/surgery/scalpel1.ogg',
-		/obj/item/fireaxe = 'sound/items/handling/surgery/scalpel1.ogg',
-		/obj/item/hatchet = 'sound/items/handling/surgery/scalpel1.ogg',
-		/obj/item/knife/butcher = 'sound/items/handling/surgery/scalpel1.ogg',
-		/obj/item = 'sound/items/handling/surgery/scalpel1.ogg',
+		/obj/item/circular_saw = '../assets/sound/items/handling/surgery/saw.ogg',
+		/obj/item/melee/arm_blade = '../assets/sound/items/handling/surgery/scalpel1.ogg',
+		/obj/item/fireaxe = '../assets/sound/items/handling/surgery/scalpel1.ogg',
+		/obj/item/hatchet = '../assets/sound/items/handling/surgery/scalpel1.ogg',
+		/obj/item/knife/butcher = '../assets/sound/items/handling/surgery/scalpel1.ogg',
+		/obj/item = '../assets/sound/items/handling/surgery/scalpel1.ogg',
 	)
-	success_sound = 'sound/items/handling/surgery/organ2.ogg'
+	success_sound = '../assets/sound/items/handling/surgery/organ2.ogg'
 	operation_flags = OPERATION_AFFECTS_MOOD | OPERATION_NO_PATIENT_REQUIRED
 	all_surgery_states_required = SURGERY_SKIN_OPEN
 	any_surgery_states_blocked = SURGERY_BONE_SAWED|SURGERY_BONE_DRILLED
@@ -373,10 +373,10 @@
 		/obj/item/stack/sticky_tape = 3.33,
 	)
 	preop_sound = list(
-		/obj/item/stack/medical/bone_gel = 'sound/misc/soggy.ogg',
-		/obj/item/stack/sticky_tape/surgical = 'sound/items/duct_tape/duct_tape_rip.ogg',
-		/obj/item/stack/sticky_tape/super = 'sound/items/duct_tape/duct_tape_rip.ogg',
-		/obj/item/stack/sticky_tape = 'sound/items/duct_tape/duct_tape_rip.ogg',
+		/obj/item/stack/medical/bone_gel = '../assets/sound/misc/soggy.ogg',
+		/obj/item/stack/sticky_tape/surgical = '../assets/sound/items/duct_tape/duct_tape_rip.ogg',
+		/obj/item/stack/sticky_tape/super = '../assets/sound/items/duct_tape/duct_tape_rip.ogg',
+		/obj/item/stack/sticky_tape = '../assets/sound/items/duct_tape/duct_tape_rip.ogg',
 	)
 	time = 4 SECONDS
 	all_surgery_states_required = SURGERY_SKIN_OPEN
@@ -421,8 +421,8 @@
 		/obj/item = 6.67,
 	)
 	time = 3 SECONDS
-	preop_sound = 'sound/items/handling/surgery/saw.ogg'
-	success_sound = 'sound/items/handling/surgery/organ2.ogg'
+	preop_sound = '../assets/sound/items/handling/surgery/saw.ogg'
+	success_sound = '../assets/sound/items/handling/surgery/organ2.ogg'
 	all_surgery_states_required = SURGERY_SKIN_OPEN
 	any_surgery_states_blocked = SURGERY_BONE_SAWED|SURGERY_BONE_DRILLED
 
@@ -473,8 +473,8 @@
 		/obj/item = 3.33,
 	)
 	time = 2.4 SECONDS
-	preop_sound = 'sound/items/handling/surgery/scalpel1.ogg'
-	success_sound = 'sound/items/handling/surgery/organ1.ogg'
+	preop_sound = '../assets/sound/items/handling/surgery/scalpel1.ogg'
+	success_sound = '../assets/sound/items/handling/surgery/organ1.ogg'
 	all_surgery_states_required = SURGERY_SKIN_OPEN
 	any_surgery_states_blocked = SURGERY_ORGANS_CUT
 

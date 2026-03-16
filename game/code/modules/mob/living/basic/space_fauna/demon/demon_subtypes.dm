@@ -126,9 +126,9 @@
 	attack_verb_continuous = "wildly tickles"
 	attack_verb_simple = "wildly tickle"
 
-	attack_sound = 'sound/items/bikehorn.ogg'
+	attack_sound = '../assets/sound/items/bikehorn.ogg'
 	attack_vis_effect = null
-	death_sound = 'sound/misc/sadtrombone.ogg'
+	death_sound = '../assets/sound/misc/sadtrombone.ogg'
 
 	icon_state = "bow_demon"
 	icon_living = "bow_demon"

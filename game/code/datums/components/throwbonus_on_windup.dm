@@ -147,7 +147,7 @@
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	anchored = TRUE
 	vis_flags = VIS_INHERIT_DIR | VIS_INHERIT_PLANE
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	icon_state = "windup_bar"
 	layer = ABOVE_ALL_MOB_LAYER
 	///the maximum windup bonus

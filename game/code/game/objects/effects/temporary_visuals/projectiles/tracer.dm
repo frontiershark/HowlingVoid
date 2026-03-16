@@ -1,6 +1,6 @@
 /obj/effect/projectile/tracer
 	name = "beam"
-	icon = 'icons/obj/weapons/guns/projectiles_tracer.dmi'
+	icon = '../assets/icons/obj/weapons/guns/projectiles_tracer.dmi'
 
 /obj/effect/projectile/tracer/laser
 	name = "laser"

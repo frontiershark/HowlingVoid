@@ -21,7 +21,7 @@
 	var/default_alpha = 255
 
 	/// Icon used for previews
-	var/preview_floor_icon = 'icons/turf/floors.dmi'
+	var/preview_floor_icon = '../assets/icons/turf/floors.dmi'
 	/// Icon state used for previews
 	var/preview_floor_state = "floor"
 
@@ -64,11 +64,11 @@
 	PROTECTED_PROC(TRUE)
 
 	var/list/decal_data = get_decal_info(state, color, dir)
-	var/datum/universal_icon/colored_decal = uni_icon('icons/turf/decals.dmi', decal_data[DECAL_INFO_ICON_STATE], dir = decal_data[DECAL_INFO_DIR])
+	var/datum/universal_icon/colored_decal = uni_icon('../assets/icons/turf/decals.dmi', decal_data[DECAL_INFO_ICON_STATE], dir = decal_data[DECAL_INFO_DIR])
 	colored_decal.change_opacity(decal_data[DECAL_INFO_ALPHA] / 255)
 	if(color == "custom")
 		// Do a fun rainbow pattern to stand out while still being static.
-		colored_decal.blend_icon(uni_icon('icons/effects/random_spawners.dmi', "rainbow"), ICON_MULTIPLY)
+		colored_decal.blend_icon(uni_icon('../assets/icons/effects/random_spawners.dmi', "rainbow"), ICON_MULTIPLY)
 	else if(decal_data[DECAL_INFO_COLOR])
 		colored_decal.blend_color(decal_data[DECAL_INFO_COLOR], ICON_MULTIPLY)
 
@@ -204,7 +204,7 @@
 /datum/paintable_decal_category/warning/generate_colored_decal_spritesheet_icon(state, dir, color)
 	var/list/decal_data = get_decal_info(state, color, dir)
 	var/datum/universal_icon/floor = uni_icon(preview_floor_icon, preview_floor_state)
-	var/datum/universal_icon/decal = uni_icon('icons/turf/decals.dmi', decal_data[DECAL_INFO_ICON_STATE], dir = decal_data[DECAL_INFO_DIR])
+	var/datum/universal_icon/decal = uni_icon('../assets/icons/turf/decals.dmi', decal_data[DECAL_INFO_ICON_STATE], dir = decal_data[DECAL_INFO_DIR])
 	floor.blend_icon(decal, ICON_OVERLAY)
 	return floor
 

@@ -93,7 +93,7 @@
 /obj/item/research_notes
 	name = "research notes"
 	desc = "Valuable scientific data. Use it in an ancient research server to turn it in."
-	icon = 'icons/obj/service/bureaucracy.dmi'
+	icon = '../assets/icons/obj/service/bureaucracy.dmi'
 	icon_state = "paper"
 	w_class = WEIGHT_CLASS_SMALL
 	///research points it holds

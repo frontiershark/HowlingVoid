@@ -34,7 +34,7 @@
 
 /atom/movable/proc/create_point_bubble(atom/pointed_atom)
 	var/mutable_appearance/thought_bubble = mutable_appearance(
-		'icons/effects/effects.dmi',
+		'../assets/icons/effects/effects.dmi',
 		"thought_bubble",
 		offset_spokesman = src,
 		plane = POINT_PLANE,
@@ -55,7 +55,7 @@
 	thought_bubble.alpha = 200
 
 	var/mutable_appearance/point_visual = mutable_appearance(
-		'icons/hud/screen_gen.dmi',
+		'../assets/icons/hud/screen_gen.dmi',
 		"arrow"
 	)
 
@@ -71,7 +71,7 @@
 
 /obj/effect/temp_visual/point
 	name = "pointer"
-	icon = 'icons/hud/screen_gen.dmi'
+	icon = '../assets/icons/hud/screen_gen.dmi'
 	icon_state = "arrow"
 	plane = POINT_PLANE
 	duration = POINT_TIME

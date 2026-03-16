@@ -4,7 +4,7 @@
 /obj/machinery/deployable_turret
 	name = "machine gun turret"
 	desc = "While the trigger is held down, this gun will redistribute recoil to allow its user to easily shift targets."
-	icon = 'icons/obj/weapons/turrets.dmi'
+	icon = '../assets/icons/obj/weapons/turrets.dmi'
 	icon_state = "machinegun"
 	can_buckle = TRUE
 	anchored = FALSE
@@ -27,9 +27,9 @@
 	var/warned = FALSE
 	var/list/calculated_projectile_vars
 	/// Sound to play at the end of a burst
-	var/overheatsound = 'sound/items/weapons/sear.ogg'
+	var/overheatsound = '../assets/sound/items/weapons/sear.ogg'
 	/// Sound to play when firing
-	var/firesound = 'sound/items/weapons/gun/smg/shot.ogg'
+	var/firesound = '../assets/sound/items/weapons/gun/smg/shot.ogg'
 	/// If using a wrench on the turret will start undeploying it
 	var/can_be_undeployed = FALSE
 	/// What gets spawned if the object is undeployed
@@ -70,7 +70,7 @@
 //BUCKLE HOOKS
 
 /obj/machinery/deployable_turret/unbuckle_mob(mob/living/buckled_mob, force = FALSE, can_fall = TRUE)
-	playsound(src,'sound/vehicles/mecha/mechmove01.ogg', 50, TRUE)
+	playsound(src,'../assets/sound/vehicles/mecha/mechmove01.ogg', 50, TRUE)
 	for(var/obj/item/I in buckled_mob.held_items)
 		if(istype(I, /obj/item/gun_control))
 			qdel(I)
@@ -103,7 +103,7 @@
 	M.pixel_y = 14
 	layer = ABOVE_MOB_LAYER
 	setDir(SOUTH)
-	playsound(src,'sound/vehicles/mecha/mechmove01.ogg', 50, TRUE)
+	playsound(src,'../assets/sound/vehicles/mecha/mechmove01.ogg', 50, TRUE)
 	set_anchored(TRUE)
 	if(M.client)
 		M.client.view_size.setTo(view_range)
@@ -221,14 +221,14 @@
 	number_of_shots = 3
 	cooldown_duration = 2 SECONDS
 	rate_of_fire = 2
-	firesound = 'sound/items/weapons/gun/hmg/hmg.ogg'
-	overheatsound = 'sound/items/weapons/gun/smg/smgrack.ogg'
+	firesound = '../assets/sound/items/weapons/gun/hmg/hmg.ogg'
+	overheatsound = '../assets/sound/items/weapons/gun/smg/smgrack.ogg'
 	can_be_undeployed = TRUE
 	spawned_on_undeploy = /obj/item/deployable_turret_folded
 
 /obj/item/gun_control
 	name = "turret controls"
-	icon = 'icons/obj/weapons/hand.dmi'
+	icon = '../assets/icons/obj/weapons/hand.dmi'
 	icon_state = "offhand"
 	w_class = WEIGHT_CLASS_HUGE
 	item_flags = ABSTRACT | NOBLUDGEON | DROPDEL

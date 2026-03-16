@@ -229,7 +229,7 @@ SOLFED ARMOR VALUES!
 	name = "\improper SolFed Espatier uniform"
 	desc = "A camouflage uniform for members of the SolFed Espatier Corps, typically serving as Starfleet (SFSF) and Space Guard (SFSG) shipboard security. \
 		They additionally fill the role of simple space-borne infantry, earning the nickname of \"Space Marines\" from many spacers."
-	icon = 'icons/map_icons/clothing/under/_under.dmi'
+	icon = '../assets/icons/map_icons/clothing/under/_under.dmi'
 	icon_state = "/obj/item/clothing/under/solfed/marines"
 	post_init_icon_state = "solfed_camo"
 	worn_icon_state = "solfed_camo"
@@ -244,7 +244,7 @@ SOLFED ARMOR VALUES!
 /obj/item/clothing/accessory/nova/solfedribbon
 	name = "\improper SolFed rank ribbon"
 	desc = "An average military ribbon."
-	icon = 'icons/map_icons/clothing/accessory.dmi'
+	icon = '../assets/icons/map_icons/clothing/accessory.dmi'
 	icon_state = "/obj/item/clothing/accessory/nova/solfedribbon"
 	post_init_icon_state = "star_arr_ribbon_1"
 	greyscale_colors = "#FFD700"

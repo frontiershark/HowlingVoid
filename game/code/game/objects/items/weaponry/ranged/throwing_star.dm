@@ -1,18 +1,18 @@
 /obj/item/throwing_star
 	name = "throwing star"
 	desc = "An ancient weapon still used to this day, due to its ease of lodging itself into its victim's body parts."
-	icon = 'icons/obj/weapons/thrown.dmi'
+	icon = '../assets/icons/obj/weapons/thrown.dmi'
 	icon_state = "throwingstar"
 	inhand_icon_state = "eshield"
-	lefthand_file = 'icons/mob/inhands/equipment/shields_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/shields_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/shields_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/shields_righthand.dmi'
 	force = 2
 	throwforce = 10 //10 + 2 (WEIGHT_CLASS_SMALL) * 4 (EMBEDDED_IMPACT_PAIN_MULTIPLIER) = 18 damage on hit due to guaranteed embedding
 	throw_speed = 4
 	embed_type = /datum/embedding/throwing_star
 	armour_penetration = 40
-	mob_throw_hit_sound = 'sound/items/weapons/pierce.ogg'
-	hitsound = 'sound/items/weapons/bladeslice.ogg'
+	mob_throw_hit_sound = '../assets/sound/items/weapons/pierce.ogg'
+	hitsound = '../assets/sound/items/weapons/bladeslice.ogg'
 
 	w_class = WEIGHT_CLASS_SMALL
 	sharpness = SHARP_POINTY

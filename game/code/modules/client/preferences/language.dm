@@ -20,7 +20,7 @@
 		lang_icon.scale(32, 32)
 		return lang_icon
 
-	var/datum/universal_icon/unknown = uni_icon('icons/ui/chat/language.dmi', "unknown")
+	var/datum/universal_icon/unknown = uni_icon('../assets/icons/ui/chat/language.dmi', "unknown")
 	unknown.scale(32, 32)
 	return unknown
 

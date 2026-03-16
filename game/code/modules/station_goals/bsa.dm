@@ -34,7 +34,7 @@ GLOBAL_VAR_INIT(bsa_unlock, FALSE)
 	return FALSE
 
 /obj/machinery/bsa
-	icon = 'icons/obj/machines/particle_accelerator.dmi'
+	icon = '../assets/icons/obj/machines/particle_accelerator.dmi'
 	density = TRUE
 	anchored = TRUE
 
@@ -140,7 +140,7 @@ GLOBAL_VAR_INIT(bsa_unlock, FALSE)
 /obj/machinery/bsa/full
 	name = "Bluespace Artillery"
 	desc = "Long range bluespace artillery."
-	icon = 'icons/obj/machines/cannon.dmi'
+	icon = '../assets/icons/obj/machines/cannon.dmi'
 	icon_state = "cannon_west"
 	var/static/mutable_appearance/top_layer
 	var/ex_power = 3
@@ -258,7 +258,7 @@ GLOBAL_VAR_INIT(bsa_unlock, FALSE)
 	name = "bluespace artillery control"
 	use_power = NO_POWER_USE
 	circuit = /obj/item/circuitboard/computer/bsa_control
-	icon = 'icons/obj/machines/particle_accelerator.dmi'
+	icon = '../assets/icons/obj/machines/particle_accelerator.dmi'
 	icon_state = "control_boxp"
 	icon_keyboard = null
 	icon_screen = null

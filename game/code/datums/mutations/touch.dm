@@ -28,7 +28,7 @@
 	name = "Shock Touch"
 	desc = "Channel electricity to your hand to shock people with. Mostly harmless! Mostly... "
 	button_icon_state = "zap"
-	sound = 'sound/items/weapons/zapbang.ogg'
+	sound = '../assets/sound/items/weapons/zapbang.ogg'
 	cooldown_time = 7 SECONDS
 	invocation_type = INVOCATION_NONE
 	spell_requirements = NONE
@@ -78,7 +78,7 @@
 /obj/item/melee/touch_attack/shock
 	name = "\improper shock touch"
 	desc = "This is kind of like when you rub your feet on a shag rug so you can zap your friends, only a lot less safe."
-	icon = 'icons/obj/weapons/hand.dmi'
+	icon = '../assets/icons/obj/weapons/hand.dmi'
 	icon_state = "zapper"
 	inhand_icon_state = "zapper"
 
@@ -112,9 +112,9 @@
 	name = "Mending Touch"
 	desc = "You can now lay your hands on other people to transfer a small amount of their physical injuries to yourself. \
 		For some reason, this power does not play nicely with the undead, or people with strange ideas about morality."
-	button_icon = 'icons/mob/actions/actions_genetic.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_genetic.dmi'
 	button_icon_state = "mending_touch"
-	sound = 'sound/effects/magic/staff_healing.ogg'
+	sound = '../assets/sound/effects/magic/staff_healing.ogg'
 	cooldown_time = 12 SECONDS
 	school = SCHOOL_RESTORATION
 	invocation_type = INVOCATION_NONE
@@ -418,7 +418,7 @@
 /obj/item/melee/touch_attack/lay_on_hands
 	name = "mending touch"
 	desc = "Unlike in your favorite tabletop games, you sadly can't cast this on yourself, so you can't use that as a Scapegoat." // mayus is reference. if you get it you're cool
-	icon = 'icons/obj/weapons/hand.dmi'
+	icon = '../assets/icons/obj/weapons/hand.dmi'
 	icon_state = "greyscale"
 	color = COLOR_VERY_PALE_LIME_GREEN
 	inhand_icon_state = "greyscale"

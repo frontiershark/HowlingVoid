@@ -7,10 +7,10 @@
 // Knife Template, should not appear in game normaly //
 /obj/item/knife
 	name = "knife"
-	icon = 'icons/obj/service/kitchen.dmi'
+	icon = '../assets/icons/obj/service/kitchen.dmi'
 	icon_state = "knife"
-	lefthand_file = 'icons/mob/inhands/equipment/kitchen_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/kitchen_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/kitchen_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/kitchen_righthand.dmi'
 	inhand_icon_state = "knife"
 	worn_icon_state = "knife"
 	icon_angle = -90
@@ -20,7 +20,7 @@
 	demolition_mod = 0.75
 	w_class = WEIGHT_CLASS_SMALL
 	throwforce = 10
-	hitsound = 'sound/items/weapons/bladeslice.ogg'
+	hitsound = '../assets/sound/items/weapons/bladeslice.ogg'
 	throw_speed = 3
 	throw_range = 6
 	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 6)
@@ -72,13 +72,13 @@
 /obj/item/knife/ritual
 	name = "ritual knife"
 	desc = "The unearthly energies that once powered this blade are now dormant."
-	icon = 'icons/obj/weapons/khopesh.dmi'
+	icon = '../assets/icons/obj/weapons/khopesh.dmi'
 	icon_state = "bone_blade"
 	inhand_icon_state = "bone_blade"
 	worn_icon_state = "bone_blade"
 	icon_angle = -45
-	lefthand_file = 'icons/mob/inhands/64x64_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/64x64_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/64x64_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/64x64_righthand.dmi'
 	inhand_x_dimension = 64
 	inhand_y_dimension = 64
 	item_flags = CRUEL_IMPLEMENT //maybe they want to use it in surgery
@@ -90,7 +90,7 @@
 /obj/item/knife/bloodletter
 	name = "bloodletter"
 	desc = "An occult looking dagger that is cold to the touch. Somehow, the flawless orb on the pommel is made entirely of liquid blood."
-	icon = 'icons/obj/weapons/khopesh.dmi'
+	icon = '../assets/icons/obj/weapons/khopesh.dmi'
 	icon_state = "bloodletter"
 	worn_icon_state = "render"
 	icon_angle = -45
@@ -132,7 +132,7 @@
 /obj/item/knife/hunting
 	name = "hunting knife"
 	desc = "Despite its name, it's mainly used for cutting meat from dead prey rather than actual hunting."
-	icon = 'icons/obj/weapons/stabby.dmi'
+	icon = '../assets/icons/obj/weapons/stabby.dmi'
 	inhand_icon_state = "huntingknife"
 	icon_state = "huntingknife"
 	icon_angle = 180
@@ -151,7 +151,7 @@
 /obj/item/knife/combat
 	name = "combat knife"
 	desc = "A military combat utility survival knife."
-	icon = 'icons/obj/weapons/stabby.dmi'
+	icon = '../assets/icons/obj/weapons/stabby.dmi'
 	icon_state = "buckknife"
 	worn_icon_state = "buckknife"
 	icon_angle = -45
@@ -179,7 +179,7 @@
 	. = ..()
 	if(user.get_item_by_slot(ITEM_SLOT_MASK) == src && !user.has_status_effect(/datum/status_effect/choke) && prob(20))
 		user.apply_damage(5, BRUTE, BODY_ZONE_HEAD)
-		playsound(user, 'sound/items/weapons/slice.ogg', 50, TRUE)
+		playsound(user, '../assets/sound/items/weapons/slice.ogg', 50, TRUE)
 		user.visible_message(span_danger("[user] accidentally cuts [user.p_them()]self while pulling [src] out of [user.p_them()] teeth! What a doofus!"), span_userdanger("You accidentally cut your mouth with [src]!"))
 
 /obj/item/knife/combat/equipped(mob/living/user, slot, initial = FALSE)
@@ -188,7 +188,7 @@
 		if(user.get_item_by_slot(ITEM_SLOT_MASK) == src)
 			user.apply_status_effect(/datum/status_effect/choke, src)
 			user.visible_message(span_danger("[user] accidentally swallows [src]!"))
-			playsound(user, 'sound/items/eatfood.ogg', 100, TRUE)
+			playsound(user, '../assets/sound/items/eatfood.ogg', 100, TRUE)
 
 /obj/item/knife/combat/survival
 	name = "survival knife"
@@ -204,8 +204,8 @@
 	desc = "A root dagger, deceptively sharp. Perfect to hide and stab someone with, or make a couple and throw them at enemies."
 	icon_state = "rootdagger"
 	worn_icon_state = "root_dagger"
-	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/swords_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/swords_righthand.dmi'
 	inhand_icon_state = "rootshiv"
 	embed_type = /datum/embedding/combat_knife/weak
 	force = 15
@@ -217,8 +217,8 @@
 	inhand_icon_state = "bone_dagger"
 	icon_state = "bone_dagger"
 	worn_icon_state = "bone_dagger"
-	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/swords_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/swords_righthand.dmi'
 	embed_type = /datum/embedding/combat_knife/weak
 	obj_flags = parent_type::obj_flags & ~CONDUCTS_ELECTRICITY
 	force = 15
@@ -231,7 +231,7 @@
 /obj/item/knife/combat/cyborg
 	name = "cyborg knife"
 	desc = "A cyborg-mounted plasteel knife. Extremely sharp and durable."
-	icon = 'icons/obj/items_cyborg.dmi'
+	icon = '../assets/icons/obj/items_cyborg.dmi'
 	icon_state = "knife_cyborg"
 	worn_icon_state = "knife_cyborg" //error sprite - this shouldn't have been dropped
 	slot_flags = NONE //you can't put this in your mouth
@@ -239,12 +239,12 @@
 /obj/item/knife/shiv
 	name = "glass shiv"
 	desc = "A makeshift glass shiv."
-	icon = 'icons/obj/weapons/stabby.dmi'
+	icon = '../assets/icons/obj/weapons/stabby.dmi'
 	icon_state = "shiv"
 	inhand_icon_state = "shiv"
 	icon_angle = -65
-	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/swords_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/swords_righthand.dmi'
 	obj_flags = parent_type::obj_flags & ~CONDUCTS_ELECTRICITY
 	force = 8
 	throwforce = 12
@@ -348,12 +348,12 @@
 
 /obj/item/switchblade
 	name = "switchblade"
-	icon = 'icons/obj/weapons/sword.dmi'
+	icon = '../assets/icons/obj/weapons/sword.dmi'
 	icon_state = "switchblade"
 	base_icon_state = "switchblade"
 	icon_angle = -90
-	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/swords_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/swords_righthand.dmi'
 	desc = "A sharp, concealable, spring-loaded knife."
 	obj_flags = CONDUCTS_ELECTRICITY
 	force = 3
@@ -362,7 +362,7 @@
 	throw_speed = 3
 	throw_range = 6
 	custom_materials = list(/datum/material/iron= SHEET_MATERIAL_AMOUNT * 6)
-	hitsound = 'sound/items/weapons/genhit.ogg'
+	hitsound = '../assets/sound/items/weapons/genhit.ogg'
 	attack_verb_continuous = list("stubs", "pokes")
 	attack_verb_simple = list("stub", "poke")
 	resistance_flags = FIRE_PROOF
@@ -389,7 +389,7 @@
 		throwforce_on = 23, \
 		throw_speed_on = throw_speed, \
 		sharpness_on = SHARP_EDGED, \
-		hitsound_on = 'sound/items/weapons/bladeslice.ogg', \
+		hitsound_on = '../assets/sound/items/weapons/bladeslice.ogg', \
 		w_class_on = WEIGHT_CLASS_NORMAL, \
 		attack_verb_continuous_on = list("slashes", "slices", "tears", "lacerates", "rips", "dices", "cuts"), \
 		attack_verb_simple_on = list("slash", "slice", "tear", "lacerate", "rip", "dice", "cut"), \
@@ -416,13 +416,13 @@
 /obj/item/boxcutter
 	name = "boxcutter"
 	desc = "A tool for cutting boxes, or throats."
-	icon = 'icons/obj/tools.dmi'
+	icon = '../assets/icons/obj/tools.dmi'
 	icon_state = "boxcutter"
 	inhand_icon_state = "boxcutter"
 	base_icon_state = "boxcutter"
 	icon_angle = -90
-	lefthand_file = 'icons/mob/inhands/equipment/boxcutter_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/boxcutter_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/boxcutter_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/boxcutter_righthand.dmi'
 	inhand_icon_state = null
 	attack_verb_continuous = list("prods", "pokes")
 	attack_verb_simple = list("prod", "poke")
@@ -454,7 +454,7 @@
 		throwforce_on = 4, \
 		throw_speed_on = throw_speed, \
 		sharpness_on = SHARP_EDGED, \
-		hitsound_on = 'sound/items/weapons/bladeslice.ogg', \
+		hitsound_on = '../assets/sound/items/weapons/bladeslice.ogg', \
 		w_class_on = WEIGHT_CLASS_NORMAL, \
 		attack_verb_continuous_on = list("cuts", "stabs", "slashes"), \
 		attack_verb_simple_on = list("cut", "stab", "slash"), \
@@ -465,7 +465,7 @@
 /obj/item/boxcutter/proc/on_transform(obj/item/source, mob/user, active)
 	SIGNAL_HANDLER
 
-	playsound(src, 'sound/items/boxcutter_activate.ogg', 50)
+	playsound(src, '../assets/sound/items/boxcutter_activate.ogg', 50)
 	tool_behaviour = (active ? TOOL_KNIFE : NONE)
 	if(active)
 		AddElement(/datum/element/cuffsnapping, snap_time_weak_handcuffs, snap_time_strong_handcuffs)

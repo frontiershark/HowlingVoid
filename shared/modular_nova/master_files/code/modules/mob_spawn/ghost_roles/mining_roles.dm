@@ -81,7 +81,7 @@
 
 /obj/effect/mob_spawn/ghost_role/human/interdyne_planetary_base
 	name = "Interdyne Scientist"
-	icon = 'icons/obj/machines/sleeper.dmi'
+	icon = '../assets/icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper_s"
 	prompt_name = "an Interdyne scientist"
 	computer_area = /area/ruin/interdyne_planetary_base/main

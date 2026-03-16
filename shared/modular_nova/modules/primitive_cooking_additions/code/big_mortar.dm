@@ -106,9 +106,9 @@
 			return ITEM_INTERACT_BLOCKING
 
 		var/list/choose_options = list(
-			"Grind" = image(icon = 'icons/hud/radial.dmi', icon_state = "radial_grind"),
-			"Juice" = image(icon = 'icons/hud/radial.dmi', icon_state = "radial_juice"),
-			"Mix" = image(icon = 'icons/hud/radial.dmi', icon_state = "radial_mix"),
+			"Grind" = image(icon = '../assets/icons/hud/radial.dmi', icon_state = "radial_grind"),
+			"Juice" = image(icon = '../assets/icons/hud/radial.dmi', icon_state = "radial_juice"),
+			"Mix" = image(icon = '../assets/icons/hud/radial.dmi', icon_state = "radial_mix"),
 		)
 		var/picked_option = show_radial_menu(user, src, choose_options, radius = 38, require_near = TRUE)
 

@@ -525,7 +525,7 @@
 		// a bolt of lightning can reach temperatures of 30,000 Kelvin which is 5x hotter than the sun
 		hit_ore.fire_act(30000)
 
-	playsound(weather_turf, 'sound/effects/magic/lightningbolt.ogg', 100, extrarange = 10, falloff_distance = 10)
+	playsound(weather_turf, '../assets/sound/effects/magic/lightningbolt.ogg', 100, extrarange = 10, falloff_distance = 10)
 	weather_turf.visible_message(span_danger("A thunderbolt strikes [weather_turf]!"))
 	new /obj/effect/hotspot(weather_turf)
 
@@ -576,11 +576,11 @@
 		// I prefer it to creating 2 extra plane masters however, so it's a cost I'm willing to pay
 		// LU
 		if(use_glow)
-			var/mutable_appearance/glow_overlay = mutable_appearance('icons/effects/glow_weather.dmi', weather_state, overlay_layer, null, WEATHER_GLOW_PLANE, 100, offset_const = offset)
+			var/mutable_appearance/glow_overlay = mutable_appearance('../assets/icons/effects/glow_weather.dmi', weather_state, overlay_layer, null, WEATHER_GLOW_PLANE, 100, offset_const = offset)
 			glow_overlay.color = weather_color
 			gen_overlay_cache += glow_overlay
 
-		var/mutable_appearance/new_weather_overlay = mutable_appearance('icons/effects/weather_effects.dmi', weather_state, overlay_layer, plane = overlay_plane, offset_const = offset)
+		var/mutable_appearance/new_weather_overlay = mutable_appearance('../assets/icons/effects/weather_effects.dmi', weather_state, overlay_layer, plane = overlay_plane, offset_const = offset)
 		new_weather_overlay.color = weather_color
 		gen_overlay_cache += new_weather_overlay
 

@@ -3,7 +3,7 @@
 /obj/item/reagent_containers/cup/beaker/eldritch
 	name = "flask of eldritch essence"
 	desc = "Toxic to the closed minded, yet refreshing to those with knowledge of the beyond."
-	icon = 'icons/obj/antags/eldritch.dmi'
+	icon = '../assets/icons/obj/antags/eldritch.dmi'
 	icon_state = "eldritch_flask"
 	list_reagents = list(/datum/reagent/eldritch = 50)
 	can_lid = FALSE
@@ -12,7 +12,7 @@
 /obj/item/reagent_containers/cup/phylactery
 	name = "phylactery of damnation"
 	desc = "Used to steal blood from soon-to-be victims."
-	icon = 'icons/obj/antags/eldritch.dmi'
+	icon = '../assets/icons/obj/antags/eldritch.dmi'
 	icon_state = "phylactery"
 	base_icon_state = "phylactery"
 	has_variable_transfer_amount = FALSE
@@ -44,7 +44,7 @@
 		to_chat(user, span_notice("You take a blood sample from [living_target]."))
 		to_chat(living_target, span_warning("You feel a tiny prick!"))
 		COOLDOWN_START(src, drain_cooldown, 5 SECONDS)
-		playsound(src, 'sound/effects/chemistry/catalyst.ogg', 20, TRUE, extrarange = SILENCED_SOUND_EXTRARANGE, falloff_exponent = 10)
+		playsound(src, '../assets/sound/effects/chemistry/catalyst.ogg', 20, TRUE, extrarange = SILENCED_SOUND_EXTRARANGE, falloff_exponent = 10)
 	else
 		to_chat(user, span_warning("You are unable to draw any blood from [living_target]!"))
 	return ITEM_INTERACT_SUCCESS
@@ -68,7 +68,7 @@
 /obj/item/ether
 	name = "ether of the newborn"
 	desc = "A flask of nausea-inducing, thick green liquid. Restores your body completely, then places you into an enhanced sleep for a full minute."
-	icon = 'icons/obj/antags/eldritch.dmi'
+	icon = '../assets/icons/obj/antags/eldritch.dmi'
 	icon_state = "poison_flask"
 
 /obj/item/ether/attack_self(mob/living/user, modifiers)

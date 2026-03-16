@@ -4,7 +4,7 @@
 #define PRESSURE_MAX(value)(max((value), MINIMUM_TURBINE_PRESSURE))
 
 /obj/machinery/power/turbine
-	icon = 'icons/obj/machines/engine/turbine.dmi'
+	icon = '../assets/icons/obj/machines/engine/turbine.dmi'
 	density = TRUE
 	resistance_flags = FIRE_PROOF
 	can_atmos_pass = ATMOS_PASS_DENSITY
@@ -660,7 +660,7 @@
 			return PROCESS_KILL
 
 		aas_config_announce(/datum/aas_config_entry/engineering_turbine_failure, list("INTEGRITY" = integrity, "LOCATION" = get_area_name(src)), src, list(RADIO_CHANNEL_ENGINEERING))
-		playsound(src, 'sound/machines/engine_alert/engine_alert1.ogg', 100, FALSE, 30, 30, falloff_distance = 10)
+		playsound(src, '../assets/sound/machines/engine_alert/engine_alert1.ogg', 100, FALSE, 30, 30, falloff_distance = 10)
 
 	//================ROTOR WORKING============//
 	//The Rotor moves the gases that expands from 1000 L to 3000 L, they cool down and both temperature and pressure lowers

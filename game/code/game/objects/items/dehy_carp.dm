@@ -28,14 +28,14 @@
 	visible_message(span_notice("[src] swells up!"))
 
 	//Animation
-	icon = 'icons/mob/simple/carp.dmi'
+	icon = '../assets/icons/mob/simple/carp.dmi'
 	flick("carp_swell", src)
 	//Wait for animation to end
 	addtimer(CALLBACK(src, PROC_REF(spawn_carp)), 0.6 SECONDS)
 
 /obj/item/toy/plush/carpplushie/dehy_carp/suicide_act(mob/living/carbon/human/user)
 	user.visible_message(span_suicide("[user] starts eating [src]. It looks like [user.p_theyre()] trying to commit suicide!"))
-	playsound(src, 'sound/items/eatfood.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/eatfood.ogg', 50, TRUE)
 	if(!istype(user))
 		return BRUTELOSS
 	user.Paralyze(3 SECONDS)
@@ -48,7 +48,7 @@
 		user.apply_damage(200, def_zone = BODY_ZONE_CHEST)
 		forceMove(drop_location()) //we move it back
 	swelling = TRUE
-	icon = 'icons/mob/simple/carp.dmi'
+	icon = '../assets/icons/mob/simple/carp.dmi'
 	flick("carp_swell", src)
 	addtimer(CALLBACK(src, PROC_REF(spawn_carp)), 0.6 SECONDS)
 	return BRUTELOSS

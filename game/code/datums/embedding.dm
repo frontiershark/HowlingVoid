@@ -231,7 +231,7 @@
 			owner.throw_alert(ALERT_EMBEDDED_OBJECT, /atom/movable/screen/alert/embeddedobject)
 			owner.add_mood_event("embedded", /datum/mood_event/embedded)
 		if (!is_harmless())
-			playsound(owner,'sound/items/weapons/bladeslice.ogg', 40)
+			playsound(owner,'../assets/sound/items/weapons/bladeslice.ogg', 40)
 			if (owner_limb.can_bleed())
 				parent.add_mob_blood(owner) // it embedded itself in you, of course it's bloody!
 		damage += parent.w_class * impact_pain_mult
@@ -595,7 +595,7 @@
 	)
 
 	owner.cause_wound_of_type_and_severity(WOUND_PIERCE, owner_limb, WOUND_SEVERITY_MODERATE)
-	playsound(owner, 'sound/effects/wounds/blood2.ogg', 50, TRUE)
+	playsound(owner, '../assets/sound/effects/wounds/blood2.ogg', 50, TRUE)
 
 	var/dist = get_dist(caster, owner) //Check if the caster is close enough to yank them in
 	if(dist >= 7)

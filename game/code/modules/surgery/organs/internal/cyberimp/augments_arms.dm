@@ -52,9 +52,9 @@
 	/// You can use this var for item path, it would be converted into an item on New().
 	var/obj/item/active_item
 	/// Sound played when extending
-	var/extend_sound = 'sound/vehicles/mecha/mechmove03.ogg'
+	var/extend_sound = '../assets/sound/vehicles/mecha/mechmove03.ogg'
 	/// Sound played when retracting
-	var/retract_sound = 'sound/vehicles/mecha/mechmove03.ogg'
+	var/retract_sound = '../assets/sound/vehicles/mecha/mechmove03.ogg'
 	/// Do we have a separate icon_state for the hand overlay?
 	var/hand_state = TRUE
 
@@ -240,7 +240,7 @@
 	if(prob(30/severity) && owner && !(organ_flags & ORGAN_FAILING))
 		Retract()
 		owner.visible_message(span_danger("A loud bang comes from [owner]\'s [parse_zone(zone)]!"))
-		playsound(get_turf(owner), 'sound/items/weapons/flashbang.ogg', 100, TRUE)
+		playsound(get_turf(owner), '../assets/sound/items/weapons/flashbang.ogg', 100, TRUE)
 		to_chat(owner, span_userdanger("You feel an explosion erupt inside your [parse_zone(zone)] as your implant breaks!"))
 		owner.adjust_fire_stacks(20)
 		owner.ignite_mob()
@@ -572,12 +572,12 @@
 		var/mob/living/carbon/human/human_target = target
 		if(human_target.check_block(source, potential_damage, "[source]'s' [picked_hit_type]"))
 			source.do_attack_animation(target)
-			playsound(living_target.loc, 'sound/items/weapons/punchmiss.ogg', 25, TRUE, -1)
+			playsound(living_target.loc, '../assets/sound/items/weapons/punchmiss.ogg', 25, TRUE, -1)
 			log_combat(source, target, "attempted to [picked_hit_type]", "muscle implant")
 			return COMPONENT_CANCEL_ATTACK_CHAIN
 
 	source.do_attack_animation(target, ATTACK_EFFECT_SMASH)
-	playsound(living_target.loc, 'sound/items/weapons/punch1.ogg', 25, TRUE, -1)
+	playsound(living_target.loc, '../assets/sound/items/weapons/punch1.ogg', 25, TRUE, -1)
 
 	// Some mobs gib when killed, so we're logging early. At this point, we're definitely hitting, so...
 	living_target.visible_message(

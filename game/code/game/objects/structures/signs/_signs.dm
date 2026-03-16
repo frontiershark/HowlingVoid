@@ -1,5 +1,5 @@
 /obj/structure/sign
-	icon = 'icons/obj/signs.dmi'
+	icon = '../assets/icons/obj/signs.dmi'
 	anchored = TRUE
 	opacity = FALSE
 	density = FALSE
@@ -57,7 +57,7 @@
 	I.play_tool_sound(src)
 	if(!I.use_tool(src, user, 4 SECONDS))
 		return ITEM_INTERACT_FAILURE
-	playsound(src, 'sound/items/deconstruct.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/deconstruct.ogg', 50, TRUE)
 	user.visible_message(span_notice("[user] unfastens [src]."), \
 		span_notice("You unfasten [src]."))
 	deconstruct(TRUE)
@@ -132,11 +132,11 @@
 /obj/item/sign
 	name = "sign backing"
 	desc = "A plastic sign backing, use a pen to change the decal. It can be placed on a wall."
-	icon = 'icons/obj/signs.dmi'
+	icon = '../assets/icons/obj/signs.dmi'
 	icon_state = "backing"
 	inhand_icon_state = "backing"
-	lefthand_file = 'icons/mob/inhands/items_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items_righthand.dmi'
 	w_class = WEIGHT_CLASS_NORMAL
 	custom_materials = list(/datum/material/plastic =SHEET_MATERIAL_AMOUNT)
 	armor_type = /datum/armor/item_sign
@@ -204,7 +204,7 @@
 		placed_sign.pixel_x = -32
 	user.visible_message(span_notice("[user] fastens [src] to [target_turf]."), \
 		span_notice("You attach the sign to [target_turf]."))
-	playsound(target_turf, 'sound/items/deconstruct.ogg', 50, TRUE)
+	playsound(target_turf, '../assets/sound/items/deconstruct.ogg', 50, TRUE)
 	placed_sign.update_integrity(get_integrity())
 	placed_sign.setDir(dir)
 	placed_sign.find_and_mount_on_atom()

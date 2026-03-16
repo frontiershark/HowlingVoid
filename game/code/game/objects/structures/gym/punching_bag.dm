@@ -1,20 +1,20 @@
 /obj/structure/punching_bag
 	name = "punching bag"
 	desc = "A punching bag. Can you get to speed level 4???"
-	icon = 'icons/obj/fluff/gym_equipment.dmi'
+	icon = '../assets/icons/obj/fluff/gym_equipment.dmi'
 	icon_state = "punchingbag"
 	anchored = TRUE
 	layer = ABOVE_MOB_LAYER
 	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 2.5)
 	///List of sounds that can be played when punched.
 	var/static/list/hit_sounds = list(
-		'sound/items/weapons/genhit1.ogg',
-		'sound/items/weapons/genhit2.ogg',
-		'sound/items/weapons/genhit3.ogg',
-		'sound/items/weapons/punch1.ogg',
-		'sound/items/weapons/punch2.ogg',
-		'sound/items/weapons/punch3.ogg',
-		'sound/items/weapons/punch4.ogg',
+		'../assets/sound/items/weapons/genhit1.ogg',
+		'../assets/sound/items/weapons/genhit2.ogg',
+		'../assets/sound/items/weapons/genhit3.ogg',
+		'../assets/sound/items/weapons/punch1.ogg',
+		'../assets/sound/items/weapons/punch2.ogg',
+		'../assets/sound/items/weapons/punch3.ogg',
+		'../assets/sound/items/weapons/punch4.ogg',
 	)
 
 /obj/structure/punching_bag/Initialize(mapload)

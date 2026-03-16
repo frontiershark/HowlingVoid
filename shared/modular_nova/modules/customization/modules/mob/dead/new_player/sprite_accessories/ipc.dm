@@ -227,7 +227,7 @@
 
 /datum/sprite_accessory/synth_chassis/android
 	name = "Android Chassis"
-	icon = 'icons/mob/augmentation/augments.dmi'
+	icon = '../assets/icons/mob/augmentation/augments.dmi'
 	icon_state = "robotic"
 	color_src = null
 
@@ -337,7 +337,7 @@
 
 /datum/sprite_accessory/synth_head/android
 	name = "Android Head"
-	icon = 'icons/mob/augmentation/augments.dmi'
+	icon = '../assets/icons/mob/augmentation/augments.dmi'
 	icon_state = "robotic"
 	color_src = null
 

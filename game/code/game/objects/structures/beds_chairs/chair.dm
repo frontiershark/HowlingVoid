@@ -1,7 +1,7 @@
 /obj/structure/chair
 	name = "chair"
 	desc = "You sit in this. Either by will or force."
-	icon = 'icons/obj/chairs.dmi'
+	icon = '../assets/icons/obj/chairs.dmi'
 	icon_state = "chair"
 	anchored = TRUE
 	can_buckle = TRUE
@@ -115,7 +115,7 @@
 	if(!user.temporarilyRemoveItemFromInventory(input_shock_kit))
 		return
 	if(!overlays_from_child_procs || overlays_from_child_procs.len == 0)
-		var/mutable_appearance/echair_overlay = mutable_appearance('icons/obj/chairs.dmi', "echair_over", OBJ_LAYER, src, appearance_flags = KEEP_APART)
+		var/mutable_appearance/echair_overlay = mutable_appearance('../assets/icons/obj/chairs.dmi', "echair_over", OBJ_LAYER, src, appearance_flags = KEEP_APART)
 		AddComponent(/datum/component/electrified_buckle, (SHOCK_REQUIREMENT_ITEM | SHOCK_REQUIREMENT_LIVE_CABLE | SHOCK_REQUIREMENT_SIGNAL_RECEIVED_TOGGLE), input_shock_kit, list(echair_overlay), FALSE)
 	else
 		AddComponent(/datum/component/electrified_buckle, (SHOCK_REQUIREMENT_ITEM | SHOCK_REQUIREMENT_LIVE_CABLE | SHOCK_REQUIREMENT_SIGNAL_RECEIVED_TOGGLE), input_shock_kit, overlays_from_child_procs, FALSE)
@@ -244,7 +244,7 @@
 
 /obj/structure/chair/comfy/shuttle/electrify_self(obj/item/assembly/shock_kit/input_shock_kit, mob/user, list/overlays_from_child_procs)
 	if(!overlays_from_child_procs)
-		var/mutable_appearance/echair_overlay = mutable_appearance('icons/obj/chairs.dmi', "echair_over", OBJ_LAYER, src, appearance_flags = KEEP_APART)
+		var/mutable_appearance/echair_overlay = mutable_appearance('../assets/icons/obj/chairs.dmi', "echair_over", OBJ_LAYER, src, appearance_flags = KEEP_APART)
 		echair_overlay.pixel_x = -1
 		overlays_from_child_procs = list(echair_overlay)
 	. = ..()
@@ -311,7 +311,7 @@
 
 /obj/structure/chair/office/electrify_self(obj/item/assembly/shock_kit/input_shock_kit, mob/user, list/overlays_from_child_procs)
 	if(!overlays_from_child_procs)
-		var/mutable_appearance/echair_overlay = mutable_appearance('icons/obj/chairs.dmi', "echair_over", OBJ_LAYER, src, appearance_flags = KEEP_APART)
+		var/mutable_appearance/echair_overlay = mutable_appearance('../assets/icons/obj/chairs.dmi', "echair_over", OBJ_LAYER, src, appearance_flags = KEEP_APART)
 		echair_overlay.pixel_x = -1
 		overlays_from_child_procs = list(echair_overlay)
 	. = ..()
@@ -393,19 +393,19 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/chair/stool/bar, 0)
 /obj/item/chair
 	name = "chair"
 	desc = "Bar brawl essential."
-	icon = 'icons/obj/chairs.dmi'
+	icon = '../assets/icons/obj/chairs.dmi'
 	icon_state = "chair_toppled"
 	inhand_icon_state = "chair"
 	icon_angle = 180
-	lefthand_file = 'icons/mob/inhands/items/chairs_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/chairs_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/chairs_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/chairs_righthand.dmi'
 	w_class = WEIGHT_CLASS_HUGE
 	force = 8
 	throwforce = 10
 	demolition_mod = 1.25
 	throw_range = 3
 	max_integrity = 100
-	hitsound = 'sound/items/trayhit/trayhit1.ogg'
+	hitsound = '../assets/sound/items/trayhit/trayhit1.ogg'
 	hit_reaction_chance = 50
 	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT)
 	item_flags = SKIP_FANTASY_ON_SPAWN
@@ -534,7 +534,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/chair/stool/bar, 0)
 	name = "bamboo stool"
 	icon_state = "bamboo_stool"
 	inhand_icon_state = "stool_bamboo"
-	hitsound = 'sound/items/weapons/genhit1.ogg'
+	hitsound = '../assets/sound/items/weapons/genhit1.ogg'
 	origin_type = /obj/structure/chair/stool/bamboo
 	max_integrity = 40 //Submissive and breakable unlike the chad iron stool
 	daze_amount = 0 //Not hard enough to cause them to become dazed
@@ -549,7 +549,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/chair/stool/bar, 0)
 	inhand_icon_state = "woodenchair"
 	resistance_flags = FLAMMABLE
 	max_integrity = 40
-	hitsound = 'sound/items/weapons/genhit1.ogg'
+	hitsound = '../assets/sound/items/weapons/genhit1.ogg'
 	origin_type = /obj/structure/chair/wood
 	custom_materials = null
 	daze_amount = 0
@@ -585,7 +585,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/chair/stool/bar, 0)
 
 /obj/structure/chair/bronze/Initialize(mapload)
 	. = ..()
-	AddElement(/datum/element/noisy_movement, 'sound/machines/clockcult/integration_cog_install.ogg', 50)
+	AddElement(/datum/element/noisy_movement, '../assets/sound/machines/clockcult/integration_cog_install.ogg', 50)
 
 /obj/structure/chair/bronze/Destroy()
 	STOP_PROCESSING(SSfastprocess, src)
@@ -593,7 +593,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/chair/stool/bar, 0)
 
 /obj/structure/chair/bronze/process()
 	setDir(turn(dir,-90))
-	playsound(src, 'sound/effects/servostep.ogg', 50, FALSE)
+	playsound(src, '../assets/sound/effects/servostep.ogg', 50, FALSE)
 	turns++
 	if(turns >= 8)
 		STOP_PROCESSING(SSfastprocess, src)
@@ -666,11 +666,11 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/chair/stool/bar, 0)
 /obj/item/chair/plastic
 	name = "folding plastic chair"
 	desc = "Somehow, you can always find one under the wrestling ring."
-	icon = 'icons/obj/chairs.dmi'
+	icon = '../assets/icons/obj/chairs.dmi'
 	icon_state = "folded_chair"
 	inhand_icon_state = "folded_chair"
-	lefthand_file = 'icons/mob/inhands/items/chairs_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/chairs_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/chairs_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/chairs_righthand.dmi'
 	w_class = WEIGHT_CLASS_NORMAL
 	force = 7
 	throw_range = 5 //Lighter Weight --> Flies Farther.
@@ -694,7 +694,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/chair/stool/bar, 0)
 /obj/structure/handrail
 	name = "handrail"
 	desc = "Hold on tight!"
-	icon = 'icons/obj/handrail.dmi'
+	icon = '../assets/icons/obj/handrail.dmi'
 	icon_state = "handrail"
 	anchored = TRUE
 	can_buckle = TRUE

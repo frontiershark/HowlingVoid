@@ -1,7 +1,7 @@
 /obj/effect/decal/cleanable/blood
 	name = "pool of blood"
 	desc = "It's slippery and gooey. Perhaps it's the chef's cooking?"
-	icon = 'icons/effects/blood.dmi'
+	icon = '../assets/icons/effects/blood.dmi'
 	icon_state = "floor1"
 	random_icon_states = list("floor1", "floor2", "floor3", "floor4", "floor5", "floor6", "floor7")
 	beauty = -100
@@ -285,7 +285,7 @@
 /obj/effect/decal/cleanable/blood/trail_holder
 	name = "trail of blood"
 	desc = "Your instincts say you shouldn't be following these."
-	icon = 'icons/effects/blood.dmi'
+	icon = '../assets/icons/effects/blood.dmi'
 	icon_state = "trails_1" // For mappers
 	random_icon_states = null
 	beauty = -50
@@ -671,7 +671,7 @@
 /obj/effect/decal/cleanable/blood/footprints
 	name = "footprints"
 	desc = "WHOSE FOOTPRINTS ARE THESE?"
-	icon = 'icons/effects/footprints.dmi'
+	icon = '../assets/icons/effects/footprints.dmi'
 	icon_state = "blood1"
 	random_icon_states = null
 	appearance_flags = parent_type::appearance_flags | KEEP_TOGETHER
@@ -821,7 +821,7 @@
 
 /obj/effect/decal/cleanable/blood/hitsplatter/proc/expire()
 	if(isturf(loc) && !skip)
-		playsound(src, 'sound/effects/wounds/splatter.ogg', 60, TRUE, -1)
+		playsound(src, '../assets/sound/effects/wounds/splatter.ogg', 60, TRUE, -1)
 		loc.add_blood_DNA(GET_ATOM_BLOOD_DNA(src))
 	qdel(src)
 

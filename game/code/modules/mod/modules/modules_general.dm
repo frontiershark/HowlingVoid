@@ -204,7 +204,7 @@
 	if (!do_after(mod.wearer, 1 SECONDS, target = mod.wearer))
 		start_cooldown(FAILED_ACTIVATION_COOLDOWN) // Don't go on full cooldown if we failed to launch
 		return FALSE
-	playsound(mod.wearer, 'sound/vehicles/rocketlaunch.ogg', 100, TRUE)
+	playsound(mod.wearer, '../assets/sound/vehicles/rocketlaunch.ogg', 100, TRUE)
 	mod.wearer.apply_status_effect(/datum/status_effect/jump_jet)
 	var/turf/launch_from = get_turf(mod.wearer)
 	if (mod.wearer.zMove(UP, z_move_flags = ZMOVE_CHECK_PULLS))
@@ -239,7 +239,7 @@
 	/// Does this show the round ID and shift time?
 	var/display_time = FALSE
 	/// Death sound. May or may not be funny. Vareditable at your own risk.
-	var/death_sound = 'sound/effects/flatline3.ogg'
+	var/death_sound = '../assets/sound/effects/flatline3.ogg'
 	/// Death sound volume. Please be responsible with this.
 	var/death_sound_volume = 50
 	/// Does this boost suit sensor status across Z-levels?
@@ -514,7 +514,7 @@
 	var/obj/item/dispensed = new dispense_type(mod.wearer.loc)
 	mod.wearer.put_in_hands(dispensed)
 	balloon_alert(activator, "[dispensed] dispensed")
-	playsound(src, 'sound/machines/click.ogg', 100, TRUE)
+	playsound(src, '../assets/sound/machines/click.ogg', 100, TRUE)
 	drain_power(use_energy_cost)
 	return dispensed
 
@@ -892,10 +892,10 @@
 /obj/item/mod/module/recycler/proc/dispense(atom/target)
 	if(container.retrieve_all(target))
 		balloon_alert(mod.wearer, "material dispensed")
-		playsound(src, 'sound/machines/microwave/microwave-end.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/machines/microwave/microwave-end.ogg', 50, TRUE)
 		return
 	balloon_alert(mod.wearer, "not enough material")
-	playsound(src, 'sound/machines/buzz/buzz-sigh.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/machines/buzz/buzz-sigh.ogg', 50, TRUE)
 
 /obj/item/mod/module/recycler/proc/InsertSheets(obj/item/recycler, obj/item/stack/sheets, atom/context)
 	SIGNAL_HANDLER
@@ -924,12 +924,12 @@
 /obj/item/mod/module/recycler/donk/dispense(atom/target)
 	if(!container.use_amount_mat(required_amount, /datum/material/iron))
 		balloon_alert(mod.wearer, "not enough material")
-		playsound(src, 'sound/machines/buzz/buzz-sigh.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/machines/buzz/buzz-sigh.ogg', 50, TRUE)
 		return
 	var/obj/item/ammo_box/product = new ammobox_type(target)
 	attempt_insert_storage(product)
 	balloon_alert(mod.wearer, "ammo box dispensed.")
-	playsound(src, 'sound/machines/microwave/microwave-end.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/machines/microwave/microwave-end.ogg', 50, TRUE)
 
 /obj/item/mod/module/fishing_glove
 	name = "MOD fishing glove module"
@@ -968,7 +968,7 @@
 		user.balloon_alert(user, "it's stuck!")
 	equipped = tool
 	balloon_alert(user, "rod inserted")
-	playsound(src, 'sound/items/click.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/click.ogg', 50, TRUE)
 	return ITEM_INTERACT_SUCCESS
 
 /obj/item/mod/module/fishing_glove/attack_hand_secondary(mob/user, list/modifiers)
@@ -979,7 +979,7 @@
 		return
 	user.put_in_hands(equipped)
 	balloon_alert(user, "rod removed")
-	playsound(src, 'sound/items/click.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/click.ogg', 50, TRUE)
 	return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
 /obj/item/mod/module/fishing_glove/Exited(atom/movable/gone)

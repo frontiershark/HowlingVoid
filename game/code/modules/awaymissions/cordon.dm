@@ -1,7 +1,7 @@
 /// Turf type that appears to be a world border, completely impassable and non-interactable to all physical (alive) entities.
 /turf/cordon
 	name = "cordon"
-	icon = 'icons/turf/walls.dmi'
+	icon = '../assets/icons/turf/walls.dmi'
 	icon_state = "cordon"
 	invisibility = INVISIBILITY_ABSTRACT
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT

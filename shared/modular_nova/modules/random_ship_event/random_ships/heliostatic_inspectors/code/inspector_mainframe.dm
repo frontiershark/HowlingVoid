@@ -1,7 +1,7 @@
 /obj/machinery/inspector_mainframe
 	name = "Inspector Mainframe"
 	desc = "A sophisticated machine capable of locking down cargo shuttles and controlling ship alert status. Its functions are accessible through a secure interface."
-	icon = 'icons/obj/machines/dominator.dmi'
+	icon = '../assets/icons/obj/machines/dominator.dmi'
 	icon_state = "dominator"
 	base_icon_state = "dominator"
 	density = TRUE
@@ -34,16 +34,16 @@
 		"Status Obsidian" = alert_five,
 	)
 	/// Radial menu icons
-	var/static/radial_toggle = image(icon = 'icons/obj/machines/dominator.dmi', icon_state = "dominator-Blue")
-	var/static/radial_alert = image(icon = 'icons/obj/machines/status_display.dmi', icon_state = "frame")
-	var/static/radial_sos = image(icon = 'icons/obj/machines/status_display.dmi', icon_state = "lockdown")
+	var/static/radial_toggle = image(icon = '../assets/icons/obj/machines/dominator.dmi', icon_state = "dominator-Blue")
+	var/static/radial_alert = image(icon = '../assets/icons/obj/machines/status_display.dmi', icon_state = "frame")
+	var/static/radial_sos = image(icon = '../assets/icons/obj/machines/status_display.dmi', icon_state = "lockdown")
 	/// Alert level icons
-	var/static/alert_zero = image(icon = 'icons/obj/machines/status_display.dmi', icon_state = "outline")
-	var/static/alert_one = image(icon = 'icons/obj/machines/status_display.dmi', icon_state = "greenalert")
-	var/static/alert_two = image(icon = 'icons/obj/machines/status_display.dmi', icon_state = "bluealert")
-	var/static/alert_three = image(icon = 'icons/obj/machines/status_display.dmi', icon_state = "redalert")
-	var/static/alert_four = image(icon = 'icons/obj/machines/status_display.dmi', icon_state = "deltaalert")
-	var/static/alert_five = image(icon = 'icons/obj/machines/status_display.dmi', icon_state = "lockdown")
+	var/static/alert_zero = image(icon = '../assets/icons/obj/machines/status_display.dmi', icon_state = "outline")
+	var/static/alert_one = image(icon = '../assets/icons/obj/machines/status_display.dmi', icon_state = "greenalert")
+	var/static/alert_two = image(icon = '../assets/icons/obj/machines/status_display.dmi', icon_state = "bluealert")
+	var/static/alert_three = image(icon = '../assets/icons/obj/machines/status_display.dmi', icon_state = "redalert")
+	var/static/alert_four = image(icon = '../assets/icons/obj/machines/status_display.dmi', icon_state = "deltaalert")
+	var/static/alert_five = image(icon = '../assets/icons/obj/machines/status_display.dmi', icon_state = "lockdown")
 
 /obj/machinery/inspector_mainframe/Initialize(mapload)
 	. = ..()
@@ -180,7 +180,7 @@
 	to_chat(user, span_notice("You set the ship alert status to [level_name]."))
 	radio.talk_into(src, "ALERT LEVEL CHANGED: [level_name] - [level_description]", RADIO_CHANNEL_GUILD)
 	balloon_alert(user, "alert level updated")
-	playsound(src, 'sound/machines/terminal/terminal_prompt.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/machines/terminal/terminal_prompt.ogg', 50, TRUE)
 	update_appearance()
 
 /// Toggles the SOS beacon on or off, can only be activated at Status Onyx or Status Obsidian
@@ -214,7 +214,7 @@
 			sos_timer_id = null
 		to_chat(user, span_notice("You deactivate the SOS beacon."))
 		balloon_alert(user, "distress beacon deactivated!")
-		playsound(src, 'sound/machines/terminal/terminal_prompt.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/machines/terminal/terminal_prompt.ogg', 50, TRUE)
 		radio.talk_into(src, "Distress signal deactivated.", RADIO_CHANNEL_GUILD)
 	update_appearance()
 

@@ -294,7 +294,7 @@
 /// This provides proper lighting support alongside just looking nice
 /// Accepts the appearance to make "spaceish", and the turf we're doing this for
 /proc/generate_space_underlay(mutable_appearance/underlay_appearance, turf/generate_for)
-	underlay_appearance.icon = 'icons/turf/space.dmi'
+	underlay_appearance.icon = '../assets/icons/turf/space.dmi'
 	underlay_appearance.icon_state = "space"
 	SET_PLANE(underlay_appearance, PLANE_SPACE, generate_for)
 	if(!generate_for.render_target)

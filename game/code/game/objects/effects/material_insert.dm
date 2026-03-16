@@ -11,7 +11,7 @@
 
 	var/mutable_appearance/cached_app = apps[material]
 	if(isnull(cached_app))
-		cached_app = mutable_appearance('icons/obj/machines/research.dmi', "material_insertion")
+		cached_app = mutable_appearance('../assets/icons/obj/machines/research.dmi', "material_insertion")
 		cached_app.color = material.color
 		cached_app.alpha = material.alpha
 

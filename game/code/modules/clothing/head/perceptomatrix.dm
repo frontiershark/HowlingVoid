@@ -23,9 +23,9 @@
 	flags_inv = HIDEHAIR|HIDEFACE
 	flash_protect = FLASH_PROTECTION_WELDER_SENSITIVE
 	resistance_flags = FIRE_PROOF | ACID_PROOF
-	equip_sound = 'sound/items/handling/helmet/helmet_equip1.ogg'
-	pickup_sound = 'sound/items/handling/helmet/helmet_pickup1.ogg'
-	drop_sound = 'sound/items/handling/helmet/helmet_drop1.ogg'
+	equip_sound = '../assets/sound/items/handling/helmet/helmet_equip1.ogg'
+	pickup_sound = '../assets/sound/items/handling/helmet/helmet_pickup1.ogg'
+	drop_sound = '../assets/sound/items/handling/helmet/helmet_drop1.ogg'
 	armor_type = /datum/armor/head_helmet_matrix
 	actions_types = list(/datum/action/cooldown/spell/pointed/percept_hallucination)
 
@@ -136,7 +136,7 @@
 	core_installed = TRUE
 	update_anomaly_state()
 	update_appearance(UPDATE_ICON_STATE)
-	playsound(src, 'sound/machines/crate/crate_open.ogg', 50, FALSE)
+	playsound(src, '../assets/sound/machines/crate/crate_open.ogg', 50, FALSE)
 	return ITEM_INTERACT_SUCCESS
 
 /obj/item/clothing/head/helmet/perceptomatrix/functioning
@@ -146,9 +146,9 @@
 	name = "Hallucinate"
 	desc = "Redirect perceptual energies towards a target, staggering them."
 	button_icon_state = "blind"
-	ranged_mousepointer = 'icons/effects/mouse_pointers/blind_target.dmi'
+	ranged_mousepointer = '../assets/icons/effects/mouse_pointers/blind_target.dmi'
 
-	sound = 'sound/items/weapons/emitter2.ogg'
+	sound = '../assets/sound/items/weapons/emitter2.ogg'
 	school = SCHOOL_PSYCHIC
 	cooldown_time = 15 SECONDS
 
@@ -190,7 +190,7 @@
 		if(HAS_TRAIT_FROM(pancakes, TRAIT_FOOD_CHEF_MADE, REF(chef.mind)) || (prob(5) || check_holidays(APRIL_FOOLS)))
 			chef.say("Ma fuckin' pancakes!")
 
-	playsound(pancakes, 'sound/effects/fuse.ogg', 80)
+	playsound(pancakes, '../assets/sound/effects/fuse.ogg', 80)
 	animate(pancakes, time = 1, pixel_z = 12, easing = ELASTIC_EASING)
 	animate(time = 1, pixel_z = 0, easing = BOUNCE_EASING)
 	for(var/i in 1 to 15)

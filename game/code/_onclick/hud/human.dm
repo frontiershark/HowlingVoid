@@ -1,5 +1,5 @@
 /atom/movable/screen/human
-	icon = 'icons/hud/screen_midnight.dmi'
+	icon = '../assets/icons/hud/screen_midnight.dmi'
 
 /atom/movable/screen/human/toggle
 	name = "toggle"
@@ -31,7 +31,7 @@
 	return ..()
 
 /atom/movable/screen/ling
-	icon = 'icons/hud/screen_changeling.dmi'
+	icon = '../assets/icons/hud/screen_changeling.dmi'
 
 /atom/movable/screen/ling/chems
 	name = "chemical storage"

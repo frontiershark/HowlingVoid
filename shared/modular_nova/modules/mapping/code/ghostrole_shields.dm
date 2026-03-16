@@ -27,7 +27,7 @@
 /obj/machinery/door/poddoor/blackmarket_trader
 	name = "stasis shield"
 	desc = "Keeps those pesky tiders out, but also prevents you from leaving!"
-	icon = 'icons/effects/anomalies.dmi'
+	icon = '../assets/icons/effects/anomalies.dmi'
 	icon_state = "dimensional_overlay"
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
 

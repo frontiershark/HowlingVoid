@@ -1,10 +1,10 @@
 /obj/item/gun/syringe
 	name = "medical syringe gun"
 	desc = "A spring loaded gun designed to fit syringes, used to incapacitate unruly patients from a distance."
-	icon = 'icons/obj/weapons/guns/syringegun.dmi'
+	icon = '../assets/icons/obj/weapons/guns/syringegun.dmi'
 	icon_state = "medicalsyringegun"
-	lefthand_file = 'icons/mob/inhands/weapons/64x_guns_left.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/64x_guns_right.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/64x_guns_left.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/64x_guns_right.dmi'
 	inhand_icon_state = "medicalsyringegun"
 	inhand_x_dimension = 64
 	inhand_y_dimension = 64
@@ -18,10 +18,10 @@
 	pixel_x = -4
 	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT)
 	clumsy_check = FALSE
-	fire_sound = 'sound/items/syringeproj.ogg'
+	fire_sound = '../assets/sound/items/syringeproj.ogg'
 	can_muzzle_flash = FALSE
 	gun_flags = NOT_A_REAL_GUN
-	var/load_sound = 'sound/items/weapons/gun/shotgun/insert_shell.ogg'
+	var/load_sound = '../assets/sound/items/weapons/gun/shotgun/insert_shell.ogg'
 	var/list/syringes = list()
 	/// The number of syringes it can store.
 	var/max_syringes = 1
@@ -104,7 +104,7 @@
 	else
 		balloon_alert(user, "enabled high power mode")
 		to_chat(user, span_notice("You crank the pressure regulator to the max, making sure that fired syringes inject their contents instantly."))
-	playsound(user, 'sound/machines/click.ogg', 75, TRUE, SHORT_RANGE_SOUND_EXTRARANGE)
+	playsound(user, '../assets/sound/machines/click.ogg', 75, TRUE, SHORT_RANGE_SOUND_EXTRARANGE)
 	return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
 /obj/item/gun/syringe/item_interaction(mob/living/user, obj/item/tool, list/modifiers)
@@ -140,8 +140,8 @@
 	name = "compact rapid syringe gun"
 	desc = "A modification of the syringe gun design to be more compact and use a rotating cylinder to store up to six syringes."
 	icon_state = "rapidsyringegun"
-	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/guns_righthand.dmi'
 	inhand_icon_state = "syringegun"
 	inhand_x_dimension = 32
 	inhand_y_dimension = 32
@@ -157,8 +157,8 @@
 	name = "dart pistol"
 	desc = "A small spring-loaded sidearm that functions identically to a syringe gun."
 	icon_state = "dartsyringegun"
-	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/guns_righthand.dmi'
 	inhand_icon_state = "gun" //Smaller inhand
 	inhand_x_dimension = 32
 	inhand_y_dimension = 32
@@ -176,8 +176,8 @@
 	name = "modified compact syringe gun"
 	desc = "A syringe gun that has been modified to be compact and fit DNA injectors instead of normal syringes."
 	icon_state = "dnasyringegun"
-	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/guns_righthand.dmi'
 	inhand_icon_state = "syringegun"
 	inhand_x_dimension = 32
 	inhand_y_dimension = 32
@@ -214,16 +214,16 @@
 /obj/item/gun/syringe/blowgun
 	name = "blowgun"
 	desc = "Fire syringes at a short distance."
-	icon = 'icons/obj/weapons/guns/ballistic.dmi'
+	icon = '../assets/icons/obj/weapons/guns/ballistic.dmi'
 	icon_state = "blowgun"
-	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/guns_righthand.dmi'
 	inhand_icon_state = "blowgun"
 	inhand_x_dimension = 32
 	inhand_y_dimension = 32
 	worn_icon_state = "gun"
 	has_syringe_overlay = FALSE
-	fire_sound = 'sound/items/syringeproj.ogg'
+	fire_sound = '../assets/sound/items/syringeproj.ogg'
 	w_class = WEIGHT_CLASS_NORMAL
 	slot_flags = ITEM_SLOT_BELT
 	base_pixel_x = 0

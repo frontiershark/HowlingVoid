@@ -2,7 +2,7 @@
 /obj/structure/ladder
 	name = "ladder"
 	desc = "A sturdy metal ladder."
-	icon = 'icons/obj/structures.dmi'
+	icon = '../assets/icons/obj/structures.dmi'
 	icon_state = "ladder11"
 	base_icon_state = "ladder"
 	anchored = TRUE
@@ -302,8 +302,8 @@
 /// Shows a radial menu that players can use to climb up and down a stair.
 /obj/structure/ladder/proc/show_options(mob/user, is_ghost = FALSE)
 	var/list/tool_list = list()
-	tool_list["Up"] = image(icon = 'icons/testing/turf_analysis.dmi', icon_state = "red_arrow", dir = NORTH)
-	tool_list["Down"] = image(icon = 'icons/testing/turf_analysis.dmi', icon_state = "red_arrow", dir = SOUTH)
+	tool_list["Up"] = image(icon = '../assets/icons/testing/turf_analysis.dmi', icon_state = "red_arrow", dir = NORTH)
+	tool_list["Down"] = image(icon = '../assets/icons/testing/turf_analysis.dmi', icon_state = "red_arrow", dir = SOUTH)
 
 	var/datum/callback/check_menu
 	if(!is_ghost)

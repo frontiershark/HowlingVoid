@@ -36,7 +36,7 @@
 /obj/machinery/vending
 	name = "\improper Vendomat"
 	desc = "A generic vending machine."
-	icon = 'icons/obj/machines/vending.dmi'
+	icon = '../assets/icons/obj/machines/vending.dmi'
 	icon_state = "generic"
 	abstract_type = /obj/machinery/vending
 	layer = BELOW_OBJ_LAYER

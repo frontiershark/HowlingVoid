@@ -5,7 +5,7 @@
 /obj/item/robot_suit
 	name = "cyborg endoskeleton"
 	desc = "A complex metal backbone with standard limb sockets and pseudomuscle anchors."
-	icon = 'icons/mob/augmentation/augments.dmi'
+	icon = '../assets/icons/mob/augmentation/augments.dmi'
 	icon_state = "robo_suit"
 	/// Left arm part of the endoskeleton
 	var/obj/item/bodypart/arm/left/robot/l_arm = null
@@ -318,7 +318,7 @@
 			// This canonizes that MMI'd cyborgs have memories of their previous life
 			brainmob.add_mob_memory(/datum/memory/was_cyborged, protagonist = brainmob.mind, deuteragonist = user)
 			brainmob.mind.transfer_to(O)
-			playsound(O.loc, 'sound/mobs/non-humanoids/cyborg/liveagain.ogg', 75, TRUE)
+			playsound(O.loc, '../assets/sound/mobs/non-humanoids/cyborg/liveagain.ogg', 75, TRUE)
 
 			if(O.is_antag())
 				to_chat(O, span_userdanger("You have been robotized!"))

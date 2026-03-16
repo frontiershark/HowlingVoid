@@ -1,11 +1,11 @@
 /obj/item/flamethrower
 	name = "flamethrower"
 	desc = "You are a firestarter!"
-	icon = 'icons/obj/weapons/flamethrower.dmi'
+	icon = '../assets/icons/obj/weapons/flamethrower.dmi'
 	icon_state = "flamethrowerbase"
 	inhand_icon_state = "flamethrower_0"
-	lefthand_file = 'icons/mob/inhands/weapons/flamethrower_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/flamethrower_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/flamethrower_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/flamethrower_righthand.dmi'
 	obj_flags = CONDUCTS_ELECTRICITY
 	force = 3
 	throwforce = 10
@@ -34,8 +34,8 @@
 	var/create_full = FALSE
 	var/create_with_tank = FALSE
 	var/igniter_type = /obj/item/assembly/igniter
-	var/acti_sound = 'sound/items/tools/welderactivate.ogg'
-	var/deac_sound = 'sound/items/tools/welderdeactivate.ogg'
+	var/acti_sound = '../assets/sound/items/tools/welderactivate.ogg'
+	var/deac_sound = '../assets/sound/items/tools/welderdeactivate.ogg'
 
 /obj/item/flamethrower/Initialize(mapload)
 	. = ..()

@@ -1,7 +1,7 @@
 /obj/item/bodypart/head
 	name = BODY_ZONE_HEAD
 	desc = "Didn't make sense not to live for fun, your brain gets smart but your head gets dumb."
-	icon = 'icons/mob/human/bodyparts.dmi'
+	icon = '../assets/icons/mob/human/bodyparts.dmi'
 	icon_state = "default_human_head"
 	max_damage = LIMB_MAX_HP_CORE
 	body_zone = BODY_ZONE_HEAD
@@ -19,8 +19,8 @@
 	unarmed_attack_verbs = list("bite", "chomp")
 	unarmed_attack_verbs_continuous = list("bites", "chomps")
 	unarmed_attack_effect = ATTACK_EFFECT_BITE
-	unarmed_attack_sound = 'sound/items/weapons/bite.ogg'
-	unarmed_miss_sound = 'sound/items/weapons/bite.ogg'
+	unarmed_attack_sound = '../assets/sound/items/weapons/bite.ogg'
+	unarmed_miss_sound = '../assets/sound/items/weapons/bite.ogg'
 	unarmed_damage_low = 1 // Yeah, biteing is pretty weak, blame the monkey super-nerf
 	unarmed_damage_high = 3
 	unarmed_effectiveness = 0
@@ -201,7 +201,7 @@
 	if(!eyes)
 		if (!(head_flags & HEAD_EYEHOLES))
 			return
-		var/image/no_eyes = image('icons/mob/human/human_eyes.dmi', "eyes_missing", -EYES_LAYER, SOUTH)
+		var/image/no_eyes = image('../assets/icons/mob/human/human_eyes.dmi', "eyes_missing", -EYES_LAYER, SOUTH)
 		worn_face_offset?.apply_offset(no_eyes)
 		. += no_eyes
 		return
@@ -275,9 +275,9 @@
 		as_human?.update_visible_name()
 
 /obj/item/bodypart/head/monkey
-	icon = 'icons/mob/human/species/monkey/bodyparts.dmi'
-	icon_static = 'icons/mob/human/species/monkey/bodyparts.dmi'
-	icon_husk = 'icons/mob/human/species/monkey/bodyparts.dmi'
+	icon = '../assets/icons/mob/human/species/monkey/bodyparts.dmi'
+	icon_static = '../assets/icons/mob/human/species/monkey/bodyparts.dmi'
+	icon_husk = '../assets/icons/mob/human/species/monkey/bodyparts.dmi'
 	husk_type = "monkey"
 	icon_state = "default_monkey_head"
 	limb_id = SPECIES_MONKEY
@@ -301,8 +301,8 @@
 	return ..()
 
 /obj/item/bodypart/head/alien
-	icon = 'icons/mob/human/species/alien/bodyparts.dmi'
-	icon_static = 'icons/mob/human/species/alien/bodyparts.dmi'
+	icon = '../assets/icons/mob/human/species/alien/bodyparts.dmi'
+	icon_static = '../assets/icons/mob/human/species/alien/bodyparts.dmi'
 	icon_state = "alien_head"
 	limb_id = BODYPART_ID_ALIEN
 	is_dimorphic = FALSE
@@ -317,8 +317,8 @@
 	biological_state = BIO_STANDARD_ALIEN
 
 /obj/item/bodypart/head/larva
-	icon = 'icons/mob/human/species/alien/bodyparts.dmi'
-	icon_static = 'icons/mob/human/species/alien/bodyparts.dmi'
+	icon = '../assets/icons/mob/human/species/alien/bodyparts.dmi'
+	icon_static = '../assets/icons/mob/human/species/alien/bodyparts.dmi'
 	icon_state = "larva_head"
 	limb_id = BODYPART_ID_LARVA
 	is_dimorphic = FALSE

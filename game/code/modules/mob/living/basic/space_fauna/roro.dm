@@ -22,7 +22,7 @@
 	melee_damage_upper = 4
 	attack_verb_continuous = "nips"
 	attack_verb_simple = "nip"
-	attack_sound = 'sound/items/weapons/bite.ogg'
+	attack_sound = '../assets/sound/items/weapons/bite.ogg'
 	attack_vis_effect = ATTACK_EFFECT_BITE
 
 	melee_attack_cooldown = 0.5 SECONDS

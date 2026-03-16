@@ -1,7 +1,7 @@
 /obj/structure/showcase/fake_cafe_console
 	name = "civilian console"
 	desc = "A stationary computer. This one comes preloaded with generic programs."
-	icon = 'icons/obj/machines/computer.dmi'
+	icon = '../assets/icons/obj/machines/computer.dmi'
 	icon_state = "computer"
 
 /obj/structure/showcase/fake_cafe_console/rd

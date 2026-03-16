@@ -1,6 +1,6 @@
 /obj/machinery/recharger
 	name = "recharger"
-	icon = 'icons/obj/machines/sec.dmi'
+	icon = '../assets/icons/obj/machines/sec.dmi'
 	icon_state = "recharger"
 	base_icon_state = "recharger"
 	desc = "A charging dock for energy based weaponry, PDAs, and other devices."
@@ -154,7 +154,7 @@
 		if(charging_cell.charge < charging_cell.maxcharge)
 			charge_cell(charging_cell.chargerate * recharge_coeff * seconds_per_tick, charging_cell)
 			if(charging_cell.charge >= charging_cell.maxcharge) //Inserted thing is at max charge/ammo, notify those around us
-				playsound(src, 'sound/machines/ping.ogg', 30, TRUE)
+				playsound(src, '../assets/sound/machines/ping.ogg', 30, TRUE)
 				say("[charging] has finished recharging!")
 			else
 				using_power = TRUE
@@ -168,7 +168,7 @@
 				power_pack.stored_ammo += new power_pack.ammo_type(power_pack)
 				use_energy(active_power_usage * seconds_per_tick)
 				if(power_pack.stored_ammo >= power_pack.max_ammo)
-					playsound(src, 'sound/machines/ping.ogg', 30, TRUE)
+					playsound(src, '../assets/sound/machines/ping.ogg', 30, TRUE)
 					say("[charging] has finished recharging!")
 				else
 					using_power = TRUE
@@ -187,7 +187,7 @@
 			recalibrating_gun.attempt_recalibration(TRUE, recharge_coeff)
 			use_energy(active_power_usage * recharge_coeff * seconds_per_tick)
 			if(recalibrating_gun.shots_before_degradation == recalibrating_gun.max_shots_before_degradation)
-				playsound(src, 'sound/machines/ping.ogg', 30, TRUE)
+				playsound(src, '../assets/sound/machines/ping.ogg', 30, TRUE)
 				say("[charging] has finished recalibrating!")
 			else
 				using_power = TRUE

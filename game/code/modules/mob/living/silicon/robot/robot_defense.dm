@@ -31,7 +31,7 @@ GLOBAL_LIST_INIT(blacklisted_borg_hats, typecacheof(list( //Hats that don't real
 			balloon_alert(user, "not enough cable!")
 			return ITEM_INTERACT_BLOCKING
 		adjust_fire_loss(-30)
-		playsound(src, 'sound/items/deconstruct.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/items/deconstruct.ogg', 50, TRUE)
 		balloon_alert(user, "wires repaired")
 		user.visible_message(
 			span_notice("[user] fixes some of the burnt wires on [src]."),
@@ -288,7 +288,7 @@ GLOBAL_LIST_INIT(blacklisted_borg_hats, typecacheof(list( //Hats that don't real
 		visible_message(span_danger("[user] forces back [src]!"), \
 			span_userdanger("[user] forces you back!"), null, COMBAT_MESSAGE_RANGE)
 		log_combat(user, src, "pushed")
-	playsound(loc, 'sound/items/weapons/pierce.ogg', 50, TRUE, -1)
+	playsound(loc, '../assets/sound/items/weapons/pierce.ogg', 50, TRUE, -1)
 
 /mob/living/silicon/robot/attack_hand(mob/living/carbon/human/user, list/modifiers)
 	add_fingerprint(user)
@@ -545,14 +545,14 @@ GLOBAL_LIST_INIT(blacklisted_borg_hats, typecacheof(list( //Hats that don't real
 		balloon_alert(borg, "not enough energy!")
 		if(shield.active)
 			shield.active = FALSE
-			playsound(src, 'sound/vehicles/mecha/mech_shield_drop.ogg', 50, FALSE)
+			playsound(src, '../assets/sound/vehicles/mecha/mech_shield_drop.ogg', 50, FALSE)
 			borg.cut_overlay(shield.shield_overlay)
 			return
 	if(shield && shield.active)
 		if(!lavaland_equipment_pressure_check(get_turf(borg)))
 			balloon_alert(borg, "the shield didn't absorb the damage!")
 			return ..()
-		playsound(src, 'sound/vehicles/mecha/mech_shield_deflect.ogg', 100, TRUE)
+		playsound(src, '../assets/sound/vehicles/mecha/mech_shield_deflect.ogg', 100, TRUE)
 		balloon_alert(borg, "absorbed!")
 		borg.cell.use(damage * (STANDARD_CELL_CHARGE / 15), force = TRUE)
 		damage *= 0.5

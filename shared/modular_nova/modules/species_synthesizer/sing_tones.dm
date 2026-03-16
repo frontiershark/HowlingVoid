@@ -1,7 +1,7 @@
 /datum/action/sing_tones
 	name = "Sing Tones"
 	desc = "Use your internal synthesizer to sing!"
-	button_icon = 'icons/obj/art/musician.dmi'
+	button_icon = '../assets/icons/obj/art/musician.dmi'
 	button_icon_state = "xylophone"
 	var/datum/song/song
 	/// What instruments can be used.

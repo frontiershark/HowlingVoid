@@ -1,6 +1,6 @@
 /datum/action/cooldown/mob_cooldown/chase_target
 	name = "Chase Target"
-	button_icon = 'icons/mob/actions/actions_items.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_items.dmi'
 	button_icon_state = "sniper_zoom"
 	desc = "Gain a burst of speed to chase down a target."
 	cooldown_time = 6 SECONDS
@@ -31,8 +31,8 @@
 
 /// This is the proc that actually does the throwing. Charge only adds a timer for this.
 /datum/action/cooldown/mob_cooldown/chase_target/proc/throw_thyself()
-	playsound(owner, 'sound/items/weapons/sonic_jackhammer.ogg', 50, TRUE)
-	owner.throw_at(target, 7, 1.1, owner, FALSE, FALSE, CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(playsound), owner, 'sound/effects/meteorimpact.ogg', 50 * size, TRUE, 2), INFINITY)
+	playsound(owner, '../assets/sound/items/weapons/sonic_jackhammer.ogg', 50, TRUE)
+	owner.throw_at(target, 7, 1.1, owner, FALSE, FALSE, CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(playsound), owner, '../assets/sound/effects/meteorimpact.ogg', 50 * size, TRUE, 2), INFINITY)
 
 /// Resets the charge buffs.
 /datum/action/cooldown/mob_cooldown/chase_target/proc/reset_charge()

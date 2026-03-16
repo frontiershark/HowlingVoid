@@ -4,7 +4,7 @@
 	check_flags = AB_CHECK_CONSCIOUS
 	background_icon_state = "bg_heretic"
 	overlay_icon_state = "bg_heretic_border"
-	button_icon = 'icons/mob/actions/actions_ecult.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_ecult.dmi'
 	button_icon_state = "moon_smile"
 	cooldown_time = 4 SECONDS
 
@@ -20,7 +20,7 @@
 		owner.balloon_alert(owner, "what cruel fate, your master is gone...")
 		StartCooldown(1 SECONDS)
 		return FALSE
-	playsound(owner, 'sound/effects/singlebeat.ogg', 50, TRUE, SILENCED_SOUND_EXTRARANGE)
+	playsound(owner, '../assets/sound/effects/singlebeat.ogg', 50, TRUE, SILENCED_SOUND_EXTRARANGE)
 	owner.balloon_alert(owner, get_balloon_message(ascended_heretic))
 
 	if(ascended_heretic.stat == DEAD)

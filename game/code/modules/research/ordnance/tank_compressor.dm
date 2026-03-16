@@ -6,7 +6,7 @@
 	name = "Tank Compressor"
 	desc = "Heavy duty shielded air compressor designed to pressurize tanks above the safe limit."
 	circuit = /obj/item/circuitboard/machine/tank_compressor
-	icon = 'icons/obj/machines/research.dmi'
+	icon = '../assets/icons/obj/machines/research.dmi'
 	base_icon_state = "tank_compressor"
 	icon_state = "tank_compressor-open"
 	density = TRUE
@@ -198,9 +198,9 @@
 	record_data.possible_experiments = apply_experiments(record)
 
 	if(inserted_disk.add_file(record_data))
-		playsound(src, 'sound/machines/ping.ogg', 25)
+		playsound(src, '../assets/sound/machines/ping.ogg', 25)
 	else
-		playsound(src, 'sound/machines/terminal/terminal_error.ogg', 25)
+		playsound(src, '../assets/sound/machines/terminal/terminal_error.ogg', 25)
 
 /// Ejecting a tank. Also called on insertion to clear previous tanks.
 /obj/machinery/atmospherics/components/binary/tank_compressor/proc/eject_tank(mob/user)
@@ -224,7 +224,7 @@
 		inserted_disk.forceMove(drop_location())
 	else
 		user.put_in_hands(inserted_disk)
-	playsound(src, 'sound/machines/card_slide.ogg', 50)
+	playsound(src, '../assets/sound/machines/card_slide.ogg', 50)
 	return TRUE
 
 /// We rely on exited to clear references.

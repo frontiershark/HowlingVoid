@@ -31,7 +31,7 @@
 	wander = FALSE
 	attack_verb_continuous = "rips into"
 	attack_verb_simple = "rip into"
-	attack_sound = 'sound/effects/blob/blobattack.ogg'
+	attack_sound = '../assets/sound/effects/blob/blobattack.ogg'
 	butcher_results = list(/obj/item/food/meat/slab/human = 15) //It's a pretty big dude. Actually killing one is a feat.
 	gold_core_spawnable = FALSE //Should stay exclusive to changelings tbh, otherwise makes it much less significant to sight one
 	var/datum/action/innate/turn_to_human
@@ -256,7 +256,7 @@
 			continue
 		guts.dismember()
 		dismembered = TRUE
-	playsound(lunch, 'sound/effects/splat.ogg', 50, 1)
+	playsound(lunch, '../assets/sound/effects/splat.ogg', 50, 1)
 	playsound(lunch, 'modular_nova/modules/horrorform/sound/tear.ogg', 50, 1)
 	lunch.emote("scream")
 	if(lunch.nutrition >= NUTRITION_LEVEL_FAT)

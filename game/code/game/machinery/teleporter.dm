@@ -1,6 +1,6 @@
 /obj/machinery/teleport
 	name = "teleport"
-	icon = 'icons/obj/machines/teleporter.dmi'
+	icon = '../assets/icons/obj/machines/teleporter.dmi'
 	density = TRUE
 
 /obj/machinery/teleport/hub

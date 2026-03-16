@@ -15,7 +15,7 @@
 /obj/structure/training_machine
 	name = "AURUMILL-Brand MkII. Personnel Training Machine"
 	desc = "Used for combat training simulations. Accepts standard training targets. A pair of buckling straps are attached."
-	icon = 'icons/obj/machines/sec.dmi'
+	icon = '../assets/icons/obj/machines/sec.dmi'
 	icon_state = "training_machine"
 	can_buckle = TRUE
 	buckle_lying = 0
@@ -209,7 +209,7 @@
 	moving = FALSE
 	starting_turf = null
 	say(message)
-	playsound(src,'sound/machines/synth/synth_no.ogg',50,FALSE)
+	playsound(src,'../assets/sound/machines/synth/synth_no.ogg',50,FALSE)
 	STOP_PROCESSING(SSfastprocess, src)
 
 /**
@@ -221,7 +221,7 @@
 	moving = TRUE
 	starting_turf = get_turf(src)
 	say("Beginning training simulation.")
-	playsound(src,'sound/machines/beep/triple_beep.ogg',50,FALSE)
+	playsound(src,'../assets/sound/machines/beep/triple_beep.ogg',50,FALSE)
 	START_PROCESSING(SSfastprocess, src)
 
 /**
@@ -285,7 +285,7 @@
 	do_attack_animation(target, null, attached_item)
 	if (obj_flags & EMAGGED)
 		target.apply_damage(attached_item.force, BRUTE, BODY_ZONE_CHEST, attacking_item = attached_item)
-	playsound(src, 'sound/items/weapons/smash.ogg', 15, TRUE)
+	playsound(src, '../assets/sound/items/weapons/smash.ogg', 15, TRUE)
 	COOLDOWN_START(src, attack_cooldown, rand(MIN_ATTACK_DELAY, MAX_ATTACK_DELAY))
 
 /**
@@ -321,7 +321,7 @@
 	remove_attached_item(throwing = TRUE) //Toss out the old attached item!
 	attach_item(new /obj/item/storage/toolbox/syndicate(src))
 	to_chat(user, span_warning("You override the training machine's safety protocols, and activate its realistic combat feature. A toolbox pops out of a slot on the top."))
-	playsound(src, 'sound/machines/click.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/machines/click.ogg', 50, TRUE)
 	add_overlay("evil_trainer")
 	return TRUE
 
@@ -344,11 +344,11 @@
 /obj/item/training_toolbox
 	name = "Training Toolbox"
 	desc = "AURUMILL-Brand Baby's First Training Toolbox. A digital display on the back keeps track of hits made by the user. Second toolbox sold separately!"
-	icon = 'icons/obj/storage/toolbox.dmi'
+	icon = '../assets/icons/obj/storage/toolbox.dmi'
 	icon_state = "gold"
 	inhand_icon_state = "toolbox_gold"
-	lefthand_file = 'icons/mob/inhands/equipment/toolbox_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/toolbox_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/toolbox_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/toolbox_righthand.dmi'
 	obj_flags = CONDUCTS_ELECTRICITY
 	force = 0
 	throwforce = 0
@@ -390,9 +390,9 @@
 			return FALSE
 	total_hits++
 	lap_hits++
-	playsound(src,'sound/items/weapons/smash.ogg',50,FALSE)
+	playsound(src,'../assets/sound/items/weapons/smash.ogg',50,FALSE)
 	if (lap_hits % HITS_TO_KILL == 0)
-		playsound(src,'sound/machines/beep/twobeep.ogg',25,FALSE)
+		playsound(src,'../assets/sound/machines/beep/twobeep.ogg',25,FALSE)
 	return TRUE
 
 /obj/item/training_toolbox/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum)

@@ -48,7 +48,7 @@
 	recharger_cell = tool
 	tool.anchored = TRUE
 	to_chat(user, span_notice("You insert [tool] into [src]'s recharger cell port."))
-	playsound(src, 'sound/items/weapons/kinetic_reload.ogg', 50, TRUE, -5)
+	playsound(src, '../assets/sound/items/weapons/kinetic_reload.ogg', 50, TRUE, -5)
 	return ITEM_INTERACT_SUCCESS
 
 /obj/item/storage/belt/holster/energy/screwdriver_act(mob/living/user, obj/item/tool)

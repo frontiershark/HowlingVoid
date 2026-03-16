@@ -114,9 +114,9 @@
 					continue
 				var/image/pic
 				if(isshuttleturf(place))
-					pic = new('icons/turf/overlays.dmi', place, "greenOverlay", AREA_LAYER)
+					pic = new('../assets/icons/turf/overlays.dmi', place, "greenOverlay", AREA_LAYER)
 				else
-					pic = new('icons/turf/overlays.dmi', place, "redOverlay", AREA_LAYER)
+					pic = new('../assets/icons/turf/overlays.dmi', place, "redOverlay", AREA_LAYER)
 				flick_overlay_global(pic, list(user.client), 8)
 
 /obj/item/clothing/glasses/meson/engine/proc/show_connections()
@@ -134,7 +134,7 @@
 				continue
 			if(!connection_images[smart][dir2text(direction)])
 				var/image/arrow
-				arrow = new('icons/obj/pipes_n_cables/simple.dmi', get_turf(smart), "connection_overlay")
+				arrow = new('../assets/icons/obj/pipes_n_cables/simple.dmi', get_turf(smart), "connection_overlay")
 				arrow.dir = direction
 				arrow.layer = smart.layer
 				arrow.color = smart.pipe_color
@@ -205,7 +205,7 @@
 			continue
 		var/datum/gas_mixture/environment = open.return_air()
 		var/temp = round(environment.return_temperature())
-		var/image/turf_overlay = image('icons/turf/overlays.dmi', open, "greyOverlay", ABOVE_OPEN_TURF_LAYER)
+		var/image/turf_overlay = image('../assets/icons/turf/overlays.dmi', open, "greyOverlay", ABOVE_OPEN_TURF_LAYER)
 		// Lower than TEMP_SHADE_CYAN should be deep blue
 		switch(temp)
 			if(-INFINITY to TEMP_SHADE_CYAN)

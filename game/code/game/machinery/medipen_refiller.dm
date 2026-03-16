@@ -1,7 +1,7 @@
 /obj/machinery/medipen_refiller
 	name = "Medipen Refiller"
 	desc = "A machine that refills used medipens with chemicals."
-	icon = 'icons/obj/machines/medipen_refiller.dmi'
+	icon = '../assets/icons/obj/machines/medipen_refiller.dmi'
 	icon_state = "medipen_refiller"
 	density = TRUE
 	circuit = /obj/item/circuitboard/machine/medipen_refiller

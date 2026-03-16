@@ -287,7 +287,7 @@
 			var/emptied = empty_contents()
 			if (emptied > 0)
 				owner.apply_damage(emptied * 5, BRUTE, BODY_ZONE_CHEST, wound_bonus = CANT_WOUND, wound_clothing = FALSE)
-				playsound(get_turf(src), 'sound/effects/splat.ogg', 50)
+				playsound(get_turf(src), '../assets/sound/effects/splat.ogg', 50)
 				owner.visible_message(span_danger("Contents of [owner]'s intestines spill out from a huge cut in [owner.p_their()] [chest]!"),
 					span_userdanger("Contents of your intestines spill out from a huge cut in your [chest]!"))
 			return
@@ -435,16 +435,16 @@
 			return ITEM_INTERACT_FAILURE
 
 		balloon_alert(user, "cutting open...")
-		playsound(user, 'sound/items/handling/surgery/scalpel1.ogg', 75)
+		playsound(user, '../assets/sound/items/handling/surgery/scalpel1.ogg', 75)
 		if (!do_after(user, 3 SECONDS, src))
 			balloon_alert(user, "interrupted!")
 			apply_organ_damage(tool.force)
 			return ITEM_INTERACT_FAILURE
 
-		playsound(user, 'sound/items/handling/surgery/scalpel2.ogg', 75)
+		playsound(user, '../assets/sound/items/handling/surgery/scalpel2.ogg', 75)
 		var/emptied = empty_contents()
 		if (emptied > 0)
-			playsound(get_turf(src), 'sound/effects/splat.ogg', 50)
+			playsound(get_turf(src), '../assets/sound/effects/splat.ogg', 50)
 		user.visible_message(span_warning("[user] cuts [src] open[emptied ? "!" : ", but it's empty."]"), span_notice("You cut [src] open[emptied ? "." : ", but there's nothing inside."]"))
 		cut_open_damage += apply_organ_damage(maxHealth * 0.5)
 		return ITEM_INTERACT_SUCCESS
@@ -456,14 +456,14 @@
 		balloon_alert(user, "fully intact!")
 		return ITEM_INTERACT_FAILURE
 
-	playsound(user, 'sound/items/handling/surgery/cautery1.ogg', 75)
+	playsound(user, '../assets/sound/items/handling/surgery/cautery1.ogg', 75)
 	balloon_alert(user, "mending the incision...")
 	if (!do_after(user, 3 SECONDS, src))
 		balloon_alert(user, "interrupted!")
 		apply_organ_damage(tool.force)
 		return ITEM_INTERACT_FAILURE
 
-	playsound(user, 'sound/items/handling/surgery/cautery2.ogg', 75)
+	playsound(user, '../assets/sound/items/handling/surgery/cautery2.ogg', 75)
 	balloon_alert(user, "incision mended")
 	apply_organ_damage(-cut_open_damage)
 	cut_open_damage = 0 // Just in case

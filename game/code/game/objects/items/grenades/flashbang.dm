@@ -2,8 +2,8 @@
 	name = "flashbang"
 	icon_state = "flashbang"
 	inhand_icon_state = "flashbang"
-	lefthand_file = 'icons/mob/inhands/equipment/security_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/security_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/security_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/security_righthand.dmi'
 	possible_fuse_time = list("3", "4", "5")
 	//how many tiles away the mob will be affected by the flashbang.
 	var/flashbang_range = 7
@@ -42,7 +42,7 @@
 	var/soundbang = pressure >= SOUND_MINIMUM_PRESSURE
 
 	do_sparks(rand(5, 9), FALSE, src)
-	playsound(flashbang_turf, 'sound/items/weapons/flashbang.ogg', 100, TRUE, 8, 0.9)
+	playsound(flashbang_turf, '../assets/sound/items/weapons/flashbang.ogg', 100, TRUE, 8, 0.9)
 	new /obj/effect/dummy/lighting_obj (flashbang_turf, flashbang_range + 2, 4, COLOR_WHITE, 2)
 	for(var/mob/living/living_mob in get_hearers_in_view(flashbang_range, flashbang_turf))
 		bang(get_turf(living_mob), living_mob, soundbang)
@@ -95,8 +95,8 @@
 	icon_state = "timeg_locked"
 	base_icon_state = "timeg"
 	inhand_icon_state = "flashbang"
-	lefthand_file = 'icons/mob/inhands/equipment/security_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/security_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/security_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/security_righthand.dmi'
 	var/flashbang_range = 1 //how many tiles away the mob will be stunned.
 	shrapnel_type = /obj/projectile/bullet/pellet/stingball
 	shrapnel_radius = 5
@@ -133,7 +133,7 @@
 	if(!flashbang_turf)
 		return
 	do_sparks(rand(5, 9), FALSE, src)
-	playsound(flashbang_turf, 'sound/items/weapons/flashbang.ogg', 50, TRUE, 8, 0.9)
+	playsound(flashbang_turf, '../assets/sound/items/weapons/flashbang.ogg', 50, TRUE, 8, 0.9)
 	new /obj/effect/dummy/lighting_obj (flashbang_turf, flashbang_range + 2, 2, COLOR_WHITE, 1)
 	for(var/mob/living/living_mob in get_hearers_in_view(flashbang_range, flashbang_turf))
 		pop(get_turf(living_mob), living_mob)
@@ -166,8 +166,8 @@
 	icon_state = "timeg_locked"
 	base_icon_state = "timeg"
 	inhand_icon_state = "flashbang"
-	lefthand_file = 'icons/mob/inhands/equipment/security_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/security_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/security_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/security_righthand.dmi'
 	var/rots_per_mag = 3 /// how many times we need to "rotate" the charge in hand per extra tile of magnitude
 	shrapnel_type = /obj/projectile/bullet/shrapnel
 	var/rots = 1 /// how many times we've "rotated" the charge
@@ -175,7 +175,7 @@
 /obj/item/grenade/primer/attack_self(mob/user)
 	. = ..()
 	if(active)
-		user.playsound_local(user, 'sound/misc/box_deploy.ogg', 50, TRUE)
+		user.playsound_local(user, '../assets/sound/misc/box_deploy.ogg', 50, TRUE)
 		rots++
 		user.changeNext_move(CLICK_CD_RAPID)
 
@@ -190,7 +190,7 @@
 /obj/item/grenade/primer/stingbang
 	name = "rotsting"
 	desc = "A grenade that generates more shrapnel the more you rotate it in your hand after pulling the pin. This one releases stingballs."
-	lefthand_file = 'icons/mob/inhands/equipment/security_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/security_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/security_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/security_righthand.dmi'
 	rots_per_mag = 2
 	shrapnel_type = /obj/projectile/bullet/pellet/stingball

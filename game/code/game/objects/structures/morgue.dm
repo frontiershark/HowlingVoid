@@ -31,7 +31,7 @@
 GLOBAL_LIST_EMPTY(bodycontainers) //Let them act as spawnpoints for revenants and other ghosties.
 
 /obj/structure/bodycontainer
-	icon = 'icons/obj/structures.dmi' //NOVA EDIT - ICON OVERRIDDEN IN AESTHETICS MODULE
+	icon = '../assets/icons/obj/structures.dmi' //NOVA EDIT - ICON OVERRIDDEN IN AESTHETICS MODULE
 	icon_state = "morgue1"
 	density = TRUE
 	anchored = TRUE
@@ -137,8 +137,8 @@ GLOBAL_LIST_EMPTY(bodycontainers) //Let them act as spawnpoints for revenants an
 		return FALSE
 
 	COOLDOWN_START(src, open_close_cd, 0.25 SECONDS)
-	playsound(src, 'sound/items/deconstruct.ogg', 50, TRUE)
-	playsound(src, 'sound/effects/roll.ogg', 5, TRUE)
+	playsound(src, '../assets/sound/items/deconstruct.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/effects/roll.ogg', 5, TRUE)
 	var/turf/dump_turf = get_step(src, dir)
 	connected?.setDir(dir)
 	for(var/atom/movable/moving in src)
@@ -152,8 +152,8 @@ GLOBAL_LIST_EMPTY(bodycontainers) //Let them act as spawnpoints for revenants an
 		return FALSE
 
 	COOLDOWN_START(src, open_close_cd, 0.5 SECONDS)
-	playsound(src, 'sound/effects/roll.ogg', 5, TRUE)
-	playsound(src, 'sound/items/deconstruct.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/effects/roll.ogg', 5, TRUE)
+	playsound(src, '../assets/sound/items/deconstruct.ogg', 50, TRUE)
 	var/turf/close_loc = connected.loc
 	for(var/atom/movable/entering in close_loc)
 		if(entering.anchored && entering != connected)
@@ -272,7 +272,7 @@ GLOBAL_LIST_EMPTY(bodycontainers) //Let them act as spawnpoints for revenants an
 	update_morgue_status()
 	update_appearance(UPDATE_ICON_STATE)
 	if(morgue_state == MORGUE_HAS_REVIVABLE && beeper && COOLDOWN_FINISHED(src, next_beep))
-		playsound(src, 'sound/items/weapons/gun/general/empty_alarm.ogg', 50, FALSE) //Revive them you blind fucks
+		playsound(src, '../assets/sound/items/weapons/gun/general/empty_alarm.ogg', 50, FALSE) //Revive them you blind fucks
 		COOLDOWN_START(src, next_beep, beep_cooldown)
 
 	if(!connected || connected.loc != src)
@@ -414,7 +414,7 @@ GLOBAL_LIST_EMPTY(crematoriums)
 /obj/structure/bodycontainer/crematorium
 	name = "crematorium"
 	desc = "A human incinerator. Works well on barbecue nights."
-	icon = 'icons/obj/machines/crematorium.dmi'
+	icon = '../assets/icons/obj/machines/crematorium.dmi'
 	icon_state = "crema1"
 	base_icon_state = "crema"
 	dir = SOUTH
@@ -498,7 +498,7 @@ GLOBAL_LIST_EMPTY(crematoriums)
 		if(!QDELETED(src))
 			locked = FALSE
 			update_appearance()
-			playsound(src.loc, 'sound/machines/ding.ogg', 50, TRUE) //you horrible people
+			playsound(src.loc, '../assets/sound/machines/ding.ogg', 50, TRUE) //you horrible people
 
 /obj/structure/bodycontainer/crematorium/creamatorium
 	name = "creamatorium"
@@ -518,7 +518,7 @@ GLOBAL_LIST_EMPTY(crematoriums)
  * For overriding only
  */
 /obj/structure/tray
-	icon = 'icons/obj/machines/crematorium.dmi'
+	icon = '../assets/icons/obj/machines/crematorium.dmi'
 	density = TRUE
 	anchored = TRUE
 	pass_flags_self = PASSTABLE | LETPASSTHROW
@@ -594,7 +594,7 @@ GLOBAL_LIST_EMPTY(crematoriums)
 /obj/structure/tray/m_tray
 	name = "morgue tray"
 	desc = "Apply corpse before closing."
-	icon = 'icons/obj/structures.dmi'
+	icon = '../assets/icons/obj/structures.dmi'
 	icon_state = "morguet"
 	pass_flags_self = PASSTABLE | LETPASSTHROW
 	layer = /obj/structure/bodycontainer/morgue::layer - 0.03

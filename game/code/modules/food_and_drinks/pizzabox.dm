@@ -3,18 +3,18 @@
 	desc = "Special delivery!"
 	icon_state = "pizzabomb_inactive"
 	inhand_icon_state = "eshield"
-	lefthand_file = 'icons/mob/inhands/equipment/shields_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/shields_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/shields_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/shields_righthand.dmi'
 
 /obj/item/pizzabox
 	name = "pizza box"
 	desc = "A box suited for pizzas."
-	icon = 'icons/obj/food/containers.dmi'
+	icon = '../assets/icons/obj/food/containers.dmi'
 	icon_state = "pizzabox"
 	base_icon_state = "pizzabox"
 	inhand_icon_state = "pizzabox"
-	lefthand_file = 'icons/mob/inhands/items/food_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/food_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/food_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/food_righthand.dmi'
 	custom_materials = list(/datum/material/cardboard =SHEET_MATERIAL_AMOUNT)
 
 	var/open = FALSE
@@ -262,7 +262,7 @@
 
 /obj/item/pizzabox/process(seconds_per_tick)
 	if(bomb_active && !bomb_defused && (bomb_timer > 0))
-		playsound(loc, 'sound/items/timer.ogg', 50, FALSE)
+		playsound(loc, '../assets/sound/items/timer.ogg', 50, FALSE)
 		bomb_timer -= seconds_per_tick
 	if(bomb_active && !bomb_defused && (bomb_timer <= 0))
 		if(bomb in src)

@@ -1,8 +1,8 @@
 /turf/open/misc/snow
 	gender = PLURAL
 	name = "snow"
-	icon = 'icons/turf/snow.dmi'
-	damaged_dmi = 'icons/turf/snow.dmi'
+	icon = '../assets/icons/turf/snow.dmi'
+	damaged_dmi = '../assets/icons/turf/snow.dmi'
 	desc = "Looks cold."
 	icon_state = "snow"
 	planetary_atmos = TRUE

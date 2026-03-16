@@ -17,7 +17,7 @@
 /obj/item/antag_spawner/contract
 	name = "contract"
 	desc = "A magic contract previously signed by an apprentice. In exchange for instruction in the magical arts, they are bound to answer your call for aid."
-	icon = 'icons/obj/scrolls.dmi'
+	icon = '../assets/icons/obj/scrolls.dmi'
 	icon_state ="scroll2"
 	var/polling = FALSE
 
@@ -92,7 +92,7 @@
 		master_wizard.wiz_team.add_member(app_mind)
 	app_mind.add_antag_datum(app)
 	app_mind.set_assigned_role(SSjob.get_job_type(/datum/job/wizard_apprentice))
-	SEND_SOUND(M, sound('sound/effects/magic.ogg'))
+	SEND_SOUND(M, sound('../assets/sound/effects/magic.ogg'))
 
 ///////////BORGS AND OPERATIVES
 
@@ -103,7 +103,7 @@
 /obj/item/antag_spawner/nuke_ops
 	name = "syndicate operative beacon"
 	desc = "A single-use beacon designed to quickly launch reinforcement operatives into the field."
-	icon = 'icons/obj/devices/voice.dmi'
+	icon = '../assets/icons/obj/devices/voice.dmi'
 	icon_state = "nukietalkie"
 	/// The name of the special role given to the recruit
 	var/special_role_name = ROLE_OPERATIVE
@@ -259,7 +259,7 @@
 /obj/item/antag_spawner/slaughter_demon //Warning edgiest item in the game
 	name = "vial of blood"
 	desc = "A magically infused bottle of blood, distilled from countless murder victims. Used in unholy rituals to attract horrifying creatures."
-	icon = 'icons/obj/mining_zones/artefacts.dmi'
+	icon = '../assets/icons/obj/mining_zones/artefacts.dmi'
 	icon_state = "vial"
 
 	var/shatter_msg = span_notice("You shatter the bottle, no turning back now!")
@@ -281,7 +281,7 @@
 		spawn_antag(chosen_one.client, get_turf(src), initial(demon_type.name), user.mind)
 		to_chat(user, shatter_msg)
 		to_chat(user, veil_msg)
-		playsound(user.loc, 'sound/effects/glass/glassbr1.ogg', 100, TRUE)
+		playsound(user.loc, '../assets/sound/effects/glass/glassbr1.ogg', 100, TRUE)
 		qdel(src)
 	else
 		to_chat(user, span_warning("The bottle's contents usually pop and boil constantly, but right now they're eerily still and calm. Perhaps you should try again later."))
@@ -295,7 +295,7 @@
 /obj/item/antag_spawner/slaughter_demon/laughter
 	name = "vial of tickles"
 	desc = "A magically infused bottle of clown love, distilled from countless hugging attacks. Used in funny rituals to attract adorable creatures."
-	icon = 'icons/obj/mining_zones/artefacts.dmi'
+	icon = '../assets/icons/obj/mining_zones/artefacts.dmi'
 	icon_state = "vial"
 	color = "#FF69B4" // HOT PINK
 
@@ -309,7 +309,7 @@
 /obj/item/antag_spawner/loadout
 	name = "generic beacon"
 	desc = "A single-use beacon designed to quickly launch bad code into the field."
-	icon = 'icons/obj/devices/voice.dmi'
+	icon = '../assets/icons/obj/devices/voice.dmi'
 	icon_state = "walkietalkie"
 	/// The mob type to spawn.
 	var/mob/living/spawn_type = /mob/living/carbon/human
@@ -404,7 +404,7 @@
 /obj/item/antag_spawner/loadout/contractor
 	name = "contractor support beacon"
 	desc = "A beacon sold to the most prestigeous syndicate members, a single-use radio for calling immediate backup."
-	icon = 'icons/obj/devices/voice.dmi'
+	icon = '../assets/icons/obj/devices/voice.dmi'
 	icon_state = "nukietalkie"
 	outfit = /datum/outfit/contractor_partner
 	use_subtypes = FALSE
@@ -419,7 +419,7 @@
 /obj/item/antag_spawner/loadout/monkey_man
 	name = "monkey agent beacon"
 	desc = "Call up some backup from ARC for monkey mayhem."
-	icon = 'icons/obj/devices/voice.dmi'
+	icon = '../assets/icons/obj/devices/voice.dmi'
 	icon_state = "walkietalkie"
 	spawn_type = /mob/living/carbon/human/species/monkey
 	species_type = /datum/species/monkey

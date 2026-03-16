@@ -274,7 +274,7 @@
 	return TRUE
 
 /obj/effect/temp_visual/dueling_chaff
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	icon_state = "shield-old"
 	duration = 30
 	var/setting

@@ -3,7 +3,7 @@
 /mob/living/basic/statue
 	name = "statue" // matches the name of the statue with the flesh-to-stone spell
 	desc = "An incredibly lifelike marble carving. Its eyes seem to follow you..." // same as an ordinary statue with the added "eye following you" description
-	icon = 'icons/obj/art/statue.dmi'
+	icon = '../assets/icons/obj/art/statue.dmi'
 	icon_state = "human_male"
 	icon_living = "human_male"
 	icon_dead = "human_male"
@@ -25,7 +25,7 @@
 	melee_damage_upper = 83
 	attack_verb_continuous = "claws"
 	attack_verb_simple = "claw"
-	attack_sound = 'sound/effects/hallucinations/growl1.ogg'
+	attack_sound = '../assets/sound/effects/hallucinations/growl1.ogg'
 	attack_vis_effect = ATTACK_EFFECT_CLAW
 	melee_attack_cooldown = 1 SECONDS
 
@@ -84,7 +84,7 @@
 /datum/action/cooldown/spell/aoe/flicker_lights
 	name = "Flicker Lights"
 	desc = "You will trigger a large amount of lights around you to flicker."
-	button_icon = 'icons/mob/actions/actions_AI.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_AI.dmi'
 	button_icon_state = "blackout"
 	cooldown_time = 30 SECONDS
 	spell_requirements = NONE

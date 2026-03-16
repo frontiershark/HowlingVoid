@@ -18,7 +18,7 @@ GLOBAL_LIST_INIT(marker_beacon_colors, sort_list(list(
 	name = "marker beacon"
 	singular_name = "marker beacon"
 	desc = "Prism-brand path illumination devices. Used by miners to mark paths and warn of danger."
-	icon = 'icons/obj/mining.dmi'
+	icon = '../assets/icons/obj/mining.dmi'
 	icon_state = "marker"
 	merge_type = /obj/item/stack/marker_beacon
 	max_amount = 100
@@ -54,7 +54,7 @@ GLOBAL_LIST_INIT(marker_beacon_colors, sort_list(list(
 		return
 	if(use(1))
 		to_chat(user, span_notice("You activate and anchor [amount ? "a":"the"] [singular_name] in place."))
-		playsound(user, 'sound/machines/click.ogg', 50, TRUE)
+		playsound(user, '../assets/sound/machines/click.ogg', 50, TRUE)
 		var/obj/structure/marker_beacon/M = new(user.loc, picked_color)
 		transfer_fingerprints_to(M)
 
@@ -69,7 +69,7 @@ GLOBAL_LIST_INIT(marker_beacon_colors, sort_list(list(
 /obj/structure/marker_beacon
 	name = "marker beacon"
 	desc = "A Prism-brand path illumination device. It is anchored in place and glowing steadily."
-	icon = 'icons/obj/mining.dmi'
+	icon = '../assets/icons/obj/mining.dmi'
 	icon_state = "marker"
 	layer = BELOW_OPEN_DOOR_LAYER
 	armor_type = /datum/armor/structure_marker_beacon
@@ -126,7 +126,7 @@ GLOBAL_LIST_INIT(marker_beacon_colors, sort_list(list(
 		M.update_appearance()
 		transfer_fingerprints_to(M)
 		if(user.put_in_hands(M, TRUE)) //delete the beacon if it fails
-			playsound(src, 'sound/items/deconstruct.ogg', 50, TRUE)
+			playsound(src, '../assets/sound/items/deconstruct.ogg', 50, TRUE)
 			qdel(src) //otherwise delete us
 
 /obj/structure/marker_beacon/attack_tk(mob/user)
@@ -138,14 +138,14 @@ GLOBAL_LIST_INIT(marker_beacon_colors, sort_list(list(
 		to_chat(user, span_notice("You start picking [src] up..."))
 		if(do_after(user, remove_speed, target = src) && M.amount + 1 <= M.max_amount)
 			M.add(1)
-			playsound(src, 'sound/items/deconstruct.ogg', 50, TRUE)
+			playsound(src, '../assets/sound/items/deconstruct.ogg', 50, TRUE)
 			qdel(src)
 			return
 	if(istype(I, /obj/item/light_eater))
 		var/obj/effect/decal/cleanable/ash/A = new /obj/effect/decal/cleanable/ash(drop_location())
 		A.desc += "\nLooks like this used to be \a [src] some time ago."
 		visible_message(span_danger("[src] is disintegrated by [I]!"))
-		playsound(src, 'sound/items/tools/welder.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/items/tools/welder.ogg', 50, TRUE)
 		qdel(src)
 		return
 	return ..()

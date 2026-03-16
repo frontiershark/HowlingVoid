@@ -1,7 +1,7 @@
 /obj/structure/trap
 	name = "IT'S A TRAP"
 	desc = "Stepping on me is a guaranteed bad day."
-	icon = 'icons/obj/service/hand_of_god_structures.dmi'
+	icon = '../assets/icons/obj/service/hand_of_god_structures.dmi'
 	icon_state = "trap"
 	density = FALSE
 	anchored = TRUE
@@ -99,7 +99,7 @@
 /obj/structure/trap/stun/hunter
 	name = "bounty trap"
 	desc = "A trap that only goes off when a fugitive steps on it, announcing the location and stunning the target. You'd better avoid it."
-	icon = 'icons/obj/weapons/restraints.dmi'
+	icon = '../assets/icons/obj/weapons/restraints.dmi'
 	icon_state = "bounty_trap_on"
 	stun_time = 20 SECONDS
 	sparks = FALSE //the item version gives them off to prevent runtimes (see Destroy())
@@ -140,7 +140,7 @@
 /obj/item/bountytrap
 	name = "bounty trap"
 	desc = "A trap that only goes off when a fugitive steps on it, announcing the location and stunning the target. It's currently inactive."
-	icon = 'icons/obj/weapons/restraints.dmi'
+	icon = '../assets/icons/obj/weapons/restraints.dmi'
 	icon_state = "bounty_trap_off"
 	var/obj/structure/trap/stun/hunter/stored_trap
 	var/obj/item/radio/radio
@@ -161,7 +161,7 @@
 
 /obj/item/bountytrap/proc/announce_fugitive()
 	spark_system.start()
-	playsound(src, 'sound/machines/ding.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/machines/ding.ogg', 50, TRUE)
 	radio.talk_into(src, "Fugitive has triggered this trap in the [get_area_name(src)]!", RADIO_CHANNEL_COMMON)
 
 /obj/item/bountytrap/attack_self(mob/living/user)

@@ -43,4 +43,4 @@
 		return
 
 	trigger_connected()
-	playsound(parent, 'sound/machines/click.ogg', 50)
+	playsound(parent, '../assets/sound/machines/click.ogg', 50)

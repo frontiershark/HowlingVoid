@@ -1,12 +1,12 @@
 /obj/item/dnainjector
 	name = "\improper DNA injector"
 	desc = "A cheap single use autoinjector that injects the user with DNA."
-	icon = 'icons/obj/medical/syringe.dmi'
+	icon = '../assets/icons/obj/medical/syringe.dmi'
 	icon_state = "dnainjector"
 	inhand_icon_state = "dnainjector"
 	worn_icon_state = "pen"
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/medical_righthand.dmi'
 	throw_speed = 3
 	throw_range = 5
 	w_class = WEIGHT_CLASS_TINY

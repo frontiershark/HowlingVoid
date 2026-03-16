@@ -73,7 +73,7 @@
 /obj/effect/hotspot
 	anchored = TRUE
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
-	icon = 'icons/effects/fire.dmi'
+	icon = '../assets/icons/effects/fire.dmi'
 	icon_state = "light"
 	layer = GASFIRE_LAYER
 	plane = ABOVE_GAME_PLANE
@@ -150,7 +150,7 @@
 	AddElement(/datum/element/connect_loc, loc_connections)
 
 	if(COOLDOWN_FINISHED(our_turf, fire_puff_cooldown))
-		playsound(our_turf, 'sound/effects/fire_puff.ogg', 30)
+		playsound(our_turf, '../assets/sound/effects/fire_puff.ogg', 30)
 		COOLDOWN_START(our_turf, fire_puff_cooldown, 5 SECONDS)
 
 	// Remove just_spawned protection if no longer processing the parent cell
@@ -255,20 +255,20 @@
 		heat_r = LERP(heat_r,255,purple_amt)
 	if(temperature > 200000 && temperature < 500000) //Somewhere at this temperature nitryl happens.
 		var/sparkle_amt = gauss_lerp(temperature, 200000, 500000)
-		var/mutable_appearance/sparkle_overlay = mutable_appearance('icons/effects/effects.dmi', "shieldsparkles")
+		var/mutable_appearance/sparkle_overlay = mutable_appearance('../assets/icons/effects/effects.dmi', "shieldsparkles")
 		sparkle_overlay.blend_mode = BLEND_ADD
 		sparkle_overlay.alpha = sparkle_amt * 255
 		add_overlay(sparkle_overlay)
 	if(temperature > 400000 && temperature < 1500000) //Lightning because very anime.
-		var/mutable_appearance/lightning_overlay = mutable_appearance('icons/effects/fire.dmi', "overcharged")
+		var/mutable_appearance/lightning_overlay = mutable_appearance('../assets/icons/effects/fire.dmi', "overcharged")
 		lightning_overlay.blend_mode = BLEND_ADD
 		add_overlay(lightning_overlay)
 	if(temperature > 4500000) //This is where noblium happens. Some fusion-y effects.
 		var/fusion_amt = temperature < LERP(4500000,12000000,0.5) ? gauss_lerp(temperature, 4500000, 12000000) : 1
-		var/mutable_appearance/fusion_overlay = mutable_appearance('icons/effects/atmospherics.dmi', "fusion_gas")
+		var/mutable_appearance/fusion_overlay = mutable_appearance('../assets/icons/effects/atmospherics.dmi', "fusion_gas")
 		fusion_overlay.blend_mode = BLEND_ADD
 		fusion_overlay.alpha = fusion_amt * 255
-		var/mutable_appearance/rainbow_overlay = mutable_appearance('icons/hud/screen_gen.dmi', "druggy")
+		var/mutable_appearance/rainbow_overlay = mutable_appearance('../assets/icons/hud/screen_gen.dmi', "druggy")
 		rainbow_overlay.blend_mode = BLEND_ADD
 		rainbow_overlay.alpha = fusion_amt * 255
 		rainbow_overlay.appearance_flags = RESET_COLOR
@@ -378,8 +378,8 @@
 	return
 
 /datum/looping_sound/fire
-	mid_sounds = list('sound/effects/fireclip1.ogg' = 1, 'sound/effects/fireclip2.ogg' = 1, 'sound/effects/fireclip3.ogg' = 1, 'sound/effects/fireclip4.ogg' = 1,
-	'sound/effects/fireclip5.ogg' = 1, 'sound/effects/fireclip6.ogg' = 1, 'sound/effects/fireclip7.ogg' = 1)
+	mid_sounds = list('../assets/sound/effects/fireclip1.ogg' = 1, '../assets/sound/effects/fireclip2.ogg' = 1, '../assets/sound/effects/fireclip3.ogg' = 1, '../assets/sound/effects/fireclip4.ogg' = 1,
+	'../assets/sound/effects/fireclip5.ogg' = 1, '../assets/sound/effects/fireclip6.ogg' = 1, '../assets/sound/effects/fireclip7.ogg' = 1)
 	volume = 30
 	mid_length = 2 SECONDS
 	falloff_distance = 1

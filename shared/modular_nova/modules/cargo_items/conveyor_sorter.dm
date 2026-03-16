@@ -52,7 +52,7 @@
 
 /obj/item/conveyor_sorter/click_alt(mob/user)
 	visible_message("[src] pings, resetting its sorting list!")
-	playsound(src, 'sound/machines/ping.ogg', 30, TRUE)
+	playsound(src, '../assets/sound/machines/ping.ogg', 30, TRUE)
 	current_sort = list()
 	return CLICK_ACTION_SUCCESS
 
@@ -108,27 +108,27 @@
 	setDir(dir)
 
 	visible_message("[src] pings, updating its sorting direction!")
-	playsound(src, 'sound/machines/ping.ogg', 30, TRUE)
+	playsound(src, '../assets/sound/machines/ping.ogg', 30, TRUE)
 
 /obj/effect/decal/conveyor_sorter/attackby(obj/item/attacking_item, mob/user, list/modifiers, list/attack_modifiers)
 	if(istype(attacking_item, /obj/item/conveyor_sorter))
 		var/obj/item/conveyor_sorter/cs_item = attacking_item
 		sorting_list = cs_item.current_sort
 		visible_message("[src] pings, updating its sorting list!")
-		playsound(src, 'sound/machines/ping.ogg', 30, TRUE)
+		playsound(src, '../assets/sound/machines/ping.ogg', 30, TRUE)
 		return
 	else
 		return ..()
 
 /obj/effect/decal/conveyor_sorter/click_alt(mob/user)
 	visible_message("[src] pings, resetting its sorting list!")
-	playsound(src, 'sound/machines/ping.ogg', 30, TRUE)
+	playsound(src, '../assets/sound/machines/ping.ogg', 30, TRUE)
 	sorting_list = list()
 	return CLICK_ACTION_SUCCESS
 
 /obj/effect/decal/conveyor_sorter/click_ctrl(mob/user)
 	visible_message("[src] begins to ping violently!")
-	playsound(src, 'sound/machines/ping.ogg', 30, TRUE)
+	playsound(src, '../assets/sound/machines/ping.ogg', 30, TRUE)
 	qdel(src)
 	return CLICK_ACTION_SUCCESS
 

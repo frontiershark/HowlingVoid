@@ -34,7 +34,7 @@
 	var/mutable_appearance/objectified_player = mutable_appearance(initial(transform_path.icon), initial(transform_path.icon_state))
 	objectified_player.pixel_x = initial(transform_path.pixel_x)
 	objectified_player.pixel_y = initial(transform_path.pixel_y)
-	var/mutable_appearance/transform_scanline = mutable_appearance('icons/effects/effects.dmi', "transform_effect")
+	var/mutable_appearance/transform_scanline = mutable_appearance('../assets/icons/effects/effects.dmi', "transform_effect")
 	target.transformation_animation(objectified_player, OBJECTIFY_TIME, transform_scanline.appearance)
 	target.Immobilize(OBJECTIFY_TIME, ignore_canstun = TRUE)
 	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(objectify), target, transform_path), OBJECTIFY_TIME)

@@ -53,7 +53,7 @@
 /obj/item/ctf_flag/red/medisim
 	name = "\improper Redfield Castle Fair Maiden"
 	desc = "Protect your maiden, and capture theirs!"
-	icon = 'icons/obj/toys/plushes.dmi'
+	icon = '../assets/icons/obj/toys/plushes.dmi'
 	icon_state = "plushie_nuke"
 	force = 0
 	movement_type = FLOATING //there are chasms, and resetting when they fall in is really lame so lets minimize that
@@ -62,7 +62,7 @@
 /obj/item/ctf_flag/blue/medisim
 	name = "\improper Bluesworth Hold Fair Maiden"
 	desc = "Protect your maiden, and capture theirs!"
-	icon = 'icons/map_icons/items/_item.dmi'
+	icon = '../assets/icons/map_icons/items/_item.dmi'
 	icon_state = "/obj/item/ctf_flag/blue/medisim"
 	post_init_icon_state = "map_plushie_slime"
 	greyscale_config = /datum/greyscale_config/plush_slime

@@ -2,11 +2,11 @@
 	desc = "A hand-held environmental scanner which reports current gas levels."
 	name = "gas analyzer"
 	custom_price = PAYCHECK_LOWER * 0.9
-	icon = 'icons/obj/devices/scanner.dmi'
+	icon = '../assets/icons/obj/devices/scanner.dmi'
 	icon_state = "analyzer"
 	inhand_icon_state = "analyzer"
-	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/tools_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/tools_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/tools_righthand.dmi'
 	w_class = WEIGHT_CLASS_SMALL
 	obj_flags = CONDUCTS_ELECTRICITY
 	item_flags = NOBLUDGEON
@@ -17,8 +17,8 @@
 	tool_behaviour = TOOL_ANALYZER
 	custom_materials = list(/datum/material/iron=SMALL_MATERIAL_AMOUNT * 0.3, /datum/material/glass=SMALL_MATERIAL_AMOUNT * 0.2)
 	interaction_flags_click = NEED_LITERACY|NEED_LIGHT|ALLOW_RESTING
-	pickup_sound = 'sound/items/handling/gas_analyzer/gas_analyzer_pickup.ogg'
-	drop_sound = 'sound/items/handling/gas_analyzer/gas_analyzer_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/gas_analyzer/gas_analyzer_pickup.ogg'
+	drop_sound = '../assets/sound/items/handling/gas_analyzer/gas_analyzer_drop.ogg'
 	/// Boolean whether this has a CD
 	var/cooldown = FALSE
 	/// The time in deciseconds
@@ -72,7 +72,7 @@
 	if(!T)
 		return CLICK_ACTION_BLOCKING
 
-	playsound(src, 'sound/effects/pop.ogg', 100)
+	playsound(src, '../assets/sound/effects/pop.ogg', 100)
 	var/area/user_area = T.loc
 	var/datum/weather/ongoing_weather = null
 
@@ -109,7 +109,7 @@
 	if(isliving(loc))
 		var/mob/living/L = loc
 		to_chat(L, span_notice("[src]'s barometer function is ready!"))
-	playsound(src, 'sound/machines/click.ogg', 100)
+	playsound(src, '../assets/sound/machines/click.ogg', 100)
 	cooldown = FALSE
 
 /// Applies the barometer inaccuracy to the gas reading.

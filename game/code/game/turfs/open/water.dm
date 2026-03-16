@@ -2,7 +2,7 @@
 	name = "water"
 	gender = PLURAL
 	desc = "Shallow water."
-	icon = 'icons/turf/floors.dmi'
+	icon = '../assets/icons/turf/floors.dmi'
 	icon_state = "riverwater_motion"
 	baseturfs = /turf/open/water
 	planetary_atmos = TRUE
@@ -107,7 +107,7 @@
 /turf/open/water/beach
 	gender = PLURAL
 	desc = "Come on in, it's great!"
-	icon = 'icons/turf/beach.dmi'
+	icon = '../assets/icons/turf/beach.dmi'
 	icon_state = "water"
 	base_icon_state = "water"
 	baseturfs = /turf/open/water/beach
@@ -123,7 +123,7 @@
 	name = "deep water"
 	desc = "Don't forget your life jacket."
 	immerse_overlay = "immerse_deep"
-	icon = 'icons/turf/beach.dmi'
+	icon = '../assets/icons/turf/beach.dmi'
 	icon_state = "deepwater"
 	base_icon_state = "deepwater"
 	baseturfs = /turf/open/water/deep_beach

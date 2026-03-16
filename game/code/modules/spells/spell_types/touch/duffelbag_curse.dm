@@ -3,7 +3,7 @@
 	name = "Bestow Cursed Duffel Bag"
 	desc = "A spell that summons a duffel bag demon on the target, slowing them down and slowly eating them."
 	button_icon_state = "duffelbag_curse"
-	sound = 'sound/effects/magic/mm_hit.ogg'
+	sound = '../assets/sound/effects/magic/mm_hit.ogg'
 
 	school = SCHOOL_CONJURATION
 	cooldown_time = 6 SECONDS
@@ -82,6 +82,6 @@
 /obj/item/melee/touch_attack/duffelbag
 	name = "\improper burdening touch"
 	desc = "Where is the bar from here?"
-	icon = 'icons/obj/weapons/hand.dmi'
+	icon = '../assets/icons/obj/weapons/hand.dmi'
 	icon_state = "duffelcurse"
 	inhand_icon_state = "duffelcurse"

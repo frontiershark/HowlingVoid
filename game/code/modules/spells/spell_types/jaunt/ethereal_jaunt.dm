@@ -2,14 +2,14 @@
 	name = "Ethereal Jaunt"
 	desc = "This spell turns your form ethereal, temporarily making you invisible and able to pass through walls."
 	button_icon_state = "jaunt"
-	sound = 'sound/effects/magic/ethereal_enter.ogg'
+	sound = '../assets/sound/effects/magic/ethereal_enter.ogg'
 
 	cooldown_time = 30 SECONDS
 	cooldown_reduction_per_rank = 5 SECONDS
 
 	jaunt_type = /obj/effect/dummy/phased_mob/spell_jaunt
 
-	var/exit_jaunt_sound = 'sound/effects/magic/ethereal_exit.ogg'
+	var/exit_jaunt_sound = '../assets/sound/effects/magic/ethereal_exit.ogg'
 	/// For how long are we jaunting?
 	var/jaunt_duration = 5 SECONDS
 	/// For how long we become immobilized after exiting the jaunt.
@@ -175,7 +175,7 @@
 	background_icon_state = "bg_demon"
 	overlay_icon_state = "bg_demon_border"
 
-	button_icon = 'icons/mob/actions/actions_cult.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_cult.dmi'
 	button_icon_state = "phaseshift"
 
 	cooldown_time = 25 SECONDS

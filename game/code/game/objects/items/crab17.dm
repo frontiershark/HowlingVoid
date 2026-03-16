@@ -1,7 +1,7 @@
 /obj/item/suspiciousphone
 	name = "suspicious phone"
 	desc = "This device raises pink levels to unknown highs."
-	icon = 'icons/obj/antags/syndicate_tools.dmi'
+	icon = '../assets/icons/obj/antags/syndicate_tools.dmi'
 	icon_state = "suspiciousphone"
 	w_class = WEIGHT_CLASS_SMALL
 	attack_verb_continuous = list("dumps")
@@ -41,7 +41,7 @@
 /obj/structure/checkoutmachine
 	name = "\improper Nanotrasen Space-Coin Market"
 	desc = "This is good for spacecoin because"
-	icon = 'icons/obj/machines/money_machine.dmi'
+	icon = '../assets/icons/obj/machines/money_machine.dmi'
 	icon_state = "bogdanoff"
 	layer = ABOVE_ALL_MOB_LAYER
 	plane = ABOVE_GAME_PLANE
@@ -88,7 +88,7 @@
 
 		var/throwtarget = get_step(user, get_dir(src, user))
 		user.safe_throw_at(throwtarget, 1, 1, force = MOVE_FORCE_EXTREMELY_STRONG)
-		playsound(get_turf(src),'sound/effects/magic/repulse.ogg', 100, TRUE)
+		playsound(get_turf(src),'../assets/sound/effects/magic/repulse.ogg', 100, TRUE)
 
 		return
 
@@ -128,17 +128,17 @@
 	sleep(1 SECONDS)
 	if(QDELETED(src))
 		return
-	playsound(src, 'sound/machines/click.ogg', 15, TRUE, -3)
+	playsound(src, '../assets/sound/machines/click.ogg', 15, TRUE, -3)
 	cut_overlay("flaps")
 	sleep(1 SECONDS)
 	if(QDELETED(src))
 		return
-	playsound(src, 'sound/machines/click.ogg', 15, TRUE, -3)
+	playsound(src, '../assets/sound/machines/click.ogg', 15, TRUE, -3)
 	cut_overlay("hatch")
 	sleep(3 SECONDS)
 	if(QDELETED(src))
 		return
-	playsound(src,'sound/machines/beep/twobeep.ogg',50,FALSE)
+	playsound(src,'../assets/sound/machines/beep/twobeep.ogg',50,FALSE)
 	var/mutable_appearance/hologram = mutable_appearance(icon, "hologram")
 	hologram.pixel_z = 16
 	add_overlay(hologram)
@@ -170,7 +170,7 @@
 	sleep(0.5 SECONDS)
 	if(QDELETED(src))
 		return
-	playsound(src,'sound/machines/beep/triple_beep.ogg',50,FALSE)
+	playsound(src,'../assets/sound/machines/beep/triple_beep.ogg',50,FALSE)
 	add_overlay("text")
 	sleep(1 SECONDS)
 	if(QDELETED(src))
@@ -258,7 +258,7 @@
 
 /obj/effect/dumpeet_fall //Falling pod
 	name = ""
-	icon = 'icons/obj/machines/money_machine_64.dmi'
+	icon = '../assets/icons/obj/machines/money_machine_64.dmi'
 	pixel_z = 300
 	desc = "Get out of the way!"
 	layer = FLY_LAYER//that wasn't flying, that was falling with style!
@@ -269,7 +269,7 @@
 /obj/effect/dumpeet_target
 	name = "Landing Zone Indicator"
 	desc = "A holographic projection designating the landing zone of something. It's probably best to stand back."
-	icon = 'icons/mob/telegraphing/telegraph_holographic.dmi'
+	icon = '../assets/icons/mob/telegraphing/telegraph_holographic.dmi'
 	icon_state = "target_circle"
 	layer = PROJECTILE_HIT_THRESHHOLD_LAYER
 	light_range = 2
@@ -281,7 +281,7 @@
 	. = ..()
 	bogdanoff = user
 	addtimer(CALLBACK(src, PROC_REF(startLaunch)), 10 SECONDS)
-	sound_to_playing_players('sound/items/dump_it.ogg', 20)
+	sound_to_playing_players('../assets/sound/items/dump_it.ogg', 20)
 	deadchat_broadcast("Protocol CRAB-17 has been activated. A space-coin market has been launched at the station!", turf_target = get_turf(src), message_type=DEADCHAT_ANNOUNCEMENT)
 
 /**
@@ -292,7 +292,7 @@
 	dump = new /obj/structure/checkoutmachine(null, bogdanoff)
 	priority_announce("The spacecoin bubble has popped! Get to the credit deposit machine at [get_area(src)] and cash out before you lose all of your funds!", sender_override = "CRAB-17 Protocol")
 	animate(DF, pixel_z = -8, time = 5, , easing = LINEAR_EASING)
-	playsound(src,  'sound/items/weapons/mortar_whistle.ogg', 70, TRUE, 6)
+	playsound(src,  '../assets/sound/items/weapons/mortar_whistle.ogg', 70, TRUE, 6)
 	addtimer(CALLBACK(src, PROC_REF(end_launch)), 5, TIMER_CLIENT_TIME) //Go onto the last step after a very short falling animation
 
 /**

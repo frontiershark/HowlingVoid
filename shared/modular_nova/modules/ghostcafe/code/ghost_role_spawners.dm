@@ -44,7 +44,7 @@
 	prompt_name = "a ghost cafe human"
 	infinite_use = TRUE
 	deletes_on_zero_uses_left = FALSE
-	icon = 'icons/obj/machines/sleeper.dmi'
+	icon = '../assets/icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
 	density = FALSE
 	spawner_job_path = /datum/job/ghostcafe
@@ -92,7 +92,7 @@
 		backpack_contents += list(/obj/item/tank/internals/nitrogen/belt/full = 2)
 
 /datum/action/toggle_dead_chat_mob
-	button_icon = 'icons/mob/simple/mob.dmi'
+	button_icon = '../assets/icons/mob/simple/mob.dmi'
 	button_icon_state = "ghost"
 	name = "Toggle deadchat"
 	desc = "Turn off or on your ability to hear ghosts."

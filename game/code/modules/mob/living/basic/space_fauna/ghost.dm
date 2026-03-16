@@ -1,7 +1,7 @@
 /mob/living/basic/ghost
 	name = "ghost"
 	desc = "A soul of the dead, spooky."
-	icon = 'icons/mob/simple/mob.dmi'
+	icon = '../assets/icons/mob/simple/mob.dmi'
 	icon_state = "ghost"
 	icon_living = "ghost"
 	mob_biotypes = MOB_SPIRIT | MOB_UNDEAD
@@ -20,7 +20,7 @@
 	unsuitable_atmos_damage = 0
 	unsuitable_cold_damage = 0
 	unsuitable_heat_damage = 0
-	attack_sound = 'sound/effects/hallucinations/growl1.ogg'
+	attack_sound = '../assets/sound/effects/hallucinations/growl1.ogg'
 	death_message = "wails, disintegrating into a pile of ectoplasm!"
 	gold_core_spawnable = NO_SPAWN //too spooky for science
 	light_system = OVERLAY_LIGHT
@@ -73,7 +73,7 @@
 
 	if(!isnull(ghost_hairstyle) && ghost_hairstyle != "Bald") //Bald hairstyle and the Shaved facial hairstyle lack an associated sprite and will not properly generate hair, and just cause runtimes.
 		var/datum/sprite_accessory/hair/hair_style = SSaccessories.hairstyles_list[ghost_hairstyle] //We use the hairstyle name to get the sprite accessory, which we copy the icon_state from.
-		ghost_hair = mutable_appearance('icons/mob/human/human_face.dmi', "[hair_style.icon_state]", -HAIR_LAYER)
+		ghost_hair = mutable_appearance('../assets/icons/mob/human/human_face.dmi', "[hair_style.icon_state]", -HAIR_LAYER)
 		ghost_hair.alpha = 200
 		ghost_hair.color = ghost_hair_color
 		ghost_hair.pixel_z = hair_style.y_offset
@@ -81,7 +81,7 @@
 
 	if(!isnull(ghost_facial_hairstyle) && ghost_facial_hairstyle != "Shaved")
 		var/datum/sprite_accessory/facial_hair_style = SSaccessories.facial_hairstyles_list[ghost_facial_hairstyle]
-		ghost_facial_hair = mutable_appearance('icons/mob/human/human_face.dmi', "[facial_hair_style.icon_state]", -HAIR_LAYER)
+		ghost_facial_hair = mutable_appearance('../assets/icons/mob/human/human_face.dmi', "[facial_hair_style.icon_state]", -HAIR_LAYER)
 		ghost_facial_hair.alpha = 200
 		ghost_facial_hair.color = ghost_facial_hair_color
 		add_overlay(ghost_facial_hair)

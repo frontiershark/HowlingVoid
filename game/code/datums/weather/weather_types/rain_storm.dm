@@ -80,7 +80,7 @@
 
 	telegraph_duration = 40 SECONDS
 	telegraph_message = span_warning("Thunder rumbles far above. You hear acidic droplets hissing against the canopy. Seek shelter!")
-	telegraph_sound = 'sound/effects/siren.ogg'
+	telegraph_sound = '../assets/sound/effects/siren.ogg'
 
 	weather_message = span_userdanger("<i>Acidic rain pours down around you! Get inside!</i>")
 	weather_duration_lower = 1 MINUTES

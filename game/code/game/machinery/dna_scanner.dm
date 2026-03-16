@@ -1,7 +1,7 @@
 /obj/machinery/dna_scannernew
 	name = "\improper DNA scanner"
 	desc = "It scans DNA structures."
-	icon = 'icons/obj/machines/cloning.dmi'
+	icon = '../assets/icons/obj/machines/cloning.dmi'
 	icon_state = "scanner"
 	base_icon_state = "scanner"
 	density = TRUE

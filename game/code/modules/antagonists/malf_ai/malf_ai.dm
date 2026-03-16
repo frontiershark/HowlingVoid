@@ -21,7 +21,7 @@
 	///since the module purchasing is built into the antag info, we need to keep track of its compact mode here
 	var/module_picker_compactmode = FALSE
 	///malf on_gain sound effect. Set here so Infected AI can override
-	var/malf_sound = 'sound/music/antag/malf.ogg'
+	var/malf_sound = '../assets/sound/music/antag/malf.ogg'
 
 /datum/antagonist/malf_ai/New(give_objectives = TRUE)
 	. = ..()
@@ -264,13 +264,13 @@
 	else
 		result += span_redtext("The [special_role_text] has failed!")
 		if(owner.current)
-			SEND_SOUND(owner.current, 'sound/ambience/misc/ambifailure.ogg')
+			SEND_SOUND(owner.current, '../assets/sound/ambience/misc/ambifailure.ogg')
 	*/
 
 	return result.Join("<br>")
 
 /datum/antagonist/malf_ai/get_preview_icon()
-	var/icon/malf_ai_icon = icon('icons/mob/silicon/ai.dmi', "ai-red")
+	var/icon/malf_ai_icon = icon('../assets/icons/mob/silicon/ai.dmi', "ai-red")
 
 	// Crop out the borders of the AI, just the face
 	malf_ai_icon.Crop(5, 27, 28, 6)

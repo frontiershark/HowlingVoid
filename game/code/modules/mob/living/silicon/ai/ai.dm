@@ -693,7 +693,7 @@
 /datum/action/innate/core_return
 	name = "Return to Main Core"
 	desc = "Leave the APC and resume normal core operations."
-	button_icon = 'icons/mob/actions/actions_AI.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_AI.dmi'
 	button_icon_state = "ai_malf_core"
 
 /datum/action/innate/core_return/Grant(mob/new_owner)
@@ -866,7 +866,7 @@
 /datum/action/innate/choose_modules
 	name = "Malfunction Modules"
 	desc = "Choose from a variety of insidious modules to aid you."
-	button_icon = 'icons/mob/actions/actions_AI.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_AI.dmi'
 	button_icon_state = "modules_menu"
 	var/datum/module_picker/module_picker
 
@@ -944,11 +944,11 @@
 
 	if(!istype(apc) || QDELETED(apc) || apc.machine_stat & BROKEN)
 		to_chat(src, span_danger("Hack aborted. The designated APC no longer exists on the power network."))
-		playsound(get_turf(src), 'sound/machines/buzz/buzz-two.ogg', 50, TRUE, ignore_walls = FALSE)
+		playsound(get_turf(src), '../assets/sound/machines/buzz/buzz-two.ogg', 50, TRUE, ignore_walls = FALSE)
 		return
 	if(apc.aidisabled)
 		to_chat(src, span_danger("Hack aborted. [apc] is no longer responding to our systems."))
-		playsound(get_turf(src), 'sound/machines/buzz/buzz-sigh.ogg', 50, TRUE, ignore_walls = FALSE)
+		playsound(get_turf(src), '../assets/sound/machines/buzz/buzz-sigh.ogg', 50, TRUE, ignore_walls = FALSE)
 		return
 
 	malf_picker.processing_time += max(0, 9 - hacked_apcs.len) // Less resources for each apc hacked, 9 instead of 10 is because you will get 1 as soon as the hacked apc processes
@@ -972,7 +972,7 @@
 	apc.flicker_hacked_icon()
 	apc.set_hacked_hud()
 	hacked_apcs += apc
-	playsound(get_turf(src), 'sound/machines/ding.ogg', 50, TRUE, ignore_walls = FALSE)
+	playsound(get_turf(src), '../assets/sound/machines/ding.ogg', 50, TRUE, ignore_walls = FALSE)
 	to_chat(src, "Hack complete. [apc] is now under your exclusive control.")
 
 /mob/living/silicon/ai/verb/deploy_to_shell()
@@ -1019,7 +1019,7 @@
 /datum/action/innate/deploy_shell
 	name = "Deploy to AI Shell"
 	desc = "Wirelessly control a specialized cyborg shell."
-	button_icon = 'icons/mob/actions/actions_AI.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_AI.dmi'
 	button_icon_state = "ai_shell"
 
 /datum/action/innate/deploy_shell/Trigger(mob/clicker, trigger_flags)
@@ -1031,7 +1031,7 @@
 /datum/action/innate/deploy_last_shell
 	name = "Reconnect to shell"
 	desc = "Reconnect to the most recently used AI shell."
-	button_icon = 'icons/mob/actions/actions_AI.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_AI.dmi'
 	button_icon_state = "ai_last_shell"
 	var/mob/living/silicon/robot/last_used_shell
 

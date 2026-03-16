@@ -1,7 +1,7 @@
 /obj/structure/wallmount_circuit
 	name = "circuit box"
 	desc = "A wall-mounted box suitable for the installation of integrated circuits."
-	icon = 'icons/obj/science/circuits.dmi'
+	icon = '../assets/icons/obj/science/circuits.dmi'
 	icon_state = "wallmount"
 	layer = BELOW_OBJ_LAYER
 	anchored = TRUE
@@ -20,14 +20,14 @@
 	to_chat(user, span_notice("You start unsecuring the circuit box..."))
 	if(tool.use_tool(src, user, 40, volume=50))
 		to_chat(user, span_notice("You unsecure the circuit box."))
-		playsound(loc, 'sound/items/deconstruct.ogg', 50, TRUE)
+		playsound(loc, '../assets/sound/items/deconstruct.ogg', 50, TRUE)
 		deconstruct(TRUE)
 	return ITEM_INTERACT_SUCCESS
 
 /obj/item/wallframe/circuit
 	name = "circuit box frame"
 	desc = "A box that can be mounted on a wall and have circuits installed."
-	icon = 'icons/obj/science/circuits.dmi'
+	icon = '../assets/icons/obj/science/circuits.dmi'
 	icon_state = "wallmount_assembly"
 	result_path = /obj/structure/wallmount_circuit
 	pixel_shift = 32

@@ -14,7 +14,7 @@
 	/// Image we show to our jaunter so they can see where they are
 	var/image/position_indicator
 	/// Icon we draw our position indicator from
-	var/phased_mob_icon = 'icons/obj/weapons/guns/projectiles.dmi'
+	var/phased_mob_icon = '../assets/icons/obj/weapons/guns/projectiles.dmi'
 	/// Icon state we use for our position indicator
 	var/phased_mob_icon_state = "ice_1"
 

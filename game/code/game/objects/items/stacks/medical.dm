@@ -1,7 +1,7 @@
 /obj/item/stack/medical
 	name = "medical pack"
 	singular_name = "medical pack"
-	icon = 'icons/obj/medical/stack_medical.dmi'
+	icon = '../assets/icons/obj/medical/stack_medical.dmi'
 	worn_icon_state = "nothing"
 	amount = 6
 	max_amount = 6
@@ -354,8 +354,8 @@
 	singular_name = "bruise pack"
 	desc = "A therapeutic gel pack and bandages designed to treat blunt-force trauma."
 	icon_state = "brutepack"
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/medical_righthand.dmi'
 	heal_brute = 40
 	self_delay = 4 SECONDS
 	other_delay = 2 SECONDS
@@ -592,8 +592,8 @@
 	gender = PLURAL
 	singular_name = "ointment"
 	icon_state = "ointment"
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/medical_righthand.dmi'
 	amount = 8
 	max_amount = 8
 	self_delay = 4 SECONDS
@@ -673,7 +673,7 @@
 		is_open = TRUE
 		balloon_alert(user, "opened")
 		update_appearance()
-		playsound(src, 'sound/items/poster/poster_ripped.ogg', 20, TRUE)
+		playsound(src, '../assets/sound/items/poster/poster_ripped.ogg', 20, TRUE)
 		return
 	return ..()
 
@@ -726,11 +726,11 @@
 	name = "bone gel"
 	singular_name = "bone gel"
 	desc = "A potent medical gel that, when applied to a damaged bone in a proper surgical setting, triggers an intense melding reaction to repair the wound. Can be directly applied alongside surgical sticky tape to a broken bone in dire circumstances, though this is very harmful to the patient and not recommended."
-	icon = 'icons/obj/medical/surgery_tools.dmi'
+	icon = '../assets/icons/obj/medical/surgery_tools.dmi'
 	icon_state = "bone-gel"
 	inhand_icon_state = "bone-gel"
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/medical_righthand.dmi'
 	amount = 5
 	self_delay = 20
 	novariants = TRUE
@@ -787,16 +787,16 @@
 	self_delay = 40
 	other_delay = 10
 	repeating = TRUE
-	drop_sound = 'sound/misc/moist_impact.ogg'
-	mob_throw_hit_sound = 'sound/misc/moist_impact.ogg'
-	hitsound = 'sound/misc/moist_impact.ogg'
+	drop_sound = '../assets/sound/misc/moist_impact.ogg'
+	mob_throw_hit_sound = '../assets/sound/misc/moist_impact.ogg'
+	hitsound = '../assets/sound/misc/moist_impact.ogg'
 	merge_type = /obj/item/stack/medical/poultice
 	apply_verb = "applying to"
 	works_on_dead = TRUE
 
 /obj/item/stack/medical/poultice/post_heal_effects(amount_healed, mob/living/carbon/healed_mob, mob/living/user)
 	. = ..()
-	playsound(src, 'sound/misc/soggy.ogg', 30, TRUE)
+	playsound(src, '../assets/sound/misc/soggy.ogg', 30, TRUE)
 	healed_mob.adjust_oxy_loss(amount_healed)
 
 /obj/item/stack/medical/bandage
@@ -807,8 +807,8 @@
 	novariants = TRUE
 	amount = 1
 	max_amount = 1
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/medical_righthand.dmi'
 	heal_brute = 25
 	stop_bleeding = 0.2
 	self_delay = 3 SECONDS

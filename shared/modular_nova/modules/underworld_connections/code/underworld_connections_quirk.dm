@@ -84,16 +84,16 @@
 
 /// List of uplink skins, associated list where the value is a list containing icon dmi and then icon_state
 GLOBAL_LIST_INIT(possible_uplink_skins, list(
-	"Brick Phone" = list('icons/obj/antags/gang/cell_phone.dmi', "phone_off"),
-	"Default Black Market Uplink" = list('icons/obj/devices/blackmarket.dmi', "uplink"),
-	"Generic Radio" = list('icons/obj/devices/voice.dmi', "radio"),
-	"Green Walkie Talkie" = list('icons/obj/devices/voice.dmi', "walkietalkie"),
-	"Inconspicious PDA" = list('icons/obj/devices/modular_pda.dmi', "pda"),
-	"Mining Radio" = list('icons/obj/devices/miningradio.dmi', "miningradio"),
-	"Red Analogue Phone" = list('icons/obj/devices/voice.dmi', "red_phone"),
-	"Red Walkie Talkie" = list('icons/obj/devices/voice.dmi', "nukietalkie"),
-	"Syndicate Suspicious Phone" = list('icons/obj/antags/syndicate_tools.dmi', "suspiciousphone"),
-	"Syndicate Tablet (Silicon)" = list('icons/obj/devices/modular_pda.dmi', "tablet-silicon-syndicate"),
+	"Brick Phone" = list('../assets/icons/obj/antags/gang/cell_phone.dmi', "phone_off"),
+	"Default Black Market Uplink" = list('../assets/icons/obj/devices/blackmarket.dmi', "uplink"),
+	"Generic Radio" = list('../assets/icons/obj/devices/voice.dmi', "radio"),
+	"Green Walkie Talkie" = list('../assets/icons/obj/devices/voice.dmi', "walkietalkie"),
+	"Inconspicious PDA" = list('../assets/icons/obj/devices/modular_pda.dmi', "pda"),
+	"Mining Radio" = list('../assets/icons/obj/devices/miningradio.dmi', "miningradio"),
+	"Red Analogue Phone" = list('../assets/icons/obj/devices/voice.dmi', "red_phone"),
+	"Red Walkie Talkie" = list('../assets/icons/obj/devices/voice.dmi', "nukietalkie"),
+	"Syndicate Suspicious Phone" = list('../assets/icons/obj/antags/syndicate_tools.dmi', "suspiciousphone"),
+	"Syndicate Tablet (Silicon)" = list('../assets/icons/obj/devices/modular_pda.dmi', "tablet-silicon-syndicate"),
 ))
 
 /datum/preference/choiced/uplink_skin/init_possible_values()

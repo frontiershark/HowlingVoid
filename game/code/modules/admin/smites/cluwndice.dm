@@ -11,4 +11,4 @@
 
 	var/mob/living/carbon/carbon_target = target
 	carbon_target.set_blood_type(BLOOD_TYPE_CLOWN)
-	SEND_SOUND(carbon_target, 'sound/items/bikehorn.ogg')
+	SEND_SOUND(carbon_target, '../assets/sound/items/bikehorn.ogg')

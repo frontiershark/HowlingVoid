@@ -188,7 +188,7 @@
 
 /datum/action/vehicle
 	check_flags = AB_CHECK_HANDS_BLOCKED | AB_CHECK_IMMOBILE | AB_CHECK_CONSCIOUS
-	button_icon = 'icons/mob/actions/actions_vehicle.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_vehicle.dmi'
 	button_icon_state = "vehicle_eject"
 	var/obj/vehicle/vehicle_target
 
@@ -229,7 +229,7 @@
 	name = "Honk Horn"
 	desc = "Honk your classy horn."
 	button_icon_state = "car_horn"
-	var/hornsound = 'sound/items/carhorn.ogg'
+	var/hornsound = '../assets/sound/items/carhorn.ogg'
 
 /datum/action/vehicle/sealed/horn/Trigger(mob/clicker, trigger_flags)
 	if(TIMER_COOLDOWN_RUNNING(src, COOLDOWN_CAR_HONK))
@@ -252,7 +252,7 @@
 	vehicle_entered_target.headlights_toggle = !vehicle_entered_target.headlights_toggle
 	vehicle_entered_target.set_light_on(vehicle_entered_target.headlights_toggle)
 	vehicle_entered_target.update_appearance()
-	playsound(owner, vehicle_entered_target.headlights_toggle ? 'sound/items/weapons/magin.ogg' : 'sound/items/weapons/magout.ogg', 40, TRUE)
+	playsound(owner, vehicle_entered_target.headlights_toggle ? '../assets/sound/items/weapons/magin.ogg' : '../assets/sound/items/weapons/magout.ogg', 40, TRUE)
 
 /datum/action/vehicle/sealed/dump_kidnapped_mobs
 	name = "Dump Kidnapped Mobs"
@@ -312,7 +312,7 @@
 /datum/action/vehicle/ridden/wheelchair/bell
 	name = "Bell Ring"
 	desc = "Ring the bell."
-	button_icon = 'icons/obj/service/bureaucracy.dmi'
+	button_icon = '../assets/icons/obj/service/bureaucracy.dmi'
 	button_icon_state = "desk_bell"
 	check_flags = AB_CHECK_CONSCIOUS|AB_CHECK_INCAPACITATED
 	var/bell_cooldown
@@ -321,7 +321,7 @@
 	if(TIMER_COOLDOWN_RUNNING(src, bell_cooldown))
 		return
 	TIMER_COOLDOWN_START(src, bell_cooldown, 0.5 SECONDS)
-	playsound(vehicle_ridden_target, 'sound/machines/microwave/microwave-end.ogg', 70)
+	playsound(vehicle_ridden_target, '../assets/sound/machines/microwave/microwave-end.ogg', 70)
 	SEND_SIGNAL(vehicle_ridden_target, COMSIG_WHEELCHAIR_BELL_RANG, owner)
 
 /datum/action/vehicle/ridden/scooter/skateboard/ollie
@@ -343,7 +343,7 @@
 	rider.adjust_stamina_loss(vehicle.instability* 0.75)
 	if (rider.get_stamina_loss() >= 100)
 		vehicle.obj_flags &= ~CAN_BE_HIT
-		playsound(src, 'sound/effects/bang.ogg', 20, TRUE)
+		playsound(src, '../assets/sound/effects/bang.ogg', 20, TRUE)
 		vehicle.unbuckle_mob(rider)
 		rider.throw_at(landing_turf, 2, 2)
 		rider.Paralyze(40)
@@ -362,7 +362,7 @@
 	animate(pixel_z = -6, time = 0.1 SECONDS, flags = ANIMATION_RELATIVE)
 	animate(vehicle, pixel_z = 6, time = 0.3 SECONDS, flags = ANIMATION_RELATIVE|ANIMATION_PARALLEL)
 	animate(pixel_z = -6, time = 0.1 SECONDS, flags = ANIMATION_RELATIVE)
-	playsound(vehicle, 'sound/vehicles/skateboard_ollie.ogg', 50, TRUE)
+	playsound(vehicle, '../assets/sound/vehicles/skateboard_ollie.ogg', 50, TRUE)
 	passtable_on(rider, VEHICLE_TRAIT)
 	passtable_on(vehicle, VEHICLE_TRAIT)
 	rider.Move(landing_turf, vehicle_target.dir)
@@ -381,7 +381,7 @@
 
 	rider.adjust_stamina_loss(board.instability)
 	if (rider.get_stamina_loss() >= 100)
-		playsound(src, 'sound/effects/bang.ogg', 20, vary = TRUE)
+		playsound(src, '../assets/sound/effects/bang.ogg', 20, vary = TRUE)
 		board.unbuckle_mob(rider)
 		rider.Paralyze(50)
 		if(prob(15))
@@ -402,7 +402,7 @@
 		span_notice("[rider] does a sick kickflip and catches [rider.p_their()] board in midair."),
 		span_notice("You do a sick kickflip, catching the board in midair! Stylish."),
 	)
-	playsound(board, 'sound/vehicles/skateboard_ollie.ogg', 50, vary = TRUE)
+	playsound(board, '../assets/sound/vehicles/skateboard_ollie.ogg', 50, vary = TRUE)
 	rider.spin(spintime = 4, speed = 1)
 	animate(rider, pixel_z = 6, time = 0.4 SECONDS, flags = ANIMATION_RELATIVE|ANIMATION_PARALLEL)
 	animate(pixel_z = -6, time = 0.1 SECONDS, flags = ANIMATION_RELATIVE)
@@ -418,11 +418,11 @@
 
 /datum/action/vehicle/sealed/climb_out/vim
 	name = "Eject From Mech"
-	button_icon = 'icons/mob/actions/actions_mecha.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_mecha.dmi'
 	button_icon_state = "mech_eject"
 
 /datum/action/vehicle/sealed/noise
-	var/sound_path = 'sound/items/carhorn.ogg'
+	var/sound_path = '../assets/sound/items/carhorn.ogg'
 	var/sound_message = "makes a sound."
 
 /datum/action/vehicle/sealed/noise/Trigger(mob/clicker, trigger_flags)
@@ -439,7 +439,7 @@
 	name = "Chime!"
 	desc = "Affirmative!"
 	button_icon_state = "vim_chime"
-	sound_path = 'sound/machines/chime.ogg'
+	sound_path = '../assets/sound/machines/chime.ogg'
 	sound_message = "chimes!"
 
 /datum/action/vehicle/sealed/noise/chime/Trigger(mob/clicker, trigger_flags)
@@ -450,7 +450,7 @@
 	name = "Buzz."
 	desc = "Negative!"
 	button_icon_state = "vim_buzz"
-	sound_path = 'sound/machines/buzz/buzz-sigh.ogg'
+	sound_path = '../assets/sound/machines/buzz/buzz-sigh.ogg'
 	sound_message = "buzzes."
 
 /datum/action/vehicle/sealed/noise/buzz/Trigger(mob/clicker, trigger_flags)

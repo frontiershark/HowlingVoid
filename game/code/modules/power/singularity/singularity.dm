@@ -2,7 +2,7 @@
 /obj/singularity
 	name = "gravitational singularity"
 	desc = "A gravitational singularity."
-	icon = 'icons/obj/machines/engine/singularity.dmi'
+	icon = '../assets/icons/obj/machines/engine/singularity.dmi'
 	icon_state = "singularity_s1"
 	anchored = TRUE
 	density = TRUE
@@ -83,7 +83,7 @@
 			ghost_notification_message,
 			source = src,
 			header = ghost_notification_message,
-			ghost_sound = 'sound/machines/warning-buzzer.ogg',
+			ghost_sound = '../assets/sound/machines/warning-buzzer.ogg',
 			notify_volume = 75,
 		)
 
@@ -203,7 +203,7 @@
 	switch(temp_allowed_size)
 		if(STAGE_ONE)
 			current_size = STAGE_ONE
-			icon = 'icons/obj/machines/engine/singularity.dmi'
+			icon = '../assets/icons/obj/machines/engine/singularity.dmi'
 			icon_state = "[singularity_icon_variant]_s1"
 			pixel_x = 0
 			pixel_y = 0
@@ -215,7 +215,7 @@
 		if(STAGE_TWO)
 			if(check_cardinals_range(1, TRUE))
 				current_size = STAGE_TWO
-				icon = 'icons/effects/96x96.dmi'
+				icon = '../assets/icons/effects/96x96.dmi'
 				icon_state = "[singularity_icon_variant]_s3"
 				pixel_x = -32
 				pixel_y = -32
@@ -227,7 +227,7 @@
 		if(STAGE_THREE)
 			if(check_cardinals_range(2, TRUE))
 				current_size = STAGE_THREE
-				icon = 'icons/effects/160x160.dmi'
+				icon = '../assets/icons/effects/160x160.dmi'
 				icon_state = "[singularity_icon_variant]_s5"
 				pixel_x = -64
 				pixel_y = -64
@@ -239,7 +239,7 @@
 		if(STAGE_FOUR)
 			if(check_cardinals_range(3, TRUE))
 				current_size = STAGE_FOUR
-				icon = 'icons/effects/224x224.dmi'
+				icon = '../assets/icons/effects/224x224.dmi'
 				icon_state = "[singularity_icon_variant]_s7"
 				pixel_x = -96
 				pixel_y = -96
@@ -250,7 +250,7 @@
 				dissipate_strength = 10
 		if(STAGE_FIVE)//this one also lacks a check for gens because it eats everything
 			current_size = STAGE_FIVE
-			icon = 'icons/effects/288x288.dmi'
+			icon = '../assets/icons/effects/288x288.dmi'
 			icon_state = "[singularity_icon_variant]_s9"
 			pixel_x = -128
 			pixel_y = -128
@@ -259,7 +259,7 @@
 			dissipate = FALSE //It cant go smaller due to e loss
 		if(STAGE_SIX) //This only happens if a stage 5 singulo consumes a supermatter shard.
 			current_size = STAGE_SIX
-			icon = 'icons/effects/352x352.dmi'
+			icon = '../assets/icons/effects/352x352.dmi'
 			icon_state = "[singularity_icon_variant]_s11"
 			pixel_x = -160
 			pixel_y = -160
@@ -336,7 +336,7 @@
 		blind_message = span_hear("You hear aggressive crackling!"),
 		vision_distance = 15,
 	)
-	playsound(loc, 'sound/effects/clockcult_gateway_disrupted.ogg', 200, vary = TRUE, extrarange = 3, falloff_exponent = 1, frequency = -1, pressure_affected = FALSE, ignore_walls = TRUE, falloff_distance = 7)
+	playsound(loc, '../assets/sound/effects/clockcult_gateway_disrupted.ogg', 200, vary = TRUE, extrarange = 3, falloff_exponent = 1, frequency = -1, pressure_affected = FALSE, ignore_walls = TRUE, falloff_distance = 7)
 	addtimer(CALLBACK(src, PROC_REF(consume_boh_sfx)), 4 SECONDS)
 	animate(src, time = 4 SECONDS, transform = transform.Scale(0.25), flags = ANIMATION_PARALLEL, easing = ELASTIC_EASING)
 	animate(time = 0.5 SECONDS, alpha = 0)
@@ -344,7 +344,7 @@
 	qdel(boh)
 
 /obj/singularity/proc/consume_boh_sfx()
-	playsound(loc, 'sound/effects/supermatter.ogg', 200, vary = TRUE, extrarange = 3, falloff_exponent = 1, frequency = 0.5, pressure_affected = FALSE, ignore_walls = TRUE, falloff_distance = 7)
+	playsound(loc, '../assets/sound/effects/supermatter.ogg', 200, vary = TRUE, extrarange = 3, falloff_exponent = 1, frequency = 0.5, pressure_affected = FALSE, ignore_walls = TRUE, falloff_distance = 7)
 
 /obj/singularity/proc/check_cardinals_range(steps, retry_with_move = FALSE)
 	. = length(GLOB.cardinals) //Should be 4.

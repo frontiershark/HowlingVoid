@@ -63,7 +63,7 @@
 /obj/machinery/dna_vault
 	name = "DNA Vault"
 	desc = "Break glass in case of apocalypse."
-	icon = 'icons/obj/machines/dna_vault.dmi'
+	icon = '../assets/icons/obj/machines/dna_vault.dmi'
 	icon_state = "vault"
 	density = TRUE
 	anchored = TRUE

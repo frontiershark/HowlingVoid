@@ -1,7 +1,7 @@
 /obj/structure/lattice
 	name = "lattice"
 	desc = "A lightweight support lattice. These hold our station together."
-	icon = 'icons/obj/smooth_structures/lattice.dmi'
+	icon = '../assets/icons/obj/smooth_structures/lattice.dmi'
 	icon_state = "lattice-255"
 	base_icon_state = "lattice"
 	density = FALSE
@@ -115,7 +115,7 @@
 /obj/structure/lattice/catwalk
 	name = "catwalk"
 	desc = "A catwalk for easier EVA maneuvering and cable placement."
-	icon = 'icons/obj/smooth_structures/catwalk.dmi'
+	icon = '../assets/icons/obj/smooth_structures/catwalk.dmi'
 	icon_state = "catwalk-0"
 	base_icon_state = "catwalk"
 	number_of_mats = 2
@@ -171,7 +171,7 @@
 /obj/structure/lattice/catwalk/lava
 	name = "heatproof catwalk"
 	desc = "A specialized catwalk for building across lava. Watch your step."
-	icon = 'icons/obj/smooth_structures/catwalk.dmi'
+	icon = '../assets/icons/obj/smooth_structures/catwalk.dmi'
 	icon_state = "catwalk-0"
 	base_icon_state = "catwalk"
 	number_of_mats = 1
@@ -190,7 +190,7 @@
 		to_chat(user, span_warning("You need one floor tile to build atop [src]."))
 		return
 	to_chat(user, span_notice("You construct new plating with [src] as support."))
-	playsound(src, 'sound/items/weapons/genhit.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/weapons/genhit.ogg', 50, TRUE)
 
 	var/turf/turf_we_place_on = get_turf(src)
 	turf_we_place_on.place_on_top(/turf/open/floor/plating, flags = CHANGETURF_INHERIT_AIR)
@@ -200,7 +200,7 @@
 /obj/structure/lattice/catwalk/boulder
 	name = "boulder platform"
 	desc = "A boulder, floating on the molten hot deadly lava. More like a BOATlder."
-	icon = 'icons/obj/smooth_structures/boulder_platform.dmi'
+	icon = '../assets/icons/obj/smooth_structures/boulder_platform.dmi'
 	icon_state = "boulder_platform-0"
 	base_icon_state = "boulder_platform"
 	smoothing_groups = SMOOTH_GROUP_BOULDER_PLATFORM
@@ -227,7 +227,7 @@
 	. = ..()
 
 /obj/structure/lattice/catwalk/boulder/proc/pre_self_destruct()
-	var/mutable_appearance/cracks_overlay = mutable_appearance('icons/obj/ore.dmi', istype(loc, /turf/open/lava/plasma) ? "plasma_cracks" : "lava_cracks", src)
+	var/mutable_appearance/cracks_overlay = mutable_appearance('../assets/icons/obj/ore.dmi', istype(loc, /turf/open/lava/plasma) ? "plasma_cracks" : "lava_cracks", src)
 	cracks_overlay.blend_mode = BLEND_INSET_OVERLAY
 	add_overlay(cracks_overlay)
 	animate(src, alpha = 0, time = 2 SECONDS, pixel_y = -16, easing = QUAD_EASING|EASE_IN)
@@ -238,6 +238,6 @@
  */
 /obj/structure/lattice/catwalk/boulder/proc/self_destruct()
 	visible_message(span_notice("\The [src] sinks and dissapears!"))
-	playsound(src, 'sound/effects/gas_hissing.ogg', 20)
+	playsound(src, '../assets/sound/effects/gas_hissing.ogg', 20)
 	remove_shared_particles(warning_particle)
 	deconstruct()

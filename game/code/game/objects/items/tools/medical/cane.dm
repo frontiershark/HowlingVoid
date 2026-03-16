@@ -1,12 +1,12 @@
 /obj/item/cane
 	name = "cane"
 	desc = "A cane used by a true gentleman. Or a clown."
-	icon = 'icons/obj/weapons/staff.dmi'
+	icon = '../assets/icons/obj/weapons/staff.dmi'
 	icon_state = "cane"
 	inhand_icon_state = "stick"
 	icon_angle = 135
-	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/melee_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/melee_righthand.dmi'
 	force = 5
 	throwforce = 5
 	w_class = WEIGHT_CLASS_SMALL
@@ -43,12 +43,12 @@
 /obj/item/cane/crutch
 	name = "medical crutch"
 	desc = "A medical crutch used by people missing a leg. Not all that useful if you're missing both of them, though."
-	icon = 'icons/obj/weapons/staff.dmi'
+	icon = '../assets/icons/obj/weapons/staff.dmi'
 	icon_state = "crutch_med"
 	inhand_icon_state = "crutch_med"
 	icon_angle = 45
-	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/melee_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/melee_righthand.dmi'
 	force = 12
 	throwforce = 8
 	w_class = WEIGHT_CLASS_BULKY
@@ -104,8 +104,8 @@
 	icon_state = "cane_white"
 	inhand_icon_state = "cane_white"
 	icon_angle = 45
-	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/melee_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/melee_righthand.dmi'
 	force = 1
 	w_class = WEIGHT_CLASS_SMALL
 	custom_materials = list(/datum/material/iron = SMALL_MATERIAL_AMOUNT * 6)
@@ -143,5 +143,5 @@
 	else
 		REMOVE_TRAIT(src, TRAIT_BLIND_TOOL, INNATE_TRAIT)
 
-	playsound(src, 'sound/items/weapons/batonextend.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/weapons/batonextend.ogg', 50, TRUE)
 	return COMPONENT_NO_DEFAULT_MESSAGE

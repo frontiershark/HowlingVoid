@@ -46,7 +46,7 @@
 	// Get icon for current display
 	var/current_icon_state = resolve_ai_icon_sync(current_display)
 	data["current_icon"] = list(
-		"icon" = 'icons/mob/silicon/ai.dmi',
+		"icon" = '../assets/icons/mob/silicon/ai.dmi',
 		"icon_state" = current_icon_state
 	)
 
@@ -57,7 +57,7 @@
 		var/list/option_data = list(
 			"name" = option_name,
 			"icon_state" = icon_state,
-			"icon" = 'icons/mob/silicon/ai.dmi'
+			"icon" = '../assets/icons/mob/silicon/ai.dmi'
 		)
 		options += list(option_data)
 

@@ -3,7 +3,7 @@
 /obj/item/mayhem
 	name = "mayhem in a bottle"
 	desc = "A magically infused bottle of blood, the scent of which will drive anyone nearby into a murderous frenzy."
-	icon = 'icons/obj/mining_zones/artefacts.dmi'
+	icon = '../assets/icons/obj/mining_zones/artefacts.dmi'
 	icon_state = "vial"
 
 /obj/item/mayhem/attack_self(mob/user)
@@ -17,7 +17,7 @@
 		target.apply_status_effect(/datum/status_effect/mayhem)
 
 	to_chat(user, span_notice("You shatter the bottle!"))
-	playsound(user.loc, 'sound/effects/glass/glassbr1.ogg', 100, TRUE)
+	playsound(user.loc, '../assets/sound/effects/glass/glassbr1.ogg', 100, TRUE)
 	message_admins(span_adminnotice("[ADMIN_LOOKUPFLW(user)] has activated a bottle of mayhem!"))
 	user.log_message("activated a bottle of mayhem", LOG_ATTACK)
 	qdel(src)
@@ -27,7 +27,7 @@
 /obj/item/clothing/suit/hooded/hostile_environment
 	name = "H.E.C.K. suit"
 	desc = "Hostile Environment Cross-Kinetic Suit: A suit designed to withstand the wide variety of hazards from Lavaland. It wasn't enough for its last owner."
-	icon = 'icons/map_icons/clothing/suit/_suit.dmi'
+	icon = '../assets/icons/map_icons/clothing/suit/_suit.dmi'
 	icon_state = "/obj/item/clothing/suit/hooded/hostile_environment"
 	post_init_icon_state = "hostile_env"
 	hoodtype = /obj/item/clothing/head/hooded/hostile_environment
@@ -76,10 +76,10 @@
 /obj/item/clothing/head/hooded/hostile_environment
 	name = "H.E.C.K. helmet"
 	desc = "Hostile Environment Cross-Kinetic Helmet: A helmet designed to withstand the wide variety of hazards from Lavaland. It wasn't enough for its last owner."
-	icon = 'icons/map_icons/clothing/head/_head.dmi'
+	icon = '../assets/icons/map_icons/clothing/head/_head.dmi'
 	icon_state = "/obj/item/clothing/head/hooded/hostile_environment"
 	post_init_icon_state = "hostile_env"
-	worn_icon = 'icons/mob/clothing/head/helmet.dmi'
+	worn_icon = '../assets/icons/mob/clothing/head/helmet.dmi'
 	w_class = WEIGHT_CLASS_NORMAL
 	armor_type = /datum/armor/hooded_hostile_environment
 	cold_protection = HEAD

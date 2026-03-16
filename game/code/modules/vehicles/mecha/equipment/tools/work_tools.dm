@@ -20,7 +20,7 @@
 	///Var for the chassis we are attached to, needed to access ripley contents and such
 	var/obj/vehicle/sealed/mecha/ripley/cargo_holder
 	///Audio for using the hydraulic clamp
-	var/clampsound = 'sound/vehicles/mecha/hydraulic.ogg'
+	var/clampsound = '../assets/sound/vehicles/mecha/hydraulic.ogg'
 	///Chassis but typed for the cargo_hold var
 	var/obj/vehicle/sealed/mecha/ripley/workmech
 
@@ -183,7 +183,7 @@
 		reagents.trans_to(water, required_amount / 8)
 		water.move_at(get_step(chassis, get_dir(targetturf, chassis)), 2, 4) //Target is the tile opposite of the mech as the starting turf.
 
-	playsound(chassis, 'sound/effects/extinguish.ogg', 75, TRUE, -3)
+	playsound(chassis, '../assets/sound/effects/extinguish.ogg', 75, TRUE, -3)
 
 
 /**
@@ -205,7 +205,7 @@
 		return
 
 	refill_source.reagents.trans_to(src, reagents.maximum_volume)
-	playsound(chassis, 'sound/effects/refill.ogg', 50, TRUE, -6)
+	playsound(chassis, '../assets/sound/effects/refill.ogg', 50, TRUE, -6)
 
 /obj/item/mecha_parts/mecha_equipment/extinguisher/get_snowflake_data()
 	return list(
@@ -395,7 +395,7 @@
 	if(HAS_TRAIT(markone, TRAIT_MECHA_CREATED_NORMALLY))
 		ADD_TRAIT(newmech, TRAIT_MECHA_CREATED_NORMALLY, REF(newmech))
 	qdel(markone)
-	playsound(get_turf(newmech),'sound/items/tools/ratchet.ogg',50,TRUE)
+	playsound(get_turf(newmech),'../assets/sound/items/tools/ratchet.ogg',50,TRUE)
 
 /obj/item/mecha_parts/mecha_equipment/ripleyupgrade/paddy
 	name = "Paddy Conversion Kit"

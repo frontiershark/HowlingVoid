@@ -202,7 +202,7 @@
 /datum/component/grillable/proc/add_grilled_item_overlay(datum/source, list/overlays)
 	SIGNAL_HANDLER
 
-	overlays += mutable_appearance('icons/effects/steam.dmi', "[use_large_steam_sprite ? "steam_triple" : "steam_single"]", ABOVE_OBJ_LAYER)
+	overlays += mutable_appearance('../assets/icons/effects/steam.dmi', "[use_large_steam_sprite ? "steam_triple" : "steam_single"]", ABOVE_OBJ_LAYER)
 
 /// Signal proc for [COMSIG_TURF_EXPOSE], atmosphere might be hot enough for grilling.
 /datum/component/grillable/proc/on_turf_atmos_changed(turf/open/source, datum/gas_mixture/air, exposed_temperature)

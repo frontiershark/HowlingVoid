@@ -4,7 +4,7 @@
 /obj/item/gun/medbeam/afad
 	name = "Automated First Aid Device"
 	desc = "Usually supplied in medkits, the AFAD is a revolutionary device meant for fixing scrapes and bruises, and totally not a knockoff of the legendary medibeam. A label on the underside reminds you not to cross the beams."
-	icon = 'icons/obj/chronos.dmi'
+	icon = '../assets/icons/obj/chronos.dmi'
 	icon_state = "chronogun"
 	inhand_icon_state = "chronogun"
 	w_class = WEIGHT_CLASS_NORMAL

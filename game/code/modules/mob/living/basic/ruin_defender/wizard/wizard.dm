@@ -1,7 +1,7 @@
 /mob/living/basic/wizard
 	name = "Space Wizard"
 	desc = "A wizard is never early. Nor is he late. He arrives exactly at the worst possible moment."
-	icon = 'icons/mob/simple/simple_human.dmi'
+	icon = '../assets/icons/mob/simple/simple_human.dmi'
 	icon_state = "wizard"
 	icon_living = "wizard"
 	icon_dead = "wizard_dead"
@@ -14,7 +14,7 @@
 	melee_damage_upper = 5
 	attack_verb_continuous = "punches"
 	attack_verb_simple = "punch"
-	attack_sound = 'sound/items/weapons/punch1.ogg'
+	attack_sound = '../assets/sound/items/weapons/punch1.ogg'
 	combat_mode = TRUE
 	habitable_atmos = list("min_oxy" = 5, "max_oxy" = 0, "min_plas" = 0, "max_plas" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
 	unsuitable_atmos_damage = 7.5

@@ -21,7 +21,7 @@
 			return FALSE
 		to_chat(user, span_notice("You insert [attacking_item] into [src]!"))
 		loaded_vial = attacking_item
-		playsound(loc, 'sound/items/weapons/autoguninsert.ogg', 35, 1)
+		playsound(loc, '../assets/sound/items/weapons/autoguninsert.ogg', 35, 1)
 		update_appearance()
 
 /obj/item/rna_extractor/attack_self(mob/living/user)
@@ -49,7 +49,7 @@
 	if(target_infection.extract_rna())
 		loaded_vial.load_rna(target)
 		to_chat(user, span_notice("[src] successfully scanned [target], and now holds a sample virus RNA data."))
-		playsound(src.loc, 'sound/effects/spray2.ogg', 50, TRUE, -6)
+		playsound(src.loc, '../assets/sound/effects/spray2.ogg', 50, TRUE, -6)
 		update_appearance()
 	else
 		to_chat(user, span_warning("[target] has no useable RNA!"))
@@ -61,7 +61,7 @@
 		to_chat(user, span_notice("You remove [loaded_vial] from [src]."))
 		loaded_vial = null
 		update_appearance()
-		playsound(loc, 'sound/items/weapons/empty.ogg', 50, 1)
+		playsound(loc, '../assets/sound/items/weapons/empty.ogg', 50, 1)
 	else
 		to_chat(user, span_notice("[src] isn't loaded!"))
 		return
@@ -127,7 +127,7 @@
 			return
 		if(do_after(user, 4 SECONDS))
 			cure_target(H)
-			playsound(src.loc, 'sound/effects/spray2.ogg', 50, TRUE, -6)
+			playsound(src.loc, '../assets/sound/effects/spray2.ogg', 50, TRUE, -6)
 			to_chat(user, span_notice("You inject [H] wth [src]!"))
 			used = TRUE
 			update_appearance()
@@ -183,7 +183,7 @@
 	to_chat(user, span_notice("You insert [attacking_item] to into [src] reciprocal."))
 	flick("h_lathe_load", src)
 	update_appearance()
-	playsound(loc, 'sound/items/weapons/autoguninsert.ogg', 35, 1)
+	playsound(loc, '../assets/sound/items/weapons/autoguninsert.ogg', 35, 1)
 
 
 /obj/machinery/rnd/rna_recombinator/ui_interact(mob/user)
@@ -265,7 +265,7 @@
 	vial.contains_rna = FALSE
 	vial.update_appearance()
 	ejectItem()
-	playsound(loc, 'sound/items/tools/rped.ogg', 60, 1)
+	playsound(loc, '../assets/sound/items/tools/rped.ogg', 60, 1)
 	flick("h_lathe_wloop", src)
 	use_energy(active_power_usage)
 	timer_id = addtimer(CALLBACK(src, PROC_REF(recombinate_step)), recombination_step_time, TIMER_STOPPABLE)
@@ -284,7 +284,7 @@
 		return
 	flick("h_lathe_wloop", src)
 	use_energy(active_power_usage)
-	playsound(loc, 'sound/items/tools/rped.ogg', 60, 1)
+	playsound(loc, '../assets/sound/items/tools/rped.ogg', 60, 1)
 	timer_id = addtimer(CALLBACK(src, PROC_REF(recombinate_step)), recombination_step_time, TIMER_STOPPABLE)
 
 /obj/machinery/rnd/rna_recombinator/proc/recombinate_finish()
@@ -304,7 +304,7 @@
 		new /obj/item/reagent_containers/cup/bottle/hnz/one(get_turf(src))
 	flick("h_lathe_leave", src)
 	use_energy(active_power_usage)
-	playsound(loc, 'sound/machines/ding.ogg', 60, 1)
+	playsound(loc, '../assets/sound/machines/ding.ogg', 60, 1)
 	status = STATUS_IDLE
 
 /obj/machinery/rnd/rna_recombinator/RefreshParts()

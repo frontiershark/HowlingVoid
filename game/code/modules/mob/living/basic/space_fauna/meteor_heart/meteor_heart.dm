@@ -7,7 +7,7 @@
 /mob/living/basic/meteor_heart
 	name = "meteor heart"
 	desc = "A pulsing lump of flesh and bone growing directly out of the ground."
-	icon = 'icons/mob/simple/meteor_heart.dmi'
+	icon = '../assets/icons/mob/simple/meteor_heart.dmi'
 	icon_state = "heart"
 	icon_living = "heart"
 	status_flags = NONE
@@ -88,7 +88,7 @@
 /// Dramatic death animation for the meteor heart mob
 /obj/effect/temp_visual/meteor_heart_death
 	name = "meteor heart"
-	icon = 'icons/mob/simple/meteor_heart.dmi'
+	icon = '../assets/icons/mob/simple/meteor_heart.dmi'
 	icon_state = "heart_dying"
 	desc = "You've killed this innocent asteroid, I hope you feel happy."
 	duration = 3 SECONDS
@@ -97,7 +97,7 @@
 
 /obj/effect/temp_visual/meteor_heart_death/Initialize(mapload)
 	. = ..()
-	playsound(src, 'sound/effects/magic/demon_dies.ogg', vol = 100, vary = TRUE, pressure_affected = FALSE)
+	playsound(src, '../assets/sound/effects/magic/demon_dies.ogg', vol = 100, vary = TRUE, pressure_affected = FALSE)
 	Shake(2, 0, 3 SECONDS)
 	addtimer(CALLBACK(src, PROC_REF(gib)), duration - 1, TIMER_DELETE_ME)
 	soundloop = new(src, start_immediately = FALSE)
@@ -111,7 +111,7 @@
 
 /// Make this place a mess
 /obj/effect/temp_visual/meteor_heart_death/proc/gib()
-	playsound(loc, 'sound/effects/blob/attackblob.ogg', vol = 100, vary = TRUE, pressure_affected = FALSE)
+	playsound(loc, '../assets/sound/effects/blob/attackblob.ogg', vol = 100, vary = TRUE, pressure_affected = FALSE)
 	var/turf/my_turf = get_turf(src)
 	new /obj/effect/gibspawner/human(my_turf)
 	for (var/obj/structure/eyeball as anything in GLOB.meteor_eyeballs)

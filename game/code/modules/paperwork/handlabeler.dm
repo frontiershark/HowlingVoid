@@ -2,12 +2,12 @@
 /obj/item/hand_labeler
 	name = "hand labeler"
 	desc = "A combined label printer, applicator, and remover, all in a single portable device. Designed to be easy to operate and use."
-	icon = 'icons/obj/service/bureaucracy.dmi' //NOVA EDIT - ICON OVERRIDDEN IN AESTHETICS MODULE
+	icon = '../assets/icons/obj/service/bureaucracy.dmi' //NOVA EDIT - ICON OVERRIDDEN IN AESTHETICS MODULE
 	icon_state = "labeler0"
 	item_flags = NOBLUDGEON
 	w_class = WEIGHT_CLASS_SMALL
-	drop_sound = 'sound/items/handling/tape_drop.ogg'
-	pickup_sound = 'sound/items/handling/tape_pickup.ogg'
+	drop_sound = '../assets/sound/items/handling/tape_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/tape_pickup.ogg'
 	custom_materials = list(
 		/datum/material/iron = SMALL_MATERIAL_AMOUNT * 1.5,
 		/datum/material/glass = SMALL_MATERIAL_AMOUNT * 1.25,
@@ -80,7 +80,7 @@
 	)
 	var/obj/item/label/stick_label = new(null, label)
 	stick_label.stick_to_atom(interacting_with, cursor_x, cursor_y)
-	playsound(interacting_with, 'sound/items/handling/component_pickup.ogg', 20, TRUE)
+	playsound(interacting_with, '../assets/sound/items/handling/component_pickup.ogg', 20, TRUE)
 	labels_left--
 	return TRUE
 
@@ -149,12 +149,12 @@
 
 /obj/item/hand_labeler_refill
 	name = "hand labeler paper roll"
-	icon = 'icons/obj/service/bureaucracy.dmi'
+	icon = '../assets/icons/obj/service/bureaucracy.dmi'
 	desc = "A roll of paper. Use it on a hand labeler to refill it."
 	icon_state = "labeler_refill"
 	inhand_icon_state = "electropack"
-	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/devices_righthand.dmi'
 	w_class = WEIGHT_CLASS_TINY
 	throw_range = 3
 	throw_speed = 1
@@ -167,15 +167,15 @@
 /obj/item/label
 	name = "label"
 	desc = "A strip of paper."
-	icon = 'icons/obj/toys/stickers.dmi'
+	icon = '../assets/icons/obj/toys/stickers.dmi'
 	icon_state = "label"
 	throw_range = 1
 	throw_speed = 1
 	pressure_resistance = 0
 	resistance_flags = FLAMMABLE
 	max_integrity = 30
-	drop_sound = 'sound/items/handling/paper_drop.ogg'
-	pickup_sound = 'sound/items/handling/paper_pickup.ogg'
+	drop_sound = '../assets/sound/items/handling/paper_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/paper_pickup.ogg'
 	item_flags = NOBLUDGEON | SKIP_FANTASY_ON_SPAWN
 	w_class = WEIGHT_CLASS_TINY
 
@@ -291,10 +291,10 @@
 			return ITEM_INTERACT_BLOCKING
 
 		update_label_name(labeler.label)
-		playsound(sticking_to, 'sound/items/handling/component_pickup.ogg', 20, TRUE)
+		playsound(sticking_to, '../assets/sound/items/handling/component_pickup.ogg', 20, TRUE)
 		sticking_to.balloon_alert(user, "label renamed")
 	else
-		playsound(sticking_to, 'sound/items/poster/poster_ripped.ogg', 20, TRUE)
+		playsound(sticking_to, '../assets/sound/items/poster/poster_ripped.ogg', 20, TRUE)
 		sticking_to.balloon_alert(user, "label removed")
 		qdel(src)
 	return ITEM_INTERACT_SUCCESS

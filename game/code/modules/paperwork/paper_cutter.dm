@@ -1,7 +1,7 @@
 /obj/item/papercutter
 	name = "paper cutter"
 	desc = "Standard office equipment. Precisely cuts paper using a large blade."
-	icon = 'icons/obj/service/bureaucracy.dmi'
+	icon = '../assets/icons/obj/service/bureaucracy.dmi'
 	icon_state = "papercutter"
 	force = 5
 	throwforce = 5
@@ -91,7 +91,7 @@
 		return BRUTELOSS
 	// If we have no blade, just beat ourselves up
 	user.visible_message(span_suicide("[user] repeatedly bashes [src] against [user.p_them()]self! It looks like [user.p_theyre()] trying to commit suicide!"))
-	playsound(loc, 'sound/items/gavel.ogg', 50, TRUE, -1)
+	playsound(loc, '../assets/sound/items/gavel.ogg', 50, TRUE, -1)
 	return BRUTELOSS
 
 /obj/item/papercutter/update_overlays()
@@ -163,7 +163,7 @@
 	return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
 /obj/item/papercutter/proc/cut_paper(mob/user)
-	playsound(src.loc, 'sound/items/weapons/slash.ogg', 50, TRUE)
+	playsound(src.loc, '../assets/sound/items/weapons/slash.ogg', 50, TRUE)
 	var/clumsy = (iscarbon(user) && HAS_TRAIT(user, TRAIT_CLUMSY) && prob(cut_self_chance))
 	to_chat(user, span_userdanger("You neatly cut [stored_paper][clumsy ? "... and your finger in the process!" : "."]"))
 	if(clumsy)
@@ -182,8 +182,8 @@
 	desc = "A little slip of paper left over after a larger piece was cut. Whoa."
 	icon_state = "paperslip"
 	inhand_icon_state = "silver_id"
-	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/idcards_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/idcards_righthand.dmi'
 
 /obj/item/paper/paperslip/grind_results()
 	return list(/datum/reagent/cellulose = 1.5)
@@ -202,8 +202,8 @@
 	icon_state = "corppaperslip"
 	custom_materials = list(/datum/material/plastic = SHEET_MATERIAL_AMOUNT * 3, /datum/material/paper = HALF_SHEET_MATERIAL_AMOUNT / 2)
 	max_integrity = 130 //Slightly more sturdy because of being made out of a plastic
-	drop_sound = 'sound/items/handling/disk_drop.ogg'
-	pickup_sound = 'sound/items/handling/disk_pickup.ogg'
+	drop_sound = '../assets/sound/items/handling/disk_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/disk_pickup.ogg'
 	throw_range = 6
 	throw_speed = 2
 
@@ -213,8 +213,8 @@
 /obj/item/hatchet/cutterblade
 	name = "paper cutter blade"
 	desc = "The blade of a paper cutter. Most likely removed for polishing or sharpening."
-	icon = 'icons/obj/service/bureaucracy.dmi'
+	icon = '../assets/icons/obj/service/bureaucracy.dmi'
 	icon_state = "cutterblade"
 	inhand_icon_state = "knife"
-	lefthand_file = 'icons/mob/inhands/equipment/kitchen_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/kitchen_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/kitchen_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/kitchen_righthand.dmi'

@@ -2,12 +2,12 @@
 /obj/item/permanent_portal_creator
 	name = "two-way bluespace entanglement device"
 	desc = "A device with a very complex name, that is only used to confirm the second location that's tied to a stationary entanglement anchor."
-	icon = 'icons/obj/devices/tracker.dmi'
+	icon = '../assets/icons/obj/devices/tracker.dmi'
 	icon_state = "hand_tele"
 	inhand_icon_state = "electronic"
 	worn_icon_state = "electronic"
-	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/devices_righthand.dmi'
 	throwforce = 0
 	w_class = WEIGHT_CLASS_SMALL
 	throw_speed = 3
@@ -75,10 +75,10 @@
 /obj/item/permanent_portal_anchor
 	name = "two-way bluespace entanglement anchor"
 	desc = "A device with a very complex name, that serves as the stationary target of a linked two-way bluespace entanglement device."
-	icon = 'icons/obj/devices/tracker.dmi'
+	icon = '../assets/icons/obj/devices/tracker.dmi'
 	icon_state = "beacon"
-	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/devices_righthand.dmi'
 	anchored = FALSE
 	density = FALSE
 	layer = BELOW_MOB_LAYER

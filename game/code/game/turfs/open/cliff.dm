@@ -1,7 +1,7 @@
 /// A cliff tile from where people can fall. Should generally fall downwards, but you can change it if you want
 /turf/open/cliff
 	icon_state = "cliff"
-	icon = 'icons/turf/cliff/cliff.dmi'
+	icon = '../assets/icons/turf/cliff/cliff.dmi'
 	density = TRUE
 	/// From our perspective, where does someone need to stand to be able to fall from us? Cardinal only, we do the diagonals automatically
 	var/can_fall_from_direction = NORTH
@@ -118,7 +118,7 @@
 /// Snowy cliff!
 /turf/open/cliff/snowrock
 	icon_state = "icerock_wall-0"
-	icon = 'icons/turf/cliff/icerock_cliff.dmi'
+	icon = '../assets/icons/turf/cliff/icerock_cliff.dmi'
 	base_icon_state = "icerock_wall"
 
 	smoothing_flags = SMOOTH_BITMASK | SMOOTH_BORDER

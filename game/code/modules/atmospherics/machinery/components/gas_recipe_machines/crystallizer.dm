@@ -4,7 +4,7 @@
 #define HIGH_CONDUCTIVITY_RATIO 0.95
 
 /obj/machinery/atmospherics/components/binary/crystallizer
-	icon = 'icons/obj/machines/atmospherics/machines.dmi'
+	icon = '../assets/icons/obj/machines/atmospherics/machines.dmi'
 	icon_state = "crystallizer-off"
 	base_icon_state = "crystallizer"
 	name = "crystallizer"
@@ -71,9 +71,9 @@
 
 /obj/machinery/atmospherics/components/binary/crystallizer/update_overlays()
 	. = ..()
-	var/mutable_appearance/pipe_appearance1 = mutable_appearance('icons/obj/pipes_n_cables/pipe_underlays.dmi', "intact_[dir]_[piping_layer]", layer = GAS_SCRUBBER_LAYER)
+	var/mutable_appearance/pipe_appearance1 = mutable_appearance('../assets/icons/obj/pipes_n_cables/pipe_underlays.dmi', "intact_[dir]_[piping_layer]", layer = GAS_SCRUBBER_LAYER)
 	pipe_appearance1.color = COLOR_LIME
-	var/mutable_appearance/pipe_appearance2 = mutable_appearance('icons/obj/pipes_n_cables/pipe_underlays.dmi', "intact_[REVERSE_DIR(dir)]_[piping_layer]", layer = GAS_SCRUBBER_LAYER)
+	var/mutable_appearance/pipe_appearance2 = mutable_appearance('../assets/icons/obj/pipes_n_cables/pipe_underlays.dmi', "intact_[REVERSE_DIR(dir)]_[piping_layer]", layer = GAS_SCRUBBER_LAYER)
 	pipe_appearance2.color = COLOR_MOSTLY_PURE_RED
 	. += pipe_appearance1
 	. += pipe_appearance2

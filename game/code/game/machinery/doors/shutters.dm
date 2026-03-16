@@ -2,7 +2,7 @@
 	gender = PLURAL
 	name = "shutters"
 	desc = "Heavy duty mechanical shutters with an atmospheric seal that keeps them airtight once closed."
-	icon = 'icons/obj/doors/shutters.dmi'
+	icon = '../assets/icons/obj/doors/shutters.dmi'
 	layer = SHUTTER_LAYER
 	closingLayer = SHUTTER_LAYER
 	damage_deflection = 20
@@ -10,7 +10,7 @@
 	max_integrity = 100
 	recipe_type = /datum/crafting_recipe/shutters
 	custom_materials = list(/datum/material/alloy/plasteel = SHEET_MATERIAL_AMOUNT * 5, /datum/material/iron = SMALL_MATERIAL_AMOUNT, /datum/material/glass = SMALL_MATERIAL_AMOUNT)
-	animation_sound = 'sound/machines/shutter.ogg'
+	animation_sound = '../assets/sound/machines/shutter.ogg'
 	show_nav_computer_icon = FALSE
 
 /obj/machinery/door/poddoor/shutters/animation_length(animation)
@@ -52,7 +52,7 @@
 /obj/machinery/door/poddoor/shutters/radiation
 	name = "radiation shutters"
 	desc = "Lead-lined shutters with a radiation hazard symbol. Whilst this won't stop you getting irradiated, especially by a supermatter crystal, it will stop radiation travelling as far."
-	icon = 'icons/obj/doors/shutters_radiation.dmi'
+	icon = '../assets/icons/obj/doors/shutters_radiation.dmi'
 	icon_state = "closed"
 	rad_insulation = RAD_EXTREME_INSULATION
 
@@ -82,7 +82,7 @@
 /obj/machinery/door/poddoor/shutters/window
 	name = "windowed shutters"
 	desc = "A shutter with a thick see-through polycarbonate window."
-	icon = 'icons/obj/doors/shutters_window.dmi'
+	icon = '../assets/icons/obj/doors/shutters_window.dmi'
 	icon_state = "closed"
 	opacity = FALSE
 	glass = TRUE

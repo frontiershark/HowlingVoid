@@ -1,7 +1,7 @@
 /obj/item/reagent_containers/dropper
 	name = "dropper"
 	desc = "A dropper. Holds up to 5 units."
-	icon = 'icons/obj/medical/chemical.dmi'
+	icon = '../assets/icons/obj/medical/chemical.dmi'
 	icon_state = "dropper0"
 	inhand_icon_state = "dropper"
 	worn_icon_state = "pen"
@@ -87,6 +87,6 @@
 	. = ..()
 	if(!reagents.total_volume)
 		return
-	var/mutable_appearance/filling = mutable_appearance('icons/obj/medical/reagent_fillings.dmi', "dropper")
+	var/mutable_appearance/filling = mutable_appearance('../assets/icons/obj/medical/reagent_fillings.dmi', "dropper")
 	filling.color = mix_color_from_reagents(reagents.reagent_list)
 	. += filling

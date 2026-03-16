@@ -4,7 +4,7 @@
 ///A lavaland geyser that spawns chems and can be mining scanned for points. Made to work with the plumbing pump to extract that sweet rare nectar
 /obj/structure/geyser
 	name = "geyser"
-	icon = 'icons/obj/mining_zones/terrain.dmi'
+	icon = '../assets/icons/obj/mining_zones/terrain.dmi'
 	icon_state = "geyser"
 	anchored = TRUE
 
@@ -39,7 +39,7 @@
 	if(erupting_state)
 		icon_state = erupting_state
 	else
-		var/mutable_appearance/I = mutable_appearance('icons/obj/mining_zones/terrain.dmi', "[icon_state]_soup")
+		var/mutable_appearance/I = mutable_appearance('../assets/icons/obj/mining_zones/terrain.dmi', "[icon_state]_soup")
 		I.color = mix_color_from_reagents(reagents.reagent_list)
 		add_overlay(I)
 
@@ -130,7 +130,7 @@
 /obj/item/plunger
 	name = "plunger"
 	desc = "It's a plunger for plunging."
-	icon = 'icons/obj/watercloset.dmi'
+	icon = '../assets/icons/obj/watercloset.dmi'
 	icon_state = "plunger"
 	worn_icon_state = "plunger"
 	icon_angle = 90
@@ -179,7 +179,7 @@
 		icon_state = layer_mode_sprite
 		to_chat(user, span_notice("You set the plunger to 'Layer Mode'."))
 
-	playsound(src, 'sound/machines/click.ogg', 10, TRUE)
+	playsound(src, '../assets/sound/machines/click.ogg', 10, TRUE)
 
 /obj/item/plunger/click_alt(mob/user)
 	var/new_layer = tgui_input_list(user, "Select a layer", "Layer", GLOB.plumbing_layers)

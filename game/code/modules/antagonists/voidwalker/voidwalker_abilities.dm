@@ -2,7 +2,7 @@
 /datum/action/cooldown/spell/pointed/unsettle
 	name = "Unsettle"
 	desc = "Stare directly into someone who doesn't see you. Remain in their view for a bit to stun them for 2 seconds and announce your presence to them. "
-	button_icon = 'icons/mob/actions/actions_voidwalker.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_voidwalker.dmi'
 	button_icon_state = "unsettle"
 	background_icon_state = "bg_void"
 	overlay_icon_state = null
@@ -80,7 +80,7 @@
 /datum/action/cooldown/spell/list_target/telepathy/voidwalker
 	name = "Cosmic Transmit"
 	background_icon_state = "bg_void"
-	button_icon = 'icons/mob/actions/actions_voidwalker.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_voidwalker.dmi'
 	button_icon_state = "telepathy"
 	panel = null
 	overlay_icon_state = null
@@ -114,7 +114,7 @@
 /datum/action/cooldown/mob_cooldown/charge/voidwalker
 	name = "Cosmic Dash"
 	background_icon_state = "bg_void"
-	button_icon = 'icons/mob/actions/actions_voidwalker.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_voidwalker.dmi'
 	button_icon_state = "dash"
 	charge_past = 0
 	charge_damage = 20
@@ -126,7 +126,7 @@
 	var/turf/valid_target_turf = /turf/open/space
 
 /datum/action/cooldown/mob_cooldown/charge/voidwalker/do_charge_indicator(atom/charger, atom/charge_target)
-	playsound(owner, 'sound/effects/curse/curse1.ogg', 100)
+	playsound(owner, '../assets/sound/effects/curse/curse1.ogg', 100)
 	return
 
 /datum/action/cooldown/mob_cooldown/charge/voidwalker/on_moved(atom/source)

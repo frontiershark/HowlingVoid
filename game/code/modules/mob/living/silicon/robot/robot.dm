@@ -193,7 +193,7 @@
 		for(var/option in GLOB.cyborg_model_list)
 			var/obj/item/robot_model/model = GLOB.cyborg_model_list[option]
 			var/model_icon = initial(model.cyborg_base_icon)
-			GLOB.cyborg_base_models_icon_list[option] = image(icon = 'modular_nova/master_files/icons/mob/robots.dmi', icon_state = model_icon) // NOVA EDIT - CARGO BORGS - ORIGINAL: model_icons[option] = image(icon = 'icons/mob/robots.dmi', icon_state = model_icon)
+			GLOB.cyborg_base_models_icon_list[option] = image(icon = 'modular_nova/master_files/icons/mob/robots.dmi', icon_state = model_icon) // NOVA EDIT - CARGO BORGS - ORIGINAL: model_icons[option] = image(icon = '../assets/icons/mob/robots.dmi', icon_state = model_icon)
 	// NOVA EDIT END
 
 	var/input_model = show_radial_menu(src, src, GLOB.cyborg_base_models_icon_list, radius = 42)
@@ -339,7 +339,7 @@
 			add_overlay("ov-opencover -c")
 
 	if(hat)
-		hat_overlay = hat.build_worn_icon(default_layer = 20, default_icon_file = 'icons/mob/clothing/head/default.dmi')
+		hat_overlay = hat.build_worn_icon(default_layer = 20, default_icon_file = '../assets/icons/mob/clothing/head/default.dmi')
 		update_worn_icons()
 	else if(hat_overlay)
 		QDEL_NULL(hat_overlay)
@@ -499,7 +499,7 @@
 	if(!lamp_functional)
 		return
 	lamp_functional = FALSE
-	playsound(src, 'sound/effects/footstep/glass_step.ogg', 50)
+	playsound(src, '../assets/sound/effects/footstep/glass_step.ogg', 50)
 	toggle_headlamp(TRUE)
 	to_chat(src, span_danger("Your headlamp is broken! You'll need a human to help replace it."))
 
@@ -932,7 +932,7 @@
 /datum/action/innate/undeployment
 	name = "Disconnect from shell"
 	desc = "Stop controlling your shell and resume normal core operations."
-	button_icon = 'icons/mob/actions/actions_AI.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_AI.dmi'
 	button_icon_state = "ai_core"
 
 /datum/action/innate/undeployment/Trigger(mob/clicker, trigger_flags)
@@ -1068,7 +1068,7 @@
 
 	if(!GLOB.fire_appearances[fire_icon])
 		var/mutable_appearance/new_fire_overlay = mutable_appearance(
-			'icons/mob/effects/onfire.dmi',
+			'../assets/icons/mob/effects/onfire.dmi',
 			fire_icon,
 			-HIGHEST_LAYER,
 			appearance_flags = RESET_COLOR|KEEP_APART,

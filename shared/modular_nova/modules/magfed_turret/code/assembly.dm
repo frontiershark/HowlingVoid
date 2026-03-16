@@ -54,7 +54,7 @@
 			if(!user.transferItemToLoc(attacking_item, src))
 				balloon_alert(user, "core stuck to your hand!")
 				return
-			playsound(src, 'sound/machines/click.ogg', 30, TRUE)
+			playsound(src, '../assets/sound/machines/click.ogg', 30, TRUE)
 			balloon_alert(user, "receiver inserted")
 			receiver = attacking_item
 			step = TURRET_ASSEMBLY_RECEIVER
@@ -64,7 +64,7 @@
 				if(!user.transferItemToLoc(attacking_item, src))
 					balloon_alert(user, "servo stuck to your hand!")
 					return
-				playsound(src, 'sound/machines/click.ogg', 30, TRUE)
+				playsound(src, '../assets/sound/machines/click.ogg', 30, TRUE)
 				balloon_alert(user, "servo added")
 				servo = attacking_item
 				step = TURRET_ASSEMBLY_SERVO
@@ -74,7 +74,7 @@
 				if(!user.transferItemToLoc(attacking_item, src))
 					balloon_alert(user, "sensor stuck to your hand!")
 					return
-				playsound(src, 'sound/machines/click.ogg', 30, TRUE)
+				playsound(src, '../assets/sound/machines/click.ogg', 30, TRUE)
 				balloon_alert(user, "sensor added")
 				sensor = attacking_item
 				step = TURRET_ASSEMBLY_SENSOR
@@ -82,7 +82,7 @@
 /obj/item/turret_assembly/multitool_act(mob/living/user, obj/item/tool)
 	if(step == TURRET_ASSEMBLY_WRAPUP)
 		if(tool.use_tool(src, user, 0, volume=30))
-			playsound(src, 'sound/machines/click.ogg', 30, TRUE)
+			playsound(src, '../assets/sound/machines/click.ogg', 30, TRUE)
 			var/obj/item/turretling = new design(drop_location())
 			qdel(src)
 			user.put_in_hands(turretling)

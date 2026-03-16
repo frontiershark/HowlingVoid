@@ -7,7 +7,7 @@ GLOBAL_LIST_EMPTY(roundstart_station_closets)
 /obj/structure/closet
 	name = "closet"
 	desc = "It's a basic storage unit."
-	icon = 'icons/obj/storage/closet.dmi'
+	icon = '../assets/icons/obj/storage/closet.dmi'
 	icon_state = "generic"
 	density = TRUE
 	drag_slowdown = 1.5 // Same as a prone mob
@@ -56,10 +56,10 @@ GLOBAL_LIST_EMPTY(roundstart_station_closets)
 	var/mob_storage_capacity = 3 // how many human sized mob/living can fit together inside a closet.
 	var/storage_capacity = 30 //This is so that someone can't pack hundreds of items in a locker/crate then open it in a populated area to crash clients.
 	var/cutting_tool = /obj/item/weldingtool
-	var/open_sound = 'sound/machines/closet/closet_open.ogg'
-	var/close_sound = 'sound/machines/closet/closet_close.ogg'
-	var/lock_sound = 'sound/machines/closet/closet_lock.ogg'
-	var/unlock_sound = 'sound/machines/closet/closet_unlock.ogg'
+	var/open_sound = '../assets/sound/machines/closet/closet_open.ogg'
+	var/close_sound = '../assets/sound/machines/closet/closet_close.ogg'
+	var/lock_sound = '../assets/sound/machines/closet/closet_lock.ogg'
+	var/unlock_sound = '../assets/sound/machines/closet/closet_unlock.ogg'
 	var/open_sound_volume = 35
 	var/close_sound_volume = 50
 	var/material_drop = /obj/item/stack/sheet/iron

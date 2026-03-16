@@ -5,7 +5,7 @@
 /obj/structure/statue
 	name = "statue"
 	desc = "Placeholder. Yell at Firecage if you SOMEHOW see this."
-	icon = 'icons/obj/art/statue.dmi'
+	icon = '../assets/icons/obj/art/statue.dmi'
 	icon_state = ""
 	/// Abstract root type
 	abstract_type = /obj/structure/statue
@@ -241,7 +241,7 @@
 /obj/structure/statue/sandstone/venus //call me when we add marble i guess
 	name = "statue of a pure maiden"
 	desc = "An ancient marble statue. The subject is depicted with a floor-length braid and is wielding a toolbox. By Jove, it's easily the most gorgeous depiction of a woman you've ever seen. The artist must truly be a master of his craft. Shame about the broken arm, though."
-	icon = 'icons/obj/art/statuelarge.dmi'
+	icon = '../assets/icons/obj/art/statuelarge.dmi'
 	icon_state = "venus"
 
 /////////////////////snow/////////////////////////////////////////
@@ -287,7 +287,7 @@
 ///////////Goliath//////////////////////////////////////////////////
 /obj/structure/statue/goliath
 	desc = "A lifelike statue of a horrifying monster."
-	icon = 'icons/mob/simple/lavaland/lavaland_monsters_wide.dmi'
+	icon = '../assets/icons/mob/simple/lavaland/lavaland_monsters_wide.dmi'
 	icon_state = "goliath"
 	pixel_x = -12
 	base_pixel_x = -12
@@ -297,12 +297,12 @@
 /obj/item/chisel
 	name = "chisel"
 	desc = "Breaking and making art since 4000 BC. This one uses advanced technology to allow the creation of lifelike moving statues."
-	icon = 'icons/obj/art/statue.dmi'
+	icon = '../assets/icons/obj/art/statue.dmi'
 	icon_state = "chisel"
 	inhand_icon_state = "screwdriver_nuke"
 	icon_angle = -90
-	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/tools_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/tools_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/tools_righthand.dmi'
 	obj_flags = CONDUCTS_ELECTRICITY
 	slot_flags = ITEM_SLOT_BELT
 	force = 5
@@ -313,10 +313,10 @@
 	custom_materials = list(/datum/material/iron=SMALL_MATERIAL_AMOUNT*0.75)
 	attack_verb_continuous = list("stabs")
 	attack_verb_simple = list("stab")
-	hitsound = 'sound/items/weapons/bladeslice.ogg'
-	usesound = list('sound/effects/pickaxe/picaxe1.ogg', 'sound/effects/pickaxe/picaxe2.ogg', 'sound/effects/pickaxe/picaxe3.ogg')
-	drop_sound = 'sound/items/handling/tools/screwdriver_drop.ogg'
-	pickup_sound = 'sound/items/handling/tools/screwdriver_pickup.ogg'
+	hitsound = '../assets/sound/items/weapons/bladeslice.ogg'
+	usesound = list('../assets/sound/effects/pickaxe/picaxe1.ogg', '../assets/sound/effects/pickaxe/picaxe2.ogg', '../assets/sound/effects/pickaxe/picaxe3.ogg')
+	drop_sound = '../assets/sound/items/handling/tools/screwdriver_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/tools/screwdriver_pickup.ogg'
 	sharpness = SHARP_POINTY
 	tool_behaviour = TOOL_RUSTSCRAPER
 	toolspeed = 3 // You're gonna have a bad time
@@ -394,7 +394,7 @@ Moving interrupts
 		if(do_after(user, sculpting_period, target = prepared_block, progress = FALSE))
 			var/time_delay = !(remaining_time % SCULPT_SOUND_INCREMENT)
 			if(time_delay)
-				playsound(src, 'sound/effects/break_stone.ogg', 50, TRUE)
+				playsound(src, '../assets/sound/effects/break_stone.ogg', 50, TRUE)
 			remaining_time -= sculpting_period
 			prepared_block.set_completion((sculpting_time - remaining_time)/sculpting_time)
 			total_progress_bar.update(sculpting_time - remaining_time)
@@ -460,7 +460,7 @@ Moving interrupts
 /obj/structure/carving_block
 	name = "block"
 	desc = "Ready for sculpting."
-	icon = 'icons/obj/art/statue.dmi'
+	icon = '../assets/icons/obj/art/statue.dmi'
 	icon_state = "block"
 	material_flags = MATERIAL_EFFECTS | MATERIAL_COLOR | MATERIAL_AFFECT_STATISTICS | MATERIAL_ADD_PREFIX
 	density = TRUE
@@ -544,7 +544,7 @@ Moving interrupts
 		//Doesn't use filter helpers because MAs aren't atoms
 		target_appearance_with_filters.filters = filter(type="color",color=greyscale_with_value_bump,space=FILTER_COLOR_HSV)
 	completion = value
-	var/static/icon/white = icon('icons/effects/alphacolors.dmi', "white")
+	var/static/icon/white = icon('../assets/icons/effects/alphacolors.dmi', "white")
 	switch(value)
 		if(0)
 			//delete uncovered and reset filters

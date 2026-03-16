@@ -3,8 +3,8 @@
 	desc = "To stop that awful noise."
 	icon_state = "muzzle"
 	inhand_icon_state = "blindfold"
-	lefthand_file = 'icons/mob/inhands/clothing/glasses_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/clothing/glasses_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/clothing/glasses_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/clothing/glasses_righthand.dmi'
 	flags_cover = MASKCOVERSMOUTH
 	w_class = WEIGHT_CLASS_SMALL
 	equip_delay_other = 2 SECONDS
@@ -30,7 +30,7 @@
 	clothing_flags = INEDIBLE_CLOTHING
 	equip_delay_other = 4 SECONDS
 	strip_delay = 4 SECONDS
-	icon = 'icons/map_icons/clothing/mask.dmi'
+	icon = '../assets/icons/map_icons/clothing/mask.dmi'
 	icon_state = "/obj/item/clothing/mask/muzzle/tape"
 	post_init_icon_state = "tape_piece"
 	greyscale_config = /datum/greyscale_config/tape_piece
@@ -49,7 +49,7 @@
 	. = ..()
 	if(user.get_item_by_slot(ITEM_SLOT_MASK) != src)
 		return
-	playsound(user, 'sound/items/duct_tape/duct_tape_rip.ogg', 50, TRUE)
+	playsound(user, '../assets/sound/items/duct_tape/duct_tape_rip.ogg', 50, TRUE)
 	if(harmful_strip)
 		user.apply_damage(stripping_damage, BRUTE, BODY_ZONE_HEAD)
 		INVOKE_ASYNC(user, TYPE_PROC_REF(/mob, emote), "scream")
@@ -90,7 +90,7 @@
 	name = "pointy tape piece"
 	desc = "A piece of tape that can be put over someone's mouth. Looks like it will hurt if this is ripped off."
 	worn_icon_state = "tape_piece_spikes_worn"
-	icon = 'icons/map_icons/clothing/mask.dmi'
+	icon = '../assets/icons/map_icons/clothing/mask.dmi'
 	icon_state = "/obj/item/clothing/mask/muzzle/tape/pointy"
 	post_init_icon_state = "tape_piece_spikes"
 	greyscale_config = /datum/greyscale_config/tape_piece/spikes

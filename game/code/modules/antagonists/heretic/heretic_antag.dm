@@ -28,7 +28,7 @@
 	can_assign_self_objectives = TRUE
 	default_custom_objective = "Turn a department into a testament for your dark knowledge."
 	hardcore_random_bonus = TRUE
-	stinger_sound = 'sound/music/antag/heretic/heretic_gain.ogg'
+	stinger_sound = '../assets/sound/music/antag/heretic/heretic_gain.ogg'
 	antag_flags = parent_type::antag_flags | ANTAG_OBSERVER_VISIBLE_PANEL
 
 	/// Contains multiple separate heretic shops so you can choose between multiple when buying.
@@ -69,7 +69,7 @@
 	/// The path our heretic has chosen.
 	var/datum/heretic_knowledge_tree_column/heretic_path
 	/// Reference to the overlay heretics get when they get strong enough
-	var/static/mutable_appearance/eldritch_overlay = mutable_appearance('icons/mob/effects/heretic_aura.dmi', "heretic_aura")
+	var/static/mutable_appearance/eldritch_overlay = mutable_appearance('../assets/icons/mob/effects/heretic_aura.dmi', "heretic_aura")
 	/// A sum of how many knowledge points this heretic CURRENTLY has. Used to research.
 	var/knowledge_points = 2 //NOVA EDIT - ORIGINAL 1
 	/// The time between gaining influence passively. The heretic gain +1 knowledge points every this duration of time.
@@ -97,7 +97,7 @@
 
 /datum/antagonist/heretic/proc/get_icon_of_knowledge(datum/heretic_knowledge/knowledge)
 	//basic icon parameters
-	var/icon_path = 'icons/mob/actions/actions_ecult.dmi'
+	var/icon_path = '../assets/icons/mob/actions/actions_ecult.dmi'
 	var/icon_state = "eye"
 	var/icon_frame = knowledge.research_tree_icon_frame
 	var/icon_dir = knowledge.research_tree_icon_dir
@@ -643,7 +643,7 @@
 
 		for(var/datum/mind/mind as anything in cult_team.members)
 			if(mind.current)
-				SEND_SOUND(mind.current, 'sound/effects/magic/clockwork/narsie_attack.ogg')
+				SEND_SOUND(mind.current, '../assets/sound/effects/magic/clockwork/narsie_attack.ogg')
 				to_chat(mind.current, span_cult_large(span_warning("Arcane and forbidden knowledge floods your forges and archives. The cult has learned how to create the ")) + span_cult_large(span_hypnophrase("[result]!")))
 
 	return SILENCE_SACRIFICE_MESSAGE|DUST_SACRIFICE

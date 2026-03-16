@@ -8,7 +8,7 @@
 	show_to_ghosts = TRUE
 	hijack_speed = 2 //If you can't take out the station, take the shuttle instead.
 	suicide_cry = "FOR THE SYNDICATE!!"
-	stinger_sound = 'sound/music/antag/ops.ogg'
+	stinger_sound = '../assets/sound/music/antag/ops.ogg'
 	desensitized_modifier = DESENSITIZED_THRESHOLD * 0.5
 
 	/// Which nukie team are we on?
@@ -121,7 +121,7 @@
 		final_icon.Blend(teammate, ICON_UNDERLAY, ICON_SIZE_X / 4, 0)
 
 	if (!isnull(nuke_icon_state))
-		var/icon/nuke = icon('icons/obj/machines/nuke.dmi', nuke_icon_state)
+		var/icon/nuke = icon('../assets/icons/obj/machines/nuke.dmi', nuke_icon_state)
 		nuke.Shift(SOUTH, 6)
 		final_icon.Blend(nuke, ICON_OVERLAY)
 

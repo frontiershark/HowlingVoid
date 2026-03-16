@@ -23,7 +23,7 @@
 /obj/structure/sign/chalkboard_menu
 	name = "chalkboard coffee menu"
 	icon_state = "chalkboard_menu"
-	icon = 'icons/obj/machines/barsigns.dmi'
+	icon = '../assets/icons/obj/machines/barsigns.dmi'
 	desc = "85cr for a iced lactose-free caramel frappe?! Who buys that?!"
 
 MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/xenobio_guide, 32)

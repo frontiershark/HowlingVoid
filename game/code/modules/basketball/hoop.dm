@@ -12,7 +12,7 @@
 /obj/structure/hoop
 	name = "basketball hoop"
 	desc = "Boom, shakalaka!"
-	icon = 'icons/obj/fluff/basketball_hoop.dmi'
+	icon = '../assets/icons/obj/fluff/basketball_hoop.dmi'
 	icon_state = "hoop"
 	anchored = TRUE
 	density = TRUE
@@ -39,7 +39,7 @@
 
 /obj/structure/hoop/proc/score(obj/item/toy/basketball/ball, mob/living/baller, points)
 	// we still play buzzer sound regardless of the object
-	playsound(src, 'sound/machines/scanner/scanbuzz.ogg', 100, FALSE)
+	playsound(src, '../assets/sound/machines/scanner/scanbuzz.ogg', 100, FALSE)
 
 	if(!istype(ball))
 		return
@@ -68,24 +68,24 @@
 		if(WEST)
 			dir_offset_w = 32
 
-	var/mutable_appearance/scoreboard = mutable_appearance('icons/obj/signs.dmi', "basketball_scorecard")
+	var/mutable_appearance/scoreboard = mutable_appearance('../assets/icons/obj/signs.dmi', "basketball_scorecard")
 	scoreboard.pixel_w = dir_offset_w
 	scoreboard.pixel_z = dir_offset_z
 	. += scoreboard
 
 	var/ones = total_score % 10
-	var/mutable_appearance/ones_overlay = mutable_appearance('icons/obj/signs.dmi', "days_[ones]", layer + 0.01)
+	var/mutable_appearance/ones_overlay = mutable_appearance('../assets/icons/obj/signs.dmi', "days_[ones]", layer + 0.01)
 	ones_overlay.pixel_w = 4
-	var/mutable_appearance/emissive_ones_overlay  = emissive_appearance('icons/obj/signs.dmi', "days_[ones]", src, alpha = src.alpha)
+	var/mutable_appearance/emissive_ones_overlay  = emissive_appearance('../assets/icons/obj/signs.dmi', "days_[ones]", src, alpha = src.alpha)
 	emissive_ones_overlay.pixel_w = 4
 	scoreboard.add_overlay(ones_overlay)
 	scoreboard.add_overlay(emissive_ones_overlay)
 
 	var/tens = (total_score / 10) % 10
-	var/mutable_appearance/tens_overlay = mutable_appearance('icons/obj/signs.dmi', "days_[tens]", layer + 0.01)
+	var/mutable_appearance/tens_overlay = mutable_appearance('../assets/icons/obj/signs.dmi', "days_[tens]", layer + 0.01)
 	tens_overlay.pixel_w = -5
 
-	var/mutable_appearance/emissive_tens_overlay  = emissive_appearance('icons/obj/signs.dmi', "days_[tens]", src, alpha = src.alpha)
+	var/mutable_appearance/emissive_tens_overlay  = emissive_appearance('../assets/icons/obj/signs.dmi', "days_[tens]", src, alpha = src.alpha)
 	emissive_tens_overlay.pixel_w = -5
 	scoreboard.add_overlay(tens_overlay)
 	scoreboard.add_overlay(emissive_tens_overlay)
@@ -127,13 +127,13 @@
 	loser.forceMove(loc)
 	loser.Paralyze(100)
 	visible_message(span_danger("[baller] dunks [loser] into \the [src]!"))
-	playsound(src, 'sound/machines/scanner/scanbuzz.ogg', 100, FALSE)
+	playsound(src, '../assets/sound/machines/scanner/scanbuzz.ogg', 100, FALSE)
 	baller.adjust_stamina_loss(STAMINA_COST_DUNKING_MOB)
 	baller.stop_pulling()
 
 /obj/structure/hoop/click_ctrl(mob/user)
 	user.balloon_alert_to_viewers("resetting score...")
-	playsound(src, 'sound/machines/locktoggle.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/machines/locktoggle.ogg', 50, TRUE)
 	if(do_after(user, 5 SECONDS, target = src))
 		total_score = 0
 		update_appearance()

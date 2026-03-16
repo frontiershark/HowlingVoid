@@ -13,7 +13,7 @@
 	name = "bluespace shelter capsule"
 	desc = "An emergency shelter stored within a pocket of bluespace."
 	icon_state = "capsule"
-	icon = 'icons/obj/mining.dmi'
+	icon = '../assets/icons/obj/mining.dmi'
 	w_class = WEIGHT_CLASS_TINY
 	///The id we use to fetch the template datum
 	var/template_id = "shelter_alpha"
@@ -76,7 +76,7 @@
 		yote_nearby(deploy_location)
 	template.load(deploy_location, centered = TRUE)
 	trigger_admin_alert(triggerer, deploy_location)
-	playsound(src, 'sound/effects/phasein.ogg', 100, TRUE)
+	playsound(src, '../assets/sound/effects/phasein.ogg', 100, TRUE)
 	new /obj/effect/particle_effect/fluid/smoke(get_turf(src))
 	qdel(src)
 
@@ -153,7 +153,7 @@
 //Window
 /obj/structure/window/reinforced/shuttle/survival_pod
 	name = "pod window"
-	icon = 'icons/obj/smooth_structures/pod_window.dmi'
+	icon = '../assets/icons/obj/smooth_structures/pod_window.dmi'
 	icon_state = "pod_window-0"
 	base_icon_state = "pod_window"
 	smoothing_flags = SMOOTH_BITMASK
@@ -162,7 +162,7 @@
 
 /obj/structure/window/reinforced/survival_pod
 	name = "pod window"
-	icon = 'icons/obj/mining_zones/survival_pod.dmi'
+	icon = '../assets/icons/obj/mining_zones/survival_pod.dmi'
 	icon_state = "pwindow"
 
 MAPPING_DIRECTIONAL_HELPERS(/obj/structure/window/reinforced/survival_pod/spawner, 0)
@@ -170,8 +170,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/window/reinforced/survival_pod/spawne
 //Door
 /obj/machinery/door/airlock/survival_pod
 	name = "Airlock"
-	icon = 'icons/obj/doors/airlocks/survival/survival.dmi'
-	overlays_file = 'icons/obj/doors/airlocks/survival/survival_overlays.dmi'
+	icon = '../assets/icons/obj/doors/airlocks/survival/survival.dmi'
+	overlays_file = '../assets/icons/obj/doors/airlocks/survival/survival_overlays.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_pod
 	smoothing_groups = SMOOTH_GROUP_AIRLOCK + SMOOTH_GROUP_SURVIVAL_TITANIUM_POD
 
@@ -181,15 +181,15 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/window/reinforced/survival_pod/spawne
 
 /obj/structure/door_assembly/door_assembly_pod
 	name = "pod airlock assembly"
-	icon = 'icons/obj/doors/airlocks/survival/survival.dmi'
+	icon = '../assets/icons/obj/doors/airlocks/survival/survival.dmi'
 	base_name = "pod airlock"
-	overlays_file = 'icons/obj/doors/airlocks/survival/survival_overlays.dmi'
+	overlays_file = '../assets/icons/obj/doors/airlocks/survival/survival_overlays.dmi'
 	airlock_type = /obj/machinery/door/airlock/survival_pod
 	glass_type = /obj/machinery/door/airlock/survival_pod/glass
 
 //Windoor
 /obj/machinery/door/window/survival_pod
-	icon = 'icons/obj/mining_zones/survival_pod.dmi'
+	icon = '../assets/icons/obj/mining_zones/survival_pod.dmi'
 	icon_state = "windoor"
 	base_state = "windoor"
 
@@ -197,7 +197,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/door/window/survival_pod/left, 0)
 
 //Table
 /obj/structure/table/survival_pod
-	icon = 'icons/obj/mining_zones/survival_pod.dmi'
+	icon = '../assets/icons/obj/mining_zones/survival_pod.dmi'
 	icon_state = "table"
 	smoothing_flags = NONE
 	smoothing_groups = null
@@ -206,7 +206,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/door/window/survival_pod/left, 0)
 
 //Sleeper
 /obj/machinery/sleeper/survival_pod
-	icon = 'icons/obj/mining_zones/survival_pod.dmi'
+	icon = '../assets/icons/obj/mining_zones/survival_pod.dmi'
 	icon_state = "sleeper"
 	base_icon_state = "sleeper"
 
@@ -217,13 +217,13 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/door/window/survival_pod/left, 0)
 
 //Lifeform Stasis Unit
 /obj/machinery/stasis/survival_pod
-	icon = 'icons/obj/mining_zones/survival_pod.dmi'
+	icon = '../assets/icons/obj/mining_zones/survival_pod.dmi'
 	buckle_lying = 270
 
 //Computer
 /obj/item/gps/computer
 	name = "pod computer"
-	icon = 'icons/obj/mining_zones/pod_computer.dmi'
+	icon = '../assets/icons/obj/mining_zones/pod_computer.dmi'
 	icon_state = "pod_computer"
 	anchored = TRUE
 	density = TRUE
@@ -247,11 +247,11 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/door/window/survival_pod/left, 0)
 
 //Bed
 /obj/structure/bed/pod
-	icon = 'icons/obj/mining_zones/survival_pod.dmi'
+	icon = '../assets/icons/obj/mining_zones/survival_pod.dmi'
 	icon_state = "bed"
 
 /obj/structure/bed/double/pod
-	icon = 'icons/obj/mining_zones/survival_pod.dmi'
+	icon = '../assets/icons/obj/mining_zones/survival_pod.dmi'
 	icon_state = "bed_double"
 
 //Survival Storage Unit
@@ -259,7 +259,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/door/window/survival_pod/left, 0)
 	name = "survival pod storage"
 	desc = "A heated storage unit."
 	icon_state = "donkvendor"
-	icon = 'icons/obj/mining_zones/donkvendor.dmi'
+	icon = '../assets/icons/obj/mining_zones/donkvendor.dmi'
 	base_build_path = /obj/machinery/smartfridge/survival_pod
 	light_range = 5
 	light_power = 1.2
@@ -301,7 +301,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/door/window/survival_pod/left, 0)
 //Fluff
 /obj/structure/tubes
 	icon_state = "tubes"
-	icon = 'icons/obj/mining_zones/survival_pod.dmi'
+	icon = '../assets/icons/obj/mining_zones/survival_pod.dmi'
 	name = "tubes"
 	anchored = TRUE
 	layer = BELOW_MOB_LAYER
@@ -309,7 +309,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/door/window/survival_pod/left, 0)
 
 /obj/item/fakeartefact
 	name = "expensive forgery"
-	icon = 'icons/hud/screen_gen.dmi'
+	icon = '../assets/icons/hud/screen_gen.dmi'
 	icon_state = "x2"
 	var/static/possible = list(
 		/obj/item/ship_in_a_bottle,

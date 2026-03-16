@@ -1,5 +1,5 @@
 /obj/machinery/atmospherics/pipe
-	icon = 'icons/obj/pipes_n_cables/!pipes_bitmask.dmi'
+	icon = '../assets/icons/obj/pipes_n_cables/!pipes_bitmask.dmi'
 	damage_deflection = 12
 	/// Temporary holder for gases in the absence of a pipeline
 	var/datum/gas_mixture/air_temporary
@@ -102,12 +102,12 @@
 
 /obj/machinery/atmospherics/pipe/replace_pipenet(datum/pipeline/old_pipenet, datum/pipeline/new_pipenet)
 	if(parent && has_gas_visuals)
-		vis_contents -= parent.GetGasVisual('icons/obj/pipes_n_cables/!pipe_gas_overlays.dmi')
+		vis_contents -= parent.GetGasVisual('../assets/icons/obj/pipes_n_cables/!pipe_gas_overlays.dmi')
 
 	parent = new_pipenet
 
 	if(parent && has_gas_visuals) // null is a valid argument here
-		vis_contents += parent.GetGasVisual('icons/obj/pipes_n_cables/!pipe_gas_overlays.dmi')
+		vis_contents += parent.GetGasVisual('../assets/icons/obj/pipes_n_cables/!pipe_gas_overlays.dmi')
 
 /obj/machinery/atmospherics/pipe/return_pipenets()
 	. = list(parent)
@@ -126,7 +126,7 @@
 			icon = null
 			return
 		else
-			icon = 'icons/obj/pipes_n_cables/!pipes_bitmask.dmi'
+			icon = '../assets/icons/obj/pipes_n_cables/!pipes_bitmask.dmi'
 	var/connections = NONE
 	var/bitfield = NONE
 	for(var/i in 1 to device_type)

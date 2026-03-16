@@ -1,7 +1,7 @@
 /turf/closed/wall/r_wall
 	name = "reinforced wall"
 	desc = "A huge chunk of reinforced metal used to separate rooms."
-	icon = 'icons/turf/walls/reinforced_wall.dmi' //NOVA EDIT - ICON OVERRIDDEN IN AESTHETICS MODULE
+	icon = '../assets/icons/turf/walls/reinforced_wall.dmi' //NOVA EDIT - ICON OVERRIDDEN IN AESTHETICS MODULE
 	icon_state = "reinforced_wall-0"
 	base_icon_state = "reinforced_wall"
 	opacity = TRUE
@@ -204,7 +204,7 @@
 // We don't react to smoothing changing here because this else exists only to "revert" intact changes
 /turf/closed/wall/r_wall/update_icon_state()
 	if(d_state != INTACT)
-		icon = 'modular_nova/modules/aesthetics/walls/icons/reinforced_wall.dmi' // NOVA EDIT CHANGE - AESTHETICS - ORIGINAL: icon = 'icons/turf/walls/reinforced_states.dmi'
+		icon = 'modular_nova/modules/aesthetics/walls/icons/reinforced_wall.dmi' // NOVA EDIT CHANGE - AESTHETICS - ORIGINAL: icon = '../assets/icons/turf/walls/reinforced_states.dmi'
 		icon_state = "[base_decon_state]-[d_state]"
 	else
 		icon = initial(icon)
@@ -238,7 +238,7 @@
 /turf/closed/wall/r_wall/plastitanium
 	name = /turf/closed/wall/mineral/plastitanium::name
 	desc = "An extra durable wall made of an alloy of plasma and titanium, reinforced with plasteel rods."
-	icon = 'icons/turf/walls/plastitanium_wall.dmi'
+	icon = '../assets/icons/turf/walls/plastitanium_wall.dmi'
 	icon_state = "plastitanium_wall-0"
 	base_icon_state = "plastitanium_wall"
 	sheet_type = /obj/item/stack/sheet/mineral/plastitanium
@@ -250,12 +250,12 @@
 	rust_resistance = RUST_RESISTANCE_TITANIUM
 
 /turf/closed/wall/r_wall/plastitanium/nodiagonal
-	icon = MAP_SWITCH('icons/turf/walls/plastitanium_wall.dmi', 'icons/turf/walls/misc_wall.dmi')
+	icon = MAP_SWITCH('../assets/icons/turf/walls/plastitanium_wall.dmi', '../assets/icons/turf/walls/misc_wall.dmi')
 	icon_state = MAP_SWITCH("plastitanium_wall-0", "plastitanium_nd")
 	smoothing_flags = SMOOTH_BITMASK
 
 /turf/closed/wall/r_wall/plastitanium/overspace
-	icon = MAP_SWITCH('icons/turf/walls/plastitanium_wall.dmi', 'icons/turf/walls/misc_wall.dmi')
+	icon = MAP_SWITCH('../assets/icons/turf/walls/plastitanium_wall.dmi', '../assets/icons/turf/walls/misc_wall.dmi')
 	icon_state = MAP_SWITCH("plastitanium_wall-0", "plastitanium_overspace")
 	fixed_underlay = list("space" = TRUE)
 
@@ -268,11 +268,11 @@
 	return FALSE
 
 /turf/closed/wall/r_wall/plastitanium/syndicate/nodiagonal
-	icon = MAP_SWITCH('icons/turf/walls/plastitanium_wall.dmi', 'icons/turf/walls/misc_wall.dmi')
+	icon = MAP_SWITCH('../assets/icons/turf/walls/plastitanium_wall.dmi', '../assets/icons/turf/walls/misc_wall.dmi')
 	icon_state = MAP_SWITCH("plastitanium_wall-0", "plastitanium_nd")
 	smoothing_flags = SMOOTH_BITMASK
 
 /turf/closed/wall/r_wall/plastitanium/syndicate/overspace
-	icon = MAP_SWITCH('icons/turf/walls/plastitanium_wall.dmi', 'icons/turf/walls/misc_wall.dmi')
+	icon = MAP_SWITCH('../assets/icons/turf/walls/plastitanium_wall.dmi', '../assets/icons/turf/walls/misc_wall.dmi')
 	icon_state = MAP_SWITCH("plastitanium_wall-0", "plastitanium_overspace")
 	fixed_underlay = list("space" = TRUE)

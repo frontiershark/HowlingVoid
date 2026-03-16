@@ -44,28 +44,28 @@
 	/// A static list of lists of all the possible sounds to play when multitooled, in numerical order
 	var/static/list/rankup_sounds = list(
 		list(
-			'sound/items/style/combo_dull1.ogg',
-			'sound/items/style/combo_dull2.ogg',
-			'sound/items/style/combo_dull3.ogg',
+			'../assets/sound/items/style/combo_dull1.ogg',
+			'../assets/sound/items/style/combo_dull2.ogg',
+			'../assets/sound/items/style/combo_dull3.ogg',
 		),
 		list(
-			'sound/items/style/combo_cool1.ogg',
-			'sound/items/style/combo_cool2.ogg',
-			'sound/items/style/combo_cool3.ogg',
+			'../assets/sound/items/style/combo_cool1.ogg',
+			'../assets/sound/items/style/combo_cool2.ogg',
+			'../assets/sound/items/style/combo_cool3.ogg',
 		),
 		list(
-			'sound/items/style/combo_brutal1.ogg',
-			'sound/items/style/combo_brutal2.ogg',
-			'sound/items/style/combo_brutal3.ogg',
+			'../assets/sound/items/style/combo_brutal1.ogg',
+			'../assets/sound/items/style/combo_brutal2.ogg',
+			'../assets/sound/items/style/combo_brutal3.ogg',
 		),
 		list(
-			'sound/items/style/combo_absolute1.ogg',
-			'sound/items/style/combo_absolute2.ogg',
-			'sound/items/style/combo_absolute3.ogg',
+			'../assets/sound/items/style/combo_absolute1.ogg',
+			'../assets/sound/items/style/combo_absolute2.ogg',
+			'../assets/sound/items/style/combo_absolute3.ogg',
 		),
 		list(
-			'sound/items/style/combo_spaced1.ogg',
-			'sound/items/style/combo_spaced2.ogg',
+			'../assets/sound/items/style/combo_spaced1.ogg',
+			'../assets/sound/items/style/combo_spaced2.ogg',
 		),
 	)
 
@@ -79,7 +79,7 @@
 	meter = new()
 	meter_image = new()
 	meter.vis_contents += meter_image
-	meter_image.add_filter("meter_mask", 1, list(type = "alpha", icon = icon('icons/hud/style_meter.dmi', "style_meter"), flags = MASK_INVERSE))
+	meter_image.add_filter("meter_mask", 1, list(type = "alpha", icon = icon('../assets/icons/hud/style_meter.dmi', "style_meter"), flags = MASK_INVERSE))
 	meter.update_appearance()
 	meter_image.update_appearance()
 

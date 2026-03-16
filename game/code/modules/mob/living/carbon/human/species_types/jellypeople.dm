@@ -139,7 +139,7 @@
 	name = "Regenerate Limbs"
 	check_flags = AB_CHECK_CONSCIOUS
 	button_icon_state = "slimeheal"
-	button_icon = 'icons/mob/actions/actions_slime.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_slime.dmi'
 	background_icon_state = "bg_alien"
 	overlay_icon_state = "bg_alien_border"
 
@@ -270,7 +270,7 @@
 	name = "Split Body"
 	check_flags = AB_CHECK_CONSCIOUS
 	button_icon_state = "slimesplit"
-	button_icon = 'icons/mob/actions/actions_slime.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_slime.dmi'
 	background_icon_state = "bg_alien"
 	overlay_icon_state = "bg_alien_border"
 
@@ -341,7 +341,7 @@
 	name = "Swap Body"
 	check_flags = NONE
 	button_icon_state = "slimeswap"
-	button_icon = 'icons/mob/actions/actions_slime.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_slime.dmi'
 	background_icon_state = "bg_alien"
 	overlay_icon_state = "bg_alien_border"
 
@@ -557,7 +557,7 @@
 	desc = "Eat a slime extract to use its properties."
 	check_flags = AB_CHECK_CONSCIOUS
 	button_icon_state = "slimeconsume"
-	button_icon = 'icons/mob/actions/actions_slime.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_slime.dmi'
 	background_icon_state = "bg_alien"
 	overlay_icon_state = "bg_alien_border"
 
@@ -626,7 +626,7 @@
 	desc = "Pulse the slime extract with energized jelly to activate it."
 	check_flags = AB_CHECK_CONSCIOUS
 	button_icon_state = "slimeuse1"
-	button_icon = 'icons/mob/actions/actions_slime.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_slime.dmi'
 	background_icon_state = "bg_alien"
 	overlay_icon_state = "bg_alien_border"
 	var/activation_type = SLIME_ACTIVATE_MINOR
@@ -710,7 +710,7 @@
 	name = "Send Thought"
 	desc = "Send a private psychic message to someone you can see."
 	button_icon_state = "send_mind"
-	button_icon = 'icons/mob/actions/actions_slime.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_slime.dmi'
 	background_icon_state = "bg_alien"
 	overlay_icon_state = "bg_alien_border"
 
@@ -757,7 +757,7 @@
 	name = "Link Minds"
 	desc = "Link someone's mind to your Slime Link, allowing them to communicate telepathically with other linked minds."
 	button_icon_state = "mindlink"
-	button_icon = 'icons/mob/actions/actions_slime.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_slime.dmi'
 	background_icon_state = "bg_alien"
 	overlay_icon_state = "bg_alien_border"
 	/// The species required to use this ability. Typepath.

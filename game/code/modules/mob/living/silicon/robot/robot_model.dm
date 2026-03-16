@@ -8,12 +8,12 @@
  **/
 /obj/item/robot_model
 	name = "Default"
-	icon = 'icons/obj/devices/circuitry_n_data.dmi'
+	icon = '../assets/icons/obj/devices/circuitry_n_data.dmi'
 	icon_state = "std_mod"
 	w_class = WEIGHT_CLASS_GIGANTIC
 	inhand_icon_state = "electronic"
-	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/devices_righthand.dmi'
 	obj_flags = CONDUCTS_ELECTRICITY
 
 	///Host of this model
@@ -224,7 +224,7 @@
 
 		storage_datum.energy += charger.materials.use_materials(list(GET_MATERIAL_REF(storage_datum.mat_type) = to_stock), action = "restocked", name = "units", user_data = ID_DATA(robot))
 		charger.balloon_alert(robot, "+ [to_stock]u [initial(storage_datum.mat_type.name)]")
-		playsound(charger, 'sound/items/weapons/gun/general/mag_bullet_insert.ogg', 50, vary = FALSE)
+		playsound(charger, '../assets/sound/items/weapons/gun/general/mag_bullet_insert.ogg', 50, vary = FALSE)
 		return
 	charger.balloon_alert(robot, "restock process complete")
 	charger.sendmats = FALSE
@@ -278,7 +278,7 @@
 		var/list/reskin_icons = list()
 		for(var/skin in borg_skins)
 			var/list/details = borg_skins[skin]
-			reskin_icons[skin] = image(icon = details[SKIN_ICON] || 'icons/mob/silicon/robots.dmi', icon_state = details[SKIN_ICON_STATE])
+			reskin_icons[skin] = image(icon = details[SKIN_ICON] || '../assets/icons/mob/silicon/robots.dmi', icon_state = details[SKIN_ICON_STATE])
 			//NOVA EDIT ADDITION BEGIN - ALTBORGS
 			if (!isnull(details[SKIN_FEATURES]))
 				if (TRAIT_R_WIDE in details[SKIN_FEATURES])
@@ -340,11 +340,11 @@
 	sleep(0.1 SECONDS)
 	for(var/i in 1 to 4)
 		playsound(cyborg, pick(
-			'sound/items/tools/drill_use.ogg',
-			'sound/items/tools/jaws_cut.ogg',
-			'sound/items/tools/jaws_pry.ogg',
-			'sound/items/tools/welder.ogg',
-			'sound/items/tools/ratchet.ogg',
+			'../assets/sound/items/tools/drill_use.ogg',
+			'../assets/sound/items/tools/jaws_cut.ogg',
+			'../assets/sound/items/tools/jaws_pry.ogg',
+			'../assets/sound/items/tools/welder.ogg',
+			'../assets/sound/items/tools/ratchet.ogg',
 			), 80, TRUE, -1)
 		sleep(0.7 SECONDS)
 	cyborg.SetLockdown(FALSE)
@@ -452,7 +452,7 @@
 
 /datum/action/cooldown/borg_meson
 	name = "Toggle Meson Vision"
-	button_icon = 'icons/mob/actions/actions_mecha.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_mecha.dmi'
 	button_icon_state = "meson"
 
 /datum/action/cooldown/borg_meson/Activate()
@@ -519,7 +519,7 @@
 /datum/action/toggle_buffer
 	name = "Activate Auto-Wash"
 	desc = "Trade speed and water for a clean floor."
-	button_icon = 'icons/mob/actions/actions_silicon.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_silicon.dmi'
 	button_icon_state = "activate_wash"
 	var/static/datum/callback/allow_buffer_activate
 	var/block_buffer_change	= FALSE
@@ -1028,7 +1028,7 @@
 
 /datum/action/cooldown/borg_thermal
 	name = "Toggle Thermal Night Vision"
-	button_icon = 'icons/mob/actions/actions_mecha.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_mecha.dmi'
 	button_icon_state = "thermal"
 
 /datum/action/cooldown/borg_thermal/Activate()

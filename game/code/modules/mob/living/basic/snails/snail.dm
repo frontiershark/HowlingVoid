@@ -6,8 +6,8 @@
 	icon_dead = "snail_dead"
 	base_icon_state = "snail"
 	held_state = "snail"
-	head_icon = 'icons/mob/clothing/head/pets_head.dmi'
-	icon = 'icons/mob/simple/pets.dmi'
+	head_icon = '../assets/icons/mob/clothing/head/pets_head.dmi'
+	icon = '../assets/icons/mob/simple/pets.dmi'
 	butcher_results = list(/obj/item/food/meat/slab/bugmeat = 1)
 	mob_biotypes = MOB_ORGANIC
 	density = FALSE

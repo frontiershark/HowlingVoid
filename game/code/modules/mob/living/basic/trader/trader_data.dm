@@ -6,7 +6,7 @@
 	///The sign that will greet the customers
 	var/sign_type = /obj/structure/trader_sign
 	///Sound used when item sold/bought
-	var/sell_sound = 'sound/effects/cashregister.ogg'
+	var/sell_sound = '../assets/sound/effects/cashregister.ogg'
 	///The currency name
 	var/currency_name = MONEY_NAME
 	///The initial products that the trader offers
@@ -85,7 +85,7 @@
 /datum/trader_data/mr_bones
 	shop_spot_type = /obj/structure/chair/wood/wings
 	sign_type = /obj/structure/trader_sign/mrbones
-	sell_sound = 'sound/mobs/non-humanoids/hiss/hiss2.ogg'
+	sell_sound = '../assets/sound/mobs/non-humanoids/hiss/hiss2.ogg'
 
 	initial_products = list(
 		/obj/item/clothing/head/helmet/skull = list(PAYCHECK_CREW * 3, INFINITY),

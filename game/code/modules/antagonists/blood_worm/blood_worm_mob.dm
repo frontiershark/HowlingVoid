@@ -1,5 +1,5 @@
 /mob/living/basic/blood_worm
-	icon = 'icons/mob/nonhuman-player/blood_worm_32x32.dmi'
+	icon = '../assets/icons/mob/nonhuman-player/blood_worm_32x32.dmi'
 
 	faction = list(FACTION_BLOOD_WORM)
 
@@ -19,7 +19,7 @@
 
 	melee_attack_cooldown = CLICK_CD_MELEE
 
-	attack_sound = 'sound/items/weapons/bite.ogg'
+	attack_sound = '../assets/sound/items/weapons/bite.ogg'
 	attack_vis_effect = ATTACK_EFFECT_BITE
 	attack_verb_continuous = "bites"
 	attack_verb_simple = "bite"
@@ -264,7 +264,7 @@
 	return maxHealth * BLOOD_WORM_HEALTH_TO_BLOOD * BLOOD_WORM_EJECT_THRESHOLD
 
 /obj/effect/temp_visual/blood_worm_invade_host
-	icon = 'icons/mob/nonhuman-player/blood_worm_32x32.dmi'
+	icon = '../assets/icons/mob/nonhuman-player/blood_worm_32x32.dmi'
 	icon_state = "invade-hatchling" // Not actually used for anything, it's just a default because otherwise the unit tests scream about it.
 	duration = 2 SECONDS
 
@@ -361,7 +361,7 @@
 	name = "adult blood worm"
 	desc = "A monstrosity of a blood worm. It'd probably be better to put your head in an industrial shredder rather than its maw."
 
-	icon = 'icons/mob/nonhuman-player/blood_worm_32x48.dmi'
+	icon = '../assets/icons/mob/nonhuman-player/blood_worm_32x48.dmi'
 
 	icon_state = "adult"
 	icon_living = "adult"

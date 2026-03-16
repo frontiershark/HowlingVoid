@@ -6,19 +6,19 @@
 /obj/item/veilrender
 	name = "veil render"
 	desc = "A wicked curved blade of alien origin, recovered from the ruins of a vast city."
-	icon = 'icons/obj/weapons/khopesh.dmi'
+	icon = '../assets/icons/obj/weapons/khopesh.dmi'
 	icon_state = "bone_blade"
 	inhand_icon_state = "bone_blade"
 	worn_icon_state = "bone_blade"
 	icon_angle = -45
-	lefthand_file = 'icons/mob/inhands/64x64_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/64x64_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/64x64_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/64x64_righthand.dmi'
 	inhand_x_dimension = 64
 	inhand_y_dimension = 64
 	force = 15
 	throwforce = 10
 	w_class = WEIGHT_CLASS_NORMAL
-	hitsound = 'sound/items/weapons/bladeslice.ogg'
+	hitsound = '../assets/sound/items/weapons/bladeslice.ogg'
 	var/charges = 1
 	var/spawn_type = /obj/tear_in_reality
 	var/spawn_amt = 1
@@ -37,7 +37,7 @@
 /obj/effect/rend
 	name = "tear in the fabric of reality"
 	desc = "You should run now."
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	icon_state = "rift"
 	density = TRUE
 	anchored = TRUE
@@ -111,7 +111,7 @@
 /obj/tear_in_reality
 	name = "tear in the fabric of reality"
 	desc = "This isn't right."
-	icon = 'icons/effects/224x224.dmi'
+	icon = '../assets/icons/effects/224x224.dmi'
 	icon_state = "reality"
 	pixel_x = -96
 	pixel_y = -96
@@ -165,14 +165,14 @@
 /obj/item/scrying
 	name = "scrying orb"
 	desc = "An incandescent orb of otherworldly energy, merely holding it gives you vision and hearing beyond mortal means, and staring into it lets you see the entire universe."
-	icon = 'icons/obj/weapons/guns/projectiles.dmi'
+	icon = '../assets/icons/obj/weapons/guns/projectiles.dmi'
 	icon_state ="bluespace"
 	throw_speed = 3
 	throw_range = 7
 	throwforce = 15
 	damtype = BURN
 	force = 15
-	hitsound = 'sound/items/tools/welder2.ogg'
+	hitsound = '../assets/sound/items/tools/welder2.ogg'
 
 	var/mob/current_owner
 
@@ -212,11 +212,11 @@
 /obj/item/necromantic_stone
 	name = "necromantic stone"
 	desc = "A shard capable of resurrecting humans as skeleton thralls."
-	icon = 'icons/obj/mining_zones/artefacts.dmi'
+	icon = '../assets/icons/obj/mining_zones/artefacts.dmi'
 	icon_state = "necrostone"
 	inhand_icon_state = "electronic"
-	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/devices_righthand.dmi'
 	w_class = WEIGHT_CLASS_TINY
 	var/list/spooky_scaries = list()
 	///Allow for unlimited thralls to be produced.
@@ -322,7 +322,7 @@
 /obj/item/warp_whistle
 	name = "warp whistle"
 	desc = "Calls a cloud to come pick you up and drop you at a random location on the station."
-	icon = 'icons/obj/art/musician.dmi'
+	icon = '../assets/icons/obj/art/musician.dmi'
 	icon_state = "whistle"
 
 	/// Person using the warp whistle
@@ -336,14 +336,14 @@
 	whistler = user
 	var/turf/current_turf = get_turf(user)
 	var/turf/spawn_location = locate(user.x + pick(-7, 7), user.y, user.z)
-	playsound(current_turf,'sound/effects/magic/warpwhistle.ogg', 200, TRUE)
+	playsound(current_turf,'../assets/sound/effects/magic/warpwhistle.ogg', 200, TRUE)
 	new /obj/effect/temp_visual/teleporting_tornado(spawn_location, src)
 
 ///Teleporting tornado, spawned by warp whistle, teleports the user if they manage to pick them up.
 /obj/effect/temp_visual/teleporting_tornado
 	name = "tornado"
 	desc = "This thing sucks!"
-	icon = 'icons/effects/magic.dmi'
+	icon = '../assets/icons/effects/magic.dmi'
 	icon_state = "tornado"
 	layer = FLY_LAYER
 	plane = ABOVE_GAME_PLANE
@@ -403,9 +403,9 @@
 	icon_state = "vendor_staff"
 	inhand_icon_state = "vendor_staff"
 	icon_angle = -45
-	lefthand_file = 'icons/mob/inhands/weapons/staves_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/staves_righthand.dmi'
-	icon = 'icons/obj/weapons/guns/magic.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/staves_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/staves_righthand.dmi'
+	icon = '../assets/icons/obj/weapons/guns/magic.dmi'
 	slot_flags = ITEM_SLOT_BACK
 	w_class = WEIGHT_CLASS_NORMAL
 	force = 10
@@ -474,7 +474,7 @@
 			return ITEM_INTERACT_BLOCKING
 		scepter_is_busy_summoning = FALSE
 	if(summon_vendor_charges)
-		playsound(src,'sound/items/weapons/resonator_fire.ogg',50,TRUE)
+		playsound(src,'../assets/sound/items/weapons/resonator_fire.ogg',50,TRUE)
 		user.visible_message(span_warning("[user] summons a runic vendor!"))
 		new /obj/machinery/vending/runic_vendor(afterattack_turf)
 		summon_vendor_charges--

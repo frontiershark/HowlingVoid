@@ -22,7 +22,7 @@ GLOBAL_LIST_EMPTY(exodrone_launchers)
 /obj/item/exodrone
 	name = "exploration drone"
 	desc = "A long range, semi-autonomous exploration drone."
-	icon = 'icons/obj/exploration.dmi'
+	icon = '../assets/icons/obj/exploration.dmi'
 	icon_state = "drone"
 	w_class = WEIGHT_CLASS_BULKY
 
@@ -352,7 +352,7 @@ GLOBAL_LIST_EMPTY(exodrone_launchers)
 /obj/machinery/exodrone_launcher
 	name = "exploration drone launcher"
 	desc = "A launch pad designed to send exploration drones into the great beyond."
-	icon = 'icons/obj/exploration.dmi'
+	icon = '../assets/icons/obj/exploration.dmi'
 	icon_state = "launcher"
 	/// Loaded fuel pellet.
 	var/obj/item/fuel_pellet/fuel_canister
@@ -436,7 +436,7 @@ GLOBAL_LIST_EMPTY(exodrone_launchers)
  * Plays an effect on the pad, with a sound effect to boot.
  */
 /obj/machinery/exodrone_launcher/proc/launch_effect()
-	playsound(src,'sound/effects/podwoosh.ogg',50, FALSE)
+	playsound(src,'../assets/sound/effects/podwoosh.ogg',50, FALSE)
 	do_smoke(1, src, get_turf(src))
 
 /obj/machinery/exodrone_launcher/Exited(atom/movable/gone, direction)
@@ -459,7 +459,7 @@ GLOBAL_LIST_EMPTY(exodrone_launchers)
 /obj/item/fuel_pellet
 	name = "standard fuel pellet"
 	desc = "A compressed fuel pellet for long-distance drone flight."
-	icon = 'icons/obj/exploration.dmi'
+	icon = '../assets/icons/obj/exploration.dmi'
 	icon_state = "fuel_basic"
 	/// The type of fuel this pellet has within.
 	var/fuel_type = FUEL_BASIC

@@ -3,7 +3,7 @@
 /mob/living/basic/bot/firebot
 	name = "\improper Firebot"
 	desc = "A little fire extinguishing bot. He looks rather anxious."
-	icon = 'icons/mob/silicon/aibots.dmi'
+	icon = '../assets/icons/mob/silicon/aibots.dmi'
 	icon_state = "firebot1"
 	light_color = "#8cffc9"
 	light_power = 0.8
@@ -30,20 +30,20 @@
 
 /mob/living/basic/bot/firebot/generate_speak_list()
 	var/static/list/idle_lines = list(
-		FIREBOT_VOICED_NO_FIRES = 'sound/mobs/non-humanoids/firebot/nofires.ogg',
-		FIREBOT_VOICED_ONLY_YOU = 'sound/mobs/non-humanoids/firebot/onlyyou.ogg',
-		FIREBOT_VOICED_TEMPERATURE_NOMINAL = 'sound/mobs/non-humanoids/firebot/tempnominal.ogg',
-		FIREBOT_VOICED_KEEP_COOL = 'sound/mobs/non-humanoids/firebot/keepitcool.ogg',
+		FIREBOT_VOICED_NO_FIRES = '../assets/sound/mobs/non-humanoids/firebot/nofires.ogg',
+		FIREBOT_VOICED_ONLY_YOU = '../assets/sound/mobs/non-humanoids/firebot/onlyyou.ogg',
+		FIREBOT_VOICED_TEMPERATURE_NOMINAL = '../assets/sound/mobs/non-humanoids/firebot/tempnominal.ogg',
+		FIREBOT_VOICED_KEEP_COOL = '../assets/sound/mobs/non-humanoids/firebot/keepitcool.ogg',
 	)
 	var/static/list/fire_detected_lines = list(
-		FIREBOT_VOICED_FIRE_DETECTED = 'sound/mobs/non-humanoids/firebot/detected.ogg',
-		FIREBOT_VOICED_STOP_DROP = 'sound/mobs/non-humanoids/firebot/stopdropnroll.ogg',
-		FIREBOT_VOICED_EXTINGUISHING = 'sound/mobs/non-humanoids/firebot/extinguishing.ogg',
+		FIREBOT_VOICED_FIRE_DETECTED = '../assets/sound/mobs/non-humanoids/firebot/detected.ogg',
+		FIREBOT_VOICED_STOP_DROP = '../assets/sound/mobs/non-humanoids/firebot/stopdropnroll.ogg',
+		FIREBOT_VOICED_EXTINGUISHING = '../assets/sound/mobs/non-humanoids/firebot/extinguishing.ogg',
 	)
 	var/static/list/emagged_lines = list(
-		FIREBOT_VOICED_CANDLE_TIP = 'sound/mobs/non-humanoids/firebot/candle_tip.ogg',
-		FIREBOT_VOICED_ELECTRIC_FIRE = 'sound/mobs/non-humanoids/firebot/electric_fire_tip.ogg',
-		FIREBOT_VOICED_FUEL_TIP = 'sound/mobs/non-humanoids/firebot/gasoline_tip.ogg'
+		FIREBOT_VOICED_CANDLE_TIP = '../assets/sound/mobs/non-humanoids/firebot/candle_tip.ogg',
+		FIREBOT_VOICED_ELECTRIC_FIRE = '../assets/sound/mobs/non-humanoids/firebot/electric_fire_tip.ogg',
+		FIREBOT_VOICED_FUEL_TIP = '../assets/sound/mobs/non-humanoids/firebot/gasoline_tip.ogg'
 	)
 	ai_controller.set_blackboard_key(BB_FIREBOT_EMAGGED_LINES, emagged_lines)
 	ai_controller.set_blackboard_key(BB_FIREBOT_IDLE_LINES, idle_lines)

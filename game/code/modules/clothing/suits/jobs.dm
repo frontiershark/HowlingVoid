@@ -7,8 +7,8 @@
 	name = "apron"
 	desc = "A basic blue apron."
 	icon_state = "apron"
-	icon = 'icons/obj/clothing/suits/utility.dmi'
-	worn_icon = 'icons/mob/clothing/suits/utility.dmi'
+	icon = '../assets/icons/obj/clothing/suits/utility.dmi'
+	worn_icon = '../assets/icons/mob/clothing/suits/utility.dmi'
 	inhand_icon_state = null
 	blood_overlay_type = "armor"
 	body_parts_covered = CHEST|GROIN
@@ -44,7 +44,7 @@
 /obj/item/clothing/suit/apron/overalls
 	name = "coveralls"
 	desc = "A set of overalls, good for protecting thinner clothes from the elements."
-	icon = 'icons/map_icons/clothing/suit/_suit.dmi'
+	icon = '../assets/icons/map_icons/clothing/suit/_suit.dmi'
 	icon_state = "/obj/item/clothing/suit/apron/overalls"
 	post_init_icon_state = "overalls"
 	inhand_icon_state = ""
@@ -88,8 +88,8 @@
 	desc = "An apron-jacket used by a high class chef."
 	icon_state = "chef"
 	inhand_icon_state = "chef"
-	icon = 'icons/obj/clothing/suits/jacket.dmi'
-	worn_icon = 'icons/mob/clothing/suits/jacket.dmi'
+	icon = '../assets/icons/obj/clothing/suits/jacket.dmi'
+	worn_icon = '../assets/icons/mob/clothing/suits/jacket.dmi'
 	armor_type = /datum/armor/toggle_chef
 	body_parts_covered = CHEST|GROIN|ARMS
 	allowed = list(
@@ -175,8 +175,8 @@
 	name = "hazard vest"
 	desc = "A high-visibility vest used in work zones."
 	icon_state = "hazard"
-	icon = 'icons/obj/clothing/suits/utility.dmi'
-	worn_icon = 'icons/mob/clothing/suits/utility.dmi'
+	icon = '../assets/icons/obj/clothing/suits/utility.dmi'
+	worn_icon = '../assets/icons/mob/clothing/suits/utility.dmi'
 	inhand_icon_state = null
 	blood_overlay_type = "armor"
 	allowed = list(
@@ -209,8 +209,8 @@
 	name = "blue formal suit jacket"
 	desc = "A professional suit jacket."
 	icon_state = "suitjacket_blue"
-	icon = 'icons/obj/clothing/suits/jacket.dmi'
-	worn_icon = 'icons/mob/clothing/suits/jacket.dmi'
+	icon = '../assets/icons/obj/clothing/suits/jacket.dmi'
+	worn_icon = '../assets/icons/mob/clothing/suits/jacket.dmi'
 	inhand_icon_state = null
 	blood_overlay_type = "coat"
 	body_parts_covered = CHEST|ARMS
@@ -233,8 +233,8 @@
 	name = "cargo gorka"
 	desc = "A brown and black puffy jacket; made from synthetic fabric. Inspired by old Eastern European designs."
 	icon_state = "cargo_jacket"
-	icon = 'icons/obj/clothing/suits/jacket.dmi'
-	worn_icon = 'icons/mob/clothing/suits/jacket.dmi'
+	icon = '../assets/icons/obj/clothing/suits/jacket.dmi'
+	worn_icon = '../assets/icons/mob/clothing/suits/jacket.dmi'
 	inhand_icon_state = null
 	blood_overlay_type = "coat"
 	body_parts_covered = CHEST|ARMS
@@ -268,7 +268,7 @@
 
 /obj/item/clothing/suit/toggle/lawyer/greyscale
 	name = "formal suit jacket"
-	icon = 'icons/map_icons/clothing/suit/_suit.dmi'
+	icon = '../assets/icons/map_icons/clothing/suit/_suit.dmi'
 	icon_state = "/obj/item/clothing/suit/toggle/lawyer/greyscale"
 	post_init_icon_state = "jacket_lawyer"
 	inhand_icon_state = ""
@@ -281,10 +281,10 @@
 /obj/item/clothing/suit/toggle/suspenders
 	name = "suspenders"
 	desc = "They suspend the illusion of the mime's play."
-	icon = 'icons/map_icons/clothing/suit/_suit.dmi'
+	icon = '../assets/icons/map_icons/clothing/suit/_suit.dmi'
 	icon_state = "/obj/item/clothing/suit/toggle/suspenders"
 	post_init_icon_state = "suspenders"
-	worn_icon = 'icons/mob/clothing/suits/utility.dmi'
+	worn_icon = '../assets/icons/mob/clothing/suits/utility.dmi'
 	worn_icon_state = "suspenders"
 	blood_overlay_type = "armor" //it's the less thing that I can put here
 	toggle_noun = "straps"
@@ -395,16 +395,16 @@
 	name = "techpriest robes"
 	desc = "For those who REALLY love their toasters."
 	icon_state = "techpriest"
-	icon = 'icons/obj/clothing/suits/costume.dmi'
-	worn_icon = 'icons/mob/clothing/suits/costume.dmi'
+	icon = '../assets/icons/obj/clothing/suits/costume.dmi'
+	worn_icon = '../assets/icons/mob/clothing/suits/costume.dmi'
 	inhand_icon_state = null
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	hoodtype = /obj/item/clothing/head/hooded/techpriest
 
 /obj/item/clothing/head/hooded/techpriest
 	name = "techpriest's hood"
-	icon = 'icons/obj/clothing/head/costume.dmi'
-	worn_icon = 'icons/mob/clothing/head/costume.dmi'
+	icon = '../assets/icons/obj/clothing/head/costume.dmi'
+	worn_icon = '../assets/icons/mob/clothing/head/costume.dmi'
 	desc = "A hood for those who REALLY love their toasters."
 	icon_state = "techpriesthood"
 	inhand_icon_state = null
@@ -415,8 +415,8 @@
 /obj/item/clothing/suit/atmos_overalls
 	name = "atmospherics overalls"
 	desc = "A set of fireproof overalls, good for protecting thinner clothes from gas leaks."
-	icon = 'icons/obj/clothing/suits/utility.dmi'
-	worn_icon = 'icons/mob/clothing/suits/utility.dmi'
+	icon = '../assets/icons/obj/clothing/suits/utility.dmi'
+	worn_icon = '../assets/icons/mob/clothing/suits/utility.dmi'
 	icon_state = "atmos_overalls"
 	inhand_icon_state = ""
 	body_parts_covered = CHEST|GROIN|LEGS

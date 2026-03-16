@@ -22,10 +22,10 @@
 	if(!user.get_bodypart(BODY_ZONE_L_ARM) || !user.get_bodypart(BODY_ZONE_R_ARM))
 		return
 	return pick(
-		'sound/mobs/humanoids/human/clap/clap1.ogg',
-		'sound/mobs/humanoids/human/clap/clap2.ogg',
-		'sound/mobs/humanoids/human/clap/clap3.ogg',
-		'sound/mobs/humanoids/human/clap/clap4.ogg',
+		'../assets/sound/mobs/humanoids/human/clap/clap1.ogg',
+		'../assets/sound/mobs/humanoids/human/clap/clap2.ogg',
+		'../assets/sound/mobs/humanoids/human/clap/clap3.ogg',
+		'../assets/sound/mobs/humanoids/human/clap/clap4.ogg',
 	)
 */
 //NOVA EDIT REMOVAL END
@@ -34,7 +34,7 @@
 	key = "crack"
 	key_third_person = "cracks"
 	message = "cracks their knuckles."
-	sound = 'sound/mobs/humanoids/human/knuckle_crack/knuckles.ogg'
+	sound = '../assets/sound/mobs/humanoids/human/knuckle_crack/knuckles.ogg'
 	hands_use_check = TRUE
 	cooldown = 6 SECONDS
 
@@ -110,7 +110,7 @@
 	key_third_person = "chitters"
 	message = "chitters!"
 	message_mime = "chitters silently?"
-	sound = 'sound/mobs/humanoids/moth/moth_chitter.ogg'
+	sound = '../assets/sound/mobs/humanoids/moth/moth_chitter.ogg'
 	emote_type = EMOTE_AUDIBLE | EMOTE_VISIBLE
 
 /* NOVA EDIT: anyone can chitter. theoretically. further edits in modular_nova\modules\emotes\code\emotes.dm
@@ -132,7 +132,7 @@
 	key_third_person = "squeaks"
 	message = "squeaks!"
 	message_mime = "squeaks silently?"
-	sound = 'sound/mobs/humanoids/moth/moth_squeak.ogg'
+	sound = '../assets/sound/mobs/humanoids/moth/moth_squeak.ogg'
 	emote_type = EMOTE_AUDIBLE | EMOTE_VISIBLE
 
 /* NOVA EDIT: anyone can squeak. theoretically. further edits in modular_nova\modules\emotes\code\emotes.dm
@@ -233,8 +233,8 @@
 /datum/emote/living/carbon/snap/get_sound(mob/living/user)
 	if(ishuman(user))
 		return pick(
-			'sound/mobs/humanoids/human/snap/fingersnap1.ogg',
-			'sound/mobs/humanoids/human/snap/fingersnap2.ogg',
+			'../assets/sound/mobs/humanoids/human/snap/fingersnap1.ogg',
+			'../assets/sound/mobs/humanoids/human/snap/fingersnap2.ogg',
 			)
 	return null
 

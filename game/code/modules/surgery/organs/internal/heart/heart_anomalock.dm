@@ -46,7 +46,7 @@
 	if(!core)
 		return
 	add_lightning_overlay(30 SECONDS)
-	playsound(organ_owner, 'sound/items/eshield_recharge.ogg', 40)
+	playsound(organ_owner, '../assets/sound/items/eshield_recharge.ogg', 40)
 	// organ_owner.AddElement(/datum/element/empprotection, EMP_PROTECT_SELF|EMP_PROTECT_CONTENTS|EMP_NO_EXAMINE) // NOVA EDIT REMOVAL
 	RegisterSignal(organ_owner, SIGNAL_ADDTRAIT(TRAIT_CRITICAL_CONDITION), PROC_REF(activate_survival))
 	RegisterSignal(organ_owner, COMSIG_ATOM_PRE_EMP_ACT, PROC_REF(on_emp_act)) // NOVA EDIT CHANGE - ORIGINAL: RegisterSignal(organ_owner, COMSIG_ATOM_EMP_ACT, PROC_REF(on_emp_act))
@@ -73,7 +73,7 @@
 	to_chat(user, span_userdanger("Black cyberveins tear your skin apart, pulling the heart into your ribcage. This feels unwise.."))
 	if(!do_after(user, 5 SECONDS, interaction_key = DOAFTER_IMPLANTING_HEART))
 		return ..()
-	playsound(target_mob, 'sound/items/weapons/slice.ogg', 100, TRUE)
+	playsound(target_mob, '../assets/sound/items/weapons/slice.ogg', 100, TRUE)
 	user.temporarilyRemoveItemFromInventory(src, TRUE)
 	Insert(user)
 	user.apply_damage(100, BRUTE, BODY_ZONE_CHEST)
@@ -100,7 +100,7 @@
 	if(lightning_overlay)
 		lightning_timer = addtimer(CALLBACK(src, PROC_REF(clear_lightning_overlay), owner), time_to_last, (TIMER_UNIQUE|TIMER_OVERRIDE|TIMER_STOPPABLE|TIMER_DELETE_ME))
 		return
-	lightning_overlay = mutable_appearance(icon = 'icons/effects/effects.dmi', icon_state = "lightning")
+	lightning_overlay = mutable_appearance(icon = '../assets/icons/effects/effects.dmi', icon_state = "lightning")
 	owner.add_overlay(lightning_overlay)
 	lightning_timer = addtimer(CALLBACK(src, PROC_REF(clear_lightning_overlay), owner), time_to_last, (TIMER_UNIQUE|TIMER_OVERRIDE|TIMER_STOPPABLE|TIMER_DELETE_ME))
 
@@ -158,7 +158,7 @@
 ///Alerts our owner that the organ is ready to do its thing again
 /obj/item/organ/heart/cybernetic/anomalock/proc/notify_cooldown(mob/living/carbon/organ_owner)
 	balloon_alert(organ_owner, "your heart strengthtens")
-	playsound(organ_owner, 'sound/items/eshield_recharge.ogg', 40)
+	playsound(organ_owner, '../assets/sound/items/eshield_recharge.ogg', 40)
 
 /obj/item/organ/heart/cybernetic/anomalock/item_interaction(mob/living/user, obj/item/tool, list/modifiers)
 	if(!istype(tool, required_anomaly))
@@ -170,7 +170,7 @@
 		return ITEM_INTERACT_BLOCKING
 	core = tool
 	balloon_alert(user, "core installed")
-	playsound(src, 'sound/machines/click.ogg', 30, TRUE)
+	playsound(src, '../assets/sound/machines/click.ogg', 30, TRUE)
 	add_organ_trait(TRAIT_SHOCKIMMUNE)
 	update_icon_state()
 	return ITEM_INTERACT_SUCCESS

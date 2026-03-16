@@ -7,7 +7,7 @@
 	/// The thermite overlay
 	var/thermite_overlay
 	/// Default thermite overlay, do not touch
-	var/static/mutable_appearance/default_thermite_overlay = mutable_appearance('icons/effects/effects.dmi', "thermite")
+	var/static/mutable_appearance/default_thermite_overlay = mutable_appearance('../assets/icons/effects/effects.dmi', "thermite")
 	/// Callback related to burning, stored so the timer can be easily reset without losing the user
 	var/datum/callback/burn_callback
 	/// The timer for burning parent, calls burn_callback when done
@@ -116,7 +116,7 @@
  */
 /datum/component/thermite/proc/thermite_melt(mob/user)
 	var/turf/parent_turf = parent
-	playsound(parent_turf, 'sound/items/tools/welder.ogg', 100, TRUE)
+	playsound(parent_turf, '../assets/sound/items/tools/welder.ogg', 100, TRUE)
 	fakefire = new(parent_turf)
 	burn_callback = CALLBACK(src, PROC_REF(burn_parent), user)
 	burn_timer = addtimer(burn_callback, min(amount * 0.35 SECONDS, 20 SECONDS), TIMER_STOPPABLE)

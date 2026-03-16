@@ -32,7 +32,7 @@
 /obj/item/mod/module/eradication_lock/on_use(mob/activator)
 	true_owner_ckey = mod.wearer.ckey
 	balloon_alert(activator, "user remembered")
-	playsound(src, 'sound/items/pshoom/pshoom.ogg', 25, TRUE)
+	playsound(src, '../assets/sound/items/pshoom/pshoom.ogg', 25, TRUE)
 	drain_power(use_energy_cost)
 
 ///Signal fired when the modsuit tries activating
@@ -69,7 +69,7 @@
 
 /obj/item/mod/module/rewinder/on_use(mob/activator)
 	balloon_alert(activator, "anchor point set")
-	playsound(src, 'sound/items/modsuit/time_anchor_set.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/modsuit/time_anchor_set.ogg', 50, TRUE)
 	//stops all mods from triggering during rewinding
 	for(var/obj/item/mod/module/module as anything in mod.modules)
 		RegisterSignal(module, COMSIG_MODULE_TRIGGERED, PROC_REF(on_module_triggered))
@@ -183,7 +183,7 @@
 		mod.visible_message(span_warning("[mod.wearer] drops into the timeline!"))
 
 	//probably justifies its own sound but whatever
-	playsound(src, 'sound/items/modsuit/time_anchor_set.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/modsuit/time_anchor_set.ogg', 50, TRUE)
 
 ///Signal fired when wearer attempts to activate/deactivate suits while phased out
 /obj/item/mod/module/timeline_jumper/proc/on_activate_block(datum/source, user)
@@ -227,7 +227,7 @@
 	chrono_beam.tem_weakref = WEAKREF(src)
 	chrono_beam.aim_projectile(target, mod.wearer)
 	chrono_beam.firer = mod.wearer
-	playsound(src, 'sound/items/modsuit/time_anchor_set.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/modsuit/time_anchor_set.ogg', 50, TRUE)
 	INVOKE_ASYNC(chrono_beam, TYPE_PROC_REF(/obj/projectile, fire))
 
 /obj/item/mod/module/tem/on_uninstall(deleting = FALSE)
@@ -310,7 +310,7 @@
 /obj/structure/chrono_field
 	name = "eradication field"
 	desc = "An aura of time-bluespace energy."
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	icon_state = "chronofield"
 	density = FALSE
 	anchored = TRUE
@@ -340,7 +340,7 @@
 		var/icon/cached_icon = new()
 
 		for(var/i in 1 to CHRONO_FRAME_COUNT)
-			var/icon/removing_frame = icon('icons/obj/chronos.dmi', "erasing", SOUTH, i)
+			var/icon/removing_frame = icon('../assets/icons/obj/chronos.dmi', "erasing", SOUTH, i)
 			var/icon/mob_icon = icon(mob_snapshot)
 			mob_icon.Blend(removing_frame, ICON_MULTIPLY)
 			cached_icon.Insert(mob_icon, "frame[i]")

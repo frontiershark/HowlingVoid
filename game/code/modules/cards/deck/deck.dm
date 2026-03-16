@@ -4,7 +4,7 @@
 /obj/item/toy/cards/deck
 	name = "deck of cards"
 	desc = "A deck of space-grade playing cards."
-	icon = 'icons/obj/toys/playing_cards.dmi'
+	icon = '../assets/icons/obj/toys/playing_cards.dmi'
 	icon_state = "deck_nanotrasen_full"
 	w_class = WEIGHT_CLASS_SMALL
 	worn_icon_state = "card"
@@ -32,7 +32,7 @@
 /obj/item/toy/cards/deck/Initialize(mapload)
 	. = ..()
 	AddElement(/datum/element/drag_pickup)
-	AddComponent(/datum/component/two_handed, attacksound='sound/items/cards/cardflip.ogg')
+	AddComponent(/datum/component/two_handed, attacksound='../assets/sound/items/cards/cardflip.ogg')
 	register_context()
 
 	initialize_cards()
@@ -54,7 +54,7 @@
 
 /obj/item/toy/cards/deck/suicide_act(mob/living/carbon/user)
 	user.visible_message(span_suicide("[user] is slitting [user.p_their()] wrists with \the [src]! It looks like their luck ran out!"))
-	playsound(src, 'sound/items/cards/cardshuffle.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/cards/cardshuffle.ogg', 50, TRUE)
 	return BRUTELOSS
 
 /obj/item/toy/cards/deck/examine(mob/user)
@@ -107,7 +107,7 @@
 		return
 	COOLDOWN_START(src, shuffle_cooldown, shuffle_time)
 	shuffle_inplace(fetch_card_atoms())
-	playsound(src, 'sound/items/cards/cardshuffle.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/cards/cardshuffle.ogg', 50, TRUE)
 	user.balloon_alert_to_viewers("shuffles the deck")
 	addtimer(CALLBACK(src, PROC_REF(CardgameEvent), user), 60 SECONDS, TIMER_OVERRIDE|TIMER_UNIQUE)
 
@@ -225,7 +225,7 @@
 	cardgame_desc = "suspicious card game"
 	icon_state = "deck_syndicate_full"
 	deckstyle = "syndicate"
-	hitsound = 'sound/items/weapons/bladeslice.ogg'
+	hitsound = '../assets/sound/items/weapons/bladeslice.ogg'
 	force = 5
 	throwforce = 10
 	attack_verb_continuous = list("attacks", "slices", "dices", "slashes", "cuts")

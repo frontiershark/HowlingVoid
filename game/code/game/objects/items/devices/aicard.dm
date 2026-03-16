@@ -1,13 +1,13 @@
 /obj/item/aicard
 	name = "intelliCard"
 	desc = "A storage device for AIs. Patent pending."
-	icon = 'icons/obj/aicards.dmi'
+	icon = '../assets/icons/obj/aicards.dmi'
 	icon_state = "aicard"
 	base_icon_state = "aicard"
 	inhand_icon_state = "electronic"
 	worn_icon_state = "electronic"
-	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/devices_righthand.dmi'
 	w_class = WEIGHT_CLASS_SMALL
 	slot_flags = ITEM_SLOT_BELT
 	item_flags = NOBLUDGEON

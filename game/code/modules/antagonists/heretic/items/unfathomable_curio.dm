@@ -6,8 +6,8 @@
 	icon_state = "unfathomable_curio"
 	worn_icon_state = "unfathomable_curio"
 	content_overlays = FALSE
-	drop_sound = 'sound/items/handling/toolbelt_drop.ogg'
-	pickup_sound = 'sound/items/handling/toolbelt_pickup.ogg'
+	drop_sound = '../assets/sound/items/handling/toolbelt_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/toolbelt_pickup.ogg'
 	storage_type = /datum/storage/unfathomable_curio
 
 	//Vars used for the shield component

@@ -1,7 +1,7 @@
 /obj/structure/microscope
 	name = "Microscope"
 	desc = "A simple microscope, allowing you to examine micro-organisms."
-	icon = 'icons/obj/science/vatgrowing.dmi'
+	icon = '../assets/icons/obj/science/vatgrowing.dmi'
 	icon_state = "microscope"
 	custom_materials = list(/datum/material/glass = SHEET_MATERIAL_AMOUNT, /datum/material/plastic = SHEET_MATERIAL_AMOUNT)
 	///Analyzed dish

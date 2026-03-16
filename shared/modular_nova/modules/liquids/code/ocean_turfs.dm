@@ -89,7 +89,7 @@
 	name = "ocean sand"
 	desc = "If you can't escape sandstorms underwater, is anywhere safe?"
 	baseturfs = /turf/open/misc/ocean
-	icon = 'icons/turf/floors.dmi'
+	icon = '../assets/icons/turf/floors.dmi'
 	icon_state = "asteroid"
 	base_icon_state = "asteroid"
 	footstep = FOOTSTEP_SAND
@@ -244,7 +244,7 @@
 	name = "canal"
 	desc = "A section of the earth given way to form a natural aqueduct."
 	baseturfs = /turf/open/misc/canal
-	icon = 'icons/turf/floors.dmi'
+	icon = '../assets/icons/turf/floors.dmi'
 	icon_state = "asteroid"
 	base_icon_state = "asteroid"
 	footstep = FOOTSTEP_SAND
@@ -269,7 +269,7 @@
 	name = "canal"
 	desc = "A section of the earth given way to form a natural aqueduct."
 	baseturfs = /turf/open/misc/canal_mutable
-	icon = 'icons/turf/floors.dmi'
+	icon = '../assets/icons/turf/floors.dmi'
 	icon_state = "asteroid"
 	base_icon_state = "asteroid"
 	footstep = FOOTSTEP_SAND

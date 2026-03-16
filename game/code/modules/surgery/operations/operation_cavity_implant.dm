@@ -6,8 +6,8 @@
 		TOOL_CROWBAR = 1.5,
 	)
 	time = 4.8 SECONDS
-	preop_sound = 'sound/items/handling/surgery/retractor1.ogg'
-	success_sound = 'sound/items/handling/surgery/retractor2.ogg'
+	preop_sound = '../assets/sound/items/handling/surgery/retractor1.ogg'
+	success_sound = '../assets/sound/items/handling/surgery/retractor2.ogg'
 	all_surgery_states_required = SURGERY_SKIN_OPEN|SURGERY_ORGANS_CUT
 	any_surgery_states_blocked = SURGERY_CAVITY_WIDENED
 
@@ -42,8 +42,8 @@
 		/obj/item = 1,
 	)
 	time = 3.2 SECONDS
-	preop_sound = 'sound/items/handling/surgery/organ1.ogg'
-	success_sound = 'sound/items/handling/surgery/organ2.ogg'
+	preop_sound = '../assets/sound/items/handling/surgery/organ1.ogg'
+	success_sound = '../assets/sound/items/handling/surgery/organ2.ogg'
 	all_surgery_states_required = SURGERY_SKIN_OPEN|SURGERY_ORGANS_CUT|SURGERY_CAVITY_WIDENED
 	/// Items that bypass normal size restrictions for cavity implantation
 	var/list/heavy_cavity_implants
@@ -58,7 +58,7 @@
 	return list("operate on chest (target chest)") + ..()
 
 /datum/surgery_operation/limb/cavity_implant/get_default_radial_image()
-	return image('icons/hud/screen_gen.dmi', "arrow_large_still")
+	return image('../assets/icons/hud/screen_gen.dmi', "arrow_large_still")
 
 /datum/surgery_operation/limb/cavity_implant/state_check(obj/item/bodypart/chest/limb)
 	if(limb.body_zone != BODY_ZONE_CHEST)
@@ -130,15 +130,15 @@
 	)
 
 	time = 3.2 SECONDS
-	preop_sound = 'sound/items/handling/surgery/organ1.ogg'
-	success_sound = 'sound/items/handling/surgery/organ2.ogg'
+	preop_sound = '../assets/sound/items/handling/surgery/organ1.ogg'
+	success_sound = '../assets/sound/items/handling/surgery/organ2.ogg'
 	all_surgery_states_required = SURGERY_SKIN_OPEN|SURGERY_ORGANS_CUT|SURGERY_CAVITY_WIDENED
 
 /datum/surgery_operation/limb/undo_cavity_implant/all_required_strings()
 	return list("operate on chest (target chest)") + ..()
 
 /datum/surgery_operation/limb/undo_cavity_implant/get_default_radial_image()
-	return image('icons/hud/screen_gen.dmi', "arrow_large_still")
+	return image('../assets/icons/hud/screen_gen.dmi', "arrow_large_still")
 
 /datum/surgery_operation/limb/undo_cavity_implant/get_radial_options(obj/item/bodypart/chest/limb, obj/item/tool, operating_zone)
 	// Not bothering to cache this as the chance of hitting the same cavity item in the same round is rather low

@@ -39,7 +39,7 @@
 	if(!tile)
 		return
 
-	var/obj/visual = image('icons/hud/screen_gen.dmi', mother.loc, "arrow", FLY_LAYER)
+	var/obj/visual = image('../assets/icons/hud/screen_gen.dmi', mother.loc, "arrow", FLY_LAYER)
 
 	INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(flick_overlay_global), visual, list(hallucinator.client), 2.5 SECONDS)
 	animate(visual, pixel_x = (tile.x - mother.x) * ICON_SIZE_X, pixel_y = (tile.y - mother.y) * ICON_SIZE_Y, time = 1.7, easing = QUAD_EASING|EASE_OUT)
@@ -50,7 +50,7 @@
 	var/spans = list(mother.speech_span)
 
 	if(!plus_runechat)
-		var/image/speech_overlay = image('icons/mob/effects/talk.dmi', mother, "default0", layer = ABOVE_MOB_LAYER)
+		var/image/speech_overlay = image('../assets/icons/mob/effects/talk.dmi', mother, "default0", layer = ABOVE_MOB_LAYER)
 		INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(flick_overlay_global), speech_overlay, list(hallucinator.client), 30)
 	else
 		hallucinator.create_chat_message(mother, understood_language, text, spans)
@@ -74,7 +74,7 @@
 
 /obj/effect/client_image_holder/hallucination/your_mother
 	gender = FEMALE
-	image_icon = 'icons/mob/simple/simple_human.dmi'
+	image_icon = '../assets/icons/mob/simple/simple_human.dmi'
 	name = "Your mother"
 	desc = "She is not happy."
 	image_state = ""

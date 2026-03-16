@@ -2,10 +2,10 @@
 	name = "gloves"
 	gender = PLURAL //Carn: for grammarically correct text-parsing
 	w_class = WEIGHT_CLASS_SMALL
-	icon = 'icons/obj/clothing/gloves.dmi'
+	icon = '../assets/icons/obj/clothing/gloves.dmi'
 	inhand_icon_state = "greyscale_gloves"
-	lefthand_file = 'icons/mob/inhands/clothing/gloves_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/clothing/gloves_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/clothing/gloves_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/clothing/gloves_righthand.dmi'
 	abstract_type = /obj/item/clothing/gloves
 	greyscale_colors = null
 	greyscale_config_inhand_left = /datum/greyscale_config/gloves_inhand_left
@@ -13,8 +13,8 @@
 	siemens_coefficient = 0.5
 	body_parts_covered = HANDS
 	slot_flags = ITEM_SLOT_GLOVES
-	drop_sound = 'sound/items/handling/glove_drop.ogg'
-	pickup_sound = 'sound/items/handling/glove_pick_up.ogg'
+	drop_sound = '../assets/sound/items/handling/glove_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/glove_pick_up.ogg'
 	attack_verb_continuous = list("challenges")
 	attack_verb_simple = list("challenge")
 	strip_delay = 2 SECONDS
@@ -49,7 +49,7 @@
 	if(isinhands)
 		return
 	if(damaged_clothes)
-		. += mutable_appearance('icons/effects/item_damage.dmi', "damagedgloves")
+		. += mutable_appearance('../assets/icons/effects/item_damage.dmi', "damagedgloves")
 
 /obj/item/clothing/gloves/separate_worn_overlays(mutable_appearance/standing, mutable_appearance/draw_target, isinhands, icon_file, mutant_styles) // NOVA EDIT CHANGE - ORIGINAL: /obj/item/clothing/gloves/separate_worn_overlays(mutable_appearance/standing, mutable_appearance/draw_target, isinhands, icon_file)
 	. = ..()

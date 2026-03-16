@@ -987,7 +987,7 @@
 "aqh" = (
 /obj/machinery/shower/directional/west,
 /obj/effect/turf_decal{
-	icon = 'icons/obj/mining_zones/survival_pod.dmi';
+	icon = '../assets/icons/obj/mining_zones/survival_pod.dmi';
 	icon_state = "fan_tiny"
 	},
 /turf/open/floor/iron/white/textured_large,
@@ -2550,7 +2550,7 @@
 	},
 /obj/machinery/shower/directional/south,
 /obj/effect/turf_decal{
-	icon = 'icons/obj/mining_zones/survival_pod.dmi';
+	icon = '../assets/icons/obj/mining_zones/survival_pod.dmi';
 	icon_state = "fan_tiny"
 	},
 /obj/effect/turf_decal/stripes/line,
@@ -3018,7 +3018,7 @@
 "aZt" = (
 /obj/structure/transport/linear/public{
 	base_icon_state = "catwalk";
-	icon = 'icons/obj/smooth_structures/catwalk.dmi';
+	icon = '../assets/icons/obj/smooth_structures/catwalk.dmi';
 	icon_state = "catwalk-6"
 	},
 /turf/open/floor/plating/elevatorshaft,
@@ -4440,7 +4440,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/stairs{
-	icon = 'icons/obj/stairs.dmi';
+	icon = '../assets/icons/obj/stairs.dmi';
 	icon_state = "stairs_wood"
 	},
 /area/station/service/chapel)
@@ -6243,7 +6243,7 @@
 "ciR" = (
 /obj/structure/transport/linear/public{
 	base_icon_state = "catwalk";
-	icon = 'icons/obj/smooth_structures/catwalk.dmi';
+	icon = '../assets/icons/obj/smooth_structures/catwalk.dmi';
 	icon_state = "catwalk-8"
 	},
 /turf/open/openspace,
@@ -13187,7 +13187,7 @@
 	icon_state = "siding_thinplating_new_end"
 	},
 /obj/effect/turf_decal{
-	icon = 'icons/obj/mining_zones/survival_pod.dmi';
+	icon = '../assets/icons/obj/mining_zones/survival_pod.dmi';
 	icon_state = "fan_tiny"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -15018,7 +15018,7 @@
 "fnO" = (
 /obj/structure/transport/linear/public{
 	base_icon_state = "catwalk";
-	icon = 'icons/obj/smooth_structures/catwalk.dmi';
+	icon = '../assets/icons/obj/smooth_structures/catwalk.dmi';
 	icon_state = "catwalk-13"
 	},
 /turf/open/openspace,
@@ -15571,7 +15571,7 @@
 "fxG" = (
 /obj/structure/transport/linear/public{
 	base_icon_state = "catwalk";
-	icon = 'icons/obj/smooth_structures/catwalk.dmi';
+	icon = '../assets/icons/obj/smooth_structures/catwalk.dmi';
 	icon_state = "catwalk-137"
 	},
 /turf/open/floor/plating/elevatorshaft,
@@ -16192,7 +16192,7 @@
 "fHk" = (
 /obj/structure/transport/linear/public{
 	base_icon_state = "catwalk";
-	icon = 'icons/obj/smooth_structures/catwalk.dmi';
+	icon = '../assets/icons/obj/smooth_structures/catwalk.dmi';
 	icon_state = "catwalk-74"
 	},
 /turf/open/floor/plating/elevatorshaft,
@@ -21538,7 +21538,7 @@
 "hvA" = (
 /obj/structure/transport/linear/public{
 	base_icon_state = "catwalk";
-	icon = 'icons/obj/smooth_structures/catwalk.dmi';
+	icon = '../assets/icons/obj/smooth_structures/catwalk.dmi';
 	icon_state = "catwalk-78"
 	},
 /obj/effect/spawner/random/structure/closet_empty/crate,
@@ -22411,7 +22411,7 @@
 "hNC" = (
 /obj/structure/transport/linear/public{
 	base_icon_state = "catwalk";
-	icon = 'icons/obj/smooth_structures/catwalk.dmi';
+	icon = '../assets/icons/obj/smooth_structures/catwalk.dmi';
 	icon_state = "catwalk-4"
 	},
 /turf/open/openspace,
@@ -22996,7 +22996,7 @@
 "hVQ" = (
 /obj/structure/transport/linear/public{
 	base_icon_state = "catwalk";
-	icon = 'icons/obj/smooth_structures/catwalk.dmi';
+	icon = '../assets/icons/obj/smooth_structures/catwalk.dmi';
 	icon_state = "catwalk-203"
 	},
 /turf/open/floor/plating/elevatorshaft,
@@ -33495,7 +33495,7 @@
 /obj/machinery/shower/directional/south,
 /obj/effect/turf_decal/stripes/line,
 /obj/effect/turf_decal{
-	icon = 'icons/obj/mining_zones/survival_pod.dmi';
+	icon = '../assets/icons/obj/mining_zones/survival_pod.dmi';
 	icon_state = "fan_tiny"
 	},
 /turf/open/floor/iron/textured_large,
@@ -36255,7 +36255,7 @@
 /obj/effect/turf_decal/siding/thinplating/dark,
 /obj/structure/sink/directional/north,
 /obj/effect/turf_decal{
-	icon = 'icons/obj/mining_zones/survival_pod.dmi';
+	icon = '../assets/icons/obj/mining_zones/survival_pod.dmi';
 	icon_state = "fan_tiny"
 	},
 /obj/machinery/light/directional/south,
@@ -41422,7 +41422,7 @@
 	icon_state = "siding_thinplating_new_end"
 	},
 /obj/effect/turf_decal{
-	icon = 'icons/obj/mining_zones/survival_pod.dmi';
+	icon = '../assets/icons/obj/mining_zones/survival_pod.dmi';
 	icon_state = "fan_tiny"
 	},
 /turf/open/floor/iron/checker,
@@ -43777,7 +43777,7 @@
 "pfv" = (
 /obj/machinery/shower/directional/west,
 /obj/effect/turf_decal{
-	icon = 'icons/obj/mining_zones/survival_pod.dmi';
+	icon = '../assets/icons/obj/mining_zones/survival_pod.dmi';
 	icon_state = "fan_tiny"
 	},
 /obj/machinery/digital_clock/directional/south,
@@ -44663,7 +44663,7 @@
 "puP" = (
 /obj/structure/transport/linear/public{
 	base_icon_state = "catwalk";
-	icon = 'icons/obj/smooth_structures/catwalk.dmi';
+	icon = '../assets/icons/obj/smooth_structures/catwalk.dmi';
 	icon_state = "catwalk-3"
 	},
 /turf/open/openspace,
@@ -45568,7 +45568,7 @@
 "pJL" = (
 /obj/structure/transport/linear/public{
 	base_icon_state = "catwalk";
-	icon = 'icons/obj/smooth_structures/catwalk.dmi';
+	icon = '../assets/icons/obj/smooth_structures/catwalk.dmi';
 	icon_state = "catwalk-157"
 	},
 /turf/open/floor/plating/elevatorshaft,
@@ -51017,7 +51017,7 @@
 "rzg" = (
 /obj/structure/transport/linear/public{
 	base_icon_state = "catwalk";
-	icon = 'icons/obj/smooth_structures/catwalk.dmi';
+	icon = '../assets/icons/obj/smooth_structures/catwalk.dmi';
 	icon_state = "catwalk-55"
 	},
 /turf/open/floor/plating/elevatorshaft,
@@ -56179,7 +56179,7 @@
 /obj/item/radio/intercom/directional/south,
 /turf/open/floor/iron/stairs{
 	dir = 4;
-	icon = 'icons/obj/stairs.dmi';
+	icon = '../assets/icons/obj/stairs.dmi';
 	icon_state = "stairs_wood"
 	},
 /area/station/service/chapel)
@@ -56195,7 +56195,7 @@
 "tjq" = (
 /obj/machinery/shower/directional/south,
 /obj/effect/turf_decal{
-	icon = 'icons/obj/mining_zones/survival_pod.dmi';
+	icon = '../assets/icons/obj/mining_zones/survival_pod.dmi';
 	icon_state = "fan_tiny"
 	},
 /obj/effect/turf_decal/stripes/line,
@@ -60740,7 +60740,7 @@
 "uKA" = (
 /obj/structure/transport/linear/public{
 	base_icon_state = "catwalk";
-	icon = 'icons/obj/smooth_structures/catwalk.dmi';
+	icon = '../assets/icons/obj/smooth_structures/catwalk.dmi';
 	icon_state = "catwalk-14"
 	},
 /turf/open/openspace,
@@ -66676,7 +66676,7 @@
 "wPk" = (
 /obj/structure/transport/linear/public{
 	base_icon_state = "catwalk";
-	icon = 'icons/obj/smooth_structures/catwalk.dmi';
+	icon = '../assets/icons/obj/smooth_structures/catwalk.dmi';
 	icon_state = "catwalk-255"
 	},
 /obj/effect/turf_decal/caution/stand_clear,
@@ -68241,7 +68241,7 @@
 "xrH" = (
 /obj/structure/transport/linear/public{
 	base_icon_state = "catwalk";
-	icon = 'icons/obj/smooth_structures/catwalk.dmi';
+	icon = '../assets/icons/obj/smooth_structures/catwalk.dmi';
 	icon_state = "catwalk-21"
 	},
 /turf/open/floor/plating/elevatorshaft,

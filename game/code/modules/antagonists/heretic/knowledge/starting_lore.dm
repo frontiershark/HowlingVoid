@@ -77,7 +77,7 @@ GLOBAL_LIST_INIT(heretic_start_knowledge, initialize_starting_knowledge())
 	cost = 0
 	priority = MAX_KNOWLEDGE_PRIORITY - 1 // Knowing how to remake your heart is important
 	is_starting_knowledge = TRUE
-	research_tree_icon_path = 'icons/obj/antags/eldritch.dmi'
+	research_tree_icon_path = '../assets/icons/obj/antags/eldritch.dmi'
 	research_tree_icon_state = "living_heart"
 	research_tree_icon_frame = 1
 
@@ -161,7 +161,7 @@ GLOBAL_LIST_INIT(heretic_start_knowledge, initialize_starting_knowledge())
 	// Make it the living heart
 	our_new_heart.AddComponent(/datum/component/living_heart)
 	to_chat(user, span_warning("You feel your [our_new_heart.name] begin pulse faster and faster as it awakens!"))
-	playsound(user, 'sound/effects/magic/demon_consume.ogg', 50, TRUE)
+	playsound(user, '../assets/sound/effects/magic/demon_consume.ogg', 50, TRUE)
 	return TRUE
 
 /// Checks if the passed heart is a valid heart to become a living heart
@@ -189,7 +189,7 @@ GLOBAL_LIST_INIT(heretic_start_knowledge, initialize_starting_knowledge())
 	cost = 0
 	priority = MAX_KNOWLEDGE_PRIORITY - 2 // Not as important as making a heart or sacrificing, but important enough.
 	is_starting_knowledge = TRUE
-	research_tree_icon_path = 'icons/obj/clothing/neck.dmi'
+	research_tree_icon_path = '../assets/icons/obj/clothing/neck.dmi'
 	research_tree_icon_state = "eldritch_necklace"
 
 /datum/heretic_knowledge/spell/cloak_of_shadows
@@ -224,7 +224,7 @@ GLOBAL_LIST_INIT(heretic_start_knowledge, initialize_starting_knowledge())
 	is_starting_knowledge = TRUE
 	priority = MAX_KNOWLEDGE_PRIORITY - 4 // Least priority out of the starting knowledges, as it's an optional boon.
 	var/static/list/non_mob_bindings = typecacheof(list(/obj/item/stack/sheet/leather, /obj/item/stack/sheet/animalhide, /obj/item/food/deadmouse))
-	research_tree_icon_path = 'icons/obj/antags/eldritch.dmi'
+	research_tree_icon_path = '../assets/icons/obj/antags/eldritch.dmi'
 	research_tree_icon_state = "book"
 
 /datum/heretic_knowledge/codex_cicatrix/recipe_snowflake_check(mob/living/user, list/atoms, list/selected_atoms, turf/loc)
@@ -273,7 +273,7 @@ GLOBAL_LIST_INIT(heretic_start_knowledge, initialize_starting_knowledge())
 	var/obj/item/book/le_book = locate() in selected_atoms
 	if(!le_book)
 		stack_trace("Somehow, no book in codex cicatrix selected atoms! [english_list(selected_atoms)]")
-	playsound(body, 'sound/items/poster/poster_ripped.ogg', 100, TRUE)
+	playsound(body, '../assets/sound/items/poster/poster_ripped.ogg', 100, TRUE)
 	body.do_jitter_animation()
 	body.visible_message(span_danger("An awful ripping sound is heard as [ripped_thing]'s [exterior_text] is ripped straight out, wrapping around [le_book || "the book"], turning into an eldritch shade of blue!"))
 	return ..()
@@ -284,7 +284,7 @@ GLOBAL_LIST_INIT(heretic_start_knowledge, initialize_starting_knowledge())
 	gain_text = "Under the soft glow of unreason there is a beast that stalks the night. I shall bring it forth and let it enter my presence. It will feast upon my amibitions and leave knowledge in its wake."
 	is_starting_knowledge = TRUE
 	required_atoms = list()
-	research_tree_icon_path = 'icons/mob/actions/actions_animal.dmi'
+	research_tree_icon_path = '../assets/icons/mob/actions/actions_animal.dmi'
 	research_tree_icon_state = "god_transmit"
 	/// amount of research points granted
 	var/reward = 5
@@ -306,10 +306,10 @@ GLOBAL_LIST_INIT(heretic_start_knowledge, initialize_starting_knowledge())
 	heretic_datum.update_heretic_aura()
 	user.set_temp_blindness(reward * 1 SECONDS)
 	user.AdjustParalyzed(reward * 1 SECONDS)
-	user.playsound_local(get_turf(user), 'sound/music/antag/heretic/heretic_gain_intense.ogg', 100, FALSE, pressure_affected = FALSE, use_reverb = FALSE)
+	user.playsound_local(get_turf(user), '../assets/sound/music/antag/heretic/heretic_gain_intense.ogg', 100, FALSE, pressure_affected = FALSE, use_reverb = FALSE)
 	for(var/i in 1 to reward)
 		user.emote("scream")
-		playsound(loc, 'sound/items/eatfood.ogg', 100, TRUE)
+		playsound(loc, '../assets/sound/items/eatfood.ogg', 100, TRUE)
 		heretic_datum.adjust_knowledge_points(1)
 
 		to_chat(user, span_danger("You feel something invisible tearing away at your very essence!"))
@@ -341,7 +341,7 @@ GLOBAL_LIST_INIT(heretic_start_knowledge, initialize_starting_knowledge())
 	cost = 1
 	is_starting_knowledge = TRUE
 	priority = MAX_KNOWLEDGE_PRIORITY - 3
-	research_tree_icon_path = 'icons/obj/card.dmi'
+	research_tree_icon_path = '../assets/icons/obj/card.dmi'
 	research_tree_icon_state = "eldritch"
 
 /datum/heretic_knowledge/bookworm/recipe_snowflake_check(mob/living/user, list/atoms, list/selected_atoms, turf/loc)

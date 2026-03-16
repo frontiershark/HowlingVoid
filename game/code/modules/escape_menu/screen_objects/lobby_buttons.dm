@@ -1,5 +1,5 @@
 /atom/movable/screen/escape_menu/lobby_button
-	icon = 'icons/hud/escape_menu_leave_body.dmi'
+	icon = '../assets/icons/hud/escape_menu_leave_body.dmi'
 	icon_state = "template"
 	maptext_width = 96
 	maptext_y = -32
@@ -63,7 +63,7 @@
 	)
 
 /atom/movable/screen/escape_menu/lobby_button/small
-	icon = 'icons/hud/escape_menu_icons.dmi'
+	icon = '../assets/icons/hud/escape_menu_icons.dmi'
 	font_size = 6
 	maptext_width = 80
 	maptext_x = -20

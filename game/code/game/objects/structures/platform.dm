@@ -4,7 +4,7 @@
 /obj/structure/platform
 	name = "platform"
 	desc = "A raised platform which can make you slightly taller."
-	icon = 'icons/obj/smooth_structures/platform/window_frame_normal.dmi'
+	icon = '../assets/icons/obj/smooth_structures/platform/window_frame_normal.dmi'
 	icon_state = "window_frame_normal-0"
 	base_icon_state = "window_frame_normal"
 	smoothing_flags = SMOOTH_BITMASK|SMOOTH_OBJ
@@ -20,7 +20,7 @@
 	material_flags = MATERIAL_EFFECTS | MATERIAL_AFFECT_STATISTICS
 	custom_materials = list(/datum/material/iron = PLATFORM_BASE_MATERIAL_AMOUNT)
 	/// Icon used for the frame
-	var/frame_icon = 'icons/obj/smooth_structures/platform/frame_faces/window_frame_normal.dmi'
+	var/frame_icon = '../assets/icons/obj/smooth_structures/platform/frame_faces/window_frame_normal.dmi'
 	/// Material used in our construction
 	var/sheet_type = null
 	/// Count of sheets used in our construction
@@ -76,7 +76,7 @@
 /obj/structure/platform/wrench_act_secondary(mob/living/user, obj/item/tool)
 	to_chat(user, span_notice("You start deconstructing [src]..."))
 	if(tool.use_tool(src, user, 4 SECONDS, volume=50))
-		playsound(loc, 'sound/items/deconstruct.ogg', 50, TRUE)
+		playsound(loc, '../assets/sound/items/deconstruct.ogg', 50, TRUE)
 		deconstruct(TRUE)
 	return ITEM_INTERACT_SUCCESS
 
@@ -98,16 +98,16 @@
 			new mat.sheet_type(target_turf, FLOOR(custom_materials[mat] / SHEET_MATERIAL_AMOUNT, 1))
 
 /obj/structure/platform/rusty
-	icon = 'icons/obj/smooth_structures/platform/window_frame_rusty.dmi'
-	frame_icon = 'icons/obj/smooth_structures/platform/frame_faces/window_frame_rusty.dmi'
+	icon = '../assets/icons/obj/smooth_structures/platform/window_frame_rusty.dmi'
+	frame_icon = '../assets/icons/obj/smooth_structures/platform/frame_faces/window_frame_rusty.dmi'
 	icon_state = "window_frame_rusty-0"
 	base_icon_state = "window_frame_rusty"
 
 // Shuttle themed
 
 /obj/structure/platform/titanium
-	icon = 'icons/obj/smooth_structures/platform/window_frame_shuttle.dmi'
-	frame_icon = 'icons/obj/smooth_structures/platform/frame_faces/window_frame_shuttle.dmi'
+	icon = '../assets/icons/obj/smooth_structures/platform/window_frame_shuttle.dmi'
+	frame_icon = '../assets/icons/obj/smooth_structures/platform/frame_faces/window_frame_shuttle.dmi'
 	icon_state = "window_frame_shuttle-0"
 	base_icon_state = "window_frame_shuttle"
 	sheet_type = /obj/item/stack/sheet/mineral/titanium
@@ -116,8 +116,8 @@
 	canSmoothWith = SMOOTH_GROUP_PLATFORMS_SHUTTLE
 
 /obj/structure/platform/plastitanium
-	icon = 'icons/obj/smooth_structures/platform/window_frame_plastitanium.dmi'
-	frame_icon = 'icons/obj/smooth_structures/platform/frame_faces/window_frame_plastitanium.dmi'
+	icon = '../assets/icons/obj/smooth_structures/platform/window_frame_plastitanium.dmi'
+	frame_icon = '../assets/icons/obj/smooth_structures/platform/frame_faces/window_frame_plastitanium.dmi'
 	icon_state = "window_frame_plastitanium-0"
 	base_icon_state = "window_frame_plastitanium"
 	sheet_type = /obj/item/stack/sheet/mineral/plastitanium
@@ -128,8 +128,8 @@
 // Metallic material themed
 
 /obj/structure/platform/material
-	icon = 'icons/obj/smooth_structures/platform/window_frame_material.dmi'
-	frame_icon = 'icons/obj/smooth_structures/platform/frame_faces/window_frame_material.dmi'
+	icon = '../assets/icons/obj/smooth_structures/platform/window_frame_material.dmi'
+	frame_icon = '../assets/icons/obj/smooth_structures/platform/frame_faces/window_frame_material.dmi'
 	icon_state = "window_frame_material-0"
 	base_icon_state = "window_frame_material"
 	material_flags = MATERIAL_EFFECTS | MATERIAL_ADD_PREFIX | MATERIAL_COLOR | MATERIAL_AFFECT_STATISTICS
@@ -138,8 +138,8 @@
 
 /obj/structure/platform/iron
 	name = "rough iron platform"
-	icon = 'icons/obj/smooth_structures/platform/window_frame_iron.dmi'
-	frame_icon = 'icons/obj/smooth_structures/platform/frame_faces/window_frame_iron.dmi'
+	icon = '../assets/icons/obj/smooth_structures/platform/window_frame_iron.dmi'
+	frame_icon = '../assets/icons/obj/smooth_structures/platform/frame_faces/window_frame_iron.dmi'
 	icon_state = "window_frame_iron-0"
 	base_icon_state = "window_frame_iron"
 	sheet_type = /obj/item/stack/sheet/iron
@@ -149,8 +149,8 @@
 
 /obj/structure/platform/silver
 	name = "silver platform"
-	icon = 'icons/obj/smooth_structures/platform/window_frame_silver.dmi'
-	frame_icon = 'icons/obj/smooth_structures/platform/frame_faces/window_frame_silver.dmi'
+	icon = '../assets/icons/obj/smooth_structures/platform/window_frame_silver.dmi'
+	frame_icon = '../assets/icons/obj/smooth_structures/platform/frame_faces/window_frame_silver.dmi'
 	icon_state = "window_frame_silver-0"
 	base_icon_state = "window_frame_silver"
 	sheet_type = /obj/item/stack/sheet/mineral/silver
@@ -160,8 +160,8 @@
 
 /obj/structure/platform/gold
 	name = "golden platform"
-	icon = 'icons/obj/smooth_structures/platform/window_frame_gold.dmi'
-	frame_icon = 'icons/obj/smooth_structures/platform/frame_faces/window_frame_gold.dmi'
+	icon = '../assets/icons/obj/smooth_structures/platform/window_frame_gold.dmi'
+	frame_icon = '../assets/icons/obj/smooth_structures/platform/frame_faces/window_frame_gold.dmi'
 	icon_state = "window_frame_gold-0"
 	base_icon_state = "window_frame_gold"
 	sheet_type = /obj/item/stack/sheet/mineral/gold
@@ -171,8 +171,8 @@
 
 /obj/structure/platform/bronze
 	name = "clockwork platform"
-	icon = 'icons/obj/smooth_structures/platform/window_frame_bronze.dmi'
-	frame_icon = 'icons/obj/smooth_structures/platform/frame_faces/window_frame_bronze.dmi'
+	icon = '../assets/icons/obj/smooth_structures/platform/window_frame_bronze.dmi'
+	frame_icon = '../assets/icons/obj/smooth_structures/platform/frame_faces/window_frame_bronze.dmi'
 	icon_state = "window_frame_bronze-0"
 	base_icon_state = "window_frame_bronze"
 	sheet_type = /obj/item/stack/sheet/bronze
@@ -183,8 +183,8 @@
 /obj/structure/platform/uranium
 	name = "depleted uranium platform"
 	desc = "A heavy duty platform, thankfully not radioactive."
-	icon = 'icons/obj/smooth_structures/platform/window_frame_uranium.dmi'
-	frame_icon = 'icons/obj/smooth_structures/platform/frame_faces/window_frame_uranium.dmi'
+	icon = '../assets/icons/obj/smooth_structures/platform/window_frame_uranium.dmi'
+	frame_icon = '../assets/icons/obj/smooth_structures/platform/frame_faces/window_frame_uranium.dmi'
 	icon_state = "window_frame_uranium-0"
 	base_icon_state = "window_frame_uranium"
 	material_flags = NONE
@@ -197,7 +197,7 @@
 
 /obj/structure/platform/wood
 	name = "wooden platform"
-	icon = 'icons/obj/smooth_structures/platform/window_frame_wood.dmi'
+	icon = '../assets/icons/obj/smooth_structures/platform/window_frame_wood.dmi'
 	frame_icon = null
 	icon_state = "window_frame_wood-0"
 	base_icon_state = "window_frame_wood"
@@ -210,14 +210,14 @@
 /obj/structure/platform/wood/stage
 	name = "wooden stage"
 	desc = "A raised platform you can perform upon."
-	icon = 'icons/obj/smooth_structures/platform/window_frame_hotel.dmi'
+	icon = '../assets/icons/obj/smooth_structures/platform/window_frame_hotel.dmi'
 	icon_state = "window_frame_hotel-0"
 	base_icon_state = "window_frame_hotel"
 
 /obj/structure/platform/bamboo
 	name = "bamboo platform"
-	icon = 'icons/obj/smooth_structures/platform/window_frame_bamboo.dmi'
-	frame_icon = 'icons/obj/smooth_structures/platform/frame_faces/window_frame_bamboo.dmi'
+	icon = '../assets/icons/obj/smooth_structures/platform/window_frame_bamboo.dmi'
+	frame_icon = '../assets/icons/obj/smooth_structures/platform/frame_faces/window_frame_bamboo.dmi'
 	icon_state = "window_frame_bamboo-0"
 	base_icon_state = "window_frame_bamboo"
 	sheet_type = /obj/item/stack/sheet/mineral/bamboo
@@ -230,8 +230,8 @@
 
 /obj/structure/platform/sandstone
 	name = "stone platform"
-	icon = 'icons/obj/smooth_structures/platform/window_frame_sandstone.dmi'
-	frame_icon = 'icons/obj/smooth_structures/platform/frame_faces/window_frame_sandstone.dmi'
+	icon = '../assets/icons/obj/smooth_structures/platform/window_frame_sandstone.dmi'
+	frame_icon = '../assets/icons/obj/smooth_structures/platform/frame_faces/window_frame_sandstone.dmi'
 	icon_state = "window_frame_sandstone-0"
 	base_icon_state = "window_frame_sandstone"
 	sheet_type = /obj/item/stack/sheet/mineral/sandstone
@@ -241,8 +241,8 @@
 
 /obj/structure/platform/cult
 	name = "runed stone platform"
-	icon = 'icons/obj/smooth_structures/platform/window_frame_cult.dmi'
-	frame_icon = 'icons/obj/smooth_structures/platform/frame_faces/window_frame_cult.dmi'
+	icon = '../assets/icons/obj/smooth_structures/platform/window_frame_cult.dmi'
+	frame_icon = '../assets/icons/obj/smooth_structures/platform/frame_faces/window_frame_cult.dmi'
 	icon_state = "window_frame_cult-0"
 	base_icon_state = "window_frame_cult"
 	sheet_type = /datum/material/runedmetal
@@ -253,7 +253,7 @@
 /obj/structure/platform/pizza
 	name = "huge pizza"
 	desc = "Big enough to stand on, although possibly you shouldn't eat it after that."
-	icon = 'icons/obj/smooth_structures/platform/window_frame_pizza.dmi'
+	icon = '../assets/icons/obj/smooth_structures/platform/window_frame_pizza.dmi'
 	frame_icon = null
 	icon_state = "window_frame_pizza-0"
 	base_icon_state = "window_frame_pizza"
@@ -264,8 +264,8 @@
 
 /obj/structure/platform/paper
 	name = "japanese platform"
-	icon = 'icons/obj/smooth_structures/platform/window_frame_paperframe.dmi'
-	frame_icon = 'icons/obj/smooth_structures/platform/frame_faces/window_frame_paperframe.dmi'
+	icon = '../assets/icons/obj/smooth_structures/platform/window_frame_paperframe.dmi'
+	frame_icon = '../assets/icons/obj/smooth_structures/platform/frame_faces/window_frame_paperframe.dmi'
 	icon_state = "window_frame_paperframe-0"
 	base_icon_state = "window_frame_paperframe"
 	sheet_type = /obj/item/stack/sheet/paperframes

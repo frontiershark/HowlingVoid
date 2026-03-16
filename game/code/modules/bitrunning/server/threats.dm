@@ -120,7 +120,7 @@
 	antag_mind.add_antag_datum(chosen_role)
 	antag_mind.set_assigned_role(SSjob.get_job_type(/datum/job/bitrunning_glitch))
 
-	playsound(new_mob, 'sound/effects/magic/ethereal_exit.ogg', 50, vary = TRUE)
+	playsound(new_mob, '../assets/sound/effects/magic/ethereal_exit.ogg', 50, vary = TRUE)
 	message_admins("[ADMIN_LOOKUPFLW(new_mob)] has been made into virtual antagonist by an event.")
 	new_mob.log_message("was spawned as a virtual antagonist by an event.", LOG_GAME)
 
@@ -172,7 +172,7 @@
 	if(temp_body)
 		qdel(temp_body)
 
-	do_teleport(antag, get_turf(chosen_forge), forced = TRUE, asoundin = 'sound/effects/magic/ethereal_enter.ogg', asoundout = 'sound/effects/magic/ethereal_exit.ogg', channel = TELEPORT_CHANNEL_QUANTUM)
+	do_teleport(antag, get_turf(chosen_forge), forced = TRUE, asoundin = '../assets/sound/effects/magic/ethereal_enter.ogg', asoundout = '../assets/sound/effects/magic/ethereal_exit.ogg', channel = TELEPORT_CHANNEL_QUANTUM)
 
 
 /// Removes any invalid candidates from the list

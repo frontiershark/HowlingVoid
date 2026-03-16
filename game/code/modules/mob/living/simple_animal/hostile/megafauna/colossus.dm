@@ -27,14 +27,14 @@
 	maxHealth = 2500
 	attack_verb_continuous = "judges"
 	attack_verb_simple = "judge"
-	attack_sound = 'sound/effects/magic/clockwork/ratvar_attack.ogg'
+	attack_sound = '../assets/sound/effects/magic/clockwork/ratvar_attack.ogg'
 	icon_state = "eva"
 	icon_living = "eva"
 	icon_dead = ""
 	health_doll_icon = "eva"
 	friendly_verb_continuous = "stares down"
 	friendly_verb_simple = "stare down"
-	icon = 'icons/mob/simple/lavaland/96x96megafauna.dmi'
+	icon = '../assets/icons/mob/simple/lavaland/96x96megafauna.dmi'
 	speak_emote = list("roars")
 	armour_penetration = 40
 	melee_damage_lower = 40
@@ -55,7 +55,7 @@
 	crusher_loot = /obj/structure/closet/crate/necropolis/colossus/crusher
 	replace_crusher_drop = TRUE
 	death_message = "disintegrates, leaving a glowing core in its wake."
-	death_sound = 'sound/effects/magic/demon_dies.ogg'
+	death_sound = '../assets/sound/effects/magic/demon_dies.ogg'
 	summon_line = "Your trial begins now."
 	/// Spiral shots ability
 	var/datum/action/cooldown/mob_cooldown/projectile_attack/spiral_shots/colossus/spiral_shots
@@ -131,7 +131,7 @@
 		if(viewer.client)
 			flash_color(viewer.client, "#C80000", 1)
 			shake_camera(viewer, 4, 3)
-	playsound(src, 'sound/effects/magic/clockwork/narsie_attack.ogg', 200, TRUE)
+	playsound(src, '../assets/sound/effects/magic/clockwork/narsie_attack.ogg', 200, TRUE)
 
 /mob/living/simple_animal/hostile/megafauna/colossus/proc/start_attack(mob/living/owner, datum/action/cooldown/activated)
 	SIGNAL_HANDLER
@@ -163,7 +163,7 @@
 /obj/effect/temp_visual/at_shield
 	name = "anti-toolbox field"
 	desc = "A shimmering forcefield protecting the colossus."
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	icon_state = "at_shield2"
 	layer = FLY_LAYER
 	plane = ABOVE_GAME_PLANE

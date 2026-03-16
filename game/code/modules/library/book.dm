@@ -1,7 +1,7 @@
 /obj/item/book
 	name = "book"
 	desc = "Crack it open, inhale the musk of its pages, and learn something new."
-	icon = 'icons/obj/service/library.dmi'
+	icon = '../assets/icons/obj/service/library.dmi'
 	icon_state ="book"
 	worn_icon_state = "book"
 	throw_speed = 1
@@ -10,8 +10,8 @@
 	attack_verb_continuous = list("bashes", "whacks", "educates")
 	attack_verb_simple = list("bash", "whack", "educate")
 	resistance_flags = FLAMMABLE
-	drop_sound = 'sound/items/handling/book_drop.ogg'
-	pickup_sound = 'sound/items/handling/book_pickup.ogg'
+	drop_sound = '../assets/sound/items/handling/book_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/book_pickup.ogg'
 	/// Maximum icon state number
 	var/maximum_book_state = 8
 	/// Game time in 1/10th seconds
@@ -244,7 +244,7 @@
 		return ITEM_INTERACT_BLOCKING
 
 	balloon_alert(user, "carved out")
-	playsound(src, 'sound/effects/cloth_rip.ogg', vol = 75, vary = TRUE)
+	playsound(src, '../assets/sound/effects/cloth_rip.ogg', vol = 75, vary = TRUE)
 	carve_out()
 	return ITEM_INTERACT_SUCCESS
 
@@ -263,7 +263,7 @@
 /obj/item/tgui_book
 	name = "book"
 	desc = "Must be one of those new fangled electronic books."
-	icon = 'icons/obj/service/library.dmi'
+	icon = '../assets/icons/obj/service/library.dmi'
 	icon_state ="book"
 	worn_icon_state = "book"
 	throw_speed = 1
@@ -272,8 +272,8 @@
 	attack_verb_continuous = list("bashes", "whacks", "educates")
 	attack_verb_simple = list("bash", "whack", "educate")
 	resistance_flags = FLAMMABLE
-	drop_sound = 'sound/items/handling/book_drop.ogg'
-	pickup_sound = 'sound/items/handling/book_pickup.ogg'
+	drop_sound = '../assets/sound/items/handling/book_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/book_pickup.ogg'
 	/// The name of the UI to open
 	var/ui_name
 

@@ -67,7 +67,7 @@
 	slot_flags = null
 	accepted_magazine_type = /obj/item/ammo_box/magazine/recharge/ctf/shotgun
 	empty_indicator = TRUE
-	fire_sound = 'sound/items/weapons/gun/shotgun/shot_alt.ogg'
+	fire_sound = '../assets/sound/items/weapons/gun/shotgun/shot_alt.ogg'
 	semi_auto = TRUE
 	internal_magazine = FALSE
 	tac_reloads = TRUE
@@ -194,11 +194,11 @@
 /obj/item/clothing/suit/armor/vest/ctf
 	name = "white shielded vest"
 	desc = "Standard issue vest for playing capture the flag."
-	worn_icon = 'icons/mob/clothing/suits/ctf.dmi'
+	worn_icon = '../assets/icons/mob/clothing/suits/ctf.dmi'
 	// Adding TRAIT_NODROP is done when the CTF spawner equips people
 	armor_type = /datum/armor/none
 	allowed = null
-	icon = 'icons/map_icons/clothing/suit/_suit.dmi'
+	icon = '../assets/icons/map_icons/clothing/suit/_suit.dmi'
 	icon_state = "/obj/item/clothing/suit/armor/vest/ctf"
 	post_init_icon_state = "standard"
 	greyscale_config = /datum/greyscale_config/ctf_standard
@@ -232,7 +232,7 @@
 /obj/item/clothing/suit/armor/vest/ctf/light
 	name = "light white shielded vest"
 	desc = "Lightweight vest for playing capture the flag."
-	icon = 'icons/map_icons/clothing/suit/_suit.dmi'
+	icon = '../assets/icons/map_icons/clothing/suit/_suit.dmi'
 	icon_state = "/obj/item/clothing/suit/armor/vest/ctf/light"
 	post_init_icon_state = "light"
 	greyscale_config = /datum/greyscale_config/ctf_light

@@ -51,7 +51,7 @@
 
 /atom/movable/screen/movable/pic_in_pic/proc/make_backgrounds()
 	standard_background = new /mutable_appearance()
-	standard_background.icon = 'icons/hud/pic_in_pic.dmi'
+	standard_background.icon = '../assets/icons/hud/pic_in_pic.dmi'
 	standard_background.icon_state = "background"
 	standard_background.layer = LOWER_FLOOR_LAYER
 	standard_background.appearance_flags = PIXEL_SCALE
@@ -62,7 +62,7 @@
 		move_tab = new /mutable_appearance()
 		//all these properties are always the same, and since adding something to the overlay
 		//list makes a copy, there is no reason to make a new one each call
-		move_tab.icon = 'icons/hud/pic_in_pic.dmi'
+		move_tab.icon = '../assets/icons/hud/pic_in_pic.dmi'
 		move_tab.icon_state = "move"
 		move_tab.plane = HUD_PLANE
 	var/matrix/M = matrix()
@@ -74,7 +74,7 @@
 		button_x = new /atom/movable/screen/component_button(null, src)
 		var/mutable_appearance/MA = new /mutable_appearance()
 		MA.name = "close"
-		MA.icon = 'icons/hud/pic_in_pic.dmi'
+		MA.icon = '../assets/icons/hud/pic_in_pic.dmi'
 		MA.icon_state = "x"
 		MA.plane = HUD_PLANE
 		button_x.appearance = MA
@@ -87,7 +87,7 @@
 		button_expand = new /atom/movable/screen/component_button(null, src)
 		var/mutable_appearance/MA = new /mutable_appearance()
 		MA.name = "expand"
-		MA.icon = 'icons/hud/pic_in_pic.dmi'
+		MA.icon = '../assets/icons/hud/pic_in_pic.dmi'
 		MA.icon_state = "expand"
 		MA.plane = HUD_PLANE
 		button_expand.appearance = MA
@@ -100,7 +100,7 @@
 		button_shrink = new /atom/movable/screen/component_button(null, src)
 		var/mutable_appearance/MA = new /mutable_appearance()
 		MA.name = "shrink"
-		MA.icon = 'icons/hud/pic_in_pic.dmi'
+		MA.icon = '../assets/icons/hud/pic_in_pic.dmi'
 		MA.icon_state = "shrink"
 		MA.plane = HUD_PLANE
 		button_shrink.appearance = MA
@@ -113,7 +113,7 @@
 		button_pop = new /atom/movable/screen/component_button(null, src)
 		var/mutable_appearance/MA = new /mutable_appearance()
 		MA.name = "pop"
-		MA.icon = 'icons/hud/pic_in_pic.dmi'
+		MA.icon = '../assets/icons/hud/pic_in_pic.dmi'
 		MA.icon_state = "pop"
 		MA.plane = HUD_PLANE
 		button_pop.appearance = MA

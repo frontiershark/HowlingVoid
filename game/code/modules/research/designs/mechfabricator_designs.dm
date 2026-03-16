@@ -1965,7 +1965,7 @@
 	category = list(
 		RND_CATEGORY_MODSUITS + RND_SUBCATEGORY_MODSUITS_PLATING
 	)
-	research_icon = 'icons/obj/clothing/modsuit/mod_construction.dmi'
+	research_icon = '../assets/icons/obj/clothing/modsuit/mod_construction.dmi'
 	research_icon_state = "standard-plating"
 
 /datum/design/mod_plating/New()

@@ -2,9 +2,9 @@
 
 /obj/item/shield
 	name = "shield"
-	icon = 'icons/obj/weapons/shields.dmi'
-	lefthand_file = 'icons/mob/inhands/equipment/shields_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/shields_righthand.dmi'
+	icon = '../assets/icons/obj/weapons/shields.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/shields_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/shields_righthand.dmi'
 	abstract_type = /obj/item/shield
 	block_chance = 50
 	slot_flags = ITEM_SLOT_BACK
@@ -16,7 +16,7 @@
 	attack_verb_continuous = list("shoves", "bashes")
 	attack_verb_simple = list("shove", "bash")
 	armor_type = /datum/armor/item_shield
-	block_sound = 'sound/items/weapons/block_shield.ogg'
+	block_sound = '../assets/sound/items/weapons/block_shield.ogg'
 	/// makes beam projectiles pass through the shield
 	var/transparent = FALSE
 	/// if the shield will break by sustaining damage
@@ -24,13 +24,13 @@
 	/// what the shield leaves behind when it breaks
 	var/shield_break_leftover = /obj/item/stack/sheet/mineral/wood
 	/// sound the shield makes when it breaks
-	var/shield_break_sound = 'sound/effects/bang.ogg'
+	var/shield_break_sound = '../assets/sound/effects/bang.ogg'
 	/// baton bash cooldown
 	COOLDOWN_DECLARE(weapon_bash)
 	/// is shield bashable?
 	var/is_bashable = TRUE
 	/// sound when a shield is bashed
-	var/shield_bash_sound = 'sound/effects/shieldbash.ogg'
+	var/shield_bash_sound = '../assets/sound/effects/shieldbash.ogg'
 
 /datum/armor/item_shield
 	melee = 50
@@ -139,7 +139,7 @@
 	icon_state = "kite"
 	inhand_icon_state = "kite"
 	custom_materials = list(/datum/material/wood = SHEET_MATERIAL_AMOUNT * 15)
-	shield_break_sound = 'sound/effects/grillehit.ogg'
+	shield_break_sound = '../assets/sound/effects/grillehit.ogg'
 	max_integrity = 60
 
 /obj/item/shield/roman
@@ -149,7 +149,7 @@
 	inhand_icon_state = "roman_shield"
 	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 4.25)
 	max_integrity = 65
-	shield_break_sound = 'sound/effects/grillehit.ogg'
+	shield_break_sound = '../assets/sound/effects/grillehit.ogg'
 	shield_break_leftover = /obj/item/stack/sheet/iron
 
 /obj/item/shield/roman/fake
@@ -171,11 +171,11 @@
 	custom_materials = list(/datum/material/glass= SHEET_MATERIAL_AMOUNT * 4.05, /datum/material/iron = SHEET_MATERIAL_AMOUNT * 2.8)
 	transparent = TRUE
 	max_integrity = 75
-	shield_break_sound = 'sound/effects/glass/glassbr3.ogg'
+	shield_break_sound = '../assets/sound/effects/glass/glassbr3.ogg'
 	shield_break_leftover = /obj/item/shard
 	armor_type = /datum/armor/item_shield/riot
-	pickup_sound = 'sound/items/handling/shield/plastic_shield_pick_up.ogg'
-	drop_sound = 'sound/items/handling/shield/plastic_shield_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/shield/plastic_shield_pick_up.ogg'
+	drop_sound = '../assets/sound/items/handling/shield/plastic_shield_drop.ogg'
 
 /obj/item/shield/riot/Initialize(mapload)
 	. = ..()
@@ -273,7 +273,7 @@
 			if(do_after(user, 2 SECONDS, target = user))
 				if(QDELETED(flash) || flash.burnt_out)
 					return
-				playsound(src, 'sound/items/deconstruct.ogg', 50, TRUE)
+				playsound(src, '../assets/sound/items/deconstruct.ogg', 50, TRUE)
 				qdel(embedded_flash)
 				flash.forceMove(src)
 				return
@@ -314,9 +314,9 @@
 	throwforce = 3
 	throw_speed = 3
 	breakable_by_damage = FALSE
-	block_sound = 'sound/items/weapons/block_blade.ogg'
+	block_sound = '../assets/sound/items/weapons/block_blade.ogg'
 	is_bashable = FALSE // Gotta wait till it activates y'know
-	shield_bash_sound = 'sound/effects/energyshieldbash.ogg'
+	shield_bash_sound = '../assets/sound/effects/energyshieldbash.ogg'
 	/// Force of the shield when active.
 	var/active_force = 10
 	/// Throwforce of the shield when active.
@@ -368,7 +368,7 @@
 
 	if(user)
 		balloon_alert(user, active ? "activated" : "deactivated")
-	playsound(src, active ? 'sound/items/weapons/saberon.ogg' : 'sound/items/weapons/saberoff.ogg', 35, TRUE)
+	playsound(src, active ? '../assets/sound/items/weapons/saberon.ogg' : '../assets/sound/items/weapons/saberoff.ogg', 35, TRUE)
 	is_bashable = !is_bashable
 	return COMPONENT_NO_DEFAULT_MESSAGE
 
@@ -433,7 +433,7 @@
 	slot_flags = active ? ITEM_SLOT_BACK : null
 	if(user)
 		balloon_alert(user, active ? "extended" : "collapsed")
-	playsound(src, 'sound/items/weapons/batonextend.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/weapons/batonextend.ogg', 50, TRUE)
 	return COMPONENT_NO_DEFAULT_MESSAGE
 
 /obj/item/shield/riot/tele/proc/can_disarm_attack(datum/source, mob/living/victim, mob/living/user, send_message = TRUE)
@@ -485,6 +485,6 @@
 	max_integrity = 35
 	shield_break_leftover = /obj/item/stack/rods/two
 	armor_type = /datum/armor/item_shield/improvised
-	block_sound = 'sound/items/trayhit/trayhit2.ogg'
+	block_sound = '../assets/sound/items/trayhit/trayhit2.ogg'
 
 #undef WEAPON_BASH_COOLDOWN

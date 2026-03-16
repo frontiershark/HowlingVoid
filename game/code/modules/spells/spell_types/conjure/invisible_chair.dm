@@ -3,7 +3,7 @@
 	desc = "The mime's performance transmutates a chair into physical reality."
 	background_icon_state = "bg_mime"
 	overlay_icon_state = "bg_mime_border"
-	button_icon = 'icons/mob/actions/actions_mime.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_mime.dmi'
 	button_icon_state = "invisible_chair"
 	check_flags = AB_CHECK_CONSCIOUS|AB_CHECK_HANDS_BLOCKED|AB_CHECK_INCAPACITATED
 	panel = "Mime"

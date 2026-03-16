@@ -24,10 +24,10 @@
 
 	can_be_held = TRUE
 	held_w_class = WEIGHT_CLASS_TINY
-	held_lh = 'icons/mob/inhands/animal_item_lefthand.dmi'
-	held_rh = 'icons/mob/inhands/animal_item_righthand.dmi'
+	held_lh = '../assets/icons/mob/inhands/animal_item_lefthand.dmi'
+	held_rh = '../assets/icons/mob/inhands/animal_item_righthand.dmi'
 	worn_slot_flags = ITEM_SLOT_HEAD
-	head_icon = 'icons/mob/clothing/head/pets_head.dmi'
+	head_icon = '../assets/icons/mob/clothing/head/pets_head.dmi'
 
 	ai_controller = /datum/ai_controller/basic_controller/axolotl
 

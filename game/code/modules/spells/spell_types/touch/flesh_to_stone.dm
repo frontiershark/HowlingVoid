@@ -2,7 +2,7 @@
 	name = "Flesh to Stone"
 	desc = "This spell charges your hand with the power to turn victims into inert statues for a long period of time."
 	button_icon_state = "statue"
-	sound = 'sound/effects/magic/fleshtostone.ogg'
+	sound = '../assets/sound/effects/magic/fleshtostone.ogg'
 
 	school = SCHOOL_TRANSMUTATION
 	cooldown_time = 1 MINUTES
@@ -28,6 +28,6 @@
 /obj/item/melee/touch_attack/flesh_to_stone
 	name = "\improper petrifying touch"
 	desc = "That's the bottom line, because flesh to stone said so!"
-	icon = 'icons/obj/weapons/hand.dmi'
+	icon = '../assets/icons/obj/weapons/hand.dmi'
 	icon_state = "fleshtostone"
 	inhand_icon_state = "fleshtostone"

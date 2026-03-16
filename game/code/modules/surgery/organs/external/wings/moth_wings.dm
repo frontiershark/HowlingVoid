@@ -42,7 +42,7 @@
 	UnregisterSignal(organ_owner, list(COMSIG_HUMAN_BURNING, COMSIG_LIVING_POST_FULLY_HEAL))
 
 /obj/item/organ/wings/moth/make_flap_sound(mob/living/carbon/wing_owner)
-	playsound(wing_owner, 'sound/mobs/humanoids/moth/moth_flutter.ogg', 50, TRUE)
+	playsound(wing_owner, '../assets/sound/mobs/humanoids/moth/moth_flutter.ogg', 50, TRUE)
 
 /obj/item/organ/wings/moth/can_soften_fall()
 	return !burnt

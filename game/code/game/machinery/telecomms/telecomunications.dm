@@ -7,7 +7,7 @@ GLOBAL_LIST_EMPTY(telecomm_machines)
  * shared between all of the telecomms machinery.
  */
 /obj/machinery/telecomms
-	icon = 'icons/obj/machines/telecomms.dmi'
+	icon = '../assets/icons/obj/machines/telecomms.dmi'
 	critical_machine = TRUE
 	/// list of machines this machine is linked to
 	var/list/links = list()

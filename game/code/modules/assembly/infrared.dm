@@ -8,8 +8,8 @@
 		/datum/material/glass = SMALL_MATERIAL_AMOUNT * 5,
 	)
 	is_position_sensitive = TRUE
-	drop_sound = 'sound/items/handling/component_drop.ogg'
-	pickup_sound = 'sound/items/handling/component_pickup.ogg'
+	drop_sound = '../assets/sound/items/handling/component_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/component_pickup.ogg'
 	set_dir_on_move = FALSE
 	/// Whether the beam is beaming
 	var/on = FALSE
@@ -110,7 +110,7 @@
 	active_beam = start_loc.Beam(
 		BeamTarget = last_turf,
 		beam_type = /obj/effect/ebeam/reacting/infrared,
-		icon = 'icons/effects/beam.dmi',
+		icon = '../assets/icons/effects/beam.dmi',
 		icon_state = "infrared",
 		emissive = TRUE,
 		override_target_pixel_x = pixel_x,
@@ -164,7 +164,7 @@
 		message = span_infoplain("[icon2html(src, hearers(holder || src))] *beep* *beep* *beep*"),
 		hearing_distance = hearing_range,
 	)
-	playsound(src, 'sound/machines/beep/triple_beep.ogg', ASSEMBLY_BEEP_VOLUME, TRUE, extrarange = hearing_range - SOUND_RANGE + 1, falloff_distance = hearing_range)
+	playsound(src, '../assets/sound/machines/beep/triple_beep.ogg', ASSEMBLY_BEEP_VOLUME, TRUE, extrarange = hearing_range - SOUND_RANGE + 1, falloff_distance = hearing_range)
 	COOLDOWN_START(src, next_activate, 3 SECONDS)
 
 /obj/item/assembly/infra/activate()

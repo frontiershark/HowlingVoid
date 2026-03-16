@@ -2,7 +2,7 @@
 /obj/item/boulder_beacon
 	name = "boulder beacon"
 	desc = "N.T. approved boulder beacon, toss it down and you will have a full bouldertech mining station."
-	icon = 'icons/obj/machines/floor.dmi'
+	icon = '../assets/icons/obj/machines/floor.dmi'
 	icon_state = "floor_beacon"
 	/// Number of activations left on this beacon. Uses will be removed as the beacon is used and each triggers a different machine to be spawned from it.
 	var/uses = 3

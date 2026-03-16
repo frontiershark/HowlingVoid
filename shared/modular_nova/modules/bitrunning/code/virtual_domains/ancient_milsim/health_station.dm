@@ -28,9 +28,9 @@
 		/obj/item/reagent_containers/hypospray/medipen/deforest/lipital = 10,
 		/obj/item/reagent_containers/hypospray/medipen/deforest/calopine = 10,
 	)
-	var/static/radial_scan = image(icon = 'icons/obj/devices/scanner.dmi', icon_state = "health")
-	var/static/radial_wound = image(icon = 'icons/obj/medical/surgery_tools.dmi', icon_state = "scalpel")
-	var/static/radial_damage = image(icon = 'icons/obj/medical/stack_medical.dmi', icon_state = "suture_3")
+	var/static/radial_scan = image(icon = '../assets/icons/obj/devices/scanner.dmi', icon_state = "health")
+	var/static/radial_wound = image(icon = '../assets/icons/obj/medical/surgery_tools.dmi', icon_state = "scalpel")
+	var/static/radial_damage = image(icon = '../assets/icons/obj/medical/stack_medical.dmi', icon_state = "suture_3")
 
 MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/health_station, 32)
 
@@ -103,12 +103,12 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/health_station, 32)
 			healthscan(user, user, advanced = TRUE)
 			chemscan(user, user)
 			balloon_alert(user, "analyzing vitals")
-			playsound(user.loc, 'sound/items/healthanalyzer.ogg', 40, TRUE)
+			playsound(user.loc, '../assets/sound/items/healthanalyzer.ogg', 40, TRUE)
 		if("Heal Wounds")
-			playsound(user.loc, 'sound/machines/ping.ogg', 40, TRUE)
+			playsound(user.loc, '../assets/sound/machines/ping.ogg', 40, TRUE)
 			heal_wound(user)
 		if("Treat Damage")
-			playsound(user.loc, 'sound/machines/ping.ogg', 40, TRUE)
+			playsound(user.loc, '../assets/sound/machines/ping.ogg', 40, TRUE)
 			heal_damage(user)
 
 /obj/machinery/health_station/proc/charge()
@@ -134,7 +134,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/health_station, 32)
 			medipen.add_initial_reagents()
 			charge_amount -= charge_taken
 		balloon_alert(user, "medipen refilled!")
-		playsound(src, 'sound/items/hypospray.ogg', 40, TRUE)
+		playsound(src, '../assets/sound/items/hypospray.ogg', 40, TRUE)
 		update_appearance()
 	return TRUE
 
@@ -152,7 +152,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/health_station, 32)
 		wound2fix.remove_wound()
 		balloon_alert(user, "wound treated")
 		charge_amount -= 20
-		playsound(src, 'sound/items/handling/surgery/saw.ogg', 40, TRUE)
+		playsound(src, '../assets/sound/items/handling/surgery/saw.ogg', 40, TRUE)
 		update_appearance()
 	return TRUE
 
@@ -172,7 +172,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/health_station, 32)
 				user.updatehealth()
 			balloon_alert(user, "damage treated")
 			charge_amount -= 15
-			playsound(src, 'sound/items/handling/surgery/retractor1.ogg', 40, TRUE)
+			playsound(src, '../assets/sound/items/handling/surgery/retractor1.ogg', 40, TRUE)
 			update_appearance()
 	else
 		balloon_alert(user, "no damage!")

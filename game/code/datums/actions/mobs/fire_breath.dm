@@ -1,13 +1,13 @@
 /datum/action/cooldown/mob_cooldown/fire_breath
 	name = "Fire Breath"
-	button_icon = 'icons/effects/magic.dmi'
+	button_icon = '../assets/icons/effects/magic.dmi'
 	button_icon_state = "fireball"
 	desc = "Breathe a line of flames towards the target."
 	cooldown_time = 3 SECONDS
 	/// The range of the fire
 	var/fire_range = 15
 	/// The sound played when you use this ability
-	var/fire_sound = 'sound/effects/magic/fireball.ogg'
+	var/fire_sound = '../assets/sound/effects/magic/fireball.ogg'
 	/// Time to wait between spawning each fire turf
 	var/fire_delay = 1.5 DECISECONDS
 	/// How hot is our fire
@@ -94,7 +94,7 @@
 /// Shoot fire in a whole bunch of directions
 /datum/action/cooldown/mob_cooldown/fire_breath/mass_fire
 	name = "Mass Fire"
-	button_icon = 'icons/effects/fire.dmi'
+	button_icon = '../assets/icons/effects/fire.dmi'
 	button_icon_state = "light"
 	desc = "Breathe flames in all directions."
 	cooldown_time = 10.5 SECONDS

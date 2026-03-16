@@ -5,12 +5,12 @@
 	name = "grenade"
 	desc = "It has an adjustable timer."
 	w_class = WEIGHT_CLASS_SMALL
-	icon = 'icons/obj/weapons/grenade.dmi'
+	icon = '../assets/icons/obj/weapons/grenade.dmi'
 	icon_state = "grenade"
 	inhand_icon_state = "flashbang"
 	worn_icon_state = "grenade"
-	lefthand_file = 'icons/mob/inhands/equipment/security_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/security_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/security_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/security_righthand.dmi'
 	throw_speed = 3
 	throw_range = 7
 	flags_1 = PREVENT_CONTENTS_EXPLOSION_1 // We detonate upon being exploded.
@@ -18,15 +18,15 @@
 	slot_flags = ITEM_SLOT_BELT
 	action_slots = ALL
 	max_integrity = 40
-	pickup_sound = 'sound/items/handling/grenade/grenade_pick_up.ogg'
-	drop_sound = 'sound/items/handling/grenade/grenade_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/grenade/grenade_pick_up.ogg'
+	drop_sound = '../assets/sound/items/handling/grenade/grenade_drop.ogg'
 	sound_vary = TRUE
 	/// Bitfields which prevent the grenade from detonating if set. Includes ([GRENADE_DUD]|[GRENADE_USED])
 	var/dud_flags = NONE
 	///Is this grenade currently armed?
 	var/active = FALSE
 	/// Sound played when the grenade is armed
-	var/grenade_arm_sound = 'sound/items/weapons/armbomb.ogg'
+	var/grenade_arm_sound = '../assets/sound/items/weapons/armbomb.ogg'
 	/// If the sound of the grenade should be varied
 	var/grenade_sound_vary = TRUE
 	///Is it a cluster grenade? We don't wanna spam admin logs with these.
@@ -66,7 +66,7 @@
 
 /obj/item/grenade/suicide_act(mob/living/carbon/user)
 	user.visible_message(span_suicide("[user] primes [src], then eats it! It looks like [user.p_theyre()] trying to commit suicide!"))
-	playsound(src, 'sound/items/eatfood.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/eatfood.ogg', 50, TRUE)
 	arm_grenade(user, det_time)
 	user.transferItemToLoc(src, user, TRUE)//>eat a grenade set to 5 seconds >rush captain
 	sleep(det_time)//so you don't die instantly

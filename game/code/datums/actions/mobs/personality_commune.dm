@@ -3,7 +3,7 @@
 	name = "Personality Commune"
 	desc = "Sends thoughts to your alternate consciousness."
 	background_icon_state = "bg_spell"
-	button_icon = 'icons/mob/actions/actions_spells.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_spells.dmi'
 	button_icon_state = "telepathy"
 	overlay_icon_state = "bg_spell_border"
 

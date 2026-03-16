@@ -4,7 +4,7 @@
 /obj/item/reagent_containers/cup/glass
 	name = "drink"
 	desc = "yummy"
-	icon = 'icons/obj/drinks/drinks.dmi'
+	icon = '../assets/icons/obj/drinks/drinks.dmi'
 	icon_state = "glass_empty"
 	abstract_type = /obj/item/reagent_containers/cup/glass
 	possible_transfer_amounts = list(5,10,15,20,25,30,50)
@@ -46,7 +46,7 @@
 /obj/item/reagent_containers/cup/glass/trophy
 	name = "pewter cup"
 	desc = "Everyone gets a trophy."
-	icon = 'icons/obj/drinks/bottles.dmi'
+	icon = '../assets/icons/obj/drinks/bottles.dmi'
 	icon_state = "pewter_cup"
 	w_class = WEIGHT_CLASS_TINY
 	force = 1
@@ -62,7 +62,7 @@
 /obj/item/reagent_containers/cup/glass/trophy/gold_cup
 	name = "gold cup"
 	desc = "You're winner!"
-	icon = 'icons/obj/drinks/bottles.dmi'
+	icon = '../assets/icons/obj/drinks/bottles.dmi'
 	icon_state = "golden_cup"
 	inhand_icon_state = "golden_cup"
 	w_class = WEIGHT_CLASS_BULKY
@@ -79,7 +79,7 @@
 /obj/item/reagent_containers/cup/glass/trophy/silver_cup
 	name = "silver cup"
 	desc = "Best loser!"
-	icon = 'icons/obj/drinks/bottles.dmi'
+	icon = '../assets/icons/obj/drinks/bottles.dmi'
 	icon_state = "silver_cup"
 	w_class = WEIGHT_CLASS_NORMAL
 	force = 10
@@ -95,7 +95,7 @@
 /obj/item/reagent_containers/cup/glass/trophy/bronze_cup
 	name = "bronze cup"
 	desc = "At least you ranked!"
-	icon = 'icons/obj/drinks/bottles.dmi'
+	icon = '../assets/icons/obj/drinks/bottles.dmi'
 	icon_state = "bronze_cup"
 	w_class = WEIGHT_CLASS_SMALL
 	force = 5
@@ -112,7 +112,7 @@
 /obj/item/reagent_containers/cup/glass/coffee
 	name = "robust coffee"
 	desc = "Careful, the beverage you're about to enjoy is extremely hot."
-	icon = 'icons/obj/drinks/coffee.dmi'
+	icon = '../assets/icons/obj/drinks/coffee.dmi'
 	icon_state = "coffee"
 	base_icon_state = "coffee"
 	list_reagents = list(/datum/reagent/consumable/coffee = 30)
@@ -170,7 +170,7 @@
 /obj/item/reagent_containers/cup/glass/mug // parent type is literally just so empty mug sprites are a thing
 	name = "mug"
 	desc = "A drink served in a classy mug."
-	icon = 'icons/obj/drinks/coffee.dmi'
+	icon = '../assets/icons/obj/drinks/coffee.dmi'
 	icon_state = "tea_empty"
 	base_icon_state = "tea"
 	inhand_icon_state = "coffee"
@@ -207,7 +207,7 @@
 /obj/item/reagent_containers/cup/glass/coffee_cup
 	name = "coffee cup"
 	desc = "A heat-formed plastic coffee cup. Can theoretically be used for other hot drinks, if you're feeling adventurous."
-	icon = 'icons/obj/drinks/coffee.dmi'
+	icon = '../assets/icons/obj/drinks/coffee.dmi'
 	icon_state = "coffee_cup_e"
 	base_icon_state = "coffee_cup"
 	possible_transfer_amounts = list(10)
@@ -230,7 +230,7 @@
 /obj/item/reagent_containers/cup/glass/waterbottle
 	name = "bottle of water"
 	desc = "A bottle of water filled at an old Earth bottling facility."
-	icon = 'icons/obj/drinks/bottles.dmi'
+	icon = '../assets/icons/obj/drinks/bottles.dmi'
 	icon_state = "smallbottle"
 	inhand_icon_state = null
 	list_reagents = list(/datum/reagent/water = 49.5, /datum/reagent/fluorine = 0.5)//see desc, don't think about it too hard
@@ -240,7 +240,7 @@
 	fill_icon_thresholds = list(0, 10, 25, 50, 75, 80, 90)
 	isGlass = FALSE
 	// The 2 bottles have separate cap overlay icons because if the bottle falls over while bottle flipping the cap stays fucked on the moved overlay
-	var/cap_icon = 'icons/obj/drinks/drink_effects.dmi'
+	var/cap_icon = '../assets/icons/obj/drinks/drink_effects.dmi'
 	var/cap_icon_state = "bottle_cap_small"
 	var/start_capped = TRUE
 	var/cap_lost = FALSE
@@ -285,11 +285,11 @@
 			cap_lost = TRUE
 		else
 			to_chat(user, span_notice("You remove the cap from [src]."))
-			playsound(loc, 'sound/items/handling/reagent_containers/plastic_bottle/bottle_cap_open.ogg', 50, TRUE)
+			playsound(loc, '../assets/sound/items/handling/reagent_containers/plastic_bottle/bottle_cap_open.ogg', 50, TRUE)
 	else
 		update_container_flags(SEALED_CONTAINER | TRANSPARENT)
 		to_chat(user, span_notice("You put the cap on [src]."))
-		playsound(loc, 'sound/items/handling/reagent_containers/plastic_bottle/bottle_cap_close.ogg', 50, TRUE)
+		playsound(loc, '../assets/sound/items/handling/reagent_containers/plastic_bottle/bottle_cap_close.ogg', 50, TRUE)
 	update_appearance()
 	return CLICK_ACTION_SUCCESS
 
@@ -361,7 +361,7 @@
 /obj/item/reagent_containers/cup/glass/bottle/juice/smallcarton
 	name = "small carton"
 	desc = "A small carton, intended for holding drinks."
-	icon = 'icons/obj/drinks/boxes.dmi'
+	icon = '../assets/icons/obj/drinks/boxes.dmi'
 	icon_state = "juicebox"
 	volume = 15
 	drink_type = NONE
@@ -387,7 +387,7 @@
 /obj/item/reagent_containers/cup/glass/colocup
 	name = "colo cup"
 	desc = "A cheap, mass produced style of cup, typically used at parties. They never seem to come out red, for some reason..."
-	icon = 'icons/obj/drinks/colo.dmi'
+	icon = '../assets/icons/obj/drinks/colo.dmi'
 	icon_state = "colocup"
 	inhand_icon_state = "colocup"
 	custom_materials = list(/datum/material/plastic = HALF_SHEET_MATERIAL_AMOUNT)
@@ -424,7 +424,7 @@
 /obj/item/reagent_containers/cup/glass/shaker
 	name = "shaker"
 	desc = "A metal shaker to mix drinks in."
-	icon = 'icons/obj/drinks/bottles.dmi'
+	icon = '../assets/icons/obj/drinks/bottles.dmi'
 	icon_state = "shaker"
 	custom_materials = list(/datum/material/iron= HALF_SHEET_MATERIAL_AMOUNT * 1.5)
 	amount_per_transfer_from_this = 10
@@ -512,7 +512,7 @@
 	name = "flask"
 	desc = "Every good spaceman knows it's a good idea to bring along a couple of pints of whiskey wherever they go."
 	custom_price = PAYCHECK_COMMAND * 2
-	icon = 'icons/obj/drinks/bottles.dmi'
+	icon = '../assets/icons/obj/drinks/bottles.dmi'
 	icon_state = "flask"
 	custom_materials = list(/datum/material/iron=SMALL_MATERIAL_AMOUNT*2.5)
 	volume = 60
@@ -536,7 +536,7 @@
 /obj/item/reagent_containers/cup/glass/mug/britcup
 	name = "cup"
 	desc = "A cup with the British flag emblazoned on it."
-	icon = 'icons/obj/drinks/coffee.dmi'
+	icon = '../assets/icons/obj/drinks/coffee.dmi'
 	icon_state = "britcup_empty"
 	base_icon_state = "britcup"
 	volume = 30

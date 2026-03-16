@@ -1,7 +1,7 @@
 //Water source, use the type water_source for unlimited water sources like classic sinks.
 /obj/structure/water_source
 	name = "Water Source"
-	icon = 'icons/obj/watercloset.dmi'
+	icon = '../assets/icons/obj/watercloset.dmi'
 	icon_state = "sink"
 	desc = "A sink used for washing one's hands and face. This one seems to be infinite!"
 	anchored = TRUE
@@ -91,7 +91,7 @@
 	if(istype(attacking_item, /obj/item/mop))
 		attacking_item.reagents.add_reagent(dispensedreagent, 5)
 		to_chat(user, span_notice("You wet [attacking_item] in [src]."))
-		playsound(loc, 'sound/effects/slosh.ogg', 25, TRUE)
+		playsound(loc, '../assets/sound/effects/slosh.ogg', 25, TRUE)
 		return
 
 	if(!user.combat_mode || (attacking_item.item_flags & NOBLUDGEON))
@@ -146,7 +146,7 @@
 	icon_state = "[base_icon_state]-splash"
 	balloon_alert(user, "scooping tadpoles...")
 	if(do_after(user, 5 SECONDS, src))
-		playsound(loc, 'sound/effects/slosh.ogg', 15, TRUE)
+		playsound(loc, '../assets/sound/effects/slosh.ogg', 15, TRUE)
 		balloon_alert(user, "got a tadpole")
 		var/obj/item/fish/tadpole/tadpole = new(loc)
 		tadpole.randomize_size_and_weight()

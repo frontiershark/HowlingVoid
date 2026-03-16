@@ -10,7 +10,7 @@
  */
 
 /obj/item/stack
-	icon = 'icons/obj/stack_objects.dmi'
+	icon = '../assets/icons/obj/stack_objects.dmi'
 	gender = PLURAL
 	material_modifier = 0.05 //5%, so that a 50 sheet stack has the effect of 5k materials instead of 100k.
 	max_integrity = 100
@@ -384,7 +384,7 @@
 	// After everything's been added to the radial, add an option
 	// that lets the user see the whole list of buildables
 	options[FULL_LIST] = image(
-		icon = 'icons/hud/radial.dmi',
+		icon = '../assets/icons/hud/radial.dmi',
 		icon_state = "radial_full_list",
 	)
 

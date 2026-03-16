@@ -6,7 +6,7 @@
 /obj/item/storage/dice
 	name = "bag of dice"
 	desc = "Contains all the luck you'll ever need."
-	icon = 'icons/obj/toys/dice.dmi'
+	icon = '../assets/icons/obj/toys/dice.dmi'
 	icon_state = "dicebag"
 	w_class = WEIGHT_CLASS_SMALL
 	storage_type = /datum/storage/dice
@@ -48,7 +48,7 @@
 /obj/item/dice
 	name = "die"
 	desc = "A die with six sides. Basic and serviceable."
-	icon = 'icons/obj/toys/dice.dmi'
+	icon = '../assets/icons/obj/toys/dice.dmi'
 	icon_state = "d6"
 	w_class = WEIGHT_CLASS_TINY
 	var/sides = 6
@@ -83,7 +83,7 @@
 			result = rigged_value
 
 	. = result
-	playsound(src, 'sound/items/dice_roll.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/dice_roll.ogg', 50, TRUE)
 
 	var/fake_result = roll(sides)//Daredevil isn't as good as he used to be
 	var/comment = ""

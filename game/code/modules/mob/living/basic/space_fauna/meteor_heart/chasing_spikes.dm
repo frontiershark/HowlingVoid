@@ -2,7 +2,7 @@
 /datum/action/cooldown/mob_cooldown/chasing_spikes
 	name = "impaling tendril"
 	desc = "Send a spiked subterranean tendril chasing after your target."
-	button_icon = 'icons/mob/simple/meteor_heart.dmi'
+	button_icon = '../assets/icons/mob/simple/meteor_heart.dmi'
 	button_icon_state = "spike"
 	cooldown_time = 10 SECONDS
 	click_to_activate = TRUE
@@ -12,7 +12,7 @@
 
 /datum/action/cooldown/mob_cooldown/chasing_spikes/Activate(atom/target)
 	. = ..()
-	playsound(owner, 'sound/effects/magic/demon_attack1.ogg', vol = 100, vary = TRUE, pressure_affected = FALSE)
+	playsound(owner, '../assets/sound/effects/magic/demon_attack1.ogg', vol = 100, vary = TRUE, pressure_affected = FALSE)
 	var/obj/effect/temp_visual/effect_trail/spike_chaser/chaser = new(get_turf(owner), target)
 	LAZYADD(active_chasers, WEAKREF(chaser))
 	RegisterSignal(chaser, COMSIG_QDELETING, PROC_REF(on_chaser_destroyed))
@@ -36,7 +36,7 @@
 /obj/effect/temp_visual/emerging_ground_spike
 	name = "bone spike"
 	desc = "A sharp spur of bone erupting from the ground!"
-	icon = 'icons/mob/simple/meteor_heart.dmi'
+	icon = '../assets/icons/mob/simple/meteor_heart.dmi'
 	icon_state = "spike"
 	duration = 1 SECONDS
 	/// Time until we hurt people stood on us
@@ -75,6 +75,6 @@
 		var/target_zone = victim.resting ? BODY_ZONE_CHEST : pick_weight(standing_damage_zones)
 		victim.apply_damage(impale_damage, damagetype = BRUTE, def_zone = target_zone, sharpness = SHARP_POINTY)
 	if (hit_someone)
-		playsound(src, 'sound/items/weapons/slice.ogg', vol = 50, vary = TRUE, pressure_affected = FALSE)
+		playsound(src, '../assets/sound/items/weapons/slice.ogg', vol = 50, vary = TRUE, pressure_affected = FALSE)
 	else
-		playsound(src, 'sound/misc/splort.ogg', vol = 25, vary = TRUE, pressure_affected = FALSE)
+		playsound(src, '../assets/sound/misc/splort.ogg', vol = 25, vary = TRUE, pressure_affected = FALSE)

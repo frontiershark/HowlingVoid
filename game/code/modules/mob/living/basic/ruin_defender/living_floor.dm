@@ -21,7 +21,7 @@
 /mob/living/basic/living_floor
 	name = "floor"
 	desc = "The floor you walk on. It looks near-impervious to damage."
-	icon = 'icons/turf/floors.dmi'
+	icon = '../assets/icons/turf/floors.dmi'
 	icon_state = "floor"
 	icon_living = "floor"
 	mob_size = MOB_SIZE_HUGE
@@ -40,7 +40,7 @@
 	faction = list(FACTION_HOSTILE)
 	melee_damage_lower = 20
 	melee_damage_upper = 40 //pranked.....
-	attack_sound = 'sound/items/weapons/bite.ogg'
+	attack_sound = '../assets/sound/items/weapons/bite.ogg'
 	attack_vis_effect = ATTACK_EFFECT_BITE
 	attack_verb_continuous = "bites"
 	attack_verb_simple = "bite"
@@ -85,7 +85,7 @@
 	if(weapon.tool_behaviour != TOOL_CROWBAR)
 		return ..()
 	balloon_alert(user, "prying...")
-	playsound(src, 'sound/items/tools/crowbar.ogg', 45, TRUE)
+	playsound(src, '../assets/sound/items/tools/crowbar.ogg', 45, TRUE)
 	if(!do_after(user, 5 SECONDS, src))
 		return
 	new /obj/effect/gibspawner/generic(loc)

@@ -1,8 +1,8 @@
 /obj/item/clothing/head/soft
 	name = "cargo cap"
 	desc = "It's a baseball hat in a tasteful brown colour."
-	icon = 'icons/obj/clothing/head/hats.dmi'
-	worn_icon = 'icons/mob/clothing/head/hats.dmi'
+	icon = '../assets/icons/obj/clothing/head/hats.dmi'
+	worn_icon = '../assets/icons/mob/clothing/head/hats.dmi'
 	icon_state = "cargosoft"
 	inhand_icon_state = "greyscale_softcap" //todo wip
 	interaction_flags_click = NEED_DEXTERITY|ALLOW_RESTING

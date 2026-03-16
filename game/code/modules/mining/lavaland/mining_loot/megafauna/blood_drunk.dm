@@ -3,9 +3,9 @@
 /obj/item/melee/cleaving_saw
 	name = "cleaving saw"
 	desc = "This saw, effective at drawing the blood of beasts, transforms into a long cleaver that makes use of centrifugal force."
-	icon = 'icons/obj/mining_zones/artefacts.dmi'
-	lefthand_file = 'icons/mob/inhands/64x64_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/64x64_righthand.dmi'
+	icon = '../assets/icons/obj/mining_zones/artefacts.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/64x64_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/64x64_righthand.dmi'
 	icon_state = "cleaving_saw"
 	inhand_icon_state = "cleaving_saw"
 	worn_icon_state = "cleaving_saw"
@@ -16,7 +16,7 @@
 	inhand_x_dimension = 64
 	inhand_y_dimension = 64
 	slot_flags = ITEM_SLOT_BELT
-	hitsound = 'sound/items/weapons/bladeslice.ogg'
+	hitsound = '../assets/sound/items/weapons/bladeslice.ogg'
 	w_class = WEIGHT_CLASS_BULKY
 	sharpness = SHARP_EDGED
 	/// List of factions we deal bonus damage to
@@ -113,7 +113,7 @@
 	user.changeNext_move(CLICK_CD_MELEE * 0.25)
 	if(user)
 		balloon_alert(user, "[active ? "opened" : "closed"] [src]")
-	playsound(src, 'sound/effects/magic/clockwork/fellowship_armory.ogg', 35, TRUE, frequency = 90000 - (active * 30000))
+	playsound(src, '../assets/sound/effects/magic/clockwork/fellowship_armory.ogg', 35, TRUE, frequency = 90000 - (active * 30000))
 	return COMPONENT_NO_DEFAULT_MESSAGE
 
 // Wildhunter's butchering knife
@@ -121,7 +121,7 @@
 /obj/item/knife/hunting/wildhunter
 	name = "wildhunter's butchering knife"
 	desc = "A magical knife made out of ashen stone. It was used to butcher local fauna by best hunters. Cuts everything to the simplest."
-	icon = 'icons/obj/weapons/stabby_wide.dmi'
+	icon = '../assets/icons/obj/weapons/stabby_wide.dmi'
 	inhand_icon_state = "wildhuntingknife"
 	icon_state = "wildhuntingknife"
 	icon_angle = 180

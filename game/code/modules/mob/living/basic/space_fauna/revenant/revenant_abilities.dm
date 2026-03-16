@@ -17,7 +17,7 @@
 	panel = "Revenant Abilities (Locked)"
 	background_icon_state = "bg_revenant"
 	overlay_icon_state = "bg_revenant_border"
-	button_icon = 'icons/mob/actions/actions_revenant.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_revenant.dmi'
 
 	antimagic_flags = MAGIC_RESISTANCE_HOLY
 	spell_requirements = NONE
@@ -133,7 +133,7 @@
 			human_mob.electrocute_act(shock_damage, to_shock, flags = SHOCK_NOGLOVES)
 
 		do_sparks(4, FALSE, human_mob)
-		playsound(human_mob, 'sound/machines/defib/defib_zap.ogg', 50, TRUE, -1)
+		playsound(human_mob, '../assets/sound/machines/defib/defib_zap.ogg', 50, TRUE, -1)
 
 //Defile: Corrupts nearby stuff, unblesses floor tiles.
 /datum/action/cooldown/spell/aoe/revenant/defile
@@ -235,7 +235,7 @@
 			thing.emag_act(caster)
 	// Only works on cyborgs, not AI!
 	for(var/mob/living/silicon/robot/cyborg in victim)
-		playsound(cyborg, 'sound/machines/warning-buzzer.ogg', 50, TRUE)
+		playsound(cyborg, '../assets/sound/machines/warning-buzzer.ogg', 50, TRUE)
 		new /obj/effect/temp_visual/revenant(cyborg.loc)
 		cyborg.spark_system.start()
 		cyborg.emp_act(EMP_HEAVY)

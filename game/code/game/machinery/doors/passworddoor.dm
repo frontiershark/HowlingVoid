@@ -1,7 +1,7 @@
 /obj/machinery/door/password
 	name = "door"
 	desc = "This door only opens when provided a password."
-	icon = 'icons/obj/doors/blastdoor.dmi'
+	icon = '../assets/icons/obj/doors/blastdoor.dmi'
 	icon_state = "closed"
 	explosion_block = 3
 	heat_proof = TRUE
@@ -16,11 +16,11 @@
 	/// Say the password nearby to open the door.
 	var/voice_activated = FALSE
 	/// Sound used upon opening.
-	var/door_open = 'sound/machines/blastdoor.ogg'
+	var/door_open = '../assets/sound/machines/blastdoor.ogg'
 	/// Sound used upon closing.
-	var/door_close = 'sound/machines/blastdoor.ogg'
+	var/door_close = '../assets/sound/machines/blastdoor.ogg'
 	/// Sound used upon denying.
-	var/door_deny = 'sound/machines/buzz/buzz-sigh.ogg'
+	var/door_deny = '../assets/sound/machines/buzz/buzz-sigh.ogg'
 
 /obj/machinery/door/password/voice
 	voice_activated = TRUE

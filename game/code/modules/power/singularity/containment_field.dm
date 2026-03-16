@@ -3,7 +3,7 @@
 /obj/machinery/field/containment
 	name = "containment field"
 	desc = "An energy field."
-	icon = 'icons/obj/machines/engine/singularity.dmi' //NOVA EDIT - ICON OVERRIDDEN IN AESTHETICS MODULE
+	icon = '../assets/icons/obj/machines/engine/singularity.dmi' //NOVA EDIT - ICON OVERRIDDEN IN AESTHETICS MODULE
 	icon_state = "Contain_F"
 	density = FALSE
 	move_resist = INFINITY
@@ -57,9 +57,9 @@
 /obj/machinery/field/containment/play_attack_sound(damage_amount, damage_type = BRUTE, damage_flag = 0)
 	switch(damage_type)
 		if(BURN)
-			playsound(loc, 'sound/effects/empulse.ogg', 75, TRUE)
+			playsound(loc, '../assets/sound/effects/empulse.ogg', 75, TRUE)
 		if(BRUTE)
-			playsound(loc, 'sound/effects/empulse.ogg', 75, TRUE)
+			playsound(loc, '../assets/sound/effects/empulse.ogg', 75, TRUE)
 
 /obj/machinery/field/containment/blob_act(obj/structure/blob/B)
 	return FALSE
@@ -163,6 +163,6 @@
 	var/atom/target = get_edge_target_turf(considered_atom, get_dir(src, get_step_away(considered_atom, src)))
 	if(isliving(considered_atom))
 		to_chat(considered_atom, span_userdanger("The field repels you with tremendous force!"))
-	playsound(src, 'sound/effects/gravhit.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/effects/gravhit.ogg', 50, TRUE)
 	considered_atom.throw_at(target, 200, 4)
 	addtimer(CALLBACK(src, PROC_REF(clear_shock)), 0.5 SECONDS)

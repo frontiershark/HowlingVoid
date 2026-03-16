@@ -1,12 +1,12 @@
 /obj/item/autopsy_scanner
 	name = "autopsy scanner"
 	desc = "Used in surgery to extract information from a cadaver. Can also scan the health of cadavers like an advanced health analyzer!"
-	icon = 'icons/obj/devices/scanner.dmi'
+	icon = '../assets/icons/obj/devices/scanner.dmi'
 	icon_state = "autopsy_scanner"
 	inhand_icon_state = "autopsy_scanner"
 	worn_icon_state = "autopsy_scanner"
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/medical_righthand.dmi'
 	obj_flags = CONDUCTS_ELECTRICITY
 	item_flags = CRUEL_IMPLEMENT
 	slot_flags = ITEM_SLOT_BELT

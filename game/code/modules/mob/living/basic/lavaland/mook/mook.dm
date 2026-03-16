@@ -3,7 +3,7 @@
 /mob/living/basic/mining/mook
 	name = "wanderer"
 	desc = "This unhealthy looking primitive seems to be talented at administering health care."
-	icon = 'icons/mob/simple/jungle/mook.dmi'
+	icon = '../assets/icons/mob/simple/jungle/mook.dmi'
 	icon_state = "mook"
 	icon_living = "mook"
 	icon_dead = "mook_dead"
@@ -15,9 +15,9 @@
 	move_resist = MOVE_FORCE_VERY_STRONG
 	melee_damage_lower = 8
 	melee_damage_upper = 8
-	attack_sound = 'sound/items/weapons/rapierhit.ogg'
+	attack_sound = '../assets/sound/items/weapons/rapierhit.ogg'
 	attack_vis_effect = ATTACK_EFFECT_SLASH
-	death_sound = 'sound/mobs/non-humanoids/mook/mook_death.ogg'
+	death_sound = '../assets/sound/mobs/non-humanoids/mook/mook_death.ogg'
 	ai_controller = /datum/ai_controller/basic_controller/mook/support
 	speed = 5
 	pixel_x = -16
@@ -243,8 +243,8 @@
 	melee_damage_lower = 10
 	melee_damage_upper = 10
 	gender = MALE
-	attack_sound = 'sound/items/weapons/stringsmash.ogg'
-	death_sound = 'sound/mobs/non-humanoids/mook/mook_death.ogg'
+	attack_sound = '../assets/sound/items/weapons/stringsmash.ogg'
+	death_sound = '../assets/sound/mobs/non-humanoids/mook/mook_death.ogg'
 	ai_controller = /datum/ai_controller/basic_controller/mook/bard
 	///our guitar
 	var/obj/item/instrument/guitar/held_guitar
@@ -269,13 +269,13 @@
 	melee_damage_upper = 20
 	ai_controller = /datum/ai_controller/basic_controller/mook/tribal_chief
 	///overlay in our neutral state
-	var/static/mutable_appearance/chief_neutral = mutable_appearance('icons/mob/simple/jungle/mook.dmi', "mook_chief")
+	var/static/mutable_appearance/chief_neutral = mutable_appearance('../assets/icons/mob/simple/jungle/mook.dmi', "mook_chief")
 	///overlay in our striking state
-	var/static/mutable_appearance/chief_strike = mutable_appearance('icons/mob/simple/jungle/mook.dmi', "mook_chief_strike")
+	var/static/mutable_appearance/chief_strike = mutable_appearance('../assets/icons/mob/simple/jungle/mook.dmi', "mook_chief_strike")
 	///overlay in our active state
-	var/static/mutable_appearance/chief_active = mutable_appearance('icons/mob/simple/jungle/mook.dmi', "mook_chief_leap")
+	var/static/mutable_appearance/chief_active = mutable_appearance('../assets/icons/mob/simple/jungle/mook.dmi', "mook_chief_leap")
 	///overlay in our warmup state
-	var/static/mutable_appearance/chief_warmup = mutable_appearance('icons/mob/simple/jungle/mook.dmi', "mook_chief_warmup")
+	var/static/mutable_appearance/chief_warmup = mutable_appearance('../assets/icons/mob/simple/jungle/mook.dmi', "mook_chief_warmup")
 
 /mob/living/basic/mining/mook/worker/tribal_chief/Initialize(mapload)
 	. = ..()

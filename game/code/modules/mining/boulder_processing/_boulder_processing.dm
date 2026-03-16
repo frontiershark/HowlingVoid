@@ -1,7 +1,7 @@
 /obj/machinery/bouldertech
 	name = "bouldertech brand refining machine"
 	desc = "You shouldn't be seeing this! And bouldertech isn't even a real company!"
-	icon = 'icons/obj/machines/mining_machines.dmi'
+	icon = '../assets/icons/obj/machines/mining_machines.dmi'
 	icon_state = "ore_redemption"
 	active_power_usage = BASE_MACHINE_ACTIVE_CONSUMPTION * 0.5
 	anchored = TRUE
@@ -14,7 +14,7 @@
 	/// How many boulders can we hold maximum?
 	var/boulders_held_max = 1
 	/// What sound plays when a thing operates?
-	var/usage_sound = 'sound/machines/mining/wooping_teleport.ogg'
+	var/usage_sound = '../assets/sound/machines/mining/wooping_teleport.ogg'
 	/// Silo link to its materials list.
 	var/datum/remote_materials/silo_materials
 	/// Mining points held by the machine for miners.
@@ -263,7 +263,7 @@
 			if(!COOLDOWN_FINISHED(src, sound_cooldown))
 				return ITEM_INTERACT_BLOCKING
 			COOLDOWN_START(src, sound_cooldown, 1.5 SECONDS)
-			playsound(src, 'sound/machines/buzz/buzz-sigh.ogg', 30, FALSE)
+			playsound(src, '../assets/sound/machines/buzz/buzz-sigh.ogg', 30, FALSE)
 			return ITEM_INTERACT_BLOCKING
 
 		var/obj/item/card/id/id_card = tool
@@ -422,6 +422,6 @@
 	specific_boulder.processed_by = src //so we don't take in the boulder again after we just ejected it
 	specific_boulder.forceMove(drop_location())
 	specific_boulder.processed_by = null //now since move is done we can safely clear the reference
-	playsound(loc, 'sound/machines/ping.ogg', 50, FALSE)
+	playsound(loc, '../assets/sound/machines/ping.ogg', 50, FALSE)
 
 	return TRUE

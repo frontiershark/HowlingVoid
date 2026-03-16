@@ -2,7 +2,7 @@
 /obj/effect/immovablerod
 	name = "immovable rod"
 	desc = "What the fuck is that?"
-	icon = 'icons/obj/anomaly.dmi'
+	icon = '../assets/icons/obj/anomaly.dmi'
 	icon_state = "immrod"
 	throwforce = 100
 	move_force = INFINITY
@@ -154,7 +154,7 @@
 
 /obj/effect/immovablerod/Bump(atom/clong)
 	if(prob(10))
-		playsound(src, 'sound/effects/bang.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/effects/bang.ogg', 50, TRUE)
 		audible_message(span_danger("You hear a CLANG!"))
 
 	if(special_target && clong == special_target)
@@ -225,7 +225,7 @@
 	if(!HAS_MIND_TRAIT(user, TRAIT_ROD_SUPLEX))
 		return
 
-	playsound(src, 'sound/effects/meteorimpact.ogg', 100, TRUE)
+	playsound(src, '../assets/sound/effects/meteorimpact.ogg', 100, TRUE)
 	for(var/mob/living/nearby_mob in urange(8, src))
 		if(nearby_mob.stat != CONSCIOUS)
 			continue

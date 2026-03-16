@@ -3,7 +3,7 @@
 /obj/item/organ/body_egg/spideregg_infection
 	name = "spider egg"
 	desc = "wriggling balls with far too many eyes looking at you"
-	icon = 'icons/obj/food/meat.dmi'
+	icon = '../assets/icons/obj/food/meat.dmi'
 	icon_state = "spidereggs"
 	food_reagents = list(/datum/reagent/spidereggs = 5)
 

@@ -2,7 +2,7 @@
 	name = "gondola"
 	real_name = "gondola"
 	desc = "The silent walker. This one seems to be part of a delivery agency."
-	icon = 'icons/obj/supplypods.dmi'
+	icon = '../assets/icons/obj/supplypods.dmi'
 	icon_state = "gondola"
 	icon_living = "gondola"
 	SET_BASE_PIXEL(-16, -5) //2x2 sprite
@@ -66,7 +66,7 @@
 /datum/action/innate/deliver_gondola_package
 	name = "Deliver"
 	desc = "Open your pod and release any contents stored within."
-	button_icon = 'icons/hud/screen_gen.dmi'
+	button_icon = '../assets/icons/hud/screen_gen.dmi'
 	button_icon_state = "arrow"
 	check_flags = AB_CHECK_PHASED
 
@@ -86,7 +86,7 @@
 /datum/action/innate/check_gondola_contents
 	name = "Check contents"
 	desc = "See how many items you are currently holding in your pod."
-	button_icon = 'icons/hud/implants.dmi'
+	button_icon = '../assets/icons/hud/implants.dmi'
 	button_icon_state = "storage"
 	check_flags = AB_CHECK_PHASED
 

@@ -27,13 +27,13 @@
 /datum/action/innate/hydra
 	name = "Switch head"
 	desc = "Switch between each of the heads on your body."
-	button_icon = 'icons/mob/actions/actions_minor_antag.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_minor_antag.dmi'
 	button_icon_state = "art_summon"
 
 /datum/action/innate/hydrareset
 	name = "Reset Speech"
 	desc = "Go back to speaking as a whole."
-	button_icon = 'icons/mob/actions/actions_minor_antag.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_minor_antag.dmi'
 	button_icon_state = "art_summon"
 
 /datum/action/innate/hydrareset/Activate()

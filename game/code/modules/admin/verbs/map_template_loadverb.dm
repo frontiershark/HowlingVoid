@@ -20,7 +20,7 @@ ADMIN_VERB(map_template_load, R_DEBUG, "Map Template - Place", "Place a map temp
 		else
 			return
 	for(var/turf/place_on as anything in template.get_affected_turfs(T,centered = center))
-		var/image/item = image('icons/turf/overlays.dmi', place_on,"greenOverlay")
+		var/image/item = image('../assets/icons/turf/overlays.dmi', place_on,"greenOverlay")
 		SET_PLANE(item, ABOVE_LIGHTING_PLANE, place_on)
 		preview += item
 	user.images += preview

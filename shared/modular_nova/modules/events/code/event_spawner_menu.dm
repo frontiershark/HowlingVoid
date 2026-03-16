@@ -41,7 +41,7 @@
 		for(var/mob/dead/observer/ghost in GLOB.player_list)
 			if(length(ckey_whitelist) && !(LOWER_TEXT(ghost.ckey) in ckey_whitelist))
 				continue
-			ghost.playsound_local(ghost, 'sound/effects/ghost2.ogg', 75, FALSE)
+			ghost.playsound_local(ghost, '../assets/sound/effects/ghost2.ogg', 75, FALSE)
 			var/turf_link = TURF_LINK(ghost, spawn_loc)
 			to_chat(ghost, "[turf_link] <span class='ghostalert'>Event spawner that you can enter has been created. The role is [CES.job_name]. [turf_link]")
 

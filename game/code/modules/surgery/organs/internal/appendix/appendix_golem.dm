@@ -38,7 +38,7 @@
 /datum/action/cooldown/internal_smelting
 	name = "Internal Forge"
 	desc = "While stood in lava you can use your internal forge to smelt ores into processed bars."
-	button_icon = 'icons/obj/stack_objects.dmi'
+	button_icon = '../assets/icons/obj/stack_objects.dmi'
 	button_icon_state = "sheet-adamantine_2"
 	check_flags = AB_CHECK_HANDS_BLOCKED | AB_CHECK_LYING | AB_CHECK_CONSCIOUS | AB_CHECK_INCAPACITATED
 	/// Time it takes to smelt one ore into one result

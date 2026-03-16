@@ -5,8 +5,8 @@
 	icon = 'modular_nova/master_files/icons/obj/box.dmi'
 	icon_state = "syndbox+l"
 	inhand_icon_state = "syringe_kit"
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/medical_righthand.dmi'
 	w_class = WEIGHT_CLASS_NORMAL
 	req_access = list(ACCESS_SYNDICATE_LEADER)
 	icon_locked = "syndbox+l"

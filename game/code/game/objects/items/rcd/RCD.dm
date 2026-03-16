@@ -5,11 +5,11 @@
 
 /obj/item/construction/rcd
 	name = "rapid-construction-device (RCD)"
-	icon = 'icons/obj/tools.dmi'
+	icon = '../assets/icons/obj/tools.dmi'
 	icon_state = "rcd"
 	worn_icon_state = "RCD"
-	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/tools_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/tools_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/tools_righthand.dmi'
 	custom_premium_price = PAYCHECK_COMMAND * 2
 	max_matter = 160
 	slot_flags = ITEM_SLOT_BELT
@@ -17,8 +17,8 @@
 	has_ammobar = TRUE
 	actions_types = list(/datum/action/item_action/rcd_scan)
 	action_slots = ALL
-	drop_sound = 'sound/items/handling/tools/rcd_drop.ogg'
-	pickup_sound = 'sound/items/handling/tools/rcd_pickup.ogg'
+	drop_sound = '../assets/sound/items/handling/tools/rcd_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/tools/rcd_pickup.ogg'
 	sound_vary = TRUE
 
 	/// main category of currently selected design[Structures, Airlocks, Airlock Access]
@@ -317,7 +317,7 @@
 		qdel(rcd_effect)
 		return FALSE
 	useResource(rcd_results["cost"], user)
-	playsound(loc, 'sound/machines/click.ogg', 50, TRUE)
+	playsound(loc, '../assets/sound/machines/click.ogg', 50, TRUE)
 	rcd_effect.end_animation()
 	return TRUE
 
@@ -501,7 +501,7 @@
 		balloon_alert(user, "insufficient charge!")
 		return FALSE
 	if(!dry_run)
-		playsound(loc, 'sound/items/deconstruct.ogg', 50, TRUE)
+		playsound(loc, '../assets/sound/items/deconstruct.ogg', 50, TRUE)
 		return borgy.cell.use(amount * energyfactor)
 	return TRUE
 
@@ -606,7 +606,7 @@
 		gundam.balloon_alert(user, "insufficient charge!")
 		return FALSE
 	if(!dry_run)
-		playsound(loc, 'sound/items/deconstruct.ogg', 50, TRUE)
+		playsound(loc, '../assets/sound/items/deconstruct.ogg', 50, TRUE)
 		return gundam.use_energy(amount * MASS_TO_ENERGY)
 	return TRUE
 
@@ -634,11 +634,11 @@
 /obj/item/rcd_ammo
 	name = "RCD matter cartridge"
 	desc = "Highly compressed matter for the RCD."
-	icon = 'icons/obj/tools.dmi'
+	icon = '../assets/icons/obj/tools.dmi'
 	icon_state = "rcdammo"
 	w_class = WEIGHT_CLASS_TINY
-	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/tools_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/tools_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/tools_righthand.dmi'
 	custom_materials = list(/datum/material/iron=SHEET_MATERIAL_AMOUNT *6, /datum/material/glass=SHEET_MATERIAL_AMOUNT*4)
 	var/ammoamt = 40
 

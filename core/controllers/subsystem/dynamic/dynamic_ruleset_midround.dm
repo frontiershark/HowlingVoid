@@ -518,7 +518,7 @@
 	candidate.add_antag_datum(/datum/antagonist/nightmare)
 	candidate.current.set_species(/datum/species/shadow/nightmare)
 	candidate.current.forceMove(find_maintenance_spawn(atmos_sensitive = TRUE, require_darkness = TRUE))
-	playsound(candidate.current, 'sound/effects/magic/ethereal_exit.ogg', 50, TRUE, -1)
+	playsound(candidate.current, '../assets/sound/effects/magic/ethereal_exit.ogg', 50, TRUE, -1)
 
 /datum/dynamic_ruleset/midround/from_ghosts/space_dragon
 	name = "Space Dragon"
@@ -548,7 +548,7 @@
 /datum/dynamic_ruleset/midround/from_ghosts/space_dragon/assign_role(datum/mind/candidate)
 	candidate.add_antag_datum(/datum/antagonist/space_dragon)
 	candidate.current.forceMove(find_space_spawn())
-	playsound(candidate.current, 'sound/effects/magic/ethereal_exit.ogg', 50, TRUE, -1)
+	playsound(candidate.current, '../assets/sound/effects/magic/ethereal_exit.ogg', 50, TRUE, -1)
 
 /datum/dynamic_ruleset/midround/from_ghosts/space_dragon/execute()
 	. = ..()
@@ -745,7 +745,7 @@
 	var/datum/antagonist/paradox_clone/antag = candidate.add_antag_datum(/datum/antagonist/paradox_clone)
 	antag.setup_clone(good_version.mind)
 
-	playsound(bad_version, 'sound/items/weapons/zapbang.ogg', 30, TRUE)
+	playsound(bad_version, '../assets/sound/items/weapons/zapbang.ogg', 30, TRUE)
 	bad_version.put_in_hands(new /obj/item/storage/toolbox/mechanical()) //so they dont get stuck in maints
 
 /datum/dynamic_ruleset/midround/from_ghosts/paradox_clone/proc/find_clone()
@@ -786,7 +786,7 @@
 /datum/dynamic_ruleset/midround/from_ghosts/voidwalker/assign_role(datum/mind/candidate)
 	candidate.add_antag_datum(/datum/antagonist/voidwalker)
 	candidate.current.forceMove(find_space_spawn())
-	playsound(candidate.current, 'sound/effects/magic/ethereal_exit.ogg', 50, TRUE, -1)
+	playsound(candidate.current, '../assets/sound/effects/magic/ethereal_exit.ogg', 50, TRUE, -1)
 
 /datum/dynamic_ruleset/midround/from_ghosts/fugitives
 	name = "Fugitive"
@@ -888,7 +888,7 @@
 	equip_fugitive(candidate.current, team)
 	if(candidate == selected_minds[1])
 		equip_fugitive_leader(candidate.current)
-	playsound(candidate.current, 'sound/items/weapons/emitter.ogg', 50, TRUE)
+	playsound(candidate.current, '../assets/sound/items/weapons/emitter.ogg', 50, TRUE)
 
 /datum/dynamic_ruleset/midround/from_ghosts/fugitives/proc/equip_fugitive(mob/living/carbon/human/fugitive, datum/team/fugitive/team)
 	fugitive.set_species(/datum/species/human)

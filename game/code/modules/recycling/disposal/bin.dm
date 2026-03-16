@@ -7,7 +7,7 @@ GLOBAL_VAR_INIT(disposals_animals_spawned, 0)
 #define SEND_PRESSURE (0.05*ONE_ATMOSPHERE)
 
 /obj/machinery/disposal
-	icon = 'icons/obj/pipes_n_cables/disposal.dmi'
+	icon = '../assets/icons/obj/pipes_n_cables/disposal.dmi'
 	density = TRUE
 	armor_type = /datum/armor/machinery_disposal
 	max_integrity = 200
@@ -176,7 +176,7 @@ GLOBAL_VAR_INIT(disposals_animals_spawned, 0)
 	if (LAZYLEN(SSmobs.cheeserats) < rat_cap && prob(33))
 		var/mob/living/basic/mouse/new_subject = new(king.drop_location())
 		ADD_TRAIT(new_subject, TRAIT_SPAWNED_MOB, INNATE_TRAIT)
-		playsound(new_subject, 'sound/mobs/non-humanoids/mouse/mousesqueek.ogg', 100)
+		playsound(new_subject, '../assets/sound/mobs/non-humanoids/mouse/mousesqueek.ogg', 100)
 		visible_message(span_warning("[new_subject] climbs out of [src]!"))
 
 /// Moves an item into the diposal bin
@@ -302,7 +302,7 @@ GLOBAL_VAR_INIT(disposals_animals_spawned, 0)
 	flushAnimation()
 	sleep(1 SECONDS)
 	if(last_sound < world.time - 1) //Prevents piles of items from playing a dozen sounds at once
-		playsound(src, 'sound/machines/disposalflush.ogg', 50, FALSE, FALSE)
+		playsound(src, '../assets/sound/machines/disposalflush.ogg', 50, FALSE, FALSE)
 		last_sound = world.time
 	sleep(0.5 SECONDS)
 	if(QDELETED(src))
@@ -330,7 +330,7 @@ GLOBAL_VAR_INIT(disposals_animals_spawned, 0)
 /obj/machinery/disposal/proc/expel(obj/structure/disposalholder/H)
 	H.active = FALSE
 
-	playsound(src, 'sound/machines/hiss.ogg', 50, FALSE, FALSE)
+	playsound(src, '../assets/sound/machines/hiss.ogg', 50, FALSE, FALSE)
 
 	pipe_eject(H)
 
@@ -419,7 +419,7 @@ GLOBAL_VAR_INIT(disposals_animals_spawned, 0)
 
 	update_appearance()
 	to_chat(user, span_notice("You sweep the pile of garbage into [src]."))
-	playsound(broom.loc, 'sound/items/weapons/thudswoosh.ogg', 30, TRUE, -1)
+	playsound(broom.loc, '../assets/sound/items/weapons/thudswoosh.ogg', 30, TRUE, -1)
 
 
 /// Disposal bin
@@ -471,7 +471,7 @@ GLOBAL_VAR_INIT(disposals_animals_spawned, 0)
 		new_tagger.moveToNullspace()
 		user.visible_message(span_notice("[user] snaps \the [new_tagger] onto [src]!"))
 		balloon_alert(user, "tagger returned")
-		playsound(src, 'sound/machines/click.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/machines/click.ogg', 50, TRUE)
 		mounted_tagger = new_tagger
 		update_appearance()
 		return
@@ -489,7 +489,7 @@ GLOBAL_VAR_INIT(disposals_animals_spawned, 0)
 		return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 	user.visible_message(span_notice("[user] unhooks the [mounted_tagger] from [src]."))
 	balloon_alert(user, "tagger pulled")
-	playsound(src, 'sound/machines/click.ogg', 60, TRUE)
+	playsound(src, '../assets/sound/machines/click.ogg', 60, TRUE)
 	mounted_tagger = null
 	update_appearance(UPDATE_OVERLAYS)
 	return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
@@ -599,7 +599,7 @@ GLOBAL_VAR_INIT(disposals_animals_spawned, 0)
 		. += "dispover-handle"
 
 	if(mounted_tagger)
-		. += mutable_appearance('icons/obj/pipes_n_cables/disposal.dmi', "tagger_mount") //NOVA EDIT: Overriding Icon file. += "tagger_mount"
+		. += mutable_appearance('../assets/icons/obj/pipes_n_cables/disposal.dmi', "tagger_mount") //NOVA EDIT: Overriding Icon file. += "tagger_mount"
 
 	//only handle is shown if no power
 	if(machine_stat & NOPOWER || panel_open)

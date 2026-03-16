@@ -1,14 +1,14 @@
 /obj/item/extinguisher
 	name = "fire extinguisher"
 	desc = "A traditional red fire extinguisher."
-	icon = 'icons/obj/tools.dmi'
+	icon = '../assets/icons/obj/tools.dmi'
 	icon_state = "fire_extinguisher0"
 	worn_icon_state = "fire_extinguisher"
 	inhand_icon_state = "fire_extinguisher"
 	icon_angle = 90
-	hitsound = 'sound/items/weapons/smash.ogg'
-	pickup_sound = 'sound/items/handling/gas_tank/gas_tank_pick_up.ogg'
-	drop_sound = 'sound/items/handling/gas_tank/gas_tank_drop.ogg'
+	hitsound = '../assets/sound/items/weapons/smash.ogg'
+	pickup_sound = '../assets/sound/items/handling/gas_tank/gas_tank_pick_up.ogg'
+	drop_sound = '../assets/sound/items/handling/gas_tank/gas_tank_drop.ogg'
 	obj_flags = CONDUCTS_ELECTRICITY
 	throwforce = 13
 	w_class = WEIGHT_CLASS_BULKY
@@ -262,7 +262,7 @@
 		var/transferred = W.reagents.trans_to(src, max_water, transferred_by = user)
 		if(transferred > 0)
 			to_chat(user, span_notice("\The [src] has been refilled by [transferred] units."))
-			playsound(src.loc, 'sound/effects/refill.ogg', 50, TRUE, -6)
+			playsound(src.loc, '../assets/sound/effects/refill.ogg', 50, TRUE, -6)
 			for(var/datum/reagent/water/R in reagents.reagent_list)
 				R.cooling_temperature = cooling_power
 		else
@@ -296,7 +296,7 @@
 
 	src.last_use = world.time
 
-	playsound(src.loc, 'sound/effects/extinguish.ogg', 75, TRUE, -3)
+	playsound(src.loc, '../assets/sound/effects/extinguish.ogg', 75, TRUE, -3)
 
 	var/direction = get_dir(src,interacting_with)
 

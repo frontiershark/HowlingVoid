@@ -7,7 +7,7 @@
 	///underlay used to indicate that someone is marked
 	var/mutable_appearance/marked_underlay
 	/// icon file for the underlay
-	var/effect_icon = 'icons/effects/eldritch.dmi'
+	var/effect_icon = '../assets/icons/effects/eldritch.dmi'
 	/// icon state for the underlay
 	var/effect_icon_state = ""
 
@@ -51,7 +51,7 @@
 /datum/status_effect/eldritch/proc/on_effect()
 	SHOULD_CALL_PARENT(TRUE)
 
-	playsound(owner, 'sound/effects/magic/repulse.ogg', 75, TRUE)
+	playsound(owner, '../assets/sound/effects/magic/repulse.ogg', 75, TRUE)
 	qdel(src) //what happens when this is procced.
 
 //Each mark has different effects when it is destroyed that combine with the mansus grasp effect.

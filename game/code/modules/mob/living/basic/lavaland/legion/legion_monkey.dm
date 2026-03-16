@@ -12,7 +12,7 @@
 	attack_verb_continuous = "mauls"
 	attack_verb_simple = "maul"
 	attack_vis_effect = ATTACK_EFFECT_BITE
-	attack_sound = 'sound/items/weapons/bite.ogg'
+	attack_sound = '../assets/sound/items/weapons/bite.ogg'
 	speak_emote = list("chimpers")
 	corpse_type = /obj/effect/mob_spawn/corpse/human/monkey
 	ai_controller = /datum/ai_controller/basic_controller/legion_monkey
@@ -32,7 +32,7 @@
 /mob/living/basic/mining/legion/monkey/snow
 	name = "snow rabble"
 	desc = "You can see what was once a monkey under the densely packed snow. It doesn't look friendly."
-	icon = 'icons/mob/simple/icemoon/icemoon_monsters.dmi'
+	icon = '../assets/icons/mob/simple/icemoon/icemoon_monsters.dmi'
 	icon_state = "snow_monkey"
 	has_emissive = FALSE
 

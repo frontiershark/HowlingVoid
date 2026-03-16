@@ -45,7 +45,7 @@
 			"name" = option_name,
 			"icon_state" = icon_state,
 			"is_original" = TRUE,
-			"icon" = 'icons/obj/machines/status_display.dmi'
+			"icon" = '../assets/icons/obj/machines/status_display.dmi'
 		)
 		options += list(option_data)
 
@@ -55,7 +55,7 @@
 			"name" = option_name,
 			"icon_state" = icon_state,
 			"is_original" = FALSE,
-			"icon" = 'icons/obj/machines/status_display.dmi'
+			"icon" = '../assets/icons/obj/machines/status_display.dmi'
 		)
 		options += list(option_data)
 
@@ -83,7 +83,7 @@
 
 	data["current_emotion"] = current_emotion
 	data["current_icon"] = list(
-		"icon" = 'icons/obj/machines/status_display.dmi',
+		"icon" = '../assets/icons/obj/machines/status_display.dmi',
 		"icon_state" = current_icon_state
 	)
 

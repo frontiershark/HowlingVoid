@@ -4,9 +4,9 @@
 		It has a chance to transfer wounds between you and your enemy."
 	background_icon_state = "bg_heretic"
 	overlay_icon_state = "bg_heretic_border"
-	button_icon = 'icons/mob/actions/actions_ecult.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_ecult.dmi'
 	button_icon_state = "blood_siphon"
-	ranged_mousepointer = 'icons/effects/mouse_pointers/throw_target.dmi'
+	ranged_mousepointer = '../assets/icons/effects/mouse_pointers/throw_target.dmi'
 
 	school = SCHOOL_FORBIDDEN
 	cooldown_time = 15 SECONDS
@@ -25,7 +25,7 @@
 
 /datum/action/cooldown/spell/pointed/blood_siphon/cast(mob/living/cast_on)
 	. = ..()
-	playsound(owner, 'sound/effects/magic/demon_attack1.ogg', 75, TRUE)
+	playsound(owner, '../assets/sound/effects/magic/demon_attack1.ogg', 75, TRUE)
 	if(cast_on.can_block_magic())
 		owner.balloon_alert(owner, "spell blocked!")
 		cast_on.visible_message(

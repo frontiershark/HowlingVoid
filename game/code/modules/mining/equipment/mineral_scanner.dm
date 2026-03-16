@@ -2,12 +2,12 @@
 /obj/item/mining_scanner
 	desc = "A scanner that checks surrounding rock for useful minerals; it can also be used to stop gibtonite detonations."
 	name = "manual mining scanner"
-	icon = 'icons/obj/devices/scanner.dmi'
+	icon = '../assets/icons/obj/devices/scanner.dmi'
 	icon_state = "manual_mining"
 	inhand_icon_state = "analyzer"
 	worn_icon_state = "analyzer"
-	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/tools_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/tools_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/tools_righthand.dmi'
 	w_class = WEIGHT_CLASS_SMALL
 	obj_flags = CONDUCTS_ELECTRICITY
 	slot_flags = ITEM_SLOT_BELT
@@ -38,8 +38,8 @@
 	name = "advanced automatic mining scanner"
 	icon_state = "advmining0"
 	inhand_icon_state = "analyzer"
-	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/tools_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/tools_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/tools_righthand.dmi'
 	w_class = WEIGHT_CLASS_SMALL
 	obj_flags = CONDUCTS_ELECTRICITY
 	slot_flags = ITEM_SLOT_BELT
@@ -102,16 +102,16 @@
 
 	if(vents_nearby && scanner)
 		if(undiscovered)
-			playsound(scanner, 'sound/machines/radar-ping.ogg', radar_volume, FALSE)
+			playsound(scanner, '../assets/sound/machines/radar-ping.ogg', radar_volume, FALSE)
 			scanner.balloon_alert_to_viewers("ore vent nearby")
 		else
-			playsound(scanner, 'sound/machines/sonar-ping.ogg', radar_volume, FALSE)
+			playsound(scanner, '../assets/sound/machines/sonar-ping.ogg', radar_volume, FALSE)
 		scanner.spasm_animation(1.5 SECONDS)
 
 /obj/effect/temp_visual/mining_overlay
 	plane = HIGH_GAME_PLANE
 	layer = FLASH_LAYER
-	icon = 'icons/effects/ore_visuals.dmi'
+	icon = '../assets/icons/effects/ore_visuals.dmi'
 	appearance_flags = NONE // to avoid having TILE_BOUND in the flags, so that the 480x480 icon states let you see it no matter where you are
 	duration = 35
 	pixel_x = -224
@@ -124,7 +124,7 @@
 	animate(src, alpha = 0, time = duration, easing = easing_style)
 
 /obj/effect/temp_visual/mining_overlay/vent
-	icon = 'icons/effects/vent_overlays.dmi'
+	icon = '../assets/icons/effects/vent_overlays.dmi'
 	icon_state = "unknown"
 	duration = 45
 	pixel_x = 0

@@ -2,7 +2,7 @@
 /obj/item/reagent_containers/cup/fish_feed
 	name = "fish feed can"
 	desc = "A refillable can that dispenses nutritious fish feed."
-	icon = 'icons/obj/aquarium/supplies.dmi'
+	icon = '../assets/icons/obj/aquarium/supplies.dmi'
 	icon_state = "fish_feed"
 	w_class = WEIGHT_CLASS_TINY
 	volume = 5
@@ -21,12 +21,12 @@
 /obj/item/storage/fish_case
 	name = "stasis fish case"
 	desc = "A resizable case keeping the fish inside in stasis."
-	icon = 'icons/obj/storage/case.dmi'
+	icon = '../assets/icons/obj/storage/case.dmi'
 	icon_state = "fishbox"
 	w_class = WEIGHT_CLASS_SMALL
 	inhand_icon_state = "syringe_kit"
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/medical_righthand.dmi'
 	storage_type = /datum/storage/fish_case/adjust_size
 
 /obj/item/storage/fish_case/Initialize(mapload)
@@ -117,7 +117,7 @@
 /obj/item/aquarium_kit
 	name = "DIY Aquarium Construction Kit"
 	desc = "Everything you need to build your own aquarium or fish tank. Raw materials sold separately."
-	icon = 'icons/obj/aquarium/supplies.dmi'
+	icon = '../assets/icons/obj/aquarium/supplies.dmi'
 	icon_state = "construction_kit"
 	w_class = WEIGHT_CLASS_TINY
 
@@ -129,7 +129,7 @@
 /obj/item/aquarium_prop
 	name = "generic aquarium prop"
 	desc = "very boring"
-	icon = 'icons/obj/aquarium/tanks.dmi'
+	icon = '../assets/icons/obj/aquarium/tanks.dmi'
 
 	w_class = WEIGHT_CLASS_TINY
 	custom_materials = list(/datum/material/plastic = COIN_MATERIAL_AMOUNT)

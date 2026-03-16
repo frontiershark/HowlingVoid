@@ -2,7 +2,7 @@
 
 /obj/machinery/portable_atmospherics
 	name = "portable_atmospherics"
-	icon = 'icons/obj/pipes_n_cables/atmos.dmi'
+	icon = '../assets/icons/obj/pipes_n_cables/atmos.dmi'
 	use_power = NO_POWER_USE
 	max_integrity = 250
 	armor_type = /datum/armor/machinery_portable_atmospherics
@@ -35,8 +35,8 @@
 	var/suppress_reactions = FALSE
 	/// Is there a hypernoblium crystal inserted into this
 	var/nob_crystal_inserted = FALSE
-	var/insert_sound = 'sound/effects/compressed_air/tank_insert_clunky.ogg'
-	var/remove_sound = 'sound/effects/compressed_air/tank_remove_thunk.ogg'
+	var/insert_sound = '../assets/sound/effects/compressed_air/tank_insert_clunky.ogg'
+	var/remove_sound = '../assets/sound/effects/compressed_air/tank_remove_thunk.ogg'
 	var/sound_vol = 50
 
 /datum/armor/machinery_portable_atmospherics

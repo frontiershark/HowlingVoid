@@ -6,9 +6,9 @@
 	icon_state = "hierophant_club_ready_beacon"
 	inhand_icon_state = "hierophant_club_ready_beacon"
 	icon_angle = -135
-	icon = 'icons/obj/mining_zones/artefacts.dmi'
-	lefthand_file = 'icons/mob/inhands/64x64_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/64x64_righthand.dmi'
+	icon = '../assets/icons/obj/mining_zones/artefacts.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/64x64_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/64x64_righthand.dmi'
 	inhand_x_dimension = 64
 	inhand_y_dimension = 64
 	slot_flags = ITEM_SLOT_BACK
@@ -16,7 +16,7 @@
 	force = 15
 	attack_verb_continuous = list("clubs", "beats", "pummels")
 	attack_verb_simple = list("club", "beat", "pummel")
-	hitsound = 'sound/items/weapons/sonic_jackhammer.ogg'
+	hitsound = '../assets/sound/items/weapons/sonic_jackhammer.ogg'
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 	actions_types = list(/datum/action/item_action/vortex_recall)
 	action_slots = ALL
@@ -59,7 +59,7 @@
 	say("Xverwpsgexmrk...", forced = "hierophant club suicide")
 	user.visible_message(span_suicide("[user] holds [src] into the air! It looks like [user.p_theyre()] trying to commit suicide!"))
 	new/obj/effect/temp_visual/hierophant/telegraph(get_turf(user))
-	playsound(user,'sound/machines/airlock/airlockopen.ogg', 75, TRUE)
+	playsound(user,'../assets/sound/machines/airlock/airlockopen.ogg', 75, TRUE)
 	user.visible_message(span_hierophant_warning("[user] fades out, leaving [user.p_their()] belongings behind!"))
 	for (var/obj/item/user_item as anything in user.get_all_gear(FALSE, FALSE))
 		user.dropItemToGround(user_item)
@@ -148,8 +148,8 @@
 
 	new /obj/effect/temp_visual/hierophant/telegraph(user_turf, user)
 	new /obj/effect/temp_visual/hierophant/telegraph(beacon_turf, user)
-	playsound(user_turf, 'sound/machines/airlock/airlockopen.ogg', 200, TRUE)
-	playsound(beacon_turf, 'sound/effects/magic/wand_teleport.ogg', 200, TRUE)
+	playsound(user_turf, '../assets/sound/machines/airlock/airlockopen.ogg', 200, TRUE)
+	playsound(beacon_turf, '../assets/sound/effects/magic/wand_teleport.ogg', 200, TRUE)
 
 	new /obj/effect/temp_visual/hierophant/telegraph/teleport(user_turf, user)
 	new /obj/effect/temp_visual/hierophant/telegraph/teleport(beacon_turf, user)
@@ -206,7 +206,7 @@
 	var/turf/user_turf = get_turf(user)
 	new /obj/effect/temp_visual/hierophant/telegraph/teleport(user_turf, user)
 	beacon = new /obj/effect/hierophant(user_turf)
-	playsound(beacon, 'sound/effects/magic/blind.ogg', 200, TRUE, -4)
+	playsound(beacon, '../assets/sound/effects/magic/blind.ogg', 200, TRUE, -4)
 	RegisterSignal(beacon, COMSIG_QDELETING, PROC_REF(beacon_destroyed))
 
 	user.update_mob_action_buttons()
@@ -221,7 +221,7 @@
 		to_chat(loc, span_hierophant("With a loud snap, a new beacon appears at [src]'s pommel."))
 	else
 		visible_message(span_hierophant("With a loud snap, a new beacon appears at [src]'s pommel."))
-	playsound(src, 'sound/effects/magic/blind.ogg', 50, TRUE, -4)
+	playsound(src, '../assets/sound/effects/magic/blind.ogg', 50, TRUE, -4)
 	update_appearance(UPDATE_ICON_STATE)
 
 #define HIEROPHANT_BLINK_RANGE 5

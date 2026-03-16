@@ -4,7 +4,7 @@
 	hallucination_tier = HALLUCINATION_TIER_COMMON
 
 	/// What icon file to use for our hallucinator
-	var/ice_icon = 'icons/effects/freeze.dmi'
+	var/ice_icon = '../assets/icons/effects/freeze.dmi'
 	/// What icon state to use for our hallucinator
 	var/ice_icon_state = "ice_cube"
 	/// Our ice overlay we generate

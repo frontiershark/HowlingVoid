@@ -1,7 +1,7 @@
 /obj/structure/emergency_shield
 	name = "emergency energy shield"
 	desc = "An energy shield used to contain hull breaches."
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	icon_state = "shield-old"
 	integrity_failure = 0.5
 	density = TRUE
@@ -39,9 +39,9 @@
 /obj/structure/emergency_shield/play_attack_sound(damage, damage_type = BRUTE, damage_flag = 0)
 	switch(damage_type)
 		if(BURN)
-			playsound(loc, 'sound/effects/empulse.ogg', 75, TRUE)
+			playsound(loc, '../assets/sound/effects/empulse.ogg', 75, TRUE)
 		if(BRUTE)
-			playsound(loc, 'sound/effects/empulse.ogg', 75, TRUE)
+			playsound(loc, '../assets/sound/effects/empulse.ogg', 75, TRUE)
 
 /obj/structure/emergency_shield/take_damage(damage, damage_type = BRUTE, damage_flag = 0, sound_effect = 1, attack_dir)
 	. = ..()
@@ -138,7 +138,7 @@
 /obj/machinery/shieldgen
 	name = "anti-breach shielding projector"
 	desc = "Used to seal minor hull breaches."
-	icon = 'icons/obj/machines/shield_generator.dmi'
+	icon = '../assets/icons/obj/machines/shield_generator.dmi'
 	icon_state = "shieldoff"
 	density = TRUE
 	opacity = FALSE
@@ -283,7 +283,7 @@
 /obj/machinery/power/shieldwallgen
 	name = "shield wall generator"
 	desc = "A shield generator."
-	icon ='icons/obj/machines/shield_generator.dmi'
+	icon ='../assets/icons/obj/machines/shield_generator.dmi'
 	icon_state = "shield_wall_gen"
 	base_icon_state = "shield_wall_gen"
 	light_on = FALSE
@@ -536,7 +536,7 @@
 /obj/machinery/shieldwall
 	name = "shield wall"
 	desc = "An energy shield."
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	icon_state = "shieldwall"
 	density = TRUE
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
@@ -582,9 +582,9 @@
 /obj/machinery/shieldwall/play_attack_sound(damage_amount, damage_type = BRUTE, damage_flag = 0)
 	switch(damage_type)
 		if(BURN)
-			playsound(loc, 'sound/effects/empulse.ogg', 75, TRUE)
+			playsound(loc, '../assets/sound/effects/empulse.ogg', 75, TRUE)
 		if(BRUTE)
-			playsound(loc, 'sound/effects/empulse.ogg', 75, TRUE)
+			playsound(loc, '../assets/sound/effects/empulse.ogg', 75, TRUE)
 
 //the shield wall is immune to damage but it drains the stored power of the generators.
 /obj/machinery/shieldwall/take_damage(damage_amount, damage_type = BRUTE, damage_flag = 0, sound_effect = 1, attack_dir)

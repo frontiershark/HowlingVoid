@@ -15,7 +15,7 @@
 	name = "auxiliary base management console"
 	desc = "Allows a deployable expedition base to be dropped from the station to a designated mining location. It can also \
 	interface with the mining shuttle at the landing site if a mobile beacon is also deployed."
-	icon = 'icons/obj/machines/wallmounts.dmi'
+	icon = '../assets/icons/obj/machines/wallmounts.dmi'
 	icon_state = "pod_off"
 	icon_keyboard = null
 	icon_screen = "pod_on"
@@ -148,7 +148,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/computer/auxiliary_base, 32)
 			var/shuttle_error = SSshuttle.moveShuttle(shuttleId, params["shuttle_id"], 1)
 			if(launch_warning)
 				say("Launch sequence activated! Prepare for drop!!", spans = list("danger"))
-				playsound(loc, 'sound/machines/warning-buzzer.ogg', 70, FALSE)
+				playsound(loc, '../assets/sound/machines/warning-buzzer.ogg', 70, FALSE)
 				launch_warning = FALSE
 				blind_drop_ready = FALSE
 				log_shuttle("[key_name(usr)] has launched the auxiliary base.")
@@ -256,11 +256,11 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/computer/auxiliary_base, 32)
 
 /obj/item/assault_pod/mining
 	name = "Landing Field Designator"
-	icon = 'icons/obj/devices/remote.dmi'
+	icon = '../assets/icons/obj/devices/remote.dmi'
 	icon_state = "designator_mining"
 	inhand_icon_state = "minertalkie"
-	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/devices_righthand.dmi'
 	desc = "Deploy to designate the landing zone of the auxiliary base."
 	w_class = WEIGHT_CLASS_SMALL
 	shuttle_id = "colony_drop"
@@ -335,7 +335,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/computer/auxiliary_base, 32)
 	anchored = FALSE
 	density = FALSE
 	var/shuttle_ID = "landing_zone_dock"
-	icon = 'icons/obj/mining.dmi'
+	icon = '../assets/icons/obj/mining.dmi'
 	icon_state = "miningbeacon"
 	var/obj/docking_port/stationary/Mport //Linked docking port for the mining shuttle
 	pressure_resistance = 200 //So it does not get blown into lava.
@@ -431,7 +431,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/computer/auxiliary_base, 32)
 	aux_base_console.set_mining_mode() //Lets the colony park the shuttle there, now that it has a dock.
 	to_chat(user, span_notice("Mining shuttle calibration successful! Shuttle interface available at base console."))
 	set_anchored(TRUE) //Locks in place to mark the landing zone.
-	playsound(loc, 'sound/machines/ping.ogg', 50, FALSE)
+	playsound(loc, '../assets/sound/machines/ping.ogg', 50, FALSE)
 	log_shuttle("[key_name(usr)] has registered the mining shuttle beacon at [COORD(landing_spot)].")
 
 /obj/structure/mining_shuttle_beacon/proc/clear_cooldown()

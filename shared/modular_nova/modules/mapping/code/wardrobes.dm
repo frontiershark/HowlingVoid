@@ -84,7 +84,7 @@
 	consume_use(chosen_type, user)
 
 /obj/item/choice_beacon/unholy/spawn_option(obj/choice_path, mob/living/user)
-	playsound(src, 'sound/effects/pray_chaplain.ogg', 40, TRUE)
+	playsound(src, '../assets/sound/effects/pray_chaplain.ogg', 40, TRUE)
 	return ..()
 
 /// Just take out and replace the holy beacon with our 'unholy' beacon

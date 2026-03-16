@@ -52,8 +52,8 @@
 
 /datum/action/cooldown/mob_cooldown/mook_ability/mook_leap/proc/launch_towards_target(atom/target)
 	new /obj/effect/temp_visual/mook_dust(get_turf(owner))
-	playsound(get_turf(owner), 'sound/items/weapons/thudswoosh.ogg', 25, TRUE)
-	playsound(owner, 'sound/mobs/non-humanoids/mook/mook_leap_yell.ogg', 100, TRUE)
+	playsound(get_turf(owner), '../assets/sound/items/weapons/thudswoosh.ogg', 25, TRUE)
+	playsound(owner, '../assets/sound/mobs/non-humanoids/mook/mook_leap_yell.ogg', 100, TRUE)
 	var/turf/target_turf = get_turf(target)
 
 	if(!target_turf.is_blocked_turf())
@@ -115,7 +115,7 @@
 		var/mob/living/basic/mining/mook/mook_owner = owner
 		mook_owner.change_combatant_state(state = MOOK_ATTACK_ACTIVE)
 	new /obj/effect/temp_visual/mook_dust(get_turf(owner))
-	playsound(owner, 'sound/items/weapons/thudswoosh.ogg', 50, TRUE)
+	playsound(owner, '../assets/sound/items/weapons/thudswoosh.ogg', 50, TRUE)
 	animate(owner, pixel_z = 146, time = 0.5 SECONDS, flags = ANIMATION_RELATIVE)
 	addtimer(CALLBACK(src, PROC_REF(land_on_turf), target), 0.5 SECONDS)
 
@@ -129,7 +129,7 @@
 /obj/effect/temp_visual/mook_dust
 	name = "dust"
 	desc = "It's just a dust cloud!"
-	icon = 'icons/mob/simple/jungle/mook.dmi'
+	icon = '../assets/icons/mob/simple/jungle/mook.dmi'
 	icon_state = "mook_leap_cloud"
 	layer = BELOW_MOB_LAYER
 	plane = GAME_PLANE

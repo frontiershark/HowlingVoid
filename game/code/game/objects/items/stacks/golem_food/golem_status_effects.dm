@@ -13,7 +13,7 @@
 	/// Overlays we have applied to our mob
 	var/list/active_overlays = list()
 	/// Icon used to represent the alert
-	var/alert_icon = 'icons/obj/stack_objects.dmi'
+	var/alert_icon = '../assets/icons/obj/stack_objects.dmi'
 	/// Icon state to display to represent the alert
 	var/alert_icon_state = "sheet-monkey"
 	/// Tooltip to display when hovering over the alert
@@ -122,7 +122,7 @@
 
 /// Body part overlays applied by golem status effects
 /datum/bodypart_overlay/simple/golem_overlay
-	icon = 'icons/mob/human/species/golems.dmi'
+	icon = '../assets/icons/mob/human/species/golems.dmi'
 	layers = ALL_EXTERNAL_OVERLAYS
 	///The bodypart that the overlay is currently applied to
 	var/datum/weakref/attached_bodypart
@@ -236,7 +236,7 @@
 /// Shoot a beam at the target atom
 /datum/status_effect/golem/plasma/proc/zap_effect(atom/target)
 	owner.Beam(target, icon_state = "lightning[rand(1,12)]", time = 0.5 SECONDS)
-	playsound(owner, 'sound/effects/magic/lightningshock.ogg', vol = 50, vary = TRUE)
+	playsound(owner, '../assets/sound/effects/magic/lightningshock.ogg', vol = 50, vary = TRUE)
 
 /// Makes you spaceproof
 /datum/status_effect/golem/plasteel
@@ -328,8 +328,8 @@
 	arm.grappled_attack_verb = "lacerate"
 	arm.grappled_attack_verb_continuous = "lacerates"
 	arm.unarmed_attack_effect = ATTACK_EFFECT_CLAW
-	arm.unarmed_attack_sound = 'sound/items/weapons/slash.ogg'
-	arm.unarmed_miss_sound = 'sound/items/weapons/slashmiss.ogg'
+	arm.unarmed_attack_sound = '../assets/sound/items/weapons/slash.ogg'
+	arm.unarmed_miss_sound = '../assets/sound/items/weapons/slashmiss.ogg'
 	RegisterSignal(arm, COMSIG_QDELETING, PROC_REF(on_arm_destroyed))
 	LAZYADD(modified_arms, arm)
 

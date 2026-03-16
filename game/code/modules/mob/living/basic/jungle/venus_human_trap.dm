@@ -13,7 +13,7 @@
 /obj/structure/alien/resin/flower_bud //inheriting basic attack/damage stuff from alien structures
 	name = "flower bud"
 	desc = "A large pulsating plant..."
-	icon = 'icons/mob/spacevines.dmi'
+	icon = '../assets/icons/mob/spacevines.dmi'
 	icon_state = "bud0"
 	layer = SPACEVINE_MOB_LAYER
 	opacity = FALSE
@@ -129,7 +129,7 @@
 /mob/living/basic/venus_human_trap
 	name = "venus human trap"
 	desc = "Now you know how the fly feels."
-	icon = 'icons/mob/spacevines.dmi'
+	icon = '../assets/icons/mob/spacevines.dmi'
 	icon_state = "venus_human_trap"
 	health_doll_icon = "venus_human_trap"
 	mob_biotypes = MOB_ORGANIC | MOB_PLANT
@@ -143,9 +143,9 @@
 	combat_mode = TRUE
 	basic_mob_flags = DEL_ON_DEATH
 	death_message = "collapses into bits of plant matter."
-	attacked_sound = 'sound/mobs/non-humanoids/venus_trap/venus_trap_hurt.ogg'
-	death_sound = 'sound/mobs/non-humanoids/venus_trap/venus_trap_death.ogg'
-	attack_sound = 'sound/mobs/non-humanoids/venus_trap/venus_trap_hit.ogg'
+	attacked_sound = '../assets/sound/mobs/non-humanoids/venus_trap/venus_trap_hurt.ogg'
+	death_sound = '../assets/sound/mobs/non-humanoids/venus_trap/venus_trap_death.ogg'
+	attack_sound = '../assets/sound/mobs/non-humanoids/venus_trap/venus_trap_hit.ogg'
 	unsuitable_heat_damage = 5 // heat damage is different from cold damage since coldmos is significantly more common than plasmafires
 	unsuitable_cold_damage = 2 // they now do take cold damage, but this should be sufficiently small that it does not cause major issues
 	habitable_atmos = null
@@ -201,7 +201,7 @@
 
 /datum/action/cooldown/mob_cooldown/projectile_attack/vine_tangle
 	name = "Tangle"
-	button_icon = 'icons/mob/spacevines.dmi'
+	button_icon = '../assets/icons/mob/spacevines.dmi'
 	button_icon_state = "Light1"
 	desc = "Grabs a target with a sticky vine, allowing you to pull it alongside you."
 	cooldown_time = 8 SECONDS

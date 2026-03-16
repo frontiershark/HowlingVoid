@@ -1,7 +1,7 @@
 /obj/effect/oneway
 	name = "one way effect"
 	desc = "Only lets things in from its dir."
-	icon = 'icons/effects/mapping_helpers.dmi'
+	icon = '../assets/icons/effects/mapping_helpers.dmi'
 	icon_state = "field_dir"
 	invisibility = INVISIBILITY_MAXIMUM
 	anchored = TRUE
@@ -14,7 +14,7 @@
 /obj/effect/wind
 	name = "wind effect"
 	desc = "Creates pressure effect in its direction. Use sparingly."
-	icon = 'icons/effects/mapping_helpers.dmi'
+	icon = '../assets/icons/effects/mapping_helpers.dmi'
 	icon_state = "field_dir"
 	invisibility = INVISIBILITY_MAXIMUM
 	var/strength = 30
@@ -32,7 +32,7 @@
 /obj/effect/path_blocker
 	name = "magic barrier"
 	desc = "You shall not pass."
-	icon = 'icons/effects/mapping_helpers.dmi'
+	icon = '../assets/icons/effects/mapping_helpers.dmi'
 	icon_state = "blocker" //todo make this actually look fine when visible
 	anchored = TRUE
 	var/list/blocked_types = list()
@@ -54,7 +54,7 @@
 
 /obj/structure/pitgrate
 	name = "pit grate"
-	icon = 'icons/obj/smooth_structures/lattice.dmi'
+	icon = '../assets/icons/obj/smooth_structures/lattice.dmi'
 	icon_state = "lattice-255"
 	layer = BELOW_CATWALK_LAYER
 	plane = FLOOR_PLANE
@@ -118,7 +118,7 @@
 
 /obj/structure/pitgrate/hidden
 	name = "floor"
-	icon = 'icons/turf/floors.dmi'
+	icon = '../assets/icons/turf/floors.dmi'
 	icon_state = "floor"
 	hidden = TRUE
 
@@ -126,7 +126,7 @@
 /obj/effect/playeronly_barrier
 	name = "player-only barrier"
 	desc = "You shall pass."
-	icon = 'icons/effects/mapping_helpers.dmi'
+	icon = '../assets/icons/effects/mapping_helpers.dmi'
 	icon_state = "blocker"
 	anchored = TRUE
 	invisibility = INVISIBILITY_MAXIMUM
@@ -141,7 +141,7 @@
 /obj/effect/invisible_wall // why didnt we have this already
 	name = "invisible wall"
 	desc = "You shall not pass"
-	icon = 'icons/effects/mapping_helpers.dmi'
+	icon = '../assets/icons/effects/mapping_helpers.dmi'
 	icon_state = "blocker"
 	color = COLOR_BLUE_LIGHT
 	invisibility = INVISIBILITY_MAXIMUM

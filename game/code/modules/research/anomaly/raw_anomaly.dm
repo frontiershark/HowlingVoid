@@ -9,7 +9,7 @@
 /obj/item/raw_anomaly_core
 	name = "raw anomaly core"
 	desc = "You shouldn't be seeing this. Someone screwed up."
-	icon = 'icons/obj/devices/new_assemblies.dmi'
+	icon = '../assets/icons/obj/devices/new_assemblies.dmi'
 	icon_state = "broken_state"
 
 	/// Anomaly type
@@ -105,5 +105,5 @@
 /obj/item/inert_anomaly
 	name = "inert anomaly core"
 	desc = "A chunk of fused exotic materials. Useless to you, but some other lab might purchase it."
-	icon = 'icons/obj/devices/new_assemblies.dmi'
+	icon = '../assets/icons/obj/devices/new_assemblies.dmi'
 	icon_state = "rawcore_inert"

@@ -1,7 +1,7 @@
 /obj/item/clothing/suit/armor
 	name = "armor"
-	icon = 'icons/obj/clothing/suits/armor.dmi'
-	worn_icon = 'icons/mob/clothing/suits/armor.dmi'
+	icon = '../assets/icons/obj/clothing/suits/armor.dmi'
+	worn_icon = '../assets/icons/mob/clothing/suits/armor.dmi'
 	abstract_type = /obj/item/clothing/suit/armor
 	allowed = null
 	body_parts_covered = CHEST
@@ -346,7 +346,7 @@
 	return ..()
 
 /obj/item/clothing/suit/armor/balloon_vest/proc/pop()
-	playsound(src, 'sound/effects/cartoon_sfx/cartoon_pop.ogg', 50, vary = TRUE)
+	playsound(src, '../assets/sound/effects/cartoon_sfx/cartoon_pop.ogg', 50, vary = TRUE)
 	qdel(src)
 
 

@@ -90,7 +90,7 @@
 /// Worker proc that checks logic for if a pump can happen, and applies effects from doing so
 /datum/component/manual_heart/proc/on_pump(mob/owner)
 	COOLDOWN_START(src, heart_timer, pump_delay)
-	playsound(owner,'sound/effects/singlebeat.ogg', 40, TRUE)
+	playsound(owner,'../assets/sound/effects/singlebeat.ogg', 40, TRUE)
 
 	var/mob/living/carbon/carbon_owner = owner
 
@@ -165,7 +165,7 @@
 	name = "Pump your blood"
 	cooldown_time = 2 SECONDS
 	check_flags = NONE
-	button_icon = 'icons/obj/medical/organs/organs.dmi'
+	button_icon = '../assets/icons/obj/medical/organs/organs.dmi'
 	button_icon_state = "cursedheart-off"
 
 /datum/action/cooldown/manual_heart/Activate(atom/atom_target)

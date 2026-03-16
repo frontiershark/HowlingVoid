@@ -1,5 +1,5 @@
 /obj/item/food/pie
-	icon = 'icons/obj/food/piecake.dmi'
+	icon = '../assets/icons/obj/food/piecake.dmi'
 	inhand_icon_state = "pie"
 	bite_consumption = 3
 	w_class = WEIGHT_CLASS_NORMAL
@@ -20,7 +20,7 @@
 
 /obj/item/food/pieslice
 	name = "pie slice"
-	icon = 'icons/obj/food/piecake.dmi'
+	icon = '../assets/icons/obj/food/piecake.dmi'
 	w_class = WEIGHT_CLASS_TINY
 	food_reagents = list(/datum/reagent/consumable/nutriment = 2)
 	tastes = list("pie" = 1, "uncertainty" = 1)

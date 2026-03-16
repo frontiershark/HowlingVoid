@@ -3,7 +3,7 @@
 	name = "\improper Maid in the Mirror"
 	real_name = "Maid in the Mirror"
 	desc = "A floating and flowing wisp of chilled air. Glancing at it causes it to shimmer slightly."
-	icon = 'icons/mob/simple/mob.dmi'
+	icon = '../assets/icons/mob/simple/mob.dmi'
 	icon_state = "stand"
 	icon_living = "stand" // Placeholder sprite... still
 	speak_emote = list("whispers")
@@ -59,7 +59,7 @@
 
 		recent_examiner_refs += user_ref
 		apply_damage(maxHealth * 0.02) // We take 2% of our health as damage upon being examined
-		playsound(src, 'sound/effects/ghost2.ogg', 40, TRUE)
+		playsound(src, '../assets/sound/effects/ghost2.ogg', 40, TRUE)
 		addtimer(CALLBACK(src, PROC_REF(clear_recent_examiner), user_ref), recent_examine_damage_cooldown, TIMER_DELETE_ME)
 		animate(src, alpha = 120, time = 0.5 SECONDS, easing = ELASTIC_EASING, loop = 2, flags = ANIMATION_PARALLEL)
 		animate(alpha = 255, time = 0.5 SECONDS, easing = ELASTIC_EASING)

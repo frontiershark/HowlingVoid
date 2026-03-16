@@ -16,7 +16,7 @@ path/corner/color_name {\
 /obj/structure/chair/sofa
 	name = "old ratty sofa"
 	icon_state = "error"
-	icon = 'icons/obj/chairs_wide.dmi'
+	icon = '../assets/icons/obj/chairs_wide.dmi'
 	buildstackamount = 1
 	item_chair = null
 	fishing_modifier = -6
@@ -28,7 +28,7 @@ path/corner/color_name {\
 
 /obj/structure/chair/sofa/electrify_self(obj/item/assembly/shock_kit/input_shock_kit, mob/user, list/overlays_from_child_procs)
 	if(!overlays_from_child_procs)
-		var/mutable_appearance/echair_overlay = mutable_appearance('icons/obj/chairs.dmi', "echair_over", OBJ_LAYER, src, appearance_flags = KEEP_APART)
+		var/mutable_appearance/echair_overlay = mutable_appearance('../assets/icons/obj/chairs.dmi', "echair_over", OBJ_LAYER, src, appearance_flags = KEEP_APART)
 		echair_overlay.pixel_x = -1
 		overlays_from_child_procs = list(echair_overlay)
 	. = ..()
@@ -94,7 +94,7 @@ COLORED_SOFA(/obj/structure/chair/sofa, maroon, SOFA_MAROON)
 /obj/structure/chair/sofa/bench
 	name = "bench"
 	desc = "Perfectly designed to be comfortable to sit on, and hellish to sleep on."
-	icon = 'icons/map_icons/objects.dmi'
+	icon = '../assets/icons/map_icons/objects.dmi'
 	icon_state = "/obj/structure/chair/sofa/bench"
 	post_init_icon_state = "bench_middle"
 	greyscale_config = /datum/greyscale_config/bench_middle

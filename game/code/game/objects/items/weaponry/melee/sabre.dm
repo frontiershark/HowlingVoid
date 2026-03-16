@@ -1,12 +1,12 @@
 /obj/item/melee/sabre
 	name = "officer's sabre"
 	desc = "An elegant weapon, its monomolecular edge is capable of cutting through flesh and bone with ease."
-	icon = 'icons/obj/weapons/sword.dmi'
+	icon = '../assets/icons/obj/weapons/sword.dmi'
 	icon_state = "sabre"
 	inhand_icon_state = "sabre"
 	icon_angle = -45
-	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/swords_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/swords_righthand.dmi'
 	obj_flags = CONDUCTS_ELECTRICITY | UNIQUE_RENAME
 	force = 20
 	throwforce = 10
@@ -17,8 +17,8 @@
 	sharpness = SHARP_EDGED
 	attack_verb_continuous = list("slashes", "cuts")
 	attack_verb_simple = list("slash", "cut")
-	block_sound = 'sound/items/weapons/parry.ogg'
-	hitsound = 'sound/items/weapons/rapierhit.ogg'
+	block_sound = '../assets/sound/items/weapons/parry.ogg'
+	hitsound = '../assets/sound/items/weapons/rapierhit.ogg'
 	custom_materials = list(/datum/material/iron = HALF_SHEET_MATERIAL_AMOUNT)
 	wound_bonus = 10
 	exposed_wound_bonus = 25
@@ -64,10 +64,10 @@
 	return ..()
 
 /obj/item/melee/sabre/on_exit_storage(datum/storage/container)
-	playsound(container.parent, 'sound/items/unsheath.ogg', 25, TRUE)
+	playsound(container.parent, '../assets/sound/items/unsheath.ogg', 25, TRUE)
 
 /obj/item/melee/sabre/on_enter_storage(datum/storage/container)
-	playsound(container.parent, 'sound/items/sheath.ogg', 25, TRUE)
+	playsound(container.parent, '../assets/sound/items/sheath.ogg', 25, TRUE)
 
 /obj/item/melee/sabre/suicide_act(mob/living/user)
 	user.visible_message(span_suicide("[user] is trying to cut off all [user.p_their()] limbs with [src]! it looks like [user.p_theyre()] trying to commit suicide!"))
@@ -116,12 +116,12 @@
 /obj/item/melee/parsnip_sabre
 	name = "parsnip sabre"
 	desc = "A weird, yet elegant weapon. Surprisingly sharp for something made from a parsnip."
-	icon = 'icons/obj/weapons/sword.dmi'
+	icon = '../assets/icons/obj/weapons/sword.dmi'
 	icon_state = "parsnip_sabre"
 	inhand_icon_state = "parsnip_sabre"
 	icon_angle = -45
-	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/swords_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/swords_righthand.dmi'
 	force = 15
 	throwforce = 10
 	demolition_mod = 0.3
@@ -131,8 +131,8 @@
 	sharpness = SHARP_EDGED
 	attack_verb_continuous = list("slashes", "cuts")
 	attack_verb_simple = list("slash", "cut")
-	block_sound = 'sound/items/weapons/parry.ogg'
-	hitsound = 'sound/items/weapons/rapierhit.ogg'
+	block_sound = '../assets/sound/items/weapons/parry.ogg'
+	hitsound = '../assets/sound/items/weapons/rapierhit.ogg'
 	custom_materials = null
 	wound_bonus = 5
 	exposed_wound_bonus = 15
@@ -149,8 +149,8 @@
 
 /obj/item/melee/parsnip_sabre/on_exit_storage(datum/storage/container)
 	. = ..()
-	playsound(container.parent, 'sound/items/unsheath.ogg', 25, TRUE)
+	playsound(container.parent, '../assets/sound/items/unsheath.ogg', 25, TRUE)
 
 /obj/item/melee/parsnip_sabre/on_enter_storage(datum/storage/container)
 	. = ..()
-	playsound(container.parent, 'sound/items/sheath.ogg', 25, TRUE)
+	playsound(container.parent, '../assets/sound/items/sheath.ogg', 25, TRUE)

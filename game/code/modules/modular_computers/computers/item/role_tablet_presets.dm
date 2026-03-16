@@ -323,7 +323,7 @@
 
 /obj/item/modular_computer/pda/clown
 	name = "clown PDA"
-	icon = 'icons/obj/devices/modular_pda.dmi'
+	icon = '../assets/icons/obj/devices/modular_pda.dmi'
 	icon_state = "pda-clown"
 	post_init_icon_state = null
 	inserted_disk = /obj/item/disk/computer/virus/clown
@@ -361,7 +361,7 @@
 		var/obj/item/disk/computer/virus/clown/cart = inserted_disk
 		if(istype(cart) && cart.charges < 5)
 			cart.charges++
-			playsound(src,'sound/machines/ping.ogg',30,TRUE)
+			playsound(src,'../assets/sound/machines/ping.ogg',30,TRUE)
 
 /obj/item/modular_computer/pda/clown/proc/after_sitcom_laugh(mob/victim)
 	victim.visible_message("[src] lets out a burst of laughter!")
@@ -386,7 +386,7 @@
 /obj/item/modular_computer/pda/curator
 	name = "curator PDA"
 	desc = "A small experimental microcomputer."
-	icon = 'icons/obj/devices/modular_pda.dmi'
+	icon = '../assets/icons/obj/devices/modular_pda.dmi'
 	icon_state = "pda-library"
 	post_init_icon_state = null
 	greyscale_config = null
@@ -445,7 +445,7 @@
 
 /obj/item/modular_computer/pda/human_ai
 	name = "modular interface"
-	icon = 'icons/obj/devices/modular_pda.dmi'
+	icon = '../assets/icons/obj/devices/modular_pda.dmi'
 	icon_state = "pda-silicon-human"
 	post_init_icon_state = null
 	base_icon_state = "pda-silicon-human"
@@ -491,7 +491,7 @@
 
 /obj/item/modular_computer/pda/clear
 	name = "clear PDA"
-	icon = 'icons/obj/devices/modular_pda.dmi'
+	icon = '../assets/icons/obj/devices/modular_pda.dmi'
 	icon_state = "pda-clear"
 	post_init_icon_state = null
 	greyscale_config = null

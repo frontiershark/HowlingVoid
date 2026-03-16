@@ -206,7 +206,7 @@
 	name = "Нюх — След"
 	desc = "Попробуй определить направление к запомненному запаху."
 	background_icon_state = "bg_default"
-	button_icon = 'icons/mob/actions/actions_spells.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_spells.dmi'
 	button_icon_state = "nose"
 	cooldown_time = 2 SECONDS
 	check_flags = AB_CHECK_CONSCIOUS
@@ -228,7 +228,7 @@
 			continue
 		var/datum/radial_menu_choice/option = new
 		option.name = "[human_target.gender]"
-		option.image = image(icon = 'icons/mob/actions/actions_items.dmi', icon_state = "bci_question")
+		option.image = image(icon = '../assets/icons/mob/actions/actions_items.dmi', icon_state = "bci_question")
 		//Лишнее? Может будет проще для игрока заранее узнать как далеко цель
 		option.info = get_scent_balloon(H, human_target)
 		built_radial_list[human_target] = option
@@ -334,7 +334,7 @@
 
 // Наш подтип стрелки
 /atom/movable/screen/navigate_arrow/scent
-	icon = 'icons/effects/96x96.dmi'
+	icon = '../assets/icons/effects/96x96.dmi'
 	name = "scent arrow"
 	icon_state = "navigate_arrow_appear"
 	pixel_x = -32

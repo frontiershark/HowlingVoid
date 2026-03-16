@@ -1,10 +1,10 @@
 /obj/item/soulstone
 	name = "soulstone shard"
-	icon = 'icons/obj/mining_zones/artefacts.dmi'
+	icon = '../assets/icons/obj/mining_zones/artefacts.dmi'
 	icon_state = "soulstone"
 	inhand_icon_state = "electronic"
-	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/devices_righthand.dmi'
 	layer = HIGH_OBJ_LAYER
 	desc = "A fragment of the legendary treasure known simply as the 'Soul Stone'. The shard still flickers with a fraction of the full artefact's power."
 	w_class = WEIGHT_CLASS_TINY
@@ -94,10 +94,10 @@
 	if(IS_CULTIST(exorcist) || theme == THEME_HOLY)
 		return
 	balloon_alert(exorcist, "exorcising...")
-	playsound(src, 'sound/effects/hallucinations/veryfar_noise.ogg', 40, TRUE)
+	playsound(src, '../assets/sound/effects/hallucinations/veryfar_noise.ogg', 40, TRUE)
 	if(!do_after(exorcist, 4 SECONDS, target = src))
 		return
-	playsound(src, 'sound/effects/pray_chaplain.ogg', 60, TRUE)
+	playsound(src, '../assets/sound/effects/pray_chaplain.ogg', 60, TRUE)
 	required_role = null
 	theme = THEME_HOLY
 
@@ -297,7 +297,7 @@
 	occupant.death()
 
 	target_toolbox.name = "soulful toolbox"
-	target_toolbox.icon = 'icons/obj/storage/toolbox.dmi'
+	target_toolbox.icon = '../assets/icons/obj/storage/toolbox.dmi'
 	target_toolbox.icon_state = "toolbox_blue_old"
 	target_toolbox.has_soul = TRUE
 	target_toolbox.has_latches = FALSE
@@ -306,7 +306,7 @@
 ///////////////////////////Transferring to constructs/////////////////////////////////////////////////////
 /obj/structure/constructshell
 	name = "empty shell"
-	icon = 'icons/mob/shells.dmi'
+	icon = '../assets/icons/mob/shells.dmi'
 	icon_state = "construct_cult"
 	desc = "A wicked machine used by those skilled in magical arts. It is inactive."
 	var/extra_desc = span_cult("A construct shell, used to house bound souls from a soulstone.\n\
@@ -560,7 +560,7 @@
 	var/makeicon = newstruct.icon_state
 	var/theme = newstruct.theme
 	flick("make_[makeicon][theme]", newstruct)
-	playsound(newstruct, 'sound/effects/constructform.ogg', 50)
+	playsound(newstruct, '../assets/sound/effects/constructform.ogg', 50)
 	if(stoner)
 		newstruct.add_ally(stoner)
 		newstruct.construct_master = stoner
@@ -623,7 +623,7 @@
 	name = "ectoplasm"
 	desc = "Spooky."
 	gender = PLURAL
-	icon = 'icons/effects/magic.dmi'
+	icon = '../assets/icons/effects/magic.dmi'
 	icon_state = "ectoplasm"
 
 /obj/item/ectoplasm/grind_results()
@@ -650,7 +650,7 @@
 	theme = THEME_HOLY
 
 /obj/item/ectoplasm/angelic
-	icon = 'icons/effects/magic.dmi'
+	icon = '../assets/icons/effects/magic.dmi'
 	icon_state = "angelplasm"
 
 /obj/item/soulstone/anybody/chaplain

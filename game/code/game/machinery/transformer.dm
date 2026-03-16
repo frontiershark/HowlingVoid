@@ -3,7 +3,7 @@
 	desc = "A large metallic machine with an entrance and an exit. A sign on \
 		the side reads, 'human go in, robot come out'. The human must be \
 		lying down and alive. Has a cooldown between each use."
-	icon = 'icons/obj/machines/recycling.dmi'
+	icon = '../assets/icons/obj/machines/recycling.dmi'
 	icon_state = "separator-AO1"
 	layer = ABOVE_ALL_MOB_LAYER // Overhead
 	plane = ABOVE_GAME_PLANE
@@ -82,7 +82,7 @@
 		return
 
 	if(!transform_dead && victim.stat == DEAD)
-		playsound(src.loc, 'sound/machines/buzz/buzz-sigh.ogg', 50, FALSE)
+		playsound(src.loc, '../assets/sound/machines/buzz/buzz-sigh.ogg', 50, FALSE)
 		return
 
 	// Activate the cooldown
@@ -90,7 +90,7 @@
 	cooldown_timer = world.time + cooldown_duration
 	update_appearance()
 
-	playsound(src.loc, 'sound/items/tools/welder.ogg', 50, TRUE)
+	playsound(src.loc, '../assets/sound/items/tools/welder.ogg', 50, TRUE)
 	victim.emote("scream") // It is painful
 	victim.adjust_brute_loss(max(0, 80 - victim.get_brute_loss())) // Hurt the human, don't try to kill them though.
 
@@ -111,7 +111,7 @@
 	addtimer(CALLBACK(src, PROC_REF(unlock_new_robot), new_borg), 5 SECONDS)
 
 /obj/machinery/transformer/proc/unlock_new_robot(mob/living/silicon/robot/new_borg)
-	playsound(src.loc, 'sound/machines/ping.ogg', 50, FALSE)
+	playsound(src.loc, '../assets/sound/machines/ping.ogg', 50, FALSE)
 	sleep(3 SECONDS)
 	if(new_borg)
 		new_borg.SetLockdown(FALSE)

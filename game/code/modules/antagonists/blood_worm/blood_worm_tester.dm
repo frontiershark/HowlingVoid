@@ -2,12 +2,12 @@
 	name = "hemoparasite testing tool"
 	desc = "A proprietary device patented by the DeForest Medical Corporation that is tailor-made for detecting hemoparasites, such as the infamous space-faring blood worm. The testing process is allegedly very painful."
 
-	icon = 'icons/obj/antags/blood_worm.dmi'
+	icon = '../assets/icons/obj/antags/blood_worm.dmi'
 	icon_state = "tester"
 
 	inhand_icon_state = "blood_worm_tester"
-	lefthand_file = 'icons/mob/inhands/equipment/security_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/security_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/security_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/security_righthand.dmi'
 
 	w_class = WEIGHT_CLASS_SMALL
 
@@ -63,7 +63,7 @@
 	target_mob.apply_damage(rand(10, 15), BRUTE, def_zone = check_zone(user.zone_selected), wound_bonus = CANT_WOUND, attack_direction = get_dir(user, target_mob), attacking_item = src)
 	target_mob.add_mood_event("tester", /datum/mood_event/jabbed_with_tester)
 
-	playsound(src, 'sound/items/hypospray.ogg', vol = 50, vary = TRUE)
+	playsound(src, '../assets/sound/items/hypospray.ogg', vol = 50, vary = TRUE)
 
 	say("Scanning...")
 
@@ -81,7 +81,7 @@
 /obj/item/blood_worm_tester/proc/report_results(is_worm)
 	if (is_worm)
 		say("Active hemoparasite presence detected!")
-		playsound(src, 'sound/machines/beep/twobeep.ogg', vol = 50, vary = TRUE)
+		playsound(src, '../assets/sound/machines/beep/twobeep.ogg', vol = 50, vary = TRUE)
 	else
 		say("No anomalous readings found.")
-		playsound(src, 'sound/machines/buzz/buzz-two.ogg', vol = 40, vary = TRUE)
+		playsound(src, '../assets/sound/machines/buzz/buzz-two.ogg', vol = 40, vary = TRUE)

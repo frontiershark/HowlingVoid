@@ -2,7 +2,7 @@
 /mob/living/basic/zombie
 	name = "Shambling Corpse"
 	desc = "When there is no more room in hell, the dead will walk in outer space."
-	icon = 'icons/mob/simple/simple_human.dmi'
+	icon = '../assets/icons/mob/simple/simple_human.dmi'
 	mob_biotypes = MOB_ORGANIC|MOB_HUMANOID
 	sentience_type = SENTIENCE_HUMANOID
 	maxHealth = 100
@@ -11,7 +11,7 @@
 	melee_damage_upper = 21
 	attack_verb_continuous = "bites"
 	attack_verb_simple = "bite"
-	attack_sound = 'sound/effects/hallucinations/growl1.ogg'
+	attack_sound = '../assets/sound/effects/hallucinations/growl1.ogg'
 	attack_vis_effect = ATTACK_EFFECT_BITE
 	combat_mode = TRUE
 	speed = 4

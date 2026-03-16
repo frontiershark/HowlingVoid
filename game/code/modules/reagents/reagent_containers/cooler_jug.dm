@@ -1,7 +1,7 @@
 /obj/item/reagent_containers/cooler_jug
 	name = "cooler jug"
 	desc = "A huge, unwieldy jug. Serves as the life force for liquid coolers. It smells like freshly cooled plastic."
-	icon = 'icons/obj/medical/chemical_tanks.dmi'
+	icon = '../assets/icons/obj/medical/chemical_tanks.dmi'
 	icon_state = "cooler_jug"
 	volume = 200
 	custom_materials = list(/datum/material/plastic = SHEET_MATERIAL_AMOUNT * 4)

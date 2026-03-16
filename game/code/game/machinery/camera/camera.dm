@@ -14,7 +14,7 @@
 /obj/item/wallframe/camera
 	name = "camera assembly"
 	desc = "The basic construction for Nanotrasen-Always-Watching-You cameras."
-	icon = 'icons/obj/machines/camera.dmi'
+	icon = '../assets/icons/obj/machines/camera.dmi'
 	icon_state = "cameracase"
 	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT)
 	result_path = /obj/machinery/camera/autoname/deconstructed
@@ -26,7 +26,7 @@
 /obj/machinery/camera
 	name = "security camera"
 	desc = "It's used to monitor rooms."
-	icon = 'icons/obj/machines/camera.dmi'
+	icon = '../assets/icons/obj/machines/camera.dmi'
 	icon_state = "camera"
 	base_icon_state = "camera"
 	use_power = ACTIVE_POWER_USE
@@ -374,7 +374,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/camera/xray, 0)
 		else
 			visible_message(span_danger("\The [src] [change_msg]!"))
 
-		playsound(src, 'sound/items/tools/wirecutter.ogg', 100, TRUE)
+		playsound(src, '../assets/sound/items/tools/wirecutter.ogg', 100, TRUE)
 	update_appearance() //update Initialize() if you remove this.
 	calculate_active_power()
 

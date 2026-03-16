@@ -6,8 +6,8 @@
 	has_sensor = NO_SENSORS
 	armor_type = /datum/armor/clothing_under/syndicate
 	alt_covers_chest = TRUE
-	icon = 'icons/obj/clothing/under/syndicate.dmi'
-	worn_icon = 'icons/mob/clothing/under/syndicate.dmi'
+	icon = '../assets/icons/obj/clothing/under/syndicate.dmi'
+	worn_icon = '../assets/icons/mob/clothing/under/syndicate.dmi'
 
 /datum/armor/clothing_under/syndicate
 	melee = 10
@@ -161,8 +161,8 @@
 /obj/item/clothing/under/syndicate/scrubs
 	name = "tactical scrubs"
 	desc = "A deep burgundy set of scrubs, made tactically for tactical reasons."
-	icon = 'icons/obj/clothing/under/medical.dmi'
-	worn_icon = 'icons/mob/clothing/under/medical.dmi'
+	icon = '../assets/icons/obj/clothing/under/medical.dmi'
+	worn_icon = '../assets/icons/mob/clothing/under/medical.dmi'
 	icon_state = "scrubswine"
 	can_adjust = FALSE
 	supports_variations_flags = NONE

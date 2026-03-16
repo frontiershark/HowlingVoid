@@ -99,8 +99,8 @@
 	ADD_TRAIT(target, TRAIT_CURRENTLY_CLEANING, REF(src))
 	// We need to update our planes on overlay changes
 	RegisterSignal(target, COMSIG_MOVABLE_Z_CHANGED, PROC_REF(cleaning_target_moved))
-	var/mutable_appearance/low_bubble = mutable_appearance('icons/effects/effects.dmi', "bubbles", CLEANABLE_OBJECT_LAYER, target, GAME_PLANE)
-	var/mutable_appearance/high_bubble = mutable_appearance('icons/effects/effects.dmi', "bubbles", CLEANABLE_OBJECT_LAYER, target, ABOVE_GAME_PLANE)
+	var/mutable_appearance/low_bubble = mutable_appearance('../assets/icons/effects/effects.dmi', "bubbles", CLEANABLE_OBJECT_LAYER, target, GAME_PLANE)
+	var/mutable_appearance/high_bubble = mutable_appearance('../assets/icons/effects/effects.dmi', "bubbles", CLEANABLE_OBJECT_LAYER, target, ABOVE_GAME_PLANE)
 	var/list/icon_offsets = target.get_oversized_icon_offsets()
 	low_bubble.pixel_w = icon_offsets["x"]
 	low_bubble.pixel_z = icon_offsets["y"]
@@ -146,13 +146,13 @@
 	if(same_z_layer)
 		return
 	// First, get rid of the old overlay
-	var/mutable_appearance/old_low_bubble = mutable_appearance('icons/effects/effects.dmi', "bubbles", CLEANABLE_OBJECT_LAYER, old_turf, GAME_PLANE)
-	var/mutable_appearance/old_high_bubble = mutable_appearance('icons/effects/effects.dmi', "bubbles", CLEANABLE_OBJECT_LAYER, old_turf, ABOVE_GAME_PLANE)
+	var/mutable_appearance/old_low_bubble = mutable_appearance('../assets/icons/effects/effects.dmi', "bubbles", CLEANABLE_OBJECT_LAYER, old_turf, GAME_PLANE)
+	var/mutable_appearance/old_high_bubble = mutable_appearance('../assets/icons/effects/effects.dmi', "bubbles", CLEANABLE_OBJECT_LAYER, old_turf, ABOVE_GAME_PLANE)
 	source.cut_overlay(old_low_bubble)
 	source.cut_overlay(old_high_bubble)
 
 	// Now, add the new one
-	var/mutable_appearance/new_low_bubble = mutable_appearance('icons/effects/effects.dmi', "bubbles", CLEANABLE_OBJECT_LAYER, new_turf, GAME_PLANE)
-	var/mutable_appearance/new_high_bubble = mutable_appearance('icons/effects/effects.dmi', "bubbles", CLEANABLE_OBJECT_LAYER, new_turf, ABOVE_GAME_PLANE)
+	var/mutable_appearance/new_low_bubble = mutable_appearance('../assets/icons/effects/effects.dmi', "bubbles", CLEANABLE_OBJECT_LAYER, new_turf, GAME_PLANE)
+	var/mutable_appearance/new_high_bubble = mutable_appearance('../assets/icons/effects/effects.dmi', "bubbles", CLEANABLE_OBJECT_LAYER, new_turf, ABOVE_GAME_PLANE)
 	source.add_overlay(new_low_bubble)
 	source.add_overlay(new_high_bubble)

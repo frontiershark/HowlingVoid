@@ -1,5 +1,5 @@
 /obj/machinery/airalarm
-	icon = 'icons/obj/machines/wallmounts.dmi'
+	icon = '../assets/icons/obj/machines/wallmounts.dmi'
 
 /obj/machinery/airalarm/update_appearance(updates)
 	. = ..()
@@ -17,4 +17,4 @@
 	set_light(1.5, 1, color)
 
 /obj/item/wallframe/airalarm
-	icon = 'icons/obj/machines/wallmounts.dmi'
+	icon = '../assets/icons/obj/machines/wallmounts.dmi'

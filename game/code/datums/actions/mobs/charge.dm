@@ -1,6 +1,6 @@
 /datum/action/cooldown/mob_cooldown/charge
 	name = "Charge"
-	button_icon = 'icons/mob/actions/actions_items.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_items.dmi'
 	button_icon_state = "sniper_zoom"
 	desc = "Allows you to charge at a chosen position."
 	cooldown_time = 1.5 SECONDS
@@ -117,7 +117,7 @@
 
 /datum/action/cooldown/mob_cooldown/charge/proc/on_moved(atom/source)
 	SIGNAL_HANDLER
-	playsound(source, 'sound/effects/meteorimpact.ogg', 200, TRUE, 2, TRUE)
+	playsound(source, '../assets/sound/effects/meteorimpact.ogg', 200, TRUE, 2, TRUE)
 	INVOKE_ASYNC(src, PROC_REF(DestroySurroundings), source)
 
 /datum/action/cooldown/mob_cooldown/charge/proc/DestroySurroundings(atom/movable/charger)
@@ -176,7 +176,7 @@
 /datum/action/cooldown/mob_cooldown/charge/proc/hit_target(atom/movable/source, mob/living/target, damage_dealt)
 	target.visible_message(span_danger("[source] slams into [target]!"), span_userdanger("[source] tramples you into the ground!"))
 	target.apply_damage(damage_dealt, BRUTE, wound_bonus = CANT_WOUND)
-	playsound(get_turf(target), 'sound/effects/meteorimpact.ogg', 100, TRUE)
+	playsound(get_turf(target), '../assets/sound/effects/meteorimpact.ogg', 100, TRUE)
 	shake_camera(target, 4, 3)
 	shake_camera(source, 2, 3)
 
@@ -254,7 +254,7 @@
 
 /datum/action/cooldown/mob_cooldown/charge/hallucination_charge
 	name = "Hallucination Charge"
-	button_icon = 'icons/effects/bubblegum.dmi'
+	button_icon = '../assets/icons/effects/bubblegum.dmi'
 	button_icon_state = "smack ya one"
 	desc = "Allows you to create hallucinations that charge around your target."
 	cooldown_time = 2 SECONDS
@@ -313,7 +313,7 @@
 
 /datum/action/cooldown/mob_cooldown/charge/hallucination_charge/hallucination_surround
 	name = "Surround Target"
-	button_icon = 'icons/mob/actions/actions_animal.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_animal.dmi'
 	button_icon_state = "expand"
 	desc = "Allows you to create hallucinations that charge around your target."
 	charge_delay = 0.6 SECONDS

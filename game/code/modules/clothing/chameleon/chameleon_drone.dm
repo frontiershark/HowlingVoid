@@ -1,6 +1,6 @@
 /datum/action/item_action/chameleon/drone/randomise
 	name = "Randomise Headgear"
-	button_icon = 'icons/mob/actions/actions_items.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_items.dmi'
 	button_icon_state = "random"
 
 /datum/action/item_action/chameleon/drone/randomise/do_effect(trigger_flags)
@@ -12,7 +12,7 @@
 // This action's existence is very silly can be replaced with just, a hat with a chameleon action that can be both hats and masks.
 /datum/action/item_action/chameleon/drone/togglehatmask
 	name = "Toggle Headgear Mode"
-	button_icon = 'icons/mob/actions/actions_silicon.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_silicon.dmi'
 	button_icon_state = "drone_camogear_helm"
 
 /datum/action/item_action/chameleon/drone/togglehatmask/New(Target)

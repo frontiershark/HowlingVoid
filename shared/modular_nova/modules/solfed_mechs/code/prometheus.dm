@@ -106,7 +106,7 @@
 	if(!do_after(user, 2 SECONDS, ram_target))
 		return
 
-	playsound(chassis, 'sound/effects/clang.ogg', 70, TRUE)
+	playsound(chassis, '../assets/sound/effects/clang.ogg', 70, TRUE)
 	user.visible_message(
 		span_danger("[chassis] slams its hydraulic ram into [ram_target] with a deafening clang!"),
 		span_danger("You slam the hydraulic ram into [ram_target]!"),

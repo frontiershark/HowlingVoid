@@ -2,7 +2,7 @@
 /obj/structure/pinata
 	name = "corgi pinata"
 	desc = "A papier-mâché representation of a corgi that contains all sorts of sugary treats."
-	icon = 'icons/obj/toys/toy.dmi'
+	icon = '../assets/icons/obj/toys/toy.dmi'
 	icon_state = "pinata_placed"
 	base_icon_state = "pinata_placed"
 	max_integrity = 300 //20 hits from a baseball bat
@@ -35,11 +35,11 @@
 	switch(damage_type)
 		if(BRUTE)
 			if(damage_amount)
-				playsound(src, 'sound/items/weapons/slash.ogg', 50, TRUE)
+				playsound(src, '../assets/sound/items/weapons/slash.ogg', 50, TRUE)
 			else
-				playsound(src, 'sound/items/weapons/tap.ogg', 50, TRUE)
+				playsound(src, '../assets/sound/items/weapons/tap.ogg', 50, TRUE)
 		if(BURN)
-			playsound(src, 'sound/items/tools/welder.ogg', 100, TRUE)
+			playsound(src, '../assets/sound/items/tools/welder.ogg', 100, TRUE)
 
 /obj/structure/pinata/atom_deconstruct(disassembled)
 	new debris(get_turf(src))
@@ -48,7 +48,7 @@
 /obj/item/pinata
 	name = "pinata assembly kit"
 	desc = "A papier-mâché corgi that contains various candy, must be set up before you can smash it."
-	icon = 'icons/obj/toys/toy.dmi'
+	icon = '../assets/icons/obj/toys/toy.dmi'
 	icon_state = "pinata"
 	///The pinata that is created when this is placed.
 	var/pinata_type = /obj/structure/pinata

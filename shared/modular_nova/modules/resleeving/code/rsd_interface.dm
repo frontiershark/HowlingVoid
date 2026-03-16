@@ -4,8 +4,8 @@
 	icon = 'modular_nova/modules/aesthetics/implanter/icons/implanter.dmi'
 	icon_state = "implanter1"
 	inhand_icon_state = "syringe_0"
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/medical_righthand.dmi'
 
 /// Attempts to use the item on the target brain.
 /obj/item/rsd_interface/interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)
@@ -18,7 +18,7 @@
 
 	user.visible_message(span_notice("[user] upgrades [interacting_with] with [src]."), span_notice("You upgrade [interacting_with] to be RSD compatible."))
 	interacting_with.AddElement(/datum/element/rsd_interface)
-	playsound(interacting_with.loc, 'sound/items/weapons/circsawhit.ogg', 50, vary = TRUE)
+	playsound(interacting_with.loc, '../assets/sound/items/weapons/circsawhit.ogg', 50, vary = TRUE)
 
 	qdel(src)
 	return ITEM_INTERACT_SUCCESS

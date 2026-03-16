@@ -12,14 +12,14 @@
 	desc = "The ultimate use of your gathered power! Share with the crew the gift, or curse, of eternal life! \
 		And why not just the crew? How about their pets too? And any other animals around here! \
 		What if nobody died ever again!?"
-	icon = 'icons/obj/mining_zones/artefacts.dmi'
+	icon = '../assets/icons/obj/mining_zones/artefacts.dmi'
 	icon_state = "asclepius_active"
 	glow_colour = COLOR_PALE_GREEN
 	minimum_time = 30 MINUTES // This is enormously disruptive but doesn't technically in of itself end the round.
 
 /datum/grand_finale/immortality/trigger(mob/living/carbon/human/invoker)
 	new /obj/effect/temp_visual/immortality_blast(get_turf(invoker))
-	SEND_SOUND(world, sound('sound/effects/magic/teleport_diss.ogg'))
+	SEND_SOUND(world, sound('../assets/sound/effects/magic/teleport_diss.ogg'))
 	for (var/mob/living/alive_guy as anything in GLOB.mob_living_list)
 		new /obj/effect/temp_visual/immortality_pulse(get_turf(alive_guy))
 		if (!alive_guy.mind)
@@ -243,7 +243,7 @@
 /obj/effect/temp_visual/immortality_blast
 	name = "immortal wave"
 	duration = 2.5 SECONDS
-	icon = 'icons/effects/96x96.dmi'
+	icon = '../assets/icons/effects/96x96.dmi'
 	icon_state = "boh_tear"
 	color = COLOR_PALE_GREEN
 	pixel_x = -32
@@ -260,7 +260,7 @@
 /obj/effect/temp_visual/immortality_pulse
 	name = "immortal pulse"
 	duration = 1 SECONDS
-	icon = 'icons/effects/anomalies.dmi'
+	icon = '../assets/icons/effects/anomalies.dmi'
 	icon_state = "dimensional_overlay"
 	color = COLOR_PALE_GREEN
 

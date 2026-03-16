@@ -1,12 +1,12 @@
 /obj/structure/closet/body_bag
 	name = "body bag"
 	desc = "A plastic bag designed for the storage and transportation of cadavers."
-	icon = 'icons/obj/medical/bodybag.dmi'
+	icon = '../assets/icons/obj/medical/bodybag.dmi'
 	icon_state = "bodybag"
 	density = FALSE
 	mob_storage_capacity = 2
-	open_sound = 'sound/items/zip/zip.ogg'
-	close_sound = 'sound/items/zip/zip.ogg'
+	open_sound = '../assets/sound/items/zip/zip.ogg'
+	close_sound = '../assets/sound/items/zip/zip.ogg'
 	open_sound_volume = 15
 	close_sound_volume = 15
 	integrity_failure = 0
@@ -122,7 +122,7 @@
 /obj/structure/closet/body_bag/bluespace
 	name = "bluespace body bag"
 	desc = "A bluespace body bag designed for the storage and transportation of cadavers."
-	icon = 'icons/obj/medical/bodybag.dmi'
+	icon = '../assets/icons/obj/medical/bodybag.dmi'
 	icon_state = "bluebodybag"
 	foldedbag_path = /obj/item/bodybag/bluespace
 	mob_storage_capacity = 15
@@ -253,7 +253,7 @@
 /obj/structure/closet/body_bag/environmental
 	name = "environmental protection bag"
 	desc = "An insulated, reinforced bag designed to protect against exoplanetary storms and other environmental factors."
-	icon = 'icons/obj/medical/bodybag.dmi'
+	icon = '../assets/icons/obj/medical/bodybag.dmi'
 	icon_state = "envirobag"
 	mob_storage_capacity = 1
 	contents_pressure_protection = 0.8
@@ -303,7 +303,7 @@
 /obj/structure/closet/body_bag/environmental/nanotrasen
 	name = "elite environmental protection bag"
 	desc = "A heavily reinforced and insulated bag, capable of fully isolating its contents from external factors."
-	icon = 'icons/obj/medical/bodybag.dmi'
+	icon = '../assets/icons/obj/medical/bodybag.dmi'
 	icon_state = "ntenvirobag"
 	contents_pressure_protection = 1
 	contents_thermal_insulation = 1
@@ -315,7 +315,7 @@
 /obj/structure/closet/body_bag/environmental/prisoner
 	name = "prisoner transport bag"
 	desc = "Intended for transport of prisoners through hazardous environments, this environmental protection bag comes with straps to keep an occupant secure."
-	icon = 'icons/obj/medical/bodybag.dmi'
+	icon = '../assets/icons/obj/medical/bodybag.dmi'
 	icon_state = "prisonerenvirobag"
 	foldedbag_path = /obj/item/bodybag/environmental/prisoner
 	breakout_time = 4 MINUTES // because it's probably about as hard to get out of this as it is to get out of a straightjacket.
@@ -324,7 +324,7 @@
 	/// Whether or not the bag is sinched. Starts unsinched.
 	var/sinched = FALSE
 	/// The sound that plays when the bag is done sinching.
-	var/sinch_sound = 'sound/items/equip/toolbelt_equip.ogg'
+	var/sinch_sound = '../assets/sound/items/equip/toolbelt_equip.ogg'
 
 /obj/structure/closet/body_bag/environmental/prisoner/attempt_fold(mob/living/carbon/human/the_folder)
 	if(sinched)
@@ -413,7 +413,7 @@
 /obj/structure/closet/body_bag/environmental/prisoner/syndicate
 	name = "syndicate prisoner transport bag"
 	desc = "An alteration of Nanotrasen's environmental protection bag which has been used in several high-profile kidnappings. Designed to keep a victim unconscious, alive, and secured during transport."
-	icon = 'icons/obj/medical/bodybag.dmi'
+	icon = '../assets/icons/obj/medical/bodybag.dmi'
 	icon_state = "syndieenvirobag"
 	contents_pressure_protection = 1
 	contents_thermal_insulation = 1
@@ -442,7 +442,7 @@
 
 /obj/structure/closet/body_bag/environmental/hardlight/play_attack_sound(damage_amount, damage_type = BRUTE, damage_flag = 0)
 	if(damage_type in list(BRUTE, BURN))
-		playsound(src, 'sound/items/weapons/egloves.ogg', 80, TRUE)
+		playsound(src, '../assets/sound/items/weapons/egloves.ogg', 80, TRUE)
 
 /obj/structure/closet/body_bag/environmental/prisoner/hardlight
 	name = "hardlight prisoner bodybag"
@@ -455,7 +455,7 @@
 
 /obj/structure/closet/body_bag/environmental/prisoner/hardlight/play_attack_sound(damage_amount, damage_type = BRUTE, damage_flag = 0)
 	if(damage_type in list(BRUTE, BURN))
-		playsound(src, 'sound/items/weapons/egloves.ogg', 80, TRUE)
+		playsound(src, '../assets/sound/items/weapons/egloves.ogg', 80, TRUE)
 
 /obj/structure/closet/body_bag/environmental/stasis
 	name = "stasis bodybag"
@@ -581,7 +581,7 @@
 
 /obj/structure/closet/body_bag/environmental/stasis/after_open(mob/living/user, force = FALSE)
 	if(COOLDOWN_FINISHED(src, freeze_sound_cd) && (locate(/mob/living) in loc))
-		playsound(src, 'sound/effects/spray.ogg', 25, TRUE, MEDIUM_RANGE_SOUND_EXTRARANGE, frequency = 0.4)
+		playsound(src, '../assets/sound/effects/spray.ogg', 25, TRUE, MEDIUM_RANGE_SOUND_EXTRARANGE, frequency = 0.4)
 	COOLDOWN_START(src, freeze_sound_cd, 2 SECONDS)
 
 /obj/structure/closet/body_bag/environmental/stasis/proc/apply_stasis(mob/living/target)
@@ -592,7 +592,7 @@
 
 /obj/structure/closet/body_bag/environmental/stasis/after_close(mob/living/user)
 	if(COOLDOWN_FINISHED(src, freeze_sound_cd) && (locate(/mob/living) in src))
-		playsound(src, 'sound/effects/spray.ogg', 25, TRUE, MEDIUM_RANGE_SOUND_EXTRARANGE, frequency = 0.5)
+		playsound(src, '../assets/sound/effects/spray.ogg', 25, TRUE, MEDIUM_RANGE_SOUND_EXTRARANGE, frequency = 0.5)
 	COOLDOWN_START(src, freeze_sound_cd, 2 SECONDS)
 
 /obj/structure/closet/body_bag/environmental/stasis/proc/remove_stasis(mob/living/target)
@@ -649,7 +649,7 @@
 		new /obj/effect/decal/cleanable/shreds(loc, name)
 		new /obj/item/stack/sheet/cloth(loc, 4)
 	loc.visible_message(span_warning("[src] unwinds into threads!"), vision_distance = COMBAT_MESSAGE_RANGE)
-	playsound(loc, 'sound/items/duct_tape/duct_tape_rip.ogg', 50, TRUE, frequency = 0.5)
+	playsound(loc, '../assets/sound/items/duct_tape/duct_tape_rip.ogg', 50, TRUE, frequency = 0.5)
 	for(var/mob/living/left_behind in src)
 		left_behind.Knockdown(3 SECONDS)
 	return ..()

@@ -1,12 +1,12 @@
 /obj/item/mop
 	desc = "The world of janitalia wouldn't be complete without a mop."
 	name = "mop"
-	icon = 'icons/obj/service/janitor.dmi'
+	icon = '../assets/icons/obj/service/janitor.dmi'
 	icon_state = "mop"
 	inhand_icon_state = "mop"
 	icon_angle = 135
-	lefthand_file = 'icons/mob/inhands/equipment/custodial_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/custodial_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/custodial_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/custodial_righthand.dmi'
 	force = 8
 	throwforce = 10
 	throw_speed = 3
@@ -77,8 +77,8 @@
 	max_reagent_volume = 100 // NOVA EDIT - ORIGINAL: 10
 	icon_state = "advmop"
 	inhand_icon_state = "advmop"
-	lefthand_file = 'icons/mob/inhands/equipment/custodial_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/custodial_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/custodial_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/custodial_righthand.dmi'
 	force = 12
 	throwforce = 14
 	throw_range = 4
@@ -99,7 +99,7 @@
 	else
 		STOP_PROCESSING(SSobj,src)
 	user.balloon_alert(user, "condenser switch [refill_enabled ? "on" : "off"]")
-	playsound(user, 'sound/machines/click.ogg', 30, TRUE)
+	playsound(user, '../assets/sound/machines/click.ogg', 30, TRUE)
 
 /obj/item/mop/advanced/process(seconds_per_tick)
 	var/amadd = min(max_reagent_volume - reagents.total_volume, refill_rate * seconds_per_tick)

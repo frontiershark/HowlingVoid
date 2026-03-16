@@ -63,8 +63,8 @@
 //undersuit and skirt
 /obj/item/clothing/under/rank/civilian/lawyer/greensuit
 	name = "green buttondown suit"
-	worn_icon = 'icons/mob/clothing/under/shorts_pants_shirts.dmi'
-	icon = 'icons/map_icons/clothing/under/_under.dmi'
+	worn_icon = '../assets/icons/mob/clothing/under/shorts_pants_shirts.dmi'
+	icon = '../assets/icons/map_icons/clothing/under/_under.dmi'
 	icon_state = "/obj/item/clothing/under/rank/civilian/lawyer/greensuit"
 	post_init_icon_state = "buttondown_slacks"
 	greyscale_config = /datum/greyscale_config/buttondown_slacks
@@ -76,7 +76,7 @@
 
 /obj/item/clothing/under/rank/civilian/lawyer/greensuit/skirt
 	name = "green buttondown suitskirt"
-	icon = 'icons/map_icons/clothing/under/_under.dmi'
+	icon = '../assets/icons/map_icons/clothing/under/_under.dmi'
 	icon_state = "/obj/item/clothing/under/rank/civilian/lawyer/greensuit/skirt"
 	post_init_icon_state = "buttondown_skirt"
 	greyscale_config = /datum/greyscale_config/buttondown_skirt

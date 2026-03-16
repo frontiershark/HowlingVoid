@@ -3,9 +3,9 @@
 	name = "staff of the ashlands"
 	desc = "A gnarly and twisted branch that is imbued with some ancient power."
 
-	icon = 'icons/obj/weapons/guns/magic.dmi'
-	lefthand_file = 'icons/mob/inhands/weapons/staves_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/staves_righthand.dmi'
+	icon = '../assets/icons/obj/weapons/guns/magic.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/staves_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/staves_righthand.dmi'
 	icon_state = "staffofanimation"
 	inhand_icon_state = "staffofanimation"
 
@@ -48,7 +48,7 @@
 	if(istype(attacking_item, /obj/item/ash_staff) && user.mind.has_antag_datum(/datum/antagonist/ashwalker))
 		var/obj/item/ash_staff/target_staff = attacking_item
 		target_staff.staff_time = world.time + 5 MINUTES
-		playsound(src, 'sound/effects/magic/demon_consume.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/effects/magic/demon_consume.ogg', 50, TRUE)
 		to_chat(user, span_notice("The tendril permits you to have more time to corrupt the world with ashes."))
 		return
 

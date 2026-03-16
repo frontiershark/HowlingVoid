@@ -1,7 +1,7 @@
 /mob/living/basic/ant
 	name = "giant ant"
 	desc = "A writhing mass of ants, glued together to make an adorable pet!"
-	icon = 'icons/mob/simple/pets.dmi'
+	icon = '../assets/icons/mob/simple/pets.dmi'
 	icon_state = "ant"
 	icon_living = "ant"
 	icon_dead = "ant_dead"
@@ -15,7 +15,7 @@
 	melee_damage_upper = 10
 	attack_verb_continuous = "bites"
 	attack_verb_simple = "bite"
-	attack_sound = 'sound/items/weapons/bite.ogg'
+	attack_sound = '../assets/sound/items/weapons/bite.ogg'
 	attack_vis_effect = ATTACK_EFFECT_BITE
 	butcher_results = list(/obj/effect/decal/cleanable/ants = 3) //It's just a bunch of ants glued together into a larger ant
 	response_help_continuous = "pets"

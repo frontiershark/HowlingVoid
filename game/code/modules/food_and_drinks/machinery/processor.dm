@@ -3,7 +3,7 @@
 /obj/machinery/processor
 	name = "food processor"
 	desc = "An industrial grinder used to process meat and other foods. Keep hands clear of intake area while operating."
-	icon = 'icons/obj/machines/kitchen.dmi'
+	icon = '../assets/icons/obj/machines/kitchen.dmi'
 	base_icon_state = "processor"
 	icon_state = "processor"
 	layer = BELOW_OBJ_LAYER
@@ -151,7 +151,7 @@
 
 /obj/machinery/processor/proc/processing()
 	processing = TRUE
-	playsound(src.loc, 'sound/machines/blender.ogg', 50, TRUE)
+	playsound(src.loc, '../assets/sound/machines/blender.ogg', 50, TRUE)
 	use_energy(active_power_usage)
 	var/total_time = 0
 	for(var/atom/movable/movable_input as anything in processor_contents)

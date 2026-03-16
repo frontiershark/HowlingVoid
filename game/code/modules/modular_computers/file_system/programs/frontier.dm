@@ -222,9 +222,9 @@
 				var/possible_boost = partner.purchase_boost(linked_techweb, node)
 				if(possible_boost)
 					computer.say("Purchase successful[possible_boost == SCIPAPER_ALREADY_BOUGHT ? ", refunding [partner.boostable_nodes[params["purchased_boost"]]] points" : ""].")
-					playsound(computer, 'sound/machines/ping.ogg', 25)
+					playsound(computer, '../assets/sound/machines/ping.ogg', 25)
 					return TRUE
-			playsound(computer, 'sound/machines/terminal/terminal_error.ogg', 25)
+			playsound(computer, '../assets/sound/machines/terminal/terminal_error.ogg', 25)
 			return TRUE
 
 /// Publication and adding points.
@@ -235,7 +235,7 @@
 		UnregisterSignal(selected_file, COMSIG_COMPUTER_FILE_DELETE)
 		selected_file = null
 		SStgui.update_uis(src)
-		playsound(computer, 'sound/machines/ping.ogg', 25)
+		playsound(computer, '../assets/sound/machines/ping.ogg', 25)
 		return TRUE
-	playsound(computer, 'sound/machines/terminal/terminal_error.ogg', 25)
+	playsound(computer, '../assets/sound/machines/terminal/terminal_error.ogg', 25)
 	return FALSE

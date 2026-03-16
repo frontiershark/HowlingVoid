@@ -64,7 +64,7 @@
 	)
 	attacker.log_message("Started prying open [src], located at [loc_name(src)].", LOG_GAME)
 
-	playsound(airlock_target, 'sound/machines/airlock/airlock_alien_prying.ogg', 100, TRUE)
+	playsound(airlock_target, '../assets/sound/machines/airlock/airlock_alien_prying.ogg', 100, TRUE)
 	airlock_target.balloon_alert(attacker, "prying...")
 	if(!do_after(attacker, pry_time, airlock_target))
 		airlock_target.balloon_alert(attacker, "interrupted!")

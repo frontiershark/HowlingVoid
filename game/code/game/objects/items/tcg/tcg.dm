@@ -80,9 +80,9 @@ GLOBAL_LIST_EMPTY(tcgcard_radial_choices)
 	var/list/choices = GLOB.tcgcard_radial_choices
 	if(!length(choices))
 		choices = GLOB.tcgcard_radial_choices = list(
-		"Pickup" = image(icon = 'icons/hud/radial.dmi', icon_state = "radial_pickup"),
-		"Tap" = image(icon = 'icons/hud/radial.dmi', icon_state = "radial_tap"),
-		"Flip" = image(icon = 'icons/hud/radial.dmi', icon_state = "radial_flip"),
+		"Pickup" = image(icon = '../assets/icons/hud/radial.dmi', icon_state = "radial_pickup"),
+		"Tap" = image(icon = '../assets/icons/hud/radial.dmi', icon_state = "radial_tap"),
+		"Flip" = image(icon = '../assets/icons/hud/radial.dmi', icon_state = "radial_flip"),
 		)
 	var/choice = show_radial_menu(user, src, choices, custom_check = CALLBACK(src, PROC_REF(check_menu), user), require_near = TRUE, tooltips = TRUE)
 	if(!check_menu(user))
@@ -184,15 +184,15 @@ GLOBAL_LIST_EMPTY(tcgcard_radial_choices)
 /obj/item/tcgcard_deck
 	name = "Trading Card Pile"
 	desc = "A stack of TCG cards."
-	icon = 'icons/obj/toys/tcgmisc.dmi'
+	icon = '../assets/icons/obj/toys/tcgmisc.dmi'
 	icon_state = "deck_up"
 	base_icon_state = "deck"
 	obj_flags = UNIQUE_RENAME
 	spawn_blacklisted = TRUE
 	var/flipped = FALSE
-	var/static/radial_draw = image(icon = 'icons/hud/radial.dmi', icon_state = "radial_draw")
-	var/static/radial_shuffle = image(icon = 'icons/hud/radial.dmi', icon_state = "radial_shuffle")
-	var/static/radial_pickup = image(icon = 'icons/hud/radial.dmi', icon_state = "radial_pickup")
+	var/static/radial_draw = image(icon = '../assets/icons/hud/radial.dmi', icon_state = "radial_draw")
+	var/static/radial_shuffle = image(icon = '../assets/icons/hud/radial.dmi', icon_state = "radial_shuffle")
+	var/static/radial_pickup = image(icon = '../assets/icons/hud/radial.dmi', icon_state = "radial_pickup")
 
 /obj/item/tcgcard_deck/Initialize(mapload)
 	. = ..()
@@ -221,10 +221,10 @@ GLOBAL_LIST_EMPTY(tcgcard_radial_choices)
 
 /obj/item/tcgcard_deck/attack_hand(mob/user, list/modifiers)
 	var/list/choices = list(
-		"Draw" = image(icon = 'icons/hud/radial.dmi', icon_state = "radial_draw"),
-		"Shuffle" = image(icon = 'icons/hud/radial.dmi', icon_state = "radial_shuffle"),
-		"Pickup" = image(icon = 'icons/hud/radial.dmi', icon_state = "radial_pickup"),
-		"Flip" = image(icon = 'icons/hud/radial.dmi', icon_state = "radial_flip"),
+		"Draw" = image(icon = '../assets/icons/hud/radial.dmi', icon_state = "radial_draw"),
+		"Shuffle" = image(icon = '../assets/icons/hud/radial.dmi', icon_state = "radial_shuffle"),
+		"Pickup" = image(icon = '../assets/icons/hud/radial.dmi', icon_state = "radial_pickup"),
+		"Flip" = image(icon = '../assets/icons/hud/radial.dmi', icon_state = "radial_flip"),
 		)
 	var/choice = show_radial_menu(user, src, choices, custom_check = CALLBACK(src, PROC_REF(check_menu), user), require_near = TRUE, tooltips = TRUE)
 	if(!check_menu(user))
@@ -334,7 +334,7 @@ GLOBAL_LIST_EMPTY(tcgcard_radial_choices)
 /obj/item/cardpack
 	name = "Trading Card Pack: Coder"
 	desc = "Contains six complete fuckups by the coders. Report this on GitHub please!"
-	icon = 'icons/obj/toys/tcgmisc.dmi'
+	icon = '../assets/icons/obj/toys/tcgmisc.dmi'
 	icon_state = "error"
 	w_class = WEIGHT_CLASS_TINY
 	custom_price = PAYCHECK_CREW * 0.75 //Price reduced from * 2 to * 0.75, this is planned as a temporary measure until card persistence is added.
@@ -401,7 +401,7 @@ GLOBAL_LIST_EMPTY(tcgcard_radial_choices)
 		new /obj/item/tcgcard(get_turf(user), series, template)
 	to_chat(user, span_notice("Wow! Check out these cards!"))
 	new /obj/effect/decal/cleanable/wrapping(get_turf(user))
-	playsound(loc, 'sound/items/poster/poster_ripped.ogg', 20, TRUE)
+	playsound(loc, '../assets/sound/items/poster/poster_ripped.ogg', 20, TRUE)
 	if(prob(contains_coin))
 		to_chat(user, span_notice("...and it came with a flipper, too!"))
 		new /obj/item/coin/thunderdome(get_turf(user))
@@ -410,7 +410,7 @@ GLOBAL_LIST_EMPTY(tcgcard_radial_choices)
 /obj/item/coin/thunderdome
 	name = "\improper TGC Flipper"
 	desc = "A TGC flipper, for deciding who gets to go first. Also conveniently acts as a counter, for various purposes."
-	icon = 'icons/obj/toys/tcgmisc.dmi'
+	icon = '../assets/icons/obj/toys/tcgmisc.dmi'
 	icon_state = "coin_nanotrasen"
 	custom_materials = list(/datum/material/plastic = SMALL_MATERIAL_AMOUNT*5)
 	material_flags = NONE
@@ -420,11 +420,11 @@ GLOBAL_LIST_EMPTY(tcgcard_radial_choices)
 /obj/item/storage/card_binder
 	name = "card binder"
 	desc = "The perfect way to keep your collection of cards safe and valuable."
-	icon = 'icons/obj/toys/tcgmisc.dmi'
+	icon = '../assets/icons/obj/toys/tcgmisc.dmi'
 	icon_state = "binder"
 	inhand_icon_state = "album"
-	lefthand_file = 'icons/mob/inhands/items/books_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/books_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/books_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/books_righthand.dmi'
 	resistance_flags = FLAMMABLE //burn your enemies' collections, for only you can Collect Them All!
 	w_class = WEIGHT_CLASS_SMALL
 	flags_1 = PREVENT_CONTENTS_EXPLOSION_1

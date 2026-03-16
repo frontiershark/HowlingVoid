@@ -25,10 +25,10 @@
 	SET_BASE_PIXEL(-8, 0)
 	fire_sound = 'modular_nova/modules/modular_weapons/sounds/grenade_launcher.ogg'
 	fire_sound_volume = 75
-	rack_sound = 'sound/items/weapons/gun/shotgun/rack.ogg'
-	load_sound = 'sound/items/weapons/gun/shotgun/insert_shell.ogg'
-	drop_sound = 'sound/items/handling/gun/ballistics/shotgun/shotgun_drop1.ogg'
-	pickup_sound = 'sound/items/handling/gun/ballistics/shotgun/shotgun_pickup1.ogg'
+	rack_sound = '../assets/sound/items/weapons/gun/shotgun/rack.ogg'
+	load_sound = '../assets/sound/items/weapons/gun/shotgun/insert_shell.ogg'
+	drop_sound = '../assets/sound/items/handling/gun/ballistics/shotgun/shotgun_drop1.ogg'
+	pickup_sound = '../assets/sound/items/handling/gun/ballistics/shotgun/shotgun_pickup1.ogg'
 	w_class = WEIGHT_CLASS_BULKY
 	force = 10
 	obj_flags = CONDUCTS_ELECTRICITY
@@ -152,7 +152,7 @@
 	folded = !folded
 	if(user)
 		balloon_alert(user, "stock [folded ? "collapsed" : "extended"]")
-		playsound(src.loc, 'sound/items/weapons/batonextend.ogg', 30, 1)
+		playsound(src.loc, '../assets/sound/items/weapons/batonextend.ogg', 30, 1)
 	update_icon()
 
 /obj/item/gun/ballistic/pump_launcher/update_icon_state()

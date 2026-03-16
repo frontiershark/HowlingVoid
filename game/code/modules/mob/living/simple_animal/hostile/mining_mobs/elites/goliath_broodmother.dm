@@ -20,7 +20,7 @@
 	name = "goliath broodmother"
 	desc = "An example of sexual dimorphism, this female goliath looks much different than the males of her species.  She is, however, just as dangerous, if not more."
 	gender = FEMALE
-	icon = 'icons/mob/simple/lavaland/lavaland_elites_64.dmi'
+	icon = '../assets/icons/mob/simple/lavaland/lavaland_elites_64.dmi'
 	icon_state = "broodmother"
 	icon_living = "broodmother"
 	icon_aggro = "broodmother"
@@ -36,7 +36,7 @@
 	armour_penetration = 30
 	attack_verb_continuous = "beats down on"
 	attack_verb_simple = "beat down on"
-	attack_sound = 'sound/items/weapons/punch1.ogg'
+	attack_sound = '../assets/sound/items/weapons/punch1.ogg'
 	throw_message = "does nothing to the rocky hide of the"
 	speed = 2
 	move_to_delay = 5
@@ -156,7 +156,7 @@
 
 /mob/living/simple_animal/hostile/asteroid/elite/broodmother/proc/rage()
 	ranged_cooldown = world.time + 100
-	playsound(src,'sound/misc/insane_low_laugh.ogg', 200, 1)
+	playsound(src,'../assets/sound/misc/insane_low_laugh.ogg', 200, 1)
 	visible_message(span_warning("[src] starts picking up speed!"))
 	color = COLOR_RED
 	set_varspeed(0)
@@ -177,13 +177,13 @@
 		var/turf/T = get_step(src, spawndir)
 		if(T)
 			child.forceMove(T)
-			playsound(src, 'sound/effects/bamf.ogg', 100, 1)
+			playsound(src, '../assets/sound/effects/bamf.ogg', 100, 1)
 
 //The goliath's children.  Pretty weak, simple mobs which are able to put a single tentacle under their target when at range.
 /mob/living/simple_animal/hostile/asteroid/elite/broodmother_child
 	name = "baby goliath"
 	desc = "A young goliath recently born from its mother.  While they hatch from eggs, said eggs are incubated in the mother until they are ready to be born."
-	icon = 'icons/mob/simple/lavaland/lavaland_monsters.dmi'
+	icon = '../assets/icons/mob/simple/lavaland/lavaland_monsters.dmi'
 	icon_state = "goliath_baby"
 	icon_living = "goliath_baby"
 	icon_aggro = "goliath_baby"
@@ -195,7 +195,7 @@
 	melee_damage_upper = 5
 	attack_verb_continuous = "bashes against"
 	attack_verb_simple = "bash against"
-	attack_sound = 'sound/items/weapons/punch1.ogg'
+	attack_sound = '../assets/sound/items/weapons/punch1.ogg'
 	throw_message = "does nothing to the rocky hide of the"
 	speed = 2
 	move_to_delay = 5

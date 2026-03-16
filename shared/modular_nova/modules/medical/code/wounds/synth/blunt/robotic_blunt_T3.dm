@@ -33,7 +33,7 @@
 
 	status_effect_type = /datum/status_effect/wound/blunt/robotic/critical
 
-	sound_effect = 'sound/effects/wounds/crack2.ogg'
+	sound_effect = '../assets/sound/effects/wounds/crack2.ogg'
 
 	wound_flags = (ACCEPTS_GAUZE|MANGLES_EXTERIOR|SPLINT_OVERLAY|CAN_BE_GRASPED)
 	treatable_by = list(/obj/item/stack/medical/bone_gel)
@@ -290,7 +290,7 @@
 
 	if (!treating_rcd.use_tool(target = victim, user = user, delay = final_time, volume = 50, extra_checks = CALLBACK(src, PROC_REF(still_exists))))
 		return TRUE
-	playsound(get_turf(treating_rcd), 'sound/machines/ping.ogg', 75) // celebration! we did it
+	playsound(get_turf(treating_rcd), '../assets/sound/machines/ping.ogg', 75) // celebration! we did it
 	set_superstructure_status(TRUE)
 
 	var/use_amount = (silo_has_enough_materials ? ROBOTIC_T3_BLUNT_WOUND_RCD_SILO_COST : ROBOTIC_T3_BLUNT_WOUND_RCD_COST)

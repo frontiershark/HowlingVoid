@@ -29,11 +29,11 @@
 
 	switch(dimensions["width"])
 		if(32)
-			base_icon = 'icons/effects/bitrunning.dmi'
+			base_icon = '../assets/icons/effects/bitrunning.dmi'
 		if(48)
-			base_icon = 'icons/effects/bitrunning_48.dmi'
+			base_icon = '../assets/icons/effects/bitrunning_48.dmi'
 		if(64)
-			base_icon = 'icons/effects/bitrunning_64.dmi'
+			base_icon = '../assets/icons/effects/bitrunning_64.dmi'
 
 	var/mutable_appearance/redshift = mutable_appearance(base_icon, "redshift")
 	redshift.blend_mode = BLEND_MULTIPLY

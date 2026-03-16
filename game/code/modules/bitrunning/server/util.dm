@@ -134,7 +134,7 @@
 
 /// Do some magic teleport sparks
 /obj/machinery/quantum_server/proc/spark_at_location(obj/cache)
-	playsound(cache, 'sound/effects/magic/blink.ogg', 50, vary = TRUE)
+	playsound(cache, '../assets/sound/effects/magic/blink.ogg', 50, vary = TRUE)
 	do_sparks(5, FALSE, get_turf(cache), spark_type = /datum/effect_system/basic/spark_spread/quantum)
 
 

@@ -1,11 +1,11 @@
 /obj/item/choice_beacon
 	name = "choice beacon"
 	desc = "Hey, why are you viewing this?!! Please let CentCom know about this odd occurrence."
-	icon = 'icons/obj/devices/remote.dmi'
+	icon = '../assets/icons/obj/devices/remote.dmi'
 	icon_state = "generic_delivery"
 	inhand_icon_state = "generic_delivery"
-	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/devices_righthand.dmi'
 	/// How many uses this item has before being deleted
 	var/uses = 1
 	/// Used in the deployment message - What company is sending the equipment, flavor
@@ -30,7 +30,7 @@
 	if(user.can_perform_action(src, FORBID_TELEKINESIS_REACH))
 		return TRUE
 
-	playsound(src, 'sound/machines/buzz/buzz-sigh.ogg', 40, TRUE)
+	playsound(src, '../assets/sound/machines/buzz/buzz-sigh.ogg', 40, TRUE)
 	return FALSE
 
 /// Opens a menu and allows the mob to pick an option from the list
@@ -162,7 +162,7 @@
 // just drops the box at their feet, "quiet" and "sneaky"
 /obj/item/choice_beacon/augments/spawn_option(obj/choice_path, mob/living/user)
 	new choice_path(get_turf(user))
-	playsound(src, 'sound/items/weapons/emitter2.ogg', 50, extrarange = SILENCED_SOUND_EXTRARANGE)
+	playsound(src, '../assets/sound/items/weapons/emitter2.ogg', 50, extrarange = SILENCED_SOUND_EXTRARANGE)
 
 /obj/item/choice_beacon/holy
 	name = "armaments beacon"
@@ -176,7 +176,7 @@
 	if(user.mind?.holy_role)
 		return ..()
 
-	playsound(src, 'sound/machines/buzz/buzz-sigh.ogg', 40, TRUE)
+	playsound(src, '../assets/sound/machines/buzz/buzz-sigh.ogg', 40, TRUE)
 	return FALSE
 
 // Overrides generate options so that we can show a neat radial instead
@@ -210,7 +210,7 @@
 	consume_use(chosen_type, user)
 
 /obj/item/choice_beacon/holy/spawn_option(obj/choice_path, mob/living/user)
-	playsound(src, 'sound/effects/pray_chaplain.ogg', 40, TRUE)
+	playsound(src, '../assets/sound/effects/pray_chaplain.ogg', 40, TRUE)
 	SSblackbox.record_feedback("tally", "chaplain_armor", 1, "[choice_path]")
 	GLOB.holy_armor_type = choice_path
 	return ..()

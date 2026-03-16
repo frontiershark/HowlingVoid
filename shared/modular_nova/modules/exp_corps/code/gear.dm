@@ -39,7 +39,7 @@
 	lefthand_file = 'modular_nova/modules/exp_corps/icons/bonesaw_l.dmi'
 	righthand_file = 'modular_nova/modules/exp_corps/icons/bonesaw_r.dmi'
 	inhand_icon_state = "bonesaw"
-	hitsound = 'sound/items/weapons/bladeslice.ogg'
+	hitsound = '../assets/sound/items/weapons/bladeslice.ogg'
 	toolspeed = 2
 	throw_range = 3
 	attack_verb_continuous = list("saws", "slashes")
@@ -83,7 +83,7 @@
 	var/amputation_speed_mod = 1
 
 	patient.visible_message(span_danger("[user] begins sawing off [patient]'s [candidate_name] with [src]!"), span_userdanger("[user] begins sawing off your [candidate_name] with [src]!"))
-	playsound(get_turf(patient), 'sound/items/weapons/bladeslice.ogg', 250, TRUE)
+	playsound(get_turf(patient), '../assets/sound/items/weapons/bladeslice.ogg', 250, TRUE)
 	if(patient.stat >= UNCONSCIOUS || HAS_TRAIT(patient, TRAIT_INCAPACITATED)) //if you're incapacitated (due to paralysis, a stun, being in staminacrit, etc.), critted, unconscious, or dead, it's much easier to properly line up a snip
 		amputation_speed_mod *= 0.5
 	if(patient.stat != DEAD && patient.has_status_effect(/datum/status_effect/jitter)) //jittering will make it harder to secure the shears, even if you can't otherwise move
@@ -92,7 +92,7 @@
 		amputation_speed_mod *= 0.7 //its morbin time
 
 	if(do_after(user,  toolspeed * 15 SECONDS * amputation_speed_mod, target = patient))
-		playsound(get_turf(patient), 'sound/items/weapons/bladeslice.ogg', 250, TRUE)
+		playsound(get_turf(patient), '../assets/sound/items/weapons/bladeslice.ogg', 250, TRUE)
 		if(user.zone_selected == BODY_ZONE_PRECISE_GROIN) //OwO
 			tail_snip_candidate.Remove(patient)
 			tail_snip_candidate.forceMove(get_turf(patient))
@@ -112,7 +112,7 @@
 		if(thing.body_part == CHEST)
 			continue
 		addtimer(CALLBACK(thing, TYPE_PROC_REF(/obj/item/bodypart/, dismember)), timer)
-		addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(playsound), user, 'sound/items/weapons/bladeslice.ogg', 70), timer)
+		addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(playsound), user, '../assets/sound/items/weapons/bladeslice.ogg', 70), timer)
 		timer += 1 SECONDS
 	sleep(timer)
 	return BRUTELOSS

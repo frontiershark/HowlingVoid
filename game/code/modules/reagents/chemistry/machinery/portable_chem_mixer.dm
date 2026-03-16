@@ -1,10 +1,10 @@
 /obj/item/storage/portable_chem_mixer
 	name = "portable chemical mixer"
 	desc = "A portable device that dispenses and mixes chemicals using the beakers inserted inside."
-	icon = 'icons/obj/medical/chemical.dmi'
+	icon = '../assets/icons/obj/medical/chemical.dmi'
 	icon_state = "portablechemicalmixer_open"
 	worn_icon_state = "portable_chem_mixer"
-	equip_sound = 'sound/items/equip/toolbelt_equip.ogg'
+	equip_sound = '../assets/sound/items/equip/toolbelt_equip.ogg'
 	w_class = WEIGHT_CLASS_HUGE
 	slot_flags = ITEM_SLOT_BELT
 	custom_price = PAYCHECK_CREW * 10

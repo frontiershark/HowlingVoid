@@ -1,14 +1,14 @@
 /obj/item/clothing/suit/costume
-	icon = 'icons/obj/clothing/suits/costume.dmi'
-	worn_icon = 'icons/mob/clothing/suits/costume.dmi'
+	icon = '../assets/icons/obj/clothing/suits/costume.dmi'
+	worn_icon = '../assets/icons/mob/clothing/suits/costume.dmi'
 	abstract_type = /obj/item/clothing/suit/costume
 
 /obj/item/clothing/suit/hooded/flashsuit
 	name = "flashy costume"
 	desc = "What did you expect?"
 	icon_state = "flashsuit"
-	icon = 'icons/obj/clothing/suits/costume.dmi'
-	worn_icon = 'icons/mob/clothing/suits/costume.dmi'
+	icon = '../assets/icons/obj/clothing/suits/costume.dmi'
+	worn_icon = '../assets/icons/mob/clothing/suits/costume.dmi'
 	inhand_icon_state = "armor"
 	body_parts_covered = CHEST|GROIN
 	hoodtype = /obj/item/clothing/head/hooded/flashsuit
@@ -16,8 +16,8 @@
 /obj/item/clothing/head/hooded/flashsuit
 	name = "flash button"
 	desc = "You will learn to fear the flash."
-	icon = 'icons/obj/clothing/head/costume.dmi'
-	worn_icon = 'icons/mob/clothing/head/costume.dmi'
+	icon = '../assets/icons/obj/clothing/head/costume.dmi'
+	worn_icon = '../assets/icons/mob/clothing/head/costume.dmi'
 	icon_state = "flashsuit"
 	body_parts_covered = HEAD
 	flags_inv = HIDEHAIR|HIDEEARS|HIDEFACIALHAIR|HIDEFACE|HIDEMASK|HIDESNOUT
@@ -106,8 +106,8 @@
 /obj/item/clothing/suit/syndicatefake
 	name = "black and red space suit replica"
 	icon_state = "syndicate-black-red"
-	icon = 'icons/obj/clothing/suits/spacesuit.dmi'
-	worn_icon = 'icons/mob/clothing/suits/spacesuit.dmi'
+	icon = '../assets/icons/obj/clothing/suits/spacesuit.dmi'
+	worn_icon = '../assets/icons/mob/clothing/suits/spacesuit.dmi'
 	inhand_icon_state = "syndicate-black-red"
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS|FEET
 	desc = "A plastic replica of the Syndicate space suit. You'll look just like a real murderous Syndicate agent in this! This is a toy, it is not made for use in space!"
@@ -156,8 +156,8 @@
 	name = "owl cloak"
 	desc = "A soft brown cloak made of synthetic feathers. Soft to the touch, stylish, and a 2 meter wing span that will drive the ladies mad."
 	icon_state = "owl_wings"
-	icon = 'icons/obj/clothing/suits/costume.dmi'
-	worn_icon = 'icons/mob/clothing/suits/costume.dmi'
+	icon = '../assets/icons/obj/clothing/suits/costume.dmi'
+	worn_icon = '../assets/icons/mob/clothing/suits/costume.dmi'
 	inhand_icon_state = null
 	toggle_noun = "wings"
 	body_parts_covered = ARMS|CHEST
@@ -207,9 +207,9 @@
 		return
 	RegisterSignal(borghead, COMSIG_ITEM_DROPPED, PROC_REF(helmet_drop)) // Don't need to worry about qdeleting since dropped will be called from there
 	in_use = TRUE
-	var/image/override_image = image(icon = 'icons/mob/silicon/robots.dmi' , icon_state = "robot", loc = human_user)
+	var/image/override_image = image(icon = '../assets/icons/mob/silicon/robots.dmi' , icon_state = "robot", loc = human_user)
 	override_image.override = TRUE
-	override_image.add_overlay(mutable_appearance('icons/mob/silicon/robots.dmi', "robot_e")) //gotta look realistic
+	override_image.add_overlay(mutable_appearance('../assets/icons/mob/silicon/robots.dmi', "robot_e")) //gotta look realistic
 	add_alt_appearance(/datum/atom_hud/alternate_appearance/basic/silicons, "standard_borg_disguise", override_image) //you look like a robot to robots! (including yourself because you're totally a robot)
 
 /obj/item/clothing/suit/costume/cardborg/proc/helmet_drop(datum/source, mob/living/user)
@@ -268,8 +268,8 @@
 	name = "carp costume"
 	desc = "A costume made from 'synthetic' carp scales, it smells."
 	icon_state = "carp_casual"
-	icon = 'icons/obj/clothing/suits/costume.dmi'
-	worn_icon = 'icons/mob/clothing/suits/costume.dmi'
+	icon = '../assets/icons/obj/clothing/suits/costume.dmi'
+	worn_icon = '../assets/icons/mob/clothing/suits/costume.dmi'
 	inhand_icon_state = "labcoat"
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS|FEET
 	cold_protection = CHEST|GROIN|ARMS
@@ -285,8 +285,8 @@
 /obj/item/clothing/head/hooded/carp_hood
 	name = "carp hood"
 	desc = "A hood attached to a carp costume."
-	icon = 'icons/obj/clothing/head/costume.dmi'
-	worn_icon = 'icons/mob/clothing/head/costume.dmi'
+	icon = '../assets/icons/obj/clothing/head/costume.dmi'
+	worn_icon = '../assets/icons/mob/clothing/head/costume.dmi'
 	icon_state = "carp_casual"
 	body_parts_covered = HEAD
 	cold_protection = HEAD
@@ -365,8 +365,8 @@
 	name = "corgi costume"
 	desc = "A costume that looks like someone made a human-like corgi, it won't guarantee belly rubs."
 	icon_state = "ian"
-	icon = 'icons/obj/clothing/suits/costume.dmi'
-	worn_icon = 'icons/mob/clothing/suits/costume.dmi'
+	icon = '../assets/icons/obj/clothing/suits/costume.dmi'
+	worn_icon = '../assets/icons/mob/clothing/suits/costume.dmi'
 	inhand_icon_state = "labcoat"
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS|FEET
 	allowed = list()
@@ -376,8 +376,8 @@
 /obj/item/clothing/head/hooded/ian_hood
 	name = "corgi hood"
 	desc = "A hood that looks just like a corgi's head, it won't guarantee dog biscuits."
-	icon = 'icons/obj/clothing/head/costume.dmi'
-	worn_icon = 'icons/mob/clothing/head/costume.dmi'
+	icon = '../assets/icons/obj/clothing/head/costume.dmi'
+	worn_icon = '../assets/icons/mob/clothing/head/costume.dmi'
 	icon_state = "ian"
 	body_parts_covered = HEAD
 	flags_inv = HIDEHAIR|HIDEEARS
@@ -386,8 +386,8 @@
 	name = "bee costume"
 	desc = "Bee the true Queen!"
 	icon_state = "bee"
-	icon = 'icons/obj/clothing/suits/costume.dmi'
-	worn_icon = 'icons/mob/clothing/suits/costume.dmi'
+	icon = '../assets/icons/obj/clothing/suits/costume.dmi'
+	worn_icon = '../assets/icons/mob/clothing/suits/costume.dmi'
 	inhand_icon_state = "labcoat"
 	body_parts_covered = CHEST|GROIN|ARMS
 	clothing_flags = THICKMATERIAL
@@ -396,8 +396,8 @@
 /obj/item/clothing/head/hooded/bee_hood
 	name = "bee hood"
 	desc = "A hood attached to a bee costume."
-	icon = 'icons/obj/clothing/head/costume.dmi'
-	worn_icon = 'icons/mob/clothing/head/costume.dmi'
+	icon = '../assets/icons/obj/clothing/head/costume.dmi'
+	worn_icon = '../assets/icons/mob/clothing/head/costume.dmi'
 	icon_state = "bee"
 	body_parts_covered = HEAD
 	clothing_flags = THICKMATERIAL
@@ -407,8 +407,8 @@
 	name = "Shark costume"
 	desc = "Finally, a costume to match your favorite plush."
 	icon_state = "shark"
-	icon = 'icons/obj/clothing/suits/costume.dmi'
-	worn_icon = 'icons/mob/clothing/suits/costume.dmi'
+	icon = '../assets/icons/obj/clothing/suits/costume.dmi'
+	worn_icon = '../assets/icons/mob/clothing/suits/costume.dmi'
 	inhand_icon_state = "shark"
 	body_parts_covered = CHEST|GROIN|ARMS
 	clothing_flags = THICKMATERIAL
@@ -421,8 +421,8 @@
 /obj/item/clothing/head/hooded/shark_hood
 	name = "shark hood"
 	desc = "A hood attached to a shark costume."
-	icon = 'icons/obj/clothing/head/costume.dmi'
-	worn_icon = 'icons/mob/clothing/head/costume.dmi'
+	icon = '../assets/icons/obj/clothing/head/costume.dmi'
+	worn_icon = '../assets/icons/mob/clothing/head/costume.dmi'
 	icon_state = "shark"
 	body_parts_covered = HEAD
 	clothing_flags = THICKMATERIAL
@@ -436,8 +436,8 @@
 	name = "shork costume"
 	desc = "Why would you ever do this?"
 	icon_state = "sharkcursed"
-	icon = 'icons/obj/clothing/suits/costume.dmi'
-	worn_icon = 'icons/mob/clothing/suits/costume.dmi'
+	icon = '../assets/icons/obj/clothing/suits/costume.dmi'
+	worn_icon = '../assets/icons/mob/clothing/suits/costume.dmi'
 	inhand_icon_state = "sharkcursed"
 	body_parts_covered = CHEST|GROIN|ARMS
 	clothing_flags = THICKMATERIAL
@@ -450,8 +450,8 @@
 /obj/item/clothing/head/hooded/shork_hood
 	name = "shork hood"
 	desc = "A hood attached to a shork costume."
-	icon = 'icons/obj/clothing/head/costume.dmi'
-	worn_icon = 'icons/mob/clothing/head/costume.dmi'
+	icon = '../assets/icons/obj/clothing/head/costume.dmi'
+	worn_icon = '../assets/icons/mob/clothing/head/costume.dmi'
 	icon_state = "sharkcursed"
 	body_parts_covered = HEAD
 	clothing_flags = THICKMATERIAL
@@ -465,8 +465,8 @@
 	name = "bloated human suit"
 	desc = "A horribly bloated suit made from human skins."
 	icon_state = "lingspacesuit"
-	icon = 'icons/obj/clothing/suits/costume.dmi'
-	worn_icon = 'icons/mob/clothing/suits/costume.dmi'
+	icon = '../assets/icons/obj/clothing/suits/costume.dmi'
+	worn_icon = '../assets/icons/mob/clothing/suits/costume.dmi'
 	inhand_icon_state = "labcoat"
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS|FEET
 	allowed = list()
@@ -476,8 +476,8 @@
 /obj/item/clothing/head/hooded/human_head
 	name = "bloated human head"
 	desc = "A horribly bloated and mismatched human head."
-	icon = 'icons/obj/clothing/head/costume.dmi'
-	worn_icon = 'icons/mob/clothing/head/costume.dmi'
+	icon = '../assets/icons/obj/clothing/head/costume.dmi'
+	worn_icon = '../assets/icons/mob/clothing/head/costume.dmi'
 	icon_state = "lingspacehelmet"
 	body_parts_covered = HEAD
 	flags_cover = HEADCOVERSEYES
@@ -579,8 +579,8 @@
 	name = "mystic's robe"
 	desc = "Wearing this makes you feel more attuned with the nature of the universe... as well as a bit more irresponsible. "
 	icon_state = "mysticrobe"
-	icon = 'icons/obj/clothing/suits/costume.dmi'
-	worn_icon = 'icons/mob/clothing/suits/costume.dmi'
+	icon = '../assets/icons/obj/clothing/suits/costume.dmi'
+	worn_icon = '../assets/icons/mob/clothing/suits/costume.dmi'
 	inhand_icon_state = "mysticrobe"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	allowed = list(/obj/item/spellbook, /obj/item/book/bible)
@@ -590,8 +590,8 @@
 /obj/item/clothing/head/hooded/mysticrobe
 	name = "mystic's hood"
 	desc = "The balance of reality tips towards order."
-	icon = 'icons/obj/clothing/head/costume.dmi'
-	worn_icon = 'icons/mob/clothing/head/costume.dmi'
+	icon = '../assets/icons/obj/clothing/head/costume.dmi'
+	worn_icon = '../assets/icons/mob/clothing/head/costume.dmi'
 	icon_state = "mystichood"
 	inhand_icon_state = null
 	body_parts_covered = HEAD
@@ -601,8 +601,8 @@
 	name = "coordinator jacket"
 	desc = "A jacket for a party coordinator, stylish!."
 	icon_state = "capformal"
-	icon = 'icons/obj/clothing/suits/armor.dmi'
-	worn_icon = 'icons/mob/clothing/suits/armor.dmi'
+	icon = '../assets/icons/obj/clothing/suits/armor.dmi'
+	worn_icon = '../assets/icons/mob/clothing/suits/armor.dmi'
 	inhand_icon_state = null
 	armor_type = /datum/armor/suit_coordinator
 
@@ -618,7 +618,7 @@
 /obj/item/clothing/suit/costume/hawaiian
 	name = "hawaiian overshirt"
 	desc = "A cool shirt for chilling on the beach."
-	icon = 'icons/map_icons/clothing/suit/costume.dmi'
+	icon = '../assets/icons/map_icons/clothing/suit/costume.dmi'
 	icon_state = "/obj/item/clothing/suit/costume/hawaiian"
 	post_init_icon_state = "hawaiian_shirt"
 	inhand_icon_state = null
@@ -636,7 +636,7 @@
 /obj/item/clothing/suit/costume/football_armor
 	name = "football protective gear"
 	desc = "Given to members of the football team!"
-	icon = 'icons/map_icons/clothing/suit/costume.dmi'
+	icon = '../assets/icons/map_icons/clothing/suit/costume.dmi'
 	icon_state = "/obj/item/clothing/suit/costume/football_armor"
 	post_init_icon_state = "football_armor"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS

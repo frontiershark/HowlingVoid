@@ -2,8 +2,8 @@
 /obj/item/mod
 	name = "Base MOD"
 	desc = "You should not see this, yell at a coder!"
-	icon = 'icons/obj/clothing/modsuit/mod_clothing.dmi'
-	worn_icon = 'icons/mob/clothing/modsuit/mod_clothing.dmi'
+	icon = '../assets/icons/obj/clothing/modsuit/mod_clothing.dmi'
+	worn_icon = '../assets/icons/mob/clothing/modsuit/mod_clothing.dmi'
 
 /obj/item/mod/control
 	name = "MOD control unit"
@@ -220,13 +220,13 @@
 
 	if(active)
 		balloon_alert(wearer, "unit active!")
-		playsound(src, 'sound/machines/scanner/scanbuzz.ogg', 25, FALSE, SILENCED_SOUND_EXTRARANGE)
+		playsound(src, '../assets/sound/machines/scanner/scanbuzz.ogg', 25, FALSE, SILENCED_SOUND_EXTRARANGE)
 		return FALSE
 
 	for(var/obj/item/part as anything in get_parts())
 		if(part.loc != src)
 			balloon_alert(user, "parts extended!")
-			playsound(src, 'sound/machines/scanner/scanbuzz.ogg', 25, FALSE, SILENCED_SOUND_EXTRARANGE)
+			playsound(src, '../assets/sound/machines/scanner/scanbuzz.ogg', 25, FALSE, SILENCED_SOUND_EXTRARANGE)
 			return FALSE
 
 	return ..()
@@ -252,7 +252,7 @@
 /obj/item/mod/control/screwdriver_act(mob/living/user, obj/item/screwdriver)
 	if(active || activating || ai_controller)
 		balloon_alert(user, "unit active!")
-		playsound(src, 'sound/machines/scanner/scanbuzz.ogg', 25, TRUE, SILENCED_SOUND_EXTRARANGE)
+		playsound(src, '../assets/sound/machines/scanner/scanbuzz.ogg', 25, TRUE, SILENCED_SOUND_EXTRARANGE)
 		return ITEM_INTERACT_BLOCKING
 	balloon_alert(user, "[open ? "closing" : "opening"] cover...")
 	screwdriver.play_tool_sound(src, 100)
@@ -270,14 +270,14 @@
 /obj/item/mod/control/crowbar_act(mob/living/user, obj/item/crowbar)
 	if(!open)
 		balloon_alert(user, "cover closed!")
-		playsound(src, 'sound/machines/scanner/scanbuzz.ogg', 25, TRUE, SILENCED_SOUND_EXTRARANGE)
+		playsound(src, '../assets/sound/machines/scanner/scanbuzz.ogg', 25, TRUE, SILENCED_SOUND_EXTRARANGE)
 		return ITEM_INTERACT_BLOCKING
 	if(!allowed(user))
 		balloon_alert(user, "insufficient access!")
-		playsound(src, 'sound/machines/scanner/scanbuzz.ogg', 25, TRUE, SILENCED_SOUND_EXTRARANGE)
+		playsound(src, '../assets/sound/machines/scanner/scanbuzz.ogg', 25, TRUE, SILENCED_SOUND_EXTRARANGE)
 		return ITEM_INTERACT_BLOCKING
 	if(SEND_SIGNAL(src, COMSIG_MOD_MODULE_REMOVAL, user) & MOD_CANCEL_REMOVAL)
-		playsound(src, 'sound/machines/scanner/scanbuzz.ogg', 25, TRUE, SILENCED_SOUND_EXTRARANGE)
+		playsound(src, '../assets/sound/machines/scanner/scanbuzz.ogg', 25, TRUE, SILENCED_SOUND_EXTRARANGE)
 		return ITEM_INTERACT_BLOCKING
 	if(length(modules))
 		var/list/removable_modules = list()
@@ -294,7 +294,7 @@
 		SEND_SIGNAL(src, COMSIG_MOD_MODULE_REMOVED, user)
 		return ITEM_INTERACT_SUCCESS
 	balloon_alert(user, "no modules!")
-	playsound(src, 'sound/machines/scanner/scanbuzz.ogg', 25, TRUE, SILENCED_SOUND_EXTRARANGE)
+	playsound(src, '../assets/sound/machines/scanner/scanbuzz.ogg', 25, TRUE, SILENCED_SOUND_EXTRARANGE)
 	return ITEM_INTERACT_BLOCKING
 
 // Makes use of tool act to prevent shoving stuff into our internal storage
@@ -327,7 +327,7 @@
 	if(istype(tool, /obj/item/mod/module))
 		if(!open)
 			balloon_alert(user, "cover closed!")
-			playsound(src, 'sound/machines/scanner/scanbuzz.ogg', 25, TRUE, SILENCED_SOUND_EXTRARANGE)
+			playsound(src, '../assets/sound/machines/scanner/scanbuzz.ogg', 25, TRUE, SILENCED_SOUND_EXTRARANGE)
 			return ITEM_INTERACT_BLOCKING
 		install(tool, user)
 		SEND_SIGNAL(src, COMSIG_MOD_MODULE_ADDED, user)
@@ -335,16 +335,16 @@
 	if(istype(tool, /obj/item/mod/core))
 		if(!open)
 			balloon_alert(user, "cover closed!")
-			playsound(src, 'sound/machines/scanner/scanbuzz.ogg', 25, TRUE, SILENCED_SOUND_EXTRARANGE)
+			playsound(src, '../assets/sound/machines/scanner/scanbuzz.ogg', 25, TRUE, SILENCED_SOUND_EXTRARANGE)
 			return ITEM_INTERACT_BLOCKING
 		if(core)
 			balloon_alert(user, "already has core!")
-			playsound(src, 'sound/machines/scanner/scanbuzz.ogg', 25, TRUE, SILENCED_SOUND_EXTRARANGE)
+			playsound(src, '../assets/sound/machines/scanner/scanbuzz.ogg', 25, TRUE, SILENCED_SOUND_EXTRARANGE)
 			return ITEM_INTERACT_BLOCKING
 		var/obj/item/mod/core/attacking_core = tool
 		attacking_core.install(src)
 		balloon_alert(user, "core installed")
-		playsound(src, 'sound/machines/click.ogg', 50, TRUE, SILENCED_SOUND_EXTRARANGE)
+		playsound(src, '../assets/sound/machines/click.ogg', 50, TRUE, SILENCED_SOUND_EXTRARANGE)
 		return ITEM_INTERACT_SUCCESS
 	if(open)
 		if(is_wire_tool(tool))
@@ -520,11 +520,11 @@
 		display_names[module.name] = REF(module)
 		var/image/module_image = image(icon = module.icon, icon_state = module.icon_state)
 		if(module == selected_module)
-			module_image.underlays += image(icon = 'icons/hud/radial.dmi', icon_state = "module_selected")
+			module_image.underlays += image(icon = '../assets/icons/hud/radial.dmi', icon_state = "module_selected")
 		else if(module.active)
-			module_image.underlays += image(icon = 'icons/hud/radial.dmi', icon_state = "module_active")
+			module_image.underlays += image(icon = '../assets/icons/hud/radial.dmi', icon_state = "module_active")
 		if(!COOLDOWN_FINISHED(module, cooldown_timer))
-			module_image.add_overlay(image(icon = 'icons/hud/radial.dmi', icon_state = "module_cooldown"))
+			module_image.add_overlay(image(icon = '../assets/icons/hud/radial.dmi', icon_state = "module_cooldown"))
 		items += list(module.name = module_image)
 	if(!length(items))
 		return
@@ -554,24 +554,24 @@
 		if(is_type_in_list(new_module, old_module.incompatible_modules) || is_type_in_list(old_module, new_module.incompatible_modules))
 			if(user)
 				balloon_alert(user, "incompatible with [old_module]!")
-				playsound(src, 'sound/machines/scanner/scanbuzz.ogg', 25, TRUE, SILENCED_SOUND_EXTRARANGE)
+				playsound(src, '../assets/sound/machines/scanner/scanbuzz.ogg', 25, TRUE, SILENCED_SOUND_EXTRARANGE)
 			return
 	var/complexity_with_module = complexity
 	complexity_with_module += new_module.complexity
 	if(complexity_with_module > complexity_max)
 		if(user)
 			balloon_alert(user, "above complexity max!")
-			playsound(src, 'sound/machines/scanner/scanbuzz.ogg', 25, TRUE, SILENCED_SOUND_EXTRARANGE)
+			playsound(src, '../assets/sound/machines/scanner/scanbuzz.ogg', 25, TRUE, SILENCED_SOUND_EXTRARANGE)
 		return
 	if(!new_module.has_required_parts(mod_parts))
 		if(user)
 			balloon_alert(user, "lacking required parts!")
-			playsound(src, 'sound/machines/scanner/scanbuzz.ogg', 25, TRUE, SILENCED_SOUND_EXTRARANGE)
+			playsound(src, '../assets/sound/machines/scanner/scanbuzz.ogg', 25, TRUE, SILENCED_SOUND_EXTRARANGE)
 		return
 	if(!new_module.can_install(src))
 		if(user)
 			balloon_alert(user, "can't install!")
-			playsound(src, 'sound/machines/scanner/scanbuzz.ogg', 25, TRUE, SILENCED_SOUND_EXTRARANGE)
+			playsound(src, '../assets/sound/machines/scanner/scanbuzz.ogg', 25, TRUE, SILENCED_SOUND_EXTRARANGE)
 		return
 	if(SEND_SIGNAL(src, COMSIG_MOD_TRY_INSTALL_MODULE, new_module, user) & MOD_ABORT_INSTALL)
 		return
@@ -592,7 +592,7 @@
 		new_module.part_activated = TRUE
 	if(user)
 		balloon_alert(user, "[new_module] added")
-		playsound(src, 'sound/machines/click.ogg', 50, TRUE, SILENCED_SOUND_EXTRARANGE)
+		playsound(src, '../assets/sound/machines/click.ogg', 50, TRUE, SILENCED_SOUND_EXTRARANGE)
 
 /obj/item/mod/control/proc/uninstall(obj/item/mod/module/old_module, deleting = FALSE)
 	modules -= old_module
@@ -614,7 +614,7 @@
 /obj/item/mod/control/proc/update_access(mob/user, obj/item/card/id/card)
 	if(!allowed(user))
 		balloon_alert(user, "insufficient access!")
-		playsound(src, 'sound/machines/scanner/scanbuzz.ogg', 25, TRUE, SILENCED_SOUND_EXTRARANGE)
+		playsound(src, '../assets/sound/machines/scanner/scanbuzz.ogg', 25, TRUE, SILENCED_SOUND_EXTRARANGE)
 		return
 	req_access = card.access.Copy()
 	balloon_alert(user, "access updated")

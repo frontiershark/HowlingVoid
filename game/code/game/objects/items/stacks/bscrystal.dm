@@ -2,7 +2,7 @@
 /obj/item/stack/ore/bluespace_crystal
 	name = "bluespace crystal"
 	desc = "A glowing bluespace crystal, not much is known about how they work. It looks very delicate."
-	icon = 'icons/obj/ore.dmi'
+	icon = '../assets/icons/obj/ore.dmi'
 	icon_state = "bluespace_crystal"
 	singular_name = "bluespace crystal"
 	dye_color = DYE_COSMIC
@@ -43,7 +43,7 @@
 	use(1)
 
 /obj/item/stack/ore/bluespace_crystal/proc/blink_mob(mob/living/L)
-	do_teleport(L, get_turf(L), blink_range, asoundin = 'sound/effects/phasein.ogg', channel = TELEPORT_CHANNEL_BLUESPACE)
+	do_teleport(L, get_turf(L), blink_range, asoundin = '../assets/sound/effects/phasein.ogg', channel = TELEPORT_CHANNEL_BLUESPACE)
 
 /obj/item/stack/ore/bluespace_crystal/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum)
 	if(!..()) // not caught in mid-air
@@ -73,7 +73,7 @@
 //Polycrystals, aka stacks
 /obj/item/stack/sheet/bluespace_crystal
 	name = "bluespace polycrystal"
-	icon = 'icons/obj/stack_objects.dmi'
+	icon = '../assets/icons/obj/stack_objects.dmi'
 	icon_state = "polycrystal"
 	inhand_icon_state = null
 	gulag_valid = TRUE

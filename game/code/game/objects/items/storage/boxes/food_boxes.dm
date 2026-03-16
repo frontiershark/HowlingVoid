@@ -53,7 +53,7 @@
 /obj/item/storage/box/papersack
 	name = "paper sack"
 	desc = "A sack neatly crafted out of paper."
-	icon = 'icons/obj/storage/paperbag.dmi'
+	icon = '../assets/icons/obj/storage/paperbag.dmi'
 	icon_state = "paperbag_None"
 	inhand_icon_state = null
 	illustration = null
@@ -333,7 +333,7 @@
 /obj/item/storage/box/gum
 	name = "bubblegum packet"
 	desc = "The packaging is entirely in Japanese, apparently. You can't make out a single word of it."
-	icon = 'icons/obj/storage/gum.dmi'
+	icon = '../assets/icons/obj/storage/gum.dmi'
 	icon_state = "bubblegum_generic"
 	w_class = WEIGHT_CLASS_TINY
 	illustration = null
@@ -374,7 +374,7 @@
 
 /obj/item/storage/bubblegum_wrapper
 	name = "bubblegum wrapper"
-	icon = 'icons/obj/food/food.dmi'
+	icon = '../assets/icons/obj/food/food.dmi'
 	icon_state = "bubblegum_wrapper"
 	w_class = WEIGHT_CLASS_TINY
 	resistance_flags = FLAMMABLE
@@ -578,7 +578,7 @@
 	name = "arabica beans"
 	desc = "A bag containing fresh, dry coffee arabica beans. Ethically sourced and packaged by Waffle Corp."
 	illustration = null
-	icon = 'icons/obj/food/containers.dmi'
+	icon = '../assets/icons/obj/food/containers.dmi'
 	storage_type = /datum/storage/box/coffee
 	var/beantype = /obj/item/food/grown/coffee
 

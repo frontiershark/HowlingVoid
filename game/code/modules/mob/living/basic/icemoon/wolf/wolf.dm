@@ -1,7 +1,7 @@
 /mob/living/basic/mining/wolf
 	name = "white wolf"
 	desc = "Pack hunters of the Icemoon wastes. While a mere nuisance individually, they become fearsome foes in larger groups."
-	icon = 'icons/mob/simple/icemoon/icemoon_monsters.dmi'
+	icon = '../assets/icons/mob/simple/icemoon/icemoon_monsters.dmi'
 	icon_state = "whitewolf"
 	icon_living = "whitewolf"
 	icon_dead = "whitewolf_dead"
@@ -29,7 +29,7 @@
 	attack_verb_simple = "bite"
 	death_message = "snarls its last and perishes."
 
-	attack_sound = 'sound/items/weapons/bite.ogg'
+	attack_sound = '../assets/sound/items/weapons/bite.ogg'
 	move_force = MOVE_FORCE_WEAK
 	move_resist = MOVE_FORCE_WEAK
 	pull_force = MOVE_FORCE_WEAK

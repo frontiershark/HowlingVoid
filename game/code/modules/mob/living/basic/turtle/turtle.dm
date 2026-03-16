@@ -12,7 +12,7 @@
 	icon_living = "turtle"
 	icon_dead = "turtle_dead"
 	base_icon_state = "turtle"
-	icon = 'icons/mob/simple/pets.dmi'
+	icon = '../assets/icons/mob/simple/pets.dmi'
 	butcher_results = list(/obj/item/food/meat/slab = 3, /obj/item/food/pickle = 1, /obj/item/stack/sheet/mineral/wood = 10)
 	mob_biotypes = MOB_ORGANIC | MOB_PLANT
 	mobility_flags = MOBILITY_FLAGS_REST_CAPABLE_DEFAULT
@@ -156,7 +156,7 @@
 	)
 
 	var/tree_icon_state = evolution_gains[evolution_path]["tree_appearance"]
-	grown_tree = mutable_appearance(icon = 'icons/mob/simple/turtle_trees.dmi', icon_state = tree_icon_state)
+	grown_tree = mutable_appearance(icon = '../assets/icons/mob/simple/turtle_trees.dmi', icon_state = tree_icon_state)
 
 	var/new_ability_path = evolution_gains[evolution_path]["tree_ability"]
 	developed_path = evolution_path
@@ -175,7 +175,7 @@
 /mob/living/basic/turtle/update_overlays()
 	. = ..()
 	if(stat == DEAD)
-		var/mutable_appearance/dead_overlay = mutable_appearance(icon = 'icons/mob/simple/pets.dmi', icon_state = developed_path ? "dead_tree" : "growing_tree")
+		var/mutable_appearance/dead_overlay = mutable_appearance(icon = '../assets/icons/mob/simple/pets.dmi', icon_state = developed_path ? "dead_tree" : "growing_tree")
 		dead_overlay.pixel_z = -2
 		. += dead_overlay
 		return
@@ -217,7 +217,7 @@
 
 	used_item.reagents.trans_to(reagents, 5)
 	balloon_alert(user, "drinks happily")
-	playsound(src, 'sound/items/drink.ogg', vol = 25, vary = TRUE)
+	playsound(src, '../assets/sound/items/drink.ogg', vol = 25, vary = TRUE)
 	return ITEM_INTERACT_SUCCESS
 
 /mob/living/basic/turtle/proc/pre_eat_food(datum/source, obj/item/seeds/potential_food)

@@ -1,7 +1,7 @@
 //this category is very little but I think that it has great potential to grow
 ////////////////////////////////////////////SALAD////////////////////////////////////////////
 /obj/item/food/salad
-	icon = 'icons/obj/food/soupsalad.dmi'
+	icon = '../assets/icons/obj/food/soupsalad.dmi'
 	abstract_type = /obj/item/food/salad
 	trash_type = /obj/item/reagent_containers/cup/bowl
 	bite_consumption = 3
@@ -178,7 +178,7 @@
 /obj/item/reagent_containers/cup/bowl
 	name = "bowl"
 	desc = "A simple bowl, used for soups and salads."
-	icon = 'icons/obj/food/soupsalad.dmi'
+	icon = '../assets/icons/obj/food/soupsalad.dmi'
 	icon_state = "bowl"
 	base_icon_state = "bowl"
 	initial_reagent_flags = OPENCONTAINER | DUNKABLE
@@ -187,7 +187,7 @@
 	custom_price = PAYCHECK_CREW * 0.6
 	fill_icon_thresholds = list(0)
 	fill_icon_state = "fullbowl"
-	fill_icon = 'icons/obj/food/soupsalad.dmi'
+	fill_icon = '../assets/icons/obj/food/soupsalad.dmi'
 
 	volume = SOUP_SERVING_SIZE + 5
 	gulp_size = 3

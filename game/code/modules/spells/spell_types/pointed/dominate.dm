@@ -5,9 +5,9 @@
 	background_icon_state = "bg_demon"
 	overlay_icon_state = "bg_demon_border"
 
-	button_icon = 'icons/mob/actions/actions_cult.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_cult.dmi'
 	button_icon_state = "dominate"
-	ranged_mousepointer = 'icons/effects/mouse_pointers/cult_target.dmi'
+	ranged_mousepointer = '../assets/icons/effects/mouse_pointers/cult_target.dmi'
 
 	school = SCHOOL_EVOCATION
 	cooldown_time = 1 MINUTES
@@ -47,5 +47,5 @@
 	var/turf/cast_turf = get_turf(cast_on)
 	cast_on.add_atom_colour("#990000", FIXED_COLOUR_PRIORITY)
 	cast_on.add_faction(FACTION_CULT)
-	playsound(cast_turf, 'sound/effects/ghost.ogg', 100, TRUE)
+	playsound(cast_turf, '../assets/sound/effects/ghost.ogg', 100, TRUE)
 	new /obj/effect/temp_visual/cult/sac(cast_turf)

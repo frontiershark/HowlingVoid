@@ -1,7 +1,7 @@
 /mob/living/silicon/ai
 	name = "AI"
 	real_name = "AI"
-	icon = 'icons/mob/silicon/ai.dmi'
+	icon = '../assets/icons/mob/silicon/ai.dmi'
 	icon_state = "ai-core"
 	move_resist = MOVE_FORCE_OVERPOWERING
 	density = TRUE

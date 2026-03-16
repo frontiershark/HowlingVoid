@@ -82,7 +82,7 @@
 	empty_pod.stay_after_drop = TRUE
 	empty_pod.reversing = TRUE
 	empty_pod.explosionSize = list(0,0,0,1)
-	empty_pod.leavingSound = 'sound/effects/podwoosh.ogg'
+	empty_pod.leavingSound = '../assets/sound/effects/podwoosh.ogg'
 
 	new /obj/effect/pod_landingzone(empty_pod_turf, empty_pod)
 

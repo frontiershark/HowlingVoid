@@ -3,7 +3,7 @@
 /obj/structure/ai_core
 	name = "\improper AI core"
 	desc = "The framework for an artificial intelligence core."
-	icon = 'icons/mob/silicon/ai.dmi'
+	icon = '../assets/icons/mob/silicon/ai.dmi'
 	icon_state = "build_0"
 	base_icon_state = "build_"
 	density = TRUE

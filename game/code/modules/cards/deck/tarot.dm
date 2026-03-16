@@ -55,7 +55,7 @@
 	. = ..()
 	AddComponent( \
 		/datum/component/two_handed, \
-		attacksound = 'sound/items/cards/cardflip.ogg', \
+		attacksound = '../assets/sound/items/cards/cardflip.ogg', \
 		wield_callback = CALLBACK(src, PROC_REF(on_wield)), \
 		unwield_callback = CALLBACK(src, PROC_REF(on_unwield)), \
 	)
@@ -72,7 +72,7 @@
 		"Someone has begun playing with a [name] in [get_area(src)]!",
 		source = src,
 		header = "Haunted Tarot Deck",
-		ghost_sound = 'sound/effects/ghost2.ogg',
+		ghost_sound = '../assets/sound/effects/ghost2.ogg',
 		notify_volume = 75,
 	)
 

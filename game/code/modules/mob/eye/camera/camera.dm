@@ -4,7 +4,7 @@
  */
 /mob/eye/camera
 	name = "Inactive Camera Eye"
-	icon = 'icons/mob/eyemob.dmi'
+	icon = '../assets/icons/mob/eyemob.dmi'
 	icon_state = "generic_camera"
 
 	invisibility = INVISIBILITY_OBSERVER

@@ -92,8 +92,8 @@
 	name = "\improper Detective's Office"
 	icon_state = "detective"
 	ambientsounds = list(
-		'sound/ambience/security/ambidet1.ogg',
-		'sound/ambience/security/ambidet2.ogg',
+		'../assets/sound/ambience/security/ambidet1.ogg',
+		'../assets/sound/ambience/security/ambidet2.ogg',
 		)
 
 /area/station/security/detectives_office/private_investigators_office

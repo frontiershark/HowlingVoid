@@ -3,7 +3,7 @@
 	name = "\proper customs agent's locker"
 	req_access = list(ACCESS_BRIG_ENTRANCE, ACCESS_CARGO)
 	icon_state = "qm"
-	icon = 'icons/obj/storage/closet.dmi'
+	icon = '../assets/icons/obj/storage/closet.dmi'
 
 /obj/structure/closet/secure_closet/security/cargo/PopulateContents()
 	new /obj/item/ammo_box/advanced/pepperballs(src)
@@ -15,7 +15,7 @@
 	name = "\proper engineering guard's locker"
 	req_access = list(ACCESS_BRIG_ENTRANCE, ACCESS_ENGINEERING)
 	icon_state = "eng_secure"
-	icon = 'icons/obj/storage/closet.dmi'
+	icon = '../assets/icons/obj/storage/closet.dmi'
 
 /obj/structure/closet/secure_closet/security/engine/PopulateContents()
 	new /obj/item/ammo_box/advanced/pepperballs(src)
@@ -27,7 +27,7 @@
 	name = "\proper science guard's locker"
 	req_access = list(ACCESS_BRIG_ENTRANCE, ACCESS_RESEARCH)
 	icon_state = "science"
-	icon = 'icons/obj/storage/closet.dmi'
+	icon = '../assets/icons/obj/storage/closet.dmi'
 
 /obj/structure/closet/secure_closet/security/science/PopulateContents()
 	new /obj/item/ammo_box/advanced/pepperballs(src)
@@ -39,7 +39,7 @@
 	name = "\proper orderly's locker"
 	req_access = list(ACCESS_BRIG_ENTRANCE, ACCESS_MEDICAL)
 	icon_state = "med_secure"
-	icon = 'icons/obj/storage/closet.dmi'
+	icon = '../assets/icons/obj/storage/closet.dmi'
 
 /obj/structure/closet/secure_closet/security/med/PopulateContents()
 	new /obj/item/ammo_box/advanced/pepperballs(src)
@@ -51,7 +51,7 @@
 	name = "\proper the service guard's locker"
 	req_access = list(ACCESS_BRIG_ENTRANCE, ACCESS_SERVICE)
 	icon_state = "cabinet"
-	icon = 'icons/obj/storage/closet.dmi'
+	icon = '../assets/icons/obj/storage/closet.dmi'
 
 /obj/structure/closet/secure_closet/security/service/PopulateContents()
 	new /obj/item/ammo_box/advanced/pepperballs(src)

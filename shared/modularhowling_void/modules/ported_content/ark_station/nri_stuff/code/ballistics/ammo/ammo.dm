@@ -200,7 +200,7 @@
 
 /obj/projectile/bullet/a762x39/blank
 	name = "hot gas"
-	icon = 'icons/obj/weapons/guns/projectiles_muzzle.dmi'
+	icon = '../assets/icons/obj/weapons/guns/projectiles_muzzle.dmi'
 	icon_state = "muzzle_bullet"
 	damage = 3 // 5
 	damage_type = BURN

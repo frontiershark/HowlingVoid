@@ -7,7 +7,7 @@
 /obj/item/stack/wrapping_paper
 	name = "wrapping paper"
 	desc = "Wrap packages with this festive paper to make gifts."
-	icon = 'icons/obj/stack_objects.dmi'
+	icon = '../assets/icons/obj/stack_objects.dmi'
 	icon_state = "wrap_paper"
 	inhand_icon_state = "wrap_paper"
 	greyscale_config = /datum/greyscale_config/wrap_paper
@@ -20,7 +20,7 @@
 	w_class = WEIGHT_CLASS_TINY
 	throw_speed = 3
 	throw_range = 5
-	hitsound = 'sound/effects/bonk.ogg'
+	hitsound = '../assets/sound/effects/bonk.ogg'
 
 /obj/item/stack/wrapping_paper/Initialize(mapload)
 	. = ..()
@@ -63,7 +63,7 @@
 
 //preset wrapping paper meant to fill the original color configuration
 /obj/item/stack/wrapping_paper/xmas
-	icon = 'icons/map_icons/items/_item.dmi'
+	icon = '../assets/icons/map_icons/items/_item.dmi'
 	icon_state = "/obj/item/stack/wrapping_paper/xmas"
 	post_init_icon_state = "wrap_paper"
 	greyscale_colors = "#00FF00#FF0000"
@@ -87,7 +87,7 @@
 	name = "package wrapper"
 	singular_name = "wrapping sheet"
 	desc = "You can use this to wrap items in."
-	icon = 'icons/obj/stack_objects.dmi'
+	icon = '../assets/icons/obj/stack_objects.dmi'
 	icon_state = "deliveryPaper"
 	item_flags = NOBLUDGEON
 	amount = 25
@@ -233,14 +233,14 @@
 /obj/item/c_tube
 	name = "cardboard tube"
 	desc = "A tube... of cardboard."
-	icon = 'icons/obj/stack_objects.dmi'
+	icon = '../assets/icons/obj/stack_objects.dmi'
 	icon_state = "c_tube"
 	inhand_icon_state = "c_tube"
 	throwforce = 0
 	w_class = WEIGHT_CLASS_TINY
 	throw_speed = 3
 	throw_range = 5
-	hitsound = 'sound/effects/bonk.ogg'
+	hitsound = '../assets/sound/effects/bonk.ogg'
 
 /obj/item/c_tube/Initialize(mapload)
 	. = ..()

@@ -4,7 +4,7 @@
 	complexity = "Medium"
 	complexity_color = COLOR_YELLOW
 	icon = list(
-		"icon" = 'icons/obj/weapons/khopesh.dmi',
+		"icon" = '../assets/icons/obj/weapons/khopesh.dmi',
 		"state" = "rust_blade",
 		"frame" = 1,
 		"dir" = SOUTH,
@@ -61,7 +61,7 @@
 		/obj/item/trash = 1,
 	)
 	result_atoms = list(/obj/item/melee/sickly_blade/rust)
-	research_tree_icon_path = 'icons/obj/weapons/khopesh.dmi'
+	research_tree_icon_path = '../assets/icons/obj/weapons/khopesh.dmi'
 	research_tree_icon_state = "rust_blade"
 	mark_type = /datum/status_effect/eldritch/rust
 	eldritch_passive = /datum/status_effect/heretic_passive/rust
@@ -148,7 +148,7 @@
 	desc = "Your Rusty Blade now disgusts enemies on attack \ Allows you to rust Titanium and Plastitanium.."
 	gain_text = "The Blacksmith hands you their blade. \"The Blade will guide you through the flesh, should you let it.\" \
 		The heavy rust weights it down. You stare deeply into it. The Rusted Hills call for you, now."
-	research_tree_icon_path = 'icons/ui_icons/antags/heretic/knowledge.dmi'
+	research_tree_icon_path = '../assets/icons/ui_icons/antags/heretic/knowledge.dmi'
 	research_tree_icon_state = "blade_upgrade_rust"
 
 /datum/heretic_knowledge/blade_upgrade/rust/do_melee_effects(mob/living/source, mob/living/target, obj/item/melee/sickly_blade/blade)
@@ -183,7 +183,7 @@
 
 	ascension_achievement = /datum/award/achievement/misc/rust_ascension
 	announcement_text = "%SPOOKY% Fear the decay, for the Rustbringer, %NAME% has ascended! None shall escape the corrosion! %SPOOKY%"
-	announcement_sound = 'sound/music/antag/heretic/ascend_rust.ogg'
+	announcement_sound = '../assets/sound/music/antag/heretic/ascend_rust.ogg'
 	/// If TRUE, then immunities are currently active.
 	var/immunities_active = FALSE
 	/// A typepath to an area that we must finish the ritual in.

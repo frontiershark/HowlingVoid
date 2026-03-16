@@ -12,7 +12,7 @@ GLOBAL_LIST_INIT(ore_probability, list(
 /obj/structure/spawner/ice_moon
 	name = "cave entrance"
 	desc = "A hole in the ground, filled with monsters ready to defend it."
-	icon = 'icons/mob/simple/lavaland/nest.dmi'
+	icon = '../assets/icons/mob/simple/lavaland/nest.dmi'
 	icon_state = "hole"
 	faction = list(FACTION_MINING)
 	max_mobs = 3
@@ -49,7 +49,7 @@ GLOBAL_LIST_INIT(ore_probability, list(
  *
  */
 /obj/structure/spawner/ice_moon/proc/destroy_effect()
-	playsound(loc,'sound/effects/explosion/explosionfar.ogg', 200, TRUE)
+	playsound(loc,'../assets/sound/effects/explosion/explosionfar.ogg', 200, TRUE)
 	visible_message(span_bolddanger("[src] collapses, sealing everything inside!</span>\n<span class='warning'>Ores fall out of the cave as it is destroyed!"))
 
 /**
@@ -115,14 +115,14 @@ GLOBAL_LIST_INIT(ore_probability, list(
 	name = "collapsing demonic portal"
 	desc = "It's slowly fading!"
 	layer = TABLE_LAYER
-	icon = 'icons/mob/simple/lavaland/nest.dmi'
+	icon = '../assets/icons/mob/simple/lavaland/nest.dmi'
 	icon_state = "nether"
 	anchored = TRUE
 	density = TRUE
 
 /obj/effect/collapsing_demonic_portal/Initialize(mapload)
 	. = ..()
-	playsound(loc,'sound/effects/tendril_destroyed.ogg', 200, FALSE, 50, TRUE, TRUE)
+	playsound(loc,'../assets/sound/effects/tendril_destroyed.ogg', 200, FALSE, 50, TRUE, TRUE)
 	visible_message(span_bolddanger("[src] begins to collapse, cutting it off from this world!"))
 	animate(src, transform = matrix().Scale(0, 1), alpha = 50, time = 5 SECONDS)
 	addtimer(CALLBACK(src, PROC_REF(collapse)), 5 SECONDS)

@@ -5,7 +5,7 @@
 /obj/structure/weightmachine
 	name = "chest press machine"
 	desc = "Just looking at this thing makes you feel tired."
-	icon = 'icons/obj/fluff/gym_equipment.dmi'
+	icon = '../assets/icons/obj/fluff/gym_equipment.dmi'
 	icon_state = "stacklifter"
 	base_icon_state = "stacklifter"
 	can_buckle = TRUE
@@ -146,7 +146,7 @@
 		// with enough dedication, even clowns can overcome their handicaps
 		var/clumsy_chance = 30 - (user.mind.get_skill_level(/datum/skill/athletics) * 5)
 		if(HAS_TRAIT(user, TRAIT_CLUMSY) && prob(clumsy_chance))
-			playsound(src, 'sound/effects/bang.ogg', 50, TRUE)
+			playsound(src, '../assets/sound/effects/bang.ogg', 50, TRUE)
 			to_chat(user, span_warning("Your hand slips, causing \the [src] to smash you!"))
 			user.take_bodypart_damage(rand(2, 5))
 			end_workout()
@@ -154,7 +154,7 @@
 
 		// awlways a chance for a person not to fail horribly when drunk
 		if(user.get_drunk_amount() > SAFE_DRUNK_LEVEL && prob(min(user.get_drunk_amount(), 99)))
-			playsound(src,'sound/effects/bang.ogg', 50, TRUE)
+			playsound(src,'../assets/sound/effects/bang.ogg', 50, TRUE)
 			to_chat(user, span_warning(drunk_message))
 			user.take_bodypart_damage(rand(5, 10), wound_bonus = 10)
 			end_workout()
@@ -176,7 +176,7 @@
 	end_workout()
 
 /obj/structure/weightmachine/proc/end_workout()
-	playsound(src, 'sound/machines/click.ogg', 60, TRUE)
+	playsound(src, '../assets/sound/machines/click.ogg', 60, TRUE)
 	STOP_PROCESSING(SSobj, src)
 	icon_state = initial(icon_state)
 
@@ -194,7 +194,7 @@
 	var/mob/living/user = buckled_mobs[1]
 	animate(user, pixel_z = pixel_shift_z, time = WORKOUT_LENGTH * 0.5, flags = ANIMATION_PARALLEL|ANIMATION_RELATIVE)
 	animate(pixel_z = -pixel_shift_z, time = WORKOUT_LENGTH * 0.5, flags = ANIMATION_PARALLEL)
-	playsound(user, 'sound/machines/creak.ogg', 60, TRUE)
+	playsound(user, '../assets/sound/machines/creak.ogg', 60, TRUE)
 
 	if(!iscarbon(user) || isnull(user.mind))
 		return TRUE

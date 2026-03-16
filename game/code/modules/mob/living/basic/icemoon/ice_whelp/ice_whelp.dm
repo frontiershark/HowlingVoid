@@ -1,7 +1,7 @@
 /mob/living/basic/mining/ice_whelp
 	name = "ice whelp"
 	desc = "The offspring of an ice drake, weak in comparison but still terrifying."
-	icon = 'icons/mob/simple/icemoon/icemoon_monsters.dmi'
+	icon = '../assets/icons/mob/simple/icemoon/icemoon_monsters.dmi'
 	icon_state = "ice_whelp"
 	icon_living = "ice_whelp"
 	icon_dead = "ice_whelp_dead"
@@ -26,9 +26,9 @@
 	attack_verb_continuous = "chomps"
 	attack_verb_simple = "chomp"
 	death_message = "collapses on its side."
-	death_sound = 'sound/effects/magic/demon_dies.ogg'
+	death_sound = '../assets/sound/effects/magic/demon_dies.ogg'
 
-	attack_sound = 'sound/effects/magic/demon_attack1.ogg'
+	attack_sound = '../assets/sound/effects/magic/demon_attack1.ogg'
 	move_force = MOVE_FORCE_VERY_STRONG
 	move_resist = MOVE_FORCE_VERY_STRONG
 	pull_force = MOVE_FORCE_VERY_STRONG
@@ -93,7 +93,7 @@
 /mob/living/basic/mining/ice_whelp/ash
 	name = "ash whelp"
 	desc = "The offspring of an ash drake, weak in comparison but still terrifying."
-	icon = 'icons/mob/simple/lavaland/lavaland_monsters.dmi'
+	icon = '../assets/icons/mob/simple/lavaland/lavaland_monsters.dmi'
 	icon_state = "ash_whelp"
 	icon_living = "ash_whelp"
 	icon_dead = "ash_whelp_dead"

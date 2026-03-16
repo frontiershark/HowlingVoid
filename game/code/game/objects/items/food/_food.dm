@@ -4,10 +4,10 @@
 	desc = "you eat this"
 	resistance_flags = FLAMMABLE
 	w_class = WEIGHT_CLASS_SMALL
-	icon = 'icons/obj/food/food.dmi'
+	icon = '../assets/icons/obj/food/food.dmi'
 	icon_state = null
-	lefthand_file = 'icons/mob/inhands/items/food_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/food_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/food_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/food_righthand.dmi'
 	abstract_type = /obj/item/food
 	obj_flags = UNIQUE_RENAME
 	material_flags = MATERIAL_NO_EDIBILITY

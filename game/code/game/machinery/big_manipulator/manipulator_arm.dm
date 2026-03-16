@@ -2,7 +2,7 @@
 /obj/effect/big_manipulator_arm
 	name = "mechanical claw"
 	desc = "Takes and drops objects."
-	icon = 'icons/obj/machines/big_manipulator_parts/big_manipulator_hand.dmi'
+	icon = '../assets/icons/obj/machines/big_manipulator_parts/big_manipulator_hand.dmi'
 	icon_state = "hand"
 	layer = LOW_ITEM_LAYER
 	appearance_flags = KEEP_TOGETHER | LONG_GLIDE | TILE_BOUND | PIXEL_SCALE

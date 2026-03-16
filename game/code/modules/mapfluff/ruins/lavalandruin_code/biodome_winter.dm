@@ -6,7 +6,7 @@
 	name = "freeze cube"
 	desc = "A block of semi-clear ice treated with chemicals to behave as a throwable weapon. \
 		Somehow, it does not transfer its freezing temperatures until it comes into contact with a living creature."
-	icon = 'icons/obj/mining_zones/artefacts.dmi'
+	icon = '../assets/icons/obj/mining_zones/artefacts.dmi'
 	icon_state = "freeze_cube"
 	inhand_icon_state = "freeze_cube"
 	throwforce = 10
@@ -35,7 +35,7 @@
 		addtimer(CALLBACK(src, TYPE_PROC_REF(/atom/movable, throw_at), thrown_by, throw_range+2, throw_speed, null, TRUE), 0.1 SECONDS)
 
 /obj/item/freeze_cube/proc/freeze_hit_atom(atom/movable/hit_atom)
-	playsound(src, 'sound/effects/glass/glassbr3.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/effects/glass/glassbr3.ogg', 50, TRUE)
 	COOLDOWN_START(src, freeze_cooldown, cooldown_time)
 	if(isobj(hit_atom))
 		var/obj/hit_object = hit_atom

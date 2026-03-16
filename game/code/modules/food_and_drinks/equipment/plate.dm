@@ -1,7 +1,7 @@
 /obj/item/plate
 	name = "plate"
 	desc = "Holds food, powerful. Good for morale when you're not eating your spaghetti off of a desk."
-	icon = 'icons/obj/service/kitchen.dmi'
+	icon = '../assets/icons/obj/service/kitchen.dmi'
 	icon_state = "plate"
 	sound_vary = TRUE
 	pickup_sound = SFX_FOOD_PLATE_PICKUP
@@ -120,10 +120,10 @@
 
 /obj/item/plate_shard
 	name = "ceramic shard"
-	icon = 'icons/obj/service/kitchen.dmi'
+	icon = '../assets/icons/obj/service/kitchen.dmi'
 	icon_state = "plate_shard1"
 	base_icon_state = "plate_shard"
-	hitsound = 'sound/items/weapons/bladeslice.ogg'
+	hitsound = '../assets/sound/items/weapons/bladeslice.ogg'
 	w_class = WEIGHT_CLASS_TINY
 	force = 5
 	throwforce = 5

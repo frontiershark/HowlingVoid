@@ -2,10 +2,10 @@
 /obj/item/spear
 	name = "spear"
 	desc = "A haphazardly-constructed yet still deadly weapon of ancient design."
-	icon = 'icons/obj/weapons/spear.dmi'
+	icon = '../assets/icons/obj/weapons/spear.dmi'
 	icon_state = "spearglass0"
-	lefthand_file = 'icons/mob/inhands/weapons/polearms_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/polearms_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/polearms_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/polearms_righthand.dmi'
 	icon_angle = -45
 	force = 10
 	reach = 2
@@ -17,7 +17,7 @@
 	embed_type = /datum/embedding/spear
 	armour_penetration = 5
 	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 0.65, /datum/material/glass= SHEET_MATERIAL_AMOUNT * 1.15)
-	hitsound = 'sound/items/weapons/bladeslice.ogg'
+	hitsound = '../assets/sound/items/weapons/bladeslice.ogg'
 	attack_verb_continuous = list("attacks", "pokes", "jabs", "tears", "lacerates", "gores")
 	attack_verb_simple = list("attack", "poke", "jab", "tear", "lacerate", "gore")
 	sharpness = SHARP_POINTY
@@ -178,7 +178,7 @@
 	take_damage(throwforce/2, sound_effect = FALSE)
 
 /obj/item/spear/atom_destruction(damage_flag)
-	playsound(src, 'sound/effects/grillehit.ogg', 50)
+	playsound(src, '../assets/sound/effects/grillehit.ogg', 50)
 	new spear_leftovers(get_turf(src))
 	if(isliving(loc))
 		loc.balloon_alert(loc, "spear broken!")
@@ -316,12 +316,12 @@
 /obj/item/spear/dragonator
 	name = "giantslayer spear"
 	desc = "An oversized multi-bladed spear designed to kill large hostile xenoforms such as space dragons or the creatures of Indecipheres. Capable of being launched from a ballista."
-	icon = 'icons/obj/weapons/48x.dmi'
+	icon = '../assets/icons/obj/weapons/48x.dmi'
 	icon_state = "speardragon0"
 	icon_prefix = "speardragon"
 	base_icon_state = "speardragon"
-	lefthand_file = 'icons/mob/inhands/weapons/polearms_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/polearms_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/polearms_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/polearms_righthand.dmi'
 	demolition_mod = 0.5
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
 	force = 13
@@ -349,7 +349,7 @@
 /obj/item/spear/dragonator_untreated
 	name = "unfired giantslayer spear"
 	desc = "A half-finished giantslayer spear, needs to be thrown in lava to forge the metals to a killing edge."
-	icon = 'icons/obj/weapons/48x.dmi'
+	icon = '../assets/icons/obj/weapons/48x.dmi'
 	icon_state = "speardragonraw0"
 	icon_prefix = "speardragonraw"
 	base_icon_state = "speardragonraw"
@@ -366,7 +366,7 @@
 
 /obj/item/spear/dragonator_untreated/fire_act(exposed_temperature, exposed_volume)
 	var/obj/item/spear/dragonator/dragonator = new(loc)
-	playsound(dragonator.loc, 'sound/effects/magic/staff_change.ogg',5)
+	playsound(dragonator.loc, '../assets/sound/effects/magic/staff_change.ogg',5)
 	qdel(src)
 
 /*
@@ -478,7 +478,7 @@
 	if(!do_after(owner, 2 SECONDS, target = owner, timed_action_flags = IGNORE_USER_LOC_CHANGE))
 		REMOVE_TRAIT(target, TRAIT_NEEDS_TWO_HANDS, ACTION_TRAIT)
 		return
-	playsound(owner, 'sound/effects/footstep/heavy1.ogg', 50, 1)
+	playsound(owner, '../assets/sound/effects/footstep/heavy1.ogg', 50, 1)
 	S_TIMER_COOLDOWN_START(target, COOLDOWN_SKYBULGE_JUMP, jump_cooldown_time)
 	new /obj/effect/temp_visual/telegraphing/exclamation/following(get_turf(owner), 2.5 SECONDS, owner)
 
@@ -533,7 +533,7 @@
 	if(!do_effects)
 		return
 
-	playsound(mob_doing_effects, 'sound/effects/explosion/explosion1.ogg', 40, 1)
+	playsound(mob_doing_effects, '../assets/sound/effects/explosion/explosion1.ogg', 40, 1)
 	var/obj/item/skybulge_item = target
 
 	for(var/atom/thing as anything in landed_on)

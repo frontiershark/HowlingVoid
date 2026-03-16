@@ -10,12 +10,12 @@
 	name = "\improper N-spect scanner"
 	desc = "Central Command standard issue inspection device. \
 		Used for precision scans to determine if an item contains, or is itself, contraband."
-	icon = 'icons/obj/devices/scanner.dmi'
+	icon = '../assets/icons/obj/devices/scanner.dmi'
 	icon_state = "inspector"
 	worn_icon_state = "salestagger"
 	inhand_icon_state = "electronic"
-	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/devices_righthand.dmi'
 	throwforce = 0
 	w_class = WEIGHT_CLASS_TINY
 	interaction_flags_click = NEED_DEXTERITY
@@ -102,11 +102,11 @@
 		return ITEM_INTERACT_BLOCKING
 
 	if(contraband_scan(interacting_with, user))
-		playsound(src, 'sound/machines/uplink/uplinkerror.ogg', 40)
+		playsound(src, '../assets/sound/machines/uplink/uplinkerror.ogg', 40)
 		balloon_alert(user, "contraband detected!")
 		return ITEM_INTERACT_SUCCESS
 
-	playsound(src, 'sound/machines/ping.ogg', 20)
+	playsound(src, '../assets/sound/machines/ping.ogg', 20)
 	balloon_alert(user, "clear")
 	return ITEM_INTERACT_SUCCESS
 

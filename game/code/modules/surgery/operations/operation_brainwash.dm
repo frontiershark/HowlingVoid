@@ -13,9 +13,9 @@
 		/obj/item/stack/cable_coil = 6.67,
 	)
 	time = 20 SECONDS
-	preop_sound = 'sound/items/handling/surgery/hemostat1.ogg'
-	success_sound = 'sound/items/handling/surgery/hemostat1.ogg'
-	failure_sound = 'sound/items/handling/surgery/organ2.ogg'
+	preop_sound = '../assets/sound/items/handling/surgery/hemostat1.ogg'
+	success_sound = '../assets/sound/items/handling/surgery/hemostat1.ogg'
+	failure_sound = '../assets/sound/items/handling/surgery/organ2.ogg'
 	operation_flags = OPERATION_MORBID | OPERATION_NOTABLE | OPERATION_LOCKED
 	target_type = /obj/item/organ/brain
 	required_organ_flag = ORGAN_TYPE_FLAGS & ~ORGAN_ROBOTIC
@@ -87,17 +87,17 @@
 		/obj/item/stack/package_wrap = 2.85,
 		/obj/item/stack/cable_coil = 6.67,
 	)
-	preop_sound = 'sound/items/taperecorder/tape_flip.ogg'
-	success_sound = 'sound/items/taperecorder/taperecorder_close.ogg'
+	preop_sound = '../assets/sound/items/taperecorder/tape_flip.ogg'
+	success_sound = '../assets/sound/items/taperecorder/taperecorder_close.ogg'
 	required_organ_flag = ORGAN_ROBOTIC
 	operation_flags = parent_type::operation_flags | OPERATION_MECHANIC
 
 /datum/surgery_operation/organ/brainwash/sleeper
 	name = "install sleeper agent directive"
 	rnd_name = "Sleeper Agent Implantation (Brainwash)"
-	preop_sound = 'sound/items/handling/surgery/hemostat1.ogg'
-	success_sound = 'sound/items/handling/surgery/hemostat1.ogg'
-	failure_sound = 'sound/items/handling/surgery/organ2.ogg'
+	preop_sound = '../assets/sound/items/handling/surgery/hemostat1.ogg'
+	success_sound = '../assets/sound/items/handling/surgery/hemostat1.ogg'
+	failure_sound = '../assets/sound/items/handling/surgery/organ2.ogg'
 
 	var/list/possible_objectives = list(
 		"You love the Syndicate.",
@@ -142,8 +142,8 @@
 		/obj/item/stack/package_wrap = 2.85,
 		/obj/item/stack/cable_coil = 6.67,
 	)
-	preop_sound = 'sound/items/taperecorder/tape_flip.ogg'
-	success_sound = 'sound/items/taperecorder/taperecorder_close.ogg'
+	preop_sound = '../assets/sound/items/taperecorder/tape_flip.ogg'
+	success_sound = '../assets/sound/items/taperecorder/taperecorder_close.ogg'
 	required_organ_flag = ORGAN_ROBOTIC
 	operation_flags = parent_type::operation_flags | OPERATION_MECHANIC
 

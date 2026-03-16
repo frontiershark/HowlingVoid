@@ -47,7 +47,7 @@
 
 /obj/item/clothing/accessory/spy_bug
 	name = "pocket protector"
-	icon = 'icons/obj/clothing/accessories.dmi'
+	icon = '../assets/icons/obj/clothing/accessories.dmi'
 	icon_state = "pocketprotector"
 	desc = "An advanced piece of espionage equipment in the shape of a pocket protector. It has a built in 360 degree camera for all your \"admirable\" needs. Microphone not included."
 	/// The glasses that you can use to see what this can see

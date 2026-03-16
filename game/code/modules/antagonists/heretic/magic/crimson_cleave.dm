@@ -4,9 +4,9 @@
 		It cleanses you of all wounds as well."
 	background_icon_state = "bg_heretic"
 	overlay_icon_state = "bg_heretic_border"
-	button_icon = 'icons/mob/actions/actions_ecult.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_ecult.dmi'
 	button_icon_state = "blood_siphon"
-	ranged_mousepointer = 'icons/effects/mouse_pointers/throw_target.dmi'
+	ranged_mousepointer = '../assets/icons/effects/mouse_pointers/throw_target.dmi'
 
 	school = SCHOOL_FORBIDDEN
 	cooldown_time = 30 SECONDS

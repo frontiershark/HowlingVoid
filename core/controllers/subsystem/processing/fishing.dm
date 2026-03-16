@@ -26,7 +26,7 @@ PROCESSING_SUBSYSTEM_DEF(fishing)
 	fish_properties = list()
 	catchable_fish = list()
 
-	var/icon/questionmark = icon('icons/effects/random_spawners.dmi', "questionmark")
+	var/icon/questionmark = icon('../assets/icons/effects/random_spawners.dmi', "questionmark")
 	var/list/mark_dimension = get_icon_dimensions(questionmark)
 	var/list/spawned_fish = list()
 	var/list/fish_subtypes = sortTim(subtypesof(/obj/item/fish), GLOBAL_PROC_REF(cmp_init_name_asc))

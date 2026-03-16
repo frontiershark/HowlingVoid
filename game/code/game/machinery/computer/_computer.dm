@@ -1,6 +1,6 @@
 /obj/machinery/computer
 	name = "computer"
-	icon = 'icons/obj/machines/computer.dmi'
+	icon = '../assets/icons/obj/machines/computer.dmi'
 	icon_state = "computer"
 	density = TRUE
 	max_integrity = 200
@@ -97,18 +97,18 @@
 	switch(damage_type)
 		if(BRUTE)
 			if(machine_stat & BROKEN)
-				playsound(src.loc, 'sound/effects/hit_on_shattered_glass.ogg', 70, TRUE)
+				playsound(src.loc, '../assets/sound/effects/hit_on_shattered_glass.ogg', 70, TRUE)
 			else
-				playsound(src.loc, 'sound/effects/glass/glasshit.ogg', 75, TRUE)
+				playsound(src.loc, '../assets/sound/effects/glass/glasshit.ogg', 75, TRUE)
 		if(BURN)
-			playsound(src.loc, 'sound/items/tools/welder.ogg', 100, TRUE)
+			playsound(src.loc, '../assets/sound/items/tools/welder.ogg', 100, TRUE)
 
 /obj/machinery/computer/atom_break(damage_flag)
 	if(!circuit) //no circuit, no breaking
 		return
 	. = ..()
 	if(.)
-		playsound(loc, 'sound/effects/glass/glassbr3.ogg', 100, TRUE)
+		playsound(loc, '../assets/sound/effects/glass/glassbr3.ogg', 100, TRUE)
 		set_light(0)
 
 /obj/machinery/computer/proc/imprint_gps(gps_tag) // Currently used by the upload computers and communications console
@@ -148,7 +148,7 @@
 
 	if((machine_stat & BROKEN) || !disassembled)
 		var/atom/drop_loc = drop_location()
-		playsound(src, 'sound/effects/hit_on_shattered_glass.ogg', 70, TRUE)
+		playsound(src, '../assets/sound/effects/hit_on_shattered_glass.ogg', 70, TRUE)
 		new /obj/item/shard(drop_loc)
 		new /obj/item/shard(drop_loc)
 		new_frame.state = FRAME_COMPUTER_STATE_WIRED

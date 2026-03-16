@@ -28,4 +28,4 @@
 	else
 		card.registered_account.account_balance = card.registered_account.account_balance - new_cost
 		card.registered_account.bank_card_talk("[new_cost] [MONEY_NAME] deducted from your account based on performance review.")
-	SEND_SOUND(target, 'sound/machines/buzz/buzz-sigh.ogg')
+	SEND_SOUND(target, '../assets/sound/machines/buzz/buzz-sigh.ogg')

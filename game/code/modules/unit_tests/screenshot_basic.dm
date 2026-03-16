@@ -3,6 +3,6 @@
 /datum/unit_test/screenshot_basic
 
 /datum/unit_test/screenshot_basic/Run()
-	var/icon/red = icon('icons/blanks/32x32.dmi', "nothing")
+	var/icon/red = icon('../assets/icons/blanks/32x32.dmi', "nothing")
 	red.Blend(COLOR_RED, ICON_OVERLAY)
 	test_screenshot("red", red)

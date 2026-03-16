@@ -16,7 +16,7 @@ again.
 //normal windows
 
 /obj/effect/spawner/structure/window
-	icon = 'icons/obj/structures_spawners.dmi'
+	icon = '../assets/icons/obj/structures_spawners.dmi'
 	icon_state = "window_spawner"
 	name = "window spawner"
 	spawn_list = list(/obj/structure/grille, /obj/structure/window/fulltile)
@@ -372,7 +372,7 @@ again.
 
 /obj/effect/spawner/structure/electrified_grille
 	name = "electrified grille spawner"
-	icon = 'icons/obj/structures_spawners.dmi'
+	icon = '../assets/icons/obj/structures_spawners.dmi'
 	icon_state = "electrified_grille"
 	spawn_list = list(/obj/structure/grille, /obj/structure/cable)
 
@@ -384,7 +384,7 @@ again.
 ///flipped tables
 /obj/effect/spawner/structure/flipped_table
 	name = "flipped table spawner"
-	icon = 'icons/obj/flipped_tables.dmi'
+	icon = '../assets/icons/obj/flipped_tables.dmi'
 	icon_state = "table"
 	///just change this whatever table type you want, has to be a table subtype though.
 	var/table_to_spawn = /obj/structure/table

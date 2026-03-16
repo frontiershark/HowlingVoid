@@ -31,13 +31,13 @@
 	ADD_KEEP_TOGETHER(as_item, type)
 	var/scale_factor_x = as_item.get_cached_width() / ICON_SIZE_X
 	var/scale_factor_y = as_item.get_cached_height() / ICON_SIZE_Y
-	var/mutable_appearance/blood_splatter = mutable_appearance('icons/effects/blood.dmi', "itemblood", appearance_flags = RESET_COLOR) //MA of the blood that we apply
+	var/mutable_appearance/blood_splatter = mutable_appearance('../assets/icons/effects/blood.dmi', "itemblood", appearance_flags = RESET_COLOR) //MA of the blood that we apply
 	blood_splatter.transform = blood_splatter.transform.Scale(scale_factor_x, scale_factor_y)
 	blood_splatter.blend_mode = BLEND_INSET_OVERLAY
 	blood_splatter.color = _color
 	var/mutable_appearance/emissive_splatter = null
 	if (emissive_alpha)
-		emissive_splatter = emissive_appearance('icons/effects/blood.dmi', "itemblood", as_item, alpha = emissive_alpha, effect_type = EMISSIVE_NO_BLOOM)
+		emissive_splatter = emissive_appearance('../assets/icons/effects/blood.dmi', "itemblood", as_item, alpha = emissive_alpha, effect_type = EMISSIVE_NO_BLOOM)
 		emissive_splatter.blend_mode = BLEND_INSET_OVERLAY
 	if (uses_filter)
 		blood_splatter.appearance_flags |= KEEP_APART

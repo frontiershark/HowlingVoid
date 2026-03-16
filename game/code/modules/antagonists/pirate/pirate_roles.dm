@@ -4,7 +4,7 @@
 /obj/effect/mob_spawn/ghost_role/human/pirate
 	name = "space pirate sleeper"
 	desc = "A cryo sleeper smelling faintly of rum."
-	icon = 'icons/obj/machines/sleeper.dmi'
+	icon = '../assets/icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
 	prompt_name = "a space pirate"
 	outfit = /datum/outfit/pirate/space
@@ -52,7 +52,7 @@
 	name = "pirate remains"
 	desc = "Some inanimate bones. They feel like they could spring to life at any moment!"
 	density = FALSE
-	icon = 'icons/effects/blood.dmi'
+	icon = '../assets/icons/effects/blood.dmi'
 	icon_state = "remains"
 	prompt_name = "a skeleton pirate"
 	mob_species = /datum/species/skeleton
@@ -71,7 +71,7 @@
 /obj/effect/mob_spawn/ghost_role/human/pirate/silverscale
 	name = "elegant sleeper"
 	desc = "Cozy. You get the feeling you aren't supposed to be here, though..."
-	icon = 'icons/obj/machines/sleeper.dmi'
+	icon = '../assets/icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
 	prompt_name = "a silverscale"
 	mob_species = /datum/species/lizard/silverscale
@@ -104,7 +104,7 @@
 	density = FALSE
 	you_are_text = "You are an Ex-Interdyne pharmacyst now turned space pirate."
 	flavour_text = "The station has refused to fund your research, so you will 'convince' them to donate to your charitable cause."
-	icon = 'icons/obj/machines/sleeper.dmi'
+	icon = '../assets/icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
 	prompt_name = "An Ex-Interdyne employee"
 	outfit = /datum/outfit/pirate/interdyne
@@ -135,7 +135,7 @@
 	density = FALSE
 	you_are_text = "You used to be a Nanotrasen assistant, until a riot gone awry. Now you wander space, ransacking any ships you come across!"
 	flavour_text = "There's nothing a toolbox can't whack in the head enough times to spill blood, or in this case money. Loot everything!"
-	icon = 'icons/obj/machines/sleeper.dmi'
+	icon = '../assets/icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
 	prompt_name = "An assistant gone loose"
 	outfit = /datum/outfit/pirate/grey
@@ -150,7 +150,7 @@
 	density = FALSE
 	you_are_text = "You are an agent working for the space IRS"
 	flavour_text = "Not even in the expanse of the expanding universe can someone evade the tax man! Whether you are just a well disciplined and professional pirate gang or an actual agent from a local polity. You will squeeze the station dry of its income regardless! Through peaceful means or otherwise..."
-	icon = 'icons/obj/machines/sleeper.dmi'
+	icon = '../assets/icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
 	prompt_name = "An agent of the space IRS"
 	outfit = /datum/outfit/pirate/irs
@@ -180,7 +180,7 @@
 	density = FALSE
 	you_are_text = "Once you were a proud Ethereal, now all that remains is your hunger for the precious bluespace crystal."
 	flavour_text = "The station has denied you your bluespace crystals, the sweet ambrosia of the fifth-dimension. Strike the earth!"
-	icon = 'icons/mob/effects/ethereal_crystal.dmi'
+	icon = '../assets/icons/mob/effects/ethereal_crystal.dmi'
 	icon_state = "ethereal_crystal"
 	fluff_spawn = null
 	prompt_name = "a geode dweller"
@@ -202,7 +202,7 @@
 	density = FALSE
 	you_are_text = "You were a nobody before, until you were given a sword and the opportunity to rise up in ranks. If you put some effort, you can make it big!"
 	flavour_text = "Raiding some cretins while engaging in bloodsport and violence? what a deal. Stay together and pillage everything!"
-	icon = 'icons/obj/medical/bodybag.dmi'
+	icon = '../assets/icons/obj/medical/bodybag.dmi'
 	icon_state = "bodybag"
 	fluff_spawn = null
 	prompt_name = "a medieval warmonger"

@@ -118,7 +118,7 @@
 
 	user.visible_message(span_notice("[user.name] starts addding cables to the APC frame."))
 	balloon_alert(user, "adding cables...")
-	playsound(src, 'sound/items/deconstruct.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/deconstruct.ogg', 50, TRUE)
 
 	if(!do_after(user, 2 SECONDS, target = src))
 		return ITEM_INTERACT_BLOCKING
@@ -151,7 +151,7 @@
 
 	user.visible_message(span_notice("[user.name] inserts the power control board into [src]."))
 	balloon_alert(user, "inserting the board...")
-	playsound(loc, 'sound/items/deconstruct.ogg', 50, TRUE)
+	playsound(loc, '../assets/sound/items/deconstruct.ogg', 50, TRUE)
 
 	if(!do_after(user, 1 SECONDS, target = src) || has_electronics)
 		return ITEM_INTERACT_BLOCKING

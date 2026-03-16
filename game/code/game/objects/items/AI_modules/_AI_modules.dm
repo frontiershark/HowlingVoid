@@ -3,11 +3,11 @@
 
 /obj/item/ai_module
 	name = "\improper AI module"
-	icon = 'icons/obj/devices/circuitry_n_data.dmi'
+	icon = '../assets/icons/obj/devices/circuitry_n_data.dmi'
 	icon_state = "std_mod"
 	inhand_icon_state = "electronic"
-	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/devices_righthand.dmi'
 	desc = "An AI Module for programming laws to an AI."
 	obj_flags = CONDUCTS_ELECTRICITY
 	force = 5
@@ -164,7 +164,7 @@
 
 /obj/effect/spawner/round_default_module
 	name = "ai default lawset spawner"
-	icon = 'icons/hud/screen_gen.dmi'
+	icon = '../assets/icons/hud/screen_gen.dmi'
 	icon_state = "x2"
 	color = COLOR_VIBRANT_LIME
 

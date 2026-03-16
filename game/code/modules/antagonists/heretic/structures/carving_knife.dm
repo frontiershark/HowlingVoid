@@ -3,7 +3,7 @@
 	name = "carving knife"
 	desc = "A small knife made of cold steel, pure and perfect. Its sharpness can carve into titanium itself - \
 		but only few can evoke the dangers that lurk beneath reality."
-	icon = 'icons/obj/antags/eldritch.dmi'
+	icon = '../assets/icons/obj/antags/eldritch.dmi'
 	icon_state = "rune_carver"
 	icon_angle = -45
 	obj_flags = CONDUCTS_ELECTRICITY
@@ -12,7 +12,7 @@
 	wound_bonus = 20
 	force = 10
 	throwforce = 20
-	hitsound = 'sound/items/weapons/bladeslice.ogg'
+	hitsound = '../assets/sound/items/weapons/bladeslice.ogg'
 	attack_verb_continuous = list("attacks", "slashes", "slices", "tears", "lacerates", "rips", "dices", "rends")
 	attack_verb_simple = list("attack", "slash", "slice", "tear", "lacerate", "rip", "dice", "rend")
 	actions_types = list(/datum/action/item_action/rune_shatter)
@@ -117,7 +117,7 @@
 		CRASH("[type] attempted to create a rune of incorrect type! (got: [to_make])")
 
 	target_turf.balloon_alert(user, "carving [picked_choice]...")
-	user.playsound_local(target_turf, 'sound/items/sheath.ogg', 50, TRUE)
+	user.playsound_local(target_turf, '../assets/sound/items/sheath.ogg', 50, TRUE)
 	if(!do_after(user, 5 SECONDS, target = target_turf))
 		target_turf.balloon_alert(user, "interrupted!")
 		return
@@ -132,7 +132,7 @@
 	background_icon_state = "bg_heretic"
 	overlay_icon_state = "bg_heretic_border"
 	button_icon_state = "rune_break"
-	button_icon = 'icons/mob/actions/actions_ecult.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_ecult.dmi'
 
 /datum/action/item_action/rune_shatter/New(Target)
 	. = ..()
@@ -157,7 +157,7 @@
 		return FALSE
 
 /datum/action/item_action/rune_shatter/do_effect(trigger_flags)
-	owner.playsound_local(get_turf(owner), 'sound/effects/magic/blind.ogg', 50, TRUE)
+	owner.playsound_local(get_turf(owner), '../assets/sound/effects/magic/blind.ogg', 50, TRUE)
 	var/obj/item/melee/rune_carver/target_sword = target
 	QDEL_LIST(target_sword.current_runes)
 	target_sword.SpinAnimation(5, 1)
@@ -167,7 +167,7 @@
 /obj/structure/trap/eldritch
 	name = "elder carving"
 	desc = "Collection of unknown symbols, they remind you of days long gone..."
-	icon = 'icons/obj/service/hand_of_god_structures.dmi'
+	icon = '../assets/icons/obj/service/hand_of_god_structures.dmi'
 	max_integrity = 60
 	/// A tip displayed to heretics who examine the rune carver. Explains what the rune does.
 	var/carver_tip
@@ -192,7 +192,7 @@
 /obj/structure/trap/eldritch/item_interaction(mob/living/user, obj/item/tool, list/modifiers)
 	if(istype(tool, /obj/item/melee/rune_carver) || HAS_TRAIT(tool, TRAIT_NULLROD_ITEM))
 		loc.balloon_alert(user, "carving dispelled")
-		playsound(src, 'sound/items/sheath.ogg', 50, TRUE, SHORT_RANGE_SOUND_EXTRARANGE, ignore_walls = FALSE)
+		playsound(src, '../assets/sound/items/sheath.ogg', 50, TRUE, SHORT_RANGE_SOUND_EXTRARANGE, ignore_walls = FALSE)
 		qdel(src)
 		return ITEM_INTERACT_SUCCESS
 
@@ -210,7 +210,7 @@
 	var/mob/living/real_owner = owner?.resolve()
 	if(real_owner)
 		to_chat(real_owner, span_userdanger("[victim.real_name] has stepped foot on the alert rune in [get_area(src)]!"))
-		real_owner.playsound_local(get_turf(real_owner), 'sound/effects/magic/curse.ogg', 50, TRUE)
+		real_owner.playsound_local(get_turf(real_owner), '../assets/sound/effects/magic/curse.ogg', 50, TRUE)
 
 /obj/structure/trap/eldritch/tentacle
 	name = "grasping carving"
@@ -226,7 +226,7 @@
 	carbon_victim.Paralyze(5 SECONDS)
 	carbon_victim.apply_damage(20, BRUTE, BODY_ZONE_R_LEG)
 	carbon_victim.apply_damage(20, BRUTE, BODY_ZONE_L_LEG)
-	playsound(src, 'sound/effects/magic/demon_attack1.ogg', 75, TRUE)
+	playsound(src, '../assets/sound/effects/magic/demon_attack1.ogg', 75, TRUE)
 
 /obj/structure/trap/eldritch/mad
 	name = "mad carving"
@@ -247,4 +247,4 @@
 	carbon_victim.set_dizzy_if_lower(40 SECONDS)
 	carbon_victim.adjust_temp_blindness(4 SECONDS)
 	carbon_victim.add_mood_event("gates_of_mansus", /datum/mood_event/gates_of_mansus)
-	playsound(src, 'sound/effects/magic/blind.ogg', 75, TRUE)
+	playsound(src, '../assets/sound/effects/magic/blind.ogg', 75, TRUE)

@@ -6,15 +6,15 @@
 
 // The default UI style is the first one in the list
 GLOBAL_LIST_INIT(available_ui_styles, list(
-	"Midnight" = 'icons/hud/screen_midnight.dmi',
-	"Retro" = 'icons/hud/screen_retro.dmi',
-	"Plasmafire" = 'icons/hud/screen_plasmafire.dmi',
-	"Slimecore" = 'icons/hud/screen_slimecore.dmi',
-	"Operative" = 'icons/hud/screen_operative.dmi',
-	"Clockwork" = 'icons/hud/screen_clockwork.dmi',
-	"Glass" = 'icons/hud/screen_glass.dmi',
-	"Trasen-Knox" = 'icons/hud/screen_trasenknox.dmi',
-	"Detective" = 'icons/hud/screen_detective.dmi',
+	"Midnight" = '../assets/icons/hud/screen_midnight.dmi',
+	"Retro" = '../assets/icons/hud/screen_retro.dmi',
+	"Plasmafire" = '../assets/icons/hud/screen_plasmafire.dmi',
+	"Slimecore" = '../assets/icons/hud/screen_slimecore.dmi',
+	"Operative" = '../assets/icons/hud/screen_operative.dmi',
+	"Clockwork" = '../assets/icons/hud/screen_clockwork.dmi',
+	"Glass" = '../assets/icons/hud/screen_glass.dmi',
+	"Trasen-Knox" = '../assets/icons/hud/screen_trasenknox.dmi',
+	"Detective" = '../assets/icons/hud/screen_detective.dmi',
 ))
 
 //NOVA EDIT - ADDITION - ERP ICONS FIX

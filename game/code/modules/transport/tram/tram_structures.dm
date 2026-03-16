@@ -22,7 +22,7 @@
 /obj/structure/tram
 	name = "tram wall"
 	desc = "A lightweight titanium composite structure with titanium silicate panels."
-	icon = 'icons/obj/tram/tram_structure.dmi'
+	icon = '../assets/icons/obj/tram/tram_structure.dmi'
 	icon_state = "tram-part-0"
 	base_icon_state = "tram-part"
 	max_integrity = 150
@@ -54,9 +54,9 @@
 	/// Sound when it breaks
 	var/break_sound = SFX_SHATTER
 	/// Sound when hit without combat mode
-	var/knock_sound = 'sound/effects/glass/glassknock.ogg'
+	var/knock_sound = '../assets/sound/effects/glass/glassknock.ogg'
 	/// Sound when hit with combat mode
-	var/bash_sound = 'sound/effects/glass/glassbash.ogg'
+	var/bash_sound = '../assets/sound/effects/glass/glassbash.ogg'
 
 /obj/structure/tram/split
 	base_icon_state = "tram-split"
@@ -108,7 +108,7 @@
 	if(ratio > 75)
 		return
 
-	damage_overlay = mutable_appearance('icons/obj/structures.dmi', "damage[ratio]", -(layer + 0.1))
+	damage_overlay = mutable_appearance('../assets/icons/obj/structures.dmi', "damage[ratio]", -(layer + 0.1))
 	. += damage_overlay
 
 /obj/structure/tram/attack_hand(mob/living/user, list/modifiers)
@@ -226,7 +226,7 @@
 /obj/structure/tram/alt/titanium
 	name = "solid tram"
 	desc = "A lightweight titanium composite structure. There is further solid plating where the panels usually attach to the frame."
-	icon = 'icons/turf/walls/shuttle_wall.dmi'
+	icon = '../assets/icons/turf/walls/shuttle_wall.dmi'
 	icon_state = "shuttle_wall-0"
 	base_icon_state = "shuttle_wall"
 	mineral = /obj/item/stack/sheet/mineral/titanium
@@ -238,7 +238,7 @@
 /obj/structure/tram/alt/plastitanium
 	name = "reinforced tram"
 	desc = "An evil tram of plasma and titanium."
-	icon = 'icons/turf/walls/plastitanium_wall.dmi'
+	icon = '../assets/icons/turf/walls/plastitanium_wall.dmi'
 	icon_state = "plastitanium_wall-0"
 	base_icon_state = "plastitanium_wall"
 	mineral = /obj/item/stack/sheet/mineral/plastitanium
@@ -250,7 +250,7 @@
 /obj/structure/tram/alt/gold
 	name = "gold tram"
 	desc = "A solid gold tram. Swag!"
-	icon = 'icons/turf/walls/gold_wall.dmi'
+	icon = '../assets/icons/turf/walls/gold_wall.dmi'
 	icon_state = "gold_wall-0"
 	base_icon_state = "gold_wall"
 	mineral = /obj/item/stack/sheet/mineral/gold
@@ -263,7 +263,7 @@
 /obj/structure/tram/alt/silver
 	name = "silver tram"
 	desc = "A solid silver tram. Shiny!"
-	icon = 'icons/turf/walls/silver_wall.dmi'
+	icon = '../assets/icons/turf/walls/silver_wall.dmi'
 	icon_state = "silver_wall-0"
 	base_icon_state = "silver_wall"
 	mineral = /obj/item/stack/sheet/mineral/silver
@@ -276,7 +276,7 @@
 /obj/structure/tram/alt/diamond
 	name = "diamond tram"
 	desc = "A composite structure with diamond-plated panels. Looks awfully sharp..."
-	icon = 'icons/turf/walls/diamond_wall.dmi'
+	icon = '../assets/icons/turf/walls/diamond_wall.dmi'
 	icon_state = "diamond_wall-0"
 	base_icon_state = "diamond_wall"
 	mineral = /obj/item/stack/sheet/mineral/diamond
@@ -291,7 +291,7 @@
 /obj/structure/tram/alt/bananium
 	name = "bananium tram"
 	desc = "A composite structure with bananium plating. Honk!"
-	icon = 'icons/turf/walls/bananium_wall.dmi'
+	icon = '../assets/icons/turf/walls/bananium_wall.dmi'
 	icon_state = "bananium_wall-0"
 	base_icon_state = "bananium_wall"
 	mineral = /obj/item/stack/sheet/mineral/bananium
@@ -304,7 +304,7 @@
 /obj/structure/tram/alt/sandstone
 	name = "sandstone tram"
 	desc = "A composite structure with sandstone plating. Rough."
-	icon = 'icons/turf/walls/sandstone_wall.dmi'
+	icon = '../assets/icons/turf/walls/sandstone_wall.dmi'
 	icon_state = "sandstone_wall-0"
 	base_icon_state = "sandstone_wall"
 	mineral = /obj/item/stack/sheet/mineral/sandstone
@@ -319,7 +319,7 @@
 	article = "a"
 	name = "uranium tram"
 	desc = "A composite structure with uranium plating. This is probably a bad idea."
-	icon = 'icons/turf/walls/uranium_wall.dmi'
+	icon = '../assets/icons/turf/walls/uranium_wall.dmi'
 	icon_state = "uranium_wall-0"
 	base_icon_state = "uranium_wall"
 	mineral = /obj/item/stack/sheet/mineral/uranium
@@ -364,7 +364,7 @@
 /obj/structure/tram/alt/plasma
 	name = "plasma tram"
 	desc = "A composite structure with plasma plating. This is definitely a bad idea."
-	icon = 'icons/turf/walls/plasma_wall.dmi'
+	icon = '../assets/icons/turf/walls/plasma_wall.dmi'
 	icon_state = "plasma_wall-0"
 	base_icon_state = "plasma_wall"
 	mineral = /obj/item/stack/sheet/mineral/plasma
@@ -377,7 +377,7 @@
 /obj/structure/tram/alt/wood
 	name = "wooden tram"
 	desc = "A tram with wooden framing. Flammable. There's a reason we use metal now."
-	icon = 'icons/turf/walls/wood_wall.dmi'
+	icon = '../assets/icons/turf/walls/wood_wall.dmi'
 	icon_state = "wood_wall-0"
 	base_icon_state = "wood_wall"
 	mineral = /obj/item/stack/sheet/mineral/wood
@@ -401,7 +401,7 @@
 /obj/structure/tram/alt/bamboo
 	name = "bamboo tram"
 	desc = "A tram with a bamboo framing."
-	icon = 'icons/turf/walls/bamboo_wall.dmi'
+	icon = '../assets/icons/turf/walls/bamboo_wall.dmi'
 	icon_state = "bamboo_wall-0"
 	base_icon_state = "wall"
 	smoothing_flags = SMOOTH_BITMASK
@@ -413,7 +413,7 @@
 /obj/structure/tram/alt/iron
 	name = "rough iron tram"
 	desc = "A composite structure with rough iron plating."
-	icon = 'icons/turf/walls/iron_wall.dmi'
+	icon = '../assets/icons/turf/walls/iron_wall.dmi'
 	icon_state = "iron_wall-0"
 	base_icon_state = "iron_wall"
 	mineral = /obj/item/stack/rods
@@ -427,7 +427,7 @@
 /obj/structure/tram/alt/abductor
 	name = "alien tram"
 	desc = "A composite structure made of some kind of alien alloy."
-	icon = 'icons/turf/walls/abductor_wall.dmi'
+	icon = '../assets/icons/turf/walls/abductor_wall.dmi'
 	icon_state = "abductor_wall-0"
 	base_icon_state = "abductor_wall"
 	mineral = /obj/item/stack/sheet/mineral/abductor
@@ -443,7 +443,7 @@
 
 /obj/structure/tram/spoiler
 	name = "tram spoiler"
-	icon = 'icons/obj/tram/tram_structure.dmi'
+	icon = '../assets/icons/obj/tram/tram_structure.dmi'
 	desc = "Nanotrasen bought the luxury package under the impression titanium spoilers make the tram go faster. They're just for looks, or potentially stabbing anybody who gets in the way."
 	icon_state = "tram-spoiler-retracted"
 	max_integrity = 400

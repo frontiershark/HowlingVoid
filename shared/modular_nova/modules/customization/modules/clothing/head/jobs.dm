@@ -3,7 +3,7 @@
 /obj/item/clothing/head/hats/hos/beret
 	name = "head of security beret"
 	desc = "A robust beret for the Head of Security, for looking stylish while not sacrificing protection."
-	icon = 'icons/map_icons/clothing/head/_head.dmi'
+	icon = '../assets/icons/map_icons/clothing/head/_head.dmi'
 	icon_state = "/obj/item/clothing/head/hats/hos/beret"
 	post_init_icon_state = "beret_badge"
 	greyscale_config = /datum/greyscale_config/beret_badge
@@ -171,7 +171,7 @@
 /obj/item/clothing/head/hopcap/beret
 	name = "head of personnel's beret"
 	desc = "A fancy beret designed by NT's Personnel division for their favorite head's head."
-	icon = 'icons/map_icons/clothing/head/_head.dmi'
+	icon = '../assets/icons/map_icons/clothing/head/_head.dmi'
 	icon_state = "/obj/item/clothing/head/hopcap/beret"
 	post_init_icon_state = "beret_badge"
 	greyscale_config = /datum/greyscale_config/beret_badge

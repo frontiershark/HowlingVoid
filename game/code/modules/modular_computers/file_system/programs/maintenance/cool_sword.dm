@@ -11,7 +11,7 @@
 	program_open_overlay = "generic"
 
 	/// What icon to use for the mouse pointer?
-	var/sword_icon = 'icons/effects/mouse_pointers/cool_sword.dmi'
+	var/sword_icon = '../assets/icons/effects/mouse_pointers/cool_sword.dmi'
 
 /datum/computer_file/program/maintenance/cool_sword/New()
 	. = ..()

@@ -168,7 +168,7 @@
 		R.visible_message(span_notice("[chap] charges [R] with the power of [GLOB.deity]!"))
 		to_chat(R, span_boldnotice("You are charged by the power of [GLOB.deity]!"))
 		R.add_mood_event("blessing", /datum/mood_event/blessing)
-		playsound(chap, 'sound/effects/bang.ogg', 25, TRUE, -1)
+		playsound(chap, '../assets/sound/effects/bang.ogg', 25, TRUE, -1)
 		return BLESSING_SUCCESS
 
 	if(!ishuman(target))
@@ -193,7 +193,7 @@
 		blessed.visible_message(span_notice("[chap] charges [blessed] with the power of [GLOB.deity]!"))
 		to_chat(blessed, span_boldnotice("You feel charged by the power of [GLOB.deity]!"))
 		blessed.add_mood_event("blessing", /datum/mood_event/blessing)
-		playsound(chap, 'sound/machines/synth/synth_yes.ogg', 25, TRUE, -1)
+		playsound(chap, '../assets/sound/machines/synth/synth_yes.ogg', 25, TRUE, -1)
 		return BLESSING_SUCCESS
 
 	//charge(?) and go
@@ -202,7 +202,7 @@
 
 	blessed.visible_message(span_notice("[chap] [did_we_charge ? "repairs and charges" : "repairs"] [blessed] with the power of [GLOB.deity]!"))
 	to_chat(blessed, span_boldnotice("The inner machinations of [GLOB.deity] [did_we_charge ? "repairs and charges" : "repairs"] you!"))
-	playsound(chap, 'sound/effects/bang.ogg', 25, TRUE, -1)
+	playsound(chap, '../assets/sound/effects/bang.ogg', 25, TRUE, -1)
 	blessed.add_mood_event("blessing", /datum/mood_event/blessing)
 	return BLESSING_SUCCESS
 
@@ -297,7 +297,7 @@
 
 	blessed.visible_message(span_notice("[chap] barters a heal for [blessed] from [GLOB.deity]!"))
 	to_chat(blessed, span_boldnotice("May the power of [GLOB.deity] compel you to be healed! Thank you for choosing [GLOB.deity]!"))
-	playsound(chap, 'sound/effects/cashregister.ogg', 60, TRUE)
+	playsound(chap, '../assets/sound/effects/cashregister.ogg', 60, TRUE)
 	blessed.add_mood_event("blessing", /datum/mood_event/blessing)
 	return BLESSING_SUCCESS
 
@@ -466,7 +466,7 @@
 		return
 	to_chat(user, span_notice("[GLOB.deity] loves organic slurry."))
 	adjust_favor(favor_earned, user)
-	playsound(get_turf(offering), 'sound/items/drink.ogg', 50, TRUE)
+	playsound(get_turf(offering), '../assets/sound/items/drink.ogg', 50, TRUE)
 	offering.reagents.clear_reagents()
 	return TRUE
 

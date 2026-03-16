@@ -3,7 +3,7 @@ GLOBAL_LIST_EMPTY(total_extraction_beacons)
 /obj/item/extraction_pack
 	name = "fulton extraction pack"
 	desc = "A balloon that can be used to extract equipment or personnel to a Fulton Recovery Beacon. Anything not bolted down can be moved. Link the pack to a beacon by using the pack in hand."
-	icon = 'icons/obj/fulton.dmi'
+	icon = '../assets/icons/obj/fulton.dmi'
 	icon_state = "extraction_pack"
 	w_class = WEIGHT_CLASS_NORMAL
 	/// Beacon weakref
@@ -87,7 +87,7 @@ GLOBAL_LIST_EMPTY(total_extraction_beacons)
 		balloon_alert(user, "too heavy!")
 		return ITEM_INTERACT_BLOCKING
 	balloon_alert_to_viewers("attaching...")
-	playsound(thing, 'sound/items/zip/zip.ogg', vol = 50, vary = TRUE)
+	playsound(thing, '../assets/sound/items/zip/zip.ogg', vol = 50, vary = TRUE)
 	if(isliving(thing))
 		var/mob/living/creature = thing
 		if(creature.mind)
@@ -118,18 +118,18 @@ GLOBAL_LIST_EMPTY(total_extraction_beacons)
 	var/obj/effect/extraction_holder/holder_obj = new(get_turf(thing))
 	holder_obj.appearance = thing.appearance
 	thing.forceMove(holder_obj)
-	var/mutable_appearance/balloon2 = mutable_appearance('icons/effects/fulton_balloon.dmi', "fulton_expand", layer = VEHICLE_LAYER, appearance_flags = RESET_COLOR | RESET_ALPHA | RESET_TRANSFORM | KEEP_APART)
+	var/mutable_appearance/balloon2 = mutable_appearance('../assets/icons/effects/fulton_balloon.dmi', "fulton_expand", layer = VEHICLE_LAYER, appearance_flags = RESET_COLOR | RESET_ALPHA | RESET_TRANSFORM | KEEP_APART)
 	balloon2.pixel_z = 10
 	holder_obj.add_overlay(balloon2)
 	addtimer(CALLBACK(src, PROC_REF(create_balloon), thing, user, holder_obj, balloon2), 0.4 SECONDS)
 	return ITEM_INTERACT_SUCCESS
 
 /obj/item/extraction_pack/proc/create_balloon(atom/movable/thing, mob/living/user, obj/effect/extraction_holder/holder_obj, mutable_appearance/balloon2)
-	var/mutable_appearance/balloon = mutable_appearance('icons/effects/fulton_balloon.dmi', "fulton_balloon", layer = VEHICLE_LAYER, appearance_flags = RESET_COLOR | RESET_ALPHA | RESET_TRANSFORM | KEEP_APART)
+	var/mutable_appearance/balloon = mutable_appearance('../assets/icons/effects/fulton_balloon.dmi', "fulton_balloon", layer = VEHICLE_LAYER, appearance_flags = RESET_COLOR | RESET_ALPHA | RESET_TRANSFORM | KEEP_APART)
 	balloon.pixel_z = 10
 	holder_obj.cut_overlay(balloon2)
 	holder_obj.add_overlay(balloon)
-	playsound(holder_obj.loc, 'sound/items/fulton/fultext_deploy.ogg', vol = 50, vary = TRUE, extrarange = -3)
+	playsound(holder_obj.loc, '../assets/sound/items/fulton/fultext_deploy.ogg', vol = 50, vary = TRUE, extrarange = -3)
 
 	animate(holder_obj, pixel_z = 10, time = 2 SECONDS, flags = ANIMATION_RELATIVE)
 	animate(pixel_z = 5, time = 1 SECONDS, flags = ANIMATION_RELATIVE)
@@ -139,7 +139,7 @@ GLOBAL_LIST_EMPTY(total_extraction_beacons)
 
 	sleep(6 SECONDS)
 
-	playsound(holder_obj.loc, 'sound/items/fulton/fultext_launch.ogg', vol = 50, vary = TRUE, extrarange = -3)
+	playsound(holder_obj.loc, '../assets/sound/items/fulton/fultext_launch.ogg', vol = 50, vary = TRUE, extrarange = -3)
 	animate(holder_obj, pixel_z = 1000, time = 3 SECONDS, flags = ANIMATION_RELATIVE)
 
 	if(ishuman(thing))
@@ -167,7 +167,7 @@ GLOBAL_LIST_EMPTY(total_extraction_beacons)
 
 	sleep(7 SECONDS)
 
-	var/mutable_appearance/balloon3 = mutable_appearance('icons/effects/fulton_balloon.dmi', "fulton_retract", layer = VEHICLE_LAYER, appearance_flags = RESET_COLOR | RESET_ALPHA | RESET_TRANSFORM | KEEP_APART)
+	var/mutable_appearance/balloon3 = mutable_appearance('../assets/icons/effects/fulton_balloon.dmi', "fulton_retract", layer = VEHICLE_LAYER, appearance_flags = RESET_COLOR | RESET_ALPHA | RESET_TRANSFORM | KEEP_APART)
 	balloon3.pixel_z = 10
 	holder_obj.cut_overlay(balloon)
 	holder_obj.add_overlay(balloon3)
@@ -189,7 +189,7 @@ GLOBAL_LIST_EMPTY(total_extraction_beacons)
 /obj/item/fulton_core
 	name = "extraction beacon assembly kit"
 	desc = "When built, emits a signal which fulton recovery devices can lock onto. Activate in hand to unfold into a beacon."
-	icon = 'icons/obj/fulton.dmi'
+	icon = '../assets/icons/obj/fulton.dmi'
 	icon_state = "folded_extraction"
 
 /obj/item/fulton_core/attack_self(mob/user)
@@ -202,13 +202,13 @@ GLOBAL_LIST_EMPTY(total_extraction_beacons)
 		return
 
 	new /obj/structure/extraction_point(get_turf(user))
-	playsound(src, 'sound/items/deconstruct.ogg', vol = 50, vary = TRUE, extrarange = MEDIUM_RANGE_SOUND_EXTRARANGE)
+	playsound(src, '../assets/sound/items/deconstruct.ogg', vol = 50, vary = TRUE, extrarange = MEDIUM_RANGE_SOUND_EXTRARANGE)
 	qdel(src)
 
 /obj/structure/extraction_point
 	name = "fulton recovery beacon"
 	desc = "A beacon for the fulton recovery system. Activate a pack in your hand to link it to a beacon."
-	icon = 'icons/obj/fulton.dmi'
+	icon = '../assets/icons/obj/fulton.dmi'
 	icon_state = "extraction_point"
 	anchored = TRUE
 	density = FALSE
@@ -227,7 +227,7 @@ GLOBAL_LIST_EMPTY(total_extraction_beacons)
 	if(!do_after(user, 1.5 SECONDS, src))
 		return
 	new /obj/item/fulton_core(drop_location())
-	playsound(src, 'sound/items/deconstruct.ogg', vol = 50, vary = TRUE, extrarange = MEDIUM_RANGE_SOUND_EXTRARANGE)
+	playsound(src, '../assets/sound/items/deconstruct.ogg', vol = 50, vary = TRUE, extrarange = MEDIUM_RANGE_SOUND_EXTRARANGE)
 	qdel(src)
 
 /obj/structure/extraction_point/update_overlays()

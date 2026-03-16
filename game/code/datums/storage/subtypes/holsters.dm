@@ -2,7 +2,7 @@
 /datum/storage/holster
 	max_slots = 1
 	max_total_storage = 16
-	open_sound = 'sound/items/handling/holster_open.ogg'
+	open_sound = '../assets/sound/items/handling/holster_open.ogg'
 	open_sound_vary = TRUE
 
 /datum/storage/holster/New(atom/parent, max_slots, max_specific_storage, max_total_storage, rustle_sound, remove_rustle_sound, list/holdables)

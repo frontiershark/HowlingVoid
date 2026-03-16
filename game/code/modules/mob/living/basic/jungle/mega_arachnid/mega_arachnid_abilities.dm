@@ -2,7 +2,7 @@
 /datum/action/cooldown/spell/pointed/projectile/flesh_restraints
 	name = "fleshy restraints"
 	desc = "Launch at your prey to immobilize them."
-	button_icon = 'icons/obj/weapons/restraints.dmi'
+	button_icon = '../assets/icons/obj/weapons/restraints.dmi'
 	button_icon_state = "flesh_snare"
 
 	cooldown_time = 6 SECONDS
@@ -39,7 +39,7 @@
 
 /datum/action/cooldown/mob_cooldown/secrete_acid
 	name = "Secrete Acid"
-	button_icon = 'icons/effects/acid.dmi'
+	button_icon = '../assets/icons/effects/acid.dmi'
 	button_icon_state = "default"
 	desc = "Secrete a slippery acid!"
 	cooldown_time = 15 SECONDS
@@ -65,7 +65,7 @@
 
 /obj/effect/slippery_acid
 	name = "slippery acid"
-	icon = 'icons/effects/acid.dmi'
+	icon = '../assets/icons/effects/acid.dmi'
 	icon_state = "default"
 	layer = BELOW_MOB_LAYER
 	plane = GAME_PLANE

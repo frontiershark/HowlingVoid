@@ -67,7 +67,7 @@
 
 /obj/machinery/mineral/processing_unit_console
 	name = "production machine console"
-	icon = 'icons/obj/machines/mining_machines.dmi'
+	icon = '../assets/icons/obj/machines/mining_machines.dmi'
 	icon_state = "console"
 	density = TRUE
 	interaction_flags_machine = INTERACT_MACHINE_WIRES_IF_OPEN|INTERACT_MACHINE_ALLOW_SILICON|INTERACT_MACHINE_OPEN_SILICON
@@ -130,7 +130,7 @@
 
 /obj/machinery/mineral/processing_unit
 	name = "furnace"
-	icon = 'icons/obj/machines/mining_machines.dmi'
+	icon = '../assets/icons/obj/machines/mining_machines.dmi'
 	icon_state = "furnace"
 	density = TRUE
 	needs_item_input = TRUE

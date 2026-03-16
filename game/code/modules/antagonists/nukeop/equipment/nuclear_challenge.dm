@@ -6,17 +6,17 @@ GLOBAL_LIST_EMPTY(jam_on_wardec)
 
 /obj/item/nuclear_challenge
 	name = "Declaration of War (Challenge Mode)"
-	icon = 'icons/obj/devices/voice.dmi'
+	icon = '../assets/icons/obj/devices/voice.dmi'
 	icon_state = "nukietalkie"
 	inhand_icon_state = "nukietalkie"
-	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/devices_righthand.dmi'
 	desc = "Use to send a declaration of hostilities to the target, delaying your shuttle departure for 20 minutes while they prepare for your assault.  \
 			Such a brazen move will attract the attention of powerful benefactors within the Syndicate, who will supply your team with a massive amount of bonus telecrystals.  \
 			Must be used within five minutes, or your benefactors will lose interest."
 	var/declaring_war = FALSE
 	var/uplink_type = /obj/item/uplink/nuclear
-	var/announcement_sound = 'sound/announcer/alarm/nuke_alarm.ogg'
+	var/announcement_sound = '../assets/sound/announcer/alarm/nuke_alarm.ogg'
 
 /obj/item/nuclear_challenge/attack_self(mob/living/user)
 	if(!check_allowed(user))
@@ -167,7 +167,7 @@ GLOBAL_LIST_EMPTY(jam_on_wardec)
 
 /obj/item/nuclear_challenge/clownops
 	uplink_type = /obj/item/uplink/clownop
-	announcement_sound = 'sound/announcer/alarm/clownops.ogg'
+	announcement_sound = '../assets/sound/announcer/alarm/clownops.ogg'
 
 /// Subtype that does nothing but plays the war op message. Intended for debugging
 /obj/item/nuclear_challenge/literally_just_does_the_message

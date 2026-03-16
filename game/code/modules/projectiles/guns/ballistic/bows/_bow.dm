@@ -1,15 +1,15 @@
 
 /obj/item/gun/ballistic/bow
-	icon = 'icons/obj/weapons/bows/bows.dmi'
-	lefthand_file = 'icons/mob/inhands/weapons/bows_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/bows_righthand.dmi'
+	icon = '../assets/icons/obj/weapons/bows/bows.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/bows_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/bows_righthand.dmi'
 	name = "bow"
 	desc = "Seems out-of-place in this day and age, but at least it's reliable."
 	icon_state = "bow"
 	inhand_icon_state = "bow"
 	base_icon_state = "bow"
-	load_sound = 'sound/items/weapons/gun/general/ballistic_click.ogg'
-	fire_sound = 'sound/items/weapons/gun/bow/bow_fire.ogg'
+	load_sound = '../assets/sound/items/weapons/gun/general/ballistic_click.ogg'
+	fire_sound = '../assets/sound/items/weapons/gun/bow/bow_fire.ogg'
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/bow
 	force = 15
 	pinless = TRUE
@@ -72,7 +72,7 @@
 		return
 	balloon_alert(user, "[drawn ? "string released" : "string drawn"]")
 	drawn = !drawn
-	playsound(src, 'sound/items/weapons/gun/bow/bow_draw.ogg', 25, TRUE)
+	playsound(src, '../assets/sound/items/weapons/gun/bow/bow_draw.ogg', 25, TRUE)
 	update_appearance()
 
 /obj/item/gun/ballistic/bow/try_fire_gun(atom/target, mob/living/user, params)
@@ -94,7 +94,7 @@
 	if(slot != ITEM_SLOT_HANDS && chambered)
 		balloon_alert(user, "the arrow falls out!")
 		if(drawn)
-			playsound(src, 'sound/items/weapons/gun/bow/bow_fire.ogg', 25, TRUE)
+			playsound(src, '../assets/sound/items/weapons/gun/bow/bow_fire.ogg', 25, TRUE)
 		drop_arrow()
 
 
@@ -106,7 +106,7 @@
 	if(ismob(loc) || !chambered)
 		return
 	if(drawn)
-		playsound(src, 'sound/items/weapons/gun/bow/bow_fire.ogg', 25, TRUE)
+		playsound(src, '../assets/sound/items/weapons/gun/bow/bow_fire.ogg', 25, TRUE)
 	drop_arrow()
 
 /obj/item/gun/ballistic/bow/shoot_with_empty_chamber(mob/living/user)

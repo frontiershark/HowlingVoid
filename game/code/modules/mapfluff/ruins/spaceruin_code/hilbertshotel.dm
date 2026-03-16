@@ -4,7 +4,7 @@ GLOBAL_VAR_INIT(hhMysteryRoomNumber, rand(1, 999999))
 /obj/item/hilbertshotel
 	name = "Hilbert's Hotel"
 	desc = "A sphere of what appears to be an intricate network of bluespace. Observing it in detail seems to give you a headache as you try to comprehend the infinite amount of infinitesimally distinct points on its surface."
-	icon = 'icons/obj/structures.dmi'
+	icon = '../assets/icons/obj/structures.dmi'
 	icon_state = "hilbertshotel"
 	w_class = WEIGHT_CLASS_SMALL
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
@@ -399,14 +399,14 @@ GLOBAL_VAR_INIT(hhMysteryRoomNumber, rand(1, 999999))
 // Despite using the ruins.dmi, hilbertshotel is not a ruin
 /area/misc/hilbertshotel
 	name = "Hilbert's Hotel Room"
-	icon = 'icons/area/areas_ruins.dmi'
+	icon = '../assets/icons/area/areas_ruins.dmi'
 	icon_state = "hilbertshotel"
 	requires_power = FALSE
 	default_gravity = STANDARD_GRAVITY
 	area_flags = NOTELEPORT | HIDDEN_AREA
 	area_flags_mapping = NONE
 	static_lighting = TRUE
-	// ambientsounds = list('sound/ambience/ruin/servicebell.ogg') // NOVA EDIT REMOVAL
+	// ambientsounds = list('../assets/sound/ambience/ruin/servicebell.ogg') // NOVA EDIT REMOVAL
 	var/roomnumber = 0
 	var/obj/item/hilbertshotel/parentSphere
 	var/datum/turf_reservation/reservation
@@ -490,7 +490,7 @@ GLOBAL_VAR_INIT(hhMysteryRoomNumber, rand(1, 999999))
 
 /area/misc/hilbertshotelstorage
 	name = "Hilbert's Hotel Storage Room"
-	icon = 'icons/area/areas_ruins.dmi'
+	icon = '../assets/icons/area/areas_ruins.dmi'
 	icon_state = "hilbertshotel"
 	requires_power = FALSE
 	area_flags = HIDDEN_AREA | NOTELEPORT

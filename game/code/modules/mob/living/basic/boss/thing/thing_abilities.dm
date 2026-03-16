@@ -14,7 +14,7 @@
 /datum/action/cooldown/mob_cooldown/the_thing/decimate
 	name = "Decimate"
 	desc = "Create spikes in a radius."
-	button_icon = 'icons/obj/weapons/stabby.dmi'
+	button_icon = '../assets/icons/obj/weapons/stabby.dmi'
 	button_icon_state = "huntingknife"
 	click_to_activate = FALSE
 	cooldown_time = 10 SECONDS
@@ -66,7 +66,7 @@
 	target.visible_message(span_danger("[source] lunges into [target]!"), span_userdanger("[source] knocks you into the ground, slashing you in the process!"))
 	target.apply_damage(damage_dealt, BRUTE)
 	target.Knockdown(0.5 SECONDS)
-	playsound(get_turf(target), 'sound/items/weapons/rapierhit.ogg', 100, TRUE)
+	playsound(get_turf(target), '../assets/sound/items/weapons/rapierhit.ogg', 100, TRUE)
 	shake_camera(target, 4, 3)
 
 // square tendrils
@@ -74,7 +74,7 @@
 /datum/action/cooldown/mob_cooldown/the_thing/big_tendrils
 	name = "Square Tendrils"
 	desc = "Create spikes in a square around the target."
-	button_icon = 'icons/obj/weapons/stabby.dmi'
+	button_icon = '../assets/icons/obj/weapons/stabby.dmi'
 	button_icon_state = "huntingknife"
 	cooldown_time = 5 SECONDS
 	available_in_phases = list(2,3)
@@ -107,7 +107,7 @@
 /datum/action/cooldown/mob_cooldown/the_thing/shriek
 	name = "Shriek"
 	desc = "Confuse in a radius."
-	button_icon = 'icons/obj/weapons/stabby.dmi'
+	button_icon = '../assets/icons/obj/weapons/stabby.dmi'
 	button_icon_state = "huntingknife"
 	click_to_activate = FALSE
 	cooldown_time = 10 SECONDS
@@ -127,7 +127,7 @@
 /datum/action/cooldown/mob_cooldown/the_thing/shriek/proc/shriek(atom/caster)
 	REMOVE_TRAIT(caster, TRAIT_IMMOBILIZED, MEGAFAUNA_TRAIT)
 	caster.visible_message(span_danger("[caster] shrieks! The sheer frequency of the sound makes your skin hurt and you feel like your brain is on fire!"))
-	SEND_SOUND(caster, sound('sound/effects/screech.ogg'))
+	SEND_SOUND(caster, sound('../assets/sound/effects/screech.ogg'))
 	for(var/mob/living/target in range(2, caster))
 		if(target == owner)
 			continue
@@ -136,14 +136,14 @@
 		var/mob/living/carbon/carbon_target = target
 		if(istype(carbon_target))
 			carbon_target.drop_all_held_items()
-		SEND_SOUND(target, sound('sound/effects/screech.ogg'))
+		SEND_SOUND(target, sound('../assets/sound/effects/screech.ogg'))
 
 // card. tendrils
 
 /datum/action/cooldown/mob_cooldown/the_thing/cardinal_tendrils
 	name = "Cardinal Tendrils"
 	desc = "Create tendrils in all cardinal directions."
-	button_icon = 'icons/obj/weapons/stabby.dmi'
+	button_icon = '../assets/icons/obj/weapons/stabby.dmi'
 	button_icon_state = "huntingknife"
 	cooldown_time = 10 SECONDS
 	available_in_phases = list(2,3)
@@ -184,7 +184,7 @@
 /datum/action/cooldown/mob_cooldown/the_thing/acid_spit
 	name = "Acid Shower"
 	desc = "Spit patches of acid in a radius around you."
-	button_icon = 'icons/obj/weapons/stabby.dmi'
+	button_icon = '../assets/icons/obj/weapons/stabby.dmi'
 	button_icon_state = "huntingknife"
 	cooldown_time = 10 SECONDS
 	click_to_activate = FALSE

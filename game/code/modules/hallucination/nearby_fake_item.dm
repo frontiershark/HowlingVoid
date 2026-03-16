@@ -65,33 +65,33 @@
 	qdel(src)
 
 /datum/hallucination/nearby_fake_item/e_sword
-	left_hand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
-	right_hand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
+	left_hand_file = '../assets/icons/mob/inhands/weapons/swords_lefthand.dmi'
+	right_hand_file = '../assets/icons/mob/inhands/weapons/swords_righthand.dmi'
 	image_icon_state = "e_sword_on_red"
 
 /datum/hallucination/nearby_fake_item/e_sword/generate_fake_image(mob/living/carbon/human/holder, file)
-	hallucinator.playsound_local(get_turf(holder), 'sound/items/weapons/saberon.ogg', 35, TRUE)
+	hallucinator.playsound_local(get_turf(holder), '../assets/sound/items/weapons/saberon.ogg', 35, TRUE)
 	return ..()
 
 /datum/hallucination/nearby_fake_item/e_sword/remove_image(mob/living/carbon/human/holder)
 	if(!QDELETED(holder))
-		hallucinator.playsound_local(get_turf(holder), 'sound/items/weapons/saberoff.ogg', 35, TRUE)
+		hallucinator.playsound_local(get_turf(holder), '../assets/sound/items/weapons/saberoff.ogg', 35, TRUE)
 	return ..()
 
 /datum/hallucination/nearby_fake_item/e_sword/double_bladed
 	image_icon_state = "dualsaberred1"
 
 /datum/hallucination/nearby_fake_item/taser
-	left_hand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
-	right_hand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
+	left_hand_file = '../assets/icons/mob/inhands/weapons/guns_lefthand.dmi'
+	right_hand_file = '../assets/icons/mob/inhands/weapons/guns_righthand.dmi'
 	image_icon_state = "advtaserstun4"
 
 /datum/hallucination/nearby_fake_item/taser/ebow // OOP be like.
 	image_icon_state = "crossbow"
 
 /datum/hallucination/nearby_fake_item/baton
-	left_hand_file = 'icons/mob/inhands/equipment/security_lefthand.dmi'
-	right_hand_file = 'icons/mob/inhands/equipment/security_righthand.dmi'
+	left_hand_file = '../assets/icons/mob/inhands/equipment/security_lefthand.dmi'
+	right_hand_file = '../assets/icons/mob/inhands/equipment/security_righthand.dmi'
 	image_icon_state = "stunbaton"
 
 /datum/hallucination/nearby_fake_item/baton/generate_fake_image(mob/living/carbon/human/holder, file)
@@ -99,34 +99,34 @@
 	return ..()
 
 /datum/hallucination/nearby_fake_item/flash
-	left_hand_file = 'icons/mob/inhands/equipment/security_lefthand.dmi'
-	right_hand_file = 'icons/mob/inhands/equipment/security_righthand.dmi'
+	left_hand_file = '../assets/icons/mob/inhands/equipment/security_lefthand.dmi'
+	right_hand_file = '../assets/icons/mob/inhands/equipment/security_righthand.dmi'
 	image_icon_state = "flashtool"
 
 /datum/hallucination/nearby_fake_item/flash/generate_fake_image(mob/living/carbon/human/holder, file)
-	hallucinator.playsound_local(get_turf(holder), 'sound/items/handling/component_pickup.ogg', 35, vary = FALSE)
+	hallucinator.playsound_local(get_turf(holder), '../assets/sound/items/handling/component_pickup.ogg', 35, vary = FALSE)
 	return ..()
 
 /datum/hallucination/nearby_fake_item/flash/remove_image(mob/living/carbon/human/holder)
 	if(!QDELETED(holder))
-		hallucinator.playsound_local(get_turf(holder), 'sound/items/handling/component_drop.ogg', 35, vary = FALSE)
+		hallucinator.playsound_local(get_turf(holder), '../assets/sound/items/handling/component_drop.ogg', 35, vary = FALSE)
 	return ..()
 
 /datum/hallucination/nearby_fake_item/armblade
-	left_hand_file = 'icons/mob/inhands/antag/changeling_lefthand.dmi'
-	right_hand_file = 'icons/mob/inhands/antag/changeling_righthand.dmi'
+	left_hand_file = '../assets/icons/mob/inhands/antag/changeling_lefthand.dmi'
+	right_hand_file = '../assets/icons/mob/inhands/antag/changeling_righthand.dmi'
 	image_icon_state = "arm_blade"
 
 /datum/hallucination/nearby_fake_item/armblade/generate_fake_image(mob/living/carbon/human/holder, file)
-	hallucinator.playsound_local(get_turf(holder), 'sound/effects/blob/blobattack.ogg', 35, TRUE)
+	hallucinator.playsound_local(get_turf(holder), '../assets/sound/effects/blob/blobattack.ogg', 35, TRUE)
 	return ..()
 
 /datum/hallucination/nearby_fake_item/armblade/remove_image(mob/living/carbon/human/holder)
 	if(!QDELETED(holder))
-		hallucinator.playsound_local(get_turf(holder), 'sound/effects/blob/blobattack.ogg', 35, TRUE)
+		hallucinator.playsound_local(get_turf(holder), '../assets/sound/effects/blob/blobattack.ogg', 35, TRUE)
 	return ..()
 
 /datum/hallucination/nearby_fake_item/ttv
-	left_hand_file = 'icons/mob/inhands/weapons/bombs_lefthand.dmi'
-	right_hand_file = 'icons/mob/inhands/weapons/bombs_righthand.dmi'
+	left_hand_file = '../assets/icons/mob/inhands/weapons/bombs_lefthand.dmi'
+	right_hand_file = '../assets/icons/mob/inhands/weapons/bombs_righthand.dmi'
 	image_icon_state = "ttv"

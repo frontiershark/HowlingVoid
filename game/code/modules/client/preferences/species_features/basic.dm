@@ -1,7 +1,7 @@
 /proc/generate_icon_with_head_accessory(datum/sprite_accessory/sprite_accessory, y_offset = 0)
 	var/static/datum/universal_icon/head_icon
 	if (isnull(head_icon))
-		head_icon = uni_icon('icons/mob/human/bodyparts_greyscale.dmi', "human_head_m")
+		head_icon = uni_icon('../assets/icons/mob/human/bodyparts_greyscale.dmi', "human_head_m")
 		head_icon.blend_color(skintone2hex("caucasian1"), ICON_MULTIPLY)
 
 	var/datum/universal_icon/final_icon = head_icon.copy()

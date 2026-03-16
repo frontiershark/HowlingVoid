@@ -6,9 +6,9 @@
 		Also spreads rust in the path of the plume."
 	background_icon_state = "bg_heretic"
 	overlay_icon_state = "bg_heretic_border"
-	button_icon = 'icons/mob/actions/actions_ecult.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_ecult.dmi'
 	button_icon_state = "entropic_plume"
-	sound = 'sound/effects/magic/forcewall.ogg'
+	sound = '../assets/sound/effects/magic/forcewall.ogg'
 
 	school = SCHOOL_FORBIDDEN
 	cooldown_time = 30 SECONDS
@@ -49,7 +49,7 @@
 	return 5
 
 /obj/effect/temp_visual/dir_setting/entropic
-	icon = 'icons/effects/160x160.dmi'
+	icon = '../assets/icons/effects/160x160.dmi'
 	icon_state = "entropic_plume"
 	duration = 3 SECONDS
 
@@ -73,7 +73,7 @@
 	desc = "Channels energy into your hands to release a wave of rust."
 	background_icon_state = "bg_heretic"
 	overlay_icon_state = "bg_heretic_border"
-	button_icon = 'icons/mob/actions/actions_ecult.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_ecult.dmi'
 	button_icon_state = "rust_wave"
 
 	school = SCHOOL_FORBIDDEN
@@ -91,7 +91,7 @@
 	alpha = 180
 	damage = 30
 	damage_type = TOX
-	hitsound = 'sound/items/weapons/punch3.ogg'
+	hitsound = '../assets/sound/items/weapons/punch3.ogg'
 	trigger_range = 0
 	faction = list(FACTION_HERETIC)
 	range = 15
@@ -99,7 +99,7 @@
 
 /obj/projectile/magic/aoe/rust_wave/Moved(atom/old_loc, movement_dir, forced, list/old_locs, momentum_change = TRUE)
 	. = ..()
-	playsound(src, 'sound/items/tools/welder.ogg', 75, TRUE)
+	playsound(src, '../assets/sound/items/tools/welder.ogg', 75, TRUE)
 	var/list/turflist = list()
 	var/turf/T1
 	turflist += get_turf(src)

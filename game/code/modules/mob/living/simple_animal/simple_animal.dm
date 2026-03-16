@@ -1,7 +1,7 @@
 /// Simple, mostly AI-controlled critters, such as pets, bots, and drones.
 /mob/living/simple_animal
 	name = "animal"
-	icon = 'icons/mob/simple/animal.dmi'
+	icon = '../assets/icons/mob/simple/animal.dmi'
 	abstract_type = /mob/living/simple_animal
 	health = 20
 	maxHealth = 20

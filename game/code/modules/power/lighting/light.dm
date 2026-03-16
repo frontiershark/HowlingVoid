@@ -1,7 +1,7 @@
 // the standard tube light fixture
 /obj/machinery/light
 	name = "light fixture"
-	icon = 'icons/obj/lighting.dmi'
+	icon = '../assets/icons/obj/lighting.dmi'
 	icon_state = "tube"
 	desc = "A lighting fixture."
 	layer = WALL_OBJ_LAYER
@@ -13,7 +13,7 @@
 	always_area_sensitive = TRUE
 	light_angle = 170
 	///What overlay the light should use
-	var/overlay_icon = 'icons/obj/lighting_overlay.dmi'
+	var/overlay_icon = '../assets/icons/obj/lighting_overlay.dmi'
 	///base description and icon_state
 	var/base_state = "tube"
 	///Is the light on?
@@ -525,13 +525,13 @@
 		if(BRUTE)
 			switch(status)
 				if(LIGHT_EMPTY)
-					playsound(loc, 'sound/items/weapons/smash.ogg', 50, TRUE)
+					playsound(loc, '../assets/sound/items/weapons/smash.ogg', 50, TRUE)
 				if(LIGHT_BROKEN)
-					playsound(loc, 'sound/effects/hit_on_shattered_glass.ogg', 90, TRUE)
+					playsound(loc, '../assets/sound/effects/hit_on_shattered_glass.ogg', 90, TRUE)
 				else
-					playsound(loc, 'sound/effects/glass/glasshit.ogg', 90, TRUE)
+					playsound(loc, '../assets/sound/effects/glass/glasshit.ogg', 90, TRUE)
 		if(BURN)
-			playsound(loc, 'sound/items/tools/welder.ogg', 100, TRUE)
+			playsound(loc, '../assets/sound/items/tools/welder.ogg', 100, TRUE)
 
 // returns if the light has power /but/ is manually turned off
 // if a light is turned off, it won't activate emergency power
@@ -733,7 +733,7 @@
 
 	if(!skip_sound_and_sparks)
 		if(status == LIGHT_OK || status == LIGHT_BURNED)
-			playsound(loc, 'sound/effects/glass/glasshit.ogg', 75, TRUE)
+			playsound(loc, '../assets/sound/effects/glass/glasshit.ogg', 75, TRUE)
 		if(on)
 			do_sparks(3, TRUE, src)
 	status = LIGHT_BROKEN
@@ -791,7 +791,7 @@
 /obj/machinery/light/floor
 	name = "floor light"
 	desc = "A lightbulb you can walk on without breaking it, amazing."
-	icon = 'icons/obj/lighting.dmi'
+	icon = '../assets/icons/obj/lighting.dmi'
 	base_state = "floor" // base description and icon_state
 	icon_state = "floor"
 	brightness = 4

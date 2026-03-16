@@ -3,7 +3,7 @@
 // will fit into empty /obj/machinery/light of the corresponding type
 
 /obj/item/light
-	icon = 'icons/obj/lighting.dmi'
+	icon = '../assets/icons/obj/lighting.dmi'
 	force = 2
 	throwforce = 5
 	w_class = WEIGHT_CLASS_TINY
@@ -80,8 +80,8 @@
 	base_state = "lbulb"
 	icon_angle = -90
 	inhand_icon_state = "contvapour"
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/medical_righthand.dmi'
 	brightness = 4
 	custom_price = PAYCHECK_CREW * 0.4
 
@@ -121,7 +121,7 @@
 		return
 	var/mob/living/moving_mob = moving_atom
 	if(!(moving_mob.movement_type & MOVETYPES_NOT_TOUCHING_GROUND) || moving_mob.buckled)
-		playsound(src, 'sound/effects/footstep/glass_step.ogg', HAS_TRAIT(moving_mob, TRAIT_LIGHT_STEP) ? 30 : 50, TRUE)
+		playsound(src, '../assets/sound/effects/footstep/glass_step.ogg', HAS_TRAIT(moving_mob, TRAIT_LIGHT_STEP) ? 30 : 50, TRUE)
 		if(status == LIGHT_BURNED || status == LIGHT_OK)
 			shatter(moving_mob)
 
@@ -139,7 +139,7 @@
 		status = LIGHT_BROKEN
 		force = 5
 		sharpness = SHARP_POINTY
-		playsound(loc, 'sound/effects/glass/glasshit.ogg', 75, TRUE)
+		playsound(loc, '../assets/sound/effects/glass/glasshit.ogg', 75, TRUE)
 		if(length(reagents.reagent_list))
 			visible_message(span_danger("The contents of [src] splash onto you as you step on it!"),span_hear("You feel the contents of [src] splash onto you as you step on it!."))
 			reagents.expose(target, TOUCH)

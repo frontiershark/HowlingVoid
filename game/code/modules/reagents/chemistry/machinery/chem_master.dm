@@ -3,7 +3,7 @@
 /obj/machinery/chem_master
 	name = "\improper ChemMaster 3000"
 	desc = "Used to separate chemicals and distribute them in a variety of forms."
-	icon = 'icons/obj/medical/chemical.dmi'
+	icon = '../assets/icons/obj/medical/chemical.dmi'
 	icon_state = "chemmaster"
 	base_icon_state = "chemmaster"
 	density = TRUE
@@ -127,7 +127,7 @@
 	// Buffer reagents overlay
 	if(reagents.total_volume)
 		var/static/list/fill_icon_thresholds = list(10, 20, 30, 40, 50, 60, 70, 80, 90, 100)
-		var/mutable_appearance/filling = reagent_threshold_overlay(reagents, 'icons/obj/medical/reagent_fillings.dmi', "chemmaster", fill_icon_thresholds)
+		var/mutable_appearance/filling = reagent_threshold_overlay(reagents, '../assets/icons/obj/medical/reagent_fillings.dmi', "chemmaster", fill_icon_thresholds)
 		if(!isnull(filling))
 			. += filling
 

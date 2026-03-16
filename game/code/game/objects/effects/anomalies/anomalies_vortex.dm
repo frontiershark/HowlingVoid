@@ -65,7 +65,7 @@
 
 /obj/effect/anomaly/bhole/detonate()
 	new /obj/effect/temp_visual/circle_wave/vortex(get_turf(src))
-	playsound(src, 'sound/effects/hallucinations/far_noise.ogg', vol = 50)
+	playsound(src, '../assets/sound/effects/hallucinations/far_noise.ogg', vol = 50)
 
 /obj/effect/temp_visual/circle_wave/vortex
 	color = COLOR_BLACK

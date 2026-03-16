@@ -1,7 +1,7 @@
 /obj/vehicle
 	name = "generic vehicle"
 	desc = "Yell at coderbus."
-	icon = 'icons/mob/rideables/vehicles.dmi'
+	icon = '../assets/icons/mob/rideables/vehicles.dmi'
 	icon_state = "error"
 	abstract_type = /obj/vehicle
 	max_integrity = 300

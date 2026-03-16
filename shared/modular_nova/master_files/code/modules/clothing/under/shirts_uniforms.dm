@@ -16,7 +16,7 @@
 /obj/item/clothing/under/greyscale/turtleneck
 	name = "turtleneck with pants"
 	desc = "A rather comfortable turtleneck worn with pants. Talk about robust threads."
-	icon = 'icons/map_icons/clothing/under/_under.dmi'
+	icon = '../assets/icons/map_icons/clothing/under/_under.dmi'
 	icon_state = "/obj/item/clothing/under/greyscale/turtleneck"
 	post_init_icon_state = "turtleneck"
 	greyscale_config = /datum/greyscale_config/turtlenecks
@@ -39,7 +39,7 @@
 /obj/item/clothing/under/greyscale/gorkas
 	name = "gorka jumpsuit"
 	desc = "A somewhat comfortable gorka, as comfy as a regular jumpsuit but with a more unique design."
-	icon = 'icons/map_icons/clothing/under/_under.dmi'
+	icon = '../assets/icons/map_icons/clothing/under/_under.dmi'
 	icon_state = "/obj/item/clothing/under/greyscale/gorkas"
 	post_init_icon_state = "gags_gorka"
 	greyscale_config = /datum/greyscale_config/gorkas
@@ -51,7 +51,7 @@
 /obj/item/clothing/under/greyscale/overalls
 	name = "turtleneck with overalls"
 	desc = "Overalls worn over a turtleneck. A combination providing comfort and coverage... or, at the least, the coverage."
-	icon = 'icons/map_icons/clothing/under/_under.dmi'
+	icon = '../assets/icons/map_icons/clothing/under/_under.dmi'
 	icon_state = "/obj/item/clothing/under/greyscale/overalls"
 	post_init_icon_state = "overalls"
 	greyscale_config = /datum/greyscale_config/sus_overalls
@@ -74,7 +74,7 @@
 /obj/item/clothing/under/greyscale/playsuit
 	name = "playsuit"
 	desc = "For the love of the game."
-	icon = 'icons/map_icons/clothing/under/_under.dmi'
+	icon = '../assets/icons/map_icons/clothing/under/_under.dmi'
 	icon_state = "/obj/item/clothing/under/greyscale/playsuit"
 	post_init_icon_state = "playsuit"
 	greyscale_config = /datum/greyscale_config/playsuit

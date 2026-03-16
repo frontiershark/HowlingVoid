@@ -1,7 +1,7 @@
 /obj/machinery/autolathe
 	name = "autolathe"
 	desc = "It produces items using iron, glass, plastic and maybe some more."
-	icon = 'icons/obj/machines/lathes.dmi'
+	icon = '../assets/icons/obj/machines/lathes.dmi'
 	icon_state = "autolathe"
 	density = TRUE
 	///Energy cost per full stack of sheets worth of materials used. Material insertion is 40% of this.
@@ -102,7 +102,7 @@
 
 	//we use initial(active_power_usage) because higher tier parts will have higher active usage but we have no benefit from it
 	if(directly_use_energy(ROUND_UP((amount_inserted / (MAX_STACK_SIZE * SHEET_MATERIAL_AMOUNT)) * 0.4 * initial(active_power_usage))))
-		flick_overlay_view(mutable_appearance('icons/obj/machines/lathes.dmi', "autolathe_mat"), 1 SECONDS)
+		flick_overlay_view(mutable_appearance('../assets/icons/obj/machines/lathes.dmi', "autolathe_mat"), 1 SECONDS)
 
 		var/datum/material/highest_mat_ref
 		var/highest_mat = 0

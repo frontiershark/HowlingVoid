@@ -63,7 +63,7 @@
 		var/list/scatter_vector = scatter_gen.Rand()
 		scatter_individual_casing(scattered_casing, scatter_vector[1], scatter_vector[2])
 
-	playsound(scatter_turf, 'sound/items/weapons/gun/general/mag_bullet_remove.ogg', 60, TRUE)
+	playsound(scatter_turf, '../assets/sound/items/weapons/gun/general/mag_bullet_remove.ogg', 60, TRUE)
 	check_empty()
 
 /// Scatters an individual casing, bouncing and pixel-moving it about.

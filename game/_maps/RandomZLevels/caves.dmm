@@ -136,7 +136,7 @@
 /area/awaymission/caves/bmp_asteroid/level_three)
 "aX" = (
 /obj/effect/bump_teleporter{
-	icon = 'icons/obj/doors/airlocks/station/overlays.dmi';
+	icon = '../assets/icons/obj/doors/airlocks/station/overlays.dmi';
 	icon_state = "unres_w";
 	id = "minedeepup";
 	id_target = "minedeepdown";
@@ -239,7 +239,7 @@
 /area/awaymission/caves/bmp_asteroid/level_two)
 "bU" = (
 /obj/effect/bump_teleporter{
-	icon = 'icons/obj/doors/airlocks/station/overlays.dmi';
+	icon = '../assets/icons/obj/doors/airlocks/station/overlays.dmi';
 	icon_state = "unres_w";
 	id = "minedeepdown";
 	id_target = "minedeepup";
@@ -375,7 +375,7 @@
 /area/awaymission/caves/research)
 "dg" = (
 /obj/effect/bump_teleporter{
-	icon = 'icons/obj/doors/airlocks/station/overlays.dmi';
+	icon = '../assets/icons/obj/doors/airlocks/station/overlays.dmi';
 	icon_state = "unres_e";
 	id = "mineintrodown";
 	id_target = "mineintroup";
@@ -734,7 +734,7 @@
 /area/awaymission/caves/bmp_asteroid)
 "fx" = (
 /obj/effect/bump_teleporter{
-	icon = 'icons/obj/doors/airlocks/station/overlays.dmi';
+	icon = '../assets/icons/obj/doors/airlocks/station/overlays.dmi';
 	icon_state = "unres_e";
 	id = "mineintroup";
 	id_target = "mineintrodown";
@@ -1447,7 +1447,7 @@
 "OX" = (
 /turf/closed/indestructible/oldshuttle{
 	desc = "Go through.";
-	icon = 'icons/turf/floors.dmi';
+	icon = '../assets/icons/turf/floors.dmi';
 	icon_state = "black";
 	name = "the other side"
 	},

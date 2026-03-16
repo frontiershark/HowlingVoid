@@ -1,6 +1,6 @@
 /obj/structure/spawner
 	name = "monster nest"
-	icon = 'icons/mob/simple/animal.dmi'
+	icon = '../assets/icons/mob/simple/animal.dmi'
 	icon_state = "hole"
 	max_integrity = 100
 
@@ -53,7 +53,7 @@
 		to_chat(user, span_warning("[src] already has a holotag attached!"))
 		return
 	to_chat(user, span_notice("You affix a holotag to [src]."))
-	playsound(src, 'sound/machines/beep/twobeep.ogg', 100)
+	playsound(src, '../assets/sound/machines/beep/twobeep.ogg', 100)
 	gps_tagged = TRUE
 	assigned_tag = "\[[mob_gps_id]-[rand(100,999)]\] " + spawner_gps_id
 	var/datum/component/gps/our_gps = GetComponent(/datum/component/gps)
@@ -85,7 +85,7 @@
 
 /obj/structure/spawner/syndicate
 	name = "warp beacon"
-	icon = 'icons/obj/machines/beacon.dmi'
+	icon = '../assets/icons/obj/machines/beacon.dmi'
 	icon_state = "syndbeacon"
 	spawn_text = "warps in from"
 	mob_types = list(/mob/living/basic/trooper/syndicate/ranged)
@@ -97,7 +97,7 @@
 	name = "bone pit"
 	desc = "A pit full of bones, and some still seem to be moving..."
 	icon_state = "hole"
-	icon = 'icons/mob/simple/lavaland/nest.dmi'
+	icon = '../assets/icons/mob/simple/lavaland/nest.dmi'
 	max_integrity = 150
 	max_mobs = 15
 	spawn_time = 15 SECONDS
@@ -111,7 +111,7 @@
 	name = "Laughing Larry"
 	desc = "A laughing, jovial figure. Something seems stuck in his throat."
 	icon_state = "clownbeacon"
-	icon = 'icons/obj/machines/beacon.dmi'
+	icon = '../assets/icons/obj/machines/beacon.dmi'
 	max_integrity = 200
 	max_mobs = 15
 	spawn_time = 15 SECONDS
@@ -138,7 +138,7 @@
 	icon_state = "hole"
 	max_integrity = 200
 	max_mobs = 3
-	icon = 'icons/mob/simple/lavaland/nest.dmi'
+	icon = '../assets/icons/mob/simple/lavaland/nest.dmi'
 	spawn_text = "crawls out of"
 	mob_types = list(
 		/mob/living/basic/mining/basilisk,
@@ -186,7 +186,7 @@
 	max_integrity = 50
 	spawn_time = 60 SECONDS
 	max_mobs = 15
-	icon = 'icons/mob/simple/lavaland/nest.dmi'
+	icon = '../assets/icons/mob/simple/lavaland/nest.dmi'
 	spawn_text = "crawls through"
 	mob_types = list(
 		/mob/living/basic/blankbody,
@@ -220,7 +220,7 @@
 
 /obj/structure/spawner/nether/process(seconds_per_tick)
 	for(var/mob/living/living_mob in contents)
-		playsound(src, 'sound/effects/magic/demon_consume.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/effects/magic/demon_consume.ogg', 50, TRUE)
 		living_mob.adjust_brute_loss(60 * seconds_per_tick)
 		new /obj/effect/gibspawner/generic(get_turf(living_mob), living_mob)
 		if(living_mob.stat == DEAD)
@@ -257,7 +257,7 @@
 /obj/structure/spawner/sentient/proteon_spawner
 	name = "eldritch gateway"
 	desc = "A dizzying structure that somehow links into Nar'Sie's own domain. The screams of the damned echo continously."
-	icon = 'icons/obj/antags/cult/structures.dmi'
+	icon = '../assets/icons/obj/antags/cult/structures.dmi'
 	icon_state = "hole"
 	light_power = 2
 	light_color = COLOR_CULT_RED
@@ -289,7 +289,7 @@
 	proteon.mind.add_antag_datum(/datum/antagonist/cult)
 	proteon.add_filter("awoken_proteon", 3, list("type" = "outline", "color" = COLOR_CULT_RED, "size" = 2))
 	visible_message(span_cult_bold("[proteon] awakens, glowing an eerie red as it stirs from its stupor!"))
-	playsound(proteon, 'sound/items/haunted/ghostitemattack.ogg', 100, TRUE)
+	playsound(proteon, '../assets/sound/items/haunted/ghostitemattack.ogg', 100, TRUE)
 	proteon.balloon_alert_to_viewers("awoken!")
 	addtimer(CALLBACK(src, PROC_REF(remove_wake_outline), proteon), 8 SECONDS)
 
@@ -298,5 +298,5 @@
 	proteon.add_filter("sentient_proteon", 3, list("type" = "outline", "color" = COLOR_CULT_RED, "size" = 2, "alpha" = 40))
 
 /obj/structure/spawner/sentient/proteon_spawner/handle_deconstruct(disassembled)
-	playsound(src, 'sound/effects/hallucinations/veryfar_noise.ogg', 75)
+	playsound(src, '../assets/sound/effects/hallucinations/veryfar_noise.ogg', 75)
 	visible_message(span_cult_bold("[src] completely falls apart, the screams of the damned reaching a feverous pitch before slowly fading away into nothing."))

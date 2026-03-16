@@ -22,7 +22,7 @@
 	color = "#fbc314"
 	ph = 0
 	inverse_chem = null
-	fallback_icon = 'icons/obj/drinks/drink_effects.dmi'
+	fallback_icon = '../assets/icons/obj/drinks/drink_effects.dmi'
 	fallback_icon_state = "acid_buffer_fallback"
 	glass_price = DRINK_PRICE_HIGH
 
@@ -43,7 +43,7 @@
 
 	//give feedback & remove from holder because it's not transferred
 	target.my_atom.audible_message(span_warning(message))
-	playsound(target.my_atom, 'sound/effects/chemistry/bufferadd.ogg', 50, TRUE)
+	playsound(target.my_atom, '../assets/sound/effects/chemistry/bufferadd.ogg', 50, TRUE)
 	if(!copy_only)
 		volume -= amount
 		holder.update_total()
@@ -54,7 +54,7 @@
 	color = "#3853a4"
 	ph = 14
 	inverse_chem = null
-	fallback_icon = 'icons/obj/drinks/drink_effects.dmi'
+	fallback_icon = '../assets/icons/obj/drinks/drink_effects.dmi'
 	fallback_icon_state = "base_buffer_fallback"
 	glass_price = DRINK_PRICE_HIGH
 
@@ -74,7 +74,7 @@
 
 	//give feedback & remove from holder because it's not transferred
 	target.my_atom.audible_message(span_warning(message))
-	playsound(target.my_atom, 'sound/effects/chemistry/bufferadd.ogg', 50, TRUE)
+	playsound(target.my_atom, '../assets/sound/effects/chemistry/bufferadd.ogg', 50, TRUE)
 	if(!copy_only)
 		volume -= amount
 		holder.update_total()
@@ -108,7 +108,7 @@
 			is_inverse = TRUE
 	if(is_inverse)
 		target.my_atom.audible_message(span_warning("The beaker bubbles violently as the reagent is added!"))
-		playsound(target.my_atom, 'sound/effects/chemistry/bufferadd.ogg', 50, TRUE)
+		playsound(target.my_atom, '../assets/sound/effects/chemistry/bufferadd.ogg', 50, TRUE)
 	else
 		target.my_atom.audible_message(span_warning("The added reagent doesn't seem to do much."))
 	if(!copy_only)
@@ -176,7 +176,7 @@
 	//audible feedback
 	if(conversion_buffer < amount * 10)
 		target.my_atom.audible_message(span_warning("The beaker goes into a rolling boil as the contents begin inversing!"))
-		playsound(target.my_atom, 'sound/effects/chemistry/catalyst.ogg', 50, TRUE)
+		playsound(target.my_atom, '../assets/sound/effects/chemistry/catalyst.ogg', 50, TRUE)
 	else
 		target.my_atom.audible_message(span_warning("The buffer fizzles with no effect."))
 

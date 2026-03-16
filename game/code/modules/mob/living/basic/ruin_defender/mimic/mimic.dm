@@ -21,7 +21,7 @@ GLOBAL_LIST_INIT(animatable_blacklist, typecacheof(list(
 	pass_flags = PASSFLAPS
 	melee_damage_lower = 8
 	melee_damage_upper = 12
-	attack_sound = 'sound/items/weapons/punch1.ogg'
+	attack_sound = '../assets/sound/items/weapons/punch1.ogg'
 	speak_emote = list("creaks")
 
 	unsuitable_cold_damage = 0
@@ -52,7 +52,7 @@ GLOBAL_LIST_INIT(animatable_blacklist, typecacheof(list(
 /mob/living/basic/mimic/crate
 	name = "crate"
 	desc = "A very hostile rectangular steel crate."
-	icon = 'icons/obj/storage/crates.dmi'
+	icon = '../assets/icons/obj/storage/crates.dmi'
 	icon_state = "crate"
 	base_icon_state = "crate"
 	icon_living = "crate"
@@ -167,17 +167,17 @@ GLOBAL_LIST_INIT(animatable_blacklist, typecacheof(list(
 		ADD_TRAIT(src, TRAIT_UNDENSE, MIMIC_TRAIT)
 		opened = TRUE
 		icon_state = "[base_icon_state]open"
-		playsound(src, 'sound/machines/crate/crate_open.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/machines/crate/crate_open.ogg', 50, TRUE)
 		for(var/atom/movable/movable as anything in src)
 			movable.forceMove(loc)
 	else
 		REMOVE_TRAIT(src, TRAIT_UNDENSE, MIMIC_TRAIT)
 		opened = FALSE
 		icon_state = base_icon_state
-		playsound(src, 'sound/machines/crate/crate_close.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/machines/crate/crate_close.ogg', 50, TRUE)
 		for(var/atom/movable/movable as anything in get_turf(src))
 			if(movable != src && insert(movable) == CANT_INSERT_FULL)
-				playsound(src, 'sound/items/trayhit/trayhit2.ogg', 50, TRUE)
+				playsound(src, '../assets/sound/items/trayhit/trayhit2.ogg', 50, TRUE)
 				break
 
 /**
@@ -238,7 +238,7 @@ GLOBAL_LIST_INIT(animatable_blacklist, typecacheof(list(
 /datum/action/innate/mimic_lock
 	name = "Lock/Unlock"
 	desc = "Toggle preventing yourself from being opened or closed."
-	button_icon = 'icons/hud/radial.dmi'
+	button_icon = '../assets/icons/hud/radial.dmi'
 	button_icon_state = "radial_lock"
 	background_icon_state = "bg_default"
 	overlay_icon_state = "bg_default_border"
@@ -263,7 +263,7 @@ GLOBAL_LIST_INIT(animatable_blacklist, typecacheof(list(
 	/// our creator
 	var/datum/weakref/creator_ref
 	/// googly eyes overlay
-	var/static/mutable_appearance/googly_eyes = mutable_appearance('icons/mob/simple/mob.dmi', "googly_eyes")
+	var/static/mutable_appearance/googly_eyes = mutable_appearance('../assets/icons/mob/simple/mob.dmi', "googly_eyes")
 	/// do we overlay googly eyes over whatever we copy
 	var/overlay_googly_eyes = TRUE
 	/// do we take damage when we are not sentient and have no target
@@ -370,7 +370,7 @@ GLOBAL_LIST_INIT(animatable_blacklist, typecacheof(list(
 	faction = list(FACTION_MIMIC, FACTION_SILICON, FACTION_TURRET)
 
 /mob/living/basic/mimic/copy/ranged
-	icon = 'icons/turf/floors.dmi'
+	icon = '../assets/icons/turf/floors.dmi'
 	icon_state = "invisible"
 	ai_controller = /datum/ai_controller/basic_controller/mimic_copy/gun
 

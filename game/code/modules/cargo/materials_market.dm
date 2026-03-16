@@ -11,7 +11,7 @@
 	circuit = /obj/item/circuitboard/machine/materials_market
 	req_access = list(ACCESS_CARGO)
 	density = TRUE
-	icon = 'icons/obj/economy.dmi'
+	icon = '../assets/icons/obj/economy.dmi'
 	icon_state = "mat_market"
 	base_icon_state = "mat_market"
 	idle_power_usage = BASE_MACHINE_IDLE_CONSUMPTION
@@ -72,7 +72,7 @@
 	new_block.export_value = price
 	new_block.set_custom_materials(materials)
 	to_chat(user, span_notice("You have created a stock block worth [new_block.export_value * exportable.amount] [MONEY_SYMBOL]! Sell it before it becomes liquid!"))
-	playsound(src, 'sound/machines/synth/synth_yes.ogg', 50, FALSE)
+	playsound(src, '../assets/sound/machines/synth/synth_yes.ogg', 50, FALSE)
 	qdel(exportable)
 	use_energy(active_power_usage)
 	return ITEM_INTERACT_SUCCESS
@@ -282,14 +282,14 @@
 				var/prior_sheets = current_order.pack.contains[sheet_to_buy]
 				if(prior_sheets + quantity > SSstock_market.materials_quantity[material_bought] )
 					say("There aren't enough sheets on the market! Please wait for more sheets to be traded before adding more.")
-					playsound(living_user, 'sound/machines/synth/synth_no.ogg', 35, FALSE)
+					playsound(living_user, '../assets/sound/machines/synth/synth_no.ogg', 35, FALSE)
 					return
 
 				// Check if the order exceeded the purchase limit
 				var/prior_stacks = ROUND_UP(prior_sheets / MAX_STACK_SIZE)
 				if(prior_stacks >= MAX_STACK_LIMIT)
 					say("There are already 10 stacks of sheets on order! Please wait for them to arrive before ordering more.")
-					playsound(living_user, 'sound/machines/synth/synth_no.ogg', 35, FALSE)
+					playsound(living_user, '../assets/sound/machines/synth/synth_no.ogg', 35, FALSE)
 					return
 
 				// Prevents you from ordering more than the available budget
@@ -346,7 +346,7 @@
 /obj/item/stock_block
 	name = "stock block"
 	desc = "A block of stock. It's worth a certain amount of money, based on a sale on the materials market. Ship it on the cargo shuttle to claim your money."
-	icon = 'icons/obj/economy.dmi'
+	icon = '../assets/icons/obj/economy.dmi'
 	icon_state = "stock_block"
 	/// How many credits was this worth when created?
 	var/export_value = 0

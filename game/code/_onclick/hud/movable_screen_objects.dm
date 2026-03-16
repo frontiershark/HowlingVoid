@@ -9,7 +9,7 @@
 //Not tied to the grid, places its center where the cursor is
 
 /atom/movable/screen/movable
-	mouse_drag_pointer = 'icons/effects/mouse_pointers/screen_drag.dmi'
+	mouse_drag_pointer = '../assets/icons/effects/mouse_pointers/screen_drag.dmi'
 	var/snap2grid = FALSE
 	var/x_off = -16
 	var/y_off = -16

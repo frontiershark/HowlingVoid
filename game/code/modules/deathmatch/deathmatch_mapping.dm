@@ -17,7 +17,7 @@
 	desc = "Don't jump off, unless you want to fall a really long distance."
 	icon_state = "sandmoving"
 	base_icon_state = "sandmoving"
-	icon = 'icons/turf/floors.dmi'
+	icon = '../assets/icons/turf/floors.dmi'
 
 /turf/open/chasm/true/no_smooth/fake_motion_sand/fast
 	icon_state = "sandmovingfast"

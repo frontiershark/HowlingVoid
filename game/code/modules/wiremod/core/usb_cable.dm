@@ -2,11 +2,11 @@
 /obj/item/usb_cable
 	name = "usb cable"
 	desc = "A cable that can connect integrated circuits to anything with a USB port, such as computers and machines."
-	icon = 'icons/obj/science/circuits.dmi'
+	icon = '../assets/icons/obj/science/circuits.dmi'
 	icon_state = "usb_cable"
 	inhand_icon_state = "coil_yellow"
-	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/tools_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/tools_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/tools_righthand.dmi'
 	base_icon_state = "coil"
 	w_class = WEIGHT_CLASS_TINY
 	custom_materials = list(/datum/material/iron = SMALL_MATERIAL_AMOUNT*0.75)
@@ -54,7 +54,7 @@
 			CRASH("Producers of COMSIG_USB_CABLE_CONNECTED_TO_CIRCUIT must set attached_circuit")
 		balloon_alert(user, "connected to circuit\nconnect to a port")
 
-		playsound(src, 'sound/machines/pda_button/pda_button1.ogg', 20, TRUE)
+		playsound(src, '../assets/sound/machines/pda_button/pda_button1.ogg', 20, TRUE)
 
 		return TRUE
 
@@ -67,7 +67,7 @@
 			connection_description = "machine"
 
 		balloon_alert(user, "connected to [connection_description]")
-		playsound(src, 'sound/items/tools/screwdriver2.ogg', 20, TRUE)
+		playsound(src, '../assets/sound/items/tools/screwdriver2.ogg', 20, TRUE)
 
 		return TRUE
 

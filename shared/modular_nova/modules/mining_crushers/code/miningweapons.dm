@@ -1,15 +1,15 @@
 /// Base handler for variant switch feedback
 /obj/item/kinetic_crusher/proc/on_variant_switch(mob/living/user)
 	to_chat(user, "You have converted your kit into the [initial(name)].")
-	playsound(get_turf(user), 'sound/items/tools/rped.ogg', 50)
+	playsound(get_turf(user), '../assets/sound/items/tools/rped.ogg', 50)
 
 /obj/item/kinetic_crusher
 	light_system = OVERLAY_LIGHT_DIRECTIONAL // Adds this to overwrite the current light system for the kinetic crusher, for consistency sake.
 	/// This var is used to imitate being weilded if it's one handed
 	var/acts_as_if_wielded
 	/// This var is used by retool kits when changing the crusher's projectile appearance
-	var/projectile_icon_file = 'icons/obj/weapons/guns/projectiles.dmi'
-	block_sound = 'sound/items/weapons/parry.ogg' //Added this for cases for the machete or adding the Marked One's trophy to the crusher variants.
+	var/projectile_icon_file = '../assets/icons/obj/weapons/guns/projectiles.dmi'
+	block_sound = '../assets/sound/items/weapons/parry.ogg' //Added this for cases for the machete or adding the Marked One's trophy to the crusher variants.
 
 /obj/item/kinetic_crusher/machete
 	icon = 'modular_nova/modules/mining_crushers/icons/items_and_weapons.dmi'
@@ -26,7 +26,7 @@
 	force_wielded = 15
 	block_chance = 15
 	slot_flags = ITEM_SLOT_BELT
-	hitsound = 'sound/items/weapons/bladeslice.ogg'
+	hitsound = '../assets/sound/items/weapons/bladeslice.ogg'
 	attack_verb_continuous = list(
 		"cleaves",
 		"chops",
@@ -77,7 +77,7 @@
 	force_wielded = 15
 	w_class = WEIGHT_CLASS_HUGE
 	armour_penetration = 15
-	hitsound = 'sound/items/weapons/bladeslice.ogg'
+	hitsound = '../assets/sound/items/weapons/bladeslice.ogg'
 	attack_verb_continuous = list(
 		"pierces",
 		"stabs",
@@ -126,7 +126,7 @@
 	force_wielded = 20
 	w_class = WEIGHT_CLASS_HUGE
 	armour_penetration = 0
-	hitsound = 'sound/items/weapons/sonic_jackhammer.ogg'
+	hitsound = '../assets/sound/items/weapons/sonic_jackhammer.ogg'
 	attack_verb_continuous = list(
 		"slams",
 		"crushes",
@@ -184,7 +184,7 @@
 	force_wielded = 10
 	w_class = WEIGHT_CLASS_NORMAL
 	armour_penetration = 0
-	hitsound = 'sound/items/weapons/pierce.ogg'
+	hitsound = '../assets/sound/items/weapons/pierce.ogg'
 	attack_verb_continuous = list(
 		"swipes",
 		"slashes",

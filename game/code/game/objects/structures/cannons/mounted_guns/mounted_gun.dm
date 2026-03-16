@@ -6,7 +6,7 @@
 	desc = "Default mounted gun for inheritance purposes."
 	density = TRUE
 	anchored = FALSE
-	icon = 'icons/obj/weapons/cannons.dmi'
+	icon = '../assets/icons/obj/weapons/cannons.dmi'
 	icon_state = "falconet_patina"
 	base_icon_state = "falconet_patina"
 	max_integrity = 300
@@ -35,9 +35,9 @@
 	/// If the gun shakes the camera when firing
 	var/firing_shakes_camera = TRUE
 	/// Sound of firing for all but last shot
-	var/fire_sound = 'sound/items/weapons/gun/general/mountedgun.ogg'
+	var/fire_sound = '../assets/sound/items/weapons/gun/general/mountedgun.ogg'
 	/// Sound of firing for last shot
-	var/last_fire_sound = 'sound/items/weapons/gun/general/mountedgunend.ogg'
+	var/last_fire_sound = '../assets/sound/items/weapons/gun/general/mountedgunend.ogg'
 	/// So you can't reload it mid-firing
 	var/is_firing = FALSE
 	/// How many degrees to vary fire angle if the gun is not anchored
@@ -276,8 +276,8 @@
 	max_shots_per_fire = 12
 	shots_per_load = 12
 	shots_in_gun = 12
-	fire_sound = 'sound/items/weapons/thermalpistol.ogg'
-	last_fire_sound = 'sound/items/weapons/thermalpistol.ogg'
+	fire_sound = '../assets/sound/items/weapons/thermalpistol.ogg'
+	last_fire_sound = '../assets/sound/items/weapons/thermalpistol.ogg'
 	projectile_type = /obj/projectile/beam/laser/repeater
 	fire_delay = 1
 	shot_delay = 2
@@ -320,7 +320,7 @@
 			return
 
 	shots_in_gun = min(shots_in_gun + shots_per_load, max_shots_per_fire)
-	playsound(src, 'sound/effects/magic/clockwork/fellowship_armory.ogg', 50, FALSE, 5)
+	playsound(src, '../assets/sound/effects/magic/clockwork/fellowship_armory.ogg', 50, FALSE, 5)
 
 /obj/structure/mounted_gun/ratvarian_repeater/time_until_next_shot()
 	return shots_in_gun % 2 != 1 ? shot_delay * 2 : shot_delay
@@ -337,8 +337,8 @@
 	max_shots_per_fire = 1
 	shots_per_load = 1
 	shots_in_gun = 0
-	fire_sound = 'sound/items/xbow_lock.ogg'
-	last_fire_sound = 'sound/items/xbow_lock.ogg'
+	fire_sound = '../assets/sound/items/xbow_lock.ogg'
+	last_fire_sound = '../assets/sound/items/xbow_lock.ogg'
 	accepted_ammo_types = list(
 		/obj/item/brass_spear,
 		/obj/item/melee/baton/security/cattleprod,
@@ -380,7 +380,7 @@
 		balloon_alert(user, "already loaded!")
 		return ITEM_INTERACT_BLOCKING
 
-	playsound(src, 'sound/items/weapons/draw_bow.ogg', 50, FALSE, 5)
+	playsound(src, '../assets/sound/items/weapons/draw_bow.ogg', 50, FALSE, 5)
 	if (load_delay > 0)
 		user.visible_message(span_warning("[user] starts loading [src]."))
 		if (!do_after(user, load_delay, target = src))

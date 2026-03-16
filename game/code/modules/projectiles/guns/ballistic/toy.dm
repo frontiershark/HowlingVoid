@@ -5,7 +5,7 @@
 	selector_switch_icon = TRUE
 	inhand_icon_state = "gun"
 	accepted_magazine_type = /obj/item/ammo_box/magazine/toy/smg
-	fire_sound = 'sound/items/syringeproj.ogg'
+	fire_sound = '../assets/sound/items/syringeproj.ogg'
 	force = 0
 	throwforce = 0
 	burst_size = 3
@@ -23,7 +23,7 @@
 	name = "foam force pistol"
 	desc = "A small, easily concealable toy handgun. Ages 8 and up."
 	accepted_magazine_type = /obj/item/ammo_box/magazine/toy/pistol
-	fire_sound = 'sound/items/syringeproj.ogg'
+	fire_sound = '../assets/sound/items/syringeproj.ogg'
 	gun_flags = TOY_FIREARM_OVERLAY | NOT_A_REAL_GUN
 
 /obj/item/gun/ballistic/automatic/pistol/toy/riot
@@ -42,7 +42,7 @@
 	force = 0
 	throwforce = 0
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/shot/toy
-	fire_sound = 'sound/items/syringeproj.ogg'
+	fire_sound = '../assets/sound/items/syringeproj.ogg'
 	clumsy_check = FALSE
 	item_flags = NONE
 	casing_ejector = FALSE
@@ -63,17 +63,17 @@
 /obj/item/gun/ballistic/shotgun/toy/crossbow
 	name = "foam force crossbow"
 	desc = "A weapon favored by many overactive children. Ages 8 and up."
-	icon = 'icons/obj/toys/toy.dmi'
+	icon = '../assets/icons/obj/toys/toy.dmi'
 	icon_state = "foamcrossbow"
 	inhand_icon_state = "crossbow"
-	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/guns_righthand.dmi'
 	inhand_x_dimension = 32
 	inhand_y_dimension = 32
 	worn_icon_state = "gun"
 	worn_icon = null
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/shot/toy/crossbow
-	fire_sound = 'sound/items/syringeproj.ogg'
+	fire_sound = '../assets/sound/items/syringeproj.ogg'
 	slot_flags = ITEM_SLOT_BELT
 	w_class = WEIGHT_CLASS_SMALL
 	gun_flags = NONE
@@ -104,7 +104,7 @@
 /obj/item/gun/ballistic/automatic/l6_saw/toy //This is the syndicate variant with syndicate firing pin and riot darts.
 	name = "donksoft LMG"
 	desc = "A heavily modified toy light machine gun, designated 'L6 SAW'. Ages 8 and up."
-	fire_sound = 'sound/items/syringeproj.ogg'
+	fire_sound = '../assets/sound/items/syringeproj.ogg'
 	can_suppress = FALSE
 	item_flags = NONE
 	accepted_magazine_type = /obj/item/ammo_box/magazine/toy/m762

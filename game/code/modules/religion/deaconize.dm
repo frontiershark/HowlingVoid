@@ -58,7 +58,7 @@
 		return FALSE
 	if(IS_CULTIST(potential_deacon))//what the fuck?!
 		to_chat(user, span_warning("[GLOB.deity] has seen a true, dark evil in [potential_deacon]'s heart, and they have been smitten!"))
-		playsound(get_turf(religious_tool), 'sound/effects/pray.ogg', 50, TRUE)
+		playsound(get_turf(religious_tool), '../assets/sound/effects/pray.ogg', 50, TRUE)
 		potential_deacon.gib(DROP_ORGANS|DROP_BODYPARTS)
 		return FALSE
 	var/datum/brain_trauma/special/honorbound/honor = user.has_trauma_type(/datum/brain_trauma/special/honorbound)
@@ -67,7 +67,7 @@
 	to_chat(user, span_notice("[GLOB.deity] has bound [potential_deacon] to the code! They are now a holy role! (albeit the lowest level of such)"))
 	potential_deacon.mind.set_holy_role(HOLY_ROLE_DEACON)
 	GLOB.religious_sect.on_conversion(potential_deacon)
-	playsound(get_turf(religious_tool), 'sound/effects/pray.ogg', 50, TRUE)
+	playsound(get_turf(religious_tool), '../assets/sound/effects/pray.ogg', 50, TRUE)
 	return TRUE
 
 ///Helper if the passed possible_deacon is valid to become a deacon or not.

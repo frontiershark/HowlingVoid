@@ -63,7 +63,7 @@
 	wing_types = null
 
 /obj/item/bodypart/chest/abductor/get_butt_sprite()
-	return icon('icons/mob/butts.dmi', BUTT_SPRITE_GREY)
+	return icon('../assets/icons/mob/butts.dmi', BUTT_SPRITE_GREY)
 
 /obj/item/bodypart/arm/left/abductor
 	limb_id = SPECIES_ABDUCTOR
@@ -103,7 +103,7 @@
 	butcher_replacement = null
 
 /obj/item/bodypart/chest/jelly/get_butt_sprite()
-	return icon('icons/mob/butts.dmi', BUTT_SPRITE_SLIME)
+	return icon('../assets/icons/mob/butts.dmi', BUTT_SPRITE_SLIME)
 
 /obj/item/bodypart/arm/left/jelly
 	biological_state = (BIO_FLESH|BIO_BLOODED)
@@ -233,7 +233,7 @@
 	bodypart_effects = list(/datum/status_effect/grouped/bodypart_effect/photosynthesis)
 
 /obj/item/bodypart/chest/pod/get_butt_sprite()
-	return icon('icons/mob/butts.dmi', BUTT_SPRITE_FLOWERPOT)
+	return icon('../assets/icons/mob/butts.dmi', BUTT_SPRITE_FLOWERPOT)
 
 /obj/item/bodypart/arm/left/pod
 	limb_id = SPECIES_PODPERSON
@@ -242,8 +242,8 @@
 	grappled_attack_verb = "lacerate"
 	grappled_attack_verb_continuous = "lacerates"
 	unarmed_attack_effect = ATTACK_EFFECT_CLAW
-	unarmed_attack_sound = 'sound/items/weapons/slice.ogg'
-	unarmed_miss_sound = 'sound/items/weapons/slashmiss.ogg'
+	unarmed_attack_sound = '../assets/sound/items/weapons/slice.ogg'
+	unarmed_miss_sound = '../assets/sound/items/weapons/slashmiss.ogg'
 	burn_modifier = 1.25
 
 	bodytype = BODYTYPE_ORGANIC | BODYTYPE_PLANT
@@ -256,8 +256,8 @@
 	grappled_attack_verb = "lacerate"
 	grappled_attack_verb_continuous = "lacerates"
 	unarmed_attack_effect = ATTACK_EFFECT_CLAW
-	unarmed_attack_sound = 'sound/items/weapons/slice.ogg'
-	unarmed_miss_sound = 'sound/items/weapons/slashmiss.ogg'
+	unarmed_attack_sound = '../assets/sound/items/weapons/slice.ogg'
+	unarmed_miss_sound = '../assets/sound/items/weapons/slashmiss.ogg'
 	burn_modifier = 1.25
 
 	bodytype = BODYTYPE_ORGANIC | BODYTYPE_PLANT
@@ -555,8 +555,8 @@
 
 //GOLEM
 /obj/item/bodypart/head/golem
-	icon = 'icons/mob/human/species/golems.dmi'
-	icon_static = 'icons/mob/human/species/golems.dmi'
+	icon = '../assets/icons/mob/human/species/golems.dmi'
+	icon_static = '../assets/icons/mob/human/species/golems.dmi'
 	icon_state = "golem_head"
 	biological_state = BIO_BONE
 	bodytype = BODYTYPE_GOLEM | BODYTYPE_ORGANIC
@@ -598,8 +598,8 @@
 	return ..()
 
 /obj/item/bodypart/chest/golem
-	icon = 'icons/mob/human/species/golems.dmi'
-	icon_static = 'icons/mob/human/species/golems.dmi'
+	icon = '../assets/icons/mob/human/species/golems.dmi'
+	icon_static = '../assets/icons/mob/human/species/golems.dmi'
 	icon_state = "golem_chest"
 	biological_state = BIO_BONE
 	acceptable_bodytype = BODYTYPE_GOLEM
@@ -624,8 +624,8 @@
 	return ..()
 
 /obj/item/bodypart/arm/left/golem
-	icon = 'icons/mob/human/species/golems.dmi'
-	icon_static = 'icons/mob/human/species/golems.dmi'
+	icon = '../assets/icons/mob/human/species/golems.dmi'
+	icon_static = '../assets/icons/mob/human/species/golems.dmi'
 	icon_state = "golem_l_arm"
 	biological_state = (BIO_BONE|BIO_JOINTED)
 	bodytype = BODYTYPE_GOLEM | BODYTYPE_ORGANIC
@@ -661,8 +661,8 @@
 	new_owner.AddComponentFrom(REF(src), /datum/component/shovel_hands)
 
 /obj/item/bodypart/arm/right/golem
-	icon = 'icons/mob/human/species/golems.dmi'
-	icon_static = 'icons/mob/human/species/golems.dmi'
+	icon = '../assets/icons/mob/human/species/golems.dmi'
+	icon_static = '../assets/icons/mob/human/species/golems.dmi'
 	icon_state = "golem_r_arm"
 	biological_state = (BIO_BONE|BIO_JOINTED)
 	bodytype = BODYTYPE_GOLEM | BODYTYPE_ORGANIC
@@ -698,8 +698,8 @@
 	new_owner.AddComponentFrom(REF(src), /datum/component/shovel_hands)
 
 /obj/item/bodypart/leg/left/golem
-	icon = 'icons/mob/human/species/golems.dmi'
-	icon_static = 'icons/mob/human/species/golems.dmi'
+	icon = '../assets/icons/mob/human/species/golems.dmi'
+	icon_static = '../assets/icons/mob/human/species/golems.dmi'
 	icon_state = "golem_l_leg"
 	biological_state = (BIO_BONE|BIO_JOINTED)
 	bodytype = BODYTYPE_GOLEM | BODYTYPE_ORGANIC
@@ -715,8 +715,8 @@
 	butcher_replacement = null
 
 /obj/item/bodypart/leg/right/golem
-	icon = 'icons/mob/human/species/golems.dmi'
-	icon_static = 'icons/mob/human/species/golems.dmi'
+	icon = '../assets/icons/mob/human/species/golems.dmi'
+	icon_static = '../assets/icons/mob/human/species/golems.dmi'
 	icon_state = "golem_r_leg"
 	biological_state = (BIO_BONE|BIO_JOINTED)
 	bodytype = BODYTYPE_GOLEM | BODYTYPE_ORGANIC

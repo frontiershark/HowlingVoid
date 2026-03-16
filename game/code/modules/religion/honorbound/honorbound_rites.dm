@@ -29,7 +29,7 @@
 		return FALSE
 	honor.guilty -= who
 	who = null
-	playsound(get_turf(religious_tool), 'sound/effects/pray.ogg', 50, TRUE)
+	playsound(get_turf(religious_tool), '../assets/sound/effects/pray.ogg', 50, TRUE)
 	return TRUE
 
 /datum/religion_rites/summon_rules
@@ -59,13 +59,13 @@
 		to_chat(user, span_warning("Your target left the altar!"))
 		return FALSE
 	autograph.visible_message(span_notice("Words magically form on [autograph]!"))
-	playsound(tool_turf, 'sound/effects/pray.ogg', 50, TRUE)
+	playsound(tool_turf, '../assets/sound/effects/pray.ogg', 50, TRUE)
 	new /obj/item/paper/holy_writ(tool_turf)
 	qdel(autograph)
 	return TRUE
 
 /obj/item/paper/holy_writ
-	icon = 'icons/obj/scrolls.dmi'
+	icon = '../assets/icons/obj/scrolls.dmi'
 	icon_state = "honorscroll"
 	slot_flags = null
 	show_written_words = FALSE

@@ -2,7 +2,7 @@
 /datum/action/cooldown/mob_cooldown/skull_launcher
 	name = "Launch Legion"
 	desc = "Propel a living piece of your body to a distant location."
-	button_icon = 'icons/mob/simple/lavaland/lavaland_monsters.dmi'
+	button_icon = '../assets/icons/mob/simple/lavaland/lavaland_monsters.dmi'
 	button_icon_state = "legion_head"
 	background_icon_state = "bg_demon"
 	overlay_icon_state = "bg_demon_border"
@@ -75,7 +75,7 @@
 /// Animation for launching a skull
 /obj/effect/temp_visual/legion_skull_depart
 	name = "legion brood launch"
-	icon = 'icons/mob/simple/lavaland/lavaland_monsters.dmi'
+	icon = '../assets/icons/mob/simple/lavaland/lavaland_monsters.dmi'
 	icon_state = "legion_head"
 	duration = 0.25 SECONDS
 
@@ -89,7 +89,7 @@
 /obj/effect/temp_visual/legion_skull_land
 	name = "legion brood land"
 	duration = 0.5 SECONDS
-	icon = 'icons/mob/simple/lavaland/lavaland_monsters.dmi'
+	icon = '../assets/icons/mob/simple/lavaland/lavaland_monsters.dmi'
 	icon_state = "legion_head"
 	alpha = 0
 	pixel_y = 72
@@ -108,7 +108,7 @@
 	duration = 0.75 SECONDS
 	layer = BELOW_MOB_LAYER
 	plane = GAME_PLANE
-	icon = 'icons/mob/telegraphing/telegraph.dmi'
+	icon = '../assets/icons/mob/telegraphing/telegraph.dmi'
 	icon_state = "skull"
 
 /obj/effect/temp_visual/legion_brood_indicator/Initialize(mapload)

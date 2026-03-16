@@ -5,7 +5,7 @@
 	icon_living = "stoat"
 	icon_dead = "stoat_dead"
 	base_icon_state = "stoat"
-	icon = 'icons/mob/simple/pets.dmi'
+	icon = '../assets/icons/mob/simple/pets.dmi'
 	butcher_results = list(/obj/item/food/meat/slab = 1)
 	mob_biotypes = MOB_ORGANIC
 	mob_size = MOB_SIZE_SMALL
@@ -55,7 +55,7 @@
 		BB_EMOTE_SAY = list("Chirp chirp chirp!"),
 		BB_EMOTE_SEE = list("sweeps its tail!", "jumps around!", "licks its fur!"),
 		BB_SPEAK_CHANCE = 2,
-		BB_EMOTE_SOUND = list('sound/mobs/non-humanoids/stoat/stoat_sounds.ogg'),
+		BB_EMOTE_SOUND = list('../assets/sound/mobs/non-humanoids/stoat/stoat_sounds.ogg'),
 	)
 	ai_controller.set_blackboard_key(BB_BASIC_MOB_SPEAK_LINES, display_emote)
 

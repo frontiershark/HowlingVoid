@@ -1,12 +1,12 @@
 /obj/item/melee/supermatter_sword
 	name = "supermatter sword"
 	desc = "In a station full of bad ideas, this might just be the worst."
-	icon = 'icons/obj/weapons/sword.dmi'
+	icon = '../assets/icons/obj/weapons/sword.dmi'
 	icon_state = "supermatter_sword_balanced"
 	inhand_icon_state = "supermatter_sword"
 	icon_angle = -90
-	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/swords_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/swords_righthand.dmi'
 	slot_flags = null
 	w_class = WEIGHT_CLASS_BULKY
 	force = 0.001
@@ -107,7 +107,7 @@
 	var/turf/newT = turf.ScrapeAway(flags = CHANGETURF_INHERIT_AIR)
 	if(newT.type == oldtype)
 		return
-	playsound(turf, 'sound/effects/supermatter.ogg', 50, TRUE)
+	playsound(turf, '../assets/sound/effects/supermatter.ogg', 50, TRUE)
 	turf.visible_message(
 		span_danger("[turf] smacks into [src] and rapidly flashes to ash."),
 		span_hear("You hear a loud crack as you are washed with a wave of heat."),

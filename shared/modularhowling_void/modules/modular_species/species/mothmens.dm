@@ -121,7 +121,7 @@
 /datum/action/cooldown/moth_lamp_sense
 	name = "Lamp Sense"
 	desc = "Focus your antennae and lock onto the brightest nearby direction."
-	button_icon = 'icons/effects/particles/notes/note_light.dmi'
+	button_icon = '../assets/icons/effects/particles/notes/note_light.dmi'
 	button_icon_state = "power_10"
 	cooldown_time = 14 SECONDS
 	check_flags = AB_CHECK_CONSCIOUS
@@ -188,7 +188,7 @@
 /datum/action/cooldown/moth_powder_burst
 	name = "Powder Burst"
 	desc = "Shake wing dust into the air, briefly disorienting nearby targets."
-	button_icon = 'icons/effects/effects.dmi'
+	button_icon = '../assets/icons/effects/effects.dmi'
 	button_icon_state = "blessed"
 	cooldown_time = 26 SECONDS
 	check_flags = AB_CHECK_CONSCIOUS
@@ -225,7 +225,7 @@
 
 /obj/effect/temp_visual/moth_pollen
 	name = "wing dust"
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	icon_state = "shieldsparkles"
 	layer = ABOVE_MOB_LAYER
 	plane = GAME_PLANE

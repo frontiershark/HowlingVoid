@@ -1,10 +1,10 @@
 /obj/item/reagent_containers/syringe
 	name = "syringe"
 	desc = "A syringe that can hold up to 15 units."
-	icon = 'icons/obj/medical/syringe.dmi'
+	icon = '../assets/icons/obj/medical/syringe.dmi'
 	base_icon_state = "syringe"
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/medical_righthand.dmi'
 	icon_state = "syringe_0"
 	inhand_icon_state = "syringe_0"
 	worn_icon_state = "pen"
@@ -19,7 +19,7 @@
 	/// Flags used by the injection
 	var/inject_flags = NONE
 	/// Icon and states used when inserted into toy darts
-	var/dart_insert_icon = 'icons/obj/weapons/guns/toy.dmi'
+	var/dart_insert_icon = '../assets/icons/obj/weapons/guns/toy.dmi'
 	var/dart_insert_casing_icon_state = "overlay_syringe"
 	var/dart_insert_projectile_icon_state = "overlay_syringe_proj"
 
@@ -170,7 +170,7 @@
 /// Returns a list of overlays to add that relate to the reagents inside the syringe
 /obj/item/reagent_containers/syringe/proc/update_reagent_overlay()
 	if(reagents?.total_volume)
-		var/mutable_appearance/filling_overlay = mutable_appearance('icons/obj/medical/reagent_fillings.dmi', "syringe[get_rounded_vol()]")
+		var/mutable_appearance/filling_overlay = mutable_appearance('../assets/icons/obj/medical/reagent_fillings.dmi', "syringe[get_rounded_vol()]")
 		filling_overlay.color = mix_color_from_reagents(reagents.reagent_list)
 		. += filling_overlay
 

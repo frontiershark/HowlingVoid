@@ -3,13 +3,13 @@
 
 /obj/item/camera
 	name = "camera"
-	icon = 'icons/obj/art/camera.dmi'
+	icon = '../assets/icons/obj/art/camera.dmi'
 	desc = "A polaroid camera."
 	icon_state = "camera"
 	inhand_icon_state = "camera"
 	worn_icon_state = "camera"
-	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/devices_righthand.dmi'
 	light_system = OVERLAY_LIGHT_DIRECTIONAL //Used as a flash here.
 	light_range = 6
 	light_color = COLOR_WHITE
@@ -114,15 +114,15 @@
 	if(!adjust_zoom(user))
 		return CLICK_ACTION_BLOCKING
 	if(silent) // Don't out your silent cameras
-		user.playsound_local(get_turf(src), 'sound/machines/click.ogg', 50, TRUE)
+		user.playsound_local(get_turf(src), '../assets/sound/machines/click.ogg', 50, TRUE)
 	else
-		playsound(src, 'sound/machines/click.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/machines/click.ogg', 50, TRUE)
 	return CLICK_ACTION_SUCCESS
 
 /obj/item/camera/attack_self(mob/user)
 	if(isnull(disk))
 		return
-	playsound(src, 'sound/machines/card_slide.ogg', 50)
+	playsound(src, '../assets/sound/machines/card_slide.ogg', 50)
 	user.put_in_hands(disk)
 	disk = null
 
@@ -141,7 +141,7 @@
 		return ITEM_INTERACT_BLOCKING
 	if(!user.temporarilyRemoveItemFromInventory(new_film))
 		return ITEM_INTERACT_BLOCKING
-	playsound(src, 'sound/machines/click.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/machines/click.ogg', 50, TRUE)
 	qdel(new_film)
 	pictures_left = pictures_max
 	return ITEM_INTERACT_SUCCESS
@@ -155,7 +155,7 @@
 		balloon_alert(user, "disks swapped!")
 	else
 		balloon_alert(user, "disk inserted!")
-	playsound(src, 'sound/machines/card_slide.ogg', 50)
+	playsound(src, '../assets/sound/machines/card_slide.ogg', 50)
 	disk = new_disk
 	return ITEM_INTERACT_SUCCESS
 

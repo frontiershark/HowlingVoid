@@ -14,10 +14,10 @@ Difficulty: Hard
 	icon_state = "wendigo"
 	icon_living = "wendigo"
 	icon_dead = "wendigo_dead"
-	icon = 'icons/mob/simple/icemoon/64x64megafauna.dmi'
+	icon = '../assets/icons/mob/simple/icemoon/64x64megafauna.dmi'
 	attack_verb_continuous = "claws"
 	attack_verb_simple = "claw"
-	attack_sound = 'sound/effects/magic/demon_attack1.ogg'
+	attack_sound = '../assets/sound/effects/magic/demon_attack1.ogg'
 	attack_vis_effect = ATTACK_EFFECT_CLAW
 	weather_immunities = list(TRAIT_SNOWSTORM_IMMUNE)
 	speak_emote = list("roars")
@@ -43,7 +43,7 @@ Difficulty: Hard
 	crusher_achievement_type = /datum/award/achievement/boss/wendigo_crusher
 	score_achievement_type = /datum/award/score/wendigo_score
 	death_message = "falls to the ground in a bloody heap, shaking the arena."
-	death_sound = 'sound/effects/gravhit.ogg'
+	death_sound = '../assets/sound/effects/gravhit.ogg'
 	footstep_type = FOOTSTEP_MOB_HEAVY
 	summon_line = "GwaHOOOOOOOOOOOOOOOOOOOOO"
 	/// Saves the turf the megafauna was created at (spawns exit portal here)
@@ -149,7 +149,7 @@ Difficulty: Hard
 
 /proc/wendigo_scream(mob/owner)
 	SLEEP_CHECK_DEATH(5, owner)
-	playsound(owner.loc, 'sound/effects/magic/demon_dies.ogg', 600, FALSE, 10)
+	playsound(owner.loc, '../assets/sound/effects/magic/demon_dies.ogg', 600, FALSE, 10)
 	var/pixel_shift = rand(5, 15)
 	animate(owner, pixel_z = pixel_shift, time = 1, loop = 20, flags = ANIMATION_RELATIVE)
 	animate(pixel_z = -pixel_shift, time = 1, flags = ANIMATION_RELATIVE)
@@ -164,7 +164,7 @@ Difficulty: Hard
 		return
 	var/list/all_turfs = RANGE_TURFS(range, origin)
 	for(var/sound_range = 0 to range)
-		playsound(origin,'sound/effects/bamf.ogg', 600, TRUE, 10)
+		playsound(origin,'../assets/sound/effects/bamf.ogg', 600, TRUE, 10)
 		for(var/turf/stomp_turf in all_turfs)
 			if(get_dist(origin, stomp_turf) > sound_range)
 				continue

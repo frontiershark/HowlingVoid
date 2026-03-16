@@ -38,7 +38,7 @@
 	abstract = FALSE
 
 /datum/grand_side_effect/scramble_turfs/trigger(potency, turf/ritual_location, mob/invoker)
-	playsound(ritual_location, 'sound/effects/magic/timeparadox2.ogg', 60, TRUE)
+	playsound(ritual_location, '../assets/sound/effects/magic/timeparadox2.ogg', 60, TRUE)
 	var/datum/action/cooldown/spell/spell = new /datum/action/cooldown/spell/spacetime_dist()
 	spell.cast(ritual_location)
 
@@ -201,7 +201,7 @@
 #define CREWMATE_SUMMON_TELEPORT_DELAY 9 SECONDS
 
 /datum/grand_side_effect/summon_crewmate/trigger(potency, turf/ritual_location, mob/invoker)
-	playsound(ritual_location, 'sound/effects/magic/lightning_chargeup.ogg', 65, TRUE)
+	playsound(ritual_location, '../assets/sound/effects/magic/lightning_chargeup.ogg', 65, TRUE)
 	var/list/potential_victims = list()
 	var/area/our_area = get_area(ritual_location)
 	for (var/mob/living/carbon/human/crewmate as anything in GLOB.human_list)
@@ -219,7 +219,7 @@
 	new /obj/effect/temp_visual/teleport_abductor(landing_pos)
 
 	var/mob/living/carbon/human/victim = pick(potential_victims)
-	playsound(get_turf(victim),'sound/effects/magic/repulse.ogg', 60, TRUE)
+	playsound(get_turf(victim),'../assets/sound/effects/magic/repulse.ogg', 60, TRUE)
 	victim.Immobilize(CREWMATE_SUMMON_TELEPORT_DELAY)
 	victim.AddElement(/datum/element/forced_gravity, 0)
 	victim.add_filter("teleport_glow", 2, list("type" = "outline", "color" = "#de3aff48", "size" = 2))
@@ -233,7 +233,7 @@
 	victim.RemoveElement(/datum/element/forced_gravity, 0)
 	victim.remove_filter("teleport_glow")
 
-	if (do_teleport(victim, destination, asoundin = 'sound/effects/phasein.ogg', channel = TELEPORT_CHANNEL_MAGIC))
+	if (do_teleport(victim, destination, asoundin = '../assets/sound/effects/phasein.ogg', channel = TELEPORT_CHANNEL_MAGIC))
 		var/obj/effect/particle_effect/fluid/smoke/poof = new(was_position)
 		poof.lifetime = 2 SECONDS
 		was_position.visible_message(span_warning("[victim] disappears in a puff of smoke!"))
@@ -245,7 +245,7 @@
 	abstract = FALSE
 
 /datum/grand_side_effect/smoke/trigger(potency, turf/ritual_location, mob/invoker)
-	playsound(src, 'sound/effects/magic/smoke.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/effects/magic/smoke.ogg', 50, TRUE)
 	var/range = LERP(2, 4, potency/GRAND_RITUAL_FINALE_COUNT)
 	do_smoke(round(range), ritual_location, ritual_location, smoke_type = /datum/effect_system/fluid_spread/smoke/colourful)
 
@@ -382,7 +382,7 @@
 		return
 	if (!mob_path)
 		return
-	playsound(get_turf(src),'sound/effects/magic/teleport_app.ogg', 60, TRUE)
+	playsound(get_turf(src),'../assets/sound/effects/magic/teleport_app.ogg', 60, TRUE)
 	do_sparks(5, FALSE, loc)
 	new mob_path(loc)
 

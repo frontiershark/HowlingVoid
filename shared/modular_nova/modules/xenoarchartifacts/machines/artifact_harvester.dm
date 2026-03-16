@@ -50,7 +50,7 @@
 				span_notice("You insert [attacking_item] into [src]."),
 				blind_message = span_hear("You hear click."),
 			)
-			playsound(src, 'sound/machines/crate/crate_open.ogg', 30, 10)
+			playsound(src, '../assets/sound/machines/crate/crate_open.ogg', 30, 10)
 			src.inserted_battery = attacking_item
 			icon_state = "harvester_battery"
 			ui_interact(user)
@@ -105,7 +105,7 @@
 			current_artifact.being_used = FALSE
 			current_artifact = null
 			say("Battery is full.")
-			playsound(src, 'sound/machines/beep/beep.ogg', 50, FALSE)
+			playsound(src, '../assets/sound/machines/beep/beep.ogg', 50, FALSE)
 			icon_state = "harvester_battery"
 			owned_scanner.icon_state = "xenoarch_scanner"
 
@@ -167,7 +167,7 @@
 
 		current_artifact = analysed
 		if(!current_artifact)
-			playsound(src, 'sound/machines/buzz/buzz-two.ogg', 50, 10)
+			playsound(src, '../assets/sound/machines/buzz/buzz-two.ogg', 50, 10)
 			say("Cannot harvest. No noteworthy energy signature isolated.")
 			return
 
@@ -178,7 +178,7 @@
 		var/datum/artifact_effect/second_effect = null
 		if(istype(scanned_artifact))
 			if(scanned_artifact.being_used)
-				playsound(src, 'sound/machines/buzz/buzz-two.ogg', 50, 10)
+				playsound(src, '../assets/sound/machines/buzz/buzz-two.ogg', 50, 10)
 				say("Cannot harvest. Source already being harvested.")
 				return
 
@@ -187,7 +187,7 @@
 
 		// Conflicting (both active) = fail
 		if((first_effect && first_effect.activated) && (second_effect && second_effect.activated))
-			playsound(src, 'sound/machines/buzz/buzz-two.ogg', 50, 10)
+			playsound(src, '../assets/sound/machines/buzz/buzz-two.ogg', 50, 10)
 			say("Cannot harvest. Source is emitting conflicting energy signatures.")
 			return
 
@@ -199,7 +199,7 @@
 			harvested_effect = second_effect
 
 		if(!harvested_effect)
-			playsound(src, 'sound/machines/buzz/buzz-two.ogg', 50, 10)
+			playsound(src, '../assets/sound/machines/buzz/buzz-two.ogg', 50, 10)
 			say("Cannot harvest. No energy emitting from source.")
 			return
 
@@ -267,7 +267,7 @@
 			say("Battery is busy.")
 			return
 
-		playsound(src, 'sound/machines/crate/crate_open.ogg', 30, 10)
+		playsound(src, '../assets/sound/machines/crate/crate_open.ogg', 30, 10)
 
 		if(inserted_battery)
 			inserted_battery.forceMove(get_turf(src))

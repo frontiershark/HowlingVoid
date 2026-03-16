@@ -1,7 +1,7 @@
 /obj/structure/urinal
 	name = "urinal"
 	desc = "The HU-452, an experimental urinal. Comes complete with experimental urinal cake."
-	icon = 'icons/obj/watercloset.dmi'
+	icon = '../assets/icons/obj/watercloset.dmi'
 	icon_state = "urinal"
 	density = FALSE
 	anchored = TRUE
@@ -71,7 +71,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/urinal, 32)
 	if(..())
 		return TRUE
 	to_chat(user, span_notice("You start to [exposed ? "screw the cap back into place" : "unscrew the cap to the drain protector"]..."))
-	playsound(loc, 'sound/effects/stonedoor_openclose.ogg', 50, TRUE)
+	playsound(loc, '../assets/sound/effects/stonedoor_openclose.ogg', 50, TRUE)
 	if(I.use_tool(src, user, 20))
 		user.visible_message(span_notice("[user] [exposed ? "screws the cap back into place" : "unscrew the cap to the drain protector"]!"),
 			span_notice("You [exposed ? "screw the cap back into place" : "unscrew the cap on the drain"]!"),
@@ -92,7 +92,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/urinal, 32)
 /obj/item/wallframe/urinal
 	name = "urinal frame"
 	desc = "An unmounted urinal. Attach it to a wall to use."
-	icon = 'icons/obj/watercloset.dmi'
+	icon = '../assets/icons/obj/watercloset.dmi'
 	icon_state = "urinal"
 	result_path = /obj/structure/urinal
 	pixel_shift = 32
@@ -100,7 +100,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/urinal, 32)
 /obj/item/food/urinalcake
 	name = "urinal cake"
 	desc = "The noble urinal cake, protecting the station's pipes from the station's pee. Do not eat."
-	icon = 'icons/obj/watercloset.dmi'
+	icon = '../assets/icons/obj/watercloset.dmi'
 	icon_state = "urinalcake"
 	w_class = WEIGHT_CLASS_TINY
 	food_reagents = list(

@@ -1,5 +1,5 @@
 /obj/item/melee/energy
-	icon = 'icons/obj/weapons/transforming_energy.dmi'
+	icon = '../assets/icons/obj/weapons/transforming_energy.dmi'
 	abstract_type = /obj/item/melee/energy
 	icon_angle = -45
 	max_integrity = 200
@@ -28,7 +28,7 @@
 	/// Sharpness while active.
 	var/active_sharpness = SHARP_EDGED
 	/// Hitsound played attacking while active.
-	var/active_hitsound = 'sound/items/weapons/blade1.ogg'
+	var/active_hitsound = '../assets/sound/items/weapons/blade1.ogg'
 	/// Weight class while active.
 	var/active_w_class = WEIGHT_CLASS_HUGE
 	/// The heat given off when active.
@@ -129,7 +129,7 @@
 	tool_behaviour = (active ? TOOL_SAW : NONE) //Lets energy weapons cut trees. Also lets them do bonecutting surgery, which is kinda metal!
 	if(user)
 		balloon_alert(user, "[name] [active ? "enabled":"disabled"]")
-	playsound(src, active ? 'sound/items/weapons/saberon.ogg' : 'sound/items/weapons/saberoff.ogg', 35, TRUE)
+	playsound(src, active ? '../assets/sound/items/weapons/saberon.ogg' : '../assets/sound/items/weapons/saberoff.ogg', 35, TRUE)
 	set_light_on(active)
 	update_appearance(UPDATE_ICON_STATE)
 	return COMPONENT_NO_DEFAULT_MESSAGE
@@ -141,9 +141,9 @@
 	icon_state = "axe"
 	inhand_icon_state = "axe"
 	base_icon_state = "axe"
-	lefthand_file = 'icons/mob/inhands/weapons/axes_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/axes_righthand.dmi'
-	hitsound = 'sound/items/weapons/bladeslice.ogg'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/axes_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/axes_righthand.dmi'
+	hitsound = '../assets/sound/items/weapons/bladeslice.ogg'
 	attack_verb_continuous = list("attacks", "chops", "cleaves", "tears", "lacerates", "cuts")
 	attack_verb_simple = list("attack", "chop", "cleave", "tear", "lacerate", "cut")
 	force = 40
@@ -187,8 +187,8 @@
 	icon_state = "e_sword"
 	base_icon_state = "e_sword"
 	inhand_icon_state = "e_sword"
-	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/swords_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/swords_righthand.dmi'
 	hitsound = SFX_SWING_HIT
 	force = 3
 	throwforce = 5
@@ -196,7 +196,7 @@
 	throw_range = 5
 	armour_penetration = 35
 	block_chance = 50
-	block_sound = 'sound/items/weapons/block_blade.ogg'
+	block_sound = '../assets/sound/items/weapons/block_blade.ogg'
 	embed_type = /datum/embedding/esword
 	var/list/alt_continuous = list("stabs", "pierces", "impales")
 	var/list/alt_simple = list("stab", "pierce", "impale")
@@ -247,9 +247,9 @@
 /obj/item/melee/energy/sword/cyborg/saw //Used by medical Syndicate cyborgs
 	name = "energy saw"
 	desc = "For heavy duty cutting. It has a carbon-fiber blade in addition to a toggleable hard-light edge to dramatically increase sharpness."
-	icon = 'icons/obj/medical/surgery_tools.dmi'
+	icon = '../assets/icons/obj/medical/surgery_tools.dmi'
 	icon_state = "esaw"
-	hitsound = 'sound/items/weapons/circsawhit.ogg'
+	hitsound = '../assets/sound/items/weapons/circsawhit.ogg'
 	force = 18
 	hitcost = 0.075 * STANDARD_CELL_CHARGE // Costs more than a standard cyborg esword.
 	w_class = WEIGHT_CLASS_NORMAL
@@ -331,8 +331,8 @@
 	icon_state = "e_cutlass"
 	inhand_icon_state = "e_cutlass"
 	base_icon_state = "e_cutlass"
-	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/swords_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/swords_righthand.dmi'
 	light_color = COLOR_RED
 
 /obj/item/melee/energy/sword/pirate/Initialize(mapload)
@@ -345,9 +345,9 @@
 	desc = "A concentrated beam of energy in the shape of a blade. Very stylish... and lethal."
 	icon_state = "blade"
 	base_icon_state = "blade"
-	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
-	hitsound = 'sound/items/weapons/blade1.ogg'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/swords_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/swords_righthand.dmi'
+	hitsound = '../assets/sound/items/weapons/blade1.ogg'
 	attack_verb_continuous = list("attacks", "slashes", "slices", "tears", "lacerates", "rips", "dices", "cuts")
 	attack_verb_simple = list("attack", "slash", "slice", "tear", "lacerate", "rip", "dice", "cut")
 	force = 30
@@ -395,8 +395,8 @@
 	icon_state = "surplus_e_sword"
 	inhand_icon_state = "surplus_e_sword"
 	base_icon_state = "surplus_e_sword"
-	lefthand_file = 'icons/mob/inhands/64x64_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/64x64_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/64x64_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/64x64_righthand.dmi'
 	inhand_x_dimension = 64
 	inhand_y_dimension = 64
 	active_force = 15 // This force is augmented by the state of our target.
@@ -497,7 +497,7 @@
 			return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 	charge = max_charge
 	user.balloon_alert(user, "recharge successful")
-	playsound(src, 'sound/machines/ping.ogg', 40, TRUE)
+	playsound(src, '../assets/sound/machines/ping.ogg', 40, TRUE)
 	return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
 /obj/item/melee/energy/sword/surplus/afterattack(atom/target, mob/user, list/modifiers, list/attack_modifiers)
@@ -541,7 +541,7 @@
 		return TRUE
 
 	user.Shake(2, 1, 0.3 SECONDS, shake_interval = 0.1 SECONDS)
-	playsound(src, 'sound/items/baton/telescopic_baton_folded_pickup.ogg', 40, TRUE)
+	playsound(src, '../assets/sound/items/baton/telescopic_baton_folded_pickup.ogg', 40, TRUE)
 	COOLDOWN_START(src, jiggle_cooldown, 1 SECONDS)
 	return TRUE
 

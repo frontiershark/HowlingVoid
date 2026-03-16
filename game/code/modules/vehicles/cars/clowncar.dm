@@ -25,8 +25,8 @@
 	///Does the driver require the clown role to drive it
 	var/enforce_clown_role = TRUE
 	forced_enter_sound = SFX_CLOWN_CAR_LOAD
-	enter_sound = 'sound/vehicles/clown_car/door_close.ogg'
-	exit_sound = 'sound/vehicles/clown_car/door_open.ogg'
+	enter_sound = '../assets/sound/vehicles/clown_car/door_close.ogg'
+	exit_sound = '../assets/sound/vehicles/clown_car/door_open.ogg'
 
 /datum/armor/car_clowncar
 	melee = 70
@@ -57,7 +57,7 @@
 		if(is_clown_job(H.mind?.assigned_role) || !enforce_clown_role) //Ensures only clowns can drive the car. (Including more at once)
 			add_control_flags(H, VEHICLE_CONTROL_DRIVE)
 			RegisterSignal(H, COMSIG_MOB_CLICKON, PROC_REF(fire_cannon_at))
-			playsound(src, 'sound/vehicles/clown_car/door_close.ogg', 70, TRUE)
+			playsound(src, '../assets/sound/vehicles/clown_car/door_close.ogg', 70, TRUE)
 			M.log_message("has entered [src] as a possible driver", LOG_GAME)
 			return
 	add_control_flags(M, VEHICLE_CONTROL_KIDNAPPED)
@@ -113,10 +113,10 @@
 	if(isclosedturf(bumped))
 		visible_message(span_warning("[src] rams into [bumped] and crashes!"))
 		playsound(src, pick(
-			'sound/vehicles/clown_car/clowncar_crash1.ogg',
-			'sound/vehicles/clown_car/clowncar_crash2.ogg',
+			'../assets/sound/vehicles/clown_car/clowncar_crash1.ogg',
+			'../assets/sound/vehicles/clown_car/clowncar_crash2.ogg',
 			), 75)
-		playsound(src, 'sound/vehicles/clown_car/clowncar_crashpins.ogg', 75)
+		playsound(src, '../assets/sound/vehicles/clown_car/clowncar_crashpins.ogg', 75)
 		dump_mobs(TRUE)
 		log_combat(src, bumped, "crashed into", null, "dumping all passengers")
 
@@ -132,9 +132,9 @@
 		hittarget_living.visible_message(span_warning("[src] rams into [hittarget_living] and sucks [hittarget_living.p_them()] up!")) //fuck off shezza this isn't ERP.
 		mob_forced_enter(hittarget_living)
 		playsound(src, pick(
-			'sound/vehicles/clown_car/clowncar_ram1.ogg',
-			'sound/vehicles/clown_car/clowncar_ram2.ogg',
-			'sound/vehicles/clown_car/clowncar_ram3.ogg',
+			'../assets/sound/vehicles/clown_car/clowncar_ram1.ogg',
+			'../assets/sound/vehicles/clown_car/clowncar_ram2.ogg',
+			'../assets/sound/vehicles/clown_car/clowncar_ram3.ogg',
 			), 75)
 		log_combat(src, hittarget_living, "sucked up")
 		return
@@ -149,14 +149,14 @@
 				"[WOUND_PICK_HIGHEST_SEVERITY]"
 			)))
 			carbon_occupant.cause_wound_of_type_and_severity(WOUND_BLUNT, head_to_wound, WOUND_SEVERITY_MODERATE, WOUND_SEVERITY_SEVERE, pick_mode)
-			carbon_occupant.playsound_local(src, 'sound/items/weapons/flash_ring.ogg', 50)
+			carbon_occupant.playsound_local(src, '../assets/sound/items/weapons/flash_ring.ogg', 50)
 			carbon_occupant.set_eye_blur_if_lower(rand(10 SECONDS, 20 SECONDS))
 
 	hittarget_living.add_splatter_floor(small_drip = FALSE)
 	hittarget_living.adjust_brute_loss(200)
 	log_combat(src, hittarget_living, "rammed into", null, "injuring all passengers and killing the [hittarget_living]")
 	dump_mobs(TRUE)
-	playsound(src, 'sound/vehicles/car_crash.ogg', 100)
+	playsound(src, '../assets/sound/vehicles/car_crash.ogg', 100)
 
 /obj/vehicle/sealed/car/clowncar/proc/check_crossed(datum/source, atom/movable/crossed)
 	SIGNAL_HANDLER
@@ -172,7 +172,7 @@
 	target_pancake.visible_message(span_warning("[src] runs over [target_pancake], flattening [target_pancake.p_them()] like a pancake!"))
 	target_pancake.AddElement(/datum/element/squish, 5 SECONDS)
 	target_pancake.Paralyze(2 SECONDS)
-	playsound(target_pancake, 'sound/effects/cartoon_sfx/cartoon_splat.ogg', 75)
+	playsound(target_pancake, '../assets/sound/effects/cartoon_sfx/cartoon_splat.ogg', 75)
 	log_combat(src, crossed, "ran over")
 
 /obj/vehicle/sealed/car/clowncar/emag_act(mob/user, obj/item/card/emag/emag_card)
@@ -187,7 +187,7 @@
 	return TRUE
 
 /obj/vehicle/sealed/car/clowncar/atom_destruction(damage_flag)
-	playsound(src, 'sound/vehicles/clown_car/clowncar_fart.ogg', 100)
+	playsound(src, '../assets/sound/vehicles/clown_car/clowncar_fart.ogg', 100)
 	STOP_PROCESSING(SSobj,src)
 	return ..()
 
@@ -203,7 +203,7 @@
  * * Fart and make everyone nearby laugh
  */
 /obj/vehicle/sealed/car/clowncar/proc/roll_the_dice(mob/user)
-	playsound(src, 'sound/vehicles/clown_car/button_press.ogg', 50, TRUE, MEDIUM_RANGE_SOUND_EXTRARANGE)
+	playsound(src, '../assets/sound/vehicles/clown_car/button_press.ogg', 50, TRUE, MEDIUM_RANGE_SOUND_EXTRARANGE)
 	if(TIMER_COOLDOWN_RUNNING(src, COOLDOWN_CLOWNCAR_RANDOMNESS))
 		to_chat(user, span_notice("The button panel is currently recharging."))
 		return
@@ -217,7 +217,7 @@
 			do_foam(200, src, loc, get_random_reagent_id(), 100, log = TRUE)
 		if(3)
 			visible_message(span_danger("[user] presses one of the colorful buttons on [src], and the clown car turns on its singularity disguise system."))
-			icon = 'icons/obj/machines/engine/singularity.dmi'
+			icon = '../assets/icons/obj/machines/engine/singularity.dmi'
 			icon_state = "singularity_s1"
 			addtimer(CALLBACK(src, PROC_REF(reset_icon)), 10 SECONDS)
 		if(4)
@@ -230,7 +230,7 @@
 			addtimer(CALLBACK(src, PROC_REF(stop_dropping_oil)), 3 SECONDS)
 		if(6)
 			visible_message(span_danger("[user] presses one of the colorful buttons on [src], and the clown car lets out a comedic toot."))
-			playsound(src, 'sound/vehicles/clown_car/clowncar_fart.ogg', 100)
+			playsound(src, '../assets/sound/vehicles/clown_car/clowncar_fart.ogg', 100)
 			for(var/mob/living/L in orange(loc, 6))
 				L.emote("laugh")
 			for(var/mob/living/L as anything in occupants)
@@ -259,7 +259,7 @@
 		flick("clowncar_fromfire", src)
 		icon_state = "clowncar"
 		addtimer(CALLBACK(src, PROC_REF(deactivate_cannon)), 2 SECONDS)
-		playsound(src, 'sound/vehicles/clown_car/clowncar_cannonmode2.ogg', 75)
+		playsound(src, '../assets/sound/vehicles/clown_car/clowncar_cannonmode2.ogg', 75)
 		visible_message(span_danger("[src] starts going back into mobile mode."))
 	else
 		canmove = FALSE //anchor and activate canon
@@ -267,12 +267,12 @@
 		icon_state = "clowncar_fire"
 		visible_message(span_danger("[src] opens up and reveals a large cannon."))
 		addtimer(CALLBACK(src, PROC_REF(activate_cannon)), 2 SECONDS)
-		playsound(src, 'sound/vehicles/clown_car/clowncar_cannonmode1.ogg', 75)
+		playsound(src, '../assets/sound/vehicles/clown_car/clowncar_cannonmode1.ogg', 75)
 	cannonmode = CLOWN_CANNON_BUSY
 
 ///Finalizes canon activation
 /obj/vehicle/sealed/car/clowncar/proc/activate_cannon()
-	mouse_pointer = 'icons/effects/mouse_pointers/mecha_mouse.dmi'
+	mouse_pointer = '../assets/icons/effects/mouse_pointers/mecha_mouse.dmi'
 	cannonmode = CLOWN_CANNON_READY
 	for(var/mob/living/driver as anything in return_controllers_with_flag(VEHICLE_CONTROL_DRIVE))
 		driver.update_mouse_pointer()
@@ -297,9 +297,9 @@
 	mob_exit(unlucky_sod, silent = TRUE)
 	flick("clowncar_recoil", src)
 	playsound(src, pick(
-		'sound/vehicles/carcannon1.ogg',
-		'sound/vehicles/carcannon2.ogg',
-		'sound/vehicles/carcannon3.ogg',
+		'../assets/sound/vehicles/carcannon1.ogg',
+		'../assets/sound/vehicles/carcannon2.ogg',
+		'../assets/sound/vehicles/carcannon3.ogg',
 		), 75)
 	unlucky_sod.throw_at(target, 10, 2)
 	log_combat(user, unlucky_sod, "fired", src, "towards [target]") //this doesn't catch if the mob hits something between the car and the target

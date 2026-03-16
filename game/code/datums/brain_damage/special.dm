@@ -47,7 +47,7 @@
 		else
 			message = pick_list_replacements(BRAIN_DAMAGE_FILE, "god_neutral")
 
-	playsound(get_turf(owner), 'sound/effects/magic/clockwork/invoke_general.ogg', 200, TRUE, 5)
+	playsound(get_turf(owner), '../assets/sound/effects/magic/clockwork/invoke_general.ogg', 200, TRUE, 5)
 	voice_of_god(message, owner, list("colossus","yell"), 2.5, include_owner, name, TRUE)
 
 /datum/brain_trauma/special/bluespace_prophet
@@ -101,7 +101,7 @@
 /obj/effect/client_image_holder/bluespace_stream
 	name = "bluespace stream"
 	desc = "You see a hidden pathway through bluespace..."
-	image_icon = 'icons/effects/effects.dmi'
+	image_icon = '../assets/icons/effects/effects.dmi'
 	image_state = "bluestream"
 	image_layer = ABOVE_MOB_LAYER
 	var/obj/effect/client_image_holder/bluespace_stream/linked_to
@@ -224,7 +224,7 @@
 		linked = FALSE
 		return
 	to_chat(owner, span_warning("Your connection to [linked_target] suddenly feels extremely strong... you can feel it pulling you!"))
-	owner.playsound_local(owner, 'sound/effects/magic/lightning_chargeup.ogg', 75, FALSE)
+	owner.playsound_local(owner, '../assets/sound/effects/magic/lightning_chargeup.ogg', 75, FALSE)
 	returning = TRUE
 	addtimer(CALLBACK(src, PROC_REF(snapback)), 10 SECONDS)
 
@@ -237,7 +237,7 @@
 		return
 	to_chat(owner, span_warning("You're pulled through spacetime!"))
 	do_teleport(owner, get_turf(linked_target), null, channel = TELEPORT_CHANNEL_QUANTUM)
-	owner.playsound_local(owner, 'sound/effects/magic/repulse.ogg', 100, FALSE)
+	owner.playsound_local(owner, '../assets/sound/effects/magic/repulse.ogg', 100, FALSE)
 	linked_target = null
 	linked = FALSE
 
@@ -402,22 +402,22 @@
 
 	if(owner.stat != CONSCIOUS)
 		if(prob(20))
-			owner.playsound_local(beepsky, 'sound/mobs/non-humanoids/beepsky/iamthelaw.ogg', 50)
+			owner.playsound_local(beepsky, '../assets/sound/mobs/non-humanoids/beepsky/iamthelaw.ogg', 50)
 		return
 
 	if(get_dist(owner, beepsky) <= 1)
-		owner.playsound_local(owner, 'sound/items/weapons/egloves.ogg', 50)
+		owner.playsound_local(owner, '../assets/sound/items/weapons/egloves.ogg', 50)
 		owner.visible_message(span_warning("[owner]'s body jerks as if it was shocked."), span_userdanger("You feel the fist of the LAW."))
 		owner.adjust_stamina_loss(rand(40, 70))
 		QDEL_NULL(beepsky)
 
 	if(prob(20) && get_dist(owner, beepsky) <= 8)
-		owner.playsound_local(beepsky, 'sound/mobs/non-humanoids/beepsky/criminal.ogg', 40)
+		owner.playsound_local(beepsky, '../assets/sound/mobs/non-humanoids/beepsky/criminal.ogg', 40)
 
 /obj/effect/client_image_holder/securitron
 	name = "Securitron"
 	desc = "The LAW is coming."
-	image_icon = 'icons/mob/silicon/aibots.dmi'
+	image_icon = '../assets/icons/mob/silicon/aibots.dmi'
 	image_state = "secbot-c"
 
 /obj/effect/client_image_holder/securitron/Initialize(mapload)

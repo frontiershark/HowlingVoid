@@ -2,7 +2,7 @@
 /mob/living/carbon/human
 	name = "Unknown"
 	real_name = "Unknown"
-	icon = 'icons/mob/human/human.dmi'
+	icon = '../assets/icons/mob/human/human.dmi'
 	icon_state = "human_basic"
 	appearance_flags = KEEP_TOGETHER|TILE_BOUND|PIXEL_SCALE|LONG_GLIDE
 	hud_possible = list(HEALTH_HUD,STATUS_HUD,BLOOD_HUD,ID_HUD,WANTED_HUD,IMPLOYAL_HUD,IMPSEC_FIRST_HUD,IMPSEC_SECOND_HUD,ANTAG_HUD,GLAND_HUD,FAN_HUD,PERMIT_HUD,DNR_HUD) //NOVA EDIT ADDITION - PERMIT_HUD, DNR_HUD

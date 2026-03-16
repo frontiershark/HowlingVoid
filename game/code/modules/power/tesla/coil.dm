@@ -1,7 +1,7 @@
 /obj/machinery/power/energy_accumulator/tesla_coil
 	name = "tesla coil"
 	desc = "For the union!"
-	icon = 'icons/obj/machines/engine/tesla_coil.dmi'
+	icon = '../assets/icons/obj/machines/engine/tesla_coil.dmi'
 	icon_state = "coil0"
 
 	// Executing a traitor caught releasing tesla was never this fun!
@@ -116,14 +116,14 @@
 	var/power = (powernet.avail) * 0.2 * input_power_multiplier  //Always always always use more then you output for the love of god
 	power = min(surplus(), power) //Take the smaller of the two
 	add_load(power)
-	playsound(src.loc, 'sound/effects/magic/lightningshock.ogg', zap_sound_volume, TRUE, zap_sound_range)
+	playsound(src.loc, '../assets/sound/effects/magic/lightningshock.ogg', zap_sound_volume, TRUE, zap_sound_range)
 	tesla_zap(source = src, zap_range = 10, power = power, cutoff = 1e3, zap_flags = zap_flags)
 	zap_buckle_check(power)
 
 /obj/machinery/power/energy_accumulator/grounding_rod
 	name = "grounding rod"
 	desc = "Keeps an area from being fried by Edison's Bane."
-	icon = 'icons/obj/machines/engine/tesla_coil.dmi'
+	icon = '../assets/icons/obj/machines/engine/tesla_coil.dmi'
 	icon_state = "grounding_rod0"
 	anchored = FALSE
 	density = TRUE

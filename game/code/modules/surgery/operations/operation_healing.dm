@@ -17,8 +17,8 @@
 	)
 	time = 2.5 SECONDS
 	operation_flags = OPERATION_LOOPING | OPERATION_IGNORE_CLOTHES
-	success_sound = 'sound/items/handling/surgery/retractor2.ogg'
-	failure_sound = 'sound/items/handling/surgery/organ2.ogg'
+	success_sound = '../assets/sound/items/handling/surgery/retractor2.ogg'
+	failure_sound = '../assets/sound/items/handling/surgery/organ2.ogg'
 	required_biotype = MOB_ORGANIC|MOB_HUMANOID
 	required_bodytype = NONE
 	any_surgery_states_required = ALL_SURGERY_SKIN_STATES

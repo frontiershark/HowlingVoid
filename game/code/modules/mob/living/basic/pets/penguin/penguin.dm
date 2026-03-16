@@ -1,7 +1,7 @@
 /mob/living/basic/pet/penguin
 	abstract_type = /mob/living/basic/pet/penguin
 
-	icon = 'icons/mob/simple/penguins.dmi'
+	icon = '../assets/icons/mob/simple/penguins.dmi'
 	gender = FEMALE
 
 	response_help_continuous = "pets"

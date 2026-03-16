@@ -83,8 +83,8 @@
 	icon = 'modular_nova/modules/aesthetics/implanter/icons/implanter.dmi'
 	icon_state = "implanter0"
 	inhand_icon_state = "syringe_0"
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/medical_righthand.dmi'
 	/// What is the path of the component added when someone uses the implant?
 	var/datum/component/given_component = /datum/component/respawner
 

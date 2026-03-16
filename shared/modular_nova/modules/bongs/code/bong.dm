@@ -92,7 +92,7 @@
 	if(!packed_item || !lit)
 		return
 	hit_mob.visible_message(span_notice("[user] starts [hit_mob == user ? "taking a hit from [src]." : "forcing [hit_mob] to take a hit from [src]!"]"), hit_mob == user ? span_notice("You start taking a hit from [src].") : span_userdanger("[user] starts forcing you to take a hit from [src]!"))
-	playsound(src, 'sound/effects/chemistry/heatdam.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/effects/chemistry/heatdam.ogg', 50, TRUE)
 	if(!do_after(user, 40))
 		return
 	to_chat(hit_mob, span_notice("You finish taking a hit from the [src]."))
@@ -195,7 +195,7 @@
 /// Fake steam effect
 /obj/effect/abstract/fake_steam
 	layer = FLY_LAYER
-	icon = 'icons/effects/atmospherics.dmi'
+	icon = '../assets/icons/effects/atmospherics.dmi'
 	icon_state = "water_vapor"
 	blocks_emissive = FALSE
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT

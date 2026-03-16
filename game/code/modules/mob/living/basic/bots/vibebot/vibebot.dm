@@ -1,7 +1,7 @@
 /mob/living/basic/bot/vibebot
 	name = "\improper Vibebot"
 	desc = "A little robot. It's just vibing, doing its thing."
-	icon = 'icons/mob/silicon/aibots.dmi'
+	icon = '../assets/icons/mob/silicon/aibots.dmi'
 	icon_state = "vibebot1"
 	base_icon_state = "vibebot"
 	pass_flags = PASSMOB | PASSFLAPS

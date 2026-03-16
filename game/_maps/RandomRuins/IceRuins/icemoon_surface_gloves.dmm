@@ -320,7 +320,7 @@
 /area/ruin/roroco/packing)
 "kS" = (
 /obj/effect/puzzle_poddoor_open{
-	icon = 'icons/effects/mapping_helpers.dmi';
+	icon = '../assets/icons/effects/mapping_helpers.dmi';
 	id = "roro_factory";
 	queue_id = "roro_factory"
 	},

@@ -6,7 +6,7 @@
 /obj/structure/fluff
 	name = "fluff structure"
 	desc = "Fluffier than a sheep. This shouldn't exist."
-	icon = 'icons/obj/fluff/general.dmi'
+	icon = '../assets/icons/obj/fluff/general.dmi'
 	icon_state = "minibar"
 	anchored = TRUE
 	density = FALSE
@@ -20,7 +20,7 @@
 		I.play_tool_sound(src)
 		if(I.use_tool(src, user, 50))
 			user.visible_message(span_notice("[user] disassembles [src]!"), span_notice("You break down [src] into scrap metal."))
-			playsound(user, 'sound/items/deconstruct.ogg', 50, TRUE)
+			playsound(user, '../assets/sound/items/deconstruct.ogg', 50, TRUE)
 			new/obj/item/stack/sheet/iron(drop_location())
 			qdel(src)
 		return
@@ -32,7 +32,7 @@
 /obj/structure/fluff/empty_terrarium
 	name = "empty terrarium"
 	desc = "An ancient machine that seems to be used for storing plant matter. Its hatch is ajar."
-	icon = 'icons/obj/mining_zones/spawners.dmi'
+	icon = '../assets/icons/obj/mining_zones/spawners.dmi'
 	icon_state = "terrarium_open"
 	density = TRUE
 
@@ -42,7 +42,7 @@
 /obj/structure/fluff/empty_sleeper
 	name = "empty sleeper"
 	desc = "An open sleeper. It looks as though it would be awaiting another patient, were it not broken."
-	icon = 'icons/obj/machines/sleeper.dmi'
+	icon = '../assets/icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper-open"
 
 /obj/structure/fluff/empty_sleeper/nanotrasen
@@ -60,7 +60,7 @@
 /obj/structure/fluff/empty_cryostasis_sleeper
 	name = "empty cryostasis sleeper"
 	desc = "Although comfortable, this sleeper won't function as anything but a bed ever again."
-	icon = 'icons/obj/mining_zones/spawners.dmi'
+	icon = '../assets/icons/obj/mining_zones/spawners.dmi'
 	icon_state = "cryostasis_sleeper_open"
 
 /**
@@ -69,7 +69,7 @@
 /obj/structure/fluff/drake_statue
 	name = "drake statue"
 	desc = "A towering basalt sculpture of a proud and regal drake. Its eyes are six glowing gemstones."
-	icon = 'icons/effects/64x64.dmi'
+	icon = '../assets/icons/effects/64x64.dmi'
 	icon_state = "drake_statue"
 	pixel_x = -16
 	maptext_height = 64
@@ -84,7 +84,7 @@
 /obj/structure/fluff/shower_drain
 	name = "shower drain"
 	desc = "Ew, I think I see a hairball."
-	icon = 'icons/obj/mining_zones/survival_pod.dmi'
+	icon = '../assets/icons/obj/mining_zones/survival_pod.dmi'
 	icon_state = "fan_tiny"
 	plane = FLOOR_PLANE
 	layer = BELOW_CATWALK_LAYER
@@ -100,7 +100,7 @@
 /obj/structure/fluff/bus
 	name = "bus"
 	desc = "GO TO SCHOOL. READ A BOOK."
-	icon = 'icons/obj/fluff/bus.dmi'
+	icon = '../assets/icons/obj/fluff/bus.dmi'
 	icon_state = null
 	density = TRUE
 	anchored = TRUE
@@ -133,13 +133,13 @@
 	icon_state = "driverseat"
 
 /obj/structure/fluff/bus/passable/seat/driver/attack_hand(mob/user, list/modifiers)
-	playsound(src, 'sound/items/carhorn.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/carhorn.ogg', 50, TRUE)
 	. = ..()
 
 /obj/structure/fluff/paper
 	name = "dense lining of papers"
 	desc = "A lining of paper scattered across the bottom of a wall."
-	icon = 'icons/obj/fluff/general.dmi'
+	icon = '../assets/icons/obj/fluff/general.dmi'
 	icon_state = "paper"
 	deconstructible = FALSE
 
@@ -154,7 +154,7 @@
 
 /obj/structure/fluff/divine
 	name = "Miracle"
-	icon = 'icons/obj/service/hand_of_god_structures.dmi'
+	icon = '../assets/icons/obj/service/hand_of_god_structures.dmi'
 	icon_state = "error"
 	anchored = TRUE
 	density = TRUE
@@ -195,13 +195,13 @@
 /obj/structure/fluff/fokoff_sign
 	name = "crude sign"
 	desc = "A crudely-made sign with the words 'fok of' written in some sort of red paint."
-	icon = 'icons/obj/fluff/general.dmi'
+	icon = '../assets/icons/obj/fluff/general.dmi'
 	icon_state = "fokof"
 
 /obj/structure/fluff/big_chain
 	name = "giant chain"
 	desc = "A towering link of chains leading up to the ceiling."
-	icon = 'icons/effects/32x96.dmi'
+	icon = '../assets/icons/effects/32x96.dmi'
 	icon_state = "chain"
 	anchored = TRUE
 	density = TRUE
@@ -212,7 +212,7 @@
 /obj/structure/fluff/beach_towel
 	name = "beach towel"
 	desc = "A towel decorated in various beach-themed designs."
-	icon = 'icons/obj/railings.dmi'
+	icon = '../assets/icons/obj/railings.dmi'
 	icon_state = "railing"
 	density = FALSE
 	anchored = TRUE
@@ -221,7 +221,7 @@
 /obj/structure/fluff/beach_umbrella
 	name = "beach umbrella"
 	desc = "A fancy umbrella designed to keep the sun off beach-goers."
-	icon = 'icons/obj/fluff/general.dmi'
+	icon = '../assets/icons/obj/fluff/general.dmi'
 	icon_state = "brella"
 	density = FALSE
 	anchored = TRUE
@@ -244,7 +244,7 @@
 
 /obj/structure/fluff/clockwork
 	name = "Clockwork Fluff"
-	icon = 'icons/obj/fluff/general.dmi'
+	icon = '../assets/icons/obj/fluff/general.dmi'
 	icon_state = "error"
 	deconstructible = FALSE
 
@@ -283,7 +283,7 @@
 /obj/structure/fluff/tram_rail
 	name = "tram rail"
 	desc = "Great for trams, not so great for skating."
-	icon = 'icons/obj/tram/tram_rails.dmi'
+	icon = '../assets/icons/obj/tram/tram_rails.dmi'
 	icon_state = "rail"
 	layer = TRAM_RAIL_LAYER
 	plane = FLOOR_PLANE
@@ -360,7 +360,7 @@
 	name = "direction sign"
 	desc = "Now, where to go?"
 	density = FALSE
-	icon = 'icons/obj/fluff/general.dmi'
+	icon = '../assets/icons/obj/fluff/general.dmi'
 	icon_state = "wallsign"
 
 MAPPING_DIRECTIONAL_HELPERS(/obj/structure/fluff/wallsign, 32)

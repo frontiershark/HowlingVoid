@@ -21,7 +21,7 @@ GLOBAL_DATUM(admin_sparks_system, /datum/effect_system/basic/spark_spread/admin_
 	if(isnull(location))
 		return
 
-	playsound(location, 'sound/effects/magic/Repulse.ogg', 100, 1)
+	playsound(location, '../assets/sound/effects/magic/Repulse.ogg', 100, 1)
 
 	// only created when needed
 	if(isnull(GLOB.admin_sparks_system))

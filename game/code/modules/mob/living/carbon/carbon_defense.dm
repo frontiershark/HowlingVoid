@@ -395,7 +395,7 @@
 			)
 			to_chat(helper, span_danger("You pull on [src]'s tail... and it rips off!"))
 			to_chat(src, span_userdanger("[helper] pulls on your tail... and it rips off!"))
-			playsound(loc, 'sound/effects/wounds/crack2.ogg', 75, TRUE)
+			playsound(loc, '../assets/sound/effects/wounds/crack2.ogg', 75, TRUE)
 
 			tail.Remove(src, movement_flags = KEEP_IN_MUTANT_BODYPARTS)
 			tail.forceMove(get_turf(src))
@@ -421,7 +421,7 @@
 					null, span_hear("You hear a ripping sound."), DEFAULT_MESSAGE_RANGE, list(helper, src))
 		to_chat(helper, span_danger("You pull on [src]'s tail... and it rips off!"))
 		to_chat(src, span_userdanger("[helper] pulls on your tail... and it rips off!"))
-		playsound(loc, 'sound/effects/cloth_rip.ogg', 75, TRUE)
+		playsound(loc, '../assets/sound/effects/cloth_rip.ogg', 75, TRUE)
 		dropItemToGround(faketail)
 		helper.put_in_hands(faketail)
 		helper.add_mood_event("rippedtail", /datum/mood_event/rippedtail)
@@ -492,7 +492,7 @@
 		get_up(TRUE)
 
 	if(!nosound) // NOVA EDIT ADDITION - EMOTES
-		playsound(loc, 'sound/items/weapons/thudswoosh.ogg', 50, TRUE, -1) // NOVA EDIT CHANGE - EMOTES - Original was unindented but otherwise the same
+		playsound(loc, '../assets/sound/items/weapons/thudswoosh.ogg', 50, TRUE, -1) // NOVA EDIT CHANGE - EMOTES - Original was unindented but otherwise the same
 
 	// Shake animation
 	if (incapacitated)
@@ -708,7 +708,7 @@
 	var/bleed_rate = grasped_part.cached_bleed_rate
 	var/bleeding_text = (bleed_rate ? ", trying to stop the bleeding" : "")
 	user.visible_message(span_danger("[user] grasps at [user.p_their()] [grasped_part.name][bleeding_text]."), span_notice("You grab hold of your [grasped_part.name] tightly."), vision_distance=COMBAT_MESSAGE_RANGE)
-	playsound(get_turf(src), 'sound/items/weapons/thudswoosh.ogg', 50, TRUE, -1)
+	playsound(get_turf(src), '../assets/sound/items/weapons/thudswoosh.ogg', 50, TRUE, -1)
 	return TRUE
 
 /// Randomise a body part and organ of this mob

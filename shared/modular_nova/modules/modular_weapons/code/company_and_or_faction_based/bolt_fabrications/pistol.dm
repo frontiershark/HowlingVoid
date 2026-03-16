@@ -10,10 +10,10 @@
 	accepted_magazine_type = /obj/item/ammo_box/magazine/kineticballs
 	can_suppress = FALSE
 	fire_delay = 0.3 SECONDS
-	fire_sound = 'sound/effects/pop_expl.ogg'
-	rack_sound = 'sound/items/weapons/gun/pistol/rack.ogg'
-	lock_back_sound = 'sound/items/weapons/gun/pistol/slide_lock.ogg'
-	bolt_drop_sound = 'sound/items/weapons/gun/pistol/slide_drop.ogg'
+	fire_sound = '../assets/sound/effects/pop_expl.ogg'
+	rack_sound = '../assets/sound/items/weapons/gun/pistol/rack.ogg'
+	lock_back_sound = '../assets/sound/items/weapons/gun/pistol/slide_lock.ogg'
+	bolt_drop_sound = '../assets/sound/items/weapons/gun/pistol/slide_drop.ogg'
 	fire_sound_volume = 70
 	custom_premium_price = PAYCHECK_COMMAND * 4
 

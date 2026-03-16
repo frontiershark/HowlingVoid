@@ -1,11 +1,11 @@
 /**********************Mine areas**************************/
 /area/mine
-	icon = 'icons/area/areas_station.dmi'
+	icon = '../assets/icons/area/areas_station.dmi'
 	icon_state = "mining"
 	default_gravity = STANDARD_GRAVITY
 	area_flags = VALID_TERRITORY | CULT_PERMITTED
 	area_flags_mapping = UNIQUE_AREA | FLORA_ALLOWED
-	ambient_buzz = 'sound/ambience/lavaland/magma.ogg'
+	ambient_buzz = '../assets/sound/ambience/lavaland/magma.ogg'
 
 /area/mine/lobby
 	name = "Mining Station"
@@ -129,13 +129,13 @@
 /**********************Lavaland Areas**************************/
 
 /area/lavaland
-	icon = 'icons/area/areas_station.dmi'
+	icon = '../assets/icons/area/areas_station.dmi'
 	icon_state = "mining"
 	default_gravity = STANDARD_GRAVITY
 	flags_1 = NONE
 	area_flags = VALID_TERRITORY | FLORA_ALLOWED
 	sound_environment = SOUND_AREA_LAVALAND
-	ambient_buzz = 'sound/ambience/lavaland/magma.ogg'
+	ambient_buzz = '../assets/sound/ambience/lavaland/magma.ogg'
 	allow_shuttle_docking = TRUE
 
 /area/lavaland/surface
@@ -185,14 +185,14 @@
 /**********************Ice Moon Areas**************************/
 
 /area/icemoon
-	icon = 'icons/area/areas_station.dmi'
+	icon = '../assets/icons/area/areas_station.dmi'
 	icon_state = "mining"
 	default_gravity = STANDARD_GRAVITY
 	flags_1 = NONE
 	area_flags_mapping = UNIQUE_AREA | FLORA_ALLOWED
 	ambience_index = AMBIENCE_ICEMOON
 	sound_environment = SOUND_AREA_ICEMOON
-	ambient_buzz = 'sound/ambience/lavaland/magma.ogg'
+	ambient_buzz = '../assets/sound/ambience/lavaland/magma.ogg'
 	allow_shuttle_docking = TRUE
 
 /area/icemoon/surface
@@ -305,7 +305,7 @@
 	name = "Graveyard"
 	area_flags_mapping = /area::area_flags_mapping
 	ambience_index = AMBIENCE_SPOOKY
-	icon = 'icons/area/areas_station.dmi'
+	icon = '../assets/icons/area/areas_station.dmi'
 	icon_state = "graveyard"
 
 /area/icemoon/underground/explored/graveyard/chapel

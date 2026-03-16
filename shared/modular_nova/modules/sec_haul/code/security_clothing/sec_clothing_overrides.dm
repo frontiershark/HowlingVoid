@@ -180,9 +180,9 @@
 
 /datum/atom_skin/security_hudglasses/red
 	preview_name = "Red HUD"
-	new_icon = 'icons/obj/clothing/glasses.dmi'
+	new_icon = '../assets/icons/obj/clothing/glasses.dmi'
 	new_icon_state = "securityhud"
-	new_worn_icon = 'icons/mob/clothing/eyes.dmi'
+	new_worn_icon = '../assets/icons/mob/clothing/eyes.dmi'
 
 /datum/atom_skin/security_hudglasses/blue
 	preview_name = "Blue HUD"
@@ -379,15 +379,15 @@
 
 /datum/atom_skin/hos_coat/greatcoat
 	preview_name = "Greatcoat"
-	new_icon = 'icons/obj/clothing/suits/armor.dmi'
+	new_icon = '../assets/icons/obj/clothing/suits/armor.dmi'
 	new_icon_state = "hos"
-	new_worn_icon = 'icons/mob/clothing/suits/armor.dmi'
+	new_worn_icon = '../assets/icons/mob/clothing/suits/armor.dmi'
 
 /datum/atom_skin/hos_coat/trenchcoat
 	preview_name = "Trenchcoat"
-	new_icon = 'icons/obj/clothing/suits/armor.dmi'
+	new_icon = '../assets/icons/obj/clothing/suits/armor.dmi'
 	new_icon_state = "hostrench"
-	new_worn_icon = 'icons/mob/clothing/suits/armor.dmi'
+	new_worn_icon = '../assets/icons/mob/clothing/suits/armor.dmi'
 
 /datum/atom_skin/hos_coat/trenchcloak
 	preview_name = "Trenchcloak"

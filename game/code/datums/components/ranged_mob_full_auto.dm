@@ -140,7 +140,7 @@
 		stop_firing()
 		return
 
-	clicker.mouse_override_icon = 'icons/effects/mouse_pointers/weapon_pointer.dmi'
+	clicker.mouse_override_icon = '../assets/icons/effects/mouse_pointers/weapon_pointer.dmi'
 	clicker.mouse_pointer_icon = clicker.mouse_override_icon
 
 	START_PROCESSING(SSprojectiles, src)

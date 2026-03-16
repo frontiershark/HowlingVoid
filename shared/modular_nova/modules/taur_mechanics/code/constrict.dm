@@ -11,7 +11,7 @@
 	button_icon = 'modular_nova/modules/taur_mechanics/icons/ability.dmi'
 	button_icon_state = "constrict"
 
-	ranged_mousepointer = 'icons/effects/mouse_pointers/supplypod_pickturf.dmi'
+	ranged_mousepointer = '../assets/icons/effects/mouse_pointers/supplypod_pickturf.dmi'
 
 	click_action = TRUE
 
@@ -567,14 +567,14 @@
 	switch(damage_type)
 		if(BRUTE)
 			if(damage_amount)
-				playsound(loc, 'sound/items/weapons/bladeslice.ogg', 100, TRUE)
+				playsound(loc, '../assets/sound/items/weapons/bladeslice.ogg', 100, TRUE)
 			else
-				playsound(src, 'sound/items/weapons/tap.ogg', 50, TRUE)
+				playsound(src, '../assets/sound/items/weapons/tap.ogg', 50, TRUE)
 		if(BURN)
 			if(!damage_amount)
 				return
 
-			playsound(loc, 'sound/items/tools/welder.ogg', 100, TRUE)
+			playsound(loc, '../assets/sound/items/tools/welder.ogg', 100, TRUE)
 
 
 /// Signal proc for when owner moves. Qdels src.

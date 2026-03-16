@@ -9,7 +9,7 @@
 /mob/living/basic/rabbit
 	name = "rabbit"
 	desc = "The hippiest hop around."
-	icon = 'icons/mob/simple/rabbit.dmi'
+	icon = '../assets/icons/mob/simple/rabbit.dmi'
 	icon_state = "rabbit_white"
 	icon_living = "rabbit_white"
 	icon_dead = "rabbit_white_dead"
@@ -26,7 +26,7 @@
 	response_help_simple = "pet"
 	response_disarm_continuous = "gently pushes aside"
 	response_disarm_simple = "gently push aside"
-	attack_sound = 'sound/items/weapons/punch1.ogg'
+	attack_sound = '../assets/sound/items/weapons/punch1.ogg'
 	attack_vis_effect = ATTACK_EFFECT_KICK
 	response_harm_continuous = "kicks"
 	response_harm_simple = "kick"

@@ -1,6 +1,6 @@
 /area/virtual_domain/ancient_milsim
 	name = "intro_2" // see fluff.dm, line 18; shouldn't really be used
-	icon = 'icons/area/areas_away_missions.dmi'
+	icon = '../assets/icons/area/areas_away_missions.dmi'
 	icon_state = "unknown"
 
 /area/virtual_domain/ancient_milsim/entrance
@@ -73,5 +73,5 @@
 
 /area/virtual_domain/protected_space/ancient_milsim
 	name = "'Time Of Valor 2' Secret Encounter"
-	icon = 'icons/area/areas_away_missions.dmi'
+	icon = '../assets/icons/area/areas_away_missions.dmi'
 	icon_state = "awaycontent18"

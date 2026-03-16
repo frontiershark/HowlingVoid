@@ -3,7 +3,7 @@
 	desc = "A short range spell that allows you to pass unimpeded through walls, removing restraints if empowered."
 	background_icon_state = "bg_heretic"
 	overlay_icon_state = "bg_heretic_border"
-	button_icon = 'icons/mob/actions/actions_ecult.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_ecult.dmi'
 	button_icon_state = "ash_shift"
 	sound = null
 
@@ -84,7 +84,7 @@
 
 /obj/effect/temp_visual/dir_setting/ash_shift
 	name = "ash_shift"
-	icon = 'icons/mob/simple/mob.dmi'
+	icon = '../assets/icons/mob/simple/mob.dmi'
 	icon_state = "ash_shift2"
 	duration = 1.3 SECONDS
 

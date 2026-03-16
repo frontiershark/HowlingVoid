@@ -3,7 +3,7 @@
 /obj/item/food/watermelonslice
 	name = "watermelon slice"
 	desc = "A slice of watery goodness."
-	icon = 'icons/obj/service/hydroponics/harvest.dmi'
+	icon = '../assets/icons/obj/service/hydroponics/harvest.dmi'
 	icon_state = "watermelonslice"
 	food_reagents = list(
 		/datum/reagent/water = 1,
@@ -21,7 +21,7 @@
 /obj/item/food/watermelonmush
 	name = "watermelon mush"
 	desc = "A plop of watery goodness."
-	icon = 'icons/obj/service/hydroponics/harvest.dmi'
+	icon = '../assets/icons/obj/service/hydroponics/harvest.dmi'
 	icon_state = "watermelonpulp"
 	food_reagents = list(
 		/datum/reagent/water = 2,
@@ -39,7 +39,7 @@
 /obj/item/food/holymelonslice
 	name = "holymelon slice"
 	desc = "A slice of holy goodness."
-	icon = 'icons/obj/service/hydroponics/harvest.dmi'
+	icon = '../assets/icons/obj/service/hydroponics/harvest.dmi'
 	icon_state = "holymelonslice"
 	food_reagents = list(
 		/datum/reagent/water/holywater = 0.5,
@@ -57,7 +57,7 @@
 /obj/item/food/holymelonmush
 	name = "holymelon mush"
 	desc = "A plop of holy goodness."
-	icon = 'icons/obj/service/hydroponics/harvest.dmi'
+	icon = '../assets/icons/obj/service/hydroponics/harvest.dmi'
 	icon_state = "holymelonpulp"
 	food_reagents = list(
 		/datum/reagent/water/holywater = 1,
@@ -75,7 +75,7 @@
 /obj/item/food/barrelmelonslice
 	name = "barrelmelon slice"
 	desc = "A slice of beery goodness."
-	icon = 'icons/obj/service/hydroponics/harvest.dmi'
+	icon = '../assets/icons/obj/service/hydroponics/harvest.dmi'
 	icon_state = "barrelmelonslice"
 	food_reagents = list(
 		/datum/reagent/consumable/ethanol/beer = 1,
@@ -93,7 +93,7 @@
 /obj/item/food/barrelmelonmush
 	name = "barrelmelon mush"
 	desc = "A plop of beery goodness."
-	icon = 'icons/obj/service/hydroponics/harvest.dmi'
+	icon = '../assets/icons/obj/service/hydroponics/harvest.dmi'
 	icon_state = "barrelmelonpulp"
 	food_reagents = list(
 		/datum/reagent/consumable/ethanol/beer = 2,
@@ -111,7 +111,7 @@
 /obj/item/food/appleslice
 	name = "apple slice"
 	desc = "The perfect after-school snack."
-	icon = 'icons/obj/service/hydroponics/harvest.dmi'
+	icon = '../assets/icons/obj/service/hydroponics/harvest.dmi'
 	icon_state = "appleslice"
 	food_reagents = list(
 		/datum/reagent/consumable/applejuice = 1,
@@ -129,7 +129,7 @@
 /obj/item/food/hugemushroomslice
 	name = "huge mushroom slice"
 	desc = "A slice from a huge mushroom."
-	icon = 'icons/obj/food/meat.dmi'
+	icon = '../assets/icons/obj/food/meat.dmi'
 	icon_state = "hugemushroomslice"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 3,
@@ -262,7 +262,7 @@
 /obj/item/food/spidereggs
 	name = "spider eggs"
 	desc = "A cluster of juicy spider eggs. A great side dish for when you care not for your health."
-	icon = 'icons/obj/food/meat.dmi'
+	icon = '../assets/icons/obj/food/meat.dmi'
 	icon_state = "spidereggs"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment/protein = 4,
@@ -285,7 +285,7 @@
 /obj/item/food/spiderling
 	name = "spiderling"
 	desc = "It's slightly twitching in your hand. Ew..."
-	icon = 'icons/mob/simple/arachnoid.dmi'
+	icon = '../assets/icons/mob/simple/arachnoid.dmi'
 	icon_state = "spiderling_dead"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment/protein = 2,
@@ -352,7 +352,7 @@
 	throwforce = 15
 	block_chance = 55
 	armour_penetration = 80
-	block_sound = 'sound/items/weapons/parry.ogg'
+	block_sound = '../assets/sound/items/weapons/parry.ogg'
 	wound_bonus = -50
 	attack_verb_continuous = list("slaps", "slathers")
 	attack_verb_simple = list("slap", "slather")
@@ -454,7 +454,7 @@
 /obj/item/food/crab_rangoon
 	name = "crab rangoon"
 	desc = "Has many names, like crab puffs, cheese won'tons, crab dumplings? Whatever you call them, they're a fabulous blast of cream cheesy crab."
-	icon = 'icons/obj/food/meat.dmi'
+	icon = '../assets/icons/obj/food/meat.dmi'
 	icon_state = "crabrangoon"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 5,
@@ -569,7 +569,7 @@
 /obj/item/food/granola_bar
 	name = "granola bar"
 	desc = "A dried mixture of oats, nuts, fruits, and chocolate condensed into a chewy bar. Makes a great snack while space-hiking."
-	icon = 'icons/obj/food/food.dmi'
+	icon = '../assets/icons/obj/food/food.dmi'
 	icon_state = "granola_bar"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 8,
@@ -584,7 +584,7 @@
 /obj/item/food/onigiri
 	name = "onigiri"
 	desc = "A ball of cooked rice surrounding a filling formed into a triangular shape and wrapped in seaweed. Can be added fillings!"
-	icon = 'icons/obj/food/food.dmi'
+	icon = '../assets/icons/obj/food/food.dmi'
 	icon_state = "onigiri"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 4,
@@ -610,7 +610,7 @@
 /obj/item/food/pacoca
 	name = "pacoca"
 	desc = "A traditional Brazilian treat made of ground peanuts, sugar, and salt compressed into a cylinder."
-	icon = 'icons/obj/food/food.dmi'
+	icon = '../assets/icons/obj/food/food.dmi'
 	icon_state = "pacoca"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 4,
@@ -625,7 +625,7 @@
 /obj/item/food/pickle
 	name = "pickle"
 	desc = "Slightly shriveled darkish cucumber. Smelling something sour, but incredibly inviting."
-	icon = 'icons/obj/food/food.dmi'
+	icon = '../assets/icons/obj/food/food.dmi'
 	icon_state = "pickle"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 2,
@@ -652,7 +652,7 @@
 /obj/item/food/springroll
 	name = "spring roll"
 	desc = "A plate of translucent rice wrappers filled with fresh vegetables, served with sweet chili sauce. You either love them or hate them."
-	icon = 'icons/obj/food/food.dmi'
+	icon = '../assets/icons/obj/food/food.dmi'
 	icon_state = "springroll"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 8,
@@ -760,7 +760,7 @@
 /obj/item/food/raw_pita_bread
 	name = "raw pita bread"
 	desc = "a sticky disk of raw pita bread."
-	icon = 'icons/obj/food/food_ingredients.dmi'
+	icon = '../assets/icons/obj/food/food_ingredients.dmi'
 	icon_state = "raw_pita_bread"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 3,
@@ -780,7 +780,7 @@
 /obj/item/food/pita_bread
 	name = "pita bread"
 	desc = "a multi-purposed sweet flatbread of Mediterranean origins."
-	icon = 'icons/obj/food/food_ingredients.dmi'
+	icon = '../assets/icons/obj/food/food_ingredients.dmi'
 	icon_state = "pita_bread"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 3,

@@ -150,7 +150,7 @@
 				return TRUE
 
 			user.visible_message("[user]'s [affecting.name] comes right off in their hand.", span_notice("Your [affecting.name] pops right off."))
-			playsound(get_turf(user), 'sound/effects/meatslap.ogg', 40, 1) //ill change these sounds later
+			playsound(get_turf(user), '../assets/sound/effects/meatslap.ogg', 40, 1) //ill change these sounds later
 
 			// Destroy Limb, Drop Meat, Pick Up
 			var/obj/item/I = affecting.drop_limb()
@@ -195,7 +195,7 @@
 					target.visible_message("The meat sprouts digits and becomes [target]'s new [newBP.name]!", span_notice("The meat sprouts digits and becomes your new [newBP.name]!"))
 					newBP.try_attach_limb(target)
 					qdel(attacking_item)
-					playsound(get_turf(target), 'sound/effects/meatslap.ogg', 50, 1)
+					playsound(get_turf(target), '../assets/sound/effects/meatslap.ogg', 50, 1)
 
 			return COMPONENT_CANCEL_ATTACK_CHAIN
 

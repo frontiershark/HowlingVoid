@@ -1,7 +1,7 @@
 /obj/crystal_mass
 	name = "crystal mass"
 	desc = "You see this massive crystal mass looming towards you, cracking and screeching at every seemingly random movement."
-	icon = 'icons/turf/walls.dmi'
+	icon = '../assets/icons/turf/walls.dmi'
 	icon_state = "crystal_cascade_1"
 	layer = AREA_LAYER
 	plane = ABOVE_LIGHTING_PLANE
@@ -27,7 +27,7 @@
 
 	sm_comp = AddComponent(/datum/component/supermatter_crystal, null, null)
 
-	playsound(src, 'sound/misc/cracking_crystal.ogg', 45, TRUE)
+	playsound(src, '../assets/sound/misc/cracking_crystal.ogg', 45, TRUE)
 
 	available_dirs -= dir_to_remove
 
@@ -64,11 +64,11 @@
 				span_userdanger("The crystal mass lunges on you and hits you in the chest. As your vision is filled with a blinding light, you think to yourself \"Damn it.\""))
 		else if(istype(checked_atom, /obj/cascade_portal))
 			checked_atom.visible_message(span_userdanger("\The [checked_atom] screeches and closes away as it is hit by \a [src]! Too late!"))
-			playsound(get_turf(checked_atom), 'sound/effects/magic/charge.ogg', 50, TRUE)
-			playsound(get_turf(checked_atom), 'sound/effects/supermatter.ogg', 50, TRUE)
+			playsound(get_turf(checked_atom), '../assets/sound/effects/magic/charge.ogg', 50, TRUE)
+			playsound(get_turf(checked_atom), '../assets/sound/effects/supermatter.ogg', 50, TRUE)
 			qdel(checked_atom)
 		else if(isitem(checked_atom))
-			playsound(get_turf(checked_atom), 'sound/effects/supermatter.ogg', 50, TRUE)
+			playsound(get_turf(checked_atom), '../assets/sound/effects/supermatter.ogg', 50, TRUE)
 			qdel(checked_atom)
 
 	new /obj/crystal_mass(next_turf, get_dir(next_turf, src))
@@ -82,7 +82,7 @@
 		span_hear("You hear a loud crack as you are washed with a wave of heat."),
 	)
 
-	playsound(src, 'sound/effects/supermatter.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/effects/supermatter.ogg', 50, TRUE)
 	qdel(hitting_projectile)
 	return COMPONENT_BULLET_BLOCKED
 
@@ -109,7 +109,7 @@
 /obj/cascade_portal
 	name = "Bluespace Rift"
 	desc = "Your mind begins to spin as it tries to comprehend what it sees."
-	icon = 'icons/effects/224x224.dmi'
+	icon = '../assets/icons/effects/224x224.dmi'
 	icon_state = "reality"
 	anchored = TRUE
 	appearance_flags = LONG_GLIDE

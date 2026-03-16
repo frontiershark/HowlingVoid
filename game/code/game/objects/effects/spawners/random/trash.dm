@@ -281,7 +281,7 @@
 /obj/effect/spawner/random/frog
 	name = "random frog"
 	desc = "Spawns a frog, or sometimes a RARE frog."
-	icon = 'icons/mob/simple/animal.dmi'
+	icon = '../assets/icons/mob/simple/animal.dmi'
 	icon_state = "frog"
 	loot = list(
 		/mob/living/basic/frog = 99,

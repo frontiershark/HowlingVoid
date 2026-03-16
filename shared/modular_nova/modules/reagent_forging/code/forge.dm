@@ -422,7 +422,7 @@
 			minimum_target_temperature = 25 // This won't matter except in a few cases here, but we still need to cover those few cases
 			forge_level = FORGE_LEVEL_LEGENDARY
 
-	playsound(src, 'sound/items/weapons/parry.ogg', 50, TRUE) // Play a feedback sound to really let players know we just did an upgrade
+	playsound(src, '../assets/sound/items/weapons/parry.ogg', 50, TRUE) // Play a feedback sound to really let players know we just did an upgrade
 
 /obj/structure/reagent_forge/attackby(obj/item/attacking_item, mob/user, list/modifiers, list/attack_modifiers)
 	if(!used_tray && istype(attacking_item, /obj/item/plate/oven_tray))
@@ -616,7 +616,7 @@
 	attacking_weapon.color = mix_color_from_reagents(attacking_weapon.reagents.reagent_list)
 	balloon_alert_to_viewers("imbued [attacking_weapon]")
 	user.mind.adjust_experience(/datum/skill/smithing, 60)
-	playsound(src, 'sound/effects/magic/demon_consume.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/effects/magic/demon_consume.ogg', 50, TRUE)
 	in_use = FALSE
 	return TRUE
 
@@ -666,7 +666,7 @@
 	attacking_clothing.color = mix_color_from_reagents(attacking_clothing.reagents.reagent_list)
 	balloon_alert_to_viewers("imbued [attacking_clothing]")
 	user.mind.adjust_experience(/datum/skill/smithing, 60)
-	playsound(src, 'sound/effects/magic/demon_consume.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/effects/magic/demon_consume.ogg', 50, TRUE)
 	in_use = FALSE
 	return TRUE
 

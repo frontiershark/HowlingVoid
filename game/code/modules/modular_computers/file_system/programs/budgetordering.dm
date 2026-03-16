@@ -281,12 +281,12 @@
 				// NOVA EDIT ADDITION END
 
 			if(((pack.order_flags & ORDER_GOODY) && (!(pack.order_flags & ORDER_DEPARTMENTAL_GOODY) || uses_cargo_budget)) && !self_paid) // NOVA EDIT CHANGE - ORIGINAL: if((pack.order_flags & ORDER_GOODY) && !self_paid)
-				playsound(computer, 'sound/machines/buzz/buzz-sigh.ogg', 50, FALSE)
+				playsound(computer, '../assets/sound/machines/buzz/buzz-sigh.ogg', 50, FALSE)
 				computer.say("ERROR: Small crates may only be purchased by private accounts.")
 				return
 
 			if(SSshuttle.supply.get_order_count(pack) == OVER_ORDER_LIMIT)
-				playsound(computer, 'sound/machines/buzz/buzz-sigh.ogg', 50, FALSE)
+				playsound(computer, '../assets/sound/machines/buzz/buzz-sigh.ogg', 50, FALSE)
 				computer.say("ERROR: No more then [CARGO_MAX_ORDER] of any pack may be ordered at once")
 				return
 
@@ -302,7 +302,7 @@
 				SSshuttle.shopping_list += SO
 				if(self_paid)
 					computer.say("Order processed. The price will be charged to [account.account_holder]'s bank account on delivery.")
-			playsound(computer, 'sound/effects/coin2.ogg', 40, TRUE)
+			playsound(computer, '../assets/sound/effects/coin2.ogg', 40, TRUE)
 			. = TRUE
 		if("remove")
 			var/id = text2num(params["id"])

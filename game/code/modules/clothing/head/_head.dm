@@ -1,9 +1,9 @@
 /obj/item/clothing/head
 	name = BODY_ZONE_HEAD
-	icon = 'icons/obj/clothing/head/default.dmi'
-	worn_icon = 'icons/mob/clothing/head/default.dmi'
-	lefthand_file = 'icons/mob/inhands/clothing/hats_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/clothing/hats_righthand.dmi'
+	icon = '../assets/icons/obj/clothing/head/default.dmi'
+	worn_icon = '../assets/icons/mob/clothing/head/default.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/clothing/hats_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/clothing/hats_righthand.dmi'
 	abstract_type = /obj/item/clothing/head
 	body_parts_covered = HEAD
 	slot_flags = ITEM_SLOT_HEAD
@@ -60,7 +60,7 @@
 	if(isinhands)
 		return
 	if(damaged_clothes)
-		. += mutable_appearance('icons/effects/item_damage.dmi', "damagedhelmet")
+		. += mutable_appearance('../assets/icons/effects/item_damage.dmi', "damagedhelmet")
 
 /obj/item/clothing/head/separate_worn_overlays(mutable_appearance/standing, mutable_appearance/draw_target, isinhands, icon_file, mutant_styles) // NOVA EDIT CHANGE - ORIGINAL: /obj/item/clothing/gloves/separate_worn_overlays(mutable_appearance/standing, mutable_appearance/draw_target, isinhands, icon_file)
 	. = ..()

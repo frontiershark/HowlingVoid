@@ -9,7 +9,7 @@
 	lifespan = 50
 	endurance = 30
 	instability = 10
-	growing_icon = 'icons/obj/service/hydroponics/growing_fruits.dmi'
+	growing_icon = '../assets/icons/obj/service/hydroponics/growing_fruits.dmi'
 	icon_dead = "banana-dead"
 	genes = list(/datum/plant_gene/trait/slip, /datum/plant_gene/trait/repeated_harvest)
 	mutatelist = list(/obj/item/seeds/banana/mime, /obj/item/seeds/banana/bluespace)
@@ -47,7 +47,7 @@
 
 /obj/item/food/grown/banana/suicide_act(mob/living/user)
 	user.visible_message(span_suicide("[user] is aiming [src] at [user.p_them()]self! It looks like [user.p_theyre()] trying to commit suicide!"))
-	playsound(loc, 'sound/items/bikehorn.ogg', 50, TRUE, -1)
+	playsound(loc, '../assets/sound/items/bikehorn.ogg', 50, TRUE, -1)
 	sleep(2.5 SECONDS)
 	if(!user)
 		return OXYLOSS
@@ -63,8 +63,8 @@
 	seed = /obj/item/seeds/banana
 	name = "banana peel"
 	desc = "A peel from a banana."
-	lefthand_file = 'icons/mob/inhands/items/food_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/food_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/food_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/food_righthand.dmi'
 	icon_state = "banana_peel"
 	inhand_icon_state = "banana_peel"
 	w_class = WEIGHT_CLASS_TINY
@@ -85,7 +85,7 @@
 
 /obj/item/grown/bananapeel/suicide_act(mob/living/user)
 	user.visible_message(span_suicide("[user] is deliberately slipping on [src]! It looks like [user.p_theyre()] trying to commit suicide!"))
-	playsound(loc, 'sound/misc/slip.ogg', 50, TRUE, -1)
+	playsound(loc, '../assets/sound/misc/slip.ogg', 50, TRUE, -1)
 	return BRUTELOSS
 
 // Mimana - invisible sprites are totally a feature!
@@ -175,7 +175,7 @@
 /obj/item/food/grown/banana/bunch/proc/start_ripening()
 	if(is_ripening)
 		return
-	playsound(src, 'sound/effects/fuse.ogg', 80)
+	playsound(src, '../assets/sound/effects/fuse.ogg', 80)
 
 	animate(src, time = 1, pixel_z = 12, easing = ELASTIC_EASING)
 	animate(time = 1, pixel_z = 0, easing = BOUNCE_EASING)

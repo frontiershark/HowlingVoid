@@ -15,7 +15,7 @@
 #endif
 
 /particles/debris
-	icon = 'icons/effects/particles/generic.dmi'
+	icon = '../assets/icons/effects/particles/generic.dmi'
 	width = 500
 	height = 500
 	count = 10
@@ -29,7 +29,7 @@
 	spin = generator(GEN_NUM, -20, 20)
 
 /particles/impact_smoke
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	icon_state = "smoke"
 	width = 500
 	height = 500

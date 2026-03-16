@@ -8,7 +8,7 @@
 		/datum/reagent/oxygen = 6,
 		/datum/reagent/nitrogen = 24,
 	)
-	icon = 'icons/obj/food/canned.dmi'
+	icon = '../assets/icons/obj/food/canned.dmi'
 	icon_state = "peachcan"
 	food_flags = FOOD_IN_CONTAINER
 	w_class = WEIGHT_CLASS_NORMAL
@@ -21,7 +21,7 @@
 
 /obj/item/food/canned/proc/open_can(mob/user)
 	to_chat(user, span_notice("You pull back the tab of \the [src]."))
-	playsound(user.loc, 'sound/items/foodcanopen.ogg', 50)
+	playsound(user.loc, '../assets/sound/items/foodcanopen.ogg', 50)
 	reagents.flags |= OPENCONTAINER
 	preserved_food = FALSE
 
@@ -145,7 +145,7 @@
 		span_nicegreen("You chow down on [src]."),
 		span_notice("You hear sloppy eating noises."))
 	SEND_SIGNAL(src, COMSIG_FOOD_CONSUMED, hungry_pet, dog_mom ? dog_mom : hungry_pet) //If there is no dog mom, we assume the pet fed itself.
-	playsound(loc, 'sound/items/eatfood.ogg', rand(30, 50), TRUE)
+	playsound(loc, '../assets/sound/items/eatfood.ogg', rand(30, 50), TRUE)
 	qdel(src)
 
 /obj/item/food/canned/squid_ink
@@ -189,7 +189,7 @@
 /obj/item/food/chapslice
 	name = "slice of chap"
 	desc = "A thin slice of chap. Useful for frying, or making sandwiches."
-	icon = 'icons/obj/food/martian.dmi'
+	icon = '../assets/icons/obj/food/martian.dmi'
 	icon_state = "chapslice"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment/vitamin = 3
@@ -205,7 +205,7 @@
 /obj/item/food/grilled_chapslice
 	name = "grilled slice of chap"
 	desc = "A greasy hot slice of chap. Forms a good part of a balanced meal."
-	icon = 'icons/obj/food/martian.dmi'
+	icon = '../assets/icons/obj/food/martian.dmi'
 	icon_state = "chapslice_grilled"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment/vitamin = 3

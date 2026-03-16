@@ -1,7 +1,7 @@
 /obj/item/gun/grenadelauncher
 	name = "grenade launcher"
 	desc = "A terrible, terrible thing. It's really awful!"
-	icon = 'icons/obj/weapons/guns/ballistic.dmi'
+	icon = '../assets/icons/obj/weapons/guns/ballistic.dmi'
 	icon_state = "riotgun"
 	inhand_icon_state = "riotgun"
 	w_class = WEIGHT_CLASS_BULKY
@@ -53,6 +53,6 @@
 	user.log_message("fired a grenade ([F.name]) with a grenade launcher ([src]) from [AREACOORD(user)] at [target] [AREACOORD(target)].", LOG_ATTACK, log_globally = FALSE)
 	F.active = 1
 	F.icon_state = initial(F.icon_state) + "_active"
-	playsound(user.loc, 'sound/items/weapons/armbomb.ogg', 75, TRUE, -3)
+	playsound(user.loc, '../assets/sound/items/weapons/armbomb.ogg', 75, TRUE, -3)
 	addtimer(CALLBACK(F, TYPE_PROC_REF(/obj/item/grenade, detonate)), 1.5 SECONDS)
 	return TRUE

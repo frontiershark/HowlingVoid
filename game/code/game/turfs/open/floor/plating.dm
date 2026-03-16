@@ -61,7 +61,7 @@
 			if(do_after(user, 3 SECONDS, target = src))
 				if (R.get_amount() >= 2 && !istype(src, /turf/open/floor/engine))
 					place_on_top(/turf/open/floor/engine, flags = CHANGETURF_INHERIT_AIR)
-					playsound(src, 'sound/items/deconstruct.ogg', 80, TRUE)
+					playsound(src, '../assets/sound/items/deconstruct.ogg', 80, TRUE)
 					R.use(2)
 					to_chat(user, span_notice("You reinforce the floor."))
 				return
@@ -95,7 +95,7 @@
 				if(sheets.get_amount() < PLATE_REINFORCE_COST)
 					return
 				sheets.use(PLATE_REINFORCE_COST)
-				playsound(src, 'sound/machines/creak.ogg', 100, vary = TRUE)
+				playsound(src, '../assets/sound/machines/creak.ogg', 100, vary = TRUE)
 				place_on_top(/turf/open/floor/plating/reinforced, CHANGETURF_INHERIT_AIR)
 		else
 			if(!iscyborg(user))
@@ -120,7 +120,7 @@
 			if(sheet.get_amount() < 1 || istype(src, /turf/open/floor/engine/insulation))
 				return
 			place_on_top(/turf/open/floor/engine/insulation, flags = CHANGETURF_INHERIT_AIR)
-			playsound(src, 'sound/items/deconstruct.ogg', 80, TRUE)
+			playsound(src, '../assets/sound/items/deconstruct.ogg', 80, TRUE)
 			sheet.use(1)
 			to_chat(user, span_notice("You insulate the floor."))
 			balloon_alert(user, "insulated!")
@@ -167,12 +167,12 @@
 	if(lattice)
 		qdel(lattice)
 	to_chat(user, span_notice("You reinforce the foamed plating with tiling."))
-	playsound(src, 'sound/items/weapons/Genhit.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/weapons/Genhit.ogg', 50, TRUE)
 	ChangeTurf(/turf/open/floor/plating, flags = CHANGETURF_INHERIT_AIR)
 	return ITEM_INTERACT_SUCCESS
 
 /turf/open/floor/plating/foam/attackby(obj/item/attacking_item, mob/user, list/modifiers)
-	playsound(src, 'sound/items/weapons/tap.ogg', 100, TRUE) //The attack sound is muffled by the foam itself
+	playsound(src, '../assets/sound/items/weapons/tap.ogg', 100, TRUE) //The attack sound is muffled by the foam itself
 	user.changeNext_move(CLICK_CD_MELEE)
 	user.do_attack_animation(src)
 	if(prob(attacking_item.force * 20 - 25))
@@ -325,7 +325,7 @@
 		below_turf = get_step_multiz(below_turf, DOWN)
 	if(!isnull(below_turf) && !isspaceturf(below_turf))
 		new /obj/effect/decal/cleanable/glass/plastitanium/screws(below_turf)
-		playsound(src, 'sound/effects/structure_stress/pop3.ogg', 100, vary = TRUE)
+		playsound(src, '../assets/sound/effects/structure_stress/pop3.ogg', 100, vary = TRUE)
 
 /turf/open/floor/plating/reinforced/airless
 	initial_gas_mix = AIRLESS_ATMOS
@@ -333,7 +333,7 @@
 ///not an actual turf its used just for rcd ui purposes
 /turf/open/floor/plating/rcd
 	name = "Floor/Wall"
-	icon = 'icons/hud/radial.dmi'
+	icon = '../assets/icons/hud/radial.dmi'
 	icon_state = "wallfloor"
 
 #undef PLATE_INTACT

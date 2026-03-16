@@ -26,7 +26,7 @@
 	response_harm_simple = "splat"
 	density = FALSE
 	faction = list(FACTION_HOSTILE, FACTION_MAINT_CREATURES)
-	attack_sound = null // NOVA EDIT - No more frog ear-rape - ORIGINAL: attack_sound = 'sound/mobs/non-humanoids/frog/reee.ogg'
+	attack_sound = null // NOVA EDIT - No more frog ear-rape - ORIGINAL: attack_sound = '../assets/sound/mobs/non-humanoids/frog/reee.ogg'
 	butcher_results = list(/obj/item/food/nugget = 1)
 	pass_flags = PASSTABLE | PASSGRILLE | PASSMOB
 	mob_size = MOB_SIZE_TINY
@@ -34,13 +34,13 @@
 	can_be_held = TRUE
 	held_w_class = WEIGHT_CLASS_TINY
 	worn_slot_flags = ITEM_SLOT_HEAD
-	head_icon = 'icons/mob/clothing/head/pets_head.dmi'
+	head_icon = '../assets/icons/mob/clothing/head/pets_head.dmi'
 
 	habitable_atmos = list("min_oxy" = 3, "max_oxy" = 0, "min_plas" = 0, "max_plas" = 15, "min_co2" = 0, "max_co2" = 15, "min_n2" = 0, "max_n2" = 0)
 
 	ai_controller = /datum/ai_controller/basic_controller/frog
 
-	var/stepped_sound = null // NOVA EDIT - No more frog ear-rape - ORIGINA: var/stepped_sound = 'sound/mobs/non-humanoids/frog/huuu.ogg'
+	var/stepped_sound = null // NOVA EDIT - No more frog ear-rape - ORIGINA: var/stepped_sound = '../assets/sound/mobs/non-humanoids/frog/huuu.ogg'
 	///How much of a reagent the mob injects on attack
 	var/poison_per_bite = 3
 	///What reagent the mob injects targets with

@@ -203,7 +203,7 @@
 		else
 			continue
 
-		var/image/overlay = image('icons/obj/pipes_n_cables/hydrochem/connects.dmi', "[dir2text(direction)]-[ducting_layer]", layer = duct_layer)
+		var/image/overlay = image('../assets/icons/obj/pipes_n_cables/hydrochem/connects.dmi', "[dir2text(direction)]-[ducting_layer]", layer = duct_layer)
 		overlay.color = color
 		overlay.pixel_w = duct_x
 		overlay.pixel_z = duct_y
@@ -237,7 +237,7 @@
 	source.update_appearance(UPDATE_OVERLAYS)
 
 	if(changer)
-		playsound(changer, 'sound/items/tools/ratchet.ogg', 10, TRUE) //sound
+		playsound(changer, '../assets/sound/items/tools/ratchet.ogg', 10, TRUE) //sound
 
 	if(length(ducts))
 		disable()

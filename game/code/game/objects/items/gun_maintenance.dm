@@ -1,19 +1,19 @@
 /obj/item/gun_maintenance_supplies
 	name = "gun maintenance kit"
 	desc = "A toolbox containing gun maintenance supplies and spare parts. Can be applied to firearms to maintain them."
-	icon = 'icons/obj/storage/toolbox.dmi'
+	icon = '../assets/icons/obj/storage/toolbox.dmi'
 	icon_state = "maint_kit"
 	inhand_icon_state = "ammobox"
-	lefthand_file = 'icons/mob/inhands/equipment/toolbox_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/toolbox_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/toolbox_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/toolbox_righthand.dmi'
 	force = 12
 	throwforce = 12
 	throw_speed = 2
 	throw_range = 7
 	demolition_mod = 1.25
 	w_class = WEIGHT_CLASS_BULKY
-	drop_sound = 'sound/items/handling/ammobox_drop.ogg'
-	pickup_sound = 'sound/items/handling/ammobox_pickup.ogg'
+	drop_sound = '../assets/sound/items/handling/ammobox_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/ammobox_pickup.ogg'
 	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 6)
 	/// How many times we can use this maintenance kit to maintain a gun
 	var/uses = 3

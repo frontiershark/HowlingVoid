@@ -4,7 +4,7 @@
 /obj/effect/overlay/vis_effect/snail
 	name = "snail"
 	vis_flags = VIS_INHERIT_PLANE
-	icon = 'icons/obj/service/hydroponics/equipment.dmi'
+	icon = '../assets/icons/obj/service/hydroponics/equipment.dmi'
 	icon_state = "snail_hydrotray"
 	///are we currently walking?
 	var/is_waddling = FALSE

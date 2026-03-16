@@ -6,7 +6,7 @@ Unused icons for new areas are "awaycontent1" ~ "awaycontent30"
 // Away Missions
 /area/awaymission
 	name = "Strange Location"
-	icon = 'icons/area/areas_away_missions.dmi'
+	icon = '../assets/icons/area/areas_away_missions.dmi'
 	icon_state = "away"
 	default_gravity = STANDARD_GRAVITY
 	ambience_index = AMBIENCE_AWAY
@@ -22,7 +22,7 @@ Unused icons for new areas are "awaycontent1" ~ "awaycontent30"
 	base_lighting_alpha = 200
 	base_lighting_color = "#FFF4AA"
 	sound_environment = SOUND_ENVIRONMENT_PLAIN
-	ambientsounds = list('sound/ambience/beach/shore.ogg', 'sound/ambience/misc/ambiodd.ogg','sound/ambience/medical/ambinice.ogg')
+	ambientsounds = list('../assets/sound/ambience/beach/shore.ogg', '../assets/sound/ambience/misc/ambiodd.ogg','../assets/sound/ambience/medical/ambinice.ogg')
 
 /area/awaymission/museum/cafeteria
 	name = "Nanotrasen Museum Cafeteria"

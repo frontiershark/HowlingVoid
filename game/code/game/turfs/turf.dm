@@ -2,7 +2,7 @@ GLOBAL_LIST_EMPTY(station_turfs)
 
 /// Any floor or wall. What makes up the station and the rest of the map.
 /turf
-	icon = 'icons/turf/floors.dmi'
+	icon = '../assets/icons/turf/floors.dmi'
 	abstract_type = /turf
 	datum_flags = DF_STATIC_OBJECT
 	vis_flags = VIS_INHERIT_ID // Important for interaction with and visualization of openspace.
@@ -48,7 +48,7 @@ GLOBAL_LIST_EMPTY(station_turfs)
 	var/requires_activation //add to air processing after initialize?
 	var/changing_turf = FALSE
 
-	var/bullet_bounce_sound = 'sound/items/weapons/gun/general/mag_bullet_remove.ogg' //sound played when a shell casing is ejected ontop of the turf.
+	var/bullet_bounce_sound = '../assets/sound/items/weapons/gun/general/mag_bullet_remove.ogg' //sound played when a shell casing is ejected ontop of the turf.
 	var/bullet_sizzle = FALSE //used by ammo_casing/bounce_away() to determine if the shell casing should make a sizzle sound when it's ejected over the turf
 							//IE if the turf is supposed to be water, set TRUE.
 

@@ -109,7 +109,7 @@
 	our_guy.adjust_drowsiness(-3.8 * seconds_per_tick * metabolization_ratio)
 
 	if(SPT_PROB(25, seconds_per_tick))
-		our_guy.playsound_local(our_guy, 'sound/effects/singlebeat.ogg', 100, TRUE)
+		our_guy.playsound_local(our_guy, '../assets/sound/effects/singlebeat.ogg', 100, TRUE)
 		flash_color(our_guy, flash_color = "#ff0000", flash_time = 3 SECONDS)
 
 	if(SPT_PROB(5, seconds_per_tick))

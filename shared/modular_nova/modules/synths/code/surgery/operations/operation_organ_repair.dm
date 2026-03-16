@@ -18,8 +18,8 @@
 		/obj/item/knife = 3.25,
 		/obj/item/shard = 3.85,
 	)
-	preop_sound = 'sound/items/tools/ratchet.ogg'
-	success_sound = 'sound/machines/airlock/doorclick.ogg'
+	preop_sound = '../assets/sound/items/tools/ratchet.ogg'
+	success_sound = '../assets/sound/machines/airlock/doorclick.ogg'
 	required_organ_flag = ORGAN_ROBOTIC & ORGAN_SYNTHETIC_FROM_SPECIES
 	blocked_organ_flag = NONE
 	heal_to_percent = 0
@@ -83,8 +83,8 @@
 		/obj/item/knife = 3.25,
 		/obj/item/shard = 3.85,
 	)
-	preop_sound = 'sound/items/tools/screwdriver_operating.ogg'
-	success_sound = 'sound/machines/airlock/doorclick.ogg'
+	preop_sound = '../assets/sound/items/tools/screwdriver_operating.ogg'
+	success_sound = '../assets/sound/machines/airlock/doorclick.ogg'
 	required_organ_flag = ORGAN_ROBOTIC & ORGAN_SYNTHETIC_FROM_SPECIES
 	blocked_organ_flag = NONE
 	heal_to_percent = 0
@@ -144,8 +144,8 @@
 		TOOL_WRENCH = 1.05,
 		TOOL_RETRACTOR = 1.5,
 	)
-	preop_sound = 'sound/items/tools/ratchet_fast.ogg'
-	success_sound = 'sound/machines/airlock/doorclick.ogg'
+	preop_sound = '../assets/sound/items/tools/ratchet_fast.ogg'
+	success_sound = '../assets/sound/machines/airlock/doorclick.ogg'
 	required_organ_flag = ORGAN_ROBOTIC & ORGAN_SYNTHETIC_FROM_SPECIES
 	blocked_organ_flag = NONE
 	heal_to_percent = 0
@@ -209,8 +209,8 @@
 		/obj/item/shard = 3.85,
 		/obj/item = 6,
 	)
-	preop_sound = 'sound/effects/bodyfall/bodyfall1.ogg'
-	success_sound = 'sound/machines/airlock/doorclick.ogg'
+	preop_sound = '../assets/sound/effects/bodyfall/bodyfall1.ogg'
+	success_sound = '../assets/sound/machines/airlock/doorclick.ogg'
 	required_organ_flag = ORGAN_ROBOTIC & ORGAN_SYNTHETIC_FROM_SPECIES
 	blocked_organ_flag = NONE
 	heal_to_percent = 0
@@ -271,8 +271,8 @@
 		TOOL_SCREWDRIVER = 4.85,
 		/obj/item/pen = 6.67,
 	)
-	preop_sound = 'sound/items/taperecorder/tape_flip.ogg'
-	success_sound = 'sound/items/taperecorder/taperecorder_close.ogg'
+	preop_sound = '../assets/sound/items/taperecorder/tape_flip.ogg'
+	success_sound = '../assets/sound/items/taperecorder/taperecorder_close.ogg'
 	required_organ_flag = ORGAN_ROBOTIC & ORGAN_SYNTHETIC_FROM_SPECIES
 	blocked_organ_flag = NONE
 	heal_to_percent = 0

@@ -1,7 +1,7 @@
 /obj/item/food/bait
 	name = "this is bait"
 	desc = "you got baited."
-	icon = 'icons/obj/fishing.dmi'
+	icon = '../assets/icons/obj/fishing.dmi'
 	abstract_type = /obj/item/food/bait
 	/// Quality trait of this bait
 	var/bait_quality = TRAIT_BASIC_QUALITY_BAIT
@@ -17,7 +17,7 @@
 /obj/item/food/bait/worm
 	name = "worm"
 	desc = "It's a wriggling worm from a can of fishing bait. You're not going to eat it, are you?"
-	icon = 'icons/obj/fishing.dmi'
+	icon = '../assets/icons/obj/fishing.dmi'
 	icon_state = "worm"
 	food_reagents = list(/datum/reagent/consumable/nutriment/protein = 1)
 	tastes = list("meat" = 1, "worms" = 1)
@@ -34,10 +34,10 @@
 /obj/item/food/bait/natural
 	name = "natural bait"
 	desc = "Fish can't seem to get enough of this!"
-	icon = 'icons/obj/medical/chemical.dmi'
+	icon = '../assets/icons/obj/medical/chemical.dmi'
 	icon_state = "pill9"
-	lefthand_file = 'icons/mob/inhands/items_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items_righthand.dmi'
 	inhand_icon_state = "pen"
 	bait_quality = TRAIT_GREAT_QUALITY_BAIT //this is only here for autowiki purposes, it's removed on init.
 	food_reagents = list(/datum/reagent/drug/kronkaine = 2) //The kronkaine is the thing that makes this a great bait.
@@ -50,7 +50,7 @@
 /obj/item/food/bait/doughball
 	name = "doughball"
 	desc = "Small piece of dough. Simple but effective fishing bait."
-	icon = 'icons/obj/fishing.dmi'
+	icon = '../assets/icons/obj/fishing.dmi'
 	icon_state = "doughball"
 	food_reagents = list(/datum/reagent/consumable/nutriment/protein = 1)
 	tastes = list("dough" = 1)

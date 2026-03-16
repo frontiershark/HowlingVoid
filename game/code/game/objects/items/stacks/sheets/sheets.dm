@@ -1,7 +1,7 @@
 /obj/item/stack/sheet
 	name = "sheet"
-	lefthand_file = 'icons/mob/inhands/items/sheets_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/sheets_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/sheets_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/sheets_righthand.dmi'
 	icon_state = "sheet-metal_3"
 	abstract_type = /obj/item/stack/sheet
 	full_w_class = WEIGHT_CLASS_NORMAL
@@ -15,8 +15,8 @@
 	novariants = FALSE
 	material_flags = MATERIAL_EFFECTS
 	table_type = /obj/structure/table/greyscale
-	pickup_sound = 'sound/items/handling/materials/metal_pick_up.ogg'
-	drop_sound = 'sound/items/handling/materials/metal_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/materials/metal_pick_up.ogg'
+	drop_sound = '../assets/sound/items/handling/materials/metal_drop.ogg'
 	sound_vary = TRUE
 	usable_for_construction = TRUE
 	/// text string used to find typepaths used in door and wall (false and tram too) construction for door assemblies and girders respectively

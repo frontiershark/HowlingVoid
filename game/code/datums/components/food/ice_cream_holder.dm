@@ -136,7 +136,7 @@
 	for(var/i in 1 to length(scoop_overlays))
 		var/image/overlay = scoop_overlays[i]
 		if(istext(overlay))
-			overlay = image('icons/obj/service/kitchen.dmi', overlay)
+			overlay = image('../assets/icons/obj/service/kitchen.dmi', overlay)
 		overlay.pixel_w = x_offset
 		overlay.pixel_z = y_offset + added_offset
 		new_overlays += overlay
@@ -180,7 +180,7 @@
 
 	new /obj/item/holochip(get_turf(source), venue_price)
 	venue_to_pay.total_income += venue_price
-	playsound(get_turf(source), 'sound/effects/cashregister.ogg', 60, TRUE)
+	playsound(get_turf(source), '../assets/sound/effects/cashregister.ogg', 60, TRUE)
 
 
 /////ICE CREAM FLAVOUR DATUM STUFF
@@ -234,7 +234,7 @@ GLOBAL_LIST_INIT_TYPED(ice_cream_flavours, /datum/ice_cream_flavour, init_ice_cr
 	var/atom/owner = target.parent
 	LAZYADD(target.scoops, name)
 	if(!takes_custom_ingredients && color)
-		var/image/flavoring = image('icons/obj/service/kitchen.dmi', "icecream_custom")
+		var/image/flavoring = image('../assets/icons/obj/service/kitchen.dmi', "icecream_custom")
 		flavoring.color = color
 		LAZYADD(target.scoop_overlays, flavoring)
 
@@ -352,7 +352,7 @@ GLOBAL_LIST_INIT_TYPED(ice_cream_flavours, /datum/ice_cream_flavour, init_ice_cr
 /datum/ice_cream_flavour/custom/add_flavour(datum/component/ice_cream_holder/target, datum/reagents/custom_ingredients)
 	if(!custom_ingredients || custom_ingredients.total_volume < 4) //consumable reagents have stronger taste so higher volume are required to allow non-food flavourings to break through better.
 		return GLOB.ice_cream_flavours[ICE_CREAM_BLAND].add_flavour(target) //Bland, sugary ice and milk.
-	var/image/flavoring = image('icons/obj/service/kitchen.dmi', "icecream_custom")
+	var/image/flavoring = image('../assets/icons/obj/service/kitchen.dmi', "icecream_custom")
 	var/datum/reagent/master = custom_ingredients.get_master_reagent()
 	flavoring.color = master.color
 	LAZYADD(target.scoop_overlays, flavoring)

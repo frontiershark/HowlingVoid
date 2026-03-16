@@ -1,7 +1,7 @@
 /obj/machinery/door/poddoor
 	name = "blast door"
 	desc = "A heavy duty blast door that opens mechanically."
-	icon = 'icons/obj/doors/blastdoor.dmi' //NOVA EDIT - ICON OVERRIDDEN IN AESTHETICS MODULE
+	icon = '../assets/icons/obj/doors/blastdoor.dmi' //NOVA EDIT - ICON OVERRIDDEN IN AESTHETICS MODULE
 	icon_state = "closed"
 	layer = BLASTDOOR_LAYER
 	closingLayer = CLOSED_BLASTDOOR_LAYER
@@ -22,7 +22,7 @@
 	/// The door's ID (used for buttons, etc to control the door)
 	var/id = null
 	/// The sound that plays when the door opens/closes
-	var/animation_sound = 'sound/machines/blastdoor.ogg'
+	var/animation_sound = '../assets/sound/machines/blastdoor.ogg'
 	var/show_nav_computer_icon = TRUE
 	///The mob who crafted this blastdoor
 	var/datum/weakref/owner
@@ -30,7 +30,7 @@
 /obj/machinery/door/poddoor/Initialize(mapload)
 	. = ..()
 	if(show_nav_computer_icon)
-		AddElement(/datum/element/nav_computer_icon, 'icons/effects/nav_computer_indicators.dmi', "airlock", TRUE)
+		AddElement(/datum/element/nav_computer_icon, '../assets/icons/effects/nav_computer_indicators.dmi', "airlock", TRUE)
 
 /obj/machinery/door/poddoor/Destroy()
 	owner = null
@@ -265,7 +265,7 @@
 		user.visible_message(span_warning("[user] begins prying open [src]."),\
 					span_noticealien("You begin digging your claws into [src] with all your might!"),\
 					span_warning("You hear groaning metal..."))
-		playsound(src, 'sound/machines/airlock/airlock_alien_prying.ogg', 100, TRUE)
+		playsound(src, '../assets/sound/machines/airlock/airlock_alien_prying.ogg', 100, TRUE)
 
 		var/time_to_open = 5 SECONDS
 		if(hasPower())

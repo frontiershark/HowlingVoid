@@ -2,7 +2,7 @@
 	name = "decal painter"
 	desc = "An airlock painter, reprogrammed to use a different style of paint in order to apply decals for floor tiles as well, in addition to repainting doors. Decals break when the floor tiles are removed."
 	desc_controls = "Alt-Click to remove the ink cartridge."
-	icon = 'icons/obj/devices/tool.dmi'
+	icon = '../assets/icons/obj/devices/tool.dmi'
 	icon_state = "decal_sprayer"
 	inhand_icon_state = "decal_sprayer"
 	custom_materials = list(/datum/material/iron = SMALL_MATERIAL_AMOUNT * 0.5, /datum/material/glass = SMALL_MATERIAL_AMOUNT * 0.5)
@@ -46,7 +46,7 @@
 
 	target.AddElement( \
 		/datum/element/decal, \
-		_icon = 'icons/turf/decals.dmi', \
+		_icon = '../assets/icons/turf/decals.dmi', \
 		_icon_state = decal_data[DECAL_INFO_ICON_STATE], \
 		_dir = decal_data[DECAL_INFO_DIR], \
 		_alpha = decal_data[DECAL_INFO_ALPHA], \

@@ -1,6 +1,6 @@
 /datum/action/cooldown/mob_cooldown/ground_slam
 	name = "Ground Slam"
-	button_icon = 'icons/mob/actions/actions_items.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_items.dmi'
 	button_icon_state = "sniper_zoom"
 	desc = "Slams the ground sending out a shockwave around you."
 	cooldown_time = 10 SECONDS

@@ -6,7 +6,7 @@
 	ai_controller = /datum/ai_controller/basic_controller/trooper/calls_reinforcements/ancient_milsim
 	attack_verb_continuous = "slashes"
 	attack_verb_simple = "slash"
-	attack_sound = 'sound/items/weapons/blade1.ogg'
+	attack_sound = '../assets/sound/items/weapons/blade1.ogg'
 	attack_vis_effect = ATTACK_EFFECT_SLASH
 	faction = list(ROLE_SYNDICATE)
 	corpse = /obj/effect/mob_spawn/corpse/human/cin_soldier

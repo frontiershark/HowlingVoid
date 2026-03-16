@@ -171,7 +171,7 @@
 /datum/action/cooldown/xenohybrid_pounce
 	name = "Predatory Pounce"
 	desc = "Launch toward a nearby target and knock it down."
-	button_icon = 'icons/mob/actions/actions_xeno.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_xeno.dmi'
 	button_icon_state = "alien_leap"
 	background_icon_state = "bg_alien"
 	overlay_icon_state = "bg_alien_border"
@@ -206,7 +206,7 @@
 		span_danger("[pouncer] lunges at [target]!"),
 		span_userdanger("You pounce at [target]!"),
 	)
-	playsound(pouncer, 'sound/mobs/non-humanoids/hiss/hiss1.ogg', 60, TRUE)
+	playsound(pouncer, '../assets/sound/mobs/non-humanoids/hiss/hiss1.ogg', 60, TRUE)
 	INVOKE_ASYNC(pouncer, TYPE_PROC_REF(/mob/living/carbon/human, emote), "roar")
 	pouncer.throw_at(target, max_pounce_dist, pounce_speed, pouncer, spin = FALSE, force = MOVE_FORCE_EXTREMELY_WEAK, gentle = TRUE)
 	var/landing_delay = clamp(get_dist(pouncer, target) * 0.25 SECONDS, 0.2 SECONDS, 1 SECONDS)
@@ -238,7 +238,7 @@
 /datum/action/cooldown/xenohybrid_resin
 	name = "Plant Weeds"
 	desc = "Plant a weeds node for free. It will spread alien growth."
-	button_icon = 'icons/mob/actions/actions_xeno.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_xeno.dmi'
 	button_icon_state = "alien_plant"
 	background_icon_state = "bg_alien"
 	overlay_icon_state = "bg_alien_border"

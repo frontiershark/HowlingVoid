@@ -12,7 +12,7 @@
 	maturation = 6
 	production = 4
 	growthstages = 3
-	growing_icon = 'icons/obj/service/hydroponics/growing.dmi'
+	growing_icon = '../assets/icons/obj/service/hydroponics/growing.dmi'
 	reagents_add = list(/datum/reagent/consumable/nutriment = 0.05)
 
 /obj/item/seeds/kronkus/Initialize(mapload, nogenes)

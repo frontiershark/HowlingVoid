@@ -1,6 +1,6 @@
 /obj/item/clothing/under/costume
-	icon = 'icons/obj/clothing/under/costume.dmi'
-	worn_icon = 'icons/mob/clothing/under/costume.dmi'
+	icon = '../assets/icons/obj/clothing/under/costume.dmi'
+	worn_icon = '../assets/icons/mob/clothing/under/costume.dmi'
 
 /obj/item/clothing/under/costume/roman
 	name = "\improper Roman armor"
@@ -35,7 +35,7 @@
 	name = "schoolgirl uniform"
 	desc = "It's just like one of my Japanese animes!"
 	greyscale_colors = "#942737#4A518D#EBEBEB"
-	icon = 'icons/map_icons/clothing/under/costume.dmi'
+	icon = '../assets/icons/map_icons/clothing/under/costume.dmi'
 	icon_state = "/obj/item/clothing/under/costume/seifuku"
 	post_init_icon_state = "seifuku"
 	greyscale_config_inhand_left = /datum/greyscale_config/seifuku_inhands_left
@@ -116,7 +116,7 @@
 	name = "maid costume"
 	desc = "Maid in China."
 	greyscale_colors = "#494955#EEEEEE"
-	icon = 'icons/map_icons/clothing/under/costume.dmi'
+	icon = '../assets/icons/map_icons/clothing/under/costume.dmi'
 	icon_state = "/obj/item/clothing/under/costume/maid"
 	post_init_icon_state = "maid"
 	greyscale_config = /datum/greyscale_config/maid
@@ -319,10 +319,10 @@
 /obj/item/clothing/under/costume/russian_officer
 	name = "\improper Russian officer's uniform"
 	desc = "The latest in fashionable russian outfits."
-	icon = 'icons/obj/clothing/under/security.dmi'
+	icon = '../assets/icons/obj/clothing/under/security.dmi'
 	icon_state = "hostanclothes"
 	inhand_icon_state = null
-	worn_icon = 'icons/mob/clothing/under/security.dmi'
+	worn_icon = '../assets/icons/mob/clothing/under/security.dmi'
 	alt_covers_chest = TRUE
 	armor_type = /datum/armor/clothing_under/costume_russian_officer
 	strip_delay = 5 SECONDS
@@ -339,8 +339,8 @@
 	gender = PLURAL
 	female_sprite_flags = NO_FEMALE_UNIFORM
 	custom_price = PAYCHECK_CREW
-	icon = 'icons/obj/clothing/under/shorts_pants_shirts.dmi'
-	worn_icon = 'icons/mob/clothing/under/shorts_pants_shirts.dmi'
+	icon = '../assets/icons/obj/clothing/under/shorts_pants_shirts.dmi'
+	worn_icon = '../assets/icons/mob/clothing/under/shorts_pants_shirts.dmi'
 	species_exception = list(/datum/species/golem)
 	can_adjust = TRUE
 	alt_covers_chest = TRUE
@@ -349,7 +349,7 @@
 /obj/item/clothing/under/costume/buttondown/slacks
 	name = "button-down shirt with slacks"
 	desc = "A fancy button-down shirt with slacks."
-	icon = 'icons/map_icons/clothing/under/costume.dmi'
+	icon = '../assets/icons/map_icons/clothing/under/costume.dmi'
 	icon_state = "/obj/item/clothing/under/costume/buttondown/slacks"
 	post_init_icon_state = "buttondown_slacks"
 	greyscale_config = /datum/greyscale_config/buttondown_slacks
@@ -365,7 +365,7 @@
 /obj/item/clothing/under/costume/buttondown/shorts
 	name = "button-down shirt with shorts"
 	desc = "A fancy button-down shirt with shorts."
-	icon = 'icons/map_icons/clothing/under/costume.dmi'
+	icon = '../assets/icons/map_icons/clothing/under/costume.dmi'
 	icon_state = "/obj/item/clothing/under/costume/buttondown/shorts"
 	post_init_icon_state = "buttondown_shorts"
 	greyscale_config = /datum/greyscale_config/buttondown_shorts
@@ -377,7 +377,7 @@
 /obj/item/clothing/under/costume/buttondown/skirt
 	name = "button-down shirt with skirt"
 	desc = "A fancy button-down shirt with skirt."
-	icon = 'icons/map_icons/clothing/under/costume.dmi'
+	icon = '../assets/icons/map_icons/clothing/under/costume.dmi'
 	icon_state = "/obj/item/clothing/under/costume/buttondown/skirt"
 	post_init_icon_state = "buttondown_skirt"
 	greyscale_config = /datum/greyscale_config/buttondown_skirt
@@ -407,7 +407,7 @@
 
 /obj/item/clothing/under/costume/football_suit
 	name = "football uniform"
-	icon = 'icons/map_icons/clothing/under/costume.dmi'
+	icon = '../assets/icons/map_icons/clothing/under/costume.dmi'
 	icon_state = "/obj/item/clothing/under/costume/football_suit"
 	post_init_icon_state = "football_suit"
 	can_adjust = FALSE
@@ -471,7 +471,7 @@
 /obj/item/clothing/under/costume/gi
 	name = "martial gi"
 	desc = "Assistant, nukie, whatever. You can beat anyone; it's called hard work!"
-	icon = 'icons/map_icons/clothing/under/costume.dmi'
+	icon = '../assets/icons/map_icons/clothing/under/costume.dmi'
 	icon_state = "/obj/item/clothing/under/costume/gi"
 	post_init_icon_state = "martial_arts_gi"
 	greyscale_config = /datum/greyscale_config/gi
@@ -516,8 +516,8 @@
 /obj/item/clothing/under/costume/henchmen
 	name = "henchmen jumpsuit"
 	desc = "A very gaudy jumpsuit for a proper Henchman. Guild regulations, you understand."
-	icon = 'icons/obj/clothing/under/syndicate.dmi'
-	worn_icon = 'icons/mob/clothing/under/syndicate.dmi'
+	icon = '../assets/icons/obj/clothing/under/syndicate.dmi'
+	worn_icon = '../assets/icons/mob/clothing/under/syndicate.dmi'
 	icon_state = "henchmen"
 	inhand_icon_state = null
 	can_adjust = FALSE

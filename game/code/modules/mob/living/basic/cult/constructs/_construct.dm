@@ -1,5 +1,5 @@
 /mob/living/basic/construct
-	icon = 'icons/mob/nonhuman-player/cult.dmi'
+	icon = '../assets/icons/mob/nonhuman-player/cult.dmi'
 	gender = NEUTER
 	basic_mob_flags = DEL_ON_DEATH
 	combat_mode = TRUE

@@ -2,7 +2,7 @@
 /datum/action/cooldown/mob_cooldown/goliath_tentacles
 	name = "Unleash Tentacles"
 	desc = "Unleash burrowed tentacles at a targeted location, grappling targets after a delay."
-	button_icon = 'icons/mob/simple/lavaland/lavaland_monsters.dmi'
+	button_icon = '../assets/icons/mob/simple/lavaland/lavaland_monsters.dmi'
 	button_icon_state = "goliath_tentacle_wiggle"
 	background_icon_state = "bg_demon"
 	overlay_icon_state = "bg_demon_border"
@@ -37,7 +37,7 @@
 /datum/action/cooldown/mob_cooldown/tentacle_burst
 	name = "Tentacle Burst"
 	desc = "Unleash burrowed tentacles in an area around you, grappling targets after a delay."
-	button_icon = 'icons/mob/simple/lavaland/lavaland_monsters.dmi'
+	button_icon = '../assets/icons/mob/simple/lavaland/lavaland_monsters.dmi'
 	button_icon_state = "goliath_tentacle_wiggle"
 	background_icon_state = "bg_demon"
 	overlay_icon_state = "bg_demon_border"
@@ -60,7 +60,7 @@
 /datum/action/cooldown/mob_cooldown/tentacle_grasp
 	name = "Tentacle Grasp"
 	desc = "Unleash burrowed tentacles in a line towards a targeted location, grappling targets after a delay."
-	button_icon = 'icons/mob/simple/lavaland/lavaland_monsters.dmi'
+	button_icon = '../assets/icons/mob/simple/lavaland/lavaland_monsters.dmi'
 	button_icon_state = "goliath_tentacle_wiggle"
 	background_icon_state = "bg_demon"
 	overlay_icon_state = "bg_demon_border"

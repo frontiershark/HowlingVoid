@@ -28,7 +28,7 @@
 	active = TRUE
 	..()
 	user.visible_message(span_boldwarning("[user]'s body begins to pulsate and swell unnaturally!"))
-	playsound(user, 'sound/effects/wounds/crack1.ogg', 100, TRUE)
+	playsound(user, '../assets/sound/effects/wounds/crack1.ogg', 100, TRUE)
 	animate(user, transform = user.transform * 1.5, color = COLOR_RED, time = 1 SECONDS)
 	if(is_walled(user))
 		user.Immobilize(1.5 SECONDS) // to prevent the breaking of the wrong walls (who would think of using the antistun after the last resort)
@@ -55,7 +55,7 @@
 /datum/action/changeling/headcrab/proc/gore_explosion(mob/living/user)
 	var/list/user_DNA = user.get_blood_dna_list()
 	user.visible_message(span_boldwarning("[user]'s body ruptures in a violent explosion of biomass!"))
-	playsound(user, 'sound/effects/goresplat.ogg', 100, TRUE) //yuck!!
+	playsound(user, '../assets/sound/effects/goresplat.ogg', 100, TRUE) //yuck!!
 	explosion(user, light_impact_range = LAST_RESORT_EXPLOSION_RANGE, flame_range = 0, flash_range = 0, adminlog = TRUE, silent = TRUE, explosion_cause = src)
 	user.spawn_gibs()
 
@@ -68,7 +68,7 @@
 			continue
 		blinded.visible_message(span_danger("[blinded] is splattered with blood!"), span_userdanger("You're splattered with blood!"))
 		blinded.add_blood_DNA(user_DNA)
-		playsound(blinded, 'sound/effects/splat.ogg', 50, TRUE, extrarange = SILENCED_SOUND_EXTRARANGE)
+		playsound(blinded, '../assets/sound/effects/splat.ogg', 50, TRUE, extrarange = SILENCED_SOUND_EXTRARANGE)
 
 		if(ishuman(blinded))
 			var/mob/living/carbon/human/blinded_human = blinded

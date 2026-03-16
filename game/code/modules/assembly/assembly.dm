@@ -2,7 +2,7 @@
 /obj/item/assembly
 	name = "assembly"
 	desc = "A small electronic device that should never exist."
-	icon = 'icons/obj/devices/new_assemblies.dmi'
+	icon = '../assets/icons/obj/devices/new_assemblies.dmi'
 	icon_state = ""
 	obj_flags = CONDUCTS_ELECTRICITY
 	w_class = WEIGHT_CLASS_SMALL
@@ -10,8 +10,8 @@
 	throwforce = 2
 	throw_speed = 3
 	throw_range = 7
-	drop_sound = 'sound/items/handling/component_drop.ogg'
-	pickup_sound = 'sound/items/handling/component_pickup.ogg'
+	drop_sound = '../assets/sound/items/handling/component_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/component_pickup.ogg'
 
 	/**
 	 * Set to true if the device has different icons for each position.

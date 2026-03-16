@@ -34,7 +34,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/space_heater/wall_mounted, 29)
 	user.balloon_alert(user, "deconstructing...")
 	wrench.play_tool_sound(src)
 	if(wrench.use_tool(src, user, 1 SECONDS))
-		playsound(loc, 'sound/items/deconstruct.ogg', 50, TRUE)
+		playsound(loc, '../assets/sound/items/deconstruct.ogg', 50, TRUE)
 		deconstruct(TRUE)
 		return
 
@@ -82,7 +82,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/space_heater/wall_mounted, 29)
 		return NONE
 	if(ispath(cell))
 		cell = new cell
-	playsound(src, 'sound/machines/click.ogg', 75, TRUE)
+	playsound(src, '../assets/sound/machines/click.ogg', 75, TRUE)
 	user.transferItemToLoc(tool, src)
 	if(!isnull(cell))
 		user.put_in_hands(cell)
@@ -98,7 +98,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/space_heater/wall_mounted, 29)
 		return SECONDARY_ATTACK_CALL_NORMAL
 	if(ispath(cell))
 		cell = new cell
-	playsound(src, 'sound/machines/click.ogg', 75, TRUE)
+	playsound(src, '../assets/sound/machines/click.ogg', 75, TRUE)
 	user.put_in_hands(cell)
 	cell = null
 	return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN

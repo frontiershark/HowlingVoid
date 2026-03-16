@@ -189,7 +189,7 @@
 /datum/action/cooldown/pod_rooted_intake
 	name = "Rooted Intake"
 	desc = "Root yourself in place and draw water from the floor under you."
-	button_icon = 'icons/mob/spacevines.dmi'
+	button_icon = '../assets/icons/mob/spacevines.dmi'
 	button_icon_state = "Light1"
 	cooldown_time = 20 SECONDS
 	check_flags = AB_CHECK_CONSCIOUS
@@ -338,7 +338,7 @@
 
 /obj/effect/pod_roots
 	name = "roots"
-	icon = 'icons/mob/spacevines.dmi'
+	icon = '../assets/icons/mob/spacevines.dmi'
 	icon_state = "Light1"
 	layer = BELOW_MOB_LAYER
 	plane = GAME_PLANE

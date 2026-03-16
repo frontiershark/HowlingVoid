@@ -1,8 +1,8 @@
 ///Normal box
 /datum/storage/box
 	max_specific_storage = WEIGHT_CLASS_SMALL
-	open_sound = 'sound/items/handling/cardboard_box/cardboard_box_open.ogg'
-	rustle_sound = 'sound/items/handling/cardboard_box/cardboard_box_rustle.ogg'
+	open_sound = '../assets/sound/items/handling/cardboard_box/cardboard_box_open.ogg'
+	rustle_sound = '../assets/sound/items/handling/cardboard_box/cardboard_box_rustle.ogg'
 
 ///Debug tools box
 /datum/storage/box/debug

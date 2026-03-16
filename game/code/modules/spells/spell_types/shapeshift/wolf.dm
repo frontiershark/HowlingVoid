@@ -12,11 +12,11 @@
 	name = "wolf pelt cloak"
 	desc = "A cloak made of very lively wolf fur, feels warm to touch."
 	icon_state = "icecloak"
-	icon = 'icons/obj/clothing/cloaks.dmi'
-	worn_icon = 'icons/mob/clothing/neck.dmi'
+	icon = '../assets/icons/obj/clothing/cloaks.dmi'
+	worn_icon = '../assets/icons/mob/clothing/neck.dmi'
 	inhand_icon_state = "icecloak"
-	lefthand_file = 'icons/mob/inhands/clothing/neck_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/clothing/neck_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/clothing/neck_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/clothing/neck_righthand.dmi'
 	body_parts_covered = CHEST|GROIN|ARMS
 	resistance_flags = FIRE_PROOF | FREEZE_PROOF
 
@@ -52,8 +52,8 @@
 /obj/item/clothing/head/hooded/wolf_coat_hoodie
 	name = "wolf pelt hood"
 	desc = "A hood made of wolf fur."
-	icon = 'icons/obj/clothing/head/winterhood.dmi'
-	worn_icon = 'icons/mob/clothing/head/winterhood.dmi'
+	icon = '../assets/icons/obj/clothing/head/winterhood.dmi'
+	worn_icon = '../assets/icons/mob/clothing/head/winterhood.dmi'
 	icon_state = "icecloak_hood"
 	actions_types = list(/datum/action/cooldown/spell/shapeshift/wolf)
 	flags_inv = HIDEHAIR|HIDEEARS

@@ -1,11 +1,11 @@
 /obj/item/inducer
 	name = "inducer"
 	desc = "A tool for inductively charging internal power cells and batteries."
-	icon = 'icons/obj/tools.dmi'
+	icon = '../assets/icons/obj/tools.dmi'
 	icon_state = "inducer-engi"
 	inhand_icon_state = "inducer-engi"
-	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/tools_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/tools_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/tools_righthand.dmi'
 	force = 7
 
 	/// Multiplier that determines the speed at which this inducer works at.
@@ -248,7 +248,7 @@
 
 /obj/item/inducer/cyborg
 	name = "modular inducer"
-	icon = 'icons/obj/tools.dmi'
+	icon = '../assets/icons/obj/tools.dmi'
 	icon_state = "inducer-engi"
 
 /obj/item/inducer/cyborg/examine_hints(mob/living/user)

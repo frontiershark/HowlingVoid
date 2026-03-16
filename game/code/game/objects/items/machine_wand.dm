@@ -4,11 +4,11 @@
 /obj/item/machine_remote
 	name = "machine wand"
 	desc = "A remote for controlling machines and bots around the station."
-	icon = 'icons/obj/antags/syndicate_tools.dmi'
+	icon = '../assets/icons/obj/antags/syndicate_tools.dmi'
 	icon_state = "weakpoint_locator"
 	inhand_icon_state = "weakpoint_locator"
-	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/devices_righthand.dmi'
 	w_class = WEIGHT_CLASS_NORMAL
 	///If we're unable to be used, this is how long we have left to wait.
 	COOLDOWN_DECLARE(timeout_time)
@@ -21,7 +21,7 @@
 
 /obj/item/machine_remote/Initialize(mapload)
 	. = ..()
-	bug_appearance = mutable_appearance('icons/effects/effects.dmi', "fly-surrounding", ABOVE_WINDOW_LAYER)
+	bug_appearance = mutable_appearance('../assets/icons/effects/effects.dmi', "fly-surrounding", ABOVE_WINDOW_LAYER)
 	register_context()
 
 /obj/item/machine_remote/equipped(mob/user, slot, initial)
@@ -61,7 +61,7 @@
 
 /obj/item/machine_remote/ui_interact(mob/user, datum/tgui/ui)
 	if(!COOLDOWN_FINISHED(src, timeout_time))
-		playsound(src, 'sound/machines/synth/synth_no.ogg', 30 , TRUE)
+		playsound(src, '../assets/sound/machines/synth/synth_no.ogg', 30 , TRUE)
 		say("Remote control disabled temporarily. Please try again soon.")
 		return FALSE
 	if(!controlling_machine_or_bot)
@@ -92,7 +92,7 @@
 
 /obj/item/machine_remote/ranged_interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)
 	if(!COOLDOWN_FINISHED(src, timeout_time))
-		playsound(src, 'sound/machines/synth/synth_no.ogg', 30 , TRUE)
+		playsound(src, '../assets/sound/machines/synth/synth_no.ogg', 30 , TRUE)
 		say("Remote control disabled temporarily. Please try again soon.")
 		return ITEM_INTERACT_BLOCKING
 	if(!ismachinery(interacting_with) && !isbot(interacting_with))

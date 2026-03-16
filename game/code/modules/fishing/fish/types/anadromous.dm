@@ -36,7 +36,7 @@
 	name = "pike"
 	fish_id = "pike"
 	desc = "A long-bodied predator with a snout that almost looks like a beak. Definitely not a weapon to swing around."
-	icon = 'icons/obj/aquarium/wide.dmi'
+	icon = '../assets/icons/obj/aquarium/wide.dmi'
 	icon_state = "pike"
 	inhand_icon_state = "pike"
 	base_pixel_w = -16

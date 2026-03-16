@@ -3,7 +3,7 @@
 /obj/structure/disposalpipe
 	name = "disposal pipe"
 	desc = "An underfloor disposal pipe."
-	icon = 'icons/obj/pipes_n_cables/disposal.dmi'
+	icon = '../assets/icons/obj/pipes_n_cables/disposal.dmi'
 	anchored = TRUE
 	density = FALSE
 	obj_flags = CAN_BE_HIT
@@ -138,7 +138,7 @@
 	else if(floorturf)
 		target = get_offset_target_turf(T, rand(5)-rand(5), rand(5)-rand(5))
 
-	playsound(src, 'sound/machines/hiss.ogg', 50, FALSE, FALSE)
+	playsound(src, '../assets/sound/machines/hiss.ogg', 50, FALSE, FALSE)
 	pipe_eject(H, direction, TRUE, target, eject_range)
 	H.vent_gas(T)
 	qdel(H)

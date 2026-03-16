@@ -2,11 +2,11 @@
 /obj/item/watertank
 	name = "backpack water tank"
 	desc = "A S.U.N.S.H.I.N.E. brand water tank backpack with a nozzle to water plants."
-	icon = 'icons/obj/service/hydroponics/equipment.dmi'
+	icon = '../assets/icons/obj/service/hydroponics/equipment.dmi'
 	icon_state = "waterbackpack"
 	inhand_icon_state = "waterbackpack"
-	lefthand_file = 'icons/mob/inhands/equipment/backpack_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/backpack_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/backpack_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/backpack_righthand.dmi'
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BACK
 	slowdown = 1
@@ -109,11 +109,11 @@
 /obj/item/reagent_containers/spray/mister
 	name = "water mister"
 	desc = "A mister nozzle attached to a water tank."
-	icon = 'icons/obj/service/hydroponics/equipment.dmi'
+	icon = '../assets/icons/obj/service/hydroponics/equipment.dmi'
 	icon_state = "mister"
 	inhand_icon_state = "mister"
-	lefthand_file = 'icons/mob/inhands/equipment/mister_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/mister_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/mister_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/mister_righthand.dmi'
 	w_class = WEIGHT_CLASS_BULKY
 	amount_per_transfer_from_this = 50
 	possible_transfer_amounts = list(50)
@@ -148,11 +148,11 @@
 /obj/item/reagent_containers/spray/mister/janitor
 	name = "janitor spray nozzle"
 	desc = "A janitorial spray nozzle attached to a watertank, designed to clean up large messes."
-	icon = 'icons/obj/service/hydroponics/equipment.dmi'
+	icon = '../assets/icons/obj/service/hydroponics/equipment.dmi'
 	icon_state = "misterjani"
 	inhand_icon_state = "misterjani"
-	lefthand_file = 'icons/mob/inhands/equipment/mister_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/mister_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/mister_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/mister_righthand.dmi'
 	amount_per_transfer_from_this = 5
 	possible_transfer_amounts = list(5, 10)
 	current_range = 5
@@ -167,7 +167,7 @@
 /obj/item/watertank/pepperspray
 	name = "ANTI-TIDER-2500 suppression backpack"
 	desc = "The ultimate crowd-control device; this tool allows the user to quickly and efficiently pacify groups of hostile targets."
-	icon = 'icons/obj/service/hydroponics/equipment.dmi'
+	icon = '../assets/icons/obj/service/hydroponics/equipment.dmi'
 	icon_state = "pepperbackpacksec"
 	inhand_icon_state = "pepperbackpacksec"
 	custom_price = PAYCHECK_CREW * 2
@@ -180,11 +180,11 @@
 /obj/item/reagent_containers/spray/mister/pepperspray
 	name = "security spray nozzle"
 	desc = "A pacifying spray nozzle attached to a pepperspray tank, designed to silence perps."
-	icon = 'icons/obj/service/hydroponics/equipment.dmi'
+	icon = '../assets/icons/obj/service/hydroponics/equipment.dmi'
 	icon_state = "mistersec"
 	inhand_icon_state = "mistersec"
-	lefthand_file = 'icons/mob/inhands/equipment/mister_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/mister_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/mister_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/mister_righthand.dmi'
 	amount_per_transfer_from_this = 5
 	possible_transfer_amounts = list(5, 10)
 	current_range = 6
@@ -222,11 +222,11 @@
 /obj/item/extinguisher/mini/nozzle
 	name = "extinguisher nozzle"
 	desc = "A heavy duty nozzle attached to a firefighter's backpack tank."
-	icon = 'icons/obj/service/hydroponics/equipment.dmi'
+	icon = '../assets/icons/obj/service/hydroponics/equipment.dmi'
 	icon_state = "atmos_nozzle"
 	inhand_icon_state = "nozzleatmos"
-	lefthand_file = 'icons/mob/inhands/equipment/mister_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/mister_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/mister_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/mister_righthand.dmi'
 	safety = 0
 	max_water = 200
 	power = 8
@@ -302,7 +302,7 @@
 		R.remove_all(100)
 		var/obj/effect/resin_container/resin = new (get_turf(src))
 		user.log_message("used Resin Launcher", LOG_GAME)
-		playsound(src,'sound/items/syringeproj.ogg',40,TRUE)
+		playsound(src,'../assets/sound/items/syringeproj.ogg',40,TRUE)
 		var/delay = 2
 		var/datum/move_loop/loop = GLOB.move_manager.move_towards(resin, interacting_with, delay, timeout = delay * 5, priority = MOVEMENT_ABOVE_SPACE_PRIORITY)
 		RegisterSignal(loop, COMSIG_MOVELOOP_POSTPROCESS, PROC_REF(resin_stop_check))
@@ -351,7 +351,7 @@
 /obj/effect/resin_container
 	name = "resin container"
 	desc = "A compacted ball of expansive resin, used to repair the atmosphere in a room, or seal off breaches."
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	icon_state = "frozen_smoke_capsule"
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	pass_flags = PASSTABLE
@@ -359,7 +359,7 @@
 
 /obj/effect/resin_container/proc/Smoke()
 	do_foam(4, src, loc, foam_type = /datum/effect_system/fluid_spread/foam/metal/resin)
-	playsound(src,'sound/effects/bamf.ogg',100,TRUE)
+	playsound(src,'../assets/sound/effects/bamf.ogg',100,TRUE)
 	qdel(src)
 
 // Please don't spacedrift thanks
@@ -373,11 +373,11 @@
 /obj/item/reagent_containers/chemtank
 	name = "backpack chemical injector"
 	desc = "A chemical autoinjector that can be carried on your back."
-	icon = 'icons/obj/service/hydroponics/equipment.dmi'
+	icon = '../assets/icons/obj/service/hydroponics/equipment.dmi'
 	icon_state = "waterbackpackchem"
 	inhand_icon_state = "waterbackpackchem"
-	lefthand_file = 'icons/mob/inhands/equipment/backpack_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/backpack_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/backpack_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/backpack_righthand.dmi'
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BACK
 	slowdown = 1
@@ -416,7 +416,7 @@
 	if(isinhands || !reagents.total_volume)
 		return
 
-	var/mutable_appearance/filling = mutable_appearance('icons/obj/medical/reagent_fillings.dmi', "backpackmob-10")
+	var/mutable_appearance/filling = mutable_appearance('../assets/icons/obj/medical/reagent_fillings.dmi', "backpackmob-10")
 	var/percent = round((reagents.total_volume / volume) * 100)
 	switch(percent)
 		if(0 to 15)

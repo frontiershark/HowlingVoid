@@ -1,7 +1,7 @@
 /obj/machinery/abductor/gland_dispenser
 	name = "replacement organ storage"
 	desc = "A tank filled with replacement organs."
-	icon = 'icons/obj/antags/abductor.dmi'
+	icon = '../assets/icons/obj/antags/abductor.dmi'
 	icon_state = "dispenser"
 	density = TRUE
 	var/list/gland_types

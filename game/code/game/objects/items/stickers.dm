@@ -17,7 +17,7 @@
 	name = "sticker"
 	desc = "A sticker with some strong adhesive on the back, sticks to stuff!"
 
-	icon = 'icons/obj/toys/stickers.dmi'
+	icon = '../assets/icons/obj/toys/stickers.dmi'
 
 	max_integrity = 50
 	resistance_flags = FLAMMABLE

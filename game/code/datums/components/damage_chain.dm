@@ -27,7 +27,7 @@
 /datum/component/damage_chain/Initialize(
 	atom/linked_to,
 	max_distance = 7,
-	beam_icon = 'icons/effects/beam.dmi',
+	beam_icon = '../assets/icons/effects/beam.dmi',
 	beam_state = "medbeam",
 	beam_type = /obj/effect/ebeam,
 	tick_interval = 0.3 SECONDS,

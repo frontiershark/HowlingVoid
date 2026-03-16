@@ -1,20 +1,20 @@
 /obj/item/taperecorder
 	name = "universal recorder"
 	desc = "A device that can record to cassette tapes, and play them. It automatically translates the content in playback."
-	icon = 'icons/obj/devices/voice.dmi'
+	icon = '../assets/icons/obj/devices/voice.dmi'
 	icon_state = "taperecorder_empty"
 	inhand_icon_state = "analyzer"
 	worn_icon_state = "analyzer"
-	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/tools_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/tools_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/tools_righthand.dmi'
 	w_class = WEIGHT_CLASS_SMALL
 	slot_flags = ITEM_SLOT_BELT
 	custom_materials = list(/datum/material/iron=SMALL_MATERIAL_AMOUNT * 0.6, /datum/material/glass=SMALL_MATERIAL_AMOUNT * 0.3)
 	force = 2
 	throwforce = 2
 	speech_span = SPAN_TAPE_RECORDER
-	drop_sound = 'sound/items/handling/taperecorder_drop.ogg'
-	pickup_sound = 'sound/items/handling/taperecorder_pickup.ogg'
+	drop_sound = '../assets/sound/items/handling/taperecorder_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/taperecorder_pickup.ogg'
 	var/recording = FALSE
 	var/playing = FALSE
 	var/playsleepseconds = 0
@@ -22,7 +22,7 @@
 	var/starting_tape_type = /obj/item/tape/random
 	var/canprint = TRUE
 	var/list/icons_available = list()
-	var/radial_icon_file = 'icons/hud/radial_taperecorder.dmi'
+	var/radial_icon_file = '../assets/icons/hud/radial_taperecorder.dmi'
 	///Whether we've warned during this recording session that the tape is almost up.
 	var/time_warned = FALSE
 	///Seconds under which to warn that the tape is almost up.
@@ -90,7 +90,7 @@
 			return
 		mytape = I
 		balloon_alert(user, "inserted [mytape]")
-		playsound(src, 'sound/items/taperecorder/taperecorder_close.ogg', 50, FALSE)
+		playsound(src, '../assets/sound/items/taperecorder/taperecorder_close.ogg', 50, FALSE)
 		update_appearance()
 
 
@@ -101,7 +101,7 @@
 	if(playing)
 		balloon_alert(user, "stop the tape first!")
 		return
-	playsound(src, 'sound/items/taperecorder/taperecorder_open.ogg', 50, FALSE)
+	playsound(src, '../assets/sound/items/taperecorder/taperecorder_open.ogg', 50, FALSE)
 	balloon_alert(user, "ejected [mytape]")
 	stop()
 	user.put_in_hands(mytape)
@@ -179,7 +179,7 @@
 		balloon_alert(usr, "already playing!")
 		return
 
-	playsound(src, 'sound/items/taperecorder/taperecorder_play.ogg', 50, FALSE)
+	playsound(src, '../assets/sound/items/taperecorder/taperecorder_play.ogg', 50, FALSE)
 
 	if(mytape.used_capacity < mytape.max_capacity)
 		recording = TRUE
@@ -202,7 +202,7 @@
 		stop()
 	else
 		balloon_alert(usr, "tape full!")
-		playsound(src, 'sound/items/taperecorder/taperecorder_stop.ogg', 50, FALSE)
+		playsound(src, '../assets/sound/items/taperecorder/taperecorder_stop.ogg', 50, FALSE)
 
 
 /obj/item/taperecorder/verb/stop()
@@ -214,12 +214,12 @@
 		return
 
 	if(recording)
-		playsound(src, 'sound/items/taperecorder/taperecorder_stop.ogg', 50, FALSE)
+		playsound(src, '../assets/sound/items/taperecorder/taperecorder_stop.ogg', 50, FALSE)
 		balloon_alert(usr, "stopped recording")
 		recording = FALSE
 		lose_hearing_sensitivity()
 	else if(playing)
-		playsound(src, 'sound/items/taperecorder/taperecorder_stop.ogg', 50, FALSE)
+		playsound(src, '../assets/sound/items/taperecorder/taperecorder_stop.ogg', 50, FALSE)
 		balloon_alert(usr, "stopped playing")
 		playing = FALSE
 	time_warned = FALSE
@@ -250,7 +250,7 @@
 	update_appearance()
 	update_sound()
 	balloon_alert(usr, "started playing")
-	playsound(src, 'sound/items/taperecorder/taperecorder_play.ogg', 50, FALSE)
+	playsound(src, '../assets/sound/items/taperecorder/taperecorder_play.ogg', 50, FALSE)
 	var/used = mytape.used_capacity //to stop runtimes when you eject the tape
 	var/max = mytape.max_capacity
 	for(var/i = 1, used <= max, sleep(playsleepseconds))
@@ -356,7 +356,7 @@
 	transcript_paper.update_appearance()
 
 	balloon_alert(usr, "transcript printed\n[page_count] page\s")
-	playsound(src, 'sound/items/taperecorder/taperecorder_print.ogg', 50, FALSE)
+	playsound(src, '../assets/sound/items/taperecorder/taperecorder_print.ogg', 50, FALSE)
 
 	// Can't put the entire stack into their hands if there's multple pages, but hey we can at least put one page in.
 	usr.put_in_hands(transcript_paper)
@@ -371,17 +371,17 @@
 	name = "tape"
 	desc = "A magnetic tape that can hold up to ten minutes of content on either side."
 	icon_state = "tape_white"
-	icon = 'icons/obj/devices/circuitry_n_data.dmi'
+	icon = '../assets/icons/obj/devices/circuitry_n_data.dmi'
 	inhand_icon_state = "analyzer"
-	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/tools_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/tools_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/tools_righthand.dmi'
 	w_class = WEIGHT_CLASS_TINY
 	custom_materials = list(/datum/material/iron=SMALL_MATERIAL_AMOUNT * 0.2, /datum/material/glass = SMALL_MATERIAL_AMOUNT * 0.05)
 	force = 1
 	throwforce = 0
 	obj_flags = UNIQUE_RENAME //my mixtape
-	drop_sound = 'sound/items/handling/tape_drop.ogg'
-	pickup_sound = 'sound/items/handling/tape_pickup.ogg'
+	drop_sound = '../assets/sound/items/handling/tape_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/tape_pickup.ogg'
 	///Because we can't expect God to do all the work.
 	var/initial_icon_state
 	var/max_capacity = 10 MINUTES
@@ -395,7 +395,7 @@
 	var/list/timestamp_otherside = list()
 	var/unspooled = FALSE
 	var/list/icons_available = list()
-	var/radial_icon_file = 'icons/hud/radial_tape.dmi'
+	var/radial_icon_file = '../assets/icons/hud/radial_tape.dmi'
 
 /obj/item/tape/Initialize(mapload)
 	. = ..()
@@ -437,7 +437,7 @@
 					return
 				tapeflip()
 				balloon_alert(user, "flipped tape")
-				playsound(src, 'sound/items/taperecorder/tape_flip.ogg', 70, FALSE)
+				playsound(src, '../assets/sound/items/taperecorder/tape_flip.ogg', 70, FALSE)
 			if("Unwind tape")
 				if(loc != user)
 					return

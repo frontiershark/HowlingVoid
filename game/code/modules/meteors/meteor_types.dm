@@ -3,7 +3,7 @@
 /obj/effect/meteor
 	name = "\proper the concept of meteor"
 	desc = "You should probably run instead of gawking at this."
-	icon = 'icons/obj/meteor.dmi'
+	icon = '../assets/icons/obj/meteor.dmi'
 	icon_state = "small"
 	density = TRUE
 	anchored = TRUE
@@ -16,7 +16,7 @@
 	//Should we shake people's screens on impact
 	var/heavy = FALSE
 	///Sound to play when you hit something
-	var/meteorsound = 'sound/effects/meteorimpact.ogg'
+	var/meteorsound = '../assets/sound/effects/meteorimpact.ogg'
 	///Our starting z level, prevents infinite meteors
 	var/z_original
 	///Used for determining which meteors are most interesting
@@ -190,7 +190,7 @@
 	icon_state = "dust"
 	hits = 2
 	hitpwr = EXPLODE_LIGHT
-	meteorsound = 'sound/items/dodgeball.ogg'
+	meteorsound = '../assets/sound/items/dodgeball.ogg'
 	threat = 1
 
 /obj/effect/meteor/sand/make_debris()
@@ -218,7 +218,7 @@
 	pass_flags = PASSTABLE | PASSGRILLE
 	hits = 1
 	hitpwr = EXPLODE_LIGHT
-	meteorsound = 'sound/items/weapons/gun/smg/shot.ogg'
+	meteorsound = '../assets/sound/items/weapons/gun/smg/shot.ogg'
 	meteordrop = list(/obj/item/stack/ore/glass)
 	threat = 1
 
@@ -252,7 +252,7 @@
 	icon_state = "flaming"
 	hits = 5
 	heavy = TRUE
-	meteorsound = 'sound/effects/bamf.ogg'
+	meteorsound = '../assets/sound/effects/bamf.ogg'
 	meteordrop = list(/obj/item/stack/ore/plasma)
 	threat = 20
 	signature = "thermal"
@@ -286,7 +286,7 @@
 	icon_state = "sharp"
 	hits = 9
 	heavy = TRUE
-	meteorsound = 'sound/effects/break_stone.ogg'
+	meteorsound = '../assets/sound/effects/break_stone.ogg'
 	threat = 25
 	signature = "ordnance"
 	///Number of fragmentation meteors to be spawned
@@ -316,7 +316,7 @@
 	icon_state = "carp"
 	desc = "Am I glad he's frozen in there, and that we're out here."
 	hits = 4
-	meteorsound = 'sound/mobs/humanoids/ethereal/ethereal_revive_fail.ogg'
+	meteorsound = '../assets/sound/mobs/humanoids/ethereal/ethereal_revive_fail.ogg'
 	meteordrop = list(/mob/living/basic/carp)
 	dropamt = 1
 	threat = 5
@@ -341,7 +341,7 @@
 /obj/effect/meteor/bluespace/Bump()
 	..()
 	if(prob(35))
-		do_teleport(src, get_turf(src), 6, asoundin = 'sound/effects/phasein.ogg', channel = TELEPORT_CHANNEL_BLUESPACE)
+		do_teleport(src, get_turf(src), 6, asoundin = '../assets/sound/effects/phasein.ogg', channel = TELEPORT_CHANNEL_BLUESPACE)
 
 /obj/effect/meteor/banana
 	name = "bananium meteor"
@@ -350,14 +350,14 @@
 	dropamt = 4
 	hits = 175 //Honks everything, including space tiles. Depending on the angle/how much stuff it hits, there's a fair chance that it will spare the station from the actual explosion
 	meteordrop = list(/obj/item/stack/ore/bananium)
-	meteorsound = 'sound/items/bikehorn.ogg'
+	meteorsound = '../assets/sound/items/bikehorn.ogg'
 	threat = 15
 	movement_type = PHASING
 	signature = "comedy"
 
 /obj/effect/meteor/banana/meteor_effect()
 	..()
-	playsound(src, 'sound/items/airhorn/AirHorn.ogg', 100, TRUE, -1)
+	playsound(src, '../assets/sound/items/airhorn/AirHorn.ogg', 100, TRUE, -1)
 	for(var/atom/movable/object in view(4, get_turf(src)))
 		var/turf/throwtarget = get_edge_target_turf(get_turf(src), get_dir(get_turf(src), get_step_away(object, get_turf(src))))
 		object.safe_throw_at(throwtarget, 5, 1, force = MOVE_FORCE_STRONG)
@@ -383,7 +383,7 @@
 
 /obj/effect/meteor/emp/meteor_effect()
 	..()
-	playsound(src, 'sound/items/weapons/zapbang.ogg', 100, TRUE, -1)
+	playsound(src, '../assets/sound/items/weapons/zapbang.ogg', 100, TRUE, -1)
 	empulse(src, 3, 8, emp_source = src)
 
 //Meaty Ore
@@ -393,7 +393,7 @@
 	desc = "Just... don't think too hard about where this thing came from."
 	hits = 2
 	heavy = TRUE
-	meteorsound = 'sound/effects/blob/blobattack.ogg'
+	meteorsound = '../assets/sound/effects/blob/blobattack.ogg'
 	meteordrop = list(/obj/item/food/meat/slab/human, /obj/item/food/meat/slab/human/mutant, /obj/item/organ/heart, /obj/item/organ/lungs, /obj/item/organ/tongue, /obj/item/organ/appendix/)
 	var/meteorgibs = /obj/effect/gibspawner/generic
 	threat = 2
@@ -447,7 +447,7 @@
 	hits = 30
 	hitpwr = EXPLODE_DEVASTATE
 	heavy = TRUE
-	meteorsound = 'sound/effects/bamf.ogg'
+	meteorsound = '../assets/sound/effects/bamf.ogg'
 	meteordrop = list(/obj/item/stack/ore/plasma)
 	threat = 50
 	signature = "armageddon"
@@ -469,7 +469,7 @@
 /obj/effect/meteor/pumpkin
 	name = "PUMPKING"
 	desc = "THE PUMPKING'S COMING!"
-	icon = 'icons/obj/meteor.dmi'
+	icon = '../assets/icons/obj/meteor.dmi'
 	icon_state = "spooky"
 	hits = 10
 	heavy = TRUE

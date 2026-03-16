@@ -68,7 +68,7 @@
 
 	cocoon = new cocoon_type(get_turf(owner))
 
-	playsound(cocoon, 'sound/effects/blob/blobattack.ogg', vol = 60, vary = TRUE, ignore_walls = FALSE)
+	playsound(cocoon, '../assets/sound/effects/blob/blobattack.ogg', vol = 60, vary = TRUE, ignore_walls = FALSE)
 
 	owner.forceMove(cocoon)
 
@@ -113,7 +113,7 @@
 		if (prob(100 - get_dist(cocoon, turf) * 20))
 			new /obj/effect/decal/cleanable/blood(turf)
 
-	playsound(cocoon, 'sound/effects/splat.ogg', vol = 100, vary = TRUE, ignore_walls = FALSE)
+	playsound(cocoon, '../assets/sound/effects/splat.ogg', vol = 100, vary = TRUE, ignore_walls = FALSE)
 
 	shared_unregister_cocoon()
 
@@ -155,7 +155,7 @@
 	if (!QDELETED(owner) && owner.stat != DEAD)
 		to_chat(owner, span_userdanger("Your cocoon falls apart!"))
 
-	playsound(cocoon, 'sound/effects/splat.ogg', vol = 60, vary = TRUE, ignore_walls = FALSE)
+	playsound(cocoon, '../assets/sound/effects/splat.ogg', vol = 60, vary = TRUE, ignore_walls = FALSE)
 
 	// A little less punishing since you need a do_after to set it up again after anyway, and because this can occur due to adults canceling Reproduce for meta reasons outside of their control.
 	StartCooldown(10 SECONDS)
@@ -207,7 +207,7 @@
 	return TRUE
 
 /obj/structure/blood_worm_cocoon
-	icon = 'icons/mob/nonhuman-player/blood_worm_32x32.dmi'
+	icon = '../assets/icons/mob/nonhuman-player/blood_worm_32x32.dmi'
 
 	faction = list(FACTION_BLOOD_WORM)
 

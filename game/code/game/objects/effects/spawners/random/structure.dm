@@ -217,7 +217,7 @@
 
 /obj/effect/spawner/random/structure/billboard
 	name = "billboard spawner"
-	icon = 'icons/obj/fluff/billboard.dmi'
+	icon = '../assets/icons/obj/fluff/billboard.dmi'
 	icon_state = "billboard_random"
 	loot = list(
 		/obj/structure/billboard/azik = 50,
@@ -267,7 +267,7 @@
 
 /obj/effect/spawner/random/structure/shipping_container
 	name = "random shipping container spawner"
-	icon = 'icons/obj/fluff/containers.dmi'
+	icon = '../assets/icons/obj/fluff/containers.dmi'
 	icon_state = "random_container"
 	loot = list(
 		/obj/structure/shipping_container = 3,

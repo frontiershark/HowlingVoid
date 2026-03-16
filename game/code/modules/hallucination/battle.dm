@@ -19,9 +19,9 @@
 	/// The upper end to how many shots we'll fire.
 	var/shots_to_fire_upper_range = 6
 	/// The sound effect we play when we "fire" a shot.
-	var/fire_sound = 'sound/items/weapons/gun/shotgun/shot.ogg'
+	var/fire_sound = '../assets/sound/items/weapons/gun/shotgun/shot.ogg'
 	/// The sound we make when our shot actually "hits" "someone".
-	var/hit_person_sound = 'sound/items/weapons/pierce.ogg'
+	var/hit_person_sound = '../assets/sound/items/weapons/pierce.ogg'
 	/// The sound we make when our shot misses someone and "hits" a "wall".
 	var/hit_wall_sound = SFX_RICOCHET
 	/// The number of successful hits required to "down" the "someone" we're firing at.
@@ -71,9 +71,9 @@
 /datum/hallucination/battle/gun/disabler
 	shots_to_fire_lower_range = 5
 	shots_to_fire_upper_range = 10
-	fire_sound = 'sound/items/weapons/taser2.ogg'
-	hit_person_sound = 'sound/items/weapons/tap.ogg'
-	hit_wall_sound = 'sound/items/weapons/effects/searwall.ogg'
+	fire_sound = '../assets/sound/items/weapons/taser2.ogg'
+	hit_person_sound = '../assets/sound/items/weapons/tap.ogg'
+	hit_wall_sound = '../assets/sound/items/weapons/effects/searwall.ogg'
 	number_of_hits_to_end = 3
 	chance_to_fall = 70
 
@@ -81,9 +81,9 @@
 /datum/hallucination/battle/gun/laser
 	shots_to_fire_lower_range = 5
 	shots_to_fire_upper_range = 10
-	fire_sound = 'sound/items/weapons/laser.ogg'
-	hit_person_sound = 'sound/items/weapons/sear.ogg'
-	hit_wall_sound = 'sound/items/weapons/effects/searwall.ogg'
+	fire_sound = '../assets/sound/items/weapons/laser.ogg'
+	hit_person_sound = '../assets/sound/items/weapons/sear.ogg'
+	hit_wall_sound = '../assets/sound/items/weapons/effects/searwall.ogg'
 	number_of_hits_to_end = 4
 	chance_to_fall = 70
 
@@ -97,7 +97,7 @@
 
 	var/turf/source = random_far_turf()
 
-	hallucinator.playsound_local(source, 'sound/items/weapons/egloves.ogg', 40, TRUE)
+	hallucinator.playsound_local(source, '../assets/sound/items/weapons/egloves.ogg', 40, TRUE)
 	hallucinator.playsound_local(source, SFX_BODYFALL, 25, TRUE)
 	addtimer(CALLBACK(src, PROC_REF(fake_cuff), source), 2 SECONDS)
 
@@ -106,7 +106,7 @@
 	if(QDELETED(src) || QDELETED(hallucinator) || !source)
 		return
 
-	hallucinator.playsound_local(source, 'sound/items/weapons/cablecuff.ogg', 15, TRUE)
+	hallucinator.playsound_local(source, '../assets/sound/items/weapons/cablecuff.ogg', 15, TRUE)
 	qdel(src)
 
 /// A hallucination of someone being stun batonned, and subsequently harmbatonned.
@@ -119,7 +119,7 @@
 
 	var/turf/source = random_far_turf()
 
-	hallucinator.playsound_local(source, 'sound/items/weapons/egloves.ogg', 40, TRUE)
+	hallucinator.playsound_local(source, '../assets/sound/items/weapons/egloves.ogg', 40, TRUE)
 	hallucinator.playsound_local(source, SFX_BODYFALL, 25, TRUE)
 
 	addtimer(CALLBACK(src, PROC_REF(harmbaton_loop), source, rand(5, 12)), 2 SECONDS)
@@ -147,7 +147,7 @@
 
 	var/turf/source = random_far_turf()
 
-	hallucinator.playsound_local(source, 'sound/items/weapons/saberon.ogg', 15, 1)
+	hallucinator.playsound_local(source, '../assets/sound/items/weapons/saberon.ogg', 15, 1)
 	addtimer(CALLBACK(src, PROC_REF(stab_loop), source, rand(4, 8)), CLICK_CD_MELEE)
 
 /// The main sound loop of someone being esworded.
@@ -156,10 +156,10 @@
 		return
 
 	if(stabs_remaining >= 1)
-		hallucinator.playsound_local(source, 'sound/items/weapons/blade1.ogg', 50, TRUE)
+		hallucinator.playsound_local(source, '../assets/sound/items/weapons/blade1.ogg', 50, TRUE)
 
 	else
-		hallucinator.playsound_local(source, 'sound/items/weapons/saberoff.ogg', 15, TRUE)
+		hallucinator.playsound_local(source, '../assets/sound/items/weapons/saberoff.ogg', 15, TRUE)
 		qdel(src)
 		return
 
@@ -183,7 +183,7 @@
 	if(QDELETED(src) || QDELETED(hallucinator) || !source)
 		return
 
-	hallucinator.playsound_local(source, 'sound/items/timer.ogg', 25, FALSE)
+	hallucinator.playsound_local(source, '../assets/sound/items/timer.ogg', 25, FALSE)
 	ticks_remaining--
 	if(ticks_remaining <= 0)
 		qdel(src)

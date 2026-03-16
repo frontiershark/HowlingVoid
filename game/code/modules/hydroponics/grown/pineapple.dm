@@ -9,7 +9,7 @@
 	lifespan = 40
 	endurance = 30
 	growthstages = 3
-	growing_icon = 'icons/obj/service/hydroponics/growing_fruits.dmi'
+	growing_icon = '../assets/icons/obj/service/hydroponics/growing_fruits.dmi'
 	genes = list(/datum/plant_gene/trait/repeated_harvest, /datum/plant_gene/trait/juicing)
 	mutatelist = list(/obj/item/seeds/apple)
 	reagents_add = list(/datum/reagent/consumable/nutriment/vitamin = 0.02, /datum/reagent/consumable/nutriment = 0.2, /datum/reagent/water = 0.04)
@@ -23,7 +23,7 @@
 	bite_consumption_mod = 2
 	force = 4
 	throwforce = 8
-	hitsound = 'sound/items/weapons/bladeslice.ogg'
+	hitsound = '../assets/sound/items/weapons/bladeslice.ogg'
 	attack_verb_continuous = list("stings", "pines")
 	attack_verb_simple = list("sting", "pine")
 	throw_speed = 1

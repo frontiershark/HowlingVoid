@@ -1,5 +1,5 @@
 /particles/void_wall
-	icon = 'icons/effects/particles/voidwalker.dmi'
+	icon = '../assets/icons/effects/particles/voidwalker.dmi'
 	icon_state = list("kidnap_1" = 1, "kidnap_2" = 1, "kidnap_3" = 2)
 	width = 100
 	height = 300
@@ -15,7 +15,7 @@
 	grow = 0.05
 
 /particles/void_vomit
-	icon = 'icons/effects/particles/voidwalker.dmi'
+	icon = '../assets/icons/effects/particles/voidwalker.dmi'
 	icon_state = list("void_1" = 1, "void_2" = 5)
 	width = 100
 	height = 300

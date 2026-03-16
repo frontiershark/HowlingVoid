@@ -110,7 +110,7 @@
 		return
 	if(!attached_hat)
 		return
-	var/mutable_appearance/worn_overlay = attached_hat.build_worn_icon(default_layer = ABOVE_BODY_FRONT_HEAD_LAYER - 0.1, default_icon_file = 'icons/mob/clothing/head/default.dmi')
+	var/mutable_appearance/worn_overlay = attached_hat.build_worn_icon(default_layer = ABOVE_BODY_FRONT_HEAD_LAYER - 0.1, default_icon_file = '../assets/icons/mob/clothing/head/default.dmi')
 	worn_overlay.appearance_flags |= RESET_COLOR
 	// loose hats are slightly angled
 	if(loose_hat)
@@ -127,7 +127,7 @@
 		return
 	if(!attached_hat)
 		return
-	var/mutable_appearance/worn_overlay = attached_hat.build_worn_icon(default_layer = ABOVE_BODY_FRONT_HEAD_LAYER - 0.1, default_icon_file = 'icons/mob/clothing/head/default.dmi')
+	var/mutable_appearance/worn_overlay = attached_hat.build_worn_icon(default_layer = ABOVE_BODY_FRONT_HEAD_LAYER - 0.1, default_icon_file = '../assets/icons/mob/clothing/head/default.dmi')
 	for (var/mutable_appearance/overlay in worn_overlay.overlays)
 		overlay.layer = -ABOVE_BODY_FRONT_HEAD_LAYER + 0.1
 	// loose hats are slightly angled

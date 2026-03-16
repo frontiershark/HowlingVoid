@@ -19,7 +19,7 @@
 ///dead slimes, with a var for whatever color you want.
 /obj/effect/mob_spawn/corpse/slime
 	mob_type = /mob/living/basic/slime
-	icon = 'icons/mob/simple/slimes.dmi'
+	icon = '../assets/icons/mob/simple/slimes.dmi'
 	icon_state = "grey-baby-dead" //sets the icon in the map editor
 	///the color of the slime you're spawning.
 	var/slime_species = /datum/slime_type/grey
@@ -41,14 +41,14 @@
 ///dead goliath spawner
 /obj/effect/mob_spawn/corpse/goliath
 	mob_type = /mob/living/basic/mining/goliath
-	icon = 'icons/mob/simple/lavaland/lavaland_monsters_wide.dmi'
+	icon = '../assets/icons/mob/simple/lavaland/lavaland_monsters_wide.dmi'
 	icon_state = "goliath_dead_helper"
 	pixel_x = -12
 	base_pixel_x = -12
 
 /obj/effect/mob_spawn/corpse/watcher
 	mob_type = /mob/living/basic/mining/watcher
-	icon = 'icons/mob/simple/lavaland/lavaland_monsters_wide.dmi'
+	icon = '../assets/icons/mob/simple/lavaland/lavaland_monsters_wide.dmi'
 	icon_state = "watcher_dead_helper"
 	pixel_x = -12
 	base_pixel_x = -12
@@ -56,5 +56,5 @@
 /// Dead headcrab for changeling-themed ruins
 /obj/effect/mob_spawn/corpse/headcrab
 	mob_type = /mob/living/basic/headslug/beakless
-	icon = 'icons/mob/simple/animal.dmi'
+	icon = '../assets/icons/mob/simple/animal.dmi'
 	icon_state = "headslug_dead"

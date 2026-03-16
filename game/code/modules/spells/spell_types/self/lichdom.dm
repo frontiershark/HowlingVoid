@@ -4,7 +4,7 @@
 		Binding your soul to an item will turn you into an immortal Lich. \
 		So long as the item remains intact, you will revive from death, \
 		no matter the circumstances."
-	button_icon = 'icons/mob/actions/actions_spells.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_spells.dmi'
 	button_icon_state = "skeleton"
 
 	school = SCHOOL_NECROMANCY
@@ -45,7 +45,7 @@
 		return
 
 	. = ..()
-	playsound(cast_on, 'sound/effects/pope_entry.ogg', 100)
+	playsound(cast_on, '../assets/sound/effects/pope_entry.ogg', 100)
 
 	to_chat(cast_on, span_green("You begin to focus your very being into [marked_item]..."))
 	if(!do_after(cast_on, 5 SECONDS, target = marked_item, timed_action_flags = IGNORE_HELD_ITEM))

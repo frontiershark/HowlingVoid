@@ -147,7 +147,7 @@
 
 /datum/status_effect/stacking/brimdust_coating/on_apply()
 	. = ..()
-	dust_overlay = mutable_appearance('icons/effects/weather_effects.dmi', "ash_storm")
+	dust_overlay = mutable_appearance('../assets/icons/effects/weather_effects.dmi', "ash_storm")
 	dust_overlay.alpha = stacks * BRIMDUST_ALPHA_PER_STACK
 	dust_overlay.color = COLOR_RED_LIGHT
 	dust_overlay.blend_mode = BLEND_INSET_OVERLAY
@@ -186,7 +186,7 @@
  */
 /datum/status_effect/stacking/brimdust_coating/proc/explode()
 	var/turf/origin_turf = get_turf(owner)
-	playsound(origin_turf, 'sound/effects/pop_expl.ogg', 50)
+	playsound(origin_turf, '../assets/sound/effects/pop_expl.ogg', 50)
 	new /obj/effect/temp_visual/explosion/fast(origin_turf)
 
 	var/damage_dealt = blast_damage

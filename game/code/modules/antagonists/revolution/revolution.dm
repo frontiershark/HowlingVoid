@@ -6,7 +6,7 @@
 	antag_moodlet = /datum/mood_event/revolution
 	antag_hud_name = "rev"
 	suicide_cry = "VIVA LA REVOLUTION!!"
-	stinger_sound = 'sound/music/antag/revolutionary_tide.ogg'
+	stinger_sound = '../assets/sound/music/antag/revolutionary_tide.ogg'
 	var/datum/team/revolution/rev_team
 
 	/// When this antagonist is being de-antagged, this is the source. Can be a mob (for mindshield/blunt force trauma) or a #define string.
@@ -231,7 +231,7 @@
 	// Otherwise, the R gets cut off.
 	final_icon.Scale(64, 64)
 
-	var/icon/rev_head_icon = icon('icons/mob/huds/antag_hud.dmi', "rev_head")
+	var/icon/rev_head_icon = icon('../assets/icons/mob/huds/antag_hud.dmi', "rev_head")
 	rev_head_icon.Scale(48, 48)
 	rev_head_icon.Crop(1, 1, 64, 64)
 	rev_head_icon.Shift(EAST, 10)

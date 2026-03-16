@@ -1,7 +1,7 @@
 /mob/living/basic/hivebot
 	name = "hivebot"
 	desc = "A small robot."
-	icon = 'icons/mob/simple/hivebot.dmi'
+	icon = '../assets/icons/mob/simple/hivebot.dmi'
 	icon_state = "basic"
 	icon_living = "basic"
 	icon_dead = "basic"
@@ -16,7 +16,7 @@
 
 	attack_verb_continuous = "claws"
 	attack_verb_simple = "claw"
-	attack_sound = 'sound/items/weapons/bladeslice.ogg'
+	attack_sound = '../assets/sound/items/weapons/bladeslice.ogg'
 	attack_vis_effect = ATTACK_EFFECT_CLAW
 	verb_say = "states"
 	verb_ask = "queries"

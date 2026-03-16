@@ -161,7 +161,7 @@ GLOBAL_VAR_INIT(focused_tests, focused_tests())
 
 /// Helper for screenshot tests to take an image of an atom from all directions and insert it into one icon
 /datum/unit_test/proc/get_flat_icon_for_all_directions(atom/thing, no_anim = TRUE)
-	var/icon/output = icon('icons/effects/effects.dmi', "nothing")
+	var/icon/output = icon('../assets/icons/effects/effects.dmi', "nothing")
 
 	for (var/direction in GLOB.cardinals)
 		var/icon/partial = getFlatIcon(thing, defdir = direction, no_anim = no_anim)

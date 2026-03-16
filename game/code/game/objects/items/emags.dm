@@ -44,7 +44,7 @@
 			and [emag_card.p_they()] become stuck together!"),
 		visible_message_flags = ALWAYS_SHOW_SELF_MESSAGE,
 	)
-	playsound(src, 'sound/effects/bang.ogg', 33, TRUE, SHORT_RANGE_SOUND_EXTRARANGE)
+	playsound(src, '../assets/sound/effects/bang.ogg', 33, TRUE, SHORT_RANGE_SOUND_EXTRARANGE)
 	addtimer(CALLBACK(src, PROC_REF(contemplation_period), user), 2 SECONDS, TIMER_DELETE_ME)
 	emag_card.vis_flags |= VIS_INHERIT_ID|VIS_INHERIT_PLANE
 	vis_contents += emag_card
@@ -111,15 +111,15 @@
 
 /obj/item/card/emagfake/interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)
 	if(exploding)
-		playsound(src, 'sound/items/bikehorn.ogg', 50, TRUE, frequency = 2)
+		playsound(src, '../assets/sound/items/bikehorn.ogg', 50, TRUE, frequency = 2)
 	else if(obj_flags & EMAGGED)
 		log_bomber(user, "triggered", src, "(rigged/emagged)")
 		visible_message(span_boldwarning("[src] begins to heat up!"))
-		playsound(src, 'sound/items/bikehorn.ogg', 100, TRUE, frequency = 0.25)
+		playsound(src, '../assets/sound/items/bikehorn.ogg', 100, TRUE, frequency = 0.25)
 		addtimer(CALLBACK(src, PROC_REF(blow_up)), 1 SECONDS, TIMER_DELETE_ME)
 		exploding = TRUE
 	else
-		playsound(src, 'sound/items/bikehorn.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/items/bikehorn.ogg', 50, TRUE)
 	return ITEM_INTERACT_SKIP_TO_ATTACK // So it does the attack animation.
 
 /obj/item/card/emagfake/proc/blow_up()
@@ -194,7 +194,7 @@
 
 /obj/item/card/emag/doorjack/proc/recharge(mob/user)
 	charges = min(charges+1, max_charges)
-	playsound(src,'sound/machines/beep/twobeep.ogg',10,TRUE, extrarange = SILENCED_SOUND_EXTRARANGE, falloff_distance = 0)
+	playsound(src,'../assets/sound/machines/beep/twobeep.ogg',10,TRUE, extrarange = SILENCED_SOUND_EXTRARANGE, falloff_distance = 0)
 	charge_timers.Remove(charge_timers[1])
 
 /obj/item/card/emag/doorjack/examine(mob/user)

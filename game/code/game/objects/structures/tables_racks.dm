@@ -15,7 +15,7 @@
 /obj/structure/table
 	name = "table"
 	desc = "A square piece of iron standing on four metal legs. It can not move."
-	icon = 'icons/obj/smooth_structures/table.dmi'
+	icon = '../assets/icons/obj/smooth_structures/table.dmi'
 	icon_state = "table-0"
 	base_icon_state = "table"
 	density = TRUE
@@ -53,11 +53,11 @@
 	/// Do we place people onto the table rather than slamming them?
 	var/slam_gently = FALSE
 	/// Where icon is our flipped table located in?
-	var/flipped_table_icon = 'icons/obj/flipped_tables.dmi'
+	var/flipped_table_icon = '../assets/icons/obj/flipped_tables.dmi'
 	/// What sound does the table make when unflipped?
-	var/unflip_table_sound = 'sound/items/trayhit/trayhit2.ogg'
+	var/unflip_table_sound = '../assets/sound/items/trayhit/trayhit2.ogg'
 	/// What sound does the table make when we flip the table?
-	var/flipped_table_sound = 'sound/items/trayhit/trayhit1.ogg'
+	var/flipped_table_sound = '../assets/sound/items/trayhit/trayhit1.ogg'
 
 /obj/structure/table/Initialize(mapload, obj/structure/table_frame/frame_used, obj/item/stack/stack_used)
 	. = ..()
@@ -334,7 +334,7 @@
 		return NONE
 	to_chat(user, span_notice("You start deconstructing [src]..."))
 	if(tool.use_tool(src, user, 4 SECONDS, volume=50))
-		playsound(loc, 'sound/items/deconstruct.ogg', 50, TRUE)
+		playsound(loc, '../assets/sound/items/deconstruct.ogg', 50, TRUE)
 		frame = null
 		deconstruct(TRUE)
 	return ITEM_INTERACT_SUCCESS
@@ -429,7 +429,7 @@
 	return FALSE
 
 /obj/structure/table/greyscale
-	icon = 'icons/obj/smooth_structures/table_greyscale.dmi'
+	icon = '../assets/icons/obj/smooth_structures/table_greyscale.dmi'
 	icon_state = "table_greyscale-0"
 	base_icon_state = "table_greyscale"
 	material_flags = MATERIAL_EFFECTS | MATERIAL_ADD_PREFIX | MATERIAL_COLOR | MATERIAL_AFFECT_STATISTICS
@@ -453,7 +453,7 @@
 	smoothing_flags = NONE
 	smoothing_groups = null
 	canSmoothWith = null
-	icon = 'icons/obj/smooth_structures/rollingtable.dmi'
+	icon = '../assets/icons/obj/smooth_structures/rollingtable.dmi'
 	icon_state = "rollingtable"
 	/// Lazylist of the items that we have on our surface.
 	var/list/attached_items = null
@@ -527,7 +527,7 @@
 /obj/structure/table/glass
 	name = "glass table"
 	desc = "What did I say about leaning on the glass tables? Now you need surgery."
-	icon = 'icons/obj/smooth_structures/glass_table.dmi'
+	icon = '../assets/icons/obj/smooth_structures/glass_table.dmi'
 	icon_state = "glass_table-0"
 	base_icon_state = "glass_table"
 	custom_materials = list(/datum/material/glass = SHEET_MATERIAL_AMOUNT)
@@ -602,7 +602,7 @@
 /obj/structure/table/glass/plasmaglass
 	name = "plasma glass table"
 	desc = "Someone thought this was a good idea."
-	icon = 'icons/obj/smooth_structures/plasmaglass_table.dmi'
+	icon = '../assets/icons/obj/smooth_structures/plasmaglass_table.dmi'
 	icon_state = "plasmaglass_table-0"
 	base_icon_state = "plasmaglass_table"
 	custom_materials = list(/datum/material/alloy/plasmaglass = SHEET_MATERIAL_AMOUNT)
@@ -617,7 +617,7 @@
 /obj/structure/table/wood
 	name = "wooden table"
 	desc = "Do not apply fire to this. Rumour says it burns easily."
-	icon = 'icons/obj/smooth_structures/wood_table.dmi'
+	icon = '../assets/icons/obj/smooth_structures/wood_table.dmi'
 	icon_state = "wood_table-0"
 	base_icon_state = "wood_table"
 	frame = /obj/structure/table_frame/wood
@@ -637,7 +637,7 @@
 		blind_message = span_hear("You hear the loud cracking of wood being split."),
 	)
 
-	playsound(src, 'sound/effects/wounds/crack2.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/effects/wounds/crack2.ogg', 50, TRUE)
 	smashed_onto.Knockdown(10 SECONDS)
 	smashed_onto.Paralyze(2 SECONDS)
 	smashed_onto.apply_damage(20, BRUTE)
@@ -650,7 +650,7 @@
 /obj/structure/table/wood/poker //No specialties, Just a mapping object.
 	name = "gambling table"
 	desc = "A seedy table for seedy dealings in seedy places."
-	icon = 'icons/obj/smooth_structures/poker_table.dmi'
+	icon = '../assets/icons/obj/smooth_structures/poker_table.dmi'
 	icon_state = "poker_table-0"
 	base_icon_state = "poker_table"
 	buildstack = /obj/item/stack/tile/carpet
@@ -664,7 +664,7 @@
 /obj/structure/table/wood/fancy
 	name = "fancy table"
 	desc = "A standard metal table frame covered with an amazingly fancy, patterned cloth."
-	icon = 'icons/obj/smooth_structures/fancy_table.dmi'
+	icon = '../assets/icons/obj/smooth_structures/fancy_table.dmi'
 	icon_state = "fancy_table-0"
 	base_icon_state = "fancy_table"
 	frame = /obj/structure/table_frame
@@ -687,55 +687,55 @@
 	icon_state = "fancy_table_black-0"
 	base_icon_state = "fancy_table_black"
 	buildstack = /obj/item/stack/tile/carpet/black
-	icon = 'icons/obj/smooth_structures/fancy_table_black.dmi'
+	icon = '../assets/icons/obj/smooth_structures/fancy_table_black.dmi'
 
 /obj/structure/table/wood/fancy/blue
 	icon_state = "fancy_table_blue-0"
 	base_icon_state = "fancy_table_blue"
 	buildstack = /obj/item/stack/tile/carpet/blue
-	icon = 'icons/obj/smooth_structures/fancy_table_blue.dmi'
+	icon = '../assets/icons/obj/smooth_structures/fancy_table_blue.dmi'
 
 /obj/structure/table/wood/fancy/cyan
 	icon_state = "fancy_table_cyan-0"
 	base_icon_state = "fancy_table_cyan"
 	buildstack = /obj/item/stack/tile/carpet/cyan
-	icon = 'icons/obj/smooth_structures/fancy_table_cyan.dmi'
+	icon = '../assets/icons/obj/smooth_structures/fancy_table_cyan.dmi'
 
 /obj/structure/table/wood/fancy/green
 	icon_state = "fancy_table_green-0"
 	base_icon_state = "fancy_table_green"
 	buildstack = /obj/item/stack/tile/carpet/green
-	icon = 'icons/obj/smooth_structures/fancy_table_green.dmi'
+	icon = '../assets/icons/obj/smooth_structures/fancy_table_green.dmi'
 
 /obj/structure/table/wood/fancy/orange
 	icon_state = "fancy_table_orange-0"
 	base_icon_state = "fancy_table_orange"
 	buildstack = /obj/item/stack/tile/carpet/orange
-	icon = 'icons/obj/smooth_structures/fancy_table_orange.dmi'
+	icon = '../assets/icons/obj/smooth_structures/fancy_table_orange.dmi'
 
 /obj/structure/table/wood/fancy/purple
 	icon_state = "fancy_table_purple-0"
 	base_icon_state = "fancy_table_purple"
 	buildstack = /obj/item/stack/tile/carpet/purple
-	icon = 'icons/obj/smooth_structures/fancy_table_purple.dmi'
+	icon = '../assets/icons/obj/smooth_structures/fancy_table_purple.dmi'
 
 /obj/structure/table/wood/fancy/red
 	icon_state = "fancy_table_red-0"
 	base_icon_state = "fancy_table_red"
 	buildstack = /obj/item/stack/tile/carpet/red
-	icon = 'icons/obj/smooth_structures/fancy_table_red.dmi'
+	icon = '../assets/icons/obj/smooth_structures/fancy_table_red.dmi'
 
 /obj/structure/table/wood/fancy/royalblack
 	icon_state = "fancy_table_royalblack-0"
 	base_icon_state = "fancy_table_royalblack"
 	buildstack = /obj/item/stack/tile/carpet/royalblack
-	icon = 'icons/obj/smooth_structures/fancy_table_royalblack.dmi'
+	icon = '../assets/icons/obj/smooth_structures/fancy_table_royalblack.dmi'
 
 /obj/structure/table/wood/fancy/royalblue
 	icon_state = "fancy_table_royalblue-0"
 	base_icon_state = "fancy_table_royalblue"
 	buildstack = /obj/item/stack/tile/carpet/royalblue
-	icon = 'icons/obj/smooth_structures/fancy_table_royalblue.dmi'
+	icon = '../assets/icons/obj/smooth_structures/fancy_table_royalblue.dmi'
 
 /*
  * Reinforced tables
@@ -743,7 +743,7 @@
 /obj/structure/table/reinforced
 	name = "reinforced table"
 	desc = "A reinforced version of the four legged table."
-	icon = 'icons/obj/smooth_structures/reinforced_table.dmi'
+	icon = '../assets/icons/obj/smooth_structures/reinforced_table.dmi'
 	icon_state = "reinforced_table-0"
 	base_icon_state = "reinforced_table"
 	deconstruction_ready = FALSE
@@ -839,7 +839,7 @@
 /obj/structure/table/bronze
 	name = "bronze table"
 	desc = "A solid table made out of bronze."
-	icon = 'icons/obj/smooth_structures/brass_table.dmi'
+	icon = '../assets/icons/obj/smooth_structures/brass_table.dmi'
 	icon_state = "brass_table-0"
 	base_icon_state = "brass_table"
 	resistance_flags = FIRE_PROOF | ACID_PROOF
@@ -849,12 +849,12 @@
 	can_flip = FALSE
 
 /obj/structure/table/bronze/after_smash(mob/living/smashed_onto)
-	playsound(src, 'sound/effects/magic/clockwork/fellowship_armory.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/effects/magic/clockwork/fellowship_armory.ogg', 50, TRUE)
 
 /obj/structure/table/reinforced/rglass
 	name = "reinforced glass table"
 	desc = "A reinforced version of the glass table."
-	icon = 'icons/obj/smooth_structures/rglass_table.dmi'
+	icon = '../assets/icons/obj/smooth_structures/rglass_table.dmi'
 	icon_state = "rglass_table-0"
 	base_icon_state = "rglass_table"
 	custom_materials = list(/datum/material/glass = SHEET_MATERIAL_AMOUNT, /datum/material/iron = SHEET_MATERIAL_AMOUNT)
@@ -864,7 +864,7 @@
 /obj/structure/table/reinforced/plasmarglass
 	name = "reinforced plasma glass table"
 	desc = "A reinforced version of the plasma glass table."
-	icon = 'icons/obj/smooth_structures/rplasmaglass_table.dmi'
+	icon = '../assets/icons/obj/smooth_structures/rplasmaglass_table.dmi'
 	icon_state = "rplasmaglass_table-0"
 	base_icon_state = "rplasmaglass_table"
 	custom_materials = list(/datum/material/alloy/plasmaglass = SHEET_MATERIAL_AMOUNT, /datum/material/iron = SHEET_MATERIAL_AMOUNT)
@@ -873,7 +873,7 @@
 /obj/structure/table/reinforced/titaniumglass
 	name = "titanium glass table"
 	desc = "A titanium reinforced glass table, with a fresh coat of NT white paint."
-	icon = 'icons/obj/smooth_structures/titaniumglass_table.dmi'
+	icon = '../assets/icons/obj/smooth_structures/titaniumglass_table.dmi'
 	icon_state = "titaniumglass_table-0"
 	base_icon_state = "titaniumglass_table"
 	custom_materials = list(/datum/material/alloy/titaniumglass = SHEET_MATERIAL_AMOUNT)
@@ -883,7 +883,7 @@
 /obj/structure/table/reinforced/plastitaniumglass
 	name = "plastitanium glass table"
 	desc = "A table made of titanium reinforced silica-plasma composite. About as durable as it sounds."
-	icon = 'icons/obj/smooth_structures/plastitaniumglass_table.dmi'
+	icon = '../assets/icons/obj/smooth_structures/plastitaniumglass_table.dmi'
 	icon_state = "plastitaniumglass_table-0"
 	base_icon_state = "plastitaniumglass_table"
 	custom_materials = list(/datum/material/alloy/plastitaniumglass = SHEET_MATERIAL_AMOUNT)
@@ -897,7 +897,7 @@
 /obj/structure/table/optable
 	name = "operating table"
 	desc = "Used for advanced medical procedures."
-	icon = 'icons/obj/medical/surgery_table.dmi'
+	icon = '../assets/icons/obj/medical/surgery_table.dmi'
 	icon_state = "surgery_table"
 	buildstack = /obj/item/stack/sheet/mineral/silver
 	smoothing_flags = NONE
@@ -1141,7 +1141,7 @@
 			RegisterSignal(breath_mask, COMSIG_MOVABLE_MOVED, PROC_REF(on_mask_moved))
 
 		balloon_alert(user, "mask attached")
-		playsound(src, 'sound/machines/click.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/machines/click.ogg', 50, TRUE)
 		update_appearance()
 		return ITEM_INTERACT_SUCCESS
 
@@ -1162,7 +1162,7 @@
 
 	air_tank = as_tank
 	balloon_alert(user, "tank attached")
-	playsound(src, 'sound/machines/click.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/machines/click.ogg', 50, TRUE)
 	update_appearance()
 	return ITEM_INTERACT_SUCCESS
 
@@ -1318,7 +1318,7 @@
 /obj/structure/rack
 	name = "rack"
 	desc = "Different from the Middle Ages version."
-	icon = 'icons/obj/structures.dmi'
+	icon = '../assets/icons/obj/structures.dmi'
 	icon_state = "rack"
 	layer = TABLE_LAYER
 	density = TRUE
@@ -1330,7 +1330,7 @@
 /obj/structure/rack/skeletal
 	name = "skeletal minibar"
 	desc = "Rattle me boozes!"
-	icon = 'icons/obj/fluff/general.dmi'
+	icon = '../assets/icons/obj/fluff/general.dmi'
 	icon_state = "minibar"
 	custom_materials = list(/datum/material/bone = SHEET_MATERIAL_AMOUNT)
 
@@ -1395,11 +1395,11 @@
 	switch(damage_type)
 		if(BRUTE)
 			if(damage_amount)
-				playsound(loc, 'sound/items/dodgeball.ogg', 80, TRUE)
+				playsound(loc, '../assets/sound/items/dodgeball.ogg', 80, TRUE)
 			else
-				playsound(loc, 'sound/items/weapons/tap.ogg', 50, TRUE)
+				playsound(loc, '../assets/sound/items/weapons/tap.ogg', 50, TRUE)
 		if(BURN)
-			playsound(loc, 'sound/items/tools/welder.ogg', 40, TRUE)
+			playsound(loc, '../assets/sound/items/tools/welder.ogg', 40, TRUE)
 
 /*
  * Rack destruction
@@ -1418,7 +1418,7 @@
 /obj/item/rack_parts
 	name = "rack parts"
 	desc = "Parts of a rack."
-	icon = 'icons/obj/structures.dmi'
+	icon = '../assets/icons/obj/structures.dmi'
 	icon_state = "rack_parts"
 	inhand_icon_state = "rack_parts"
 	obj_flags = CONDUCTS_ELECTRICITY

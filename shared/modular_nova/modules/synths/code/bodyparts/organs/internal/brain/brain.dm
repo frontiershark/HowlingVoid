@@ -88,8 +88,8 @@
 	icon = 'modular_nova/master_files/icons/obj/alt_silicon_brains.dmi'
 	icon_state = "circuit-occupied"
 	inhand_icon_state = "electronic"
-	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/devices_righthand.dmi'
 
 /obj/item/organ/brain/synth/circuit/hyperboard
 	name = "compact hyperboard circuit"

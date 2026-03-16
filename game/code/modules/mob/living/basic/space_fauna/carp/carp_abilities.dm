@@ -6,10 +6,10 @@
 /datum/action/cooldown/mob_cooldown/projectile_attack/magicarp_bolt
 	name = "Magicarp Blast"
 	desc = "Unleash a bolt of magical force at a target you click on."
-	button_icon = 'icons/obj/weapons/guns/projectiles.dmi'
+	button_icon = '../assets/icons/obj/weapons/guns/projectiles.dmi'
 	button_icon_state = "arcane_barrage"
 	cooldown_time = 5 SECONDS
-	projectile_sound = 'sound/items/weapons/emitter.ogg'
+	projectile_sound = '../assets/sound/items/weapons/emitter.ogg'
 	melee_cooldown_time = 0 SECONDS // Without this they become extremely hesitant to bite anyone ever
 	shared_cooldown = MOB_SHARED_COOLDOWN_2
 
@@ -39,7 +39,7 @@
  */
 /datum/action/cooldown/mob_cooldown/lesser_carp_rift
 	name = "Lesser Carp Rift"
-	button_icon = 'icons/effects/effects.dmi'
+	button_icon = '../assets/icons/effects/effects.dmi'
 	button_icon_state = "rift"
 	desc = "Open a rift through the carp stream, allowing passage to somewhere close by."
 	cooldown_time = 15 SECONDS
@@ -141,8 +141,8 @@
 
 	var/turf/destination = pick(exit_locs)
 	do_teleport(entered_atom, destination, channel = TELEPORT_CHANNEL_MAGIC)
-	playsound(src, 'sound/effects/magic/wand_teleport.ogg', 50)
-	playsound(destination, 'sound/effects/magic/wand_teleport.ogg', 50)
+	playsound(src, '../assets/sound/effects/magic/wand_teleport.ogg', 50)
+	playsound(destination, '../assets/sound/effects/magic/wand_teleport.ogg', 50)
 
 /// Doesn't actually do anything, just a visual marker
 /obj/effect/temp_visual/lesser_carp_rift/exit

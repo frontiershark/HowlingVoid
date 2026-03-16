@@ -6,7 +6,7 @@
 
 /obj/golfcart_rear
 	name = "golf cart bed"
-	icon = 'icons/obj/toys/golfcart_split.dmi'
+	icon = '../assets/icons/obj/toys/golfcart_split.dmi'
 	icon_state = "rear_hitbox"
 	density = TRUE
 	alpha = 1

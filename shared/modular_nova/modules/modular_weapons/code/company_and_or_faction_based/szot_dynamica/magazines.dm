@@ -101,7 +101,7 @@
 	if(length(stored_ammo) == max_ammo)
 		sparks_volume = 80 //full charge should be noticeable
 		balloon_alert_to_viewers("[src] crackles with energy!")
-	playsound(src, 'sound/effects/sparks/sparks2.ogg', sparks_volume, TRUE)
+	playsound(src, '../assets/sound/effects/sparks/sparks2.ogg', sparks_volume, TRUE)
 
 // Shotgun revolver's cylinder
 

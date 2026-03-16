@@ -14,7 +14,7 @@ GLOBAL_LIST_INIT(oilfry_blacklisted_items, typecacheof(list(
 /obj/machinery/deepfryer
 	name = "deep fryer"
 	desc = "Deep fried <i>everything</i>."
-	icon = 'icons/obj/machines/kitchen.dmi' //NOVA EDIT - ICON OVERRIDDEN IN AESTHETICS MODULE
+	icon = '../assets/icons/obj/machines/kitchen.dmi' //NOVA EDIT - ICON OVERRIDDEN IN AESTHETICS MODULE
 	icon_state = "fryer_off"
 	density = TRUE
 	pass_flags_self = PASSMACHINE | LETPASSTHROW
@@ -155,7 +155,7 @@ GLOBAL_LIST_INIT(oilfry_blacklisted_items, typecacheof(list(
 	cook_time += fry_speed * seconds_per_tick SECONDS
 	if(cook_time >= FRYING_TIME_PERFECT && !frying_fried)
 		frying_fried = TRUE //frying... frying... fried
-		playsound(src.loc, 'sound/machines/ding.ogg', 50, TRUE)
+		playsound(src.loc, '../assets/sound/machines/ding.ogg', 50, TRUE)
 		audible_message(span_notice("[src] dings!"))
 	else if (cook_time >= FRYING_TIME_WARNING && !frying_burnt)
 		frying_burnt = TRUE
@@ -190,7 +190,7 @@ GLOBAL_LIST_INIT(oilfry_blacklisted_items, typecacheof(list(
 	if(istype(frying_item, /obj/item/freeze_cube))
 		log_bomber(user, "put a freeze cube in a", src)
 		visible_message(span_userdanger("[src] starts glowing... Oh no..."))
-		playsound(src, 'sound/effects/pray_chaplain.ogg', 100)
+		playsound(src, '../assets/sound/effects/pray_chaplain.ogg', 100)
 		add_filter("entropic_ray", 10, list("type" = "rays", "size" = 35, "color" = COLOR_VIVID_YELLOW))
 		addtimer(CALLBACK(src, PROC_REF(blow_up)), 5 SECONDS)
 

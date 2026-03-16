@@ -21,7 +21,7 @@
 /// Returns the appearance of the order that appears when hovering over the mob with the cursor
 /datum/custom_order/proc/get_order_appearance()
 	stack_trace("[type]/get_order_appearance() not set")
-	return image(icon = 'icons/effects/effects.dmi' , icon_state = "thought_bubble") // empty thought bubble
+	return image(icon = '../assets/icons/effects/effects.dmi' , icon_state = "thought_bubble") // empty thought bubble
 
 /// Returns the order line shout by the mob and also shown to the player when examining it.
 /datum/custom_order/proc/get_order_line()
@@ -116,12 +116,12 @@
 	return "I'll take \a [icecream_name]"
 
 /datum/custom_order/icecream/get_order_appearance(datum/venue/our_venue)
-	var/image/food_image = image(icon = 'icons/effects/effects.dmi' , icon_state = "thought_bubble")
-	var/image/i_scream = image('icons/obj/service/kitchen.dmi', initial(cone_type.icon_state))
+	var/image/food_image = image(icon = '../assets/icons/effects/effects.dmi' , icon_state = "thought_bubble")
+	var/image/i_scream = image('../assets/icons/obj/service/kitchen.dmi', initial(cone_type.icon_state))
 
 	var/added_offset = 0
 	for(var/flavor in wanted_flavors)
-		var/image/scoop = image('icons/obj/service/kitchen.dmi', "icecream_custom")
+		var/image/scoop = image('../assets/icons/obj/service/kitchen.dmi', "icecream_custom")
 		scoop.color = GLOB.ice_cream_flavours[flavor].color
 		scoop.pixel_z = added_offset
 		i_scream.overlays += scoop
@@ -146,7 +146,7 @@
 	return "I'll take [reagents_needed]u of [initial(reagent_type.name)]"
 
 /datum/custom_order/reagent/get_order_appearance(datum/venue/our_venue)
-	var/image/food_image = image(icon = 'icons/effects/effects.dmi' , icon_state = "thought_bubble")
+	var/image/food_image = image(icon = '../assets/icons/effects/effects.dmi' , icon_state = "thought_bubble")
 	var/datum/glass_style/draw_as = GLOB.glass_style_singletons[container_needed][reagent_type]
 	var/image/drink_image = image(
 		icon = draw_as?.icon || initial(reagent_type.fallback_icon) || initial(container_needed.icon),
@@ -162,7 +162,7 @@
 		if(reagent.type == reagent_type)
 			. |= SEND_SIGNAL(reagent, COMSIG_REAGENT_SOLD_TO_CUSTOMER, customer_pawn, order_item)
 
-	playsound(customer_pawn, 'sound/items/drink.ogg', rand(10, 50), TRUE)
+	playsound(customer_pawn, '../assets/sound/items/drink.ogg', rand(10, 50), TRUE)
 	order_item.reagents.clear_reagents()
 
 /datum/custom_order/reagent/is_correct_order(obj/item/object_used)

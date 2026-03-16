@@ -18,7 +18,7 @@
 	/// The extra range that this turret gives regarding viewrange.
 	var/view_range = 2.5
 	/// Sound to play when overheated
-	var/overheatsound = 'sound/effects/wounds/sizzle2.ogg'
+	var/overheatsound = '../assets/sound/effects/wounds/sizzle2.ogg'
 	/// Sound to play when firing
 	var/firesound = 'modular_nova/modules/mounted_machine_gun/sound/50cal_box_01.ogg'
 	/// How long it takes for a wrench user to undeploy the object
@@ -135,7 +135,7 @@
 
 //BUCKLE HOOKS
 /obj/machinery/mounted_machine_gun/unbuckle_mob(mob/living/buckled_mob, force = FALSE, can_fall = TRUE)
-	playsound(src,'sound/vehicles/mecha/mechmove01.ogg', 50, TRUE)
+	playsound(src,'../assets/sound/vehicles/mecha/mechmove01.ogg', 50, TRUE)
 	for(var/obj/item/iterating_item in buckled_mob.held_items)
 		if(istype(iterating_item, /obj/item/gun_control))
 			qdel(iterating_item)
@@ -160,7 +160,7 @@
 
 	layer = ABOVE_MOB_LAYER
 	setDir(SOUTH)
-	playsound(src,'sound/vehicles/mecha/mechmove01.ogg', 50, TRUE)
+	playsound(src,'../assets/sound/vehicles/mecha/mechmove01.ogg', 50, TRUE)
 	set_anchored(TRUE)
 
 	update_positioning()
@@ -266,7 +266,7 @@
 	if(current_user != shooting_client.mob)
 		return
 
-	shooting_client.mouse_override_icon = 'icons/effects/mouse_pointers/weapon_pointer.dmi'
+	shooting_client.mouse_override_icon = '../assets/icons/effects/mouse_pointers/weapon_pointer.dmi'
 	shooting_client.mouse_pointer_icon = shooting_client.mouse_override_icon
 
 	last_target_atom = WEAKREF(_target)
@@ -346,7 +346,7 @@
 	if(isnull(ammo_box))
 		drop_bolt()
 		fire_result = FALSE
-		playsound(src, 'sound/items/weapons/gun/general/dry_fire.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/items/weapons/gun/general/dry_fire.ogg', 50, TRUE)
 		return fire_result
 	if(!ammo_box.ammo_count())
 		drop_bolt()
@@ -358,7 +358,7 @@
 		balloon_alert_to_viewers("barrel heatlocked!")
 		fire_result = FALSE
 	if(!fire_result)
-		playsound(src, 'sound/items/weapons/gun/general/dry_fire.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/items/weapons/gun/general/dry_fire.ogg', 50, TRUE)
 	if(!bolt && fire_result)
 		cock_bolt()
 	return fire_result
@@ -467,5 +467,5 @@
 	if(istype(browning) && browning.barrel_heat)
 		browning.reset_overheat()
 		browning.barrel_heat -= clamp(browning.barrel_heat, 0, browning.barrel_heat_per_shot * 7)
-		playsound(browning, 'sound/effects/wounds/sizzle2.ogg', 100)
+		playsound(browning, '../assets/sound/effects/wounds/sizzle2.ogg', 100)
 		browning.balloon_alert_to_viewers("water cooled!")

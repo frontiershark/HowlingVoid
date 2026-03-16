@@ -111,8 +111,8 @@
 		alt_type = MSG_AUDIBLE
 	)
 
-	playsound(target, 'sound/items/weapons/bite.ogg', vol = 80, vary = TRUE, ignore_walls = FALSE)
-	playsound(target, 'sound/effects/wounds/pierce3.ogg', vol = 100, vary = TRUE, ignore_walls = FALSE)
+	playsound(target, '../assets/sound/items/weapons/bite.ogg', vol = 80, vary = TRUE, ignore_walls = FALSE)
+	playsound(target, '../assets/sound/effects/wounds/pierce3.ogg', vol = 100, vary = TRUE, ignore_walls = FALSE)
 
 	var/synth_content = target.get_blood_synth_content()
 	if (synth_content >= 1)
@@ -129,7 +129,7 @@
 		if (target.stat != DEAD)
 			target.adjust_oxy_loss(oxyloss_rate) // It's really weird if they just stand there until they literally drop dead from going below BLOOD_VOLUME_SURVIVE.
 
-		playsound(target, 'sound/effects/wounds/splatter.ogg', vol = 80, vary = TRUE, ignore_walls = FALSE)
+		playsound(target, '../assets/sound/effects/wounds/splatter.ogg', vol = 80, vary = TRUE, ignore_walls = FALSE)
 
 	if (leech.pulling == target && leech.grab_state >= GRAB_AGGRESSIVE)
 		leech.setGrabState(GRAB_PASSIVE)
@@ -190,7 +190,7 @@
 		ignored_mobs = list(target)
 	)
 
-	playsound(target, 'sound/items/weapons/bite.ogg', vol = 80, vary = TRUE, ignore_walls = FALSE)
+	playsound(target, '../assets/sound/items/weapons/bite.ogg', vol = 80, vary = TRUE, ignore_walls = FALSE)
 
 	leech_container_alert_synth_info(leech, target)
 
@@ -210,7 +210,7 @@
 
 			leech.consume_blood(amount_consumed, synth_content)
 
-		playsound(target, 'sound/effects/wounds/splatter.ogg', vol = 80, vary = TRUE, ignore_walls = FALSE)
+		playsound(target, '../assets/sound/effects/wounds/splatter.ogg', vol = 80, vary = TRUE, ignore_walls = FALSE)
 
 	StartCooldown()
 

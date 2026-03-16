@@ -339,7 +339,7 @@
 		loaded_magazine.update_appearance()
 		flick("ammobench_process", src)
 		use_energy(active_power_usage)
-		playsound(loc, 'sound/machines/piston/piston_raise.ogg', 60, 1)
+		playsound(loc, '../assets/sound/machines/piston/piston_raise.ogg', 60, 1)
 	else
 		qdel(new_casing)
 		ammo_fill_finish(FALSE)
@@ -358,9 +358,9 @@
 /obj/machinery/ammo_workbench/proc/ammo_fill_finish(successfully = TRUE)
 	SStgui.update_uis(src)
 	if(successfully)
-		playsound(loc, 'sound/machines/ping.ogg', 40, TRUE)
+		playsound(loc, '../assets/sound/machines/ping.ogg', 40, TRUE)
 	else
-		playsound(loc, 'sound/machines/buzz/buzz-sigh.ogg', 40, TRUE)
+		playsound(loc, '../assets/sound/machines/buzz/buzz-sigh.ogg', 40, TRUE)
 	update_appearance()
 	busy = FALSE
 	if(timer_id)
@@ -490,7 +490,7 @@
 		flick("h_lathe_load", src)
 		update_appearance()
 		update_ammotypes()
-		playsound(loc, 'sound/items/weapons/autoguninsert.ogg', 35, 1)
+		playsound(loc, '../assets/sound/items/weapons/autoguninsert.ogg', 35, 1)
 		return TRUE
 	if(istype(inserted, /obj/item/ammo_workbench_module))
 		if(!user.transferItemToLoc(inserted, src))
@@ -511,7 +511,7 @@
 		flick("h_lathe_load", src)
 		update_appearance()
 		update_ammotypes()
-		playsound(loc, 'sound/machines/terminal/terminal_insert_disc.ogg', 35, 1)
+		playsound(loc, '../assets/sound/machines/terminal/terminal_insert_disc.ogg', 35, 1)
 		return TRUE
 	return FALSE
 

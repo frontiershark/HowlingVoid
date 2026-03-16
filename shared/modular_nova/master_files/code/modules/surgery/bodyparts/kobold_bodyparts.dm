@@ -1,7 +1,7 @@
 /obj/item/bodypart/head/kobold
 	icon = 'modular_nova/master_files/icons/mob/species/kobold_bodyparts.dmi'
 	icon_greyscale = 'modular_nova/master_files/icons/mob/species/kobold_bodyparts.dmi'
-	icon_husk = 'icons/mob/human/species/monkey/bodyparts.dmi'
+	icon_husk = '../assets/icons/mob/human/species/monkey/bodyparts.dmi'
 	husk_type = "monkey"
 	icon_state = "kobold_head"
 	limb_id = SPECIES_KOBOLD
@@ -15,7 +15,7 @@
 /obj/item/bodypart/chest/kobold
 	icon = 'modular_nova/master_files/icons/mob/species/kobold_bodyparts.dmi'
 	icon_greyscale = 'modular_nova/master_files/icons/mob/species/kobold_bodyparts.dmi'
-	icon_husk = 'icons/mob/human/species/monkey/bodyparts.dmi'
+	icon_husk = '../assets/icons/mob/human/species/monkey/bodyparts.dmi'
 	husk_type = "monkey"
 	icon_state = "kobold_chest"
 	limb_id = SPECIES_KOBOLD
@@ -28,12 +28,12 @@
 	wing_types = list(/obj/item/organ/wings/functional/dragon)
 
 /obj/item/bodypart/chest/kobold/get_butt_sprite()
-	return icon('icons/mob/butts.dmi', BUTT_SPRITE_LIZARD)
+	return icon('../assets/icons/mob/butts.dmi', BUTT_SPRITE_LIZARD)
 
 /obj/item/bodypart/arm/left/kobold
 	icon = 'modular_nova/master_files/icons/mob/species/kobold_bodyparts.dmi'
 	icon_greyscale = 'modular_nova/master_files/icons/mob/species/kobold_bodyparts.dmi'
-	icon_husk = 'icons/mob/human/species/monkey/bodyparts.dmi'
+	icon_husk = '../assets/icons/mob/human/species/monkey/bodyparts.dmi'
 	husk_type = "monkey"
 	icon_state = "kobold_l_arm"
 	limb_id = SPECIES_KOBOLD
@@ -51,7 +51,7 @@
 /obj/item/bodypart/arm/right/kobold
 	icon = 'modular_nova/master_files/icons/mob/species/kobold_bodyparts.dmi'
 	icon_greyscale = 'modular_nova/master_files/icons/mob/species/kobold_bodyparts.dmi'
-	icon_husk = 'icons/mob/human/species/monkey/bodyparts.dmi'
+	icon_husk = '../assets/icons/mob/human/species/monkey/bodyparts.dmi'
 	husk_type = "monkey"
 	icon_state = "kobold_r_arm"
 	limb_id = SPECIES_KOBOLD
@@ -69,7 +69,7 @@
 /obj/item/bodypart/leg/left/kobold
 	icon = 'modular_nova/master_files/icons/mob/species/kobold_bodyparts.dmi'
 	icon_greyscale = 'modular_nova/master_files/icons/mob/species/kobold_bodyparts.dmi'
-	icon_husk = 'icons/mob/human/species/monkey/bodyparts.dmi'
+	icon_husk = '../assets/icons/mob/human/species/monkey/bodyparts.dmi'
 	husk_type = "monkey"
 	icon_state = "kobold_l_leg"
 	limb_id = SPECIES_KOBOLD
@@ -86,7 +86,7 @@
 /obj/item/bodypart/leg/right/kobold
 	icon = 'modular_nova/master_files/icons/mob/species/kobold_bodyparts.dmi'
 	icon_greyscale = 'modular_nova/master_files/icons/mob/species/kobold_bodyparts.dmi'
-	icon_husk = 'icons/mob/human/species/monkey/bodyparts.dmi'
+	icon_husk = '../assets/icons/mob/human/species/monkey/bodyparts.dmi'
 	husk_type = "monkey"
 	icon_state = "kobold_r_leg"
 	limb_id = SPECIES_KOBOLD

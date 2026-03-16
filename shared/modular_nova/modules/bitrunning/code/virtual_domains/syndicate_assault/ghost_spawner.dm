@@ -1,7 +1,7 @@
 /obj/effect/mob_spawn/ghost_role/human/virtual_domain/syndie
 	name = "delayed secure connection"
 	desc = "Constant 'handshake no response' errors are flickering across the static-covered figure."
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	icon_state = "static"
 	prompt_name = "a cybersun counter-bitrunner avatar"
 	you_are_text = "You are a virtual avatar of a Cybersun-aligned counter-bitrunner, or an aligned SNPC."
@@ -32,9 +32,9 @@
 	name = "Home Network"
 	desc = "Makes the caster immune to many forms of practical hacks, backing themselves to the home network."
 
-	button_icon = 'icons/mob/actions/actions_items.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_items.dmi'
 	button_icon_state = "bci_shield"
-	sound = 'sound/effects/magic/staff_animation.ogg'
+	sound = '../assets/sound/effects/magic/staff_animation.ogg'
 	cooldown_time = 10 SECONDS
 	spell_requirements = SPELL_REQUIRES_HUMAN
 

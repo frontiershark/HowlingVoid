@@ -74,11 +74,11 @@
 
 // Remove the override for these subtypes
 /obj/item/clothing/gloves/combat/floortile
-	icon = 'icons/obj/clothing/gloves.dmi'
+	icon = '../assets/icons/obj/clothing/gloves.dmi'
 	worn_icon = null
 
 /obj/item/clothing/gloves/combat/wizard
-	icon = 'icons/obj/clothing/gloves.dmi'
+	icon = '../assets/icons/obj/clothing/gloves.dmi'
 	worn_icon = null
 
 /obj/item/clothing/gloves/tackler/combat/insulated
@@ -108,8 +108,8 @@
 
 /obj/item/clothing/suit/armor/bulletproof/old
 	desc = "A Type III heavy bulletproof vest that excels in protecting the wearer against traditional projectile weaponry and explosives to a minor extent."
-	icon = 'icons/obj/clothing/suits/armor.dmi'
-	worn_icon = 'icons/mob/clothing/suits/armor.dmi'
+	icon = '../assets/icons/obj/clothing/suits/armor.dmi'
+	worn_icon = '../assets/icons/mob/clothing/suits/armor.dmi'
 	icon_state = "bulletproof"
 	body_parts_covered = CHEST //TG's version has no groin/arm padding
 

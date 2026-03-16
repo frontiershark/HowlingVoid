@@ -13,8 +13,8 @@
 	operation_flags = OPERATION_SELF_OPERABLE | OPERATION_MECHANIC | OPERATION_NO_PATIENT_REQUIRED
 	required_bodytype = BODYTYPE_ROBOTIC
 	time = 2.4 SECONDS
-	preop_sound = 'sound/items/tools/screwdriver.ogg'
-	success_sound = 'sound/items/tools/screwdriver2.ogg'
+	preop_sound = '../assets/sound/items/tools/screwdriver.ogg'
+	success_sound = '../assets/sound/items/tools/screwdriver2.ogg'
 	any_surgery_states_blocked = ALL_SURGERY_SKIN_STATES
 
 /datum/surgery_operation/limb/mechanical_incision/get_any_tool()
@@ -53,12 +53,12 @@
 	)
 	operation_flags = OPERATION_SELF_OPERABLE | OPERATION_MECHANIC | OPERATION_NO_PATIENT_REQUIRED
 	time = 1 SECONDS
-	preop_sound = 'sound/items/tools/ratchet.ogg'
-	success_sound = 'sound/machines/airlock/doorclick.ogg'
+	preop_sound = '../assets/sound/items/tools/ratchet.ogg'
+	success_sound = '../assets/sound/machines/airlock/doorclick.ogg'
 	all_surgery_states_required = SURGERY_SKIN_CUT
 
 /datum/surgery_operation/limb/mechanical_open/get_default_radial_image()
-	return image('icons/hud/screen_gen.dmi', "arrow_large_still")
+	return image('../assets/icons/hud/screen_gen.dmi', "arrow_large_still")
 
 /datum/surgery_operation/limb/mechanical_open/on_preop(obj/item/bodypart/limb, mob/living/surgeon, obj/item/tool, list/operation_args)
 	display_results(
@@ -90,8 +90,8 @@
 	)
 	operation_flags = OPERATION_SELF_OPERABLE | OPERATION_MECHANIC | OPERATION_NO_PATIENT_REQUIRED
 	time = 2.4 SECONDS
-	preop_sound = 'sound/items/tools/screwdriver.ogg'
-	success_sound = 'sound/items/tools/screwdriver2.ogg'
+	preop_sound = '../assets/sound/items/tools/screwdriver.ogg'
+	success_sound = '../assets/sound/items/tools/screwdriver2.ogg'
 	any_surgery_states_required = ALL_SURGERY_SKIN_STATES
 
 /datum/surgery_operation/limb/mechanical_close/get_any_tool()
@@ -133,8 +133,8 @@
 	)
 	operation_flags = OPERATION_SELF_OPERABLE | OPERATION_MECHANIC | OPERATION_NO_PATIENT_REQUIRED
 	time = 2.4 SECONDS
-	preop_sound = 'sound/items/taperecorder/tape_flip.ogg'
-	success_sound = 'sound/items/taperecorder/taperecorder_close.ogg'
+	preop_sound = '../assets/sound/items/taperecorder/tape_flip.ogg'
+	success_sound = '../assets/sound/items/taperecorder/taperecorder_close.ogg'
 	all_surgery_states_required = SURGERY_SKIN_OPEN
 	any_surgery_states_blocked = SURGERY_ORGANS_CUT
 
@@ -167,7 +167,7 @@
 	)
 	operation_flags = OPERATION_SELF_OPERABLE | OPERATION_MECHANIC | OPERATION_NO_PATIENT_REQUIRED
 	time = 2.4 SECONDS
-	preop_sound = 'sound/items/tools/ratchet.ogg'
+	preop_sound = '../assets/sound/items/tools/ratchet.ogg'
 	all_surgery_states_required = SURGERY_SKIN_OPEN
 	any_surgery_states_blocked = SURGERY_BONE_SAWED|SURGERY_BONE_DRILLED
 
@@ -200,7 +200,7 @@
 	)
 	operation_flags = OPERATION_SELF_OPERABLE | OPERATION_MECHANIC
 	time = 2.4 SECONDS
-	preop_sound = 'sound/items/tools/ratchet.ogg'
+	preop_sound = '../assets/sound/items/tools/ratchet.ogg'
 	all_surgery_states_required = SURGERY_SKIN_OPEN|SURGERY_BONE_SAWED | OPERATION_NO_PATIENT_REQUIRED
 
 /datum/surgery_operation/limb/mechanic_wrench/state_check(obj/item/bodypart/limb)

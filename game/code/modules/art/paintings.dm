@@ -14,7 +14,7 @@ GLOBAL_LIST_INIT(canvas_dimensions, init_canvas_dimensions())
 /obj/structure/easel
 	name = "easel"
 	desc = "Only for the finest of art!"
-	icon = 'icons/obj/art/artstuff.dmi'
+	icon = '../assets/icons/obj/art/artstuff.dmi'
 	icon_state = "easel"
 	density = TRUE
 	resistance_flags = FLAMMABLE
@@ -45,7 +45,7 @@ GLOBAL_LIST_INIT(canvas_dimensions, init_canvas_dimensions())
 /obj/item/canvas
 	name = "canvas"
 	desc = "Draw out your soul on this canvas!"
-	icon = 'icons/obj/art/artstuff.dmi'
+	icon = '../assets/icons/obj/art/artstuff.dmi'
 	icon_state = "11x11"
 	flags_1 = UNPAINTABLE_1
 	resistance_flags = FLAMMABLE
@@ -518,7 +518,7 @@ GLOBAL_LIST_INIT(canvas_dimensions, init_canvas_dimensions())
 /obj/item/canvas/thirtysix_twentyfour/Initialize(mapload)
 	. = ..()
 	AddElement(/datum/element/item_scaling, 1, 0.8)
-	icon = 'icons/obj/art/artstuff_64x64.dmi'
+	icon = '../assets/icons/obj/art/artstuff_64x64.dmi'
 	icon_state = "36x24"
 
 /obj/item/canvas/fortyfive_twentyseven
@@ -538,13 +538,13 @@ GLOBAL_LIST_INIT(canvas_dimensions, init_canvas_dimensions())
 /obj/item/canvas/fortyfive_twentyseven/Initialize(mapload)
 	. = ..()
 	AddElement(/datum/element/item_scaling, 1, 0.7)
-	icon = 'icons/obj/art/artstuff_64x64.dmi'
+	icon = '../assets/icons/obj/art/artstuff_64x64.dmi'
 	icon_state = "45x27"
 
 /obj/item/wallframe/painting
 	name = "painting frame"
 	desc = "The perfect showcase for your favorite deathtrap memories."
-	icon = 'icons/obj/signs.dmi'
+	icon = '../assets/icons/obj/signs.dmi'
 	custom_materials = list(/datum/material/wood =SHEET_MATERIAL_AMOUNT)
 	resistance_flags = FLAMMABLE
 	flags_1 = NONE
@@ -555,7 +555,7 @@ GLOBAL_LIST_INIT(canvas_dimensions, init_canvas_dimensions())
 /obj/structure/sign/painting
 	name = "Painting"
 	desc = "Art or \"Art\"? You decide."
-	icon = 'icons/obj/signs.dmi'
+	icon = '../assets/icons/obj/signs.dmi'
 	icon_state = "frame-empty"
 	base_icon_state = "frame"
 	custom_materials = list(/datum/material/wood =SHEET_MATERIAL_AMOUNT)
@@ -805,7 +805,7 @@ GLOBAL_LIST_INIT(canvas_dimensions, init_canvas_dimensions())
 	our_frame.finalize_size()
 
 /obj/structure/sign/painting/large
-	icon = 'icons/obj/art/artstuff_64x64.dmi'
+	icon = '../assets/icons/obj/art/artstuff_64x64.dmi'
 	custom_materials = list(/datum/material/wood = SHEET_MATERIAL_AMOUNT*2)
 	accepted_canvas_types = list(
 		/obj/item/canvas/thirtysix_twentyfour,
@@ -916,10 +916,10 @@ GLOBAL_LIST_INIT(canvas_dimensions, init_canvas_dimensions())
 /obj/item/paint_palette
 	name = "paint palette"
 	desc = "paintbrush included"
-	icon = 'icons/obj/art/artstuff.dmi'
+	icon = '../assets/icons/obj/art/artstuff.dmi'
 	icon_state = "palette"
-	lefthand_file = 'icons/mob/inhands/equipment/palette_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/palette_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/palette_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/palette_righthand.dmi'
 	w_class = WEIGHT_CLASS_TINY
 	///Chosen paint color
 	var/current_color = COLOR_BLACK

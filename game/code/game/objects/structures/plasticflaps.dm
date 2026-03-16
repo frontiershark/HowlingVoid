@@ -2,7 +2,7 @@
 	name = "airtight plastic flaps"
 	desc = "Heavy duty, airtight, plastic flaps. Definitely can't get past those. No way."
 	gender = PLURAL
-	icon = 'icons/obj/structures.dmi' //NOVA EDIT - ICON OVERRIDDEN IN AESTHETICS MODULE
+	icon = '../assets/icons/obj/structures.dmi' //NOVA EDIT - ICON OVERRIDDEN IN AESTHETICS MODULE
 	icon_state = "plasticflaps"
 	armor_type = /datum/armor/structure_plasticflaps
 	density = FALSE
@@ -81,7 +81,7 @@
 		return
 	if(locate(/obj/structure/plasticflaps) in exiting.loc)
 		return
-	playsound(src, 'sound/effects/plasticflaps.ogg', 50, TRUE, ignore_walls = FALSE, falloff_exponent = 8, extrarange = SHORT_RANGE_SOUND_EXTRARANGE)
+	playsound(src, '../assets/sound/effects/plasticflaps.ogg', 50, TRUE, ignore_walls = FALSE, falloff_exponent = 8, extrarange = SHORT_RANGE_SOUND_EXTRARANGE)
 
 /obj/structure/plasticflaps/proc/check_melt(turf/source, datum/gas_mixture/air, temperature)
 	SIGNAL_HANDLER

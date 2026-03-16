@@ -12,7 +12,7 @@
 
 /// This is a visual helper that shows the occupant inside the cryo cell.
 /atom/movable/visual/cryo_occupant
-	icon = 'icons/obj/medical/cryogenics.dmi'
+	icon = '../assets/icons/obj/medical/cryogenics.dmi'
 	// Must be tall, otherwise the filter will consider this as a 32x32 tile
 	// and will crop the head off.
 	icon_state = "mask_bg"
@@ -29,7 +29,7 @@
 	// Alpha masking
 	// It will follow this as the animation goes, but that's no problem as the "mask" icon state
 	// already accounts for this.
-	add_filter("alpha_mask", 1, list("type" = "alpha", "icon" = icon('icons/obj/medical/cryogenics.dmi', "mask"), "y" = -22))
+	add_filter("alpha_mask", 1, list("type" = "alpha", "icon" = icon('../assets/icons/obj/medical/cryogenics.dmi', "mask"), "y" = -22))
 	RegisterSignal(parent, COMSIG_MACHINERY_SET_OCCUPANT, PROC_REF(on_set_occupant))
 	RegisterSignal(parent, COMSIG_CRYO_SET_ON, PROC_REF(on_set_on))
 
@@ -67,7 +67,7 @@
 /// Cryo cell
 /obj/machinery/cryo_cell
 	name = "cryo cell"
-	icon = 'icons/obj/medical/cryogenics.dmi'
+	icon = '../assets/icons/obj/medical/cryogenics.dmi'
 	icon_state = "pod-off"
 	density = TRUE
 	max_integrity = 350
@@ -225,7 +225,7 @@
 		. += "pod-panel"
 	if(state_open)
 		return
-	. += mutable_appearance('icons/obj/medical/cryogenics.dmi', "cover-[on && is_operational ? "on" : "off"]", ABOVE_ALL_MOB_LAYER, src, plane = ABOVE_GAME_PLANE)
+	. += mutable_appearance('../assets/icons/obj/medical/cryogenics.dmi', "cover-[on && is_operational ? "on" : "off"]", ABOVE_ALL_MOB_LAYER, src, plane = ABOVE_GAME_PLANE)
 
 /obj/machinery/cryo_cell/item_interaction(mob/living/user, obj/item/tool, list/modifiers)
 	. = NONE
@@ -412,7 +412,7 @@
 		aas_config_announce(/datum/aas_config_entry/medical_cryo_announcements, list("EJECTING" = autoeject), src, list(broadcast_channel), "Deceased")
 		if(autoeject) // Eject if configured.
 			open_machine()
-		playsound(src, 'sound/machines/cryo_warning.ogg', 100)
+		playsound(src, '../assets/sound/machines/cryo_warning.ogg', 100)
 		return PROCESS_KILL
 
 	// Don't bother with fully healed people.
@@ -422,14 +422,14 @@
 			if(C.all_wounds)
 				if(!treating_wounds) // if we have wounds and haven't already alerted the doctors we're only dealing with the wounds, let them know
 					treating_wounds = TRUE
-					playsound(src, 'sound/machines/cryo_warning.ogg', 100) // Bug the doctors.
+					playsound(src, '../assets/sound/machines/cryo_warning.ogg', 100) // Bug the doctors.
 					aas_config_announce(/datum/aas_config_entry/medical_cryo_announcements, list(), src, list(broadcast_channel), "Wound Treatment")
 			else // otherwise if we were only treating wounds and now we don't have any, turn off treating_wounds so we can boot 'em out
 				treating_wounds = FALSE
 
 		if(!treating_wounds)
 			set_on(FALSE)
-			playsound(src, 'sound/machines/cryo_warning.ogg', 100) // Bug the doctors.
+			playsound(src, '../assets/sound/machines/cryo_warning.ogg', 100) // Bug the doctors.
 			aas_config_announce(/datum/aas_config_entry/medical_cryo_announcements, list("EJECTING" = autoeject), src, list(broadcast_channel), "Fully Recovered")
 			if(autoeject) // Eject if configured.
 				open_machine()

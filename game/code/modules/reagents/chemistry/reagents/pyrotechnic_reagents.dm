@@ -224,7 +224,7 @@
 	if ((spark_flags & SPARK_ACT_ENCLOSED) && !ismob(holder.my_atom))
 		return
 	var/location = get_turf(holder.my_atom)
-	playsound(location, 'sound/effects/smoke.ogg', 50, TRUE, -3)
+	playsound(location, '../assets/sound/effects/smoke.ogg', 50, TRUE, -3)
 	if (iscarbon(holder.my_atom))
 		var/mob/living/carbon/victim = holder.my_atom
 		if (victim.stat != DEAD)
@@ -447,7 +447,7 @@
 
 /datum/reagent/teslium/on_spark_act(power_charge, spark_flags)
 	tesla_zap(source = holder.my_atom, zap_range = round(volume / 5, 1), power = volume * 20 + power_charge, cutoff = 1 KILO JOULES, zap_flags = ZAP_MOB_DAMAGE | ZAP_OBJ_DAMAGE | ZAP_MOB_STUN | ZAP_LOW_POWER_GEN)
-	playsound(holder.my_atom, 'sound/machines/defib/defib_zap.ogg', 50, TRUE)
+	playsound(holder.my_atom, '../assets/sound/machines/defib/defib_zap.ogg', 50, TRUE)
 	return SPARK_ACT_NON_DESTRUCTIVE
 
 /datum/reagent/teslium/energized_jelly

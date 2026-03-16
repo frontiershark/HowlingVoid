@@ -201,7 +201,7 @@
 	command_name = "Clean"
 	command_desc = "Command a cleanbot to clean the mess."
 	requires_pointing = TRUE
-	radial_icon = 'icons/obj/service/janitor.dmi'
+	radial_icon = '../assets/icons/obj/service/janitor.dmi'
 	radial_icon_state = "mop"
 	speech_commands = list("clean", "mop")
 

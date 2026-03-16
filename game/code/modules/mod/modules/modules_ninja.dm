@@ -151,7 +151,7 @@
 	hit_atom.emp_act(EMP_HEAVY)
 	new /obj/effect/temp_visual/emp/pulse(get_turf(src))
 	new /obj/effect/temp_visual/emp(get_turf(hit_atom))
-	playsound(src, 'sound/effects/empulse.ogg', 60, TRUE, MEDIUM_RANGE_SOUND_EXTRARANGE)
+	playsound(src, '../assets/sound/effects/empulse.ogg', 60, TRUE, MEDIUM_RANGE_SOUND_EXTRARANGE)
 	visible_message("[src] emits an electromagnetic pulse upon impact!")
 	if(isturf(loc)) // if we didn't embed in anything, go away
 		qdel(src)
@@ -169,7 +169,7 @@
 
 	owner.emp_act(EMP_LIGHT)
 	COOLDOWN_START(src, emp_cd, 6 SECONDS)
-	playsound(owner, 'sound/effects/empulse.ogg', 30, TRUE, SHORT_RANGE_SOUND_EXTRARANGE)
+	playsound(owner, '../assets/sound/effects/empulse.ogg', 30, TRUE, SHORT_RANGE_SOUND_EXTRARANGE)
 	owner.show_message("[parent] flares brightly, releasing an electromagnetic pulse!", MSG_VISUAL)
 	new /obj/effect/temp_visual/emp(get_turf(owner))
 
@@ -565,7 +565,7 @@
 		return COMPONENT_CANCEL_ATTACK_CHAIN
 
 	do_sparks(number = 3, cardinal_only = FALSE, source = src)
-	playsound(get_turf(src), 'sound/machines/warning-buzzer.ogg', 35, TRUE)
+	playsound(get_turf(src), '../assets/sound/machines/warning-buzzer.ogg', 35, TRUE)
 	balloon_alert(ninja, "stand back!")
 	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(explosion), src, 0, 1, 2, 3), 2.5 SECONDS)
 	return COMPONENT_CANCEL_ATTACK_CHAIN
@@ -813,7 +813,7 @@
 	cooldown_time = 8 SECONDS
 
 /obj/item/mod/module/emp_shield/pulse/on_use(mob/activator)
-	playsound(src, 'sound/effects/empulse.ogg', 60, TRUE)
+	playsound(src, '../assets/sound/effects/empulse.ogg', 60, TRUE)
 	empulse(src, heavy_range = 4, light_range = 6, emp_source = src)
 	drain_power(use_energy_cost)
 
@@ -860,7 +860,7 @@
 	var/obj/projectile/net = new /obj/projectile/energy_net(mod.wearer.loc, src)
 	net.aim_projectile(target, mod.wearer)
 	net.firer = mod.wearer
-	playsound(src, 'sound/items/weapons/punchmiss.ogg', 25, TRUE)
+	playsound(src, '../assets/sound/items/weapons/punchmiss.ogg', 25, TRUE)
 	INVOKE_ASYNC(net, TYPE_PROC_REF(/obj/projectile, fire))
 	drain_power(use_energy_cost)
 
@@ -875,11 +875,11 @@
 /obj/projectile/energy_net
 	name = "energy net"
 	icon_state = "net_projectile"
-	icon = 'icons/obj/clothing/modsuit/mod_modules.dmi'
+	icon = '../assets/icons/obj/clothing/modsuit/mod_modules.dmi'
 	damage = 0
 	range = 9
-	hitsound = 'sound/items/fulton/fultext_deploy.ogg'
-	hitsound_wall = 'sound/items/fulton/fultext_deploy.ogg'
+	hitsound = '../assets/sound/items/fulton/fultext_deploy.ogg'
+	hitsound_wall = '../assets/sound/items/fulton/fultext_deploy.ogg'
 	/// Reference to the beam following the projectile.
 	var/line
 	/// Reference to the energy net module.
@@ -891,7 +891,7 @@
 
 /obj/projectile/energy_net/fire(setAngle)
 	if(firer)
-		line = firer.Beam(src, "net_beam", 'icons/obj/clothing/modsuit/mod_modules.dmi')
+		line = firer.Beam(src, "net_beam", '../assets/icons/obj/clothing/modsuit/mod_modules.dmi')
 	return ..()
 
 /obj/projectile/energy_net/on_hit(mob/living/target, blocked = 0, pierce_hit)
@@ -916,7 +916,7 @@
 /obj/structure/energy_net
 	name = "energy net"
 	desc = "It's a net made of green energy."
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	icon_state = "energynet"
 	density = TRUE //Can't pass through.
 	anchored = TRUE //Can't drag/grab the net.
@@ -937,7 +937,7 @@
 
 /obj/structure/energy_net/play_attack_sound(damage, damage_type = BRUTE, damage_flag = 0)
 	if(damage_type == BRUTE || damage_type == BURN)
-		playsound(src, 'sound/items/weapons/slash.ogg', 80, TRUE)
+		playsound(src, '../assets/sound/items/weapons/slash.ogg', 80, TRUE)
 
 /obj/structure/energy_net/atom_destruction(damage_flag)
 	for(var/mob/recovered_mob as anything in buckled_mobs)

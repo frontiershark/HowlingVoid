@@ -47,7 +47,7 @@
 	// User feedback
 	var/mob/living/carbon/human/holder = get_id_holder()
 	if(holder)
-		playsound(holder, 'sound/machines/cryo_warning.ogg', 25, TRUE)
+		playsound(holder, '../assets/sound/machines/cryo_warning.ogg', 25, TRUE)
 		holder.balloon_alert(holder, "emergency access: [dept]")
 
 	// Enhanced logging

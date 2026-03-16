@@ -5,7 +5,7 @@
 /datum/action/innate/flight
 	name = "Toggle Flight"
 	check_flags = AB_CHECK_CONSCIOUS|AB_CHECK_IMMOBILE|AB_CHECK_INCAPACITATED
-	button_icon = 'icons/mob/actions/actions_items.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_items.dmi'
 	button_icon_state = "flight"
 
 /datum/action/innate/flight/Activate()
@@ -105,7 +105,7 @@
 
 	to_chat(human, span_notice("Your wings spazz out and launch you!"))
 
-	playsound(human.loc, 'sound/misc/slip.ogg', 50, TRUE, -3)
+	playsound(human.loc, '../assets/sound/misc/slip.ogg', 50, TRUE, -3)
 
 	for(var/obj/item/choking_hazard in human.held_items)
 		human.accident(choking_hazard)
@@ -218,7 +218,7 @@
 	sprite_accessory_override = /datum/sprite_accessory/wings/skeleton
 
 /obj/item/organ/wings/functional/moth/make_flap_sound(mob/living/carbon/wing_owner)
-	playsound(wing_owner, 'sound/mobs/humanoids/moth/moth_flutter.ogg', 50, TRUE)
+	playsound(wing_owner, '../assets/sound/mobs/humanoids/moth/moth_flutter.ogg', 50, TRUE)
 
 ///mothra wings, which relate to moths.
 /obj/item/organ/wings/functional/moth/mothra

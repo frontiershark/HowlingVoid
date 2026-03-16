@@ -76,7 +76,7 @@
 	return get_sfx(SFX_SCREECH)
 
 /datum/species/monkey/get_hiss_sound(mob/living/carbon/human/monkey)
-	return 'sound/mobs/humanoids/human/hiss/human_hiss.ogg'
+	return '../assets/sound/mobs/humanoids/human/hiss/human_hiss.ogg'
 	// we're both great apes, or something..
 
 /datum/species/monkey/get_physical_attributes()
@@ -143,7 +143,7 @@
 
 /datum/action/item_action/organ_action/toggle_trip
 	name = "Toggle Tripping"
-	button_icon = 'icons/mob/actions/actions_changeling.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_changeling.dmi'
 	button_icon_state = "lesser_form"
 	background_icon_state = "bg_default_on"
 	overlay_icon_state = "bg_default_border"

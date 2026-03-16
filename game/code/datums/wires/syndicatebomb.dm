@@ -70,14 +70,14 @@
 				return
 
 			holder.visible_message(span_notice("[icon2html(bomb, viewers(holder))] The bomb chirps."))
-			playsound(bomb, 'sound/machines/chime.ogg', 30, TRUE)
+			playsound(bomb, '../assets/sound/machines/chime.ogg', 30, TRUE)
 			bomb.detonation_timer += (30 SECONDS)
 			if(bomb.active)
 				bomb.delayedbig = TRUE
 
 		if(WIRE_PROCEED)
 			holder.visible_message(span_danger("[icon2html(bomb, viewers(holder))] The bomb buzzes ominously!"))
-			playsound(bomb, 'sound/machines/buzz/buzz-sigh.ogg', 30, TRUE)
+			playsound(bomb, '../assets/sound/machines/buzz/buzz-sigh.ogg', 30, TRUE)
 			var/seconds = bomb.seconds_remaining()
 			if(seconds >= 61) // Long fuse bombs can suddenly become more dangerous if you tinker with them.
 				bomb.detonation_timer = world.time + (60 SECONDS)
@@ -115,7 +115,7 @@
 			if(mend || !bomb.anchored)
 				return
 			holder.visible_message(span_notice("[icon2html(bomb, viewers(holder))] The bolts lift out of the ground!"))
-			playsound(bomb, 'sound/effects/stealthoff.ogg', 30, TRUE)
+			playsound(bomb, '../assets/sound/effects/stealthoff.ogg', 30, TRUE)
 			bomb.set_anchored(FALSE)
 
 		if(WIRE_PROCEED)

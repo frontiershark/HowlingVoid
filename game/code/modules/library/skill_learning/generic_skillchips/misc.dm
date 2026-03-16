@@ -145,7 +145,7 @@
 /datum/action/cooldown/fishing_tip
 	name = "Dispense Fishing Tip"
 	desc = "Recall a pearl of wisdom about fishing."
-	button_icon = 'icons/hud/radial_fishing.dmi'
+	button_icon = '../assets/icons/hud/radial_fishing.dmi'
 	button_icon_state = "river"
 	background_icon_state = "bg_default"
 	overlay_icon_state = "bg_default_border"

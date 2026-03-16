@@ -41,8 +41,8 @@
 	)
 
 	/// Radial list icons
-	var/static/radial_eject = image(icon = 'icons/hud/radial.dmi', icon_state = "radial_eject")
-	var/static/radial_cook = image(icon = 'icons/hud/radial.dmi', icon_state = "radial_cook")
+	var/static/radial_eject = image(icon = '../assets/icons/hud/radial.dmi', icon_state = "radial_eject")
+	var/static/radial_cook = image(icon = '../assets/icons/hud/radial.dmi', icon_state = "radial_cook")
 
 	/// Radial list options
 	var/static/list/radial_options = list("eject" = radial_eject, "cook" = radial_cook)

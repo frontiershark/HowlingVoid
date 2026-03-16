@@ -44,7 +44,7 @@
 /obj/effect/forcefield/cult
 	name = "glowing wall"
 	desc = "An unholy shield that blocks all attacks."
-	icon = 'icons/effects/cult.dmi'
+	icon = '../assets/icons/effects/cult.dmi'
 	icon_state = "cultshield"
 	can_atmos_pass = ATMOS_PASS_NO
 	initial_duration = 20 SECONDS
@@ -101,7 +101,7 @@ GLOBAL_LIST_EMPTY_TYPED(active_cosmic_fields, /obj/effect/forcefield/cosmic_fiel
 /obj/effect/forcefield/cosmic_field
 	name = "Cosmic Field"
 	desc = "A field that cannot be passed by people marked with a cosmic star."
-	icon = 'icons/effects/eldritch.dmi'
+	icon = '../assets/icons/effects/eldritch.dmi'
 	icon_state = "cosmic_carpet"
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	anchored = TRUE

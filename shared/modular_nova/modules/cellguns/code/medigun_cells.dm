@@ -5,7 +5,7 @@
 /obj/item/ammo_casing/energy/medical
 	projectile_type = /obj/projectile/energy/medical/oxygen
 	select_name = "oxygen"
-	fire_sound = 'sound/effects/stealthoff.ogg'
+	fire_sound = '../assets/sound/effects/stealthoff.ogg'
 	e_cost = LASER_SHOTS(8, STANDARD_CELL_CHARGE)
 	delay = 8
 	harmful = FALSE

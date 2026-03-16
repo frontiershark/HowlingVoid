@@ -21,7 +21,7 @@
 		charging_cell = get_cell(), \
 		charge_amount = STANDARD_CELL_CHARGE * 0.5, \
 		cooldown_time = 2 SECONDS, \
-		charge_sound = 'sound/items/weapons/laser_crank.ogg', \
+		charge_sound = '../assets/sound/items/weapons/laser_crank.ogg', \
 		charge_sound_cooldown_time = 1.8 SECONDS, \
 		charge_move = IGNORE_USER_LOC_CHANGE, \
 	)
@@ -69,14 +69,14 @@
 		charging_cell = get_cell(), \
 		charge_amount = STANDARD_CELL_CHARGE, \
 		cooldown_time = 2 SECONDS, \
-		charge_sound = 'sound/items/weapons/laser_crank.ogg', \
+		charge_sound = '../assets/sound/items/weapons/laser_crank.ogg', \
 		charge_sound_cooldown_time = 1.8 SECONDS, \
 		charge_move = IGNORE_USER_LOC_CHANGE, \
 	)
 
 /obj/item/gun/energy/disabler/smoothbore/add_seclight_point()
 	AddComponent(/datum/component/seclite_attachable, \
-		light_overlay_icon = 'icons/obj/weapons/guns/flashlights.dmi', \
+		light_overlay_icon = '../assets/icons/obj/weapons/guns/flashlights.dmi', \
 		light_overlay = "flight", \
 		overlay_x = 18, \
 		overlay_y = 12, \
@@ -123,13 +123,13 @@
 		spin_to_win = TRUE, \
 		charge_amount = LASER_SHOTS(8, STANDARD_CELL_CHARGE), \
 		cooldown_time = 0.8 SECONDS, \
-		charge_sound = 'sound/items/weapons/kinetic_reload.ogg', \
+		charge_sound = '../assets/sound/items/weapons/kinetic_reload.ogg', \
 		charge_sound_cooldown_time = 0.8 SECONDS, \
 	)
 
 /obj/item/gun/energy/laser/thermal/add_seclight_point()
 	AddComponent(/datum/component/seclite_attachable, \
-		light_overlay_icon = 'icons/obj/weapons/guns/flashlights.dmi', \
+		light_overlay_icon = '../assets/icons/obj/weapons/guns/flashlights.dmi', \
 		light_overlay = "flight", \
 		overlay_x = 15, \
 		overlay_y = 9)
@@ -178,7 +178,7 @@
 		charging_cell = get_cell(), \
 		charge_amount = LASER_SHOTS(6, STANDARD_CELL_CHARGE), \
 		cooldown_time = 0.4 SECONDS, \
-		charge_sound = 'sound/machines/clockcult/integration_cog_install.ogg', \
+		charge_sound = '../assets/sound/machines/clockcult/integration_cog_install.ogg', \
 		charge_sound_cooldown_time = 3 SECONDS, \
 	)
 	AddComponent(/datum/component/automatic_fire, 0.5 SECONDS)

@@ -46,7 +46,7 @@
 
 	if(time_until_stoppage > ATTACK_STAGE_THREE)
 		if(SPT_PROB(5, seconds_between_ticks))
-			owner.playsound_local(owner, 'sound/effects/singlebeat.ogg', 25, FALSE, use_reverb = FALSE)
+			owner.playsound_local(owner, '../assets/sound/effects/singlebeat.ogg', 25, FALSE, use_reverb = FALSE)
 			owner.adjust_stamina_loss(5)
 
 	if(time_until_stoppage <= ATTACK_STAGE_TWO && time_until_stoppage > ATTACK_STAGE_THREE)	//This coughing gets replaced with worse coughing, no need to stack it.
@@ -113,9 +113,9 @@
 
 	if(time_until_stoppage <= ATTACK_STAGE_TWO)
 		if(time_until_stoppage <= ATTACK_STAGE_FOUR)
-			owner.playsound_local(owner, 'sound/effects/singlebeat.ogg', 100, FALSE, channel = CHANNEL_HEARTBEAT, use_reverb = FALSE)
+			owner.playsound_local(owner, '../assets/sound/effects/singlebeat.ogg', 100, FALSE, channel = CHANNEL_HEARTBEAT, use_reverb = FALSE)
 		else
-			owner.playsound_local(owner, 'sound/effects/health/slowbeat.ogg', 25, FALSE, channel = CHANNEL_HEARTBEAT, use_reverb = FALSE)
+			owner.playsound_local(owner, '../assets/sound/effects/health/slowbeat.ogg', 25, FALSE, channel = CHANNEL_HEARTBEAT, use_reverb = FALSE)
 	else
 		owner.stop_sound_channel(CHANNEL_HEARTBEAT)
 

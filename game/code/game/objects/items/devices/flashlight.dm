@@ -7,13 +7,13 @@
 	name = "flashlight"
 	desc = "A hand-held emergency light."
 	custom_price = PAYCHECK_CREW
-	icon = 'icons/obj/lighting.dmi'
+	icon = '../assets/icons/obj/lighting.dmi'
 	dir = WEST
 	icon_state = "flashlight"
 	inhand_icon_state = "flashlight"
 	worn_icon_state = "flashlight"
-	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/devices_righthand.dmi'
 	w_class = WEIGHT_CLASS_SMALL
 	obj_flags = CONDUCTS_ELECTRICITY
 	slot_flags = ITEM_SLOT_BELT
@@ -37,9 +37,9 @@
 	/// Can we toggle this light on and off (used for contexual screentips only)
 	var/toggle_context = TRUE
 	/// The sound the light makes when it's turned on
-	var/sound_on = 'sound/items/weapons/magin.ogg'
+	var/sound_on = '../assets/sound/items/weapons/magin.ogg'
 	/// The sound the light makes when it's turned off
-	var/sound_off = 'sound/items/weapons/magout.ogg'
+	var/sound_off = '../assets/sound/items/weapons/magout.ogg'
 	/// Should the flashlight start turned on?
 	var/start_on = FALSE
 	/// When true, painting the flashlight won't change its light color
@@ -381,7 +381,7 @@
 
 /obj/effect/temp_visual/medical_holosign/Initialize(mapload, creator)
 	. = ..()
-	playsound(loc, 'sound/machines/ping.ogg', 50, FALSE) //make some noise!
+	playsound(loc, '../assets/sound/machines/ping.ogg', 50, FALSE) //make some noise!
 	if(creator)
 		visible_message(span_danger("[creator] created a medical hologram!"))
 
@@ -392,13 +392,13 @@
 	icon_state = "seclite"
 	inhand_icon_state = "seclite"
 	worn_icon_state = "seclite"
-	lefthand_file = 'icons/mob/inhands/equipment/security_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/security_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/security_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/security_righthand.dmi'
 	force = 9 // Not as good as a stun baton.
 	light_range = 5 // A little better than the standard flashlight.
 	light_power = 0.8
 	light_color = "#99ccff"
-	hitsound = 'sound/items/weapons/genhit1.ogg'
+	hitsound = '../assets/sound/items/weapons/genhit1.ogg'
 	has_closed_handle = FALSE
 
 // the desk lamps are a bit special
@@ -407,8 +407,8 @@
 	desc = "A desk lamp with an adjustable mount."
 	icon_state = "lamp"
 	inhand_icon_state = "lamp"
-	lefthand_file = 'icons/mob/inhands/items_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items_righthand.dmi'
 	force = 10
 	light_range = 3.5
 	light_system = COMPLEX_LIGHT
@@ -447,7 +447,7 @@
 	light_color = LIGHT_COLOR_FLARE
 	light_system = OVERLAY_LIGHT
 	light_power = 2
-	sound_on = 'sound/items/match_strike.ogg'
+	sound_on = '../assets/sound/items/match_strike.ogg'
 	toggle_context = FALSE
 	has_closed_handle = FALSE
 	/// How many seconds of fuel we have left
@@ -473,7 +473,7 @@
 	if(light_on)
 		attack_verb_continuous = string_list(list("burns", "singes"))
 		attack_verb_simple = string_list(list("burn", "singe"))
-		hitsound = 'sound/items/tools/welder.ogg'
+		hitsound = '../assets/sound/items/tools/welder.ogg'
 		force = on_damage
 		damtype = BURN
 		update_brightness()
@@ -504,7 +504,7 @@
 	name = "lit [initial(name)]"
 	attack_verb_continuous = string_list(list("burns", "singes"))
 	attack_verb_simple = string_list(list("burn", "singe"))
-	hitsound = 'sound/items/tools/welder.ogg'
+	hitsound = '../assets/sound/items/tools/welder.ogg'
 	force = on_damage
 	damtype = BURN
 
@@ -573,11 +573,11 @@
 	name = "red candle"
 	desc = "In Greek myth, Prometheus stole fire from the Gods and gave it to \
 		humankind. The jewelry he kept for himself."
-	icon = 'icons/obj/candle.dmi'
+	icon = '../assets/icons/obj/candle.dmi'
 	icon_state = "candle1"
 	inhand_icon_state = "candle"
-	lefthand_file = 'icons/mob/inhands/items_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items_righthand.dmi'
 	w_class = WEIGHT_CLASS_TINY
 	heat = 1000
 	light_range = 2
@@ -717,8 +717,8 @@
 	light_power = 1.3
 	icon_state = "torch"
 	inhand_icon_state = "torch"
-	lefthand_file = 'icons/mob/inhands/items_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items_righthand.dmi'
 	light_color = LIGHT_COLOR_ORANGE
 	on_damage = 10
 	slot_flags = null
@@ -749,8 +749,8 @@
 	name = "lantern"
 	icon_state = "lantern"
 	inhand_icon_state = "lantern"
-	lefthand_file = 'icons/mob/inhands/equipment/mining_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/mining_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/mining_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/mining_righthand.dmi'
 	desc = "A mining lantern."
 	light_range = 5 // luminosity when on
 	light_power = 1.5
@@ -786,7 +786,7 @@
 	gender = PLURAL
 	name = "glowing slime extract"
 	desc = "Extract from a yellow slime. It emits a strong light when squeezed."
-	icon = 'icons/obj/lighting.dmi'
+	icon = '../assets/icons/obj/lighting.dmi'
 	icon_state = "slime"
 	inhand_icon_state = null
 	w_class = WEIGHT_CLASS_SMALL
@@ -866,7 +866,7 @@
 	base_icon_state = "glowstick"
 	inhand_icon_state = null
 	worn_icon_state = "lightstick"
-	sound_on = 'sound/effects/wounds/crack2.ogg' // the cracking sound isn't just for wounds silly
+	sound_on = '../assets/sound/effects/wounds/crack2.ogg' // the cracking sound isn't just for wounds silly
 	toggle_context = FALSE
 	ignore_base_color = TRUE
 	has_closed_handle = FALSE
@@ -1131,8 +1131,8 @@
 	)
 	light_color = LIGHT_COLOR_ORANGE
 	start_on = FALSE
-	sound_on = 'sound/effects/fire_puff.ogg'
-	sound_off = 'sound/items/weapons/gun/bow/bow_fire.ogg'
+	sound_on = '../assets/sound/effects/fire_puff.ogg'
+	sound_off = '../assets/sound/items/weapons/gun/bow/bow_fire.ogg'
 
 	///The timer we track until the bubble deletes itself.
 	var/bubble_timer
@@ -1187,7 +1187,7 @@
 	user.balloon_alert(user, "core inserted")
 	qdel(tool)
 	installed_pyro_core = TRUE
-	playsound(src, 'sound/machines/crate/crate_open.ogg', 50, FALSE)
+	playsound(src, '../assets/sound/machines/crate/crate_open.ogg', 50, FALSE)
 	update_appearance(UPDATE_DESC)
 	return ITEM_INTERACT_SUCCESS
 

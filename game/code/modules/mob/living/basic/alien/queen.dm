@@ -15,7 +15,7 @@
 	///The type of projectile that fires from attacks.
 	var/projectiletype = /obj/projectile/neurotoxin/damaging
 	///The sound that plays when the projectile is fired.
-	var/projectilesound = 'sound/items/weapons/pierce.ogg'
+	var/projectilesound = '../assets/sound/items/weapons/pierce.ogg'
 
 /mob/living/basic/alien/queen/Initialize(mapload)
 	. = ..()
@@ -23,7 +23,7 @@
 
 /mob/living/basic/alien/queen/large
 	name = "alien empress"
-	icon = 'icons/mob/nonhuman-player/alienqueen.dmi'
+	icon = '../assets/icons/mob/nonhuman-player/alienqueen.dmi'
 	icon_state = "alienq"
 	icon_living = "alienq"
 	icon_dead = "alienq_dead"

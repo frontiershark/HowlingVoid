@@ -16,7 +16,7 @@
 	required_organ_flag = NONE
 
 /datum/surgery_operation/organ/fix_wings/get_default_radial_image()
-	return image(icon = 'icons/mob/human/species/moth/moth_wings.dmi', icon_state = "m_moth_wings_monarch_BEHIND")
+	return image(icon = '../assets/icons/mob/human/species/moth/moth_wings.dmi', icon_state = "m_moth_wings_monarch_BEHIND")
 
 /datum/surgery_operation/organ/fix_wings/all_required_strings()
 	return ..() + list("the wings must be burnt", "the patient must be dosed with >=5u [/datum/reagent/medicine/c2/synthflesh::name]")

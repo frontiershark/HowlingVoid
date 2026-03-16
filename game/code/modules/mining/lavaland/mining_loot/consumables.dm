@@ -30,11 +30,11 @@
 /obj/item/wisp_lantern
 	name = "spooky lantern"
 	desc = "This lantern gives off no light, but is home to a friendly wisp."
-	icon = 'icons/obj/lighting.dmi'
+	icon = '../assets/icons/obj/lighting.dmi'
 	icon_state = "lantern-blue-on"
 	inhand_icon_state = "lantern-blue-on"
-	lefthand_file = 'icons/mob/inhands/equipment/mining_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/mining_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/mining_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/mining_righthand.dmi'
 	var/obj/effect/wisp/wisp
 
 /obj/item/wisp_lantern/attack_self(mob/user)
@@ -75,7 +75,7 @@
 /obj/effect/wisp
 	name = "friendly wisp"
 	desc = "Happy to light your way."
-	icon = 'icons/obj/lighting.dmi'
+	icon = '../assets/icons/obj/lighting.dmi'
 	icon_state = "orb"
 	light_system = OVERLAY_LIGHT
 	light_range = 6
@@ -116,7 +116,7 @@
 /obj/item/jacobs_ladder
 	name = "jacob's ladder"
 	desc = "A celestial ladder that violates the laws of physics."
-	icon = 'icons/obj/structures.dmi'
+	icon = '../assets/icons/obj/structures.dmi'
 	icon_state = "ladder00"
 
 /obj/item/jacobs_ladder/attack_self(mob/user)
@@ -142,7 +142,7 @@
 /obj/item/book_of_babel
 	name = "Book of Babel"
 	desc = "An ancient tome written in countless tongues."
-	icon = 'icons/obj/service/library.dmi'
+	icon = '../assets/icons/obj/service/library.dmi'
 	icon_state = "book1"
 	w_class = WEIGHT_CLASS_SMALL
 
@@ -165,9 +165,9 @@
 // Potion of Flight
 
 /obj/item/reagent_containers/cup/bottle/potion
-	icon = 'icons/obj/mining_zones/artefacts.dmi'
+	icon = '../assets/icons/obj/mining_zones/artefacts.dmi'
 	icon_state = "potionflask"
-	fill_icon = 'icons/obj/mining_zones/artefacts.dmi'
+	fill_icon = '../assets/icons/obj/mining_zones/artefacts.dmi'
 	fill_icon_state = "potion_fill"
 	fill_icon_thresholds = list(0, 1)
 
@@ -208,7 +208,7 @@
 		to_chat(exposed_human, span_userdanger("A terrible pain travels down your back as your wings change shape!"))
 	else
 		to_chat(exposed_human, span_userdanger("A terrible pain travels down your back as wings burst out!"))
-	playsound(exposed_human.loc, 'sound/items/poster/poster_ripped.ogg', 50, TRUE, -1)
+	playsound(exposed_human.loc, '../assets/sound/items/poster/poster_ripped.ogg', 50, TRUE, -1)
 	exposed_human.apply_damage(20, def_zone = BODY_ZONE_CHEST, forced = TRUE, wound_bonus = CANT_WOUND)
 	exposed_human.emote("scream")
 

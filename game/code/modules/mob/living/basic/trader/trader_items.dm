@@ -2,7 +2,7 @@
 /obj/structure/trader_sign
 	name = "holographic store sign"
 	desc = "A holographic sign that promises great deals."
-	icon = 'icons/obj/trader_signs.dmi'
+	icon = '../assets/icons/obj/trader_signs.dmi'
 	icon_state = "faceless"
 	anchored = TRUE
 	armor_type = /datum/armor/trader_sign

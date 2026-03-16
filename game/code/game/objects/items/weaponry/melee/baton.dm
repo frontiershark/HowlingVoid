@@ -2,13 +2,13 @@
 	name = "police baton"
 	desc = "A wooden truncheon for beating criminal scum."
 	desc_controls = "Left click to stun, right click to harm."
-	icon = 'icons/obj/weapons/baton.dmi'
+	icon = '../assets/icons/obj/weapons/baton.dmi'
 	icon_state = "classic_baton"
 	inhand_icon_state = "classic_baton"
 	worn_icon_state = "classic_baton"
 	icon_angle = -45
-	lefthand_file = 'icons/mob/inhands/equipment/security_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/security_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/security_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/security_righthand.dmi'
 	slot_flags = ITEM_SLOT_BELT
 	force = 12 //9 hit crit
 	w_class = WEIGHT_CLASS_NORMAL
@@ -38,7 +38,7 @@
 	/// Can we stun cyborgs?
 	var/affect_cyborg = FALSE
 	/// The path of the default sound to play when we stun something.
-	var/on_stun_sound = 'sound/effects/woodhit.ogg'
+	var/on_stun_sound = '../assets/sound/effects/woodhit.ogg'
 	/// The volume of the above.
 	var/on_stun_volume = 75
 	/// Whether the stun attack is logged. Only relevant for abductor batons, which have different modes.
@@ -196,7 +196,7 @@
 	if(iscyborg(target))
 		desc = get_cyborg_stun_description(target, user)
 		if(!affect_cyborg)
-			playsound(src, 'sound/effects/bang.ogg', 10, TRUE) //bonk
+			playsound(src, '../assets/sound/effects/bang.ogg', 10, TRUE) //bonk
 	else
 		desc = get_stun_description(target, user)
 
@@ -310,18 +310,18 @@
 /obj/item/conversion_kit
 	name = "conversion kit"
 	desc = "A strange box containing wood working tools and an instruction paper to turn stun batons into something else."
-	icon = 'icons/obj/storage/box.dmi'
+	icon = '../assets/icons/obj/storage/box.dmi'
 	icon_state = "uk"
 	custom_price = PAYCHECK_COMMAND * 4.5
 
 /obj/item/melee/baton/telescopic
 	name = "telescopic baton"
 	desc = "A compact yet robust personal defense weapon. Can be concealed when folded."
-	icon = 'icons/obj/weapons/baton.dmi'
+	icon = '../assets/icons/obj/weapons/baton.dmi'
 	icon_state = "telebaton"
 	icon_angle = -45
-	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/melee_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/melee_righthand.dmi'
 	inhand_icon_state = null
 	attack_verb_continuous = list("hits", "pokes")
 	attack_verb_simple = list("hit", "poke")
@@ -334,15 +334,15 @@
 	clumsy_knockdown_time = 15 SECONDS
 	active = FALSE
 	activated_word = "extended"
-	var/folded_drop_sound = 'sound/items/baton/telescopic_baton_folded_drop.ogg'
-	var/folded_pickup_sound = 'sound/items/baton/telescopic_baton_folded_pickup.ogg'
-	var/unfolded_drop_sound = 'sound/items/baton/telescopic_baton_unfolded_drop.ogg'
-	var/unfolded_pickup_sound = 'sound/items/baton/telescopic_baton_unfolded_pickup.ogg'
-	pickup_sound = 'sound/items/baton/telescopic_baton_folded_pickup.ogg'
-	drop_sound = 'sound/items/baton/telescopic_baton_folded_drop.ogg'
+	var/folded_drop_sound = '../assets/sound/items/baton/telescopic_baton_folded_drop.ogg'
+	var/folded_pickup_sound = '../assets/sound/items/baton/telescopic_baton_folded_pickup.ogg'
+	var/unfolded_drop_sound = '../assets/sound/items/baton/telescopic_baton_unfolded_drop.ogg'
+	var/unfolded_pickup_sound = '../assets/sound/items/baton/telescopic_baton_unfolded_pickup.ogg'
+	pickup_sound = '../assets/sound/items/baton/telescopic_baton_folded_pickup.ogg'
+	drop_sound = '../assets/sound/items/baton/telescopic_baton_folded_drop.ogg'
 	sound_vary = TRUE
 	/// The sound effecte played when our baton is extended.
-	var/on_sound = 'sound/items/weapons/batonextend.ogg'
+	var/on_sound = '../assets/sound/items/weapons/batonextend.ogg'
 	/// The inhand iconstate used when our baton is extended.
 	var/on_inhand_icon_state = "nullrod"
 	/// The force on extension.
@@ -425,12 +425,12 @@
 /obj/item/melee/baton/telescopic/contractor_baton
 	name = "contractor baton"
 	desc = "A high tech telescopic stun baton, as developed by Cybersun Industries. Delivers a precise shock to a target's central nervous system to incapacitate them."
-	icon = 'icons/obj/weapons/baton.dmi'
+	icon = '../assets/icons/obj/weapons/baton.dmi'
 	icon_state = "contractor_baton"
 	worn_icon_state = "contractor_baton"
 	icon_angle = -45
-	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/melee_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/melee_righthand.dmi'
 	slot_flags = ITEM_SLOT_BELT
 	w_class = WEIGHT_CLASS_SMALL
 	item_flags = NONE
@@ -442,12 +442,12 @@
 	clumsy_knockdown_time = 24 SECONDS
 	affect_cyborg = TRUE
 	wait_desc = "still charging!"
-	on_stun_sound = 'sound/items/weapons/contractor_baton/contractorbatonhit.ogg'
-	unfolded_drop_sound = 'sound/items/baton/contractor_baton_unfolded_pickup.ogg'
-	unfolded_pickup_sound = 'sound/items/baton/contractor_baton_unfolded_pickup.ogg'
+	on_stun_sound = '../assets/sound/items/weapons/contractor_baton/contractorbatonhit.ogg'
+	unfolded_drop_sound = '../assets/sound/items/baton/contractor_baton_unfolded_pickup.ogg'
+	unfolded_pickup_sound = '../assets/sound/items/baton/contractor_baton_unfolded_pickup.ogg'
 
 	on_inhand_icon_state = "contractor_baton_on"
-	on_sound = 'sound/items/weapons/contractorbatonextend.ogg'
+	on_sound = '../assets/sound/items/weapons/contractorbatonextend.ogg'
 	active_force = 16
 
 /obj/item/melee/baton/telescopic/contractor_baton/additional_effects_non_cyborg(mob/living/target, mob/living/user)
@@ -459,7 +459,7 @@
 	name = "stun baton"
 	desc = "The Secure Apprehension Device, as developed by Nanotrasen. Delivers a precise shock to a target's central nervous system to incapacitate them."
 	desc_controls = "Left click to stun, right click to harm."
-	icon = 'icons/obj/weapons/baton.dmi'
+	icon = '../assets/icons/obj/weapons/baton.dmi'
 	icon_state = "stunbaton"
 	base_icon_state = "stunbaton"
 	inhand_icon_state = "stunbaton"
@@ -477,7 +477,7 @@
 	knockdown_time = 5 SECONDS
 	clumsy_knockdown_time = 15 SECONDS
 	cooldown = 2.5 SECONDS
-	on_stun_sound = 'sound/items/weapons/egloves.ogg'
+	on_stun_sound = '../assets/sound/items/weapons/egloves.ogg'
 	on_stun_volume = 50
 	active = FALSE
 	stun_on_harmbaton = TRUE
@@ -489,12 +489,12 @@
 	light_on = FALSE
 	light_color = LIGHT_COLOR_ORANGE
 	light_power = 0.5
-	var/inactive_drop_sound = 'sound/items/baton/stun_baton_inactive_drop.ogg'
-	var/inactive_pickup_sound = 'sound/items/baton/stun_baton_inactive_pickup.ogg'
-	var/active_drop_sound = 'sound/items/baton/stun_baton_active_drop.ogg'
-	var/active_pickup_sound = 'sound/items/baton/stun_baton_active_pickup.ogg'
-	drop_sound = 'sound/items/baton/stun_baton_inactive_drop.ogg'
-	pickup_sound = 'sound/items/baton/stun_baton_inactive_pickup.ogg'
+	var/inactive_drop_sound = '../assets/sound/items/baton/stun_baton_inactive_drop.ogg'
+	var/inactive_pickup_sound = '../assets/sound/items/baton/stun_baton_inactive_pickup.ogg'
+	var/active_drop_sound = '../assets/sound/items/baton/stun_baton_active_drop.ogg'
+	var/active_pickup_sound = '../assets/sound/items/baton/stun_baton_active_pickup.ogg'
+	drop_sound = '../assets/sound/items/baton/stun_baton_inactive_drop.ogg'
+	pickup_sound = '../assets/sound/items/baton/stun_baton_inactive_pickup.ogg'
 	sound_vary = TRUE
 
 	var/throw_stun_chance = 35
@@ -549,7 +549,7 @@
 	var/turf/source_turf = get_turf(src)
 	var/obj/item/melee/baton/baton = new (source_turf)
 	baton.alpha = 20
-	playsound(source_turf, 'sound/items/tools/drill_use.ogg', 80, TRUE, -1)
+	playsound(source_turf, '../assets/sound/items/tools/drill_use.ogg', 80, TRUE, -1)
 	animate(src, alpha = 0, time = 1 SECONDS)
 	animate(baton, alpha = 255, time = 1 SECONDS)
 	qdel(item)
@@ -776,9 +776,9 @@
 	icon_state = "stunsword"
 	inhand_icon_state = "stunsword"
 	base_icon_state = "stunsword"
-	lefthand_file = 'icons/mob/inhands/64x64_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/64x64_righthand.dmi'
-	hitsound = 'sound/items/weapons/bladeslice.ogg'
+	lefthand_file = '../assets/icons/mob/inhands/64x64_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/64x64_righthand.dmi'
+	hitsound = '../assets/sound/items/weapons/bladeslice.ogg'
 	attack_verb_continuous = list("attacks", "slashes", "slices", "tears", "lacerates", "rips", "dices", "cuts")
 	attack_verb_simple = list("attack", "slash", "slice", "tear", "lacerate", "rip", "dice", "cut")
 	inhand_x_dimension = 64
@@ -809,15 +809,15 @@
 	name = "stunprod"
 	desc = "An improvised stun baton."
 	desc_controls = "Left click to stun, right click to harm."
-	icon = 'icons/obj/weapons/spear.dmi'
+	icon = '../assets/icons/obj/weapons/spear.dmi'
 	icon_state = "stunprod"
 	base_icon_state = "stunprod"
 	inhand_icon_state = "prod"
 	base_inhand_state = "prod"
 	worn_icon_state = null
 	icon_angle = -45
-	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/melee_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/melee_righthand.dmi'
 	w_class = WEIGHT_CLASS_HUGE
 	force = 3
 	throwforce = 5
@@ -884,7 +884,7 @@
 	name = "\improper OZtek Boomerang"
 	desc = "A device invented in 2486 for the great Space Emu War by the confederacy of Australicus, these high-tech boomerangs also work exceptionally well at stunning crewmembers. Just be careful to catch it when thrown!"
 	throw_speed = 1
-	icon = 'icons/obj/weapons/thrown.dmi'
+	icon = '../assets/icons/obj/weapons/thrown.dmi'
 	icon_state = "boomerang"
 	base_icon_state = "boomerang"
 	inhand_icon_state = "boomerang"
@@ -956,14 +956,14 @@
 	desc = "The most common fitness equipment in the entire syndicate, titanium rods weigh strictly 13 pounds"
 	desc_controls = "Left click to stun, right click to harm. Throw mode counterattack any melee/throwable attacks."
 	icon_state = "nunchaku"
-	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/melee_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/melee_righthand.dmi'
 	inhand_icon_state = "nunchaku"
 	worn_icon_state = "nunchaku"
 	attack_verb_continuous = list("beats", "whips", "smashes", "punishes")
 	attack_verb_simple = list("beat", "whip", "smash", "punish")
-	hitsound = 'sound/items/weapons/chainhit.ogg'
-	block_sound = 'sound/items/weapons/block_shield.ogg'
+	hitsound = '../assets/sound/items/weapons/chainhit.ogg'
+	block_sound = '../assets/sound/items/weapons/block_shield.ogg'
 	slot_flags = ITEM_SLOT_BELT
 	cooldown = CLICK_CD_MELEE
 	knockdown_time = 0.25 SECONDS
@@ -998,7 +998,7 @@
 	// counterattack at melee
 	if(attack_type in list(MELEE_ATTACK, UNARMED_ATTACK, LEAP_ATTACK))
 		var/mob/living/attacker = GET_ASSAILANT(hitby)
-		playsound(src, pick(list('sound/items/weapons/cqchit2.ogg', 'sound/items/weapons/cqchit1.ogg')), 70, FALSE)
+		playsound(src, pick(list('../assets/sound/items/weapons/cqchit2.ogg', '../assets/sound/items/weapons/cqchit1.ogg')), 70, FALSE)
 		melee_attack_chain(owner, attacker, LEFT_CLICK)
 
 	return ..()

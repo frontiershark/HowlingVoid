@@ -4,7 +4,7 @@
 
 /obj/merge_conflict_marker
 	name = "Merge Conflict Marker - DO NOT USE"
-	icon = 'icons/effects/mapping_helpers.dmi'
+	icon = '../assets/icons/effects/mapping_helpers.dmi'
 	icon_state = "merge_conflict_marker"
 	desc = "If you are seeing this in-game: someone REALLY, REALLY, REALLY fucked up. They physically mapped in a fucking Merge Conflict Marker. What the shit."
 	plane = POINT_PLANE

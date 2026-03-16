@@ -5,7 +5,7 @@
 /datum/action/cooldown/mob_cooldown/watcher_overwatch
 	name = "Overwatch"
 	desc = "Keep a close eye on the target's actions, automatically firing upon them if they act."
-	button_icon = 'icons/mob/actions/actions_ecult.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_ecult.dmi'
 	button_icon_state = "eye"
 	background_icon_state = "bg_demon"
 	overlay_icon_state = "bg_demon_border"
@@ -17,7 +17,7 @@
 	/// Type of projectile to fire
 	var/projectile_type = /obj/projectile/temp/watcher
 	/// Sound the projectile we fire makes
-	var/projectile_sound = 'sound/items/weapons/pierce.ogg'
+	var/projectile_sound = '../assets/sound/items/weapons/pierce.ogg'
 	/// Time to watch for
 	var/overwatch_duration = 3 SECONDS
 
@@ -99,7 +99,7 @@
 	owner.add_traits(list(TRAIT_OVERWATCHED, TRAIT_OVERWATCH_IMMUNE), REF(src))
 	owner.do_alert_animation()
 	owner.Immobilize(0.25 SECONDS) // Just long enough that they don't trigger it by mistake
-	owner.playsound_local(owner, 'sound/machines/chime.ogg', 50, TRUE)
+	owner.playsound_local(owner, '../assets/sound/machines/chime.ogg', 50, TRUE)
 	var/atom/beam_origin = ismecha(owner.loc) ? owner.loc : owner
 	link = beam_origin.Beam(watcher, icon_state = "r_beam", override_target_pixel_x = 0)
 	RegisterSignals(owner, forbidden_actions, PROC_REF(opportunity_attack))

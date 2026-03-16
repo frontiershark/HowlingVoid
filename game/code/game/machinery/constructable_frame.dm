@@ -1,7 +1,7 @@
 /obj/structure/frame
 	name = "frame"
 	desc = "A generic looking construction frame. One day this will be something greater."
-	icon = 'icons/obj/devices/stock_parts.dmi'
+	icon = '../assets/icons/obj/devices/stock_parts.dmi'
 	icon_state = "box_0"
 	base_icon_state = "box_"
 	density = TRUE
@@ -148,7 +148,7 @@
 	else if(!board.forceMove(src))
 		return FALSE
 
-	playsound(src, 'sound/items/deconstruct.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/deconstruct.ogg', 50, TRUE)
 	balloon_alert(user, "circuit installed")
 	circuit = board
 	if(by_hand)

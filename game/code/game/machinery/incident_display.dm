@@ -36,7 +36,7 @@ DEFINE_BITFIELD(sign_features, list(
 /obj/machinery/incident_display
 	name = NAME_DELAM
 	desc = DESC_DELAM
-	icon = 'icons/obj/machines/incident_display.dmi'
+	icon = '../assets/icons/obj/machines/incident_display.dmi'
 	icon_preview = "display_normal"
 	icon_state = "display_normal"
 	verb_say = "beeps"

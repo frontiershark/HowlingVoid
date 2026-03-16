@@ -4,7 +4,7 @@
 	background_icon_state = "bg_heretic"
 	overlay_icon_state = "bg_heretic_border"
 	button_icon_state = "shield"
-	ranged_mousepointer = 'icons/effects/mouse_pointers/throw_target.dmi'
+	ranged_mousepointer = '../assets/icons/effects/mouse_pointers/throw_target.dmi'
 	check_flags = AB_CHECK_INCAPACITATED|AB_CHECK_CONSCIOUS|AB_CHECK_HANDS_BLOCKED
 
 	school = SCHOOL_FORBIDDEN
@@ -62,14 +62,14 @@
 		cast_on.Shake(shake_interval = 0.1 SECONDS, duration = 0.5 SECONDS)
 		// which we need to re-rust
 		living_owner?.do_rust_heretic_act(cast_on)
-		playsound(cast_on, 'sound/effects/bang.ogg', 50, vary = TRUE)
+		playsound(cast_on, '../assets/sound/effects/bang.ogg', 50, vary = TRUE)
 		return
 
 	var/turf/closed/wall/new_wall = cast_on.place_on_top(/turf/closed/wall)
 	if(!istype(new_wall))
 		return
 
-	playsound(new_wall, 'sound/effects/constructform.ogg', 50, TRUE)
+	playsound(new_wall, '../assets/sound/effects/constructform.ogg', 50, TRUE)
 	new_wall.rust_heretic_act()
 	new_wall.name = "\improper enchanted [new_wall.name]"
 	new_wall.AddComponent(/datum/component/torn_wall)

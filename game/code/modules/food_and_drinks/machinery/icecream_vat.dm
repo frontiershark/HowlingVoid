@@ -9,7 +9,7 @@
 /obj/machinery/icecream_vat
 	name = "ice cream vat"
 	desc = "Ding-aling ding dong. Get your Nanotrasen-approved ice cream!"
-	icon = 'icons/obj/service/kitchen.dmi'
+	icon = '../assets/icons/obj/service/kitchen.dmi'
 	icon_state = "icecream_vat"
 	density = TRUE
 	anchored = FALSE
@@ -154,7 +154,7 @@
 
 	if(added_reagents)
 		balloon_alert(user, "refilling reagents")
-		playsound(src, 'sound/items/drink.ogg', 25, TRUE)
+		playsound(src, '../assets/sound/items/drink.ogg', 25, TRUE)
 	else
 		balloon_alert(user, "no reagents to transfer!")
 	return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
@@ -229,7 +229,7 @@
 /obj/machinery/icecream_vat/proc/make_ice_cream_color(datum/ice_cream_flavour/flavor)
 	if(!flavor.color)
 		return
-	var/image/ice_cream_icon = image('icons/obj/service/kitchen.dmi', "icecream_custom")
+	var/image/ice_cream_icon = image('../assets/icons/obj/service/kitchen.dmi', "icecream_custom")
 	ice_cream_icon.color = flavor.color
 	return ice_cream_icon
 

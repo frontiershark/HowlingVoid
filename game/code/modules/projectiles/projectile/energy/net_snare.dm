@@ -3,7 +3,7 @@
 	icon_state = "e_netting"
 	damage = 30
 	damage_type = STAMINA
-	hitsound = 'sound/items/weapons/taserhit.ogg'
+	hitsound = '../assets/sound/items/weapons/taserhit.ogg'
 	range = 10
 
 /obj/projectile/energy/snare/Initialize(mapload)
@@ -33,7 +33,7 @@
 /obj/effect/nettingportal
 	name = "DRAGnet teleportation field"
 	desc = "A field of bluespace energy, locking on to teleport a target."
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	icon_state = "dragnetfield"
 	light_range = 3
 	anchored = TRUE
@@ -62,11 +62,11 @@
 /obj/item/dragnet_beacon
 	name = "\improper DRAGnet beacon"
 	desc = "Can be synced with a DRAGnet to set it as a designated teleporting point."
-	icon = 'icons/obj/devices/tracker.dmi'
+	icon = '../assets/icons/obj/devices/tracker.dmi'
 	icon_state = "dragnet_beacon"
 	inhand_icon_state = "beacon"
-	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/devices_righthand.dmi'
 	///Has a security ID been used to lock this in place?
 	var/locked = FALSE
 

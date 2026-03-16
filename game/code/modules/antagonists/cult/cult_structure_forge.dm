@@ -19,12 +19,12 @@
 /obj/structure/destructible/cult/item_dispenser/forge/setup_options()
 	var/static/list/forge_items = list(
 		NARSIE_ARMOR = list(
-			PREVIEW_IMAGE = image(icon = 'icons/obj/clothing/suits/armor.dmi', icon_state = "cult_armor"),
+			PREVIEW_IMAGE = image(icon = '../assets/icons/obj/clothing/suits/armor.dmi', icon_state = "cult_armor"),
 			OUTPUT_ITEMS = list(/obj/item/clothing/suit/hooded/cultrobes/hardened),
 			RADIAL_DESC = "Smiths a set of [/obj/item/clothing/suit/hooded/cultrobes/hardened::name], a robust suit of armor that can withstand space.",
 			),
 		ELDRITCH_SWORD = list(
-			PREVIEW_IMAGE = image(icon = 'icons/obj/weapons/sword.dmi', icon_state = "cultblade"),
+			PREVIEW_IMAGE = image(icon = '../assets/icons/obj/weapons/sword.dmi', icon_state = "cultblade"),
 			OUTPUT_ITEMS = list(/obj/item/melee/cultblade),
 			RADIAL_DESC = "Smiths \a [/obj/item/melee/cultblade::name], a powerful blade that can cleave through the toughest of armor.",
 			),
@@ -40,7 +40,7 @@
 	if(!cult_team?.unlocked_heretic_items[CURSED_BLADE_UNLOCKED])
 		return
 	return list(CURSED_BLADE = list(
-			PREVIEW_IMAGE = image(icon = 'icons/obj/weapons/khopesh.dmi', icon_state = "cursed_blade"),
+			PREVIEW_IMAGE = image(icon = '../assets/icons/obj/weapons/khopesh.dmi', icon_state = "cursed_blade"),
 			OUTPUT_ITEMS = list(/obj/item/melee/sickly_blade/cursed),
 			RADIAL_DESC = "Smiths a [/obj/item/melee/sickly_blade/cursed::name], an upgraded dagger that can be broken for an emergency teleport.",
 			),

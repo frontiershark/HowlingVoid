@@ -278,7 +278,7 @@
 
 	if(!GLOB.fire_appearances[fire_icon])
 		GLOB.fire_appearances[fire_icon] = mutable_appearance(
-			'icons/mob/effects/onfire.dmi',
+			'../assets/icons/mob/effects/onfire.dmi',
 			fire_icon,
 			-HIGHEST_LAYER,
 			appearance_flags = RESET_COLOR|KEEP_APART,
@@ -294,11 +294,11 @@
 		if(!iter_part.dmg_overlay_type)
 			continue
 		if(isnull(damage_overlay) && (iter_part.brutestate || iter_part.burnstate))
-			damage_overlay = mutable_appearance('icons/mob/effects/dam_mob.dmi', "blank", -DAMAGE_LAYER, appearance_flags = KEEP_TOGETHER)
+			damage_overlay = mutable_appearance('../assets/icons/mob/effects/dam_mob.dmi', "blank", -DAMAGE_LAYER, appearance_flags = KEEP_TOGETHER)
 		if(iter_part.brutestate)
-			var/mutable_appearance/blood_damage_overlay = mutable_appearance('icons/mob/effects/dam_mob.dmi', "[iter_part.dmg_overlay_type]_[iter_part.body_zone]_[iter_part.brutestate]0", appearance_flags = RESET_COLOR) //we're adding icon_states of the base image as overlays
+			var/mutable_appearance/blood_damage_overlay = mutable_appearance('../assets/icons/mob/effects/dam_mob.dmi', "[iter_part.dmg_overlay_type]_[iter_part.body_zone]_[iter_part.brutestate]0", appearance_flags = RESET_COLOR) //we're adding icon_states of the base image as overlays
 			blood_damage_overlay.color = get_bloodtype()?.get_damage_color(src)
-			var/mutable_appearance/brute_damage_overlay = mutable_appearance('icons/mob/effects/dam_mob.dmi', "[iter_part.dmg_overlay_type]_[iter_part.body_zone]_[iter_part.brutestate]0_overlay", appearance_flags = RESET_COLOR)
+			var/mutable_appearance/brute_damage_overlay = mutable_appearance('../assets/icons/mob/effects/dam_mob.dmi', "[iter_part.dmg_overlay_type]_[iter_part.body_zone]_[iter_part.brutestate]0_overlay", appearance_flags = RESET_COLOR)
 			blood_damage_overlay.overlays += brute_damage_overlay
 			damage_overlay.add_overlay(blood_damage_overlay)
 		if(iter_part.burnstate)
@@ -321,7 +321,7 @@
 	var/mutable_appearance/wound_overlay
 	for(var/obj/item/bodypart/iter_part as anything in bodyparts)
 		if(iter_part.bleed_overlay_icon)
-			var/mutable_appearance/blood_overlay = mutable_appearance('icons/mob/effects/bleed_overlays.dmi', "blank", -WOUND_LAYER, appearance_flags = KEEP_TOGETHER)
+			var/mutable_appearance/blood_overlay = mutable_appearance('../assets/icons/mob/effects/bleed_overlays.dmi', "blank", -WOUND_LAYER, appearance_flags = KEEP_TOGETHER)
 			blood_overlay.color = blood_type.get_wound_color(src)
 			wound_overlay ||= blood_overlay
 			wound_overlay.add_overlay(iter_part.bleed_overlay_icon)
@@ -344,7 +344,7 @@
 
 	if(wear_mask)
 		if(!(obscured_slots & HIDEMASK))
-			overlays_standing[FACEMASK_LAYER] = wear_mask.build_worn_icon(default_layer = FACEMASK_LAYER, default_icon_file = 'icons/mob/clothing/mask.dmi')
+			overlays_standing[FACEMASK_LAYER] = wear_mask.build_worn_icon(default_layer = FACEMASK_LAYER, default_icon_file = '../assets/icons/mob/clothing/mask.dmi')
 		update_hud_wear_mask(wear_mask)
 
 	apply_overlay(FACEMASK_LAYER)
@@ -358,7 +358,7 @@
 
 	if(wear_neck)
 		if(!(obscured_slots & HIDENECK))
-			overlays_standing[NECK_LAYER] = wear_neck.build_worn_icon(default_layer = NECK_LAYER, default_icon_file = 'icons/mob/clothing/neck.dmi')
+			overlays_standing[NECK_LAYER] = wear_neck.build_worn_icon(default_layer = NECK_LAYER, default_icon_file = '../assets/icons/mob/clothing/neck.dmi')
 		update_hud_neck(wear_neck)
 
 	apply_overlay(NECK_LAYER)
@@ -371,7 +371,7 @@
 		inv.update_appearance()
 
 	if(back)
-		overlays_standing[BACK_LAYER] = back.build_worn_icon(default_layer = BACK_LAYER, default_icon_file = 'icons/mob/clothing/back.dmi')
+		overlays_standing[BACK_LAYER] = back.build_worn_icon(default_layer = BACK_LAYER, default_icon_file = '../assets/icons/mob/clothing/back.dmi')
 		update_hud_back(back)
 
 	apply_overlay(BACK_LAYER)
@@ -380,7 +380,7 @@
 	remove_overlay(LEGCUFF_LAYER)
 	clear_alert("legcuffed")
 	if(legcuffed)
-		overlays_standing[LEGCUFF_LAYER] = mutable_appearance('icons/mob/simple/mob.dmi', "legcuff1", -LEGCUFF_LAYER)
+		overlays_standing[LEGCUFF_LAYER] = mutable_appearance('../assets/icons/mob/simple/mob.dmi', "legcuff1", -LEGCUFF_LAYER)
 		apply_overlay(LEGCUFF_LAYER)
 		throw_alert("legcuffed", /atom/movable/screen/alert/restrained/legcuffed, new_master = src.legcuffed)
 
@@ -396,7 +396,7 @@
 
 	if(head)
 		if(!(obscured_slots & HIDEHEADGEAR))
-			overlays_standing[HEAD_LAYER] = head.build_worn_icon(default_layer = HEAD_LAYER, default_icon_file = 'icons/mob/clothing/head/default.dmi')
+			overlays_standing[HEAD_LAYER] = head.build_worn_icon(default_layer = HEAD_LAYER, default_icon_file = '../assets/icons/mob/clothing/head/default.dmi')
 		update_hud_head(head)
 
 	apply_overlay(HEAD_LAYER)
@@ -404,7 +404,7 @@
 /mob/living/carbon/update_worn_handcuffs()
 	remove_overlay(HANDCUFF_LAYER)
 	if(handcuffed)
-		var/mutable_appearance/handcuff_overlay = mutable_appearance('icons/mob/simple/mob.dmi', "handcuff1", -HANDCUFF_LAYER)
+		var/mutable_appearance/handcuff_overlay = mutable_appearance('../assets/icons/mob/simple/mob.dmi', "handcuff1", -HANDCUFF_LAYER)
 		if(handcuffed.blocks_emissive != EMISSIVE_BLOCK_NONE)
 			handcuff_overlay.overlays += emissive_blocker(handcuff_overlay.icon, handcuff_overlay.icon_state, src, alpha = handcuff_overlay.alpha)
 
@@ -617,8 +617,8 @@ GLOBAL_LIST_EMPTY(masked_leg_icons_cache)
 
 	//in case we do not have a cached version of the two cropped icons for this key, we have to create it
 	if(!GLOB.masked_leg_icons_cache[icon_cache_key])
-		var/icon/leg_crop_mask = (body_zone == BODY_ZONE_R_LEG ? icon('icons/mob/leg_masks.dmi', "right_leg") : icon('icons/mob/leg_masks.dmi', "left_leg"))
-		var/icon/leg_crop_mask_lower = (body_zone == BODY_ZONE_R_LEG ? icon('icons/mob/leg_masks.dmi', "right_leg_lower") : icon('icons/mob/leg_masks.dmi', "left_leg_lower"))
+		var/icon/leg_crop_mask = (body_zone == BODY_ZONE_R_LEG ? icon('../assets/icons/mob/leg_masks.dmi', "right_leg") : icon('../assets/icons/mob/leg_masks.dmi', "left_leg"))
+		var/icon/leg_crop_mask_lower = (body_zone == BODY_ZONE_R_LEG ? icon('../assets/icons/mob/leg_masks.dmi', "right_leg_lower") : icon('../assets/icons/mob/leg_masks.dmi', "left_leg_lower"))
 
 		new_leg_icon = icon(limb_overlay.icon, limb_overlay.icon_state)
 		new_leg_icon.Blend(leg_crop_mask, ICON_MULTIPLY)
@@ -644,27 +644,27 @@ GLOBAL_LIST_EMPTY(masked_leg_icons_cache)
 /proc/get_default_icon_by_slot(slot_flag)
 	switch(slot_flag)
 		if(ITEM_SLOT_HEAD)
-			return 'icons/mob/clothing/head/default.dmi'
+			return '../assets/icons/mob/clothing/head/default.dmi'
 		if(ITEM_SLOT_EYES)
-			return 'icons/mob/clothing/eyes.dmi'
+			return '../assets/icons/mob/clothing/eyes.dmi'
 		if(ITEM_SLOT_EARS)
-			return 'icons/mob/clothing/ears.dmi'
+			return '../assets/icons/mob/clothing/ears.dmi'
 		if(ITEM_SLOT_MASK)
-			return 'icons/mob/clothing/mask.dmi'
+			return '../assets/icons/mob/clothing/mask.dmi'
 		if(ITEM_SLOT_NECK)
-			return 'icons/mob/clothing/neck.dmi'
+			return '../assets/icons/mob/clothing/neck.dmi'
 		if(ITEM_SLOT_BACK)
-			return 'icons/mob/clothing/back.dmi'
+			return '../assets/icons/mob/clothing/back.dmi'
 		if(ITEM_SLOT_BELT)
-			return 'icons/mob/clothing/belt.dmi'
+			return '../assets/icons/mob/clothing/belt.dmi'
 		if(ITEM_SLOT_ID)
-			return 'icons/mob/clothing/id.dmi'
+			return '../assets/icons/mob/clothing/id.dmi'
 		if(ITEM_SLOT_ICLOTHING)
 			return DEFAULT_UNIFORM_FILE
 		if(ITEM_SLOT_OCLOTHING)
 			return DEFAULT_SUIT_FILE
 		if(ITEM_SLOT_GLOVES)
-			return 'icons/mob/clothing/hands.dmi'
+			return '../assets/icons/mob/clothing/hands.dmi'
 		if(ITEM_SLOT_FEET)
 			return DEFAULT_SHOES_FILE
 

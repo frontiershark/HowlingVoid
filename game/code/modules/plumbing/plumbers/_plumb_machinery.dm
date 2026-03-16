@@ -5,7 +5,7 @@
 */
 /obj/machinery/plumbing
 	name = "pipe thing"
-	icon = 'icons/obj/pipes_n_cables/hydrochem/plumbers.dmi'
+	icon = '../assets/icons/obj/pipes_n_cables/hydrochem/plumbers.dmi'
 	icon_state = "pump"
 	density = TRUE
 	subsystem_type = /datum/controller/subsystem/processing/plumbing

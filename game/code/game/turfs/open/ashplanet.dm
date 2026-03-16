@@ -1,5 +1,5 @@
 /turf/open/misc/ashplanet
-	icon = 'icons/turf/mining.dmi'
+	icon = '../assets/icons/turf/mining.dmi'
 	gender = PLURAL
 	name = "ash"
 	icon_state = "ash"
@@ -16,7 +16,7 @@
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 	tiled_turf = FALSE
 	rust_resistance = RUST_RESISTANCE_ORGANIC
-	var/smooth_icon = 'icons/turf/floors/ash.dmi'
+	var/smooth_icon = '../assets/icons/turf/floors/ash.dmi'
 
 /turf/open/misc/ashplanet/Initialize(mapload)
 	. = ..()
@@ -44,7 +44,7 @@
 	name = "rocky ground"
 	icon_state = "rockyash"
 	base_icon_state = "rocky_ash"
-	smooth_icon = 'icons/turf/floors/rocky_ash.dmi'
+	smooth_icon = '../assets/icons/turf/floors/rocky_ash.dmi'
 	layer = MID_TURF_LAYER
 	smoothing_groups = SMOOTH_GROUP_TURF_OPEN + SMOOTH_GROUP_FLOOR_ASH_ROCKY
 	canSmoothWith = SMOOTH_GROUP_FLOOR_ASH_ROCKY + SMOOTH_GROUP_CLOSED_TURFS

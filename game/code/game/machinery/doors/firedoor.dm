@@ -6,7 +6,7 @@
 /obj/machinery/door/firedoor
 	name = "firelock"
 	desc = "Apply crowbar."
-	icon = 'icons/obj/doors/doorfireglass.dmi'
+	icon = '../assets/icons/obj/doors/doorfireglass.dmi'
 	icon_state = "door_open"
 	opacity = FALSE
 	density = FALSE
@@ -59,8 +59,8 @@
 	///Keeps track of if we're playing the alarm sound loop (as only one firelock per group should be). Used during power changes.
 	var/is_playing_alarm = FALSE
 
-	var/knock_sound = 'sound/effects/glass/glassknock.ogg'
-	var/bash_sound = 'sound/effects/glass/glassbash.ogg'
+	var/knock_sound = '../assets/sound/effects/glass/glassknock.ogg'
+	var/bash_sound = '../assets/sound/effects/glass/glassbash.ogg'
 
 
 /datum/armor/door_firedoor
@@ -83,7 +83,7 @@
 	if(!merger_typecache)
 		merger_typecache = typecacheof(/obj/machinery/door/firedoor)
 
-	if(prob(0.004) && icon == 'icons/obj/doors/doorfireglass.dmi')
+	if(prob(0.004) && icon == '../assets/icons/obj/doors/doorfireglass.dmi')
 		base_icon_state = "sus"
 		desc += " This one looks a bit sus..."
 
@@ -517,7 +517,7 @@
 		span_notice("You start unfastening [src]'s floor bolts..."))
 	if(!tool.use_tool(src, user, DEFAULT_STEP_TIME))
 		return ITEM_INTERACT_SUCCESS
-	playsound(get_turf(src), 'sound/items/deconstruct.ogg', 50, TRUE)
+	playsound(get_turf(src), '../assets/sound/items/deconstruct.ogg', 50, TRUE)
 	user.visible_message(span_notice("[user] unfastens [src]'s bolts."), \
 		span_notice("You undo [src]'s floor bolts."))
 	deconstruct(TRUE)
@@ -728,7 +728,7 @@
 	alarm_type = FIRELOCK_ALARM_TYPE_GENERIC
 
 /obj/machinery/door/firedoor/border_only
-	icon = 'icons/obj/doors/edge_Doorfire.dmi'
+	icon = '../assets/icons/obj/doors/edge_Doorfire.dmi'
 	can_crush = FALSE
 	flags_1 = ON_BORDER_1
 	can_atmos_pass = ATMOS_PASS_PROC
@@ -797,7 +797,7 @@
 
 /obj/machinery/door/firedoor/heavy
 	name = "heavy firelock"
-	icon = 'icons/obj/doors/doorfire.dmi' //NOVA EDIT - ICON OVERRIDDEN IN AESTHETICS MODULE
+	icon = '../assets/icons/obj/doors/doorfire.dmi' //NOVA EDIT - ICON OVERRIDDEN IN AESTHETICS MODULE
 	glass = FALSE
 	explosion_block = 2
 	assemblytype = /obj/structure/firelock_frame/heavy
@@ -812,7 +812,7 @@
 /obj/structure/firelock_frame
 	name = "firelock frame"
 	desc = "A partially completed firelock."
-	icon = 'icons/obj/doors/doorfire.dmi' //NOVA EDIT - ICON OVERRIDDEN IN AESTHETICS MODULE
+	icon = '../assets/icons/obj/doors/doorfire.dmi' //NOVA EDIT - ICON OVERRIDDEN IN AESTHETICS MODULE
 	icon_state = "frame1"
 	base_icon_state = "frame"
 	anchored = FALSE
@@ -848,7 +848,7 @@
 					return
 				if(constructionStep != CONSTRUCTION_PANEL_OPEN)
 					return
-				playsound(get_turf(src), 'sound/items/deconstruct.ogg', 50, TRUE)
+				playsound(get_turf(src), '../assets/sound/items/deconstruct.ogg', 50, TRUE)
 				user.visible_message(span_notice("[user] removes [src]'s circuit board."), \
 					span_notice("You remove the circuit board from [src]."))
 				new /obj/item/electronics/firelock(drop_location())
@@ -868,7 +868,7 @@
 					return
 				user.visible_message(span_notice("[user] finishes the firelock."), \
 					span_notice("You finish the firelock."))
-				playsound(get_turf(src), 'sound/items/deconstruct.ogg', 50, TRUE)
+				playsound(get_turf(src), '../assets/sound/items/deconstruct.ogg', 50, TRUE)
 				if(reinforced)
 					new /obj/machinery/door/firedoor/heavy(get_turf(src))
 				else if(directional)
@@ -892,13 +892,13 @@
 					return
 				user.visible_message(span_notice("[user] begins reinforcing [src]..."), \
 					span_notice("You begin reinforcing [src]..."))
-				playsound(get_turf(src), 'sound/items/deconstruct.ogg', 50, TRUE)
+				playsound(get_turf(src), '../assets/sound/items/deconstruct.ogg', 50, TRUE)
 				if(do_after(user, DEFAULT_STEP_TIME, target = src))
 					if(constructionStep != CONSTRUCTION_PANEL_OPEN || reinforced || plasteel_sheet.get_amount() < 2 || !plasteel_sheet)
 						return
 					user.visible_message(span_notice("[user] reinforces [src]."), \
 						span_notice("You reinforce [src]."))
-					playsound(get_turf(src), 'sound/items/deconstruct.ogg', 50, TRUE)
+					playsound(get_turf(src), '../assets/sound/items/deconstruct.ogg', 50, TRUE)
 					plasteel_sheet.use(2)
 					reinforced = 1
 				return
@@ -906,7 +906,7 @@
 			if(istype(attacking_object, /obj/item/electronics/firelock))
 				user.visible_message(span_notice("[user] starts adding [attacking_object] to [src]..."), \
 					span_notice("You begin adding a circuit board to [src]..."))
-				playsound(get_turf(src), 'sound/items/deconstruct.ogg', 50, TRUE)
+				playsound(get_turf(src), '../assets/sound/items/deconstruct.ogg', 50, TRUE)
 				if(!do_after(user, DEFAULT_STEP_TIME, target = src))
 					return
 				if(constructionStep != CONSTRUCTION_NO_CIRCUIT)
@@ -914,7 +914,7 @@
 				qdel(attacking_object)
 				user.visible_message(span_notice("[user] adds a circuit to [src]."), \
 					span_notice("You insert and secure [attacking_object]."))
-				playsound(get_turf(src), 'sound/items/deconstruct.ogg', 50, TRUE)
+				playsound(get_turf(src), '../assets/sound/items/deconstruct.ogg', 50, TRUE)
 				constructionStep = CONSTRUCTION_PANEL_OPEN
 				update_appearance()
 				return
@@ -970,7 +970,7 @@
 	reinforced = TRUE
 
 /obj/structure/firelock_frame/border_only
-	icon = 'icons/obj/doors/edge_Doorfire.dmi'
+	icon = '../assets/icons/obj/doors/edge_Doorfire.dmi'
 	flags_1 = ON_BORDER_1
 	obj_flags = CAN_BE_HIT | IGNORE_DENSITY
 	directional = TRUE

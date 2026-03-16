@@ -205,7 +205,7 @@
 		return
 
 	to_chat(user, span_notice("You swallow a gulp of [src]."))
-	playsound(bloodbag, 'sound/items/drink.ogg', 50, TRUE) //slurp
+	playsound(bloodbag, '../assets/sound/items/drink.ogg', 50, TRUE) //slurp
 	bloodbag.reagents.trans_to(user, bloodbag.reagents.maximum_volume * 0.05, transferred_by = user, methods = INGEST)
 	if(bloodbag.reagents.total_volume > 0)
 		async_stab_bloodbag(user, bloodbag, 1 SECONDS)
@@ -213,7 +213,7 @@
 /datum/action/item_action/organ_action/vampire
 	name = "Drain Victim"
 	desc = "Leech blood from any carbon victim you are passively grabbing."
-	button_icon = 'icons/mob/actions/actions_items.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_items.dmi'
 	button_icon_state = "drain_victim"
 	background_icon_state = "bg_vampire"
 
@@ -258,7 +258,7 @@
 
 	victim.show_message(span_danger("[user] is draining your blood!"))
 	to_chat(user, span_notice("You drain some blood!"))
-	playsound(user, 'sound/items/drink.ogg', 30, TRUE, -2)
+	playsound(user, '../assets/sound/items/drink.ogg', 30, TRUE, -2)
 
 	// Since we adjust the user first, we need to take the victim's blood volume into account.
 	var/amount_drained = min(VAMP_DRAIN_AMOUNT, victim.get_blood_volume())

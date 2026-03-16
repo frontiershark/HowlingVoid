@@ -46,10 +46,10 @@ GLOBAL_LIST_EMPTY(virtual_pets_list)
 	var/max_hunger = 500
 	///pet icon for each state
 	var/static/list/pet_state_icons = list(
-		PET_STATE_HUNGRY = list("icon" = 'icons/ui/virtualpet/pet_state.dmi', "icon_state" = "pet_hungry"),
-		PET_STATE_HAPPY = list("icon" = 'icons/ui/virtualpet/pet_state.dmi', "icon_state" = "pet_happy"),
-		PET_STATE_ASLEEP = list("icon" = 'icons/ui/virtualpet/pet_state.dmi', "icon_state" = "pet_asleep"),
-		PET_STATE_NEUTRAL = list("icon" = 'icons/ui/virtualpet/pet_state.dmi', "icon_state" = "pet_neutral"),
+		PET_STATE_HUNGRY = list("icon" = '../assets/icons/ui/virtualpet/pet_state.dmi', "icon_state" = "pet_hungry"),
+		PET_STATE_HAPPY = list("icon" = '../assets/icons/ui/virtualpet/pet_state.dmi', "icon_state" = "pet_happy"),
+		PET_STATE_ASLEEP = list("icon" = '../assets/icons/ui/virtualpet/pet_state.dmi', "icon_state" = "pet_asleep"),
+		PET_STATE_NEUTRAL = list("icon" = '../assets/icons/ui/virtualpet/pet_state.dmi', "icon_state" = "pet_neutral"),
 	)
 	///hat options and what level they will be unlocked at
 	var/static/list/hat_selections = list(
@@ -123,7 +123,7 @@ GLOBAL_LIST_EMPTY(virtual_pets_list)
 
 /datum/computer_file/program/virtual_pet/on_install(datum/computer_file/source, obj/item/modular_computer/computer_installing, mob/user)
 	. = ..()
-	profile_picture = getFlatIcon(image(icon = 'icons/ui/virtualpet/pet_state.dmi', icon_state = "pet_preview"))
+	profile_picture = getFlatIcon(image(icon = '../assets/icons/ui/virtualpet/pet_state.dmi', icon_state = "pet_preview"))
 	GLOB.virtual_pets_list += src
 	pet = new pet_type(computer)
 	pet.forceMove(computer)
@@ -215,7 +215,7 @@ GLOBAL_LIST_EMPTY(virtual_pets_list)
 	overlays += selected_hat["appearance"]
 
 /datum/computer_file/program/virtual_pet/proc/alter_profile_picture()
-	var/image/pet_preview = image(icon = 'icons/ui/virtualpet/pet_state.dmi', icon_state = "pet_preview")
+	var/image/pet_preview = image(icon = '../assets/icons/ui/virtualpet/pet_state.dmi', icon_state = "pet_preview")
 	if(pet.cached_color_filter)
 		pet_preview.color = apply_matrix_to_color(COLOR_WHITE, pet.cached_color_filter["color"], pet.cached_color_filter["space"] || COLORSPACE_RGB)
 	else if (pet.color)
@@ -314,7 +314,7 @@ GLOBAL_LIST_EMPTY(virtual_pets_list)
 	level++
 	grant_level_abilities()
 	pet.ai_controller?.set_blackboard_key(BB_VIRTUAL_PET_LEVEL, level)
-	playsound(computer.loc, 'sound/mobs/non-humanoids/orbie/orbie_level_up.ogg', 50)
+	playsound(computer.loc, '../assets/sound/mobs/non-humanoids/orbie/orbie_level_up.ogg', 50)
 	to_next_level += (level**2) + 500
 	SEND_SIGNAL(pet, COMSIG_VIRTUAL_PET_LEVEL_UP, level) //its a signal so different path types of virtual pets can handle leveling up differently
 	announce_global_updates(message = "has reached level [level]!")
@@ -345,7 +345,7 @@ GLOBAL_LIST_EMPTY(virtual_pets_list)
 		GLOB.global_pet_updates.Cut(1,2)
 
 	GLOB.global_pet_updates += list(message_to_announce)
-	playsound(computer.loc, 'sound/mobs/non-humanoids/orbie/orbie_notification_sound.ogg', 50)
+	playsound(computer.loc, '../assets/sound/mobs/non-humanoids/orbie/orbie_notification_sound.ogg', 50)
 
 /datum/computer_file/program/virtual_pet/proc/remove_pet(datum/source)
 	SIGNAL_HANDLER
@@ -567,7 +567,7 @@ GLOBAL_LIST_EMPTY(virtual_pets_list)
 				if (!length(GLOB.emote_list[LOWER_TEXT(trick_move)]))
 					trick_sequence -= trick_move
 			pet.ai_controller.override_blackboard_key(BB_TRICK_SEQUENCE, trick_sequence)
-			playsound(computer.loc, 'sound/mobs/non-humanoids/orbie/orbie_trick_learned.ogg', 50)
+			playsound(computer.loc, '../assets/sound/mobs/non-humanoids/orbie/orbie_trick_learned.ogg', 50)
 
 	return TRUE
 
@@ -606,7 +606,7 @@ GLOBAL_LIST_EMPTY(virtual_pets_list)
 	pet.befriend(our_user) //befriend whoever set us out
 	animate(pet, transform = matrix(), time = 1.5 SECONDS)
 	pet.forceMove(final_turf)
-	playsound(computer.loc, 'sound/mobs/non-humanoids/orbie/orbie_send_out.ogg', 20)
+	playsound(computer.loc, '../assets/sound/mobs/non-humanoids/orbie/orbie_send_out.ogg', 20)
 	SEND_SIGNAL(pet, COMSIG_VIRTUAL_PET_SUMMONED, our_user)
 	new /obj/effect/temp_visual/guardian/phase(pet.loc)
 

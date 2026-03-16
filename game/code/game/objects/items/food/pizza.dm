@@ -2,7 +2,7 @@
 /obj/item/food/pizza
 	name = "bugged pizza"
 	desc = "This pizza should not be."
-	icon = 'icons/obj/food/pizza.dmi'
+	icon = '../assets/icons/obj/food/pizza.dmi'
 	abstract_type = /obj/item/food/pizza
 	w_class = WEIGHT_CLASS_NORMAL
 	max_volume = 80
@@ -77,7 +77,7 @@
 	produce_slice(user)
 
 /obj/item/food/pizza/proc/get_slices_filter() //to not repeat code
-	return alpha_mask_filter(icon = icon('icons/obj/food/pizza.dmi', "[slices_left]slices"))
+	return alpha_mask_filter(icon = icon('../assets/icons/obj/food/pizza.dmi', "[slices_left]slices"))
 
 /// slices this pizza. all arguments optional.
 /obj/item/food/pizza/proc/slice(mob/user, obj/item/tool)
@@ -129,7 +129,7 @@
 /obj/item/food/pizzaslice
 	name = "bugged pizza slice"
 	desc = "This slice of pizza should not be"
-	icon = 'icons/obj/food/pizza.dmi'
+	icon = '../assets/icons/obj/food/pizza.dmi'
 	abstract_type = /obj/item/food/pizzaslice
 	food_reagents = list(/datum/reagent/consumable/nutriment = 5)
 	foodtypes = GRAIN

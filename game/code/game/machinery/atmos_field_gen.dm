@@ -8,7 +8,7 @@
 /obj/machinery/atmos_shield_gen
 	name = "atmospheric shield generator"
 	desc = "Produces an atmos shield in a line between itself and another generator with both facing the other, while active. Powered by APC. Field must not be obstructed by wall, or an atmos shield field. Will turn on after gaining power if turned off due to power loss."
-	icon = 'icons/obj/machines/atmosshieldgen.dmi'
+	icon = '../assets/icons/obj/machines/atmosshieldgen.dmi'
 	base_icon_state = "atmosshield"
 	icon_state = "atmosshield"
 	density = FALSE
@@ -220,7 +220,7 @@
 		return
 	if(power_failure)
 		balloon_alert_to_viewers("no power!")
-		playsound(src, 'sound/machines/cryo_warning.ogg', 65)
+		playsound(src, '../assets/sound/machines/cryo_warning.ogg', 65)
 	on = power_failure ? GENERATOR_WANTPOWER : GENERATOR_INACTIVE
 	master?.turn_off(power_failure)
 	change_master(null)
@@ -266,7 +266,7 @@
 
 /obj/effect/atmos_shield
 	name = ""
-	icon = 'icons/obj/smooth_structures/atmosshield.dmi'
+	icon = '../assets/icons/obj/smooth_structures/atmosshield.dmi'
 	icon_state = "atmosshield-0"
 	base_icon_state = "atmosshield"
 	density = FALSE

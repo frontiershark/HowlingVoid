@@ -22,7 +22,7 @@
 	for(var/mentor in GLOB.mentors)
 		var/client/mentor_client = mentor
 		if(mentor_client)
-			SEND_SOUND(mentor_client, 'sound/items/bikehorn.ogg')
+			SEND_SOUND(mentor_client, '../assets/sound/items/bikehorn.ogg')
 			to_chat(mentor_client, mentor_msg)
 
 	to_chat(src, span_mentor("PM to-<b>Mentors</b>: [msg]"))

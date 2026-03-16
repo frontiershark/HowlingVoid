@@ -1,8 +1,8 @@
 /obj/item/clothing/suit/hooded/ethereal_raincoat
 	name = "ethereal raincoat"
 	desc = " A raincoat commonly worn by travelers or tourists not too fond of Sprout's rainy weather."
-	icon = 'icons/map_icons/clothing/suit/_suit.dmi'
-	worn_icon = 'icons/mob/clothing/suits/ethereal.dmi'
+	icon = '../assets/icons/map_icons/clothing/suit/_suit.dmi'
+	worn_icon = '../assets/icons/mob/clothing/suits/ethereal.dmi'
 	icon_state = "/obj/item/clothing/suit/hooded/ethereal_raincoat"
 	post_init_icon_state = "eth_raincoat"
 	greyscale_config = /datum/greyscale_config/eth_raincoat
@@ -20,11 +20,11 @@
 /obj/item/clothing/suit/hooded/ethereal_raincoat/worn_overlays(mutable_appearance/standing, isinhands, icon_file)
 	. = ..()
 	if(!isinhands)
-		. += emissive_appearance('icons/mob/clothing/suits/ethereal.dmi', "eth_raincoat_glow_worn", offset_spokesman = src, alpha = src.alpha)
+		. += emissive_appearance('../assets/icons/mob/clothing/suits/ethereal.dmi', "eth_raincoat_glow_worn", offset_spokesman = src, alpha = src.alpha)
 
 /obj/item/clothing/suit/hooded/ethereal_raincoat/update_overlays()
 	. = ..()
-	. += emissive_appearance('icons/obj/clothing/suits/ethereal.dmi', "eth_raincoat_glow", offset_spokesman = src, alpha = src.alpha)
+	. += emissive_appearance('../assets/icons/obj/clothing/suits/ethereal.dmi', "eth_raincoat_glow", offset_spokesman = src, alpha = src.alpha)
 
 /obj/item/clothing/suit/hooded/ethereal_raincoat/trailwarden
 	name = "trailwarden oilcoat"
@@ -48,9 +48,9 @@
 /obj/item/clothing/head/hooded/ethereal_rainhood
 	name = "ethereal rainhood"
 	desc = "Protects against space rain."
-	icon = 'icons/obj/clothing/head/ethereal.dmi'
+	icon = '../assets/icons/obj/clothing/head/ethereal.dmi'
 	icon_state = "eth_rainhood"
-	worn_icon = 'icons/mob/clothing/head/ethereal.dmi'
+	worn_icon = '../assets/icons/mob/clothing/head/ethereal.dmi'
 	body_parts_covered = HEAD
 	flags_inv = HIDEHAIR|HIDEEARS|HIDEFACIALHAIR
 

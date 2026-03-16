@@ -694,7 +694,7 @@
 
 /datum/reagent/drug/saturnx/on_mob_metabolize(mob/living/invisible_man)
 	. = ..()
-	playsound(invisible_man, 'sound/effects/chemistry/saturnx_fade.ogg', 40)
+	playsound(invisible_man, '../assets/sound/effects/chemistry/saturnx_fade.ogg', 40)
 	to_chat(invisible_man, span_nicegreen("You feel pins and needles all over your skin as your body suddenly becomes transparent!"))
 	addtimer(CALLBACK(src, PROC_REF(turn_man_invisible), invisible_man), 1 SECONDS) //just a quick delay to synch up the sound.
 	if(!invisible_man.hud_used)
@@ -811,7 +811,7 @@ If you have at over 25u in your body you restore more than 20 stamina per cycle,
 	. = ..()
 	kronkaine_fiend.add_actionspeed_modifier(/datum/actionspeed_modifier/kronkaine)
 	kronkaine_fiend.sound_environment_override = SOUND_ENVIRONMENT_HANGAR
-	SEND_SOUND(kronkaine_fiend, sound('sound/effects/health/fastbeat.ogg', repeat = TRUE, channel = CHANNEL_HEARTBEAT, volume = 30))
+	SEND_SOUND(kronkaine_fiend, sound('../assets/sound/effects/health/fastbeat.ogg', repeat = TRUE, channel = CHANNEL_HEARTBEAT, volume = 30))
 
 /datum/reagent/drug/kronkaine/on_mob_end_metabolize(mob/living/kronkaine_fiend)
 	. = ..()
@@ -831,7 +831,7 @@ If you have at over 25u in your body you restore more than 20 stamina per cycle,
 	if(methods & (INJECT|INHALE))
 		stamina_heal_per_unit = 12
 		if(trans_volume >= 3)
-			SEND_SOUND(druggo, sound('sound/items/weapons/flash_ring.ogg')) //The efffect is often refered to as the "kronkaine bells".
+			SEND_SOUND(druggo, sound('../assets/sound/items/weapons/flash_ring.ogg')) //The efffect is often refered to as the "kronkaine bells".
 			to_chat(druggo, span_danger("Your ears ring as your blood pressure suddenly spikes!"))
 			to_chat(druggo, span_nicegreen("You feel an amazing rush!"))
 		else if(prob(15))
@@ -848,7 +848,7 @@ If you have at over 25u in your body you restore more than 20 stamina per cycle,
 		need_mob_update = UPDATE_MOB_HEALTH
 		if(kronkaine_fiend.get_organ_loss(ORGAN_SLOT_HEART) >= 75 && prob(15))
 			to_chat(kronkaine_fiend, span_userdanger("You feel like your heart is about to explode!"))
-			playsound(kronkaine_fiend, 'sound/effects/singlebeat.ogg', 200, TRUE)
+			playsound(kronkaine_fiend, '../assets/sound/effects/singlebeat.ogg', 200, TRUE)
 	kronkaine_fiend.set_jitter_if_lower(13.34 SECONDS * metabolization_ratio * seconds_per_tick)
 	kronkaine_fiend.AdjustSleeping(-1.34 SECONDS * metabolization_ratio * seconds_per_tick)
 	kronkaine_fiend.adjust_drowsiness(-6.67 SECONDS * metabolization_ratio * seconds_per_tick)
@@ -878,7 +878,7 @@ If you have at over 25u in your body you restore more than 20 stamina per cycle,
 
 /datum/reagent/drug/kronkaine/overdose_start(mob/living/affected_mob, metabolization_ratio)
 	. = ..()
-	SEND_SOUND(affected_mob, sound('sound/effects/health/fastbeat.ogg', repeat = TRUE, channel = CHANNEL_HEARTBEAT, volume = 90))
+	SEND_SOUND(affected_mob, sound('../assets/sound/effects/health/fastbeat.ogg', repeat = TRUE, channel = CHANNEL_HEARTBEAT, volume = 90))
 
 ///dirty kronkaine, aka gore. far worse overdose effects.
 /datum/reagent/drug/kronkaine/gore

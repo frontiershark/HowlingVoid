@@ -16,7 +16,7 @@
 	. += "the mouth must have teeth"
 
 /datum/surgery_operation/limb/add_dental_implant/get_default_radial_image()
-	return image('icons/hud/implants.dmi', "reagents")
+	return image('../assets/icons/hud/implants.dmi', "reagents")
 
 /datum/surgery_operation/limb/add_dental_implant/snowflake_check_availability(atom/movable/operating_on, mob/living/surgeon, tool, operated_zone)
 	return ..() && surgeon.canUnEquip(tool) && operated_zone == BODY_ZONE_PRECISE_MOUTH

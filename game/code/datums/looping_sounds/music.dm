@@ -1,6 +1,6 @@
 /datum/looping_sound/local_forecast
 	mid_sounds = list(
-		'sound/music/elevator/robocop-short.ogg' = 1,
+		'../assets/sound/music/elevator/robocop-short.ogg' = 1,
 	)
 	mid_length = 61 SECONDS
 	volume = 20

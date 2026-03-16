@@ -10,7 +10,7 @@ GLOBAL_LIST_EMPTY(raptor_population)
 /mob/living/basic/raptor
 	name = "raptor"
 	desc = "A trusty, powerful steed. Taming it might prove difficult..."
-	icon = 'icons/mob/simple/lavaland/raptor_big.dmi'
+	icon = '../assets/icons/mob/simple/lavaland/raptor_big.dmi'
 	icon_state = "raptor_red"
 	base_icon_state = "raptor"
 	pixel_w = -12
@@ -23,7 +23,7 @@ GLOBAL_LIST_EMPTY(raptor_population)
 	melee_damage_upper = 15
 	combat_mode = TRUE
 	mob_size = MOB_SIZE_LARGE
-	head_icon = 'icons/mob/clothing/back/pets_back.dmi'
+	head_icon = '../assets/icons/mob/clothing/back/pets_back.dmi'
 	worn_slot_flags = ITEM_SLOT_BACK
 	held_w_class = WEIGHT_CLASS_BULKY
 	unsuitable_atmos_damage = 0
@@ -31,7 +31,7 @@ GLOBAL_LIST_EMPTY(raptor_population)
 	maximum_survivable_temperature = INFINITY
 	attack_verb_continuous = "pecks"
 	attack_verb_simple = "chomp"
-	attack_sound = 'sound/items/weapons/punch1.ogg'
+	attack_sound = '../assets/sound/items/weapons/punch1.ogg'
 	faction = list(FACTION_RAPTOR, FACTION_NEUTRAL)
 	speak_emote = list("screeches")
 	butcher_results = list(
@@ -303,7 +303,7 @@ GLOBAL_LIST_EMPTY(raptor_population)
 /mob/living/basic/raptor/proc/on_picked_up(mob/living/basic/raptor/source, mob/living/user, obj/item/mob_holder/holder)
 	SIGNAL_HANDLER
 	// Our inventory code sucks so we have to do this
-	holder.icon = 'icons/mob/simple/lavaland/raptor_baby.dmi'
+	holder.icon = '../assets/icons/mob/simple/lavaland/raptor_baby.dmi'
 	holder.icon_state = icon_state
 	holder.alternate_worn_layer = HEAD_LAYER
 	holder.pixel_w = 0
@@ -362,21 +362,21 @@ GLOBAL_LIST_EMPTY(raptor_population)
 		if (RAPTOR_BABY)
 			name = "baby raptor"
 			desc = "Will this grow into something useful?"
-			icon = 'icons/mob/simple/lavaland/raptor_baby.dmi'
+			icon = '../assets/icons/mob/simple/lavaland/raptor_baby.dmi'
 			base_icon_state = "baby"
 			base_pixel_w = 0
 			mob_size = MOB_SIZE_TINY
 		if (RAPTOR_YOUNG)
 			name = "raptor youngling"
 			desc = "A young raptor that can grow into a robust, trusty steed. Rather naive at such an age, it shouldn't be too hard to tame."
-			icon = 'icons/mob/simple/lavaland/raptor_big.dmi'
+			icon = '../assets/icons/mob/simple/lavaland/raptor_big.dmi'
 			base_icon_state = "young"
 			base_pixel_w = initial(base_pixel_w)
 			mob_size = MOB_SIZE_HUMAN
 		if (RAPTOR_ADULT)
 			name = "raptor"
 			desc = initial(desc)
-			icon = 'icons/mob/simple/lavaland/raptor_big.dmi'
+			icon = '../assets/icons/mob/simple/lavaland/raptor_big.dmi'
 			base_icon_state = "raptor"
 			base_pixel_w = initial(base_pixel_w)
 			mob_size = initial(mob_size)
@@ -418,7 +418,7 @@ GLOBAL_LIST_EMPTY(raptor_population)
 			holder = null
 
 	if (collar_state)
-		RemoveElement(/datum/element/wears_collar, collar_icon = 'icons/mob/simple/lavaland/raptor_big.dmi', collar_icon_state = "[collar_state]_")
+		RemoveElement(/datum/element/wears_collar, collar_icon = '../assets/icons/mob/simple/lavaland/raptor_big.dmi', collar_icon_state = "[collar_state]_")
 
 	if (new_stage == RAPTOR_BABY)
 		collar_state = null
@@ -435,7 +435,7 @@ GLOBAL_LIST_EMPTY(raptor_population)
 		holder?.update_weight_class(held_w_class)
 	else
 		collar_state = base_icon_state
-		AddElement(/datum/element/wears_collar, collar_icon = 'icons/mob/simple/lavaland/raptor_big.dmi', collar_icon_state = "[collar_state]_")
+		AddElement(/datum/element/wears_collar, collar_icon = '../assets/icons/mob/simple/lavaland/raptor_big.dmi', collar_icon_state = "[collar_state]_")
 		if (prev_stage == RAPTOR_BABY)
 			var/list/friends = ai_controller?.blackboard[BB_FRIENDS_LIST]
 			if (friends)
@@ -464,11 +464,11 @@ GLOBAL_LIST_EMPTY(raptor_population)
 		BB_EMOTE_SAY = list("Chirp chirp chirp!", "Kweh!", "Bwark!"),
 		BB_EMOTE_SEE = list("shakes its feathers!", "stretches!", "flaps its wings!", "pecks at the ground!"),
 		BB_EMOTE_SOUND = list(
-			'sound/mobs/non-humanoids/raptor/raptor_1.ogg',
-			'sound/mobs/non-humanoids/raptor/raptor_2.ogg',
-			'sound/mobs/non-humanoids/raptor/raptor_3.ogg',
-			'sound/mobs/non-humanoids/raptor/raptor_4.ogg',
-			'sound/mobs/non-humanoids/raptor/raptor_5.ogg',
+			'../assets/sound/mobs/non-humanoids/raptor/raptor_1.ogg',
+			'../assets/sound/mobs/non-humanoids/raptor/raptor_2.ogg',
+			'../assets/sound/mobs/non-humanoids/raptor/raptor_3.ogg',
+			'../assets/sound/mobs/non-humanoids/raptor/raptor_4.ogg',
+			'../assets/sound/mobs/non-humanoids/raptor/raptor_5.ogg',
 		),
 		BB_SPEAK_CHANCE = 2,
 	)
@@ -551,7 +551,7 @@ GLOBAL_LIST_EMPTY(raptor_population)
 	raptor_color = /datum/raptor_color/blue
 
 /mob/living/basic/raptor/baby
-	icon = 'icons/mob/simple/lavaland/raptor_baby.dmi'
+	icon = '../assets/icons/mob/simple/lavaland/raptor_baby.dmi'
 	growth_stage = RAPTOR_BABY
 
 /mob/living/basic/raptor/baby/red

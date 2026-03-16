@@ -1,7 +1,7 @@
 /obj/item/reagent_containers
 	name = "Container"
 	desc = "..."
-	icon = 'icons/obj/medical/chemical.dmi'
+	icon = '../assets/icons/obj/medical/chemical.dmi'
 	icon_state = null
 	abstract_type = /obj/item/reagent_containers
 	w_class = WEIGHT_CLASS_TINY
@@ -38,7 +38,7 @@
 	/// If not set, uses the current icon state.
 	var/fill_icon_state = null
 	/// The icon file to take fill icon appearances from
-	var/fill_icon = 'icons/obj/medical/reagent_fillings.dmi'
+	var/fill_icon = '../assets/icons/obj/medical/reagent_fillings.dmi'
 	///The sound this container makes when picked up, dropped if there is liquid inside.
 	var/reagent_container_liquid_sound
 	///The sound this container makes when there is an amount of liquid over a certain threshold inside on drop
@@ -163,9 +163,9 @@
 			span_userdanger("You feel drenched!"),
 		)
 
-	playsound(target, 'sound/effects/slosh.ogg', 25, TRUE)
+	playsound(target, '../assets/sound/effects/slosh.ogg', 25, TRUE)
 
-	var/mutable_appearance/splash_animation = mutable_appearance('icons/effects/effects.dmi', "splash")
+	var/mutable_appearance/splash_animation = mutable_appearance('../assets/icons/effects/effects.dmi', "splash")
 	if(isturf(target))
 		splash_animation.icon_state = "splash_floor"
 	splash_animation.color = mix_color_from_reagents(reagents.reagent_list)
@@ -270,9 +270,9 @@
 		if(QDELETED(src))
 			return
 
-	playsound(target, 'sound/effects/slosh.ogg', 25, TRUE)
+	playsound(target, '../assets/sound/effects/slosh.ogg', 25, TRUE)
 
-	var/mutable_appearance/splash_animation = mutable_appearance('icons/effects/effects.dmi', "splash")
+	var/mutable_appearance/splash_animation = mutable_appearance('../assets/icons/effects/effects.dmi', "splash")
 	if(isturf(target))
 		splash_animation.icon_state = "splash_floor"
 	splash_animation.color = mix_color_from_reagents(reagents.reagent_list)

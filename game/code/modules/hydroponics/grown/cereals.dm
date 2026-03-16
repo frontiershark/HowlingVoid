@@ -25,7 +25,7 @@
 	tastes = list("wheat" = 1)
 	distill_reagent = /datum/reagent/consumable/ethanol/beer
 	slot_flags = ITEM_SLOT_MASK
-	worn_icon = 'icons/mob/clothing/head/hydroponics.dmi'
+	worn_icon = '../assets/icons/mob/clothing/head/hydroponics.dmi'
 
 /obj/item/food/grown/wheat/grind_results()
 	return list(/datum/reagent/consumable/flour = 0)
@@ -103,14 +103,14 @@
 	tastes = list("meatwheat" = 1)
 	can_distill = FALSE
 	slot_flags = ITEM_SLOT_MASK
-	worn_icon = 'icons/mob/clothing/head/hydroponics.dmi'
+	worn_icon = '../assets/icons/mob/clothing/head/hydroponics.dmi'
 
 /obj/item/food/grown/meatwheat/grind_results()
 	return list(/datum/reagent/consumable/flour = 0, /datum/reagent/blood = 0)
 
 /obj/item/food/grown/meatwheat/attack_self(mob/living/user)
 	user.visible_message(span_notice("[user] crushes [src] into meat."), span_notice("You crush [src] into something that resembles meat."))
-	playsound(user, 'sound/effects/blob/blobattack.ogg', 50, TRUE)
+	playsound(user, '../assets/sound/effects/blob/blobattack.ogg', 50, TRUE)
 	var/obj/item/food/meat/slab/meatwheat/meaties = new(null)
 	meaties.reagents.set_all_reagents_purity(seed.get_reagent_purity())
 	qdel(src)

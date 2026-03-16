@@ -3,7 +3,7 @@
  */
 /obj/item/mining_stabilizer
 	name = "stabilizing serum"
-	icon = 'icons/obj/medical/chemical.dmi'
+	icon = '../assets/icons/obj/medical/chemical.dmi'
 	icon_state = "bottle19"
 	desc = "Inject certain types of monster organs with this stabilizer to prevent their rapid decay."
 	w_class = WEIGHT_CLASS_TINY
@@ -33,7 +33,7 @@
 	name = "monster core"
 	desc = "All that remains of a monster. This abstract item should not spawn. \
 		It will rapidly decay into uselessness. but don't worry because it's already useless."
-	icon = 'icons/obj/medical/organs/mining_organs.dmi'
+	icon = '../assets/icons/obj/medical/organs/mining_organs.dmi'
 	icon_state = "hivelord_core"
 	actions_types = list(/datum/action/cooldown/monster_core_action)
 
@@ -218,7 +218,7 @@
  */
 /datum/action/cooldown/monster_core_action
 	check_flags = AB_CHECK_CONSCIOUS
-	button_icon = 'icons/obj/medical/organs/mining_organs.dmi'
+	button_icon = '../assets/icons/obj/medical/organs/mining_organs.dmi'
 	button_icon_state = "hivelord_core_2"
 
 /datum/action/cooldown/monster_core_action/Activate(trigger_flags)

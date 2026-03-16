@@ -3,7 +3,7 @@
 	name = "polymorphic field inverter"
 	desc = "This device can scan and store DNA from other life forms."
 	slot_flags = ITEM_SLOT_BELT
-	icon = 'icons/obj/clothing/belts.dmi'
+	icon = '../assets/icons/obj/clothing/belts.dmi'
 	icon_state = "polybelt_inactive"
 	worn_icon_state = "polybelt_inactive"
 	base_icon_state = "polybelt"
@@ -57,7 +57,7 @@
 	active = TRUE
 	update_appearance(UPDATE_ICON_STATE)
 	update_transform_action()
-	playsound(src, 'sound/machines/crate/crate_open.ogg', 50, FALSE)
+	playsound(src, '../assets/sound/machines/crate/crate_open.ogg', 50, FALSE)
 	qdel(tool)
 	return ITEM_INTERACT_SUCCESS
 
@@ -94,7 +94,7 @@
 	if(istype(carbon_mob))
 		carbon_mob.dna?.update_body_size(force_reapply = TRUE)
 	// NOVA EDIT ADDITION END
-	playsound(src, 'sound/machines/ping.ogg', 50, FALSE)
+	playsound(src, '../assets/sound/machines/ping.ogg', 50, FALSE)
 	return TRUE
 
 /// Make sure we can transform into the scanned target
@@ -147,7 +147,7 @@
 	var/old_transform = cast_on.transform
 
 	var/animate_step = channel_time / 6
-	playsound(cast_on, 'sound/effects/wounds/crack1.ogg', 50)
+	playsound(cast_on, '../assets/sound/effects/wounds/crack1.ogg', 50)
 	animate(cast_on, transform = matrix() * 1.1, time = animate_step, easing = SINE_EASING)
 	animate(transform = matrix() * 0.9, time = animate_step, easing = SINE_EASING)
 	animate(transform = matrix() * 1.2, time = animate_step, easing = SINE_EASING)
@@ -161,7 +161,7 @@
 		cast_on.transform = old_transform
 		return . | SPELL_CANCEL_CAST
 	cast_on.visible_message(span_warning("[cast_on]'s body rearranges itself with a horrible crunching sound!"))
-	playsound(cast_on, 'sound/effects/magic/demon_consume.ogg', 50, TRUE)
+	playsound(cast_on, '../assets/sound/effects/magic/demon_consume.ogg', 50, TRUE)
 
 /datum/action/cooldown/spell/shapeshift/polymorph_belt/after_cast(atom/cast_on)
 	. = ..()

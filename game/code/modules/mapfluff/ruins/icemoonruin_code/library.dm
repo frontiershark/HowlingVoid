@@ -1,7 +1,7 @@
 /obj/machinery/door/puzzle/keycard/library
 	name = "wooden door"
 	desc = "A dusty, scratched door with a thick lock attached."
-	icon = 'icons/obj/doors/puzzledoor/wood.dmi'
+	icon = '../assets/icons/obj/doors/puzzledoor/wood.dmi'
 	puzzle_id = "library"
 	open_message = "The door opens with a loud creak."
 
@@ -38,7 +38,7 @@
 /obj/item/feather
 	name = "feather"
 	desc = "A dark, wilting feather. It seems as old as time."
-	icon = 'icons/obj/service/bureaucracy.dmi'
+	icon = '../assets/icons/obj/service/bureaucracy.dmi'
 	icon_state = "feather"
 	force = 0
 	throwforce = 0

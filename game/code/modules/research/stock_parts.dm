@@ -5,7 +5,7 @@ If you create T5+ please take a pass at mech_fabricator.dm. The parts being good
 /obj/item/stock_parts
 	name = "stock part"
 	desc = "What?"
-	icon = 'icons/obj/devices/stock_parts.dmi'
+	icon = '../assets/icons/obj/devices/stock_parts.dmi'
 	///The generic category type that the stock part belongs to.  Generic objects that should not be instantiated should have the same type and abstract_type
 	abstract_type = /obj/item/stock_parts
 	w_class = WEIGHT_CLASS_SMALL
@@ -249,6 +249,6 @@ If you create T5+ please take a pass at mech_fabricator.dm. The parts being good
 
 /obj/item/research//Makes testing much less of a pain -Sieve
 	name = "research"
-	icon = 'icons/obj/devices/stock_parts.dmi'
+	icon = '../assets/icons/obj/devices/stock_parts.dmi'
 	icon_state = "capacitor"
 	desc = "A debug item for research."

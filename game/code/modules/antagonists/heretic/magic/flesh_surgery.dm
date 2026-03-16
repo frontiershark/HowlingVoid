@@ -6,7 +6,7 @@
 		Right-clicking, if done on summons or minions, will restore health. Can also be used to heal damaged organs."
 	background_icon_state = "bg_heretic"
 	overlay_icon_state = "bg_heretic_border"
-	button_icon = 'icons/mob/actions/actions_ecult.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_ecult.dmi'
 	button_icon_state = "mad_touch"
 	sound = null
 
@@ -164,7 +164,7 @@
 	var/organ_hp_to_heal = to_heal.maxHealth * organ_percent_healing
 	to_heal.set_organ_damage(max(0 , to_heal.damage - organ_hp_to_heal))
 	to_heal.balloon_alert(caster, "organ healed")
-	playsound(to_heal, 'sound/effects/magic/staff_healing.ogg', 30)
+	playsound(to_heal, '../assets/sound/effects/magic/staff_healing.ogg', 30)
 	new /obj/effect/temp_visual/cult/sparks(get_turf(to_heal))
 	var/condition = (to_heal.damage > 0) ? "better" : "perfect"
 	caster.visible_message(
@@ -186,7 +186,7 @@
 	// while for human minions(ghouls), this will heal brute and burn like normal. So be careful adjusting to bigger numbers
 	to_heal.balloon_alert(caster, "[what_are_we] healed")
 	to_heal.heal_overall_damage(monster_brute_healing, monster_burn_healing)
-	playsound(to_heal, 'sound/effects/magic/staff_healing.ogg', 30)
+	playsound(to_heal, '../assets/sound/effects/magic/staff_healing.ogg', 30)
 	new /obj/effect/temp_visual/cult/sparks(get_turf(to_heal))
 	caster.visible_message(
 		span_warning("[caster]'s hand glows a brilliant red as [caster.p_they()] restore[caster.p_s()] [to_heal] to good condition!"),
@@ -249,7 +249,7 @@
 		)
 
 	carbon_victim.balloon_alert(caster, "extracting [chosen_organ]...")
-	playsound(victim, 'sound/items/weapons/slice.ogg', 50, TRUE)
+	playsound(victim, '../assets/sound/items/weapons/slice.ogg', 50, TRUE)
 	carbon_victim.add_atom_colour(COLOR_DARK_RED, TEMPORARY_COLOUR_PRIORITY)
 	if(!do_after(caster, time_it_takes, carbon_victim, extra_checks = CALLBACK(src, PROC_REF(extraction_checks), picked_organ, hand, victim, caster)))
 		carbon_victim.balloon_alert(caster, "interrupted!")
@@ -273,7 +273,7 @@
 	picked_organ.Remove(carbon_victim)
 	carbon_victim.balloon_alert(caster, "[chosen_organ] removed")
 	carbon_victim.remove_atom_colour(TEMPORARY_COLOUR_PRIORITY, COLOR_DARK_RED)
-	playsound(victim, 'sound/effects/dismember.ogg', 50, TRUE)
+	playsound(victim, '../assets/sound/effects/dismember.ogg', 50, TRUE)
 	if(carbon_victim.stat == CONSCIOUS)
 		carbon_victim.adjust_timed_status_effect(15 SECONDS, /datum/status_effect/speech/slurring/heretic)
 		carbon_victim.emote("scream")
@@ -333,7 +333,7 @@
 		)
 
 	victim.balloon_alert(caster, "inserting [inserted_organ]...")
-	playsound(victim, 'sound/items/weapons/slice.ogg', 50, TRUE)
+	playsound(victim, '../assets/sound/items/weapons/slice.ogg', 50, TRUE)
 	victim.add_atom_colour(COLOR_DARK_RED, TEMPORARY_COLOUR_PRIORITY)
 	if(!do_after(caster, time_it_takes, victim, extra_checks = CALLBACK(src, PROC_REF(insertion_checks), inserted_organ, hand, victim, caster)))
 		victim.balloon_alert(caster, "interrupted!")
@@ -357,7 +357,7 @@
 	inserted_organ.Insert(victim)
 	victim.balloon_alert(caster, "[inserted_organ] inserted")
 	victim.remove_atom_colour(TEMPORARY_COLOUR_PRIORITY, COLOR_DARK_RED)
-	playsound(victim, 'sound/effects/dismember.ogg', 50, TRUE)
+	playsound(victim, '../assets/sound/effects/dismember.ogg', 50, TRUE)
 	if(victim.stat == CONSCIOUS)
 		victim.emote("scream")
 		if(!using_on_self)
@@ -392,6 +392,6 @@
 /obj/item/melee/touch_attack/flesh_surgery
 	name = "\improper knit flesh"
 	desc = "Let's go practice medicine."
-	icon = 'icons/obj/weapons/hand.dmi'
+	icon = '../assets/icons/obj/weapons/hand.dmi'
 	icon_state = "disintegrate"
 	inhand_icon_state = "disintegrate"

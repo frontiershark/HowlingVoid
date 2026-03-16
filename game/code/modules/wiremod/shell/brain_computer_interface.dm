@@ -1,7 +1,7 @@
 /obj/item/organ/cyberimp/bci
 	name = "brain-computer interface"
 	desc = "An implant that can be placed in a user's head to control circuits using their brain."
-	icon = 'icons/obj/science/circuits.dmi'
+	icon = '../assets/icons/obj/science/circuits.dmi'
 	icon_state = "bci"
 	zone = BODY_ZONE_HEAD
 	w_class = WEIGHT_CLASS_TINY
@@ -57,7 +57,7 @@
 
 /datum/action/innate/bci_action
 	name = "Action"
-	button_icon = 'icons/mob/actions/actions_items.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_items.dmi'
 	check_flags = AB_CHECK_CONSCIOUS
 	button_icon_state = "bci_power"
 
@@ -222,7 +222,7 @@
 /datum/action/innate/bci_charge_action
 	name = "Check BCI Charge"
 	check_flags = NONE
-	button_icon = 'icons/obj/machines/cell_charger.dmi'
+	button_icon = '../assets/icons/obj/machines/cell_charger.dmi'
 	button_icon_state = "cell"
 
 	var/obj/item/circuit_component/bci_core/circuit_component
@@ -271,7 +271,7 @@
 	name = "brain-computer interface manipulation chamber"
 	desc = "A machine that, when given a brain-computer interface, will implant it into an occupant. Otherwise, will remove any brain-computer interfaces they already have."
 	circuit = /obj/item/circuitboard/machine/bci_implanter
-	icon = 'icons/obj/machines/bci_implanter.dmi'
+	icon = '../assets/icons/obj/machines/bci_implanter.dmi'
 	icon_state = "bci_implanter"
 	base_icon_state = "bci_implanter"
 	layer = ABOVE_WINDOW_LAYER
@@ -419,7 +419,7 @@
 	if (!istype(carbon_occupant))
 		return
 
-	playsound(loc, 'sound/machines/ping.ogg', 30, FALSE)
+	playsound(loc, '../assets/sound/machines/ping.ogg', 30, FALSE)
 
 	var/obj/item/organ/cyberimp/bci/bci_organ = carbon_occupant.get_organ_by_type(/obj/item/organ/cyberimp/bci)
 
@@ -456,7 +456,7 @@
 		var/obj/item/organ/cyberimp/bci/bci_organ = carbon_occupant.get_organ_by_type(/obj/item/organ/cyberimp/bci)
 		if (isnull(bci_organ) && isnull(bci_to_implant))
 			say("No brain-computer interface inserted, and occupant does not have one. Insert a BCI to implant one.")
-			playsound(src, 'sound/machines/buzz/buzz-sigh.ogg', 30, TRUE)
+			playsound(src, '../assets/sound/machines/buzz/buzz-sigh.ogg', 30, TRUE)
 			return FALSE
 
 	addtimer(CALLBACK(src, PROC_REF(start_process)), 1 SECONDS)

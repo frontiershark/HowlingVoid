@@ -94,7 +94,7 @@
 /obj/structure/ice_stasis/frozenwake
 	name = "ice pillar"
 	desc = "Encased within a towering pillar of ancient ice stands a Hearthkin statue, solemn and proud. In its outstretched arms rests a greatsword, its blade wide and etched with runes that pulse faintly beneath the frost, like the heartbeat of a long-silenced memory. The hilt, wrapped in cracked leather, is held tight in stone hands weathered by time. Though imprisoned in stillness, both sword and statue seem to wait — not for freedom, but for remembrance."
-	icon = 'icons/obj/science/slimecrossing.dmi'
+	icon = '../assets/icons/obj/science/slimecrossing.dmi'
 	icon_state = "frozen"
 	density = TRUE
 	max_integrity = 100

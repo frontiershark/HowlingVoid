@@ -1,11 +1,11 @@
 /obj/item/storage/briefcase
 	name = "briefcase"
 	desc = "It's made of AUTHENTIC faux-leather and has a price-tag still attached. Its owner must be a real professional."
-	icon = 'icons/obj/storage/case.dmi'
+	icon = '../assets/icons/obj/storage/case.dmi'
 	icon_state = "briefcase"
 	inhand_icon_state = "briefcase"
-	lefthand_file = 'icons/mob/inhands/equipment/briefcase_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/briefcase_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/briefcase_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/briefcase_righthand.dmi'
 	obj_flags = CONDUCTS_ELECTRICITY
 	force = 8
 	hitsound = SFX_SWING_HIT

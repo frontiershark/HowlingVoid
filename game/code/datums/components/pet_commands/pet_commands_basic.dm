@@ -228,7 +228,7 @@
 /datum/pet_command/use_ability
 	command_name = "Use ability"
 	command_desc = "Command your pet to use one of its special skills on something that you point out to it."
-	radial_icon = 'icons/mob/actions/actions_spells.dmi'
+	radial_icon = '../assets/icons/mob/actions/actions_spells.dmi'
 	radial_icon_state = "projectile"
 	requires_pointing = TRUE
 	speech_commands = list("shoot", "blast", "cast")

@@ -1,7 +1,7 @@
 /obj/item/pet_food
 	name = "\improper Generic pet treat"
 	desc = "Far too bland for your pet OR reality. You shouldn't be seeing this."
-	icon = 'icons/obj/food/meat.dmi'
+	icon = '../assets/icons/obj/food/meat.dmi'
 	icon_state = "skeletonmeat"
 	w_class = WEIGHT_CLASS_SMALL
 

@@ -24,7 +24,7 @@
 	/// Whether or not this shield can lose multiple charges.
 	var/lose_multiple_charges = FALSE
 	/// The icon file of the shield.
-	var/shield_icon_file = 'icons/effects/effects.dmi'
+	var/shield_icon_file = '../assets/icons/effects/effects.dmi'
 	/// The icon_state of the shield.
 	var/shield_icon = "shield-red"
 	/// Charges the shield should start with.
@@ -84,7 +84,7 @@
 	recharge_start_delay = 20 SECONDS
 	charge_increment_delay = 3 SECONDS
 	block_overwhelming_attacks = TRUE // It's magic, bitch
-	shield_icon_file = 'icons/effects/magic.dmi'
+	shield_icon_file = '../assets/icons/effects/magic.dmi'
 	shield_icon = "mageshield"
 	required_slots = list()
 
@@ -222,7 +222,7 @@
 	var/obj/projectile/flame = new /obj/projectile/bullet/incendiary/fire(mod.wearer.loc)
 	flame.aim_projectile(target, mod.wearer)
 	flame.firer = mod.wearer
-	playsound(src, 'sound/items/modsuit/flamethrower.ogg', 75, TRUE)
+	playsound(src, '../assets/sound/items/modsuit/flamethrower.ogg', 75, TRUE)
 	INVOKE_ASYNC(flame, TYPE_PROC_REF(/obj/projectile, fire))
 	drain_power(use_energy_cost)
 
@@ -250,7 +250,7 @@
 		return
 	mod.wearer.visible_message(span_warning("[mod.wearer] starts charging a kick!"), \
 		blind_message = span_hear("You hear a charging sound."))
-	playsound(src, 'sound/items/modsuit/loader_charge.ogg', 75, TRUE)
+	playsound(src, '../assets/sound/items/modsuit/loader_charge.ogg', 75, TRUE)
 	balloon_alert(mod.wearer, "you start charging...")
 	animate(mod.wearer, 0.3 SECONDS, pixel_z = 16, flags = ANIMATION_RELATIVE, easing = SINE_EASING|EASE_OUT)
 	addtimer(CALLBACK(mod.wearer, TYPE_PROC_REF(/atom, SpinAnimation), 3, 2), 0.3 SECONDS)
@@ -259,7 +259,7 @@
 		return
 	animate(mod.wearer)
 	drain_power(use_energy_cost)
-	playsound(src, 'sound/items/modsuit/loader_launch.ogg', 75, TRUE)
+	playsound(src, '../assets/sound/items/modsuit/loader_launch.ogg', 75, TRUE)
 	var/angle = get_angle(mod.wearer, target) + 180
 	mod.wearer.transform = mod.wearer.transform.Turn(angle)
 	RegisterSignal(mod.wearer, COMSIG_MOVABLE_IMPACT, PROC_REF(on_throw_impact))
@@ -353,8 +353,8 @@
 	mod.desc = "[initial(mod.desc)] [mod.theme.desc]"
 	mod.icon_state = "[mod.skin]-[initial(mod.icon_state)]"
 	var/list/mod_skin = mod.theme.variants[mod.skin]
-	mod.icon = mod_skin[MOD_ICON_OVERRIDE] || 'icons/obj/clothing/modsuit/mod_clothing.dmi'
-	mod.worn_icon = mod_skin[MOD_WORN_ICON_OVERRIDE] || 'icons/mob/clothing/modsuit/mod_clothing.dmi'
+	mod.icon = mod_skin[MOD_ICON_OVERRIDE] || '../assets/icons/obj/clothing/modsuit/mod_clothing.dmi'
+	mod.worn_icon = mod_skin[MOD_WORN_ICON_OVERRIDE] || '../assets/icons/mob/clothing/modsuit/mod_clothing.dmi'
 	mod.lefthand_file = initial(mod.lefthand_file)
 	mod.righthand_file = initial(mod.righthand_file)
 	mod.worn_icon_state = null

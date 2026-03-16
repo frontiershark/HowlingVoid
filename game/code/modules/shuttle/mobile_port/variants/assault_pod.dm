@@ -10,17 +10,17 @@
 /obj/docking_port/mobile/assault_pod/initiate_docking(obj/docking_port/stationary/S1, force=FALSE)
 	. = ..()
 	if(!istype(S1, /obj/docking_port/stationary/transit))
-		playsound(get_turf(src.loc), 'sound/effects/explosion/explosion1.ogg',50,TRUE)
+		playsound(get_turf(src.loc), '../assets/sound/effects/explosion/explosion1.ogg',50,TRUE)
 
 
 
 /obj/item/assault_pod
 	name = "Assault Pod Targeting Device"
-	icon = 'icons/obj/devices/remote.dmi'
+	icon = '../assets/icons/obj/devices/remote.dmi'
 	icon_state = "designator_syndicate"
 	inhand_icon_state = "nukietalkie"
-	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/devices_righthand.dmi'
 	desc = "Used to select a landing zone for assault pods."
 	var/shuttle_id = "steel_rain"
 	var/dwidth = 3
@@ -65,7 +65,7 @@
 
 /obj/item/assault_pod/medieval //for the medieval pirates
 	name = "Shuttle placement designator"
-	icon = 'icons/obj/scrolls.dmi'
+	icon = '../assets/icons/obj/scrolls.dmi'
 	icon_state = "blueprints"
 	inhand_icon_state = null
 	desc = "A map of the station used to select where you want to land your shuttle."

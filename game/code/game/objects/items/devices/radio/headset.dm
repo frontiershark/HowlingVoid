@@ -24,11 +24,11 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 /obj/item/radio/headset
 	name = "radio headset"
 	desc = "An updated, modular intercom that fits over the head. Takes encryption keys."
-	icon = 'icons/obj/clothing/headsets.dmi'
+	icon = '../assets/icons/obj/clothing/headsets.dmi'
 	icon_state = "headset"
 	inhand_icon_state = "headset"
-	lefthand_file = 'icons/mob/inhands/items_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items_righthand.dmi'
 	worn_icon_state = "headset"
 	custom_materials = list(/datum/material/iron=SMALL_MATERIAL_AMOUNT * 0.75)
 	subspace_transmission = TRUE
@@ -38,7 +38,7 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	dog_fashion = null
 	equip_sound = SFX_HEADSET_EQUIP
 	pickup_sound = SFX_HEADSET_PICKUP
-	drop_sound = 'sound/items/handling/headset/headset_drop1.ogg'
+	drop_sound = '../assets/sound/items/handling/headset/headset_drop1.ogg'
 	sound_vary = TRUE
 	var/obj/item/encryptionkey/keyslot2 = null
 
@@ -468,7 +468,7 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 
 	keyslot2 = key
 	recalculateChannels()
-	playsound(src, 'sound/machines/click.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/machines/click.ogg', 50, TRUE)
 	loc.balloon_alert(user, "encryption key installed")
 	return ITEM_INTERACT_SUCCESS
 

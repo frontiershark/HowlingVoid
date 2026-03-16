@@ -150,7 +150,7 @@
 	message = "squeaks!"
 	emote_type = EMOTE_AUDIBLE
 	vary = TRUE
-	sound = 'sound/mobs/non-humanoids/mouse/mousesqueek.ogg'
+	sound = '../assets/sound/mobs/non-humanoids/mouse/mousesqueek.ogg'
 
 /datum/emote/living/yip
 	key = "yip"
@@ -265,9 +265,9 @@
 
 /datum/emote/living/carbon/mchitter/get_sound(mob/living/user)
 	if(ismoth(user))
-		return 'sound/mobs/humanoids/moth/moth_chitter.ogg'
+		return '../assets/sound/mobs/humanoids/moth/moth_chitter.ogg'
 	else
-		return 'sound/mobs/non-humanoids/insect/chitter.ogg'
+		return '../assets/sound/mobs/non-humanoids/insect/chitter.ogg'
 
 /datum/emote/living/sigh/get_sound(mob/living/user)
 	if(iscarbon(user))
@@ -280,9 +280,9 @@
 	. = ..()
 	if(iscarbon(user))
 		if(isxenohybrid(user))
-			return pick('sound/mobs/non-humanoids/hiss/lowHiss2.ogg',
-						'sound/mobs/non-humanoids/hiss/lowHiss3.ogg',
-						'sound/mobs/non-humanoids/hiss/lowHiss4.ogg')
+			return pick('../assets/sound/mobs/non-humanoids/hiss/lowHiss2.ogg',
+						'../assets/sound/mobs/non-humanoids/hiss/lowHiss3.ogg',
+						'../assets/sound/mobs/non-humanoids/hiss/lowHiss4.ogg')
 	return
 
 /datum/emote/living/snore
@@ -311,10 +311,10 @@
 	affected_by_pitch = FALSE
 
 /datum/emote/living/clap/get_sound(mob/living/user)
-	return pick('sound/mobs/humanoids/human/clap/clap1.ogg',
-				'sound/mobs/humanoids/human/clap/clap2.ogg',
-				'sound/mobs/humanoids/human/clap/clap3.ogg',
-				'sound/mobs/humanoids/human/clap/clap4.ogg')
+	return pick('../assets/sound/mobs/humanoids/human/clap/clap1.ogg',
+				'../assets/sound/mobs/humanoids/human/clap/clap2.ogg',
+				'../assets/sound/mobs/humanoids/human/clap/clap3.ogg',
+				'../assets/sound/mobs/humanoids/human/clap/clap4.ogg')
 
 /datum/emote/living/clap/can_run_emote(mob/living/carbon/user, status_check = TRUE, intentional, params)
 	if(user.usable_hands < 2)
@@ -507,7 +507,7 @@
 
 /mob/living/proc/do_ass_slap_animation(atom/slapped)
 	do_attack_animation(slapped, no_effect=TRUE)
-	var/image/gloveimg = image('icons/effects/effects.dmi', slapped, "slapglove", slapped.layer + 0.1)
+	var/image/gloveimg = image('../assets/icons/effects/effects.dmi', slapped, "slapglove", slapped.layer + 0.1)
 	gloveimg.pixel_y = -5
 	gloveimg.pixel_x = 0
 	slapped.flick_overlay_view(gloveimg, 1 SECONDS)
@@ -599,7 +599,7 @@
 	message = "gnashes."
 	emote_type = EMOTE_AUDIBLE
 	vary = TRUE
-	sound = 'sound/items/weapons/bite.ogg'
+	sound = '../assets/sound/items/weapons/bite.ogg'
 
 /datum/emote/living/thump
 	key = "thump"
@@ -608,7 +608,7 @@
 	emote_type = EMOTE_AUDIBLE
 	muzzle_ignore = TRUE
 	vary = TRUE
-	sound = 'sound/effects/glass/glassbash.ogg'
+	sound = '../assets/sound/effects/glass/glassbash.ogg'
 
 /datum/emote/living/flutter
 	key = "flutter"
@@ -617,7 +617,7 @@
 	emote_type = EMOTE_AUDIBLE
 	muzzle_ignore = TRUE
 	vary = TRUE
-	sound = 'sound/mobs/humanoids/moth/moth_flutter.ogg'
+	sound = '../assets/sound/mobs/humanoids/moth/moth_flutter.ogg'
 
 /datum/emote/living/sigh_exasperated
 	key = "esigh" // short for exasperated sigh
@@ -629,7 +629,7 @@
 	. = ..()
 	if(!ishuman(user))
 		return
-	var/image/emote_animation = image('icons/mob/human/emote_visuals.dmi', user, "sigh")
+	var/image/emote_animation = image('../assets/icons/mob/human/emote_visuals.dmi', user, "sigh")
 	flick_overlay_global(emote_animation, GLOB.clients, 2.0 SECONDS)
 
 /datum/emote/living/sigh_exasperated/get_sound(mob/living/user)

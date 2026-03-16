@@ -32,7 +32,7 @@
 	icon_state = "switchblade"
 	base_icon_state = "switchblade"
 	desc = "A sharp, concealable, spring-loaded comb."
-	hitsound = 'sound/items/weapons/genhit.ogg'
+	hitsound = '../assets/sound/items/weapons/genhit.ogg'
 	resistance_flags = FIRE_PROOF
 	var/extended = FALSE
 
@@ -45,7 +45,7 @@
 	extended = !extended
 	icon_state = "switchblade[extended ? "_on" : ""]"
 
-	playsound(user || src, 'sound/items/weapons/batonextend.ogg', 30, TRUE)
+	playsound(user || src, '../assets/sound/items/weapons/batonextend.ogg', 30, TRUE)
 
 
 /// This makes it so you have to extend it.
@@ -250,7 +250,7 @@
 /datum/action/innate/nanite_leg_reinforcement
 	name = "Toggle Leg Reinforcement"
 	desc = "Gain the ability to stand temporarily."
-	button_icon = 'icons/obj/clothing/shoes.dmi'
+	button_icon = '../assets/icons/obj/clothing/shoes.dmi'
 	button_icon_state = "jackboots"
 	/// Type of the quirk we want to stash away.
 	var/quirk_to_stash = /datum/quirk/paraplegic
@@ -309,7 +309,7 @@
 	var/catTailToggled = FALSE
 	instrument_range = 1
 	greyscale_colors = "#FFFFFF#FFFFFF"
-	icon = 'icons/map_icons/items/_item.dmi'
+	icon = '../assets/icons/map_icons/items/_item.dmi'
 	icon_state = "/obj/item/instrument/piano_synth/headphones/catear_headphone"
 	post_init_icon_state = "catear_headphone"
 	greyscale_config = /datum/greyscale_config/catear_headphone

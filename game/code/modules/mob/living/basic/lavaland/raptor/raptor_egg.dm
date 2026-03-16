@@ -1,7 +1,7 @@
 /obj/item/food/egg/raptor_egg
 	name = "raptor egg"
 	desc = "An uneven egg with a rough, thick shell."
-	icon = 'icons/mob/simple/lavaland/raptor_baby.dmi'
+	icon = '../assets/icons/mob/simple/lavaland/raptor_baby.dmi'
 	icon_state = "raptor_egg"
 	resistance_flags = LAVA_PROOF|FIRE_PROOF
 	/// Color typepath of the child we spawn

@@ -15,7 +15,7 @@
 	response_harm_simple = "kick"
 	attack_verb_continuous = "kicks"
 	attack_verb_simple = "kick"
-	attack_sound = 'sound/items/weapons/punch1.ogg'
+	attack_sound = '../assets/sound/items/weapons/punch1.ogg'
 	attack_vis_effect = ATTACK_EFFECT_KICK
 	melee_damage_lower = 5
 	melee_damage_upper = 10
@@ -44,7 +44,7 @@
 	message = "whickers."
 	emote_type = EMOTE_VISIBLE | EMOTE_AUDIBLE
 	vary = TRUE
-	sound = 'sound/mobs/non-humanoids/pony/snort.ogg'
+	sound = '../assets/sound/mobs/non-humanoids/pony/snort.ogg'
 
 /mob/living/basic/pony/Initialize(mapload)
 	. = ..()
@@ -60,7 +60,7 @@
 	AddComponent(/datum/component/tameable, food_types = food_types, tame_chance = 25, bonus_tame_chance = 15, unique = unique_tamer)
 
 /mob/living/basic/pony/tamed(mob/living/tamer, atom/food)
-	playsound(src, 'sound/mobs/non-humanoids/pony/snort.ogg', 50)
+	playsound(src, '../assets/sound/mobs/non-humanoids/pony/snort.ogg', 50)
 	AddElement(/datum/element/ridable, /datum/component/riding/creature/pony)
 	visible_message(span_notice("[src] snorts happily."))
 	new /obj/effect/temp_visual/heart(loc)
@@ -99,9 +99,9 @@
 	manual_emote("whinnies ANGRILY!")
 
 	playsound(src, pick(list(
-		'sound/mobs/non-humanoids/pony/whinny01.ogg',
-		'sound/mobs/non-humanoids/pony/whinny02.ogg',
-		'sound/mobs/non-humanoids/pony/whinny03.ogg'
+		'../assets/sound/mobs/non-humanoids/pony/whinny01.ogg',
+		'../assets/sound/mobs/non-humanoids/pony/whinny02.ogg',
+		'../assets/sound/mobs/non-humanoids/pony/whinny03.ogg'
 	)), 50)
 
 /mob/living/basic/pony/take_damage(damage_amount, damage_type, damage_flag, sound_effect, attack_dir, armour_penetration)

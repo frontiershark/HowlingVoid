@@ -1,8 +1,8 @@
 //Alphabetical order of civilian jobs.
 
 /obj/item/clothing/under/rank/civilian
-	icon = 'icons/obj/clothing/under/civilian.dmi'
-	worn_icon = 'icons/mob/clothing/under/civilian.dmi'
+	icon = '../assets/icons/obj/clothing/under/civilian.dmi'
+	worn_icon = '../assets/icons/mob/clothing/under/civilian.dmi'
 	abstract_type = /obj/item/clothing/under/rank/civilian
 
 /obj/item/clothing/under/rank/civilian/purple_bartender
@@ -96,8 +96,8 @@
 /obj/item/clothing/under/rank/civilian/lawyer
 	name = "Lawyer suit"
 	desc = "Slick threads."
-	icon = 'icons/obj/clothing/under/suits.dmi'
-	worn_icon = 'icons/mob/clothing/under/suits.dmi'
+	icon = '../assets/icons/obj/clothing/under/suits.dmi'
+	worn_icon = '../assets/icons/mob/clothing/under/suits.dmi'
 	abstract_type = /obj/item/clothing/under/rank/civilian/lawyer
 	can_adjust = FALSE
 
@@ -166,8 +166,8 @@
 
 /obj/item/clothing/under/rank/civilian/lawyer/bluesuit
 	name = "blue buttondown suit"
-	worn_icon = 'icons/mob/clothing/under/shorts_pants_shirts.dmi'
-	icon = 'icons/map_icons/clothing/under/_under.dmi'
+	worn_icon = '../assets/icons/mob/clothing/under/shorts_pants_shirts.dmi'
+	icon = '../assets/icons/map_icons/clothing/under/_under.dmi'
 	icon_state = "/obj/item/clothing/under/rank/civilian/lawyer/bluesuit"
 	post_init_icon_state = "buttondown_slacks"
 	greyscale_config = /datum/greyscale_config/buttondown_slacks
@@ -178,7 +178,7 @@
 
 /obj/item/clothing/under/rank/civilian/lawyer/bluesuit/skirt
 	name = "blue buttondown suitskirt"
-	icon = 'icons/map_icons/clothing/under/_under.dmi'
+	icon = '../assets/icons/map_icons/clothing/under/_under.dmi'
 	icon_state = "/obj/item/clothing/under/rank/civilian/lawyer/bluesuit/skirt"
 	post_init_icon_state = "buttondown_skirt"
 	greyscale_config = /datum/greyscale_config/buttondown_skirt
@@ -206,8 +206,8 @@
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
 
 /obj/item/clothing/under/rank/civilian/lawyer/galaxy
-	icon = 'icons/obj/clothing/under/lawyer_galaxy.dmi'
-	worn_icon = 'icons/mob/clothing/under/lawyer_galaxy.dmi'
+	icon = '../assets/icons/obj/clothing/under/lawyer_galaxy.dmi'
+	worn_icon = '../assets/icons/mob/clothing/under/lawyer_galaxy.dmi'
 	can_adjust = FALSE
 	name = "blue galaxy suit"
 	icon_state = "lawyer_galaxy_blue"

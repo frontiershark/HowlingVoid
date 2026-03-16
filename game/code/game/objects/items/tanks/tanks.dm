@@ -13,18 +13,18 @@
  */
 /obj/item/tank
 	name = "tank"
-	icon = 'icons/obj/canisters.dmi'
+	icon = '../assets/icons/obj/canisters.dmi'
 	icon_state = "generic"
 	inhand_icon_state = "generic_tank"
 	icon_angle = -45
-	lefthand_file = 'icons/mob/inhands/equipment/tanks_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/tanks_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/tanks_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/tanks_righthand.dmi'
 	obj_flags = CONDUCTS_ELECTRICITY
 	slot_flags = ITEM_SLOT_BACK
-	worn_icon = 'icons/mob/clothing/back.dmi' //since these can also get thrown into suit storage slots. if something goes on the belt, set this to null.
-	hitsound = 'sound/items/weapons/smash.ogg'
-	pickup_sound = 'sound/items/handling/gas_tank/gas_tank_pick_up.ogg'
-	drop_sound = 'sound/items/handling/gas_tank/gas_tank_drop.ogg'
+	worn_icon = '../assets/icons/mob/clothing/back.dmi' //since these can also get thrown into suit storage slots. if something goes on the belt, set this to null.
+	hitsound = '../assets/sound/items/weapons/smash.ogg'
+	pickup_sound = '../assets/sound/items/handling/gas_tank/gas_tank_pick_up.ogg'
+	drop_sound = '../assets/sound/items/handling/gas_tank/gas_tank_drop.ogg'
 	sound_vary = TRUE
 	pressure_resistance = ONE_ATMOSPHERE * 5
 	force = 5
@@ -90,14 +90,14 @@
 /// Called by carbons after they connect the tank to their breathing apparatus.
 /obj/item/tank/proc/after_internals_opened(mob/living/carbon/carbon_target)
 	breathing_mob = carbon_target
-	playsound(loc, 'sound/items/internals/internals_on.ogg', 15, TRUE, SHORT_RANGE_SOUND_EXTRARANGE)
+	playsound(loc, '../assets/sound/items/internals/internals_on.ogg', 15, TRUE, SHORT_RANGE_SOUND_EXTRARANGE)
 	var/pressure_on_open = air_contents.return_pressure() //we start off "full" when we toggle, and count down from there.
 	volume_bar = new(carbon_target, pressure_on_open, src, pressure_on_open)
 
 /// Called by carbons after they disconnect the tank from their breathing apparatus.
 /obj/item/tank/proc/after_internals_closed(mob/living/carbon/carbon_target)
 	breathing_mob = null
-	playsound(loc, 'sound/items/internals/internals_off.ogg', 15, TRUE, SHORT_RANGE_SOUND_EXTRARANGE)
+	playsound(loc, '../assets/sound/items/internals/internals_off.ogg', 15, TRUE, SHORT_RANGE_SOUND_EXTRARANGE)
 	QDEL_NULL(volume_bar)
 
 /// Attempts to toggle the mob's internals on or off using this tank. Returns TRUE if successful.
@@ -183,13 +183,13 @@
 	var/atom/location = loc
 	if(location)
 		location.assume_air(air_contents)
-		playsound(location, 'sound/effects/spray.ogg', 10, TRUE, -3)
+		playsound(location, '../assets/sound/effects/spray.ogg', 10, TRUE, -3)
 	return ..()
 
 /obj/item/tank/suicide_act(mob/living/user)
 	var/mob/living/carbon/human/human_user = user
 	user.visible_message(span_suicide("[user] is putting [src]'s valve to [user.p_their()] lips! It looks like [user.p_theyre()] trying to commit suicide!"))
-	playsound(loc, 'sound/effects/spray.ogg', 10, TRUE, -3)
+	playsound(loc, '../assets/sound/effects/spray.ogg', 10, TRUE, -3)
 	if(!QDELETED(human_user) && air_contents && air_contents.return_pressure() >= 1000)
 		var/obj/item/bodypart/head = human_user.get_bodypart(BODY_ZONE_HEAD)
 		if(head)
@@ -381,7 +381,7 @@
 	if(atom_integrity < 0) // So we don't play the alerts while we are exploding or rupturing.
 		return
 	visible_message(span_warning("[src] springs a leak!"))
-	playsound(src, 'sound/effects/spray.ogg', 10, TRUE, -3)
+	playsound(src, '../assets/sound/effects/spray.ogg', 10, TRUE, -3)
 
 /// Handles rupturing and fragmenting
 /obj/item/tank/atom_destruction(damage_flag)
@@ -447,7 +447,7 @@
 
 /obj/item/tank/receive_signal() //This is mainly called by the sensor through sense() to the holder, and from the holder to here.
 	audible_message(span_warning("[icon2html(src, hearers(src))] *beep* *beep* *beep*"))
-	playsound(src, 'sound/machines/beep/triple_beep.ogg', ASSEMBLY_BEEP_VOLUME, TRUE)
+	playsound(src, '../assets/sound/machines/beep/triple_beep.ogg', ASSEMBLY_BEEP_VOLUME, TRUE)
 	addtimer(CALLBACK(src, PROC_REF(ignite)), 1 SECONDS)
 
 /// Attaches an assembly holder to the tank to create a bomb.

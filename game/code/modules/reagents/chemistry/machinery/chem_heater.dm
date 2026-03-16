@@ -2,7 +2,7 @@
 	name = "reaction chamber" //Maybe this name is more accurate?
 	density = TRUE
 	pass_flags_self = PASSMACHINE | LETPASSTHROW
-	icon = 'icons/obj/medical/chemical.dmi'
+	icon = '../assets/icons/obj/medical/chemical.dmi'
 	icon_state = "mixer0b"
 	base_icon_state = "mixer"
 	idle_power_usage = BASE_MACHINE_IDLE_CONSUMPTION * 0.4

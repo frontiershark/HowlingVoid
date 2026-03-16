@@ -3,12 +3,12 @@
 /obj/item/universal_scanner
 	name = "universal scanner"
 	desc = "A device used to check objects against Nanotrasen exports database, assign price tags, or ready an item for a custom vending machine."
-	icon = 'icons/obj/devices/scanner.dmi'
+	icon = '../assets/icons/obj/devices/scanner.dmi'
 	icon_state = "export scanner"
 	worn_icon_state = "electronic"
 	inhand_icon_state = "export_scanner"
-	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/devices_righthand.dmi'
 	item_flags = NOBLUDGEON
 	w_class = WEIGHT_CLASS_SMALL
 	/// Which mode is the scanner currently on?
@@ -56,7 +56,7 @@
 		if("sales tagger")
 			scanning_mode = SCAN_SALES_TAG
 	icon_state = "[choice]"
-	playsound(src, 'sound/machines/click.ogg', 40, TRUE)
+	playsound(src, '../assets/sound/machines/click.ogg', 40, TRUE)
 
 /obj/item/universal_scanner/interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)
 	if(!isobj(interacting_with))
@@ -79,7 +79,7 @@
 				return
 			else
 				payments_acc = potential_acc.registered_account
-				playsound(src, 'sound/machines/ping.ogg', 40, TRUE)
+				playsound(src, '../assets/sound/machines/ping.ogg', 40, TRUE)
 				to_chat(user, span_notice("[src] registers the ID card. Tag a wrapped item to create a barcode."))
 		else if(!potential_acc.registered_account)
 			to_chat(user, span_warning("This ID card has no account registered!"))
@@ -106,7 +106,7 @@
 			to_chat(user, span_warning("You need to swipe [src] with an ID card first."))
 			return
 		paper_count--
-		playsound(src, 'sound/machines/click.ogg', 40, TRUE)
+		playsound(src, '../assets/sound/machines/click.ogg', 40, TRUE)
 		to_chat(user, span_notice("You print a new barcode."))
 		var/obj/item/barcode/new_barcode = new /obj/item/barcode(src)
 		new_barcode.payments_acc = payments_acc		// The sticker gets the scanner's registered account.
@@ -200,7 +200,7 @@
 		to_chat(user, span_notice(message))
 
 	if(price)
-		playsound(src, 'sound/machines/terminal/terminal_select.ogg', 50, vary = TRUE)
+		playsound(src, '../assets/sound/machines/terminal/terminal_select.ogg', 50, vary = TRUE)
 
 	if(istype(target, /obj/item/delivery))
 		var/obj/item/delivery/parcel = target
@@ -264,7 +264,7 @@
 /obj/item/barcode
 	name = "barcode tag"
 	desc = "A tiny tag, associated with a crewmember's account. Attach to a wrapped item to give that account a portion of the wrapped item's profit."
-	icon = 'icons/obj/service/bureaucracy.dmi'
+	icon = '../assets/icons/obj/service/bureaucracy.dmi'
 	icon_state = "barcode"
 	w_class = WEIGHT_CLASS_TINY
 	//All values inherited from the sales tagger it came from.

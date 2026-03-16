@@ -3,7 +3,7 @@
 /obj/structure/fluff/minepost
 	name = "wooden post"
 	desc = "A sturdy space-wood post, capable of holding up a mineshaft."
-	icon = 'icons/obj/fluff/general.dmi'
+	icon = '../assets/icons/obj/fluff/general.dmi'
 	icon_state = "minepost"
 	density = FALSE
 
@@ -34,7 +34,7 @@
 	power_environ = FALSE
 	power_equip = FALSE
 	power_light = FALSE
-	ambientsounds = list('sound/ambience/ruin/ambimine.ogg')
+	ambientsounds = list('../assets/sound/ambience/ruin/ambimine.ogg')
 	icon_state = "awaycontent5"
 	outdoors = TRUE
 
@@ -56,27 +56,27 @@
 	power_environ = FALSE
 	power_equip = FALSE
 	power_light = FALSE
-	ambientsounds = list('sound/ambience/ruin/ambimine.ogg')
+	ambientsounds = list('../assets/sound/ambience/ruin/ambimine.ogg')
 	icon_state = "awaycontent8"
 
 //Fluff objects/structures.
 /obj/structure/fluff/meteor
 	name = "meteor"
 	desc = "Khonsu 19 is known for it's relatively high specific gravity, resulting in constant meteor showers and impacts."
-	icon = 'icons/obj/meteor.dmi'
+	icon = '../assets/icons/obj/meteor.dmi'
 	icon_state = "small"
 	density = TRUE
 
 /obj/structure/fluff/meteor/large
 	name = "large meteor"
 	desc = "Something this large would probably rip a space station in half. It's a good thing it landed here instead!"
-	icon = 'icons/obj/meteor.dmi'
+	icon = '../assets/icons/obj/meteor.dmi'
 	icon_state = "large"
 
 /obj/structure/fluff/meteor/sharp
 	name = "rocky meteor"
 	desc = "A big, rocky ourcrop. More common in space than on a moon like this."
-	icon = 'icons/obj/meteor.dmi'
+	icon = '../assets/icons/obj/meteor.dmi'
 	icon_state = "sharp"
 
 //Papers

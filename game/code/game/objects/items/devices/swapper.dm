@@ -1,13 +1,13 @@
 /obj/item/swapper
 	name = "quantum spin inverter"
 	desc = "An experimental device that is able to swap the locations of two entities by switching their particles' spin values. Must be linked to another device to function."
-	icon = 'icons/obj/mining_zones/artefacts.dmi'
+	icon = '../assets/icons/obj/mining_zones/artefacts.dmi'
 	icon_state = "swapper"
 	inhand_icon_state = "electronic"
 	w_class = WEIGHT_CLASS_SMALL
 	item_flags = NOBLUDGEON
-	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/devices_righthand.dmi'
 	interaction_flags_click = NEED_DEXTERITY|ALLOW_RESTING
 	/// Cooldown for usage
 	var/cooldown = 30 SECONDS
@@ -57,9 +57,9 @@
 	if(QDELETED(linked_swapper))
 		to_chat(user, span_warning("[src] is not linked with another swapper."))
 		return
-	playsound(src, 'sound/items/weapons/flash.ogg', 25, TRUE)
+	playsound(src, '../assets/sound/items/weapons/flash.ogg', 25, TRUE)
 	to_chat(user, span_notice("You activate [src]."))
-	playsound(linked_swapper, 'sound/items/weapons/flash.ogg', 25, TRUE)
+	playsound(linked_swapper, '../assets/sound/items/weapons/flash.ogg', 25, TRUE)
 	if(ismob(linked_swapper.loc))
 		var/mob/holder = linked_swapper.loc
 		to_chat(holder, span_notice("[linked_swapper] starts buzzing."))

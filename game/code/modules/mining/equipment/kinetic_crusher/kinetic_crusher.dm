@@ -10,13 +10,13 @@
 	desc = "An early design of the proto-kinetic accelerator, it is little more than a combination of various mining tools cobbled together, \
 		forming a high-tech club. While it is an effective mining tool, it did little to aid any but the most skilled and/or \
 		suicidal miners against local fauna."
-	icon = 'icons/obj/mining.dmi'
+	icon = '../assets/icons/obj/mining.dmi'
 	icon_state = "crusher"
 	base_icon_state = "crusher"
 	inhand_icon_state = "crusher0"
 	icon_angle = -45
-	lefthand_file = 'icons/mob/inhands/weapons/hammers_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/hammers_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/hammers_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/hammers_righthand.dmi'
 	resistance_flags = FIRE_PROOF
 	force = 0 //You can't hit stuff unless wielded
 	w_class = WEIGHT_CLASS_BULKY
@@ -25,7 +25,7 @@
 	throw_speed = 4
 	armour_penetration = 10
 	custom_materials = list(/datum/material/iron=HALF_SHEET_MATERIAL_AMOUNT*1.15, /datum/material/glass=HALF_SHEET_MATERIAL_AMOUNT*2.075)
-	hitsound = 'sound/items/weapons/bladeslice.ogg'
+	hitsound = '../assets/sound/items/weapons/bladeslice.ogg'
 	attack_verb_continuous = list("smashes", "crushes", "cleaves", "chops", "pulps")
 	attack_verb_simple = list("smash", "crush", "cleave", "chop", "pulp")
 	sharpness = SHARP_EDGED
@@ -38,13 +38,13 @@
 	light_color = "#ffff66"
 	light_on = FALSE
 	/// The sound that plays when the light is turned off/on
-	var/toggle_light_sound = 'sound/items/weapons/empty.ogg'
+	var/toggle_light_sound = '../assets/sound/items/weapons/empty.ogg'
 	/// The sound that plays when we fire a kinetic blast
-	var/fire_kinetic_blast_sound = 'sound/items/weapons/plasma_cutter.ogg'
+	var/fire_kinetic_blast_sound = '../assets/sound/items/weapons/plasma_cutter.ogg'
 	/// The sound that plays when we recharge the projectile
-	var/projectile_recharge_sound = 'sound/items/weapons/kinetic_reload.ogg'
+	var/projectile_recharge_sound = '../assets/sound/items/weapons/kinetic_reload.ogg'
 	// The sound that plays when we successfully perform a backstab
-	var/backstab_sound = 'sound/items/weapons/kinetic_accel.ogg'
+	var/backstab_sound = '../assets/sound/items/weapons/kinetic_accel.ogg'
 	/// List of all crusher trophies attached to this.
 	var/list/obj/item/crusher_trophy/trophies = list()
 	/// If our crusher is ready to fire a projectile (FALSE means it's on cooldown)
@@ -58,7 +58,7 @@
 	/// Damage that the mark additionally does when hit by the crusher via backstab
 	var/backstab_bonus = 30
 	/// The file in which our projectile icon resides
-	var/projectile_icon = 'icons/obj/weapons/guns/projectiles.dmi'
+	var/projectile_icon = '../assets/icons/obj/weapons/guns/projectiles.dmi'
 	/// Used by retool kits when changing the crusher's projectile sprite
 	var/projectile_icon_state = "pulse1"
 	/// Wielded damage we deal, aka our "real" damage

@@ -1,12 +1,12 @@
 /obj/item/retractor
 	name = "retractor"
 	desc = "Retracts stuff."
-	icon = 'icons/obj/medical/surgery_tools.dmi'
+	icon = '../assets/icons/obj/medical/surgery_tools.dmi'
 	icon_state = "retractor"
 	inhand_icon_state = "retractor"
 	icon_angle = 45
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/medical_righthand.dmi'
 	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT*3, /datum/material/glass =SHEET_MATERIAL_AMOUNT * 1.5)
 	obj_flags = CONDUCTS_ELECTRICITY
 	item_flags = SURGICAL_TOOL
@@ -24,19 +24,19 @@
 	toolspeed = 0.5
 
 /obj/item/retractor/cyborg
-	icon = 'icons/mob/silicon/robot_items.dmi'
+	icon = '../assets/icons/mob/silicon/robot_items.dmi'
 	icon_state = "toolkit_medborg_retractor"
 	icon_angle = 45
 
 /obj/item/hemostat
 	name = "hemostat"
 	desc = "You think you have seen this before."
-	icon = 'icons/obj/medical/surgery_tools.dmi'
+	icon = '../assets/icons/obj/medical/surgery_tools.dmi'
 	icon_state = "hemostat"
 	inhand_icon_state = "hemostat"
 	icon_angle = 135
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/medical_righthand.dmi'
 	custom_materials = list(/datum/material/iron =SHEET_MATERIAL_AMOUNT * 2.5, /datum/material/glass = SHEET_MATERIAL_AMOUNT*1.25)
 	obj_flags = CONDUCTS_ELECTRICITY
 	item_flags = SURGICAL_TOOL
@@ -56,19 +56,19 @@
 	toolspeed = 0.5
 
 /obj/item/hemostat/cyborg
-	icon = 'icons/mob/silicon/robot_items.dmi'
+	icon = '../assets/icons/mob/silicon/robot_items.dmi'
 	icon_state = "toolkit_medborg_hemostat"
 	icon_angle = 45
 
 /obj/item/cautery
 	name = "cautery"
 	desc = "This stops bleeding."
-	icon = 'icons/obj/medical/surgery_tools.dmi'
+	icon = '../assets/icons/obj/medical/surgery_tools.dmi'
 	icon_state = "cautery"
 	inhand_icon_state = "cautery"
 	icon_angle = 135
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/medical_righthand.dmi'
 	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT*1.25, /datum/material/glass = SMALL_MATERIAL_AMOUNT*7.5)
 	obj_flags = CONDUCTS_ELECTRICITY
 	item_flags = SURGICAL_TOOL
@@ -92,21 +92,21 @@
 	toolspeed = 0.5
 
 /obj/item/cautery/cyborg
-	icon = 'icons/mob/silicon/robot_items.dmi'
+	icon = '../assets/icons/mob/silicon/robot_items.dmi'
 	icon_state = "toolkit_medborg_cautery"
 	icon_angle = 45
 
 /obj/item/cautery/advanced
 	name = "searing tool"
 	desc = "It projects a high power laser used for medical applications."
-	icon = 'icons/obj/medical/surgery_tools.dmi'
+	icon = '../assets/icons/obj/medical/surgery_tools.dmi'
 	icon_state = "e_cautery"
 	inhand_icon_state = "e_cautery"
 	surgical_tray_overlay = "cautery_advanced"
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/medical_righthand.dmi'
 	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT*2, /datum/material/glass =SHEET_MATERIAL_AMOUNT, /datum/material/plasma =SHEET_MATERIAL_AMOUNT, /datum/material/uranium = SHEET_MATERIAL_AMOUNT*1.5, /datum/material/titanium = SHEET_MATERIAL_AMOUNT*1.5)
-	hitsound = 'sound/items/tools/welder.ogg'
+	hitsound = '../assets/sound/items/tools/welder.ogg'
 	w_class = WEIGHT_CLASS_NORMAL
 	toolspeed = 0.7
 	light_system = OVERLAY_LIGHT
@@ -145,7 +145,7 @@
 		set_light_color(LIGHT_COLOR_ORANGE)
 
 	balloon_alert(user, "lenses set to [active ? "drill" : "mend"]")
-	playsound(user ? user : src, 'sound/items/weapons/tap.ogg', 50, TRUE)
+	playsound(user ? user : src, '../assets/sound/items/weapons/tap.ogg', 50, TRUE)
 	return COMPONENT_NO_DEFAULT_MESSAGE
 
 /obj/item/cautery/advanced/examine()
@@ -155,12 +155,12 @@
 /obj/item/surgicaldrill
 	name = "surgical drill"
 	desc = "You can drill using this item. You dig?"
-	icon = 'icons/obj/medical/surgery_tools.dmi'
+	icon = '../assets/icons/obj/medical/surgery_tools.dmi'
 	icon_state = "drill"
 	inhand_icon_state = "drill"
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
-	hitsound = 'sound/items/weapons/circsawhit.ogg'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/medical_righthand.dmi'
+	hitsound = '../assets/sound/items/weapons/circsawhit.ogg'
 	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT*5, /datum/material/glass = SHEET_MATERIAL_AMOUNT*3)
 	obj_flags = CONDUCTS_ELECTRICITY
 	item_flags = SURGICAL_TOOL
@@ -188,28 +188,28 @@
 	user.visible_message(span_suicide("[user] rams [src] into [user.p_their()] chest! It looks like [user.p_theyre()] trying to commit suicide!"))
 	addtimer(CALLBACK(user, TYPE_PROC_REF(/mob/living/carbon, gib), DROP_ALL_REMAINS), 2.5 SECONDS)
 	user.SpinAnimation(3, 10)
-	playsound(user, 'sound/machines/juicer.ogg', 20, TRUE)
+	playsound(user, '../assets/sound/machines/juicer.ogg', 20, TRUE)
 	return MANUAL_SUICIDE
 
 /obj/item/surgicaldrill/cyborg
-	icon = 'icons/mob/silicon/robot_items.dmi'
+	icon = '../assets/icons/mob/silicon/robot_items.dmi'
 	icon_state = "toolkit_medborg_drill"
 
 /obj/item/surgicaldrill/augment
 	desc = "Effectively a small power drill contained within your arm. May or may not pierce the heavens."
-	hitsound = 'sound/items/weapons/circsawhit.ogg'
+	hitsound = '../assets/sound/items/weapons/circsawhit.ogg'
 	w_class = WEIGHT_CLASS_SMALL
 	toolspeed = 0.5
 
 /obj/item/scalpel
 	name = "scalpel"
 	desc = "Cut, cut, and once more cut."
-	icon = 'icons/obj/medical/surgery_tools.dmi'
+	icon = '../assets/icons/obj/medical/surgery_tools.dmi'
 	icon_state = "scalpel"
 	inhand_icon_state = "scalpel"
 	icon_angle = 180
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/medical_righthand.dmi'
 	obj_flags = CONDUCTS_ELECTRICITY
 	item_flags = SURGICAL_TOOL
 	force = 10
@@ -221,7 +221,7 @@
 	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT*2, /datum/material/glass =HALF_SHEET_MATERIAL_AMOUNT)
 	attack_verb_continuous = list("attacks", "slashes", "slices", "tears", "lacerates", "rips", "dices", "cuts")
 	attack_verb_simple = list("attack", "slash", "slice", "tear", "lacerate", "rip", "dice", "cut")
-	hitsound = 'sound/items/weapons/bladeslice.ogg'
+	hitsound = '../assets/sound/items/weapons/bladeslice.ogg'
 	sharpness = SHARP_EDGED
 	tool_behaviour = TOOL_SCALPEL
 	toolspeed = 1
@@ -252,7 +252,7 @@
 	return BRUTELOSS
 
 /obj/item/scalpel/cyborg
-	icon = 'icons/mob/silicon/robot_items.dmi'
+	icon = '../assets/icons/mob/silicon/robot_items.dmi'
 	icon_state = "toolkit_medborg_scalpel"
 	icon_angle = 0
 
@@ -263,14 +263,14 @@
 /obj/item/circular_saw
 	name = "circular saw"
 	desc = "For heavy duty cutting."
-	icon = 'icons/obj/medical/surgery_tools.dmi'
+	icon = '../assets/icons/obj/medical/surgery_tools.dmi'
 	icon_state = "saw"
 	inhand_icon_state = "saw"
 	icon_angle = 180
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
-	hitsound = 'sound/items/weapons/circsawhit.ogg'
-	mob_throw_hit_sound = 'sound/items/weapons/pierce.ogg'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/medical_righthand.dmi'
+	hitsound = '../assets/sound/items/weapons/circsawhit.ogg'
+	mob_throw_hit_sound = '../assets/sound/items/weapons/pierce.ogg'
 	obj_flags = CONDUCTS_ELECTRICITY
 	item_flags = SURGICAL_TOOL
 	force = 15
@@ -295,7 +295,7 @@
 	speed = 4 SECONDS * toolspeed, \
 	effectiveness = 100, \
 	bonus_modifier = 5, \
-	butcher_sound = 'sound/items/weapons/circsawhit.ogg', \
+	butcher_sound = '../assets/sound/items/weapons/circsawhit.ogg', \
 	)
 	//saws are very accurate and fast at butchering
 	var/static/list/slapcraft_recipe_list = list(/datum/crafting_recipe/chainsaw)
@@ -309,7 +309,7 @@
 	return surgical_tray_overlay
 
 /obj/item/circular_saw/cyborg
-	icon = 'icons/mob/silicon/robot_items.dmi'
+	icon = '../assets/icons/mob/silicon/robot_items.dmi'
 	icon_state = "toolkit_medborg_saw"
 	icon_angle = 0
 
@@ -322,10 +322,10 @@
 /obj/item/surgical_drapes
 	name = "surgical drapes"
 	desc = "Nanotrasen brand surgical drapes provide optimal safety and infection control."
-	icon = 'icons/obj/medical/surgery_tools.dmi'
+	icon = '../assets/icons/obj/medical/surgery_tools.dmi'
 	icon_state = "surgical_drapes"
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/medical_righthand.dmi'
 	inhand_icon_state = "drapes"
 	w_class = WEIGHT_CLASS_TINY
 	attack_verb_continuous = list("slaps")
@@ -339,13 +339,13 @@
 	AddElement(/datum/element/surgery_aid, name)
 
 /obj/item/surgical_drapes/cyborg
-	icon = 'icons/mob/silicon/robot_items.dmi'
+	icon = '../assets/icons/mob/silicon/robot_items.dmi'
 	icon_state = "toolkit_medborg_surgicaldrapes"
 
 /obj/item/surgical_processor //allows medical cyborgs to scan and initiate advanced surgeries
 	name = "surgical processor"
 	desc = "A device for scanning and initiating surgeries from a disk or operating computer."
-	icon = 'icons/obj/devices/scanner.dmi'
+	icon = '../assets/icons/obj/devices/scanner.dmi'
 	icon_state = "surgical_processor"
 	item_flags = NOBLUDGEON
 	// List of surgeries downloaded into the device.
@@ -382,7 +382,7 @@
 	if(!istype(design_holder, /obj/item/disk/surgery) && !istype(design_holder, /obj/machinery/computer/operating))
 		return NONE
 	balloon_alert(user, "copying designs...")
-	playsound(src, 'sound/machines/terminal/terminal_processing.ogg', 25, TRUE)
+	playsound(src, '../assets/sound/machines/terminal/terminal_processing.ogg', 25, TRUE)
 	if(do_after(user, 1 SECONDS, target = design_holder))
 		if(istype(design_holder, /obj/item/disk/surgery))
 			var/obj/item/disk/surgery/surgery_disk = design_holder
@@ -390,7 +390,7 @@
 		else
 			var/obj/machinery/computer/operating/surgery_computer = design_holder
 			loaded_surgeries |= surgery_computer.advanced_surgeries
-		playsound(src, 'sound/machines/terminal/terminal_success.ogg', 25, TRUE)
+		playsound(src, '../assets/sound/machines/terminal/terminal_success.ogg', 25, TRUE)
 		downloaded = TRUE
 		update_appearance(UPDATE_OVERLAYS)
 		return ITEM_INTERACT_SUCCESS
@@ -412,10 +412,10 @@
 	icon_state = "e_scalpel"
 	inhand_icon_state = "e_scalpel"
 	surgical_tray_overlay = "scalpel_advanced"
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/medical_righthand.dmi'
 	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT*3, /datum/material/glass =HALF_SHEET_MATERIAL_AMOUNT * 1.5, /datum/material/silver =SHEET_MATERIAL_AMOUNT, /datum/material/gold =HALF_SHEET_MATERIAL_AMOUNT * 1.5, /datum/material/diamond =SMALL_MATERIAL_AMOUNT * 2, /datum/material/titanium = SHEET_MATERIAL_AMOUNT*2)
-	hitsound = 'sound/items/weapons/blade1.ogg'
+	hitsound = '../assets/sound/items/weapons/blade1.ogg'
 	force = 16
 	w_class = WEIGHT_CLASS_NORMAL
 	toolspeed = 0.7
@@ -459,7 +459,7 @@
 		set_light_color(LIGHT_COLOR_BLUE)
 
 	balloon_alert(user, "[active ? "enabled" : "disabled"] bone-cutting mode")
-	playsound(user ? user : src, 'sound/machines/click.ogg', 50, TRUE)
+	playsound(user ? user : src, '../assets/sound/machines/click.ogg', 50, TRUE)
 	return COMPONENT_NO_DEFAULT_MESSAGE
 
 /obj/item/scalpel/advanced/examine()
@@ -469,13 +469,13 @@
 /obj/item/retractor/advanced
 	name = "mechanical pinches"
 	desc = "An agglomerate of rods and gears."
-	icon = 'icons/obj/medical/surgery_tools.dmi'
+	icon = '../assets/icons/obj/medical/surgery_tools.dmi'
 	icon_state = "adv_retractor"
 	inhand_icon_state = "adv_retractor"
 	surgical_tray_overlay = "retractor_advanced"
 	icon_angle = 0
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/medical_righthand.dmi'
 	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT*6, /datum/material/glass = SHEET_MATERIAL_AMOUNT*2, /datum/material/silver = SHEET_MATERIAL_AMOUNT*2, /datum/material/titanium =SHEET_MATERIAL_AMOUNT * 2.5)
 	w_class = WEIGHT_CLASS_NORMAL
 	toolspeed = 0.7
@@ -505,7 +505,7 @@
 
 	tool_behaviour = (active ? TOOL_HEMOSTAT : TOOL_RETRACTOR)
 	balloon_alert(user, "gears set to [active ? "clamp" : "retract"]")
-	playsound(user ? user : src, 'sound/items/tools/change_drill.ogg', 50, TRUE)
+	playsound(user ? user : src, '../assets/sound/items/tools/change_drill.ogg', 50, TRUE)
 	return COMPONENT_NO_DEFAULT_MESSAGE
 
 /obj/item/retractor/advanced/examine()
@@ -515,7 +515,7 @@
 /obj/item/shears
 	name = "amputation shears"
 	desc = "A type of heavy duty surgical shears used for achieving a clean separation between limb and patient. Keeping the patient still is imperative to be able to secure and align the shears."
-	icon = 'icons/obj/medical/surgery_tools.dmi'
+	icon = '../assets/icons/obj/medical/surgery_tools.dmi'
 	icon_state = "shears"
 	icon_angle = 90
 	obj_flags = CONDUCTS_ELECTRICITY
@@ -566,7 +566,7 @@
 	var/amputation_speed_mod = 1
 
 	patient.visible_message(span_danger("[user] begins to secure [src] around [patient]'s [candidate_name]."), span_userdanger("[user] begins to secure [src] around your [candidate_name]!"))
-	playsound(get_turf(patient), 'sound/items/tools/ratchet.ogg', 20, TRUE)
+	playsound(get_turf(patient), '../assets/sound/items/tools/ratchet.ogg', 20, TRUE)
 	if(patient.stat >= UNCONSCIOUS || HAS_TRAIT(patient, TRAIT_INCAPACITATED)) //if you're incapacitated (due to paralysis, a stun, being in staminacrit, etc.), critted, unconscious, or dead, it's much easier to properly line up a snip
 		amputation_speed_mod *= 0.5
 	if(patient.stat != DEAD && patient.has_status_effect(/datum/status_effect/jitter)) //jittering will make it harder to secure the shears, even if you can't otherwise move
@@ -575,7 +575,7 @@
 		amputation_speed_mod *= 0.7 //its morbin time
 
 	if(do_after(user,  toolspeed * 15 SECONDS * amputation_speed_mod, target = patient))
-		playsound(get_turf(patient), 'sound/items/weapons/bladeslice.ogg', 250, TRUE)
+		playsound(get_turf(patient), '../assets/sound/items/weapons/bladeslice.ogg', 250, TRUE)
 		if(user.zone_selected == BODY_ZONE_PRECISE_GROIN) //OwO
 			tail_snip_candidate.Remove(patient)
 			tail_snip_candidate.forceMove(get_turf(patient))
@@ -595,7 +595,7 @@
 		if(thing.body_part == CHEST)
 			continue
 		addtimer(CALLBACK(thing, TYPE_PROC_REF(/obj/item/bodypart/, dismember)), timer)
-		addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(playsound), user, 'sound/items/weapons/bladeslice.ogg', 70), timer)
+		addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(playsound), user, '../assets/sound/items/weapons/bladeslice.ogg', 70), timer)
 		timer += 1 SECONDS
 	sleep(timer)
 	return BRUTELOSS
@@ -603,11 +603,11 @@
 /obj/item/bonesetter
 	name = "bonesetter"
 	desc = "For setting things right."
-	icon = 'icons/obj/medical/surgery_tools.dmi'
+	icon = '../assets/icons/obj/medical/surgery_tools.dmi'
 	icon_state = "bonesetter"
 	icon_angle = 135
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/medical_righthand.dmi'
 	custom_materials = list(/datum/material/iron =SHEET_MATERIAL_AMOUNT * 2.5,  /datum/material/glass = SHEET_MATERIAL_AMOUNT*1.25, /datum/material/silver = SHEET_MATERIAL_AMOUNT*1.25)
 	obj_flags = CONDUCTS_ELECTRICITY
 	item_flags = SURGICAL_TOOL
@@ -622,17 +622,17 @@
 	return surgical_tray_overlay + (tray_extended ? "" : "_out")
 
 /obj/item/bonesetter/cyborg
-	icon = 'icons/mob/silicon/robot_items.dmi'
+	icon = '../assets/icons/mob/silicon/robot_items.dmi'
 	icon_state = "toolkit_medborg_bonesetter"
 	icon_angle = 45
 
 /obj/item/blood_filter
 	name = "blood filter"
 	desc = "For filtering the blood."
-	icon = 'icons/obj/medical/surgery_tools.dmi'
+	icon = '../assets/icons/obj/medical/surgery_tools.dmi'
 	icon_state = "bloodfilter"
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/medical_righthand.dmi'
 	custom_materials = list(/datum/material/iron=SHEET_MATERIAL_AMOUNT, /datum/material/glass=HALF_SHEET_MATERIAL_AMOUNT * 1.5, /datum/material/silver=SMALL_MATERIAL_AMOUNT*5)
 	item_flags = SURGICAL_TOOL
 	w_class = WEIGHT_CLASS_NORMAL
@@ -745,7 +745,7 @@
 	icon_state = "cruelsaw"
 	inhand_icon_state = "cruelsaw"
 	icon_angle = 0
-	hitsound = 'sound/items/weapons/bladeslice.ogg'
+	hitsound = '../assets/sound/items/weapons/bladeslice.ogg'
 	surgical_tray_overlay = "saw_cruel"
 	item_flags = SURGICAL_TOOL | CRUEL_IMPLEMENT
 
@@ -783,7 +783,7 @@
 
 /obj/item/surgicaldrill/cruel/augment
 	desc = "You cannot hide your secrets from me..."
-	hitsound = 'sound/items/weapons/circsawhit.ogg'
+	hitsound = '../assets/sound/items/weapons/circsawhit.ogg'
 	w_class = WEIGHT_CLASS_SMALL
 	toolspeed = 0.5
 

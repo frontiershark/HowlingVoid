@@ -32,7 +32,7 @@
 	// The dog attack pet command can raise melee attack above 0
 	attack_verb_continuous = "bites"
 	attack_verb_simple = "bite"
-	attack_sound = 'sound/items/weapons/bite.ogg'
+	attack_sound = '../assets/sound/items/weapons/bite.ogg'
 	attack_vis_effect = ATTACK_EFFECT_BITE
 	melee_attack_cooldown = 0.8 SECONDS
 	/// Instructions you can give to dogs
@@ -98,7 +98,7 @@
 	name = "jumbo dog bone"
 	desc = "A tasty femur full of juicy marrow, the perfect gift for your best friend."
 	w_class = WEIGHT_CLASS_SMALL
-	icon = 'icons/obj/food/meat.dmi'
+	icon = '../assets/icons/obj/food/meat.dmi'
 	icon_state = "skeletonmeat"
 	custom_materials = list(/datum/material/bone = SHEET_MATERIAL_AMOUNT * 4)
 	force = 3

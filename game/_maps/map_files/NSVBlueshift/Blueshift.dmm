@@ -750,7 +750,7 @@
 	},
 /turf/open/indestructible{
 	base_icon_state = "reinf_glass";
-	icon = 'icons/turf/floors/reinf_glass.dmi';
+	icon = '../assets/icons/turf/floors/reinf_glass.dmi';
 	icon_state = "reinf_glass-0";
 	name = "Ultra Reinforced Glass Floor"
 	},
@@ -5279,7 +5279,7 @@
 /obj/item/beacon,
 /turf/open/indestructible{
 	base_icon_state = "reinf_glass";
-	icon = 'icons/turf/floors/reinf_glass.dmi';
+	icon = '../assets/icons/turf/floors/reinf_glass.dmi';
 	icon_state = "reinf_glass-0";
 	name = "Ultra Reinforced Glass Floor"
 	},
@@ -19885,7 +19885,7 @@
 /obj/effect/turf_decal/siding/thinplating/dark,
 /turf/open/indestructible{
 	base_icon_state = "reinf_glass";
-	icon = 'icons/turf/floors/reinf_glass.dmi';
+	icon = '../assets/icons/turf/floors/reinf_glass.dmi';
 	icon_state = "reinf_glass-0";
 	name = "Ultra Reinforced Glass Floor"
 	},
@@ -32764,7 +32764,7 @@
 	},
 /turf/open/indestructible{
 	base_icon_state = "reinf_glass";
-	icon = 'icons/turf/floors/reinf_glass.dmi';
+	icon = '../assets/icons/turf/floors/reinf_glass.dmi';
 	icon_state = "reinf_glass-0";
 	name = "Ultra Reinforced Glass Floor"
 	},
@@ -33226,7 +33226,7 @@
 	},
 /turf/open/indestructible{
 	base_icon_state = "reinf_glass";
-	icon = 'icons/turf/floors/reinf_glass.dmi';
+	icon = '../assets/icons/turf/floors/reinf_glass.dmi';
 	icon_state = "reinf_glass-0";
 	name = "Ultra Reinforced Glass Floor"
 	},
@@ -77857,7 +77857,7 @@
 	},
 /turf/open/indestructible{
 	base_icon_state = "reinf_glass";
-	icon = 'icons/turf/floors/reinf_glass.dmi';
+	icon = '../assets/icons/turf/floors/reinf_glass.dmi';
 	icon_state = "reinf_glass-0";
 	name = "Ultra Reinforced Glass Floor"
 	},
@@ -82233,7 +82233,7 @@
 	},
 /turf/open/indestructible{
 	base_icon_state = "reinf_glass";
-	icon = 'icons/turf/floors/reinf_glass.dmi';
+	icon = '../assets/icons/turf/floors/reinf_glass.dmi';
 	icon_state = "reinf_glass-0";
 	name = "Ultra Reinforced Glass Floor"
 	},
@@ -103428,7 +103428,7 @@
 "uNl" = (
 /turf/open/floor/iron/stairs{
 	icon_state = "stairs_wood";
-	icon = 'icons/obj/stairs.dmi'
+	icon = '../assets/icons/obj/stairs.dmi'
 	},
 /area/station/common/pool)
 "uNn" = (
@@ -110311,7 +110311,7 @@
 	},
 /turf/open/indestructible{
 	base_icon_state = "reinf_glass";
-	icon = 'icons/turf/floors/reinf_glass.dmi';
+	icon = '../assets/icons/turf/floors/reinf_glass.dmi';
 	icon_state = "reinf_glass-0";
 	name = "Ultra Reinforced Glass Floor"
 	},
@@ -119145,7 +119145,7 @@
 	},
 /turf/open/indestructible{
 	base_icon_state = "reinf_glass";
-	icon = 'icons/turf/floors/reinf_glass.dmi';
+	icon = '../assets/icons/turf/floors/reinf_glass.dmi';
 	icon_state = "reinf_glass-0";
 	name = "Ultra Reinforced Glass Floor"
 	},

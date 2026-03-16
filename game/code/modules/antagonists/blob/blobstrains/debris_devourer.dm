@@ -28,7 +28,7 @@
 		if (trash_shrapnel && !QDELETED(trash_shrapnel))
 			trash_shrapnel.forceMove(get_turf(spore))
 			trash_shrapnel.throw_at(get_edge_target_turf(spore,pick(GLOB.alldirs)), 6, 5, spore, TRUE, FALSE, null, 3)
-	playsound(spore, 'sound/effects/pop_expl.ogg', vol = 100, vary = TRUE)
+	playsound(spore, '../assets/sound/effects/pop_expl.ogg', vol = 100, vary = TRUE)
 
 /datum/blobstrain/debris_devourer/expand_reaction(obj/structure/blob/B, obj/structure/blob/newB, turf/T, mob/eye/blob/O, coefficient = 1) //when the blob expands, do this
 	for (var/obj/item/I in T)
@@ -82,7 +82,7 @@
 		to_chat(minion, span_warning("You feel too full to eat more trash."))
 		return
 
-	playsound(minion, 'sound/items/eatfood.ogg', 60, TRUE)
+	playsound(minion, '../assets/sound/items/eatfood.ogg', 60, TRUE)
 	var/obj/item/tasty_trash = interacted_atom
 	minion.do_attack_animation(tasty_trash)
 	tasty_trash.forceMove(overmind ? overmind.blob_core : minion)

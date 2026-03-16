@@ -5,7 +5,7 @@
 /obj/machinery/mineral/labor_claim_console
 	name = "point claim console"
 	desc = "A stacking console with an electromagnetic writer, used to track ore mined by prisoners."
-	icon = 'icons/obj/machines/mining_machines.dmi'
+	icon = '../assets/icons/obj/machines/mining_machines.dmi'
 	icon_state = "console"
 	density = FALSE
 	/// Connected stacking machine
@@ -203,7 +203,7 @@
 /obj/machinery/mineral/labor_points_checker
 	name = "points checking console"
 	desc = "A console used by prisoners to check the progress on their quotas. Simply swipe a prisoner ID."
-	icon = 'icons/obj/machines/mining_machines.dmi'
+	icon = '../assets/icons/obj/machines/mining_machines.dmi'
 	icon_state = "console"
 	density = FALSE
 

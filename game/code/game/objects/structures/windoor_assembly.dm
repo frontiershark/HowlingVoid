@@ -1,6 +1,6 @@
 
 /obj/structure/windoor_assembly
-	icon = 'icons/obj/doors/windoor.dmi'
+	icon = '../assets/icons/obj/doors/windoor.dmi'
 
 	name = "windoor Assembly"
 	icon_state = "l_windoor_assembly01"

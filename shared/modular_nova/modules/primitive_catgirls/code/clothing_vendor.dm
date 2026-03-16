@@ -1,7 +1,7 @@
 /obj/machinery/vending/primitive_catgirl_clothing_vendor
 	name = "wardrobe"
 	desc = "It's a big wardrobe filled up with all sorts of clothing."
-	icon = 'icons/obj/storage/closet.dmi'
+	icon = '../assets/icons/obj/storage/closet.dmi'
 	icon_state = "cabinet"
 	use_power = FALSE
 	shut_up = TRUE

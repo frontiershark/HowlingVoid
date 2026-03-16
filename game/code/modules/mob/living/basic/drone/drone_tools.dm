@@ -1,7 +1,7 @@
 /obj/item/storage/drone_tools
 	name = "built-in tools"
 	desc = "Access your built-in tools."
-	icon = 'icons/hud/screen_drone.dmi'
+	icon = '../assets/icons/hud/screen_drone.dmi'
 	icon_state = "tool_storage"
 	storage_type = /datum/storage/drone
 	item_flags = ABSTRACT
@@ -31,7 +31,7 @@
 /obj/item/crowbar/drone
 	name = "built-in crowbar"
 	desc = "A crowbar built into your chassis."
-	icon = 'icons/obj/items_cyborg.dmi'
+	icon = '../assets/icons/obj/items_cyborg.dmi'
 	icon_state = "toolkit_engiborg_crowbar"
 	inhand_icon_state = "crowbar"
 	icon_angle = 0
@@ -40,7 +40,7 @@
 /obj/item/screwdriver/drone
 	name = "built-in screwdriver"
 	desc = "A screwdriver built into your chassis."
-	icon = 'icons/obj/items_cyborg.dmi'
+	icon = '../assets/icons/obj/items_cyborg.dmi'
 	icon_state = "toolkit_engiborg_screwdriver"
 	post_init_icon_state = null
 	inhand_icon_state = "screwdriver"
@@ -58,7 +58,7 @@
 /obj/item/wrench/drone
 	name = "built-in wrench"
 	desc = "A wrench built into your chassis."
-	icon = 'icons/obj/items_cyborg.dmi'
+	icon = '../assets/icons/obj/items_cyborg.dmi'
 	icon_state = "toolkit_engiborg_wrench"
 	inhand_icon_state = "wrench"
 	icon_angle = 0
@@ -67,14 +67,14 @@
 /obj/item/weldingtool/drone
 	name = "built-in welding tool"
 	desc = "A welding tool built into your chassis."
-	icon = 'icons/obj/items_cyborg.dmi'
+	icon = '../assets/icons/obj/items_cyborg.dmi'
 	icon_state = "indwelder_cyborg"
 	item_flags = NO_MAT_REDEMPTION
 
 /obj/item/wirecutters/drone
 	name = "built-in wirecutters"
 	desc = "Wirecutters built into your chassis."
-	icon = 'icons/obj/items_cyborg.dmi'
+	icon = '../assets/icons/obj/items_cyborg.dmi'
 	icon_state = "toolkit_engiborg_cutters"
 	inhand_icon_state = "cutters"
 	item_flags = NO_MAT_REDEMPTION
@@ -85,7 +85,7 @@
 /obj/item/multitool/drone
 	name = "built-in multitool"
 	desc = "A multitool built into your chassis."
-	icon = 'icons/obj/items_cyborg.dmi'
+	icon = '../assets/icons/obj/items_cyborg.dmi'
 	icon_state = "toolkit_engiborg_multitool"
 	icon_angle = 0
 	item_flags = NO_MAT_REDEMPTION

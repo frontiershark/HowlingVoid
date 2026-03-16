@@ -3,7 +3,7 @@
 /obj/structure/desk_bell
 	name = "desk bell"
 	desc = "The cornerstone of any customer service job. You feel an unending urge to ring it."
-	icon = 'icons/obj/service/bureaucracy.dmi'
+	icon = '../assets/icons/obj/service/bureaucracy.dmi'
 	icon_state = "desk_bell"
 	layer = OBJ_LAYER
 	anchored = FALSE
@@ -21,7 +21,7 @@
 	/// The length of the cooldown. Setting it to 0 will skip all cooldowns alltogether.
 	var/ring_cooldown_length = 0.3 SECONDS // This is here to protect against tinnitus.
 	/// The sound the bell makes
-	var/ring_sound = 'sound/machines/microwave/microwave-end.ogg'
+	var/ring_sound = '../assets/sound/machines/microwave/microwave-end.ogg'
 
 /obj/structure/desk_bell/Initialize(mapload)
 	. = ..()
@@ -73,7 +73,7 @@
 		tool.play_tool_sound(src)
 		if(tool.use_tool(src, user, 5 SECONDS))
 			balloon_alert_to_viewers("repaired")
-			playsound(user, 'sound/items/tools/change_drill.ogg', 50, vary = TRUE)
+			playsound(user, '../assets/sound/items/tools/change_drill.ogg', 50, vary = TRUE)
 			broken_ringer = FALSE
 			times_rang = 0
 			return ITEM_INTERACT_SUCCESS
@@ -86,7 +86,7 @@
 	tool.play_tool_sound(src)
 	if(tool.use_tool(src, user, 5 SECONDS))
 		balloon_alert(user, "disassembled")
-		playsound(user, 'sound/items/deconstruct.ogg', 50, vary = TRUE)
+		playsound(user, '../assets/sound/items/deconstruct.ogg', 50, vary = TRUE)
 		if(!broken_ringer) // Drop 2 if it's not broken.
 			new/obj/item/stack/sheet/iron(drop_location())
 		new/obj/item/stack/sheet/iron(drop_location())

@@ -2,7 +2,7 @@
 /obj/machinery/hydroponics
 	name = "hydroponics tray"
 	desc = "A basin used to grow plants in."
-	icon = 'icons/obj/service/hydroponics/equipment.dmi'
+	icon = '../assets/icons/obj/service/hydroponics/equipment.dmi'
 	icon_state = "hydrotray"
 	density = TRUE
 	pass_flags_self = PASSMACHINE | LETPASSTHROW
@@ -164,7 +164,7 @@
 
 /obj/machinery/hydroponics/constructable
 	name = "hydroponics tray"
-	icon = 'icons/obj/service/hydroponics/equipment.dmi'
+	icon = '../assets/icons/obj/service/hydroponics/equipment.dmi'
 	icon_state = "hydrotray3"
 
 /obj/machinery/hydroponics/constructable/fullupgrade
@@ -460,15 +460,15 @@
 /obj/machinery/hydroponics/proc/update_status_light_overlays()
 	. = list()
 	if(waterlevel <= 10)
-		. += mutable_appearance('icons/obj/service/hydroponics/equipment.dmi', "over_lowwater3")
+		. += mutable_appearance('../assets/icons/obj/service/hydroponics/equipment.dmi', "over_lowwater3")
 	if(reagents.total_volume <= 2)
-		. += mutable_appearance('icons/obj/service/hydroponics/equipment.dmi', "over_lownutri3")
+		. += mutable_appearance('../assets/icons/obj/service/hydroponics/equipment.dmi', "over_lownutri3")
 	if(plant_health <= (myseed.endurance / 2))
-		. += mutable_appearance('icons/obj/service/hydroponics/equipment.dmi', "over_lowhealth3")
+		. += mutable_appearance('../assets/icons/obj/service/hydroponics/equipment.dmi', "over_lowhealth3")
 	if(weedlevel >= 5 || pestlevel >= 5 || toxic >= 40)
-		. += mutable_appearance('icons/obj/service/hydroponics/equipment.dmi', "over_alert3")
+		. += mutable_appearance('../assets/icons/obj/service/hydroponics/equipment.dmi', "over_alert3")
 	if(plant_status == HYDROTRAY_PLANT_HARVESTABLE)
-		. += mutable_appearance('icons/obj/service/hydroponics/equipment.dmi', "over_harvest3")
+		. += mutable_appearance('../assets/icons/obj/service/hydroponics/equipment.dmi', "over_harvest3")
 
 ///Sets a new value for the myseed variable, which is the seed of the plant that's growing inside the tray.
 /obj/machinery/hydroponics/proc/set_seed(obj/item/seeds/new_seed, delete_old_seed = TRUE)
@@ -874,7 +874,7 @@
 				var/obj/item/food/bait/worm/premium/fat_worm = new(loc)
 				fat_worm.pixel_x = rand(-6,6)
 				fat_worm.pixel_y = rand(-6,6)
-				playsound(fat_worm, 'sound/items/eatfood.ogg', 20, TRUE)
+				playsound(fat_worm, '../assets/sound/items/eatfood.ogg', 20, TRUE)
 		else
 			transfer_amount = min(reagent_source.amount_per_transfer_from_this, reagent_source.reagents.total_volume)
 			if(istype(reagent_source, /obj/item/reagent_containers/syringe/))
@@ -882,8 +882,8 @@
 				visi_msg="[user] injects [target] with [syr]"
 			// Beakers, bottles, buckets, etc.
 			if(reagent_source.is_drainable())
-				playsound(loc, 'sound/effects/slosh.ogg', 25, TRUE)
-				var/mutable_appearance/splash_animation = mutable_appearance('icons/effects/effects.dmi', "splash_hydroponics")
+				playsound(loc, '../assets/sound/effects/slosh.ogg', 25, TRUE)
+				var/mutable_appearance/splash_animation = mutable_appearance('../assets/icons/effects/effects.dmi', "splash_hydroponics")
 				splash_animation.color = mix_color_from_reagents(reagent_source.reagents.reagent_list)
 				flick_overlay_view(splash_animation, 1.1 SECONDS)
 

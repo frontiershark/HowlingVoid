@@ -15,11 +15,11 @@
 /// Invoked externally to actually perform the smite
 /datum/smite/proc/do_effect(client/user, mob/living/target)
 	if(smite_flags & SMITE_DIVINE)
-		playsound(target, 'sound/effects/pray.ogg', 50, FALSE, -1)
+		playsound(target, '../assets/sound/effects/pray.ogg', 50, FALSE, -1)
 		target.apply_status_effect(
 			/datum/status_effect/spotlight_light/divine,
 			3 SECONDS,
-			mutable_appearance('icons/mob/effects/genetics.dmi', "servitude", -MUTATIONS_LAYER),
+			mutable_appearance('../assets/icons/mob/effects/genetics.dmi', "servitude", -MUTATIONS_LAYER),
 		)
 
 	if(smite_flags & SMITE_STUN)

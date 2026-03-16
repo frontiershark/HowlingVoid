@@ -8,7 +8,7 @@
 	toolspeed = 0.3
 
 /obj/item/screwdriver/caravan
-	icon = 'icons/obj/tools.dmi'
+	icon = '../assets/icons/obj/tools.dmi'
 	icon_state = "screwdriver_caravan"
 	post_init_icon_state = null
 	desc = "A prototype of a new screwdriver design, allegedly the red color scheme makes it go faster."
@@ -19,7 +19,7 @@
 	greyscale_colors = null
 
 /obj/item/wirecutters/caravan
-	icon = 'icons/obj/tools.dmi'
+	icon = '../assets/icons/obj/tools.dmi'
 	icon_state = "cutters_caravan"
 	desc = "A prototype of a new wirecutter design, allegedly the red color scheme makes it go faster."
 	name = "experimental wirecutters"

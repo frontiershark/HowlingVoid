@@ -4,7 +4,7 @@
 /mob/living/basic/spider
 	name = "abstract spider"
 	desc = "Furry and abstract, it makes you shudder to look at it. This one should not exist."
-	icon = 'icons/mob/simple/arachnoid.dmi'
+	icon = '../assets/icons/mob/simple/arachnoid.dmi'
 	mob_biotypes = MOB_ORGANIC|MOB_BUG
 	speak_emote = list("chitters")
 	butcher_results = list(/obj/item/food/meat/slab/spider = 2, /obj/item/food/spiderleg = 8)
@@ -24,7 +24,7 @@
 	pass_flags = PASSTABLE
 	attack_verb_continuous = "bites"
 	attack_verb_simple = "bite"
-	attack_sound = 'sound/items/weapons/bite.ogg'
+	attack_sound = '../assets/sound/items/weapons/bite.ogg'
 	attack_vis_effect = ATTACK_EFFECT_BITE
 	unique_name = TRUE
 	lighting_cutoff_red = 22
@@ -65,7 +65,7 @@
 	message = "chitters."
 	emote_type = EMOTE_VISIBLE | EMOTE_AUDIBLE
 	vary = TRUE
-	sound = 'sound/mobs/non-humanoids/insect/chitter.ogg'
+	sound = '../assets/sound/mobs/non-humanoids/insect/chitter.ogg'
 
 /mob/living/basic/spider/Initialize(mapload)
 	. = ..()
@@ -174,7 +174,7 @@
 	mob_size = MOB_SIZE_TINY
 	held_w_class = WEIGHT_CLASS_TINY
 	worn_slot_flags = ITEM_SLOT_HEAD
-	head_icon = 'icons/mob/clothing/head/pets_head.dmi'
+	head_icon = '../assets/icons/mob/clothing/head/pets_head.dmi'
 	density = FALSE
 	pass_flags = PASSTABLE|PASSGRILLE|PASSMOB
 	gold_core_spawnable = FRIENDLY_SPAWN

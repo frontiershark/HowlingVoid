@@ -1,6 +1,6 @@
 /obj/vehicle/ridden/speedbike
 	name = "Speedbike"
-	icon = 'icons/obj/toys/bike.dmi'
+	icon = '../assets/icons/obj/toys/bike.dmi'
 	icon_state = "speedbike_blue"
 	layer = LYING_MOB_LAYER
 	var/cover_iconstate = "cover_blue"

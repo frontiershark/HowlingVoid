@@ -1,18 +1,18 @@
 /obj/item/clothing/under
 	name = "under"
-	icon = 'icons/obj/clothing/under/default.dmi'
-	worn_icon = 'icons/mob/clothing/under/default.dmi'
-	lefthand_file = 'icons/mob/inhands/clothing/suits_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/clothing/suits_righthand.dmi'
+	icon = '../assets/icons/obj/clothing/under/default.dmi'
+	worn_icon = '../assets/icons/mob/clothing/under/default.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/clothing/suits_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/clothing/suits_righthand.dmi'
 	abstract_type = /obj/item/clothing/under
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	slot_flags = ITEM_SLOT_ICLOTHING
 	interaction_flags_click = NEED_DEXTERITY|ALLOW_RESTING
 	armor_type = /datum/armor/clothing_under
 	supports_variations_flags = CLOTHING_DIGITIGRADE_MASK
-	equip_sound = 'sound/items/equip/jumpsuit_equip.ogg'
-	drop_sound = 'sound/items/handling/cloth/cloth_drop1.ogg'
-	pickup_sound = 'sound/items/handling/cloth/cloth_pickup1.ogg'
+	equip_sound = '../assets/sound/items/equip/jumpsuit_equip.ogg'
+	drop_sound = '../assets/sound/items/handling/cloth/cloth_drop1.ogg'
+	pickup_sound = '../assets/sound/items/handling/cloth/cloth_pickup1.ogg'
 	limb_integrity = 30
 
 	/// Has this undersuit been freshly laundered and, as such, imparts a mood bonus for wearing
@@ -116,7 +116,7 @@
 		return
 
 	if(damaged_clothes)
-		. += mutable_appearance('icons/effects/item_damage.dmi', "damageduniform")
+		. += mutable_appearance('../assets/icons/effects/item_damage.dmi', "damageduniform")
 	if(accessory_overlay)
 		. += modify_accessory_overlay() // NOVA EDIT CHANGE - ORIGINAL: . += accessory_overlay
 
@@ -155,7 +155,7 @@
 			set_sensor_mode(sensor.sensor_mode)
 		qdel(tool)
 		balloon_alert(user, "sensors installed")
-		playsound(source = src, soundin = 'sound/effects/sparks/sparks4.ogg', vol = 50, vary = TRUE, extrarange = SHORT_RANGE_SOUND_EXTRARANGE, ignore_walls = FALSE)
+		playsound(source = src, soundin = '../assets/sound/effects/sparks/sparks4.ogg', vol = 50, vary = TRUE, extrarange = SHORT_RANGE_SOUND_EXTRARANGE, ignore_walls = FALSE)
 		return ITEM_INTERACT_SUCCESS
 
 	return ..()
@@ -253,7 +253,7 @@
 			balloon_alert(user, "sensors [has_sensor == NO_SENSORS ? "missing" : "not broken"]!")
 		return FALSE
 
-	playsound(source = src, soundin = 'sound/effects/sparks/sparks4.ogg', vol = 100, vary = TRUE, extrarange = SHORT_RANGE_SOUND_EXTRARANGE, ignore_walls = FALSE)
+	playsound(source = src, soundin = '../assets/sound/effects/sparks/sparks4.ogg', vol = 100, vary = TRUE, extrarange = SHORT_RANGE_SOUND_EXTRARANGE, ignore_walls = FALSE)
 	set_has_sensor(HAS_SENSORS)
 	return TRUE
 
@@ -318,7 +318,7 @@
 		return
 
 	set_sensor_mode(clamp(sensor_mode + pick(-1,1), SENSOR_OFF, SENSOR_COORDS)) // NOVA EDIT CHANGE ORIGINAL: set_sensor_mode(pick(SENSOR_OFF, SENSOR_OFF, SENSOR_OFF, SENSOR_LIVING, SENSOR_LIVING, SENSOR_VITALS, SENSOR_VITALS, SENSOR_COORDS))
-	playsound(source = src, soundin = 'sound/effects/sparks/sparks3.ogg', vol = 75, vary = TRUE, extrarange = SHORT_RANGE_SOUND_EXTRARANGE, ignore_walls = FALSE)
+	playsound(source = src, soundin = '../assets/sound/effects/sparks/sparks3.ogg', vol = 75, vary = TRUE, extrarange = SHORT_RANGE_SOUND_EXTRARANGE, ignore_walls = FALSE)
 	visible_message(span_warning("The [src]'s medical sensors flash and change rapidly!"), blind_message = span_warning("The [src] makes an electronic sizzling sound!"), vision_distance = COMBAT_MESSAGE_RANGE)
 
 /**

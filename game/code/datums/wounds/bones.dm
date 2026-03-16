@@ -418,7 +418,7 @@
 	interaction_efficiency_penalty = 2.5
 	limp_slowdown = 7
 	limp_chance = 70
-	sound_effect = 'sound/effects/wounds/crack2.ogg'
+	sound_effect = '../assets/sound/effects/wounds/crack2.ogg'
 	threshold_penalty = 15
 	disabling = TRUE
 	treatable_by = list(/obj/item/stack/sticky_tape/surgical, /obj/item/stack/medical/bone_gel)

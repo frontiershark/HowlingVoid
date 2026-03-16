@@ -5,7 +5,7 @@ GLOBAL_LIST_INIT(guardian_radial_images, setup_guardian_radial())
 	for(var/mob/living/basic/guardian/guardian_path as anything in subtypesof(/mob/living/basic/guardian))
 		var/datum/radial_menu_choice/option = new()
 		option.name = initial(guardian_path.creator_name)
-		option.image = image(icon = 'icons/hud/guardian.dmi', icon_state = initial(guardian_path.creator_icon))
+		option.image = image(icon = '../assets/icons/hud/guardian.dmi', icon_state = initial(guardian_path.creator_icon))
 		option.info = span_boldnotice(initial(guardian_path.creator_desc))
 		.[guardian_path] = option
 
@@ -13,7 +13,7 @@ GLOBAL_LIST_INIT(guardian_radial_images, setup_guardian_radial())
 /obj/item/guardian_creator
 	name = "enchanted deck of tarot cards"
 	desc = "An enchanted deck of tarot cards, rumored to be a source of unimaginable power."
-	icon = 'icons/obj/toys/playing_cards.dmi'
+	icon = '../assets/icons/obj/toys/playing_cards.dmi'
 	icon_state = "deck_tarot_full"
 	/// Are we used or in the process of being used? If yes, then we can't be used.
 	var/used = FALSE
@@ -179,7 +179,7 @@ GLOBAL_LIST_INIT(guardian_radial_images, setup_guardian_radial())
 /obj/item/guardian_creator/tech
 	name = "holoparasite injector"
 	desc = "It contains an alien nanoswarm of unknown origin. Though capable of near sorcerous feats via use of hardlight holograms and nanomachines, it requires an organic host as a home base and source of fuel."
-	icon = 'icons/obj/medical/syringe.dmi'
+	icon = '../assets/icons/obj/medical/syringe.dmi'
 	icon_state = "combat_hypo"
 	theme = GUARDIAN_THEME_TECH
 	allow_changeling = FALSE
@@ -193,7 +193,7 @@ GLOBAL_LIST_INIT(guardian_radial_images, setup_guardian_radial())
 /obj/item/guardian_creator/carp
 	name = "holocarp fishsticks"
 	desc = "Using the power of Carp'sie, you can catch a carp from byond the veil of Carpthulu, and bind it to your fleshy flesh form."
-	icon = 'icons/obj/food/meat.dmi'
+	icon = '../assets/icons/obj/food/meat.dmi'
 	icon_state = "fishfingers"
 	theme = GUARDIAN_THEME_CARP
 	use_message = span_holoparasite("You put the fishsticks in your mouth...")
@@ -207,7 +207,7 @@ GLOBAL_LIST_INIT(guardian_radial_images, setup_guardian_radial())
 /obj/item/guardian_creator/miner
 	name = "dusty shard"
 	desc = "Seems to be a very old rock, may have originated from a strange meteor."
-	icon = 'icons/obj/mining_zones/artefacts.dmi'
+	icon = '../assets/icons/obj/mining_zones/artefacts.dmi'
 	icon_state = "dustyshard"
 	theme = GUARDIAN_THEME_MINER
 	use_message = span_holoparasite("You pierce your skin with the shard...")

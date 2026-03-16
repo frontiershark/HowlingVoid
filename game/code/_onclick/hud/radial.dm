@@ -1,7 +1,7 @@
 GLOBAL_LIST_EMPTY(radial_menus)
 
 /atom/movable/screen/radial
-	icon = 'icons/hud/radial.dmi'
+	icon = '../assets/icons/hud/radial.dmi'
 	plane = ABOVE_HUD_PLANE
 	vis_flags = VIS_INHERIT_PLANE
 	var/click_on_hover = FALSE
@@ -333,7 +333,7 @@ GLOBAL_LIST_EMPTY(radial_menus)
 		return
 	current_user = M.client
 	//Blank
-	menu_holder = image(icon='icons/effects/effects.dmi',loc=anchor,icon_state="nothing", layer = RADIAL_BACKGROUND_LAYER)
+	menu_holder = image(icon='../assets/icons/effects/effects.dmi',loc=anchor,icon_state="nothing", layer = RADIAL_BACKGROUND_LAYER)
 	menu_holder.pixel_w = offset_x
 	menu_holder.pixel_z = offset_y
 

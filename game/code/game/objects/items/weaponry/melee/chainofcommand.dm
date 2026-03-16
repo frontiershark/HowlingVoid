@@ -1,13 +1,13 @@
 /obj/item/melee/chainofcommand
 	name = "chain of command"
 	desc = "A tool used by great men to placate the frothing masses. Can be used to hasten allies with right-click."
-	icon = 'icons/obj/weapons/whip.dmi'
+	icon = '../assets/icons/obj/weapons/whip.dmi'
 	icon_state = "chain"
 	inhand_icon_state = "chain"
 	worn_icon_state = "whip"
 	icon_angle = -90
-	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/melee_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/melee_righthand.dmi'
 	obj_flags = CONDUCTS_ELECTRICITY
 	slot_flags = ITEM_SLOT_BELT
 	force = 10
@@ -18,7 +18,7 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	attack_verb_continuous = list("flogs", "whips", "lashes", "disciplines")
 	attack_verb_simple = list("flog", "whip", "lash", "discipline")
-	hitsound = 'sound/items/weapons/chainhit.ogg'
+	hitsound = '../assets/sound/items/weapons/chainhit.ogg'
 	custom_materials = list(/datum/material/iron = HALF_SHEET_MATERIAL_AMOUNT)
 
 /obj/item/melee/chainofcommand/Initialize(mapload)
@@ -46,7 +46,7 @@
 		return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
 	user.do_attack_animation(victim)
-	playsound(victim, 'sound/items/weapons/whip.ogg', 50, TRUE, -1)
+	playsound(victim, '../assets/sound/items/weapons/whip.ogg', 50, TRUE, -1)
 	victim.apply_status_effect(/datum/status_effect/speed_boost/commanded)
 	return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 

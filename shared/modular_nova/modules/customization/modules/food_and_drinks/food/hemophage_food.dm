@@ -24,7 +24,7 @@
 /obj/item/food/hemophage/blood_rice_pearl/raw
 	name = "uncooked blood rice"
 	desc = "A clump of raw rice, drenched in blood."
-	icon = 'icons/obj/food/food.dmi'
+	icon = '../assets/icons/obj/food/food.dmi'
 	icon_state = "uncooked_rice"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 4,
@@ -41,7 +41,7 @@
 /obj/item/food/hemophage/blood_noodles
 	name = "boiled blood noodles"
 	desc = "A plain dish of blood-soaked noodles, it would probably be better with more ingredients."
-	icon = 'icons/obj/food/spaghetti.dmi'
+	icon = '../assets/icons/obj/food/spaghetti.dmi'
 	icon_state = "spaghettiboiled"
 	color = "#810000"
 	food_reagents = list(

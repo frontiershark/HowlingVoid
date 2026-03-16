@@ -10,8 +10,8 @@
  */
 
 /obj/item/clothing/under/rank/security
-	icon = 'icons/obj/clothing/under/security.dmi'
-	worn_icon = 'icons/mob/clothing/under/security.dmi'
+	icon = '../assets/icons/obj/clothing/under/security.dmi'
+	worn_icon = '../assets/icons/mob/clothing/under/security.dmi'
 	abstract_type = /obj/item/clothing/under/rank/security
 	armor_type = /datum/armor/clothing_under/rank_security
 	strip_delay = 5 SECONDS
@@ -231,7 +231,7 @@
 /obj/item/clothing/under/rank/prisoner
 	name = "prison jumpsuit"
 	desc = "Standardised Nanotrasen prisoner-wear. Its suit sensors are stuck in the \"Fully On\" position."
-	icon = 'icons/map_icons/clothing/under/_under.dmi'
+	icon = '../assets/icons/map_icons/clothing/under/_under.dmi'
 	icon_state = "/obj/item/clothing/under/rank/prisoner"
 	post_init_icon_state = "jumpsuit"
 	inhand_icon_state = "jumpsuit"
@@ -253,7 +253,7 @@
 /obj/item/clothing/under/rank/prisoner/skirt
 	name = "prison jumpskirt"
 	desc = "Standardised Nanotrasen prisoner-wear. Its suit sensors are stuck in the \"Fully On\" position."
-	icon = 'icons/map_icons/clothing/under/_under.dmi'
+	icon = '../assets/icons/map_icons/clothing/under/_under.dmi'
 	icon_state = "/obj/item/clothing/under/rank/prisoner/skirt"
 	post_init_icon_state = "jumpskirt"
 	greyscale_config = /datum/greyscale_config/jumpsuit/prison

@@ -115,11 +115,11 @@
 	if(points)
 		/// Waiter! Waiter! More boomer-shooter sound effect references please!!
 		if(prob(1))
-			playsound(pad, 'sound/machines/wewewew.ogg', 70, FALSE) /// HL1
+			playsound(pad, '../assets/sound/machines/wewewew.ogg', 70, FALSE) /// HL1
 		else if(prob(1))
-			playsound(pad, 'sound/machines/wewewew.ogg', 70, FALSE) /// TF2
+			playsound(pad, '../assets/sound/machines/wewewew.ogg', 70, FALSE) /// TF2
 		else
-			playsound(pad, 'sound/machines/wewewew.ogg', 70, FALSE) /// Quake
+			playsound(pad, '../assets/sound/machines/wewewew.ogg', 70, FALSE) /// Quake
 		synced_bank_account.adjust_money(points)
 	points = synced_bank_account.account_balance
 

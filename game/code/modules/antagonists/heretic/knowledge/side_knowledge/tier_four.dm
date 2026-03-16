@@ -27,7 +27,7 @@
 	)
 	result_atoms = list(/obj/item/storage/belt/unfathomable_curio)
 	cost = 2
-	research_tree_icon_path = 'icons/obj/clothing/belts.dmi'
+	research_tree_icon_path = '../assets/icons/obj/clothing/belts.dmi'
 	research_tree_icon_state = "unfathomable_curio"
 	drafting_tier = 4
 
@@ -48,7 +48,7 @@
 	)
 	result_atoms = list(/obj/item/grenade/chem_grenade/rust_sower)
 	cost = 2
-	research_tree_icon_path = 'icons/obj/weapons/grenade.dmi'
+	research_tree_icon_path = '../assets/icons/obj/weapons/grenade.dmi'
 	research_tree_icon_state = "rustgrenade"
 	drafting_tier = 4
 
@@ -78,7 +78,7 @@
 	)
 	result_atoms = list(/obj/item/gun/ballistic/rifle/lionhunter)
 	cost = 2
-	research_tree_icon_path = 'icons/obj/weapons/guns/ballistic.dmi'
+	research_tree_icon_path = '../assets/icons/obj/weapons/guns/ballistic.dmi'
 	research_tree_icon_state = "goldrevolver"
 	drafting_tier = 2
 
@@ -94,7 +94,7 @@
 	)
 	result_atoms = list(/obj/item/ammo_box/speedloader/strilka310/lionhunter)
 	cost = 0
-	research_tree_icon_path = 'icons/obj/weapons/guns/ammo.dmi'
+	research_tree_icon_path = '../assets/icons/obj/weapons/guns/ammo.dmi'
 	research_tree_icon_state = "310_strip"
 
 	/// A list of calibers that the ritual will deny. Only ballistic calibers are allowed.

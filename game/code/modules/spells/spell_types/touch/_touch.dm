@@ -20,7 +20,7 @@
  */
 /datum/action/cooldown/spell/touch
 	check_flags = AB_CHECK_CONSCIOUS|AB_CHECK_HANDS_BLOCKED
-	sound = 'sound/items/tools/welder.ogg'
+	sound = '../assets/sound/items/tools/welder.ogg'
 	invocation = "High Five!"
 	invocation_type = INVOCATION_SHOUT
 
@@ -337,9 +337,9 @@
 /obj/item/melee/touch_attack
 	name = "\improper outstretched hand"
 	desc = "High Five?"
-	icon = 'icons/obj/weapons/hand.dmi'
-	lefthand_file = 'icons/mob/inhands/items/touchspell_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/touchspell_righthand.dmi'
+	icon = '../assets/icons/obj/weapons/hand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/touchspell_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/touchspell_righthand.dmi'
 	icon_state = "latexballoon"
 	inhand_icon_state = null
 	item_flags = NEEDS_PERMIT | ABSTRACT | HAND_ITEM

@@ -147,7 +147,7 @@
 			var/mob/living/carbon/carbon_defender = defender
 			if(carbon_defender.mob_biotypes & MOB_ORGANIC)
 				carbon_defender.spray_blood(attack_direction, 1)
-				playsound(carbon_defender, 'sound/effects/wounds/crackandbleed.ogg', 100)
+				playsound(carbon_defender, '../assets/sound/effects/wounds/crackandbleed.ogg', 100)
 			if(carbon_defender.mob_biotypes & MOB_ROBOTIC)
 				do_sparks(2, FALSE, carbon_defender.loc)
 				playsound(carbon_defender, 'modular_nova/modules/medical/sound/robotic_slash_T2.ogg', 100)
@@ -187,7 +187,7 @@
 		attacker,
 	)
 	to_chat(attacker, span_danger("You blast [defender] back!"))
-	playsound(attacker, 'sound/effects/pop_expl.ogg', 50, TRUE)
+	playsound(attacker, '../assets/sound/effects/pop_expl.ogg', 50, TRUE)
 	var/atom/throw_target = get_edge_target_turf(defender, attacker.dir)
 	new /obj/effect/temp_visual/explosion/fast(get_turf(defender))
 	defender.throw_at(throw_target, 2, 7, attacker)
@@ -253,12 +253,12 @@
 	hitting_projectile.firer = attacker
 	hitting_projectile.speed *= 1.25
 	hitting_projectile.damage *= 1.25
-	hitting_projectile.icon = 'icons/obj/weapons/guns/projectiles.dmi' //In case of modular projectiles.
+	hitting_projectile.icon = '../assets/icons/obj/weapons/guns/projectiles.dmi' //In case of modular projectiles.
 	hitting_projectile.icon_state = "redtrac"
 	hitting_projectile.add_atom_colour(COLOR_RED_LIGHT, TEMPORARY_COLOUR_PRIORITY)
 	attacker.overlay_fullscreen("projectile_parry", /atom/movable/screen/fullscreen/crit/projectile_parry, 2)
 	addtimer(CALLBACK(attacker, TYPE_PROC_REF(/mob, clear_fullscreen), "projectile_parry"), 0.25 SECONDS)
-	playsound(attacker, 'sound/effects/parry.ogg', 75, TRUE)
+	playsound(attacker, '../assets/sound/effects/parry.ogg', 75, TRUE)
 	COOLDOWN_START(src, parry_cooldown_timer, 5 SECONDS)
 	addtimer(CALLBACK(src, PROC_REF(parry_availability), attacker), 5 SECONDS)
 	return COMPONENT_BULLET_PIERCED

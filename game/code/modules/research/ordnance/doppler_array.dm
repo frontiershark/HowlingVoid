@@ -2,7 +2,7 @@
 	name = "tachyon-doppler array"
 	desc = "A highly precise directional sensor array which measures the release of quants from decaying tachyons. The doppler shifting of the mirror-image formed by these quants can reveal the size, location and temporal affects of energetic disturbances within a large radius ahead of the array.\n"
 	circuit = /obj/item/circuitboard/machine/doppler_array
-	icon = 'icons/obj/machines/research.dmi'
+	icon = '../assets/icons/obj/machines/research.dmi'
 	icon_state = "tdoppler"
 	base_icon_state = "tdoppler"
 	density = TRUE
@@ -87,9 +87,9 @@
 	record_data.possible_experiments = apply_experiments(record)
 
 	if(inserted_disk.add_file(record_data))
-		playsound(src, 'sound/machines/ping.ogg', 25)
+		playsound(src, '../assets/sound/machines/ping.ogg', 25)
 	else
-		playsound(src, 'sound/machines/terminal/terminal_error.ogg', 25)
+		playsound(src, '../assets/sound/machines/terminal/terminal_error.ogg', 25)
 
 /**
  * Checks a specified tachyon record for fitting reactions, then returns a list with
@@ -211,7 +211,7 @@
 		inserted_disk.forceMove(drop_location())
 	else
 		user.put_in_hands(inserted_disk)
-	playsound(src, 'sound/machines/card_slide.ogg', 50)
+	playsound(src, '../assets/sound/machines/card_slide.ogg', 50)
 	return TRUE
 
 /// We rely on exited to clear references.

@@ -12,7 +12,7 @@
 /obj/item/v8_engine
 	name = "ancient engine"
 	desc = "An extremely well-preserved, massive V8 engine from the early 2000s. It seems to be missing the rest of the vehicle. There's a tiny label on the side."
-	icon = 'icons/obj/weapons/sword.dmi'
+	icon = '../assets/icons/obj/weapons/sword.dmi'
 	icon_state = "v8_engine"
 	w_class = WEIGHT_CLASS_HUGE
 	force = 5
@@ -29,7 +29,7 @@
 	. = ..()
 	if (!COOLDOWN_FINISHED(src, engine_sound_cooldown))
 		return
-	playsound(src, 'sound/items/car_engine_start.ogg', vol = 75, vary = FALSE, extrarange = 3)
+	playsound(src, '../assets/sound/items/car_engine_start.ogg', vol = 75, vary = FALSE, extrarange = 3)
 	Shake(duration = ENGINE_COOLDOWN)
 	to_chat(user, span_notice("Darn thing... it's too old to keep on without retrofitting it! Without modifications, it works like it's junk."))
 	COOLDOWN_START(src, engine_sound_cooldown, ENGINE_COOLDOWN)
@@ -51,13 +51,13 @@
 /obj/item/house_edge
 	name = "House Edge"
 	desc = "Dangerous. Loud. Sleek. It has a built in roulette wheel. This thing could easily rip your arm off if you're not careful."
-	icon = 'icons/obj/weapons/sword.dmi'
+	icon = '../assets/icons/obj/weapons/sword.dmi'
 	icon_state = "house_edge"
 	base_icon_state = "house_edge"
 	inhand_icon_state = "house_edge"
 	icon_angle = -45
-	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/swords_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/swords_righthand.dmi'
 	w_class = WEIGHT_CLASS_HUGE
 	sharpness = SHARP_EDGED
 	force = 12
@@ -65,12 +65,12 @@
 	throw_range = 5
 	throw_speed = 1
 	armour_penetration = 15
-	hitsound = 'sound/items/car_engine_start.ogg'
+	hitsound = '../assets/sound/items/car_engine_start.ogg'
 	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 14, /datum/material/cardboard = SHEET_MATERIAL_AMOUNT, /datum/material/glass = SMALL_MATERIAL_AMOUNT * 0.8)
 	/// The number of charges the house edge has accrued through 2-handed hits, to charge a more powerful charge attack.
 	var/fire_charges = 0
 	///Sound played when wielded.
-	var/active_hitsound = 'sound/items/house_edge_hit.ogg'
+	var/active_hitsound = '../assets/sound/items/house_edge_hit.ogg'
 	///Datum that tracks weapon dashing for the fire_charge system
 	var/datum/action/innate/dash/charge
 	COOLDOWN_DECLARE(fire_charge_cooldown)
@@ -107,7 +107,7 @@
 
 	user.add_shared_particles(/particles/bonfire)
 	new /obj/effect/temp_visual/focus_ring(get_turf(src))
-	playsound(src, 'sound/items/car_engine_start.ogg', vol = 35, vary = FALSE, extrarange = 3)
+	playsound(src, '../assets/sound/items/car_engine_start.ogg', vol = 35, vary = FALSE, extrarange = 3)
 
 	if(!do_after(user, SLASH_WINDUP * 2, target = src) || fire_charges < 3)
 		flaming_slash(interacting_with, user, upgraded = FALSE)
@@ -156,8 +156,8 @@
 
 	user.visible_message(span_danger("[user] makes a[upgraded ? " devastating" : "" ] blazing slash at [interacting_with]!"),\
 		span_notice("You take a blazing swipe at [interacting_with]!"))
-	playsound(src, 'sound/items/modsuit/flamethrower.ogg', vol = 75, vary = FALSE, extrarange = 3)
-	playsound(src, 'sound/items/weapons/slash.ogg', vol = 50, vary = FALSE, extrarange = 3)
+	playsound(src, '../assets/sound/items/modsuit/flamethrower.ogg', vol = 75, vary = FALSE, extrarange = 3)
+	playsound(src, '../assets/sound/items/weapons/slash.ogg', vol = 50, vary = FALSE, extrarange = 3)
 
 	drop_particles(user)
 	COOLDOWN_START(src, fire_charge_cooldown, SLASH_COOLDOWN)

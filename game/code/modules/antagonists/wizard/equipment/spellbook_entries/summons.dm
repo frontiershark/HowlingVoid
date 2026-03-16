@@ -11,7 +11,7 @@
 
 /datum/spellbook_entry/summon/ghosts/buy_spell(mob/living/carbon/human/user, obj/item/spellbook/book, log_buy = TRUE)
 	summon_ghosts(user)
-	playsound(get_turf(user), 'sound/effects/ghost2.ogg', 50, TRUE)
+	playsound(get_turf(user), '../assets/sound/effects/ghost2.ogg', 50, TRUE)
 	return ..()
 
 /datum/spellbook_entry/summon/guns
@@ -25,7 +25,7 @@
 
 /datum/spellbook_entry/summon/guns/buy_spell(mob/living/carbon/human/user, obj/item/spellbook/book, log_buy = TRUE)
 	summon_guns(user, 10)
-	playsound(get_turf(user), 'sound/effects/magic/castsummon.ogg', 50, TRUE)
+	playsound(get_turf(user), '../assets/sound/effects/magic/castsummon.ogg', 50, TRUE)
 	return ..()
 
 /datum/spellbook_entry/summon/magic
@@ -39,7 +39,7 @@
 
 /datum/spellbook_entry/summon/magic/buy_spell(mob/living/carbon/human/user, obj/item/spellbook/book, log_buy = TRUE)
 	summon_magic(user, 10)
-	playsound(get_turf(user), 'sound/effects/magic/castsummon.ogg', 50, TRUE)
+	playsound(get_turf(user), '../assets/sound/effects/magic/castsummon.ogg', 50, TRUE)
 	return ..()
 
 /datum/spellbook_entry/summon/events
@@ -56,7 +56,7 @@
 
 /datum/spellbook_entry/summon/events/buy_spell(mob/living/carbon/human/user, obj/item/spellbook/book, log_buy = TRUE)
 	summon_events(user)
-	playsound(get_turf(user), 'sound/effects/magic/castsummon.ogg', 50, TRUE)
+	playsound(get_turf(user), '../assets/sound/effects/magic/castsummon.ogg', 50, TRUE)
 	return ..()
 
 /datum/spellbook_entry/summon/curse_of_madness
@@ -69,7 +69,7 @@
 	if(!message || QDELETED(user) || QDELETED(book) || !can_buy(user, book))
 		return FALSE
 	curse_of_madness(user, message)
-	playsound(user, 'sound/effects/magic/mandswap.ogg', 50, TRUE)
+	playsound(user, '../assets/sound/effects/magic/mandswap.ogg', 50, TRUE)
 	return ..()
 
 /// A wizard ritual that allows the wizard to teach a specific spellbook enty to everyone on the station.

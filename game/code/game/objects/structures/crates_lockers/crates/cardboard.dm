@@ -6,8 +6,8 @@
 	custom_materials = list(/datum/material/cardboard = SHEET_MATERIAL_AMOUNT * 4)
 	icon_state = "cardboard"
 	base_icon_state = "cardboard"
-	open_sound = 'sound/items/poster/poster_ripped.ogg'
-	close_sound = 'sound/machines/cardboard_box.ogg'
+	open_sound = '../assets/sound/items/poster/poster_ripped.ogg'
+	close_sound = '../assets/sound/machines/cardboard_box.ogg'
 	open_sound_volume = 25
 	close_sound_volume = 25
 	paint_jobs = null

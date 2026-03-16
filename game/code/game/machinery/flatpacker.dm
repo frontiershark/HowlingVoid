@@ -4,7 +4,7 @@
 /obj/machinery/flatpacker
 	name = "flatpacker"
 	desc = "It produces items using iron, glass, plastic and maybe some more."
-	icon = 'icons/obj/machines/lathes.dmi'
+	icon = '../assets/icons/obj/machines/lathes.dmi'
 	base_icon_state = "flatpacker"
 	icon_state = "flatpacker"
 	density = TRUE
@@ -166,7 +166,7 @@
 
 	//we use initial(active_power_usage) because higher tier parts will have higher active usage but we have no benefit from it
 	if(directly_use_energy(ROUND_UP((amount_inserted / (MAX_STACK_SIZE * SHEET_MATERIAL_AMOUNT)) * 0.4 * initial(active_power_usage))))
-		flick_overlay_view(mutable_appearance('icons/obj/machines/lathes.dmi', "flatpacker_bar"), 1 SECONDS)
+		flick_overlay_view(mutable_appearance('../assets/icons/obj/machines/lathes.dmi', "flatpacker_bar"), 1 SECONDS)
 
 		var/datum/material/highest_mat_ref
 		var/highest_mat = 0
@@ -344,10 +344,10 @@
 			if(!materials.has_materials(needed_mats, creation_efficiency))
 				say("Not enough materials to begin production.")
 				return
-			playsound(src, 'sound/items/tools/rped.ogg', 50, TRUE)
+			playsound(src, '../assets/sound/items/tools/rped.ogg', 50, TRUE)
 
 			busy = TRUE
-			flick_overlay_view(mutable_appearance('icons/obj/machines/lathes.dmi', "flatpacker_bar"), flatpack_time)
+			flick_overlay_view(mutable_appearance('../assets/icons/obj/machines/lathes.dmi', "flatpacker_bar"), flatpack_time)
 			addtimer(CALLBACK(src, PROC_REF(finish_build), inserted_board), flatpack_time)
 			return TRUE
 

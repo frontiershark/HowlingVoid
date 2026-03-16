@@ -537,7 +537,7 @@
 	else
 		our_plant.color = COLOR_RED
 
-	playsound(our_plant, 'sound/effects/fuse.ogg', our_seed.potency, FALSE)
+	playsound(our_plant, '../assets/sound/effects/fuse.ogg', our_seed.potency, FALSE)
 	user.visible_message(
 		span_warning("[user] plucks the stem from [our_plant]!"),
 		span_userdanger("You pluck the stem from [our_plant], which begins to hiss loudly!"),
@@ -599,7 +599,7 @@
 	else
 		our_plant.color = COLOR_RED
 
-	playsound(our_plant.drop_location(), 'sound/items/weapons/armbomb.ogg', 75, TRUE, -3)
+	playsound(our_plant.drop_location(), '../assets/sound/items/weapons/armbomb.ogg', 75, TRUE, -3)
 	addtimer(CALLBACK(src, PROC_REF(detonate), our_plant), rand(1 SECONDS, 6 SECONDS))
 
 /datum/plant_gene/trait/bomb_plant/potency_based/detonate(obj/item/our_plant)
@@ -728,8 +728,8 @@
 
 	extracted = TRUE
 	new /obj/item/food/drug/opium/raw(source.drop_location(), source.myseed.potency)
-	playsound(src, 'sound/effects/bubbles/bubbles.ogg', 30, TRUE)
-	playsound(tool, 'sound/items/weapons/bladeslice.ogg', 30, TRUE)
+	playsound(src, '../assets/sound/effects/bubbles/bubbles.ogg', 30, TRUE)
+	playsound(tool, '../assets/sound/items/weapons/bladeslice.ogg', 30, TRUE)
 	user.visible_message(
 		span_notice("[user] carefully slices open a [source.myseed.species] pod, extracting a sap."),
 		span_notice("You carefully slice the [source.myseed.species]'s pod, collecting the fragrant, alluring sap."),

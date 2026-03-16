@@ -16,7 +16,7 @@
 	minimum_survivable_temperature = 0
 	attack_verb_continuous = "punches"
 	attack_verb_simple = "punch"
-	attack_sound = 'sound/items/weapons/punch1.ogg'
+	attack_sound = '../assets/sound/items/weapons/punch1.ogg'
 	faction = list(FACTION_HOSTILE, FACTION_CULT)
 	ai_controller =/datum/ai_controller/basic_controller/cult
 	///does this type do range attacks?
@@ -24,7 +24,7 @@
 	/// How often can we shoot?
 	var/ranged_cooldown = 3 SECONDS
 	/// Projectile sound
-	var/projectilesound = 'sound/effects/magic/magic_missile.ogg'
+	var/projectilesound = '../assets/sound/effects/magic/magic_missile.ogg'
 	/// What gun shoot
 	var/casingtype = /obj/item/ammo_casing/magic/magic_missile
 	/// he ded, so what he pop to
@@ -55,7 +55,7 @@
 	melee_damage_upper = 15
 	attack_verb_continuous = "slashes"
 	attack_verb_simple = "slash"
-	attack_sound = 'sound/items/weapons/bladeslice.ogg'
+	attack_sound = '../assets/sound/items/weapons/bladeslice.ogg'
 	ai_controller =/datum/ai_controller/basic_controller/cult
 
 /*
@@ -73,7 +73,7 @@
 	melee_damage_upper = 15
 	attack_verb_continuous = "slashes"
 	attack_verb_simple = "slash"
-	attack_sound = 'sound/items/weapons/bladeslice.ogg'
+	attack_sound = '../assets/sound/items/weapons/bladeslice.ogg'
 	ai_controller =/datum/ai_controller/basic_controller/cult
 	corpse = /obj/effect/gibspawner/robot
 
@@ -92,7 +92,7 @@
 	melee_damage_upper = 20
 	attack_verb_continuous = "slashes"
 	attack_verb_simple = "slash"
-	attack_sound = 'sound/items/weapons/bladeslice.ogg'
+	attack_sound = '../assets/sound/items/weapons/bladeslice.ogg'
 	ai_controller =/datum/ai_controller/basic_controller/cult
 
 /*
@@ -110,7 +110,7 @@
 	melee_damage_upper = 15
 	attack_verb_continuous = "slashes"
 	attack_verb_simple = "slash"
-	attack_sound = 'sound/items/weapons/bladeslice.ogg'
+	attack_sound = '../assets/sound/items/weapons/bladeslice.ogg'
 	ai_controller =/datum/ai_controller/basic_controller/cult
 
 /*
@@ -128,7 +128,7 @@
 	melee_damage_upper = 15
 	attack_verb_continuous = "slashes"
 	attack_verb_simple = "slash"
-	attack_sound = 'sound/items/weapons/bladeslice.ogg'
+	attack_sound = '../assets/sound/items/weapons/bladeslice.ogg'
 	ai_controller =/datum/ai_controller/basic_controller/cult
 
 /*
@@ -146,7 +146,7 @@
 	melee_damage_upper = 15
 	attack_verb_continuous = "slashes"
 	attack_verb_simple = "slash"
-	attack_sound = 'sound/items/weapons/bladeslice.ogg'
+	attack_sound = '../assets/sound/items/weapons/bladeslice.ogg'
 	ai_controller =/datum/ai_controller/basic_controller/cult
 
 /*
@@ -166,7 +166,7 @@
 	melee_damage_lower = 12
 	melee_damage_upper = 12
 	attack_verb_continuous = "punches"
-	projectilesound = 'sound/effects/magic/magic_missile.ogg'
+	projectilesound = '../assets/sound/effects/magic/magic_missile.ogg'
 	ai_controller = /datum/ai_controller/basic_controller/cult/magic
 	casingtype = /obj/item/ammo_casing/magic/magic_missile
 	ranged_attacker = TRUE
@@ -198,7 +198,7 @@
 	icon_living = "cultelite"
 	maxHealth = 200
 	health = 200
-	projectilesound = 'sound/items/weapons/barragespellhit.ogg'
+	projectilesound = '../assets/sound/items/weapons/barragespellhit.ogg'
 	casingtype = /obj/item/ammo_casing/magic/arcane_barrage
 	ranged_attacker = TRUE
 
@@ -217,7 +217,7 @@
 	icon_living = "cultelite"
 	maxHealth = 300
 	health = 300
-	projectilesound = 'sound/items/weapons/barragespellhit.ogg'
+	projectilesound = '../assets/sound/items/weapons/barragespellhit.ogg'
 	casingtype = /obj/item/ammo_casing/magic/fireball
 	ranged_attacker = TRUE
 
@@ -248,7 +248,7 @@
 	melee_damage_upper = 25
 	attack_verb_continuous = "claws"
 	attack_verb_simple = "slice"
-	attack_sound = 'sound/items/weapons/bladeslice.ogg'
+	attack_sound = '../assets/sound/items/weapons/bladeslice.ogg'
 
 /*
 * the ugly one
@@ -276,5 +276,5 @@
 	melee_damage_upper = 35
 	attack_verb_continuous = "slices"
 	attack_verb_simple = "slice"
-	attack_sound = 'sound/effects/wounds/crackandbleed.ogg'
+	attack_sound = '../assets/sound/effects/wounds/crackandbleed.ogg'
 	speak_emote = list("hums ominously")

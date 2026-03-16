@@ -3,7 +3,7 @@
 
 ///Generic construction action for base [construction consoles][/obj/machinery/computer/camera_advanced/base_construction].
 /datum/action/innate/construction
-	button_icon = 'icons/mob/actions/actions_construction.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_construction.dmi'
 	///Console's eye mob
 	var/mob/eye/camera/remote/base_construction/remote_eye
 	///Console itself
@@ -57,11 +57,11 @@
 	owner.changeNext_move(CLICK_CD_RANGE)
 	check_rcd()
 	base_console.internal_rcd.rcd_create(rcd_target, owner) //Activate the RCD and force it to work remotely!
-	playsound(target_turf, 'sound/items/deconstruct.ogg', 60, TRUE)
+	playsound(target_turf, '../assets/sound/items/deconstruct.ogg', 60, TRUE)
 
 /datum/action/innate/construction/configure_mode
 	name = "Configure RCD"
-	button_icon = 'icons/obj/tools.dmi'
+	button_icon = '../assets/icons/obj/tools.dmi'
 	button_icon_state = "rcd"
 
 /datum/action/innate/construction/configure_mode/Activate()
@@ -110,7 +110,7 @@
 	button_icon_state = "build_fan"
 	structure_name = "fans"
 	structure_path = /obj/structure/fans/tiny
-	place_sound = 'sound/machines/click.ogg'
+	place_sound = '../assets/sound/machines/click.ogg'
 
 /datum/action/innate/construction/place_structure/fan/after_place(obj/placed_structure, remaining)
 	to_chat(owner, span_notice("Tiny fan placed. [remaining] fans remaining."))
@@ -120,7 +120,7 @@
 	button_icon_state = "build_turret"
 	structure_name = "turrets"
 	structure_path = /obj/machinery/porta_turret/aux_base
-	place_sound = 'sound/items/tools/drill_use.ogg'
+	place_sound = '../assets/sound/items/tools/drill_use.ogg'
 
 /datum/action/innate/construction/place_structure/turret/after_place(obj/placed_structure, remaining)
 	var/obj/machinery/computer/auxiliary_base/turret_controller = locate() in get_area(placed_structure)

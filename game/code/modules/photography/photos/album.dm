@@ -4,11 +4,11 @@
 /obj/item/storage/photo_album
 	name = "photo album"
 	desc = "A big book used to store photos and mementos."
-	icon = 'icons/obj/art/camera.dmi'
+	icon = '../assets/icons/obj/art/camera.dmi'
 	icon_state = "album"
 	inhand_icon_state = "album"
-	lefthand_file = 'icons/mob/inhands/items/books_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/books_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/books_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/books_righthand.dmi'
 	storage_type = /datum/storage/photo_album
 	resistance_flags = FLAMMABLE
 	w_class = WEIGHT_CLASS_SMALL

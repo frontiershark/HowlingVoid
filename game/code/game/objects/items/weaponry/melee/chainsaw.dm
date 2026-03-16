@@ -3,12 +3,12 @@
 /obj/item/chainsaw
 	name = "chainsaw"
 	desc = "A versatile power tool. Useful for limbing trees and delimbing humans."
-	icon = 'icons/obj/weapons/chainsaw.dmi'
+	icon = '../assets/icons/obj/weapons/chainsaw.dmi'
 	icon_state = "chainsaw"
 	base_icon_state = "chainsaw"
 	icon_angle = 180
-	lefthand_file = 'icons/mob/inhands/weapons/chainsaw_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/chainsaw_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/chainsaw_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/chainsaw_righthand.dmi'
 	obj_flags = CONDUCTS_ELECTRICITY
 	force = 13
 	w_class = WEIGHT_CLASS_HUGE
@@ -40,14 +40,14 @@
 		throwforce_on = force_on, \
 		throw_speed_on = throw_speed, \
 		sharpness_on = SHARP_EDGED, \
-		hitsound_on = 'sound/items/weapons/chainsawhit.ogg', \
+		hitsound_on = '../assets/sound/items/weapons/chainsawhit.ogg', \
 		w_class_on = w_class, \
 	)
 	AddComponent(/datum/component/butchering, \
 		speed = 3 SECONDS, \
 		effectiveness = 100, \
 		bonus_modifier = 0, \
-		butcher_sound = 'sound/items/weapons/chainsawhit.ogg', \
+		butcher_sound = '../assets/sound/items/weapons/chainsawhit.ogg', \
 		disabled = TRUE, \
 	)
 	AddElement(/datum/element/prosthetic_icon, "mounted", 180, TRUE)
@@ -88,7 +88,7 @@
 /obj/item/chainsaw/suicide_act(mob/living/carbon/user)
 	if(!HAS_TRAIT(src, TRAIT_TRANSFORM_ACTIVE))
 		user.visible_message(span_suicide("[user] smashes [src] into [user.p_their()] neck, destroying [user.p_their()] esophagus! It looks like [user.p_theyre()] trying to commit suicide!"))
-		playsound(src, 'sound/items/weapons/genhit1.ogg', 100, TRUE)
+		playsound(src, '../assets/sound/items/weapons/genhit1.ogg', 100, TRUE)
 		return BRUTELOSS
 
 	user.visible_message(span_suicide("[user] begins to tear [user.p_their()] head off with [src]! It looks like [user.p_theyre()] trying to commit suicide!"))
@@ -97,7 +97,7 @@
 		visible_message(span_suicide("[user] realises that [user.p_they()] cannot cut off [user.p_their()] head because [user.p_they()] don't have one!"))
 		return SHAME
 
-	playsound(src, 'sound/items/weapons/chainsawhit.ogg', 100, TRUE)
+	playsound(src, '../assets/sound/items/weapons/chainsawhit.ogg', 100, TRUE)
 	if(myhead.dismember())
 		return BRUTELOSS
 
@@ -117,7 +117,7 @@
 	if (!head?.can_dismember())
 		return ..()
 
-	playsound(user, 'sound/items/weapons/slice.ogg', vol = 80, vary = TRUE)
+	playsound(user, '../assets/sound/items/weapons/slice.ogg', vol = 80, vary = TRUE)
 
 	target_mob.balloon_alert(user, "cutting off head...")
 	if (!do_after(user, behead_time, target_mob, extra_checks = CALLBACK(src, PROC_REF(has_same_head), target_mob, head)))

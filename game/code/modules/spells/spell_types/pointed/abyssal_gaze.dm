@@ -2,11 +2,11 @@
 /datum/action/cooldown/spell/pointed/abyssal_gaze
 	name = "Abyssal Gaze"
 	desc = "This spell instills a deep terror in your target, temporarily chilling and blinding it."
-	ranged_mousepointer = 'icons/effects/mouse_pointers/cult_target.dmi'
+	ranged_mousepointer = '../assets/icons/effects/mouse_pointers/cult_target.dmi'
 	background_icon_state = "bg_demon"
 	overlay_icon_state = "bg_demon_border"
 
-	button_icon = 'icons/mob/actions/actions_cult.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_cult.dmi'
 	button_icon_state = "abyssal_gaze"
 
 	school = SCHOOL_EVOCATION
@@ -34,8 +34,8 @@
 		return FALSE
 
 	to_chat(cast_on, span_userdanger("A freezing darkness surrounds you..."))
-	cast_on.playsound_local(get_turf(cast_on), 'sound/effects/hallucinations/i_see_you1.ogg', 50, 1)
-	owner.playsound_local(get_turf(owner), 'sound/effects/ghost2.ogg', 50, 1)
+	cast_on.playsound_local(get_turf(cast_on), '../assets/sound/effects/hallucinations/i_see_you1.ogg', 50, 1)
+	owner.playsound_local(get_turf(owner), '../assets/sound/effects/ghost2.ogg', 50, 1)
 	cast_on.adjust_temp_blindness(blind_duration)
 	if(ishuman(cast_on))
 		var/mob/living/carbon/human/human_cast_on = cast_on

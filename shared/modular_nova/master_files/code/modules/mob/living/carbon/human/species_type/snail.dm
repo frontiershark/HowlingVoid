@@ -19,9 +19,9 @@
 
 /datum/atom_skin/snail_backpack/snailshell
 	preview_name = "Round Shell"
-	new_icon = 'icons/obj/storage/backpack.dmi'
+	new_icon = '../assets/icons/obj/storage/backpack.dmi'
 	new_icon_state = "snailshell"
-	new_worn_icon = 'icons/mob/clothing/back/backpack.dmi'
+	new_worn_icon = '../assets/icons/mob/clothing/back/backpack.dmi'
 
 /datum/atom_skin/snail_backpack/cinnamonshell
 	preview_name = "Cinnamon Shell"
@@ -100,7 +100,7 @@
 /// Upgrades the storage capacity of the snail shell and gives it a glowy blue outline
 /obj/item/storage/backpack/snail/proc/upgrade_to_bluespace(mob/living/wearer)
 	add_filter("bluespace_shell", 2, list("type" = "outline", "color" = COLOR_BLUE_LIGHT, "size" = 1))
-	playsound(src, 'sound/machines/click.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/machines/click.ogg', 50, TRUE)
 	storage_core = TRUE
 	var/old_inventory = atom_storage.return_inv(FALSE)
 	emptyStorage()

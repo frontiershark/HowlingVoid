@@ -1,6 +1,6 @@
 // All the smoke variant particles.
 /particles/smoke
-	icon = 'icons/effects/particles/smoke.dmi'
+	icon = '../assets/icons/effects/particles/smoke.dmi'
 	icon_state = list("smoke_1" = 1, "smoke_2" = 1, "smoke_3" = 2)
 	width = 100
 	height = 100
@@ -85,7 +85,7 @@
 	velocity = generator(GEN_VECTOR, list(-0.1, 0.4, 0), list(0.1, 0.5, 0), NORMAL_RAND)
 
 /particles/fog
-	icon = 'icons/effects/particles/smoke.dmi'
+	icon = '../assets/icons/effects/particles/smoke.dmi'
 	icon_state = list("chill_1" = 2, "chill_2" = 2, "chill_3" = 1)
 
 /particles/fog/breath
@@ -111,7 +111,7 @@
 	fade = 0.8 SECONDS
 
 /particles/hotspring_steam
-	icon = 'icons/effects/particles/smoke.dmi'
+	icon = '../assets/icons/effects/particles/smoke.dmi'
 	icon_state = list(
 		"steam_cloud_1" = 1,
 		"steam_cloud_2" = 1,

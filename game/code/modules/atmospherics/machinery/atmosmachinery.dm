@@ -522,7 +522,7 @@
  *
  * Creates the image for the pipe underlay that all components use, called by get_pipe_underlay() in components_base.dm
  * Arguments:
- * * iconfile  - path of the iconstate we are using (ex: 'icons/obj/machines/atmospherics/thermomachine.dmi')
+ * * iconfile  - path of the iconstate we are using (ex: '../assets/icons/obj/machines/atmospherics/thermomachine.dmi')
  * * iconstate - the image we are using inside the file
  * * direction - the direction of our device
  * * color - the color (in hex value, like #559900) that the pipe should have
@@ -609,7 +609,7 @@
 		user.update_pipe_vision(full_refresh = TRUE)
 	if(world.time - user.last_played_vent > VENT_SOUND_DELAY)
 		user.last_played_vent = world.time
-		playsound(src, 'sound/machines/ventcrawl.ogg', 50, TRUE, -3)
+		playsound(src, '../assets/sound/machines/ventcrawl.ogg', 50, TRUE, -3)
 
 	//Would be great if this could be implemented when someone alt-clicks the image.
 	if (target_move.vent_movement & VENTCRAWL_ENTRANCE_ALLOWED)
@@ -694,7 +694,7 @@
 
 /obj/effect/overlay/cap_visual
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
-	icon = 'icons/obj/pipes_n_cables/!pipes_bitmask.dmi'
+	icon = '../assets/icons/obj/pipes_n_cables/!pipes_bitmask.dmi'
 	vis_flags = NONE
 	anchored = TRUE
 

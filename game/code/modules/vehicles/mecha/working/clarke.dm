@@ -106,7 +106,7 @@
 		if(isnull(cached_ore_box))
 			return FALSE
 		cached_ore_box.dump_box_contents()
-		playsound(chassis, 'sound/items/weapons/tap.ogg', 50, TRUE)
+		playsound(chassis, '../assets/sound/items/weapons/tap.ogg', 50, TRUE)
 		log_message("Dumped [cached_ore_box].", LOG_MECHA)
 		return TRUE
 
@@ -117,7 +117,7 @@
 /datum/action/vehicle/sealed/mecha/clarke_scoop_body
 	name = "Pick up body"
 	desc = "Activate to pick up a nearby body"
-	button_icon = 'icons/obj/devices/mecha_equipment.dmi'
+	button_icon = '../assets/icons/obj/devices/mecha_equipment.dmi'
 	button_icon_state = "mecha_sleeper_miner"
 
 /datum/action/vehicle/sealed/mecha/clarke_scoop_body/Trigger(mob/clicker, trigger_flags)

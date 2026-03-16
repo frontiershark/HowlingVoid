@@ -68,7 +68,7 @@
 		return TRUE
 	if(!allowed(usr) && !(obj_flags & EMAGGED))
 		balloon_alert(usr, "access denied!")
-		playsound(src, 'sound/machines/click.ogg', 20, TRUE)
+		playsound(src, '../assets/sound/machines/click.ogg', 20, TRUE)
 		return TRUE
 
 	switch(action)

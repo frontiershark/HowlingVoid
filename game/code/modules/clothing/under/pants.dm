@@ -4,15 +4,15 @@
 	female_sprite_flags = NO_FEMALE_UNIFORM
 	can_adjust = TRUE
 	custom_price = PAYCHECK_CREW
-	icon = 'icons/obj/clothing/under/shorts_pants_shirts.dmi'
-	worn_icon = 'icons/mob/clothing/under/shorts_pants_shirts.dmi'
+	icon = '../assets/icons/obj/clothing/under/shorts_pants_shirts.dmi'
+	worn_icon = '../assets/icons/mob/clothing/under/shorts_pants_shirts.dmi'
 	abstract_type = /obj/item/clothing/under/pants
 	species_exception = list(/datum/species/golem)
 
 /obj/item/clothing/under/pants/slacks
 	name = "slacks"
 	desc = "A pair of comfy slacks."
-	icon = 'icons/map_icons/clothing/under/_under.dmi'
+	icon = '../assets/icons/map_icons/clothing/under/_under.dmi'
 	icon_state = "/obj/item/clothing/under/pants/slacks"
 	post_init_icon_state = "slacks"
 	greyscale_config = /datum/greyscale_config/slacks
@@ -24,7 +24,7 @@
 /obj/item/clothing/under/pants/jeans
 	name = "jeans"
 	desc = "A nondescript pair of tough jeans."
-	icon = 'icons/map_icons/clothing/under/_under.dmi'
+	icon = '../assets/icons/map_icons/clothing/under/_under.dmi'
 	icon_state = "/obj/item/clothing/under/pants/jeans"
 	post_init_icon_state = "jeans"
 	greyscale_config = /datum/greyscale_config/jeans

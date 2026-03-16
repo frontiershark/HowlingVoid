@@ -11,7 +11,7 @@
 /obj/machinery/oven
 	name = "oven"
 	desc = "Why do they call it oven when you of in the cold food of out hot eat the food?"
-	icon = 'icons/obj/machines/kitchen.dmi'
+	icon = '../assets/icons/obj/machines/kitchen.dmi'
 	icon_state = "oven_off"
 	base_icon_state = "oven"
 	density = TRUE
@@ -157,14 +157,14 @@
 	. = ..()
 	open = !open
 	if(open)
-		playsound(src, 'sound/machines/oven/oven_open.ogg', 75, TRUE)
+		playsound(src, '../assets/sound/machines/oven/oven_open.ogg', 75, TRUE)
 		set_smoke_state(OVEN_SMOKE_STATE_NONE)
 		to_chat(user, span_notice("You open [src]."))
 		end_processing()
 		if(used_tray)
 			used_tray.vis_flags &= ~VIS_HIDE
 	else
-		playsound(src, 'sound/machines/oven/oven_close.ogg', 75, TRUE)
+		playsound(src, '../assets/sound/machines/oven/oven_close.ogg', 75, TRUE)
 		to_chat(user, span_notice("You close [src]."))
 		if(used_tray)
 			begin_processing()
@@ -182,14 +182,14 @@
 	. = ..()
 	open = !open
 	if(open)
-		playsound(src, 'sound/machines/oven/oven_open.ogg', 75, TRUE)
+		playsound(src, '../assets/sound/machines/oven/oven_open.ogg', 75, TRUE)
 		set_smoke_state(OVEN_SMOKE_STATE_NONE)
 		to_chat(user, span_notice("You open [src]."))
 		end_processing()
 		if(used_tray)
 			used_tray.vis_flags &= ~VIS_HIDE
 	else
-		playsound(src, 'sound/machines/oven/oven_close.ogg', 75, TRUE)
+		playsound(src, '../assets/sound/machines/oven/oven_close.ogg', 75, TRUE)
 		to_chat(user, span_notice("You close [src]."))
 		if(used_tray)
 			begin_processing()

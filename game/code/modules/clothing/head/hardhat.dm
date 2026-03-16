@@ -1,6 +1,6 @@
 /obj/item/clothing/head/utility
-	icon = 'icons/obj/clothing/head/utility.dmi'
-	worn_icon = 'icons/mob/clothing/head/utility.dmi'
+	icon = '../assets/icons/obj/clothing/head/utility.dmi'
+	worn_icon = '../assets/icons/mob/clothing/head/utility.dmi'
 	sound_vary = TRUE
 	pickup_sound = SFX_HARD_HAT_PICKUP
 	drop_sound = SFX_HARD_HAT_DROP
@@ -157,7 +157,7 @@
 		return
 
 	if(!up)
-		. += mutable_appearance(visor_sprite_path, visor_state)	// NOVA EDIT CHANGE - WELDING MUZZLES - ORIGINAL: . += mutable_appearance('icons/mob/clothing/head/utility.dmi', visor_state)
+		. += mutable_appearance(visor_sprite_path, visor_state)	// NOVA EDIT CHANGE - WELDING MUZZLES - ORIGINAL: . += mutable_appearance('../assets/icons/mob/clothing/head/utility.dmi', visor_state)
 
 /obj/item/clothing/head/utility/hardhat/welding/update_overlays()
 	. = ..()
@@ -231,8 +231,8 @@
 /obj/item/clothing/head/utility/hardhat/pumpkinhead
 	name = "carved pumpkin"
 	desc = "A jack o' lantern! Believed to ward off evil spirits."
-	icon = 'icons/obj/clothing/head/costume.dmi'
-	worn_icon = 'icons/mob/clothing/head/costume.dmi'
+	icon = '../assets/icons/obj/clothing/head/costume.dmi'
+	worn_icon = '../assets/icons/mob/clothing/head/costume.dmi'
 	icon_state = "hardhat0_pumpkin"
 	inhand_icon_state = null
 	hat_type = "pumpkin"
@@ -303,8 +303,8 @@
 /obj/item/clothing/head/utility/hardhat/reindeer
 	name = "novelty reindeer hat"
 	desc = "Some fake antlers and a very fake red nose."
-	icon = 'icons/obj/clothing/head/costume.dmi'
-	worn_icon = 'icons/mob/clothing/head/costume.dmi'
+	icon = '../assets/icons/obj/clothing/head/costume.dmi'
+	worn_icon = '../assets/icons/mob/clothing/head/costume.dmi'
 	icon_state = "hardhat0_reindeer"
 	inhand_icon_state = null
 	hat_type = "reindeer"

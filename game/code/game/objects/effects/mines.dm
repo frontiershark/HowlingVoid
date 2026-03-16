@@ -3,7 +3,7 @@
 	desc = "Better stay away from that thing."
 	density = FALSE
 	anchored = TRUE
-	icon = 'icons/obj/weapons/grenade.dmi'
+	icon = '../assets/icons/obj/weapons/grenade.dmi'
 	icon_state = "landmine"
 	base_icon_state = "landmine"
 	/// We manually check to see if we've been triggered in case multiple atoms cross us in the time between the mine being triggered and it actually deleting, to avoid a race condition with multiple detonations
@@ -57,7 +57,7 @@
 /obj/effect/mine/proc/now_armed()
 	armed = TRUE
 	update_appearance(UPDATE_ICON_STATE)
-	playsound(src, 'sound/machines/nuke/angry_beep.ogg', 40, FALSE, -2)
+	playsound(src, '../assets/sound/machines/nuke/angry_beep.ogg', 40, FALSE, -2)
 	visible_message(span_danger("\The [src] beeps softly, indicating it is now active."), vision_distance = COMBAT_MESSAGE_RANGE)
 
 /// Can this mine trigger on the passed movable?
@@ -96,7 +96,7 @@
 			return //it didn't actually touch the mine, don't blow
 
 	visible_message(span_danger("[icon2html(src, viewers(src))] *click*"))
-	playsound(src, 'sound/machines/click.ogg', 60, TRUE)
+	playsound(src, '../assets/sound/machines/click.ogg', 60, TRUE)
 	if(gonna_blow)
 		RegisterSignal(arrived, COMSIG_MOVABLE_MOVED, PROC_REF(triggermine)) //wait for it to finish the movement before blowing so it takes proper damage
 		return
@@ -113,7 +113,7 @@
 	if(!foot_on_mine && gone.flags_1 & ON_BORDER_1)
 		if(gone.dir == REVERSE_DIR(direction)) //see if a north facing border atom (ie window) travels south (and other directions as needed)
 			visible_message(span_danger("[icon2html(src, viewers(src))] *click*"))
-			playsound(src, 'sound/machines/click.ogg', 60, TRUE)
+			playsound(src, '../assets/sound/machines/click.ogg', 60, TRUE)
 			triggermine() //it "passed" over the mine briefly, triggering it in the process
 		return //either it blew up the mine, or it didn't and we don't have to worry about anything else.
 
@@ -217,14 +217,14 @@
 
 /obj/effect/mine/sound
 	name = "honkblaster 1000"
-	var/sound = 'sound/items/bikehorn.ogg'
+	var/sound = '../assets/sound/items/bikehorn.ogg'
 
 /obj/effect/mine/sound/mineEffect(mob/victim)
 	playsound(loc, sound, 100, TRUE)
 
 /obj/effect/mine/sound/bwoink
 	name = "bwoink mine"
-	sound = 'sound/effects/adminhelp.ogg'
+	sound = '../assets/sound/effects/adminhelp.ogg'
 
 /// These mines spawn pellet_clouds around them when triggered
 /obj/effect/mine/shrapnel
@@ -265,7 +265,7 @@
 /obj/item/minespawner
 	name = "landmine deployment device"
 	desc = "When activated, will deploy an Asset Protection landmine after 3 seconds passes, perfect for high ranking NT officers looking to cover their assets from afar."
-	icon = 'icons/obj/devices/tracker.dmi'
+	icon = '../assets/icons/obj/devices/tracker.dmi'
 	icon_state = "beacon"
 
 	var/mine_type = /obj/effect/mine/shrapnel/capspawn
@@ -276,7 +276,7 @@
 	if(active)
 		return
 
-	playsound(src, 'sound/items/weapons/armbomb.ogg', 70, TRUE)
+	playsound(src, '../assets/sound/items/weapons/armbomb.ogg', 70, TRUE)
 	to_chat(user, span_warning("You arm \the [src], causing it to shake! It will deploy in 3 seconds."))
 	active = TRUE
 	addtimer(CALLBACK(src, PROC_REF(deploy_mine)), 3 SECONDS)
@@ -284,7 +284,7 @@
 /// Deploys the mine and deletes itself
 /obj/item/minespawner/proc/deploy_mine()
 	do_alert_animation()
-	playsound(loc, 'sound/machines/chime.ogg', 30, FALSE, -3)
+	playsound(loc, '../assets/sound/machines/chime.ogg', 30, FALSE, -3)
 	var/obj/effect/mine/new_mine = new mine_type(get_turf(src))
 	visible_message(span_danger("\The [src] releases a puff of smoke, revealing \a [new_mine]!"))
 	var/obj/effect/particle_effect/fluid/smoke/poof = new (get_turf(src))

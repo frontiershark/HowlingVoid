@@ -82,7 +82,7 @@
 /datum/species/synthetic/spec_revival(mob/living/carbon/human/transformer)
 	switch_to_screen(transformer, "Console")
 	addtimer(CALLBACK(src, PROC_REF(switch_to_screen), transformer, saved_screen), 5 SECONDS)
-	playsound(transformer.loc, 'sound/machines/chime.ogg', 50, TRUE)
+	playsound(transformer.loc, '../assets/sound/machines/chime.ogg', 50, TRUE)
 	transformer.visible_message(span_notice("[transformer]'s [screen ? "monitor lights up" : "eyes flicker to life"]!"), span_notice("All systems nominal. You're back online!"))
 
 /datum/species/synthetic/on_species_gain(mob/living/carbon/human/transformer, datum/species/old_species, pref_load, regenerate_icons)
@@ -183,7 +183,7 @@
 	if(emag_effect)
 		return
 	emag_effect = TRUE
-	playsound(source.loc, 'sound/misc/interference.ogg', 50)
+	playsound(source.loc, '../assets/sound/misc/interference.ogg', 50)
 	to_chat(source, span_warning("Alert: Security breach detected in central processing unit. Error Code: 540-EXO"))
 
 /**

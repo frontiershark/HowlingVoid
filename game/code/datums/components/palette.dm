@@ -75,9 +75,9 @@
 		if(!add_option)
 			add_option = new
 			menu_choices[color_count+1] = add_option
-		var/image/element = image(icon = 'icons/hud/radial.dmi', icon_state = "palette_element")
+		var/image/element = image(icon = '../assets/icons/hud/radial.dmi', icon_state = "palette_element")
 		element.color = selected_color
-		var/image/plus = image(icon = 'icons/hud/radial.dmi', icon_state = "palette_add")
+		var/image/plus = image(icon = '../assets/icons/hud/radial.dmi', icon_state = "palette_add")
 		plus.appearance_flags = /image::appearance_flags | RESET_COLOR
 		element.add_overlay(plus)
 		add_option.image = element
@@ -90,7 +90,7 @@
 			option = new
 			menu_choices[index] = option
 		var/icon_state_to_use = hexcolor == selected_color ? "palette_selected" : "palette_element"
-		var/image/element = image(icon = 'icons/hud/radial.dmi', icon_state = icon_state_to_use)
+		var/image/element = image(icon = '../assets/icons/hud/radial.dmi', icon_state = icon_state_to_use)
 		element.color = hexcolor
 		option.image = element
 		// We want only the name/tooltip to show the hexcolor to avoid having multiple choices with same ids (identical colors).

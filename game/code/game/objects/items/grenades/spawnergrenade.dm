@@ -1,7 +1,7 @@
 /obj/item/grenade/spawnergrenade
 	desc = "It will unleash an unspecified anomaly in the surrounding vicinity."
 	name = "delivery grenade"
-	icon = 'icons/obj/weapons/grenade.dmi'
+	icon = '../assets/icons/obj/weapons/grenade.dmi'
 	icon_state = "delivery"
 	inhand_icon_state = "flashbang"
 	var/spawner_type = null // must be an object path
@@ -22,7 +22,7 @@
 	if(spawner_type && deliveryamt)
 		// Make a quick flash
 		var/turf/target_turf = get_turf(src)
-		playsound(target_turf, 'sound/effects/phasein.ogg', 100, TRUE)
+		playsound(target_turf, '../assets/sound/effects/phasein.ogg', 100, TRUE)
 		for(var/mob/living/carbon/target_carbon in viewers(target_turf, null))
 			target_carbon.flash_act()
 

@@ -85,11 +85,11 @@ GLOBAL_LIST_INIT(glass_style_singletons, create_glass_styles())
 
 /datum/glass_style/drinking_glass
 	required_container_type = /obj/item/reagent_containers/cup/glass/drinkingglass
-	icon = 'icons/obj/drinks/drinks.dmi'
+	icon = '../assets/icons/obj/drinks/drinks.dmi'
 
 /datum/glass_style/shot_glass
 	required_container_type = /obj/item/reagent_containers/cup/glass/drinkingglass/shotglass
-	icon = 'icons/obj/drinks/shot_glasses.dmi'
+	icon = '../assets/icons/obj/drinks/shot_glasses.dmi'
 
 /datum/glass_style/has_foodtype
 	/// This style changes the "drink type" of the container it's placed it as well, it's like food types
@@ -97,15 +97,15 @@ GLOBAL_LIST_INIT(glass_style_singletons, create_glass_styles())
 
 /datum/glass_style/has_foodtype/drinking_glass
 	required_container_type = /obj/item/reagent_containers/cup/glass/drinkingglass
-	icon = 'icons/obj/drinks/drinks.dmi'
+	icon = '../assets/icons/obj/drinks/drinks.dmi'
 
 /datum/glass_style/has_foodtype/juicebox
 	required_container_type = /obj/item/reagent_containers/cup/glass/bottle/juice/smallcarton
-	icon = 'icons/obj/drinks/boxes.dmi'
+	icon = '../assets/icons/obj/drinks/boxes.dmi'
 
 /datum/glass_style/has_foodtype/soup
 	required_container_type = /obj/item/reagent_containers/cup/bowl
-	icon = 'icons/obj/food/soupsalad.dmi'
+	icon = '../assets/icons/obj/food/soupsalad.dmi'
 
 /datum/glass_style/has_foodtype/soup/New()
 	. = ..()

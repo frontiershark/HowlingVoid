@@ -79,9 +79,9 @@
 /datum/action/cooldown/mob_cooldown/guardian_comms
 	name = "Guardian Communication"
 	desc = "Communicate telepathically with your guardian."
-	button_icon = 'icons/hud/guardian.dmi'
+	button_icon = '../assets/icons/hud/guardian.dmi'
 	button_icon_state = "communicate"
-	background_icon = 'icons/hud/guardian.dmi'
+	background_icon = '../assets/icons/hud/guardian.dmi'
 	background_icon_state = "base"
 	check_flags = NONE
 	click_to_activate = FALSE
@@ -116,9 +116,9 @@
 /datum/action/cooldown/mob_cooldown/recall_guardian
 	name = "Recall Guardian"
 	desc = "Forcibly recall your guardian."
-	button_icon = 'icons/hud/guardian.dmi'
+	button_icon = '../assets/icons/hud/guardian.dmi'
 	button_icon_state = "recall"
-	background_icon = 'icons/hud/guardian.dmi'
+	background_icon = '../assets/icons/hud/guardian.dmi'
 	background_icon_state = "base"
 	check_flags = NONE
 	click_to_activate = FALSE
@@ -138,9 +138,9 @@
 /datum/action/cooldown/mob_cooldown/replace_guardian
 	name = "Reset Guardian Consciousness"
 	desc = "Replaces the mind of your guardian with that of a different ghost."
-	button_icon = 'icons/mob/simple/mob.dmi'
+	button_icon = '../assets/icons/mob/simple/mob.dmi'
 	button_icon_state = "ghost"
-	background_icon = 'icons/hud/guardian.dmi'
+	background_icon = '../assets/icons/hud/guardian.dmi'
 	background_icon_state = "base"
 	check_flags = NONE
 	click_to_activate = FALSE

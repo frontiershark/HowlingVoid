@@ -43,7 +43,7 @@ GLOBAL_VAR_INIT(starlight_power, default_starlight_power())
 GLOBAL_LIST_EMPTY(starlight)
 
 /turf/open/space
-	icon = 'icons/turf/space.dmi'
+	icon = '../assets/icons/turf/space.dmi'
 	icon_state = MAP_SWITCH("space", "space_map")
 	name = "\proper space"
 	overfloor_placed = FALSE
@@ -214,7 +214,7 @@ GLOBAL_LIST_EMPTY(starlight)
 	return HAS_TRAIT(crossing, TRAIT_SPACEWALK)
 
 /turf/open/space/openspace
-	icon = 'icons/turf/floors.dmi'
+	icon = '../assets/icons/turf/floors.dmi'
 	icon_state = MAP_SWITCH("pure_white", "invisible")
 	plane = TRANSPARENT_FLOOR_PLANE
 

@@ -25,7 +25,7 @@ GLOBAL_LIST_INIT(heretic_path_datums, init_heretic_path_datums())
 	var/complexity = "Insane"
 	var/complexity_color = COLOR_WHITE
 	var/list/icon = list(
-		"icon" = 'icons/obj/weapons/khopesh.dmi',
+		"icon" = '../assets/icons/obj/weapons/khopesh.dmi',
 		"state" = "dark_blade",
 		"frame" = 1,
 		"dir" = SOUTH,

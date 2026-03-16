@@ -178,7 +178,7 @@ SUBSYSTEM_DEF(greyscale_previews)
 		icons[map_icon_key] = map_icon
 	#endif
 
-	var/icon/holder = icon('icons/testing/greyscale_error.dmi')
+	var/icon/holder = icon('../assets/icons/testing/greyscale_error.dmi')
 	for(var/state in icons)
 		holder.Insert(icons[state], state)
 
@@ -190,7 +190,7 @@ SUBSYSTEM_DEF(greyscale_previews)
 #ifdef UNIT_TESTS
 	var/new_md5 = rustg_hash_file(RUSTG_HASH_MD5, filepath)
 	if(old_md5 != new_md5)
-		stack_trace("Generated map icons were different than what is currently saved. If you see this in a CI run it means you need to run the game once through initialization and commit the resulting files in 'icons/map_icons/'")
+		stack_trace("Generated map icons were different than what is currently saved. If you see this in a CI run it means you need to run the game once through initialization and commit the resulting files in '../assets/icons/map_icons/'")
 #endif
 
 #ifdef CHECK_SPRITESHEET_ICON_VALIDITY

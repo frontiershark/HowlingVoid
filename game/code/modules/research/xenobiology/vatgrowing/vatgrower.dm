@@ -2,7 +2,7 @@
 /obj/machinery/vatgrower
 	name = "growing vat"
 	desc = "Tastes just like the chef's soup."
-	icon = 'icons/obj/science/vatgrowing.dmi'
+	icon = '../assets/icons/obj/science/vatgrowing.dmi'
 	icon_state = "growing_vat"
 	density = TRUE
 	pass_flags_self = PASSMACHINE | LETPASSTHROW
@@ -50,7 +50,7 @@
 	if(biological_sample.handle_growth(src))
 		if(!prob(10))
 			return
-		playsound(loc, 'sound/effects/slosh.ogg', 25, TRUE)
+		playsound(loc, '../assets/sound/effects/slosh.ogg', 25, TRUE)
 		audible_message(pick(list(span_notice("[src] grumbles!"), span_notice("[src] makes a splashing noise!"), span_notice("[src] sloshes!"))))
 	use_energy(active_power_usage * seconds_per_tick)
 
@@ -76,7 +76,7 @@
 
 /obj/machinery/vatgrower/attack_hand(mob/living/user, list/modifiers)
 	. = ..()
-	playsound(src, 'sound/machines/click.ogg', 30, TRUE)
+	playsound(src, '../assets/sound/machines/click.ogg', 30, TRUE)
 	if(obj_flags & EMAGGED)
 		return
 	resampler_active = !resampler_active
@@ -112,7 +112,7 @@
 	biological_sample.sample_layers = petri.sample.sample_layers
 	biological_sample.sample_color = petri.sample.sample_color
 	balloon_alert(user, "added sample")
-	playsound(src, 'sound/effects/bubbles/bubbles.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/effects/bubbles/bubbles.ogg', 50, TRUE)
 	update_appearance()
 	RegisterSignal(biological_sample, COMSIG_SAMPLE_GROWTH_COMPLETED, PROC_REF(on_sample_growth_completed))
 	return ITEM_INTERACT_SUCCESS
@@ -170,7 +170,7 @@
 /obj/machinery/vatgrower/proc/on_sample_growth_completed()
 	SIGNAL_HANDLER
 	if(resampler_active)
-		addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(playsound), get_turf(src), 'sound/effects/servostep.ogg', 100, 1), 1.5 SECONDS)
+		addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(playsound), get_turf(src), '../assets/sound/effects/servostep.ogg', 100, 1), 1.5 SECONDS)
 		biological_sample.reset_sample()
 	else
 		QDEL_NULL(biological_sample)

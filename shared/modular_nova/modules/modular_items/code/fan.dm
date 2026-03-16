@@ -7,7 +7,7 @@
 	use_power = IDLE_POWER_USE
 	max_integrity = 150
 	density = FALSE
-	icon = 'icons/obj/mining_zones/survival_pod.dmi'
+	icon = '../assets/icons/obj/mining_zones/survival_pod.dmi'
 	icon_state = "fan_tiny"
 	can_atmos_pass = ATMOS_PASS_NO
 	rad_insulation = RAD_LIGHT_INSULATION

@@ -10,7 +10,7 @@
 
 /obj/item/reagent_containers/cup/soda_cans
 	name = "soda can"
-	icon = 'icons/obj/drinks/soda.dmi'
+	icon = '../assets/icons/obj/drinks/soda.dmi'
 	icon_state = "cola"
 	icon_state_preview = "cola"
 	abstract_type = /obj/item/reagent_containers/cup/soda_cans
@@ -48,7 +48,7 @@
 		open_soda(H)
 		sleep(1 SECONDS)
 	H.visible_message(span_suicide("[H] takes a big sip from [src]! It looks like [H.p_theyre()] trying to commit suicide!"))
-	playsound(H,'sound/items/drink.ogg', 80, TRUE)
+	playsound(H,'../assets/sound/items/drink.ogg', 80, TRUE)
 	reagents.trans_to(H, src.reagents.total_volume, transferred_by = H) //a big sip
 	sleep(0.5 SECONDS)
 	H.say(pick(
@@ -61,7 +61,7 @@
 	if(H.age >= 30)
 		H.Stun(50)
 		sleep(5 SECONDS)
-		playsound(H,'sound/items/drink.ogg', 80, TRUE)
+		playsound(H,'../assets/sound/items/drink.ogg', 80, TRUE)
 		H.say(pick(
 			"Another day, another dollar.",
 			"I wonder if I should hold?",
@@ -86,7 +86,7 @@
 			span_warning("[user] crushes the can of [src] on [target]'s forehead!"),
 			span_notice("You crush the can of [src] on [target]'s forehead."),
 		)
-	playsound(src, 'sound/items/weapons/pierce.ogg', rand(10, 50), TRUE)
+	playsound(src, '../assets/sound/items/weapons/pierce.ogg', rand(10, 50), TRUE)
 	var/obj/item/trash/can/crushed_can = new /obj/item/trash/can(target.drop_location())
 	crushed_can.icon_state = icon_state
 	qdel(src)
@@ -107,7 +107,7 @@
 /obj/item/reagent_containers/cup/soda_cans/proc/open_soda(mob/user)
 	if(tape_color)
 		to_chat(user, "You rip off the tape covering [src]'s hole.")
-		playsound(user, 'sound/items/duct_tape/duct_tape_rip.ogg', 50, TRUE)
+		playsound(user, '../assets/sound/items/duct_tape/duct_tape_rip.ogg', 50, TRUE)
 		tape_color = null
 		add_container_flags(OPENCONTAINER)
 		update_appearance()
@@ -141,7 +141,7 @@
 			if(iter_mob != target)
 				iter_mob.add_mood_event("observed_soda_spill", /datum/mood_event/observed_soda_spill, target, src)
 
-	playsound(src, 'sound/items/can/can_pop.ogg', 80, TRUE)
+	playsound(src, '../assets/sound/items/can/can_pop.ogg', 80, TRUE)
 	if(!hide_message)
 		visible_message(span_danger("[src] spills over, fizzing its contents all over [target]!"))
 	add_container_flags(OPENCONTAINER)
@@ -232,7 +232,7 @@
 	if (tape_color)
 		spark_flags |= SPARK_ACT_ENCLOSED
 
-	playsound(src, 'sound/effects/sparks/sparks1.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/effects/sparks/sparks1.ogg', 50, TRUE)
 	if (reagents.spark_act(0, spark_flags) & SPARK_ACT_DESTRUCTIVE)
 		qdel(src)
 		return
@@ -248,17 +248,17 @@
 /obj/item/reagent_containers/cup/soda_cans/update_overlays()
 	. = ..()
 	if (fuse_color)
-		var/mutable_appearance/fuse_overlay = mutable_appearance('icons/obj/weapons/grenade.dmi', "improvised_grenade_fuse")
+		var/mutable_appearance/fuse_overlay = mutable_appearance('../assets/icons/obj/weapons/grenade.dmi', "improvised_grenade_fuse")
 		fuse_overlay.color = fuse_color
 		. += fuse_overlay
 
 	if (tape_color)
-		var/mutable_appearance/tape_overlay = mutable_appearance('icons/obj/weapons/grenade.dmi', "improvised_grenade_tape")
+		var/mutable_appearance/tape_overlay = mutable_appearance('../assets/icons/obj/weapons/grenade.dmi', "improvised_grenade_tape")
 		tape_overlay.color = tape_color
 		. += tape_overlay
 
 	if (fuse_timer)
-		. += mutable_appearance('icons/obj/weapons/grenade.dmi', "improvised_grenade_active")
+		. += mutable_appearance('../assets/icons/obj/weapons/grenade.dmi', "improvised_grenade_active")
 
 /obj/item/reagent_containers/cup/soda_cans/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum)
 	. = ..()
@@ -289,7 +289,7 @@
 
 /obj/item/reagent_containers/cup/soda_cans/attack_self_secondary(mob/user)
 	if(!is_drainable())
-		playsound(src, 'sound/items/can/can_shake.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/items/can/can_shake.ogg', 50, TRUE)
 		user.visible_message(span_danger("[user] shakes [src]!"), span_danger("You shake up [src]!"), vision_distance=2)
 		fizziness += SODA_FIZZINESS_SHAKE
 		return

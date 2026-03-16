@@ -14,7 +14,7 @@
 /obj/item/gas_filter
 	name = "atmospheric gas filter"
 	desc = "A piece of filtering cloth to be used with atmospheric gas masks and emergency gas masks."
-	icon = 'icons/obj/clothing/masks.dmi'
+	icon = '../assets/icons/obj/clothing/masks.dmi'
 	icon_state = "gas_atmos_filter"
 	w_class = WEIGHT_CLASS_TINY
 	///Amount of filtering points available

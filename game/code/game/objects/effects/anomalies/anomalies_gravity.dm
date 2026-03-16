@@ -1,7 +1,7 @@
 
 /obj/effect/anomaly/grav
 	name = "gravitational anomaly"
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	icon_state = "shield2"
 	density = FALSE
 	anomaly_core = /obj/item/assembly/signaler/anomaly/grav
@@ -54,7 +54,7 @@
 
 /obj/effect/anomaly/grav/detonate()
 	new /obj/effect/temp_visual/circle_wave/gravity(get_turf(src))
-	playsound(src, 'sound/effects/magic/cosmic_energy.ogg', vol = 50)
+	playsound(src, '../assets/sound/effects/magic/cosmic_energy.ogg', vol = 50)
 
 /obj/effect/anomaly/grav/high
 	var/datum/proximity_monitor/advanced/gravity/grav_field

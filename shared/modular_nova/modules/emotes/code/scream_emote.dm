@@ -15,15 +15,15 @@
 	if (isdrone(user))
 		return 'modular_nova/modules/emotes/sound/voice/scream_silicon.ogg'
 	if(istype(user, /mob/living/basic/gorilla))
-		return 'sound/mobs/non-humanoids/gorilla/gorilla.ogg'
+		return '../assets/sound/mobs/non-humanoids/gorilla/gorilla.ogg'
 	if(isalien(user))
-		return 'sound/mobs/non-humanoids/hiss/hiss6.ogg'
+		return '../assets/sound/mobs/non-humanoids/hiss/hiss6.ogg'
 	if(ishuman(user))
 		var/mob/living/carbon/human/human_user = user
 		var/datum/scream_type/selected_scream = human_user.selected_scream
 		if(isnull(selected_scream) || !(LAZYLEN(selected_scream.male_screamsounds) || LAZYLEN(selected_scream.female_screamsounds))) //For things that don't have a selected scream(npcs)
 			if(prob(1))
-				return 'sound/mobs/humanoids/human/scream/wilhelm_scream.ogg'
+				return '../assets/sound/mobs/humanoids/human/scream/wilhelm_scream.ogg'
 			return human_user.dna.species.get_scream_sound(human_user)
 		if(user.gender == FEMALE && LAZYLEN(selected_scream.female_screamsounds))
 			return pick(selected_scream.female_screamsounds)

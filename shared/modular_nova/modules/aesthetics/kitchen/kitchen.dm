@@ -3,7 +3,7 @@
 
 // return to monke
 /obj/machinery/microwave/engineering
-	icon = 'icons/obj/machines/microwave.dmi'
+	icon = '../assets/icons/obj/machines/microwave.dmi'
 
 // I guess
 /obj/machinery/grill

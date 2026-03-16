@@ -15,7 +15,7 @@
 	desc = "<i>\"In case of emergency, please use the stairs.\"</i> Thus, always use the stairs."
 	density = FALSE
 
-	icon = 'icons/obj/wallmounts.dmi'
+	icon = '../assets/icons/obj/wallmounts.dmi'
 	icon_state = "elevpanel0"
 	base_icon_state = "elevpanel"
 
@@ -127,7 +127,7 @@
 		return
 
 	balloon_alert(user, "resetting panel...")
-	playsound(src, 'sound/machines/locktoggle.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/machines/locktoggle.ogg', 50, TRUE)
 	if(!do_after(user, 6 SECONDS, src))
 		balloon_alert(user, "interrupted!")
 		return TRUE
@@ -159,7 +159,7 @@
 
 	// Be vague about whether something was accomplished or not
 	balloon_alert(user, "panel reset")
-	playsound(src, 'sound/machines/locktoggle.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/machines/locktoggle.ogg', 50, TRUE)
 
 	return TRUE
 

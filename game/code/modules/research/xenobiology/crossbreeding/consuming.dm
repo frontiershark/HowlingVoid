@@ -25,13 +25,13 @@ Consuming extracts:
 			nutriment_eaten += N.volume
 			to_chat(user, span_notice("[src] opens up and swallows [O] whole!"))
 			qdel(O)
-			playsound(src, 'sound/items/eatfood.ogg', 20, TRUE)
+			playsound(src, '../assets/sound/items/eatfood.ogg', 20, TRUE)
 		else
 			to_chat(user, span_warning("[src] burbles unhappily at the offering."))
 		if(nutriment_eaten >= nutriment_required)
 			nutriment_eaten = 0
 			user.visible_message(span_notice("[src] swells up and produces a small pile of cookies!"))
-			playsound(src, 'sound/effects/splat.ogg', 40, TRUE)
+			playsound(src, '../assets/sound/effects/splat.ogg', 40, TRUE)
 			last_produced = world.time
 			for(var/i in 1 to cookies)
 				var/obj/item/S = spawncookie()
@@ -46,7 +46,7 @@ Consuming extracts:
 /obj/item/slime_cookie //While this technically acts like food, it's so removed from it that I made it its own type.
 	name = "error cookie"
 	desc = "A weird slime cookie. You shouldn't see this."
-	icon = 'icons/obj/food/slimecookies.dmi'
+	icon = '../assets/icons/obj/food/slimecookies.dmi'
 	var/taste = "error"
 	var/nutrition = 5
 	icon_state = "base"
@@ -75,7 +75,7 @@ Consuming extracts:
 	if(fed)
 		if(!HAS_TRAIT(living_mob, TRAIT_AGEUSIA))
 			to_chat(living_mob, span_notice("You can taste [taste]."))
-		playsound(get_turf(living_mob), 'sound/items/eatfood.ogg', 20, TRUE)
+		playsound(get_turf(living_mob), '../assets/sound/items/eatfood.ogg', 20, TRUE)
 		if(nutrition)
 			living_mob.reagents.add_reagent(/datum/reagent/consumable/nutriment, nutrition)
 		do_effect(living_mob, user)
@@ -243,7 +243,7 @@ Consuming extracts:
 	if (isnull(target))
 		fail_effect(eater)
 		return
-	if (!do_teleport(eater, target, 0, asoundin = 'sound/effects/phasein.ogg', channel = TELEPORT_CHANNEL_BLUESPACE))
+	if (!do_teleport(eater, target, 0, asoundin = '../assets/sound/effects/phasein.ogg', channel = TELEPORT_CHANNEL_BLUESPACE))
 		fail_effect(eater)
 		return
 	new /obj/effect/particle_effect/sparks(target)
@@ -344,7 +344,7 @@ Consuming extracts:
 
 /obj/item/slime_cookie/red/do_effect(mob/living/M, mob/user)
 	new /obj/effect/decal/cleanable/blood(get_turf(M))
-	playsound(get_turf(M), 'sound/effects/splat.ogg', 10, TRUE)
+	playsound(get_turf(M), '../assets/sound/effects/splat.ogg', 10, TRUE)
 	if(iscarbon(M))
 		var/mob/living/carbon/C = M
 		C.adjust_blood_volume(25) //Half a vampire drain.
@@ -396,7 +396,7 @@ Consuming extracts:
 	M.dropItemToGround(held)
 	var/newcoin = /obj/item/coin/gold
 	var/obj/item/coin/C = new newcoin(get_turf(M))
-	playsound(get_turf(C), 'sound/items/coinflip.ogg', 50, TRUE)
+	playsound(get_turf(C), '../assets/sound/items/coinflip.ogg', 50, TRUE)
 	M.put_in_hand(C)
 
 /obj/item/slimecross/consuming/oil

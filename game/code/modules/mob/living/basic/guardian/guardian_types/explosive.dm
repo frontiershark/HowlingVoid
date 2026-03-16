@@ -32,10 +32,10 @@
 /datum/action/cooldown/mob_cooldown/explosive_booby_trap
 	name = "Explosive Trap"
 	desc = "Convert an inanimate object into a deadly and mostly undetectable explosive, triggered on touch."
-	button_icon = 'icons/mob/actions/actions_spells.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_spells.dmi'
 	button_icon_state = "smoke"
 	cooldown_time = 20 SECONDS
-	background_icon = 'icons/hud/guardian.dmi'
+	background_icon = '../assets/icons/hud/guardian.dmi'
 	background_icon_state = "base"
 	/// After this amount of time passses, bomb deactivates.
 	var/decay_time = 1 MINUTES

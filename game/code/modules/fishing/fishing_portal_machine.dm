@@ -1,7 +1,7 @@
 /obj/machinery/fishing_portal_generator
 	name = "fish-porter 3000"
 	desc = "Fishing anywhere, anytime... anyway what was I talking about?"
-	icon = 'icons/obj/fishing.dmi'
+	icon = '../assets/icons/obj/fishing.dmi'
 	icon_state = "portal"
 	active_power_usage = BASE_MACHINE_ACTIVE_CONSUMPTION * 2
 	anchored = FALSE
@@ -93,8 +93,8 @@
 	var/list/choices = list()
 	for(var/radial_name in fishing_list)
 		var/datum/fish_source/source = fishing_list[radial_name]
-		var/mutable_appearance/appearance = mutable_appearance('icons/hud/radial_fishing.dmi', source.radial_state)
-		appearance.add_overlay('icons/hud/radial_fishing.dmi', "minus_sign")
+		var/mutable_appearance/appearance = mutable_appearance('../assets/icons/hud/radial_fishing.dmi', source.radial_state)
+		appearance.add_overlay('../assets/icons/hud/radial_fishing.dmi', "minus_sign")
 		choices[radial_name] = appearance
 
 	var/choice = show_radial_menu(user, src, choices, radius = 38, custom_check = CALLBACK(src, TYPE_PROC_REF(/atom, can_interact), user), tooltips = TRUE)
@@ -128,16 +128,16 @@
 		var/datum/fish_source/stored = linked_fishing_spots[other_spot]
 		if(stored == source)
 			spot.balloon_alert(user, "already linked!")
-			playsound(src, 'sound/machines/buzz/buzz-sigh.ogg', 15, FALSE, extrarange = SHORT_RANGE_SOUND_EXTRARANGE)
+			playsound(src, '../assets/sound/machines/buzz/buzz-sigh.ogg', 15, FALSE, extrarange = SHORT_RANGE_SOUND_EXTRARANGE)
 			return ITEM_INTERACT_BLOCKING
 	if(HAS_TRAIT(spot, TRAIT_UNLINKABLE_FISHING_SPOT))
 		spot.balloon_alert(user, "unlinkable fishing spot!")
-		playsound(src, 'sound/machines/buzz/buzz-sigh.ogg', 15, FALSE, extrarange = SHORT_RANGE_SOUND_EXTRARANGE)
+		playsound(src, '../assets/sound/machines/buzz/buzz-sigh.ogg', 15, FALSE, extrarange = SHORT_RANGE_SOUND_EXTRARANGE)
 		return ITEM_INTERACT_BLOCKING
 	LAZYSET(linked_fishing_spots, spot, source)
 	RegisterSignal(spot, SIGNAL_REMOVETRAIT(TRAIT_FISHING_SPOT), PROC_REF(unlink_fishing_spot))
 	spot.balloon_alert(user, "fishing spot linked")
-	playsound(spot, 'sound/machines/ping.ogg', 15, TRUE, extrarange = SHORT_RANGE_SOUND_EXTRARANGE)
+	playsound(spot, '../assets/sound/machines/ping.ogg', 15, TRUE, extrarange = SHORT_RANGE_SOUND_EXTRARANGE)
 	return ITEM_INTERACT_SUCCESS
 
 /obj/machinery/fishing_portal_generator/proc/unlink_fishing_spot(atom/spot)
@@ -289,10 +289,10 @@
 	var/list/choices = list()
 	for(var/radial_name in available_fish_sources)
 		var/datum/fish_source/source = available_fish_sources[radial_name]
-		var/mutable_appearance/radial_icon = mutable_appearance('icons/hud/radial_fishing.dmi', source.radial_state)
+		var/mutable_appearance/radial_icon = mutable_appearance('../assets/icons/hud/radial_fishing.dmi', source.radial_state)
 		if(!istype(source, /datum/fish_source/portal))
 			//a little star on the top-left to distinguishs them from standard portals.
-			radial_icon.add_overlay('icons/hud/radial_fishing.dmi', "linked_source")
+			radial_icon.add_overlay('../assets/icons/hud/radial_fishing.dmi', "linked_source")
 		choices[radial_name] = radial_icon
 
 	var/choice = show_radial_menu(user, src, choices, radius = 38, custom_check = CALLBACK(src, TYPE_PROC_REF(/atom, can_interact), user), tooltips = TRUE)

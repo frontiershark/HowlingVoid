@@ -833,52 +833,52 @@ ADMIN_VERB(check_missing_sprites, R_DEBUG, "Debug Worn Item Sprites", "We're can
 				to_chat(user, span_warning("ERROR sprites for [sprite.type]. Slot Flags are [sprite.slot_flags]."), confidential = TRUE)
 		else if(sprite.worn_icon_state)
 			if(sprite.slot_flags & ITEM_SLOT_MASK)
-				actual_file_name = 'icons/mob/clothing/mask.dmi'
+				actual_file_name = '../assets/icons/mob/clothing/mask.dmi'
 				if(!icon_exists(actual_file_name, sprite.worn_icon_state))
 					to_chat(user, span_warning("ERROR sprites for [sprite.type]. Mask slot."), confidential = TRUE)
 			if(sprite.slot_flags & ITEM_SLOT_NECK)
-				actual_file_name = 'icons/mob/clothing/neck.dmi'
+				actual_file_name = '../assets/icons/mob/clothing/neck.dmi'
 				if(!icon_exists(actual_file_name, sprite.worn_icon_state))
 					to_chat(user, span_warning("ERROR sprites for [sprite.type]. Neck slot."), confidential = TRUE)
 			if(sprite.slot_flags & ITEM_SLOT_BACK)
-				actual_file_name = 'icons/mob/clothing/back.dmi'
+				actual_file_name = '../assets/icons/mob/clothing/back.dmi'
 				if(!icon_exists(actual_file_name, sprite.worn_icon_state))
 					to_chat(user, span_warning("ERROR sprites for [sprite.type]. Back slot."), confidential = TRUE)
 			if(sprite.slot_flags & ITEM_SLOT_HEAD)
-				actual_file_name = 'icons/mob/clothing/head/default.dmi'
+				actual_file_name = '../assets/icons/mob/clothing/head/default.dmi'
 				if(!icon_exists(actual_file_name, sprite.worn_icon_state))
 					to_chat(user, span_warning("ERROR sprites for [sprite.type]. Head slot."), confidential = TRUE)
 			if(sprite.slot_flags & ITEM_SLOT_BELT)
-				actual_file_name = 'icons/mob/clothing/belt.dmi'
+				actual_file_name = '../assets/icons/mob/clothing/belt.dmi'
 				if(!icon_exists(actual_file_name, sprite.worn_icon_state))
 					to_chat(user, span_warning("ERROR sprites for [sprite.type]. Belt slot."), confidential = TRUE)
 			if(sprite.slot_flags & ITEM_SLOT_SUITSTORE)
-				actual_file_name = 'icons/mob/clothing/belt_mirror.dmi'
+				actual_file_name = '../assets/icons/mob/clothing/belt_mirror.dmi'
 				if(!icon_exists(actual_file_name, sprite.worn_icon_state))
 					to_chat(user, span_warning("ERROR sprites for [sprite.type]. Suit Storage slot."), confidential = TRUE)
 		else if(sprite.icon_state)
 			if(sprite.slot_flags & ITEM_SLOT_MASK)
-				actual_file_name = 'icons/mob/clothing/mask.dmi'
+				actual_file_name = '../assets/icons/mob/clothing/mask.dmi'
 				if(!icon_exists(actual_file_name, sprite.icon_state))
 					to_chat(user, span_warning("ERROR sprites for [sprite.type]. Mask slot."), confidential = TRUE)
 			if(sprite.slot_flags & ITEM_SLOT_NECK)
-				actual_file_name = 'icons/mob/clothing/neck.dmi'
+				actual_file_name = '../assets/icons/mob/clothing/neck.dmi'
 				if(!icon_exists(actual_file_name, sprite.icon_state))
 					to_chat(user, span_warning("ERROR sprites for [sprite.type]. Neck slot."), confidential = TRUE)
 			if(sprite.slot_flags & ITEM_SLOT_BACK)
-				actual_file_name = 'icons/mob/clothing/back.dmi'
+				actual_file_name = '../assets/icons/mob/clothing/back.dmi'
 				if(!icon_exists(actual_file_name, sprite.icon_state))
 					to_chat(user, span_warning("ERROR sprites for [sprite.type]. Back slot."), confidential = TRUE)
 			if(sprite.slot_flags & ITEM_SLOT_HEAD)
-				actual_file_name = 'icons/mob/clothing/head/default.dmi'
+				actual_file_name = '../assets/icons/mob/clothing/head/default.dmi'
 				if(!icon_exists(actual_file_name, sprite.icon_state))
 					to_chat(user, span_warning("ERROR sprites for [sprite.type]. Head slot."), confidential = TRUE)
 			if(sprite.slot_flags & ITEM_SLOT_BELT)
-				actual_file_name = 'icons/mob/clothing/belt.dmi'
+				actual_file_name = '../assets/icons/mob/clothing/belt.dmi'
 				if(!icon_exists(actual_file_name, sprite.icon_state))
 					to_chat(user, span_warning("ERROR sprites for [sprite.type]. Belt slot."), confidential = TRUE)
 			if(sprite.slot_flags & ITEM_SLOT_SUITSTORE)
-				actual_file_name = 'icons/mob/clothing/belt_mirror.dmi'
+				actual_file_name = '../assets/icons/mob/clothing/belt_mirror.dmi'
 				if(!icon_exists(actual_file_name, sprite.icon_state))
 					to_chat(user, span_warning("ERROR sprites for [sprite.type]. Suit Storage slot."), confidential = TRUE)
 

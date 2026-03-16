@@ -1,7 +1,7 @@
 /// Anything above a lattice should go here.
 /turf/open/floor
 	name = "floor"
-	icon = 'icons/turf/floors.dmi' //NOVA EDIT - ICON OVERRIDDEN IN AESTHETICS MODULE
+	icon = '../assets/icons/turf/floors.dmi' //NOVA EDIT - ICON OVERRIDDEN IN AESTHETICS MODULE
 	base_icon_state = "floor"
 	baseturfs = /turf/open/floor/plating
 
@@ -20,7 +20,7 @@
 
 
 	overfloor_placed = TRUE
-	damaged_dmi = 'icons/turf/damaged.dmi'
+	damaged_dmi = '../assets/icons/turf/damaged.dmi'
 	/// Path of the tile that this floor drops
 	var/floor_tile = null
 	/// Determines if you can deconstruct this with a RCD

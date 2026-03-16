@@ -6,11 +6,11 @@ GLOBAL_DATUM(bridge_axe, /obj/item/fireaxe)
 /obj/item/fireaxe  // DEM AXES MAN, marker -Agouri
 	name = "fire axe"
 	desc = "Truly, the weapon of a madman. Who would think to fight fire with an axe?"
-	icon = 'icons/obj/weapons/fireaxe.dmi'
+	icon = '../assets/icons/obj/weapons/fireaxe.dmi'
 	icon_state = "fireaxe0"
 	base_icon_state = "fireaxe"
-	lefthand_file = 'icons/mob/inhands/weapons/axes_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/axes_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/axes_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/axes_righthand.dmi'
 	force = 5
 	throwforce = 15
 	demolition_mod = 1.25
@@ -19,7 +19,7 @@ GLOBAL_DATUM(bridge_axe, /obj/item/fireaxe)
 	slot_flags = ITEM_SLOT_BACK
 	attack_verb_continuous = list("attacks", "chops", "cleaves", "tears", "lacerates", "cuts")
 	attack_verb_simple = list("attack", "chop", "cleave", "tear", "lacerate", "cut")
-	hitsound = 'sound/items/weapons/bladeslice.ogg'
+	hitsound = '../assets/sound/items/weapons/bladeslice.ogg'
 	sharpness = SHARP_EDGED
 	armor_type = /datum/armor/item_fireaxe
 	resistance_flags = FIRE_PROOF
@@ -101,7 +101,7 @@ GLOBAL_DATUM(bridge_axe, /obj/item/fireaxe)
 	demolition_mod = 2
 	tool_behaviour = TOOL_CROWBAR
 	toolspeed = 1
-	usesound = 'sound/items/tools/crowbar.ogg'
+	usesound = '../assets/sound/items/tools/crowbar.ogg'
 
 //boarding axe
 /obj/item/fireaxe/boardingaxe

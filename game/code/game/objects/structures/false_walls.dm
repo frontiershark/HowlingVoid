@@ -5,7 +5,7 @@
 	name = "wall"
 	desc = "A huge chunk of metal used to separate rooms."
 	anchored = TRUE
-	icon = 'icons/turf/walls/false_walls.dmi'
+	icon = '../assets/icons/turf/walls/false_walls.dmi'
 	icon_state = "wall-open"
 	base_icon_state = "wall"
 	layer = LOW_OBJ_LAYER
@@ -19,7 +19,7 @@
 	rad_insulation = RAD_MEDIUM_INSULATION
 	material_flags = MATERIAL_EFFECTS
 	/// The icon this falsewall is faking being. we'll switch out our icon with this when we're in fake mode
-	var/fake_icon = 'icons/turf/walls/wall.dmi'
+	var/fake_icon = '../assets/icons/turf/walls/wall.dmi'
 	var/mineral = /obj/item/stack/sheet/iron
 	var/mineral_amount = 2
 	var/walltype = /turf/closed/wall
@@ -132,7 +132,7 @@
 	if(tool)
 		tool.play_tool_sound(src, 100)
 	else
-		playsound(src, 'sound/items/tools/welder.ogg', 100, TRUE)
+		playsound(src, '../assets/sound/items/tools/welder.ogg', 100, TRUE)
 	deconstruct(disassembled)
 
 /obj/structure/falsewall/atom_deconstruct(disassembled = TRUE)
@@ -160,7 +160,7 @@
 /obj/structure/falsewall/reinforced
 	name = "reinforced wall"
 	desc = "A huge chunk of reinforced metal used to separate rooms."
-	fake_icon = 'icons/turf/walls/reinforced_wall.dmi'
+	fake_icon = '../assets/icons/turf/walls/reinforced_wall.dmi'
 	icon_state = "reinforced_wall-open"
 	base_icon_state = "reinforced_wall"
 	walltype = /turf/closed/wall/r_wall
@@ -183,7 +183,7 @@
 /obj/structure/falsewall/uranium
 	name = "uranium wall"
 	desc = "A wall with uranium plating. This is probably a bad idea."
-	fake_icon = 'icons/turf/walls/uranium_wall.dmi'
+	fake_icon = '../assets/icons/turf/walls/uranium_wall.dmi'
 	icon_state = "uranium_wall-open"
 	base_icon_state = "uranium_wall"
 	mineral = /obj/item/stack/sheet/mineral/uranium
@@ -234,7 +234,7 @@
 /obj/structure/falsewall/gold
 	name = "gold wall"
 	desc = "A wall with gold plating. Swag!"
-	fake_icon = 'icons/turf/walls/gold_wall.dmi'
+	fake_icon = '../assets/icons/turf/walls/gold_wall.dmi'
 	icon_state = "gold_wall-open"
 	base_icon_state = "gold_wall"
 	mineral = /obj/item/stack/sheet/mineral/gold
@@ -246,7 +246,7 @@
 /obj/structure/falsewall/silver
 	name = "silver wall"
 	desc = "A wall with silver plating. Shiny."
-	fake_icon = 'icons/turf/walls/silver_wall.dmi'
+	fake_icon = '../assets/icons/turf/walls/silver_wall.dmi'
 	icon_state = "silver_wall-open"
 	base_icon_state = "silver_wall"
 	mineral = /obj/item/stack/sheet/mineral/silver
@@ -258,7 +258,7 @@
 /obj/structure/falsewall/diamond
 	name = "diamond wall"
 	desc = "A wall with diamond plating. You monster."
-	fake_icon = 'icons/turf/walls/diamond_wall.dmi'
+	fake_icon = '../assets/icons/turf/walls/diamond_wall.dmi'
 	icon_state = "diamond_wall-open"
 	base_icon_state = "diamond_wall"
 	mineral = /obj/item/stack/sheet/mineral/diamond
@@ -271,7 +271,7 @@
 /obj/structure/falsewall/plasma
 	name = "plasma wall"
 	desc = "A wall with plasma plating. This is definitely a bad idea."
-	fake_icon = 'icons/turf/walls/plasma_wall.dmi'
+	fake_icon = '../assets/icons/turf/walls/plasma_wall.dmi'
 	icon_state = "plasma_wall-open"
 	base_icon_state = "plasma_wall"
 	mineral = /obj/item/stack/sheet/mineral/plasma
@@ -283,7 +283,7 @@
 /obj/structure/falsewall/bananium
 	name = "bananium wall"
 	desc = "A wall with bananium plating. Honk!"
-	fake_icon = 'icons/turf/walls/bananium_wall.dmi'
+	fake_icon = '../assets/icons/turf/walls/bananium_wall.dmi'
 	icon_state = "bananium_wall-open"
 	base_icon_state = "bananium_wall"
 	mineral = /obj/item/stack/sheet/mineral/bananium
@@ -296,7 +296,7 @@
 /obj/structure/falsewall/sandstone
 	name = "sandstone wall"
 	desc = "A wall with sandstone plating. Rough."
-	fake_icon = 'icons/turf/walls/sandstone_wall.dmi'
+	fake_icon = '../assets/icons/turf/walls/sandstone_wall.dmi'
 	icon_state = "sandstone_wall-open"
 	base_icon_state = "sandstone_wall"
 	mineral = /obj/item/stack/sheet/mineral/sandstone
@@ -308,7 +308,7 @@
 /obj/structure/falsewall/wood
 	name = "wooden wall"
 	desc = "A wall with wooden plating. Stiff."
-	fake_icon = 'icons/turf/walls/wood_wall.dmi'
+	fake_icon = '../assets/icons/turf/walls/wood_wall.dmi'
 	icon_state = "wood_wall-open"
 	base_icon_state = "wood_wall"
 	mineral = /obj/item/stack/sheet/mineral/wood
@@ -320,7 +320,7 @@
 /obj/structure/falsewall/bamboo
 	name = "bamboo wall"
 	desc = "A wall with bamboo finish. Zen."
-	fake_icon = 'icons/turf/walls/bamboo_wall.dmi'
+	fake_icon = '../assets/icons/turf/walls/bamboo_wall.dmi'
 	icon_state = "bamboo_wall-open"
 	base_icon_state = "bamboo_wall"
 	mineral = /obj/item/stack/sheet/mineral/bamboo
@@ -332,7 +332,7 @@
 /obj/structure/falsewall/iron
 	name = "rough iron wall"
 	desc = "A wall with rough metal plating."
-	fake_icon = 'icons/turf/walls/iron_wall.dmi'
+	fake_icon = '../assets/icons/turf/walls/iron_wall.dmi'
 	icon_state = "iron_wall-open"
 	base_icon_state = "iron_wall"
 	mineral = /obj/item/stack/rods
@@ -346,7 +346,7 @@
 /obj/structure/falsewall/abductor
 	name = "alien wall"
 	desc = "A wall with alien alloy plating."
-	fake_icon = 'icons/turf/walls/abductor_wall.dmi'
+	fake_icon = '../assets/icons/turf/walls/abductor_wall.dmi'
 	icon_state = "abductor_wall-open"
 	base_icon_state = "abductor_wall"
 	mineral = /obj/item/stack/sheet/mineral/abductor
@@ -358,7 +358,7 @@
 /obj/structure/falsewall/titanium
 	name = "wall"
 	desc = "A light-weight titanium wall used in shuttles."
-	fake_icon = 'icons/turf/walls/shuttle_wall.dmi'
+	fake_icon = '../assets/icons/turf/walls/shuttle_wall.dmi'
 	icon_state = "shuttle_wall-open"
 	base_icon_state = "shuttle_wall"
 	mineral = /obj/item/stack/sheet/mineral/titanium
@@ -370,7 +370,7 @@
 /obj/structure/falsewall/plastitanium
 	name = "wall"
 	desc = "An evil wall of plasma and titanium."
-	fake_icon = 'icons/turf/walls/plastitanium_wall.dmi'
+	fake_icon = '../assets/icons/turf/walls/plastitanium_wall.dmi'
 	icon_state = "plastitanium_wall-open"
 	base_icon_state = "plastitanium_wall"
 	mineral = /obj/item/stack/sheet/mineral/plastitanium
@@ -382,7 +382,7 @@
 /obj/structure/falsewall/material
 	name = "wall"
 	desc = "A huge chunk of material used to separate rooms."
-	fake_icon = 'icons/turf/walls/material_wall.dmi'
+	fake_icon = '../assets/icons/turf/walls/material_wall.dmi'
 	icon_state = "material_wall-open"
 	base_icon_state = "material_wall"
 	walltype = /turf/closed/wall/material
@@ -437,5 +437,5 @@
 		girder_icon_state += "_[density ? "opening" : "closing"]"
 	else if(!density)
 		girder_icon_state += "_open"
-	var/mutable_appearance/girder_underlay = mutable_appearance('icons/obj/structures.dmi', girder_icon_state, layer = LOW_OBJ_LAYER-0.01, appearance_flags = RESET_ALPHA | RESET_COLOR | KEEP_APART)
+	var/mutable_appearance/girder_underlay = mutable_appearance('../assets/icons/obj/structures.dmi', girder_icon_state, layer = LOW_OBJ_LAYER-0.01, appearance_flags = RESET_ALPHA | RESET_COLOR | KEEP_APART)
 	underlays += girder_underlay

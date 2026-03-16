@@ -76,7 +76,7 @@
 	var/message = tgui_input_text(activator, "Write your message", "Holonet Gaming Network", max_length = MAX_PLAQUE_LEN)
 	if(!message)
 		return
-	playsound(loc, 'sound/machines/ectoscope_beep.ogg', 75)
+	playsound(loc, '../assets/sound/machines/ectoscope_beep.ogg', 75)
 	aas_config_announce(/datum/aas_config_entry/bitrunning_ghost_mark, list("NAME" = messenger, "MESSAGE" = message), src, list(RADIO_CHANNEL_FACTION))
 	if(activator?.ckey)
 		spam_queue += activator.ckey

@@ -11,7 +11,7 @@
 	melee_damage_upper = 20
 	attack_verb_continuous = "butchers"
 	attack_verb_simple = "butcher"
-	attack_sound = 'sound/items/weapons/bladeslice.ogg'
+	attack_sound = '../assets/sound/items/weapons/bladeslice.ogg'
 	attack_vis_effect = ATTACK_EFFECT_SLASH
 	construct_spells = list(
 		/datum/action/cooldown/spell/aoe/area_conversion,
@@ -63,7 +63,7 @@
 	overlay_icon_state = "bg_demon_border"
 
 	buttontooltipstyle = "cult"
-	button_icon = 'icons/mob/actions/actions_cult.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_cult.dmi'
 	button_icon_state = "cult_mark"
 	/// Where is nar nar? Are we even looking?
 	var/tracking = FALSE
@@ -100,7 +100,7 @@
 /datum/action/innate/seek_prey
 	name = "Seek the Harvest"
 	desc = "None can hide from Nar'Sie, activate to track a survivor attempting to flee the red harvest!"
-	button_icon = 'icons/mob/actions/actions_cult.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_cult.dmi'
 	background_icon_state = "bg_demon"
 	overlay_icon_state = "bg_demon_border"
 
@@ -228,7 +228,7 @@
 /datum/action/innate/seek_master/heretic
 	name = "Seek your Master"
 	desc = "Use your direct link to the Mansus to sense where your master is located via the arrow on the top-right of your HUD."
-	button_icon = 'icons/mob/actions/actions_cult.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_cult.dmi'
 	background_icon_state = "bg_heretic"
 	overlay_icon_state = "bg_heretic_border"
 	tracking = TRUE

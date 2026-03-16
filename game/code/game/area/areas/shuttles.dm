@@ -11,7 +11,7 @@
 	// Loading the same shuttle map at a different time will produce distinct area instances.
 	area_flags = NONE
 	area_flags_mapping = NONE
-	icon = 'icons/area/areas_station.dmi'
+	icon = '../assets/icons/area/areas_station.dmi'
 	icon_state = "shuttle"
 	flags_1 = CAN_BE_DIRTY_1
 	area_limited_icon_smoothing = /area/shuttle
@@ -129,7 +129,7 @@
 	if(SSshuttle.arrivals?.mode == SHUTTLE_CALL)
 		var/atom/movable/screen/splash/Spl = new(null, null, boarder.client, TRUE)
 		Spl.fade(TRUE)
-		boarder.playsound_local(get_turf(boarder), 'sound/announcer/ApproachingTG.ogg', 25)
+		boarder.playsound_local(get_turf(boarder), '../assets/sound/announcer/ApproachingTG.ogg', 25)
 	boarder.update_parallax_teleport()
 
 /area/shuttle/pod_1

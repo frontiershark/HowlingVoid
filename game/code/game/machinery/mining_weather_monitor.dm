@@ -2,7 +2,7 @@
 /obj/machinery/mining_weather_monitor
 	name = "barometric monitor"
 	desc = "A machine monitoring atmospheric data from mining environments. Provides warnings about incoming weather fronts."
-	icon = 'icons/obj/devices/miningradio.dmi'
+	icon = '../assets/icons/obj/devices/miningradio.dmi'
 	icon_state = "wallmount"
 	light_power = 1
 	light_range = 1.6
@@ -45,7 +45,7 @@ GLOBAL_LIST_EMPTY(weather_towers)
 /obj/machinery/power/weather_tower
 	name = "doppler radar tower"
 	desc = "A tower that monitors atmospheric data from mining environments. Provides warnings about incoming weather fronts."
-	icon = 'icons/obj/mining_zones/terrain.dmi'
+	icon = '../assets/icons/obj/mining_zones/terrain.dmi'
 	icon_state = "radar"
 	base_icon_state = "radar"
 	anchored = TRUE

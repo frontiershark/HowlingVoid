@@ -129,7 +129,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/warning/radiation/rad_area, 32)
 	name = "\improper DANGEROUS ALIEN LIFE sign"
 	sign_change_name = "Warning - Xenos"
 	desc = "A sign that warns would-be travellers of hostile alien life in the vicinity."
-	icon = 'icons/obj/signs.dmi'
+	icon = '../assets/icons/obj/signs.dmi'
 	icon_state = "xeno_warning"
 
 MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/warning/xeno_mining, 32)

@@ -70,7 +70,7 @@
 	RegisterSignal(owner, COMSIG_LIVING_RESIST, PROC_REF(resistField))
 	to_chat(owner, span_danger("You feel a sudden tug from an unknown force, and feel a pull to bluespace!"))
 	to_chat(owner, span_notice("Resist if you wish avoid the force!"))
-	bluespace = icon('icons/effects/effects.dmi',"chronofield")
+	bluespace = icon('../assets/icons/effects/effects.dmi',"chronofield")
 	owner.add_overlay(bluespace)
 	return ..()
 
@@ -402,7 +402,7 @@
 	duration = 300
 
 /datum/status_effect/spookcookie/on_apply()
-	var/image/I = image(icon = 'icons/mob/human/human.dmi', icon_state = "skeleton", layer = ABOVE_MOB_LAYER, loc = owner)
+	var/image/I = image(icon = '../assets/icons/mob/human/human.dmi', icon_state = "skeleton", layer = ABOVE_MOB_LAYER, loc = owner)
 	I.override = 1
 	owner.add_alt_appearance(/datum/atom_hud/alternate_appearance/basic/everyone, "spookyscary", I)
 	return ..()

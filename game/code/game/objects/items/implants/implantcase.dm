@@ -4,11 +4,11 @@
 /obj/item/implantcase
 	name = "implant case"
 	desc = "A glass case containing an implant."
-	icon = 'icons/obj/medical/syringe.dmi' //NOVA EDIT - ICON OVERRIDDEN IN AESTHETICS MODULE
+	icon = '../assets/icons/obj/medical/syringe.dmi' //NOVA EDIT - ICON OVERRIDDEN IN AESTHETICS MODULE
 	icon_state = "implantcase-0"
 	inhand_icon_state = "implantcase"
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/medical_righthand.dmi'
 	throw_speed = 2
 	throw_range = 5
 	w_class = WEIGHT_CLASS_TINY

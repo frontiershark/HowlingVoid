@@ -1,8 +1,8 @@
 /obj/item/clothing/head/wizard
 	name = "wizard hat"
 	desc = "Strange-looking hat-wear that most certainly belongs to a real magic user."
-	icon = 'icons/obj/clothing/head/wizard.dmi'
-	worn_icon = 'icons/mob/clothing/head/wizard.dmi'
+	icon = '../assets/icons/obj/clothing/head/wizard.dmi'
+	worn_icon = '../assets/icons/mob/clothing/head/wizard.dmi'
 	icon_state = "wizard"
 	inhand_icon_state = "wizhat"
 	armor_type = /datum/armor/head_wizard
@@ -70,7 +70,7 @@
 /obj/item/clothing/head/wizard/marisa
 	name = "witch hat"
 	desc = "Strange-looking hat-wear. Makes you want to cast fireballs."
-	icon = 'icons/map_icons/clothing/head/_head.dmi'
+	icon = '../assets/icons/map_icons/clothing/head/_head.dmi'
 	icon_state = "/obj/item/clothing/head/wizard/marisa"
 	post_init_icon_state = "witch_hat"
 	greyscale_config = /datum/greyscale_config/witch_hat
@@ -113,9 +113,9 @@
 /obj/item/clothing/suit/wizrobe
 	name = "wizard robe"
 	desc = "A magnificent, gem-lined robe that seems to radiate power."
-	icon = 'icons/obj/clothing/suits/wizard.dmi'
+	icon = '../assets/icons/obj/clothing/suits/wizard.dmi'
 	icon_state = "wizard"
-	worn_icon = 'icons/mob/clothing/suits/wizard.dmi'
+	worn_icon = '../assets/icons/mob/clothing/suits/wizard.dmi'
 	inhand_icon_state = "wizrobe"
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS
 	armor_type = /datum/armor/suit_wizrobe
@@ -296,7 +296,7 @@
 /obj/item/clothing/suit/wizrobe/paper/proc/conjure_stickmen(mob/living/carbon/human/summoner)
 	summoner.force_say()
 	summoner.say("Rise, my creation! Off your page into this realm!", forced = "stickman summoning")
-	playsound(src, 'sound/effects/magic/summon_magic.ogg', 50, TRUE, TRUE)
+	playsound(src, '../assets/sound/effects/magic/summon_magic.ogg', 50, TRUE, TRUE)
 
 	var/mob/living/stickman = new /mob/living/basic/stickman/lesser(get_turf(summoner))
 	stickman.remove_faction(FACTION_NEUTRAL) //These bad boys shouldn't inherit the neutral faction from the crew

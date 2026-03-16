@@ -4,7 +4,7 @@
 	name = "custom winter coat"
 	worn_icon_state = null
 	hoodtype = /obj/item/clothing/head/hooded/winterhood/colourable
-	icon = 'icons/map_icons/clothing/suit/_suit.dmi'
+	icon = '../assets/icons/map_icons/clothing/suit/_suit.dmi'
 	icon_state = "/obj/item/clothing/suit/hooded/wintercoat/colourable"
 	post_init_icon_state = "winter_coat"
 	greyscale_config = /datum/greyscale_config/winter_coat
@@ -49,7 +49,7 @@
 
 /obj/item/clothing/neck/cloak/colourable
 	name = "colourable cloak"
-	icon = 'icons/map_icons/clothing/neck.dmi'
+	icon = '../assets/icons/map_icons/clothing/neck.dmi'
 	icon_state = "/obj/item/clothing/neck/cloak/colourable"
 	post_init_icon_state = "gags_cloak"
 	greyscale_config = /datum/greyscale_config/cloak
@@ -59,7 +59,7 @@
 
 /obj/item/clothing/neck/cloak/colourable/veil
 	name = "colourable veil"
-	icon = 'icons/map_icons/clothing/neck.dmi'
+	icon = '../assets/icons/map_icons/clothing/neck.dmi'
 	icon_state = "/obj/item/clothing/neck/cloak/colourable/veil"
 	post_init_icon_state = "gags_veil"
 	greyscale_config = /datum/greyscale_config/cloak/veil
@@ -67,7 +67,7 @@
 
 /obj/item/clothing/neck/cloak/colourable/boat
 	name = "colourable boatcloak"
-	icon = 'icons/map_icons/clothing/neck.dmi'
+	icon = '../assets/icons/map_icons/clothing/neck.dmi'
 	icon_state = "/obj/item/clothing/neck/cloak/colourable/boat"
 	post_init_icon_state = "gags_boat"
 	greyscale_config = /datum/greyscale_config/cloak/boat
@@ -75,7 +75,7 @@
 
 /obj/item/clothing/neck/cloak/colourable/shroud
 	name = "colourable shroud"
-	icon = 'icons/map_icons/clothing/neck.dmi'
+	icon = '../assets/icons/map_icons/clothing/neck.dmi'
 	icon_state = "/obj/item/clothing/neck/cloak/colourable/shroud"
 	post_init_icon_state = "gags_shroud"
 	greyscale_config = /datum/greyscale_config/cloak/shroud
@@ -110,8 +110,8 @@
 	desc = "A portable tablet that allows you to draw. Legends say these can earn the owner a fortune in some sectors of space."
 	icon = 'modular_nova/master_files/icons/donator/obj/custom.dmi'
 	icon_state = "drawingtablet"
-	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/devices_righthand.dmi'
 	inhand_icon_state = "electronic"
 	item_flags = NOBLUDGEON
 	w_class = WEIGHT_CLASS_TINY
@@ -164,7 +164,7 @@
 			if("No")
 				return
 			if("Maybe")
-				playsound(src, 'sound/machines/buzz/buzz-sigh.ogg', 50, FALSE)
+				playsound(src, '../assets/sound/machines/buzz/buzz-sigh.ogg', 50, FALSE)
 				audible_message(span_warning("The [src] buzzes!"))
 				return
 
@@ -1203,7 +1203,7 @@
 	/// Was welding protection toggled on, if welding_upgraded is TRUE?
 	var/welding_protection = FALSE
 	/// The sound played when toggling the shutters.
-	var/shutters_sound = 'sound/effects/clock_tick.ogg'
+	var/shutters_sound = '../assets/sound/effects/clock_tick.ogg'
 
 /obj/item/clothing/glasses/welding/steampunk_goggles/Initialize(mapload)
 	. = ..()
@@ -1617,8 +1617,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/contraband/korpstech, 32)
 /obj/item/clothing/under/nt_idol_skirt
 	name = "\improper NT Idol's suitskirt"
 	desc = "This outfit resembles much the same as other ranking NT Officers, but comes with certain bells and whistles, like frills around the dress, slight puffs around the shoulders and most importantly, several golden buckles to accentuate the green! The only thing fit for NT's very own idols to wear!"
-	icon = 'icons/obj/clothing/under/centcom.dmi'
-	worn_icon = 'icons/mob/clothing/under/centcom.dmi'
+	icon = '../assets/icons/obj/clothing/under/centcom.dmi'
+	worn_icon = '../assets/icons/mob/clothing/under/centcom.dmi'
 	icon_state = "centcom_skirt"
 	inhand_icon_state = "dg_suit"
 	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
@@ -2011,13 +2011,13 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/contraband/korpstech, 32)
 	var/sound_effect_volume
 	if (total_credits >= NOBILITY_DRESSCOAT_WASHING_CREDITS_NEEDED) // all is well
 		message = span_notice("[src] seems to absorb the raw capital from its surroundings, and is successfully washed!")
-		sound_effect_path = 'sound/effects/whirthunk.ogg'
+		sound_effect_path = '../assets/sound/effects/whirthunk.ogg'
 		sound_effect_volume = 40
 		for (var/obj/item/entry_to_delete as anything in money_to_delete)
 			qdel(entry_to_delete)
 	else // IT COSTS ME A THOUSAND CREDITS TO WASH THIS!! HALF MY BUDGET IS DRY CLEANING
 		message = span_warning("[src]'s delicate fabric is shredded by [washer]! How terrible!")
-		sound_effect_path = 'sound/effects/cloth_rip.ogg'
+		sound_effect_path = '../assets/sound/effects/cloth_rip.ogg'
 		sound_effect_volume = 30
 		for (var/zone in cover_flags2body_zones(body_parts_covered))
 			take_damage_zone(zone, limb_integrity * 1.1, BRUTE) // fucking shreds it
@@ -2090,7 +2090,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/contraband/korpstech, 32)
 #define TOASTER_IMPLANT_COOLDOWN (3 MINUTES)
 /obj/item/implant/toaster
 	name = "toaster implant"
-	icon = 'icons/obj/food/burgerbread.dmi'
+	icon = '../assets/icons/obj/food/burgerbread.dmi'
 	icon_state = "griddle_toast"
 	COOLDOWN_DECLARE(toast_cooldown)
 
@@ -2111,7 +2111,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/contraband/korpstech, 32)
 	var/adjective = pick("crispy", "delicious", "fresh")
 	imp_in.visible_message(span_notice("[imp_in] ejects a [adjective] toast!"), span_notice("With the familiar \"ding\", the toaster ejects a [adjective] toast."))
 
-	playsound(imp_in, 'sound/machines/ding.ogg', vol = 75, vary = FALSE, pressure_affected = FALSE, use_reverb = FALSE)
+	playsound(imp_in, '../assets/sound/machines/ding.ogg', vol = 75, vary = FALSE, pressure_affected = FALSE, use_reverb = FALSE)
 	toast.throw_at(get_turf(imp_in), 2, 3)
 	COOLDOWN_START(src, toast_cooldown, TOASTER_IMPLANT_COOLDOWN)
 
@@ -2133,8 +2133,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/contraband/korpstech, 32)
 	icon = 'modular_nova/master_files/icons/donator/obj/custom.dmi'
 	icon_state = "crystal"
 	items_to_create = list(/obj/item/knife/razor_claws/donator/theurgic_knife)
-	extend_sound = 'sound/items/haunted/ghostitemattack.ogg'
-	retract_sound = 'sound/items/haunted/ghostitemattack.ogg'
+	extend_sound = '../assets/sound/items/haunted/ghostitemattack.ogg'
+	retract_sound = '../assets/sound/items/haunted/ghostitemattack.ogg'
 
 /obj/item/knife/razor_claws/donator/theurgic_knife
 	name = "cursed ritual knife"
@@ -2144,7 +2144,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/contraband/korpstech, 32)
 	lefthand_file = 'modular_nova/modules/modular_ert/icons/pizza/lefthand.dmi'
 	icon_state = "dagger"
 	inhand_icon_state = "hotknife"
-	toggle_sound = 'sound/items/haunted/ghostitemattack.ogg'
+	toggle_sound = '../assets/sound/items/haunted/ghostitemattack.ogg'
 
 /obj/item/knife/razor_claws/donator/theurgic_knife/attack_self(mob/user)
 	. = ..()
@@ -2243,7 +2243,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/contraband/korpstech, 32)
 /obj/item/clothing/suit/replica_parade_jacket
 	name = "replica parade jacket"
 	desc = "Ever see command staff in a fancy parade jacket and think to yourself, \"I want that\" without having to steal it? Here's your chance. Made from the finest synthleather and synthwool, it cost far more than most people care to admit they paid."
-	icon = 'icons/map_icons/clothing/suit/_suit.dmi'
+	icon = '../assets/icons/map_icons/clothing/suit/_suit.dmi'
 	icon_state = "/obj/item/clothing/suit/replica_parade_jacket"
 	post_init_icon_state = "r_parade_jacket"
 	greyscale_config = /datum/greyscale_config/replica_parade_jacket
@@ -2279,7 +2279,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/contraband/korpstech, 32)
 /obj/item/clothing/suit/chokha
 	name = "\improper Iseurian chokha"
 	desc = "A ceremonial woolen coat sporting a high neck and decorative gunpowder cases on the breast. The label on this one bears the Iseurian Revolutionary flag."
-	icon = 'icons/map_icons/clothing/suit/_suit.dmi'
+	icon = '../assets/icons/map_icons/clothing/suit/_suit.dmi'
 	icon_state = "/obj/item/clothing/suit/chokha"
 	post_init_icon_state = "chokha"
 	greyscale_config = /datum/greyscale_config/chokha
@@ -2312,7 +2312,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/contraband/korpstech, 32)
 /obj/item/clothing/under/pants/half_leotard_cosmiclaer
 	name = "one-sleeved leotard"
 	desc = "A fancy, top-of-the-line leotard that some barbarian lopped one of the arms off of."
-	icon = 'icons/map_icons/clothing/under/_under.dmi'
+	icon = '../assets/icons/map_icons/clothing/under/_under.dmi'
 	icon_state = "/obj/item/clothing/under/pants/half_leotard_cosmiclaer"
 	post_init_icon_state = "half_leotard"
 	greyscale_config = /datum/greyscale_config/half_leotard
@@ -2616,7 +2616,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/contraband/korpstech, 32)
 	max_limited_store = 1
 	max_specific_storage = 5
 	max_total_storage = WEIGHT_CLASS_SMALL * 5
-	open_sound = 'sound/items/handling/holster_open.ogg'
+	open_sound = '../assets/sound/items/handling/holster_open.ogg'
 	open_sound_vary = TRUE
 	rustle_sound = null
 

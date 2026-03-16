@@ -203,9 +203,9 @@ ADMIN_VERB(create_mapping_job_icons, R_DEBUG, "Generate job landmarks icons", "G
 		var/datum/job/JB = new job
 		switch(JB.title)
 			if(JOB_AI)
-				job_key_to_icon["AI"] = icon('icons/mob/silicon/ai.dmi', "ai", SOUTH, 1) // NOVA EDIT CHANGE - ORIGINAL: final.Insert(icon('icons/mob/silicon/ai.dmi', "ai", SOUTH, 1), "AI")
+				job_key_to_icon["AI"] = icon('../assets/icons/mob/silicon/ai.dmi', "ai", SOUTH, 1) // NOVA EDIT CHANGE - ORIGINAL: final.Insert(icon('../assets/icons/mob/silicon/ai.dmi', "ai", SOUTH, 1), "AI")
 			if(JOB_CYBORG)
-				job_key_to_icon["Cyborg"] = icon('icons/mob/silicon/robots.dmi', "robot", SOUTH, 1) // NOVA EDIT CHANGE - ORIGINAL: final.Insert(icon('icons/mob/silicon/robots.dmi', "robot", SOUTH, 1), "Cyborg")
+				job_key_to_icon["Cyborg"] = icon('../assets/icons/mob/silicon/robots.dmi', "robot", SOUTH, 1) // NOVA EDIT CHANGE - ORIGINAL: final.Insert(icon('../assets/icons/mob/silicon/robots.dmi', "robot", SOUTH, 1), "Cyborg")
 			else
 				for(var/obj/item/I in D)
 					qdel(I)
@@ -224,7 +224,7 @@ ADMIN_VERB(create_mapping_job_icons, R_DEBUG, "Generate job landmarks icons", "G
 	// NOVA EDIT ADDITION END
 	//Also add the x
 	for(var/x_number in 1 to 4)
-		final.Insert(icon('icons/hud/screen_gen.dmi', "x[x_number == 1 ? "" : x_number]"), "x[x_number == 1 ? "" : x_number]")
+		final.Insert(icon('../assets/icons/hud/screen_gen.dmi', "x[x_number == 1 ? "" : x_number]"), "x[x_number == 1 ? "" : x_number]")
 	fcopy(final, "icons/mob/landmarks.dmi")
 
 ADMIN_VERB_VISIBILITY(debug_z_levels, ADMIN_VERB_VISIBLITY_FLAG_MAPPING_DEBUG)

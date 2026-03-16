@@ -13,27 +13,27 @@
 /obj/item/multitool
 	name = "multitool"
 	desc = "Used for pulsing wires to test which to cut. Not recommended by doctors. You can activate it in-hand to locate the nearest APC."
-	icon = 'icons/obj/devices/tool.dmi' //NOVA EDIT - ICON OVERRIDDEN IN AESTHETICS MODULE
+	icon = '../assets/icons/obj/devices/tool.dmi' //NOVA EDIT - ICON OVERRIDDEN IN AESTHETICS MODULE
 	icon_state = "multitool"
 	inhand_icon_state = "multitool"
 	icon_angle = -90
-	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/tools_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/tools_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/tools_righthand.dmi'
 	force = 5
 	w_class = WEIGHT_CLASS_SMALL
 	tool_behaviour = TOOL_MULTITOOL
 	throwforce = 0
 	throw_range = 7
 	throw_speed = 3
-	drop_sound = 'sound/items/handling/tools/multitool_drop.ogg'
-	pickup_sound = 'sound/items/handling/tools/multitool_pickup.ogg'
+	drop_sound = '../assets/sound/items/handling/tools/multitool_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/tools/multitool_pickup.ogg'
 	custom_materials = list(
 		/datum/material/iron =SMALL_MATERIAL_AMOUNT * 0.5,
 		/datum/material/glass =SMALL_MATERIAL_AMOUNT * 0.2
 		)
 	custom_premium_price = PAYCHECK_CREW * 3
 	toolspeed = 1
-	usesound = 'sound/items/weapons/empty.ogg'
+	usesound = '../assets/sound/items/weapons/empty.ogg'
 	var/datum/buffer // simple machine buffer for device linkage
 	var/mode = 0
 	var/apc_scanner = TRUE
@@ -320,7 +320,7 @@
 /obj/item/multitool/abductor
 	name = "alien multitool"
 	desc = "An omni-technological interface."
-	icon = 'icons/obj/antags/abductor.dmi'
+	icon = '../assets/icons/obj/antags/abductor.dmi'
 	icon_state = "multitool"
 	inside_belt_icon_state = "multitool_alien"
 	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 2.5, /datum/material/silver = SHEET_MATERIAL_AMOUNT * 1.25, /datum/material/plasma = SHEET_MATERIAL_AMOUNT * 2.5, /datum/material/titanium = SHEET_MATERIAL_AMOUNT, /datum/material/diamond = SHEET_MATERIAL_AMOUNT)
@@ -329,7 +329,7 @@
 /obj/item/multitool/cyborg
 	name = "electronic multitool"
 	desc = "Optimised version of a regular multitool. Streamlines processes handled by its internal microchip."
-	icon = 'icons/obj/items_cyborg.dmi'
+	icon = '../assets/icons/obj/items_cyborg.dmi'
 	icon_state = "toolkit_engiborg_multitool"
 	icon_angle = 0
 	toolspeed = 0.5

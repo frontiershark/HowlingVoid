@@ -76,7 +76,7 @@
 	else
 		user.visible_message(span_notice("[user] dispenses a treat."), span_notice("You dispense a treat."), span_hear("You hear a click."))
 
-	playsound(src.loc, 'sound/machines/click.ogg', 50, TRUE)
+	playsound(src.loc, '../assets/sound/machines/click.ogg', 50, TRUE)
 	return TRUE
 
 /// Shoot a lollipop
@@ -93,7 +93,7 @@
 	else
 		lollipop = new /obj/item/ammo_casing/lollipop(src)
 
-	playsound(src.loc, 'sound/machines/click.ogg', 50, TRUE)
+	playsound(src.loc, '../assets/sound/machines/click.ogg', 50, TRUE)
 	lollipop.fire_casing(target, user, params, 0, 0, null, 0, src)
 	user.visible_message(span_warning("[user] blasts a flying lollipop at [target]!"))
 	check_amount()
@@ -112,7 +112,7 @@
 		gumball = new /obj/item/ammo_casing/gumball(src)
 
 	gumball.loaded_projectile.color = rgb(rand(0, 255), rand(0, 255), rand(0, 255))
-	playsound(src.loc, 'sound/items/weapons/bulletflyby3.ogg', 50, TRUE)
+	playsound(src.loc, '../assets/sound/items/weapons/bulletflyby3.ogg', 50, TRUE)
 	gumball.fire_casing(target, user, params, 0, 0, null, 0, src)
 	user.visible_message(span_warning("[user] shoots a high-velocity gumball at [target]!"))
 	check_amount()
@@ -253,7 +253,7 @@
 
 /obj/projectile/bullet/lollipop/Initialize(mapload)
 	. = ..()
-	var/mutable_appearance/head = mutable_appearance('icons/obj/weapons/guns/projectiles.dmi', "lollipop_2")
+	var/mutable_appearance/head = mutable_appearance('../assets/icons/obj/weapons/guns/projectiles.dmi', "lollipop_2")
 	head.color = head_color = rgb(rand(0, 255), rand(0, 255), rand(0, 255))
 	add_overlay(head)
 	if(!embed_type)
@@ -272,7 +272,7 @@
 /obj/item/borg/cookbook
 	name = "Codex Cibus Mechanicus"
 	desc = "It's a robot cookbook!"
-	icon = 'icons/obj/service/library.dmi'
+	icon = '../assets/icons/obj/service/library.dmi'
 	icon_state = "cooked_book"
 	item_flags = NOBLUDGEON
 	var/datum/component/personal_crafting/cooking

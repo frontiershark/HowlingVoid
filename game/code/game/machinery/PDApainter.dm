@@ -2,7 +2,7 @@
 /obj/machinery/pdapainter
 	name = "\improper Tablet & ID Painter"
 	desc = "A painting machine that can be used to paint PDAs and trim IDs. To use, simply insert the item and choose the desired preset."
-	icon = 'icons/obj/machines/pda.dmi'
+	icon = '../assets/icons/obj/machines/pda.dmi'
 	icon_state = "pdapainter"
 	base_icon_state = "pdapainter"
 	density = TRUE
@@ -219,7 +219,7 @@
 /obj/machinery/pdapainter/proc/insert_id_card(obj/item/card/id/new_id_card, mob/living/user)
 	if(!new_id_card.trim_changeable)
 		balloon_alert(user, "rejected!")
-		playsound(src, 'sound/machines/buzz/buzz-sigh.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/machines/buzz/buzz-sigh.ogg', 50, TRUE)
 		to_chat(user, span_warning("This ID card does not appear to be compatible with the ID Painter."))
 		return FALSE
 

@@ -1,6 +1,6 @@
 // Water related particles.
 /particles/droplets
-	icon = 'icons/effects/particles/generic.dmi'
+	icon = '../assets/icons/effects/particles/generic.dmi'
 	icon_state = list("dot"=2,"drop"=1)
 	width = 32
 	height = 36

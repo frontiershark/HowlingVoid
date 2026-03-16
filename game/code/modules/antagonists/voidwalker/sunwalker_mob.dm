@@ -77,5 +77,5 @@
 
 	if(istype(chem, /datum/reagent/water) && health > water_damage_cutoff)
 		take_overall_damage(water_damage)
-		playsound(src, 'sound/items/tools/welder.ogg', 80, TRUE, 1)
+		playsound(src, '../assets/sound/items/tools/welder.ogg', 80, TRUE, 1)
 		do_sparks(rand(4, 8), source = src)

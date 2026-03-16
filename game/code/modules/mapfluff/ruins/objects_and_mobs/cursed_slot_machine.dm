@@ -2,7 +2,7 @@
 /obj/structure/cursed_slot_machine
 	name = "greed's slot machine"
 	desc = "High stakes, high rewards."
-	icon = 'icons/obj/machines/computer.dmi'
+	icon = '../assets/icons/obj/machines/computer.dmi'
 	icon_state = "slots"
 	anchored = TRUE
 	density = TRUE
@@ -44,7 +44,7 @@
 
 	icon_screen = "slots_screen_working"
 	update_appearance()
-	playsound(src, 'sound/machines/lavaland/cursed_slot_machine.ogg', 50, FALSE)
+	playsound(src, '../assets/sound/machines/lavaland/cursed_slot_machine.ogg', 50, FALSE)
 	addtimer(CALLBACK(src, PROC_REF(determine_victor), user), 5 SECONDS)
 
 /obj/structure/cursed_slot_machine/update_overlays()
@@ -84,11 +84,11 @@
 			user.apply_status_effect(/datum/status_effect/slot_machine_curse)
 
 		SEND_SIGNAL(user, COMSIG_CURSED_SLOT_MACHINE_LOST)
-		playsound(src, 'sound/machines/buzz/buzz-sigh.ogg', 30, TRUE)
+		playsound(src, '../assets/sound/machines/buzz/buzz-sigh.ogg', 30, TRUE)
 		balloon_alert_to_viewers("you lost!")
 		return
 
-	playsound(src, 'sound/machines/lavaland/cursed_slot_machine_jackpot.ogg', 50, FALSE)
+	playsound(src, '../assets/sound/machines/lavaland/cursed_slot_machine_jackpot.ogg', 50, FALSE)
 	new prize(get_turf(src))
 	if(user)
 		to_chat(user, span_boldwarning("You've hit the jackpot!!! Laughter echoes around you as your reward appears in the machine's place."))
@@ -100,7 +100,7 @@
 /obj/structure/cursed_money
 	name = "bag of money"
 	desc = "RICH! YES! YOU KNEW IT WAS WORTH IT! YOU'RE RICH! RICH! RICH!"
-	icon = 'icons/obj/storage/storage.dmi'
+	icon = '../assets/icons/obj/storage/storage.dmi'
 	icon_state = "moneybag"
 	anchored = FALSE
 	density = TRUE

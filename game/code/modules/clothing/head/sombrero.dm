@@ -1,7 +1,7 @@
 /obj/item/clothing/head/costume/sombrero
 	name = "sombrero"
 	desc = "You can practically taste the fiesta."
-	icon = 'icons/obj/clothing/head/sombrero.dmi'
+	icon = '../assets/icons/obj/clothing/head/sombrero.dmi'
 	icon_state = "sombrero"
 	inhand_icon_state = "sombrero"
 	flags_inv = HIDEHAIR
@@ -11,7 +11,7 @@
 /obj/item/clothing/head/costume/sombrero/green
 	name = "green sombrero"
 	desc = "As elegant as a dancing cactus."
-	icon = 'icons/map_icons/clothing/head/_head.dmi'
+	icon = '../assets/icons/map_icons/clothing/head/_head.dmi'
 	icon_state = "/obj/item/clothing/head/costume/sombrero/green"
 	post_init_icon_state = "sombrero"
 	flags_inv = HIDEHAIR|HIDEFACE|HIDEEARS
@@ -26,7 +26,7 @@
 /obj/item/clothing/head/costume/sombrero/shamebrero
 	name = "shamebrero"
 	desc = "Once it's on, it never comes off."
-	icon = 'icons/map_icons/clothing/head/_head.dmi'
+	icon = '../assets/icons/map_icons/clothing/head/_head.dmi'
 	icon_state = "/obj/item/clothing/head/costume/sombrero/shamebrero"
 	post_init_icon_state = "shamebrero"
 	dog_fashion = null

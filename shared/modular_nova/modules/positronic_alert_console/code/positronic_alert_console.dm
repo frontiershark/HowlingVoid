@@ -48,7 +48,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/posialert, 28)
 	flick("posialertflash",src)
 	say("There are positronic personalities available.")
 	aas_config_announce(/datum/aas_config_entry/posibrain_alert, list(), src, list(announcement_channel))
-	playsound(loc, 'sound/machines/ping.ogg', 50)
+	playsound(loc, '../assets/sound/machines/ping.ogg', 50)
 
 /datum/aas_config_entry/posibrain_alert
 	name = "Science Alert: New Positronic Brain Available"

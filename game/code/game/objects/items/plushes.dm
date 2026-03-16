@@ -1,7 +1,7 @@
 /obj/item/toy/plush
 	name = "plush"
 	desc = "This is the special coder plush, do not steal."
-	icon = 'icons/obj/toys/plushes.dmi'
+	icon = '../assets/icons/obj/toys/plushes.dmi'
 	icon_state = "debug"
 	worn_icon_state = "plushie"
 	attack_verb_continuous = list("thumps", "whomps", "bumps")
@@ -390,7 +390,7 @@
 /obj/item/toy/plush/carpplushie
 	name = "space carp plushie"
 	desc = "An adorable stuffed toy that resembles a space carp."
-	icon = 'icons/map_icons/items/_item.dmi'
+	icon = '../assets/icons/map_icons/items/_item.dmi'
 	icon_state = "/obj/item/toy/plush/carpplushie"
 	post_init_icon_state = "map_plushie_carp"
 	greyscale_config = /datum/greyscale_config/plush_carp
@@ -398,7 +398,7 @@
 	inhand_icon_state = "carp_plushie"
 	attack_verb_continuous = list("bites", "eats", "fin slaps")
 	attack_verb_simple = list("bite", "eat", "fin slap")
-	squeak_override = list('sound/items/weapons/bite.ogg'=1)
+	squeak_override = list('../assets/sound/items/weapons/bite.ogg'=1)
 
 /obj/item/toy/plush/bubbleplush
 	name = "\improper Bubblegum plushie"
@@ -406,7 +406,7 @@
 	icon_state = "bubbleplush"
 	attack_verb_continuous = list("rents")
 	attack_verb_simple = list("rent")
-	squeak_override = list('sound/effects/magic/demon_attack1.ogg'=1)
+	squeak_override = list('../assets/sound/effects/magic/demon_attack1.ogg'=1)
 
 /obj/item/toy/plush/ratplush
 	name = "\improper Ratvar plushie"
@@ -443,7 +443,7 @@
 			clash_target = null
 			P.clashing = FALSE
 			return
-		playsound(src, 'sound/effects/magic/clockwork/ratvar_attack.ogg', 50, TRUE, frequency = 2)
+		playsound(src, '../assets/sound/effects/magic/clockwork/ratvar_attack.ogg', 50, TRUE, frequency = 2)
 		sleep(0.24 SECONDS)
 		if(QDELETED(src))
 			P.clashing = FALSE
@@ -462,7 +462,7 @@
 		if(QDELETED(P))
 			clash_target = null
 			return
-		playsound(P, 'sound/effects/magic/clockwork/narsie_attack.ogg', 50, TRUE, frequency = 2)
+		playsound(P, '../assets/sound/effects/magic/clockwork/narsie_attack.ogg', 50, TRUE, frequency = 2)
 		sleep(0.33 SECONDS)
 		if(QDELETED(src))
 			P.clashing = FALSE
@@ -481,16 +481,16 @@
 	if(a_winnar_is == src)
 		say(pick("DIE.", "ROT."))
 		P.say(pick("Nooooo...", "Not die. To y-", "Die. Ratv-", "Sas tyen re-"))
-		playsound(src, 'sound/effects/magic/clockwork/anima_fragment_attack.ogg', 50, TRUE, frequency = 2)
-		playsound(P, 'sound/effects/magic/demon_dies.ogg', 50, TRUE, frequency = 2)
+		playsound(src, '../assets/sound/effects/magic/clockwork/anima_fragment_attack.ogg', 50, TRUE, frequency = 2)
+		playsound(P, '../assets/sound/effects/magic/demon_dies.ogg', 50, TRUE, frequency = 2)
 		explosion(P, light_impact_range = 1)
 		qdel(P)
 		clash_target = null
 	else
 		say("NO! I will not be banished again...")
 		P.say(pick("Ha.", "Ra'sha fonn dest.", "You fool. To come here."))
-		playsound(src, 'sound/effects/magic/clockwork/anima_fragment_death.ogg', 62, TRUE, frequency = 2)
-		playsound(P, 'sound/effects/magic/demon_attack1.ogg', 50, TRUE, frequency = 2)
+		playsound(src, '../assets/sound/effects/magic/clockwork/anima_fragment_death.ogg', 62, TRUE, frequency = 2)
+		playsound(P, '../assets/sound/effects/magic/demon_attack1.ogg', 50, TRUE, frequency = 2)
 		explosion(src, light_impact_range = 1)
 		qdel(src)
 		P.clashing = FALSE
@@ -516,7 +516,7 @@
 	greyscale_config = /datum/greyscale_config/plush_lizard
 	attack_verb_continuous = list("claws", "hisses", "tail slaps")
 	attack_verb_simple = list("claw", "hiss", "tail slap")
-	squeak_override = list('sound/items/weapons/slash.ogg' = 1)
+	squeak_override = list('../assets/sound/items/weapons/slash.ogg' = 1)
 
 /obj/item/toy/plush/lizard_plushie/Initialize(mapload)
 	. = ..()
@@ -535,14 +535,14 @@
 // Preset lizard plushie that uses the original lizard plush green. (Or close to it)
 /obj/item/toy/plush/lizard_plushie/green
 	desc = "An adorable stuffed toy that resembles a green lizardperson. This one fills you with nostalgia and soul."
-	icon = 'icons/map_icons/items/_item.dmi'
+	icon = '../assets/icons/map_icons/items/_item.dmi'
 	icon_state = "/obj/item/toy/plush/lizard_plushie/green"
 	post_init_icon_state = "map_plushie_lizard"
 	greyscale_colors = "#66ff33#000000"
 
 /obj/item/toy/plush/lizard_plushie/greyscale
 	desc = "An adorable stuffed toy that resembles a lizardperson. This one has been custom made."
-	icon = 'icons/map_icons/items/_item.dmi'
+	icon = '../assets/icons/map_icons/items/_item.dmi'
 	icon_state = "/obj/item/toy/plush/lizard_plushie/greyscale"
 	post_init_icon_state = "map_plushie_lizard"
 	greyscale_colors = "#d3d3d3#000000"
@@ -559,7 +559,7 @@
 
 /obj/item/toy/plush/lizard_plushie/space/green
 	desc = "An adorable stuffed toy that resembles a very determined spacefaring green lizardperson. To infinity and beyond, little guy. This one fills you with nostalgia and soul."
-	icon = 'icons/map_icons/items/_item.dmi'
+	icon = '../assets/icons/map_icons/items/_item.dmi'
 	icon_state = "/obj/item/toy/plush/lizard_plushie/space/green"
 	post_init_icon_state = "map_plushie_spacelizard"
 	greyscale_colors = "#66ff33#000000"
@@ -567,7 +567,7 @@
 /obj/item/toy/plush/snakeplushie
 	name = "snake plushie"
 	desc = "An adorable stuffed toy that resembles a snake. Not to be mistaken for the real thing."
-	icon = 'icons/map_icons/items/_item.dmi'
+	icon = '../assets/icons/map_icons/items/_item.dmi'
 	icon_state = "/obj/item/toy/plush/snakeplushie"
 	post_init_icon_state = "map_plushie_snake"
 	greyscale_config = /datum/greyscale_config/plush_snake
@@ -575,7 +575,7 @@
 	inhand_icon_state = null
 	attack_verb_continuous = list("bites", "hisses", "tail slaps")
 	attack_verb_simple = list("bite", "hiss", "tail slap")
-	squeak_override = list('sound/items/weapons/bite.ogg' = 1)
+	squeak_override = list('../assets/sound/items/weapons/bite.ogg' = 1)
 
 /obj/item/toy/plush/nukeplushie
 	name = "operative plushie"
@@ -584,7 +584,7 @@
 	inhand_icon_state = null
 	attack_verb_continuous = list("shoots", "nukes", "detonates")
 	attack_verb_simple = list("shoot", "nuke", "detonate")
-	squeak_override = list('sound/effects/hit_punch.ogg' = 1)
+	squeak_override = list('../assets/sound/effects/hit_punch.ogg' = 1)
 
 /obj/item/toy/plush/plasmamanplushie
 	name = "plasmaman plushie"
@@ -593,12 +593,12 @@
 	inhand_icon_state = null
 	attack_verb_continuous = list("burns", "space beasts", "fwooshes")
 	attack_verb_simple = list("burn", "space beast", "fwoosh")
-	squeak_override = list('sound/effects/extinguish.ogg' = 1)
+	squeak_override = list('../assets/sound/effects/extinguish.ogg' = 1)
 
 /obj/item/toy/plush/slimeplushie
 	name = "slime plushie"
 	desc = "An adorable stuffed toy that resembles a slime. It is practically just a hacky sack."
-	icon = 'icons/map_icons/items/_item.dmi'
+	icon = '../assets/icons/map_icons/items/_item.dmi'
 	icon_state = "/obj/item/toy/plush/slimeplushie"
 	post_init_icon_state = "map_plushie_slime"
 	greyscale_config = /datum/greyscale_config/plush_slime
@@ -606,7 +606,7 @@
 	inhand_icon_state = null
 	attack_verb_continuous = list("blorbles", "slimes", "absorbs")
 	attack_verb_simple = list("blorble", "slime", "absorb")
-	squeak_override = list('sound/effects/blob/blobattack.ogg' = 1)
+	squeak_override = list('../assets/sound/effects/blob/blobattack.ogg' = 1)
 	gender = FEMALE //given all the jokes and drawings, I'm not sure the xenobiologists would make a slimeboy
 
 // This is supposed to be only in the bus ruin, don't spawn it elsewhere
@@ -665,7 +665,7 @@
 		say(pick(cry_alone_messages))
 	else
 		say(pick(cry_still_messages))
-	playsound(src, 'sound/items/intents/Help.ogg', 50, FALSE)
+	playsound(src, '../assets/sound/items/intents/Help.ogg', 50, FALSE)
 
 /obj/item/toy/plush/beeplushie
 	name = "bee plushie"
@@ -675,7 +675,7 @@
 	attack_verb_continuous = list("stings")
 	attack_verb_simple = list("sting")
 	gender = FEMALE
-	squeak_override = list('sound/mobs/humanoids/moth/scream_moth.ogg'=1)
+	squeak_override = list('../assets/sound/mobs/humanoids/moth/scream_moth.ogg'=1)
 
 /obj/item/toy/plush/moth
 	name = "moth plushie"
@@ -684,7 +684,7 @@
 	inhand_icon_state = null
 	attack_verb_continuous = list("flutters", "flaps")
 	attack_verb_simple = list("flutter", "flap")
-	squeak_override = list('sound/mobs/humanoids/moth/scream_moth.ogg'=1)
+	squeak_override = list('../assets/sound/mobs/humanoids/moth/scream_moth.ogg'=1)
 ///Used to track how many people killed themselves with item/toy/plush/moth
 	var/suicide_count = 0
 
@@ -697,7 +697,7 @@
 		desc = "A plushie depicting a creepy mothperson. It's killed [suicide_count] people! I don't think I want to hug it any more!"
 		divine = TRUE
 		resistance_flags = INDESTRUCTIBLE | FIRE_PROOF | ACID_PROOF | LAVA_PROOF
-	playsound(src, 'sound/effects/hallucinations/wail.ogg', 50, TRUE, -1)
+	playsound(src, '../assets/sound/effects/hallucinations/wail.ogg', 50, TRUE, -1)
 	var/list/available_spots = get_adjacent_open_turfs(loc)
 	if(available_spots.len) //If the user is in a confined space the plushie will drop normally as the user dies, but in the open the plush is placed one tile away from the user to prevent squeak spam
 		var/turf/open/random_open_spot = pick(available_spots)
@@ -711,7 +711,7 @@
 	icon_state = "pkplush"
 	attack_verb_continuous = list("hugs", "squeezes")
 	attack_verb_simple = list("hug", "squeeze")
-	squeak_override = list('sound/items/weapons/thudswoosh.ogg'=1)
+	squeak_override = list('../assets/sound/items/weapons/thudswoosh.ogg'=1)
 
 /obj/item/toy/plush/rouny
 	name = "runner plushie"
@@ -721,7 +721,7 @@
 	inhand_icon_state = null
 	attack_verb_continuous = list("slashes", "bites", "charges")
 	attack_verb_simple = list("slash", "bite", "charge")
-	squeak_override = list('sound/items/intents/Help.ogg' = 1)
+	squeak_override = list('../assets/sound/items/intents/Help.ogg' = 1)
 
 /obj/item/toy/plush/abductor
 	name = "abductor plushie"
@@ -730,7 +730,7 @@
 	inhand_icon_state = null
 	attack_verb_continuous = list("abducts", "probes")
 	attack_verb_continuous = list("abduct", "probe")
-	squeak_override = list('sound/ambience/weather/ashstorm/inside/weak_end.ogg' = 1) //very faint sound since abductors are silent as far as "speaking" is concerned.
+	squeak_override = list('../assets/sound/ambience/weather/ashstorm/inside/weak_end.ogg' = 1) //very faint sound since abductors are silent as far as "speaking" is concerned.
 
 /obj/item/toy/plush/abductor/agent
 	name = "abductor agent plushie"
@@ -740,15 +740,15 @@
 	attack_verb_continuous = list("abducts", "probes", "stuns")
 	attack_verb_continuous = list("abduct", "probe", "stun")
 	squeak_override = list(
-		'sound/items/weapons/egloves.ogg' = 2,
-		'sound/items/weapons/cablecuff.ogg' = 1,
+		'../assets/sound/items/weapons/egloves.ogg' = 2,
+		'../assets/sound/items/weapons/cablecuff.ogg' = 1,
 	)
 
 /obj/item/toy/plush/shark
 	name = "shark plushie"
 	desc = "A plushie depicting a somewhat cartoonish shark. The tag calls it a 'hákarl', noting that it was made by an obscure furniture manufacturer in old Scandinavia."
-	lefthand_file = 'icons/mob/inhands/items/plushes_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/plushes_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/plushes_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/plushes_righthand.dmi'
 	icon_state = "blahaj"
 	inhand_icon_state = "blahaj"
 	attack_verb_continuous = list("gnaws", "gnashes", "chews")
@@ -769,8 +769,8 @@
 	attack_verb_continuous = list("screams at", "strikes", "bashes")
 	attack_verb_simple = list("scream at", "strike", "bash")
 	squeak_override = list(
-		'sound/mobs/humanoids/human/scream/malescream_2.ogg' = 10, //10% chance to scream, rare but not abysmal
-		'sound/items/weapons/smash.ogg' = 90,
+		'../assets/sound/mobs/humanoids/human/scream/malescream_2.ogg' = 10, //10% chance to scream, rare but not abysmal
+		'../assets/sound/items/weapons/smash.ogg' = 90,
 		)
 
 /obj/item/toy/plush/horse
@@ -806,7 +806,7 @@
 		return ..()
 	nana.forceMove(src) // go into the cotton stomach
 	to_chat(feeder, span_notice("You hand over the [nana] to [src] and watch as it eats..."))
-	playsound(src, 'sound/items/eatfood.ogg', 75, TRUE)
+	playsound(src, '../assets/sound/items/eatfood.ogg', 75, TRUE)
 	addtimer(CALLBACK(src, PROC_REF(eat), feeder, nana), 3 SECONDS)
 	return ITEM_INTERACT_SUCCESS
 
@@ -828,6 +828,6 @@
 	if(oviewers.len > 0 && (locate(feeder) in oviewers))
 		oviewers -= feeder // remove feeder from targetables
 	peel.throw_at(oviewers.len == 0 ? get_ranged_target_turf(throw_src, pick(GLOB.alldirs), peel.throw_range) : pick(oviewers), peel.throw_range, peel.throw_speed, quickstart = FALSE)
-	playsound(src, 'sound/mobs/non-humanoids/gorilla/gorilla.ogg', 100, FALSE)
+	playsound(src, '../assets/sound/mobs/non-humanoids/gorilla/gorilla.ogg', 100, FALSE)
 	spasm_animation(5 SECONDS)
 	qdel(nana)

@@ -1,7 +1,7 @@
 /obj/item/gun/medbeam
 	name = "Medical Beamgun"
 	desc = "Don't cross the streams!"
-	icon = 'icons/obj/chronos.dmi'
+	icon = '../assets/icons/obj/chronos.dmi'
 	icon_state = "chronogun"
 	inhand_icon_state = "chronogun"
 	w_class = WEIGHT_CLASS_NORMAL

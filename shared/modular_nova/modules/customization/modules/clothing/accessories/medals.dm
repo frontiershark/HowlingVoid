@@ -23,7 +23,7 @@ Potential future ideas:
 /obj/item/clothing/accessory/medal/nova
 	name = "medal of robustness"
 	desc = "A medal dedicated to those who display robustness in many fields."
-	icon = 'icons/map_icons/clothing/accessory.dmi'
+	icon = '../assets/icons/map_icons/clothing/accessory.dmi'
 	icon_state = "/obj/item/clothing/accessory/medal/nova"
 	post_init_icon_state = "medal_robust"
 	greyscale_config = /datum/greyscale_config/medals/syndicate
@@ -79,7 +79,7 @@ Potential future ideas:
 /obj/item/clothing/accessory/nova/acc_medal
 	name = "circle medal"
 	desc = "You shouldn't have this, make a bug report!"
-	icon = 'icons/map_icons/clothing/accessory.dmi'
+	icon = '../assets/icons/map_icons/clothing/accessory.dmi'
 	icon_state = "/obj/item/clothing/accessory/nova/acc_medal"
 	post_init_icon_state = "medal_alt"
 	greyscale_config = /datum/greyscale_config/medals/circle
@@ -94,7 +94,7 @@ Potential future ideas:
 // The default acc_medal is already the 'alt_circle' and defines our configs
 */
 /obj/item/clothing/accessory/nova/acc_medal/circle
-	icon = 'icons/map_icons/clothing/accessory.dmi'
+	icon = '../assets/icons/map_icons/clothing/accessory.dmi'
 	icon_state = "/obj/item/clothing/accessory/nova/acc_medal/circle"
 	post_init_icon_state = "medal"
 
@@ -154,7 +154,7 @@ Potential future ideas:
 /obj/item/clothing/accessory/nova/acc_medal/heart
 	name = "heart medal"
 	desc = "A regular everyday medal."
-	icon = 'icons/map_icons/clothing/accessory.dmi'
+	icon = '../assets/icons/map_icons/clothing/accessory.dmi'
 	icon_state = "/obj/item/clothing/accessory/nova/acc_medal/heart"
 	post_init_icon_state = "medal"
 	greyscale_config = /datum/greyscale_config/medals/heart
@@ -178,7 +178,7 @@ Potential future ideas:
 /obj/item/clothing/accessory/nova/acc_medal/crown
 	name = "crown medal"
 	desc = "A regular everyday medal."
-	icon = 'icons/map_icons/clothing/accessory.dmi'
+	icon = '../assets/icons/map_icons/clothing/accessory.dmi'
 	icon_state = "/obj/item/clothing/accessory/nova/acc_medal/crown"
 	post_init_icon_state = "medal"
 	greyscale_config = /datum/greyscale_config/medals/crown
@@ -247,7 +247,7 @@ Potential future ideas:
 /obj/item/clothing/accessory/nova/acc_medal/glowcrystal
 	name = "glowcrystal necklace"
 	desc = "A glowing rock strung from a necklace, a token of gratitude similar to a medal."
-	icon = 'icons/map_icons/clothing/accessory.dmi'
+	icon = '../assets/icons/map_icons/clothing/accessory.dmi'
 	icon_state = "/obj/item/clothing/accessory/nova/acc_medal/glowcrystal"
 	post_init_icon_state = "necklace_crystal"
 	greyscale_config = /datum/greyscale_config/medals/glow
@@ -260,7 +260,7 @@ Potential future ideas:
 /obj/item/clothing/accessory/nova/acc_medal/dogtags
 	name = "dogtags"
 	desc = "A pair of standard issue dogtags. Rather outdated concept, but still do their job."
-	icon = 'icons/map_icons/clothing/accessory.dmi'
+	icon = '../assets/icons/map_icons/clothing/accessory.dmi'
 	icon_state = "/obj/item/clothing/accessory/nova/acc_medal/dogtags"
 	post_init_icon_state = "dogtags"
 	greyscale_config = /datum/greyscale_config/dogtags
@@ -273,7 +273,7 @@ Potential future ideas:
 /obj/item/clothing/accessory/nova/acc_medal/rankpin
 	name = "rank pin"
 	desc = "A pin used to display accomplishments, advancements, or otherwise earned recognition."
-	icon = 'icons/map_icons/clothing/accessory.dmi'
+	icon = '../assets/icons/map_icons/clothing/accessory.dmi'
 	icon_state = "/obj/item/clothing/accessory/nova/acc_medal/rankpin"
 	post_init_icon_state = "star"
 	greyscale_config = /datum/greyscale_config/medals/rank_pins
@@ -294,7 +294,7 @@ Potential future ideas:
 /obj/item/clothing/accessory/nova/acc_medal/neckpin
 	name = "\improper NT company neckpin"
 	desc = "A pin specially dedicated to show loyalty to your company!"
-	icon = 'icons/map_icons/clothing/accessory.dmi'
+	icon = '../assets/icons/map_icons/clothing/accessory.dmi'
 	icon_state = "/obj/item/clothing/accessory/nova/acc_medal/neckpin"
 	post_init_icon_state = "ntpin"
 	greyscale_config = /datum/greyscale_config/medals/neckpins
@@ -348,7 +348,7 @@ Potential future ideas:
 /obj/item/clothing/accessory/nova/military_ribbon
 	name = "military ribbon"
 	desc = "An average military ribbon"
-	icon = 'icons/map_icons/clothing/accessory.dmi'
+	icon = '../assets/icons/map_icons/clothing/accessory.dmi'
 	icon_state = "/obj/item/clothing/accessory/nova/military_ribbon"
 	post_init_icon_state = "ribbon1"
 	greyscale_config = /datum/greyscale_config/medals/military_ribbon
@@ -372,7 +372,7 @@ Potential future ideas:
 /obj/item/clothing/accessory/nova/ribbon
 	name = "ribbon"
 	desc = "A normal everyday ribbon."
-	icon = 'icons/map_icons/clothing/accessory.dmi'
+	icon = '../assets/icons/map_icons/clothing/accessory.dmi'
 	icon_state = "/obj/item/clothing/accessory/nova/ribbon"
 	post_init_icon_state = "ribbon1"
 	greyscale_config = /datum/greyscale_config/medals/color_ribbon

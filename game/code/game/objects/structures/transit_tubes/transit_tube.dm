@@ -1,7 +1,7 @@
 
 /obj/structure/transit_tube
 	name = "transit tube"
-	icon = 'icons/obj/pipes_n_cables/transit_tube.dmi'
+	icon = '../assets/icons/obj/pipes_n_cables/transit_tube.dmi'
 	icon_state = "straight"
 	desc = "A transit tube for moving things around."
 	density = TRUE

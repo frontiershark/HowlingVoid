@@ -8,7 +8,7 @@
 /mob/living/basic/wumborian_fugu
 	name = "wumborian fugu"
 	desc = "The wumborian fugu rapidly increases its body mass in order to ward off its prey. Great care should be taken to avoid it while it's in this state as it is nearly invincible, but it cannot maintain its form forever."
-	icon = 'icons/mob/simple/lavaland/64x64megafauna.dmi'
+	icon = '../assets/icons/mob/simple/lavaland/64x64megafauna.dmi'
 	icon_state = "Fugu0"
 	icon_living = "Fugu0"
 	icon_dead = "Fugu_dead"
@@ -27,7 +27,7 @@
 	obj_damage = 0
 	melee_damage_lower = 0
 	melee_damage_upper = 0
-	attack_sound = 'sound/items/weapons/punch1.ogg'
+	attack_sound = '../assets/sound/items/weapons/punch1.ogg'
 	attack_vis_effect = ATTACK_EFFECT_BITE
 	melee_attack_cooldown = 2.5 SECONDS
 	attack_verb_continuous = "chomps"

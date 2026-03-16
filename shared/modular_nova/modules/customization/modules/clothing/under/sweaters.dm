@@ -21,7 +21,7 @@
 /obj/item/clothing/under/sweater
 	name = "cableknit sweater"
 	desc = "Why trade style for comfort? Now you can go commando down south and still be cozy up north."
-	icon = 'icons/map_icons/clothing/under/_under.dmi'
+	icon = '../assets/icons/map_icons/clothing/under/_under.dmi'
 	icon_state = "/obj/item/clothing/under/sweater"
 	post_init_icon_state = "cableknit_sweater"
 	greyscale_config = /datum/greyscale_config/cableknit_sweater

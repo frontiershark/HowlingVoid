@@ -1,7 +1,7 @@
 /datum/action/item_action/mod
 	background_icon_state = "bg_mod"
 	overlay_icon_state = "bg_mod_border"
-	button_icon = 'icons/mob/actions/actions_mod.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_mod.dmi'
 	check_flags = AB_CHECK_CONSCIOUS
 	/// Whether this action is intended for the AI. Stuff breaks a lot if this is done differently.
 	var/ai_action = FALSE
@@ -191,11 +191,11 @@
 
 	var/obj/item/mod/control/mod = target
 	if(module == mod.selected_module)
-		current_button.add_overlay(image(icon = 'icons/hud/radial.dmi', icon_state = "module_selected", layer = FLOAT_LAYER-0.1))
+		current_button.add_overlay(image(icon = '../assets/icons/hud/radial.dmi', icon_state = "module_selected", layer = FLOAT_LAYER-0.1))
 	else if(module.active)
-		current_button.add_overlay(image(icon = 'icons/hud/radial.dmi', icon_state = "module_active", layer = FLOAT_LAYER-0.1))
+		current_button.add_overlay(image(icon = '../assets/icons/hud/radial.dmi', icon_state = "module_active", layer = FLOAT_LAYER-0.1))
 	if(!COOLDOWN_FINISHED(module, cooldown_timer))
-		current_button.add_overlay(image(icon = 'icons/hud/radial.dmi', icon_state = "module_cooldown"))
+		current_button.add_overlay(image(icon = '../assets/icons/hud/radial.dmi', icon_state = "module_cooldown"))
 	return ..()
 
 /datum/action/item_action/mod/pinnable/module/proc/module_interacted_with(datum/source)

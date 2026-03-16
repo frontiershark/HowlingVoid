@@ -16,7 +16,7 @@
 	light_power = 0.75
 	light_color = LIGHT_COLOR_LAVA
 	light_on = FALSE
-	bullet_bounce_sound = 'sound/items/tools/welder2.ogg'
+	bullet_bounce_sound = '../assets/sound/items/tools/welder2.ogg'
 
 	footstep = FOOTSTEP_LAVA
 	barefootstep = FOOTSTEP_LAVA
@@ -37,7 +37,7 @@
 	/// the temperature that this turf will attempt to heat/cool gasses too in a heat exchanger, in kelvin
 	var/lava_temperature = 5000
 	/// The icon that covers the lava bits of our turf
-	var/mask_icon = 'icons/turf/floors.dmi'
+	var/mask_icon = '../assets/icons/turf/floors.dmi'
 	/// The icon state that covers the lava bits of our turf
 	var/mask_state = "lava-lightmask"
 	/// The type for the preset fishing spot of this type of turf.
@@ -220,7 +220,7 @@
 			return
 		if(R.use(1))
 			to_chat(user, span_notice("You construct a lattice."))
-			playsound(src, 'sound/items/weapons/genhit.ogg', 50, TRUE)
+			playsound(src, '../assets/sound/items/weapons/genhit.ogg', 50, TRUE)
 			new /obj/structure/lattice/catwalk/lava(locate(x, y, z))
 		else
 			to_chat(user, span_warning("You need one rod to build a heatproof lattice."))
@@ -354,7 +354,7 @@
 /turf/open/lava/proc/drop_contents_into_lava()
 	SIGNAL_HANDLER
 	balloon_alert_to_viewers("[pick("splash","pshhhh","hiss","blorble")]!")
-	playsound(src, 'sound/items/match_strike.ogg', 15, TRUE)
+	playsound(src, '../assets/sound/items/match_strike.ogg', 15, TRUE)
 	for(var/atom/movable/each_content as anything in contents)
 		on_atom_inited(src, each_content)
 	return TRUE
@@ -368,8 +368,8 @@
 /turf/open/lava/smooth
 	name = "lava"
 	baseturfs = /turf/open/lava/smooth
-	icon = 'icons/turf/floors/lava.dmi'
-	mask_icon = 'icons/turf/floors/lava_mask.dmi'
+	icon = '../assets/icons/turf/floors/lava.dmi'
+	mask_icon = '../assets/icons/turf/floors/lava_mask.dmi'
 	icon_state = "lava-255"
 	mask_state = "lava-255"
 	base_icon_state = "lava"

@@ -2,7 +2,7 @@
 /mob/living/basic/mining/goliath
 	name = "goliath"
 	desc = "A hulking, armor-plated beast with long tendrils arching from its back."
-	icon = 'icons/mob/simple/lavaland/lavaland_monsters_wide.dmi'
+	icon = '../assets/icons/mob/simple/lavaland/lavaland_monsters_wide.dmi'
 	icon_state = "goliath"
 	icon_living = "goliath"
 	icon_dead = "goliath_dead"
@@ -19,7 +19,7 @@
 	obj_damage = 100
 	melee_damage_lower = 25
 	melee_damage_upper = 25
-	attack_sound = 'sound/items/weapons/punch1.ogg'
+	attack_sound = '../assets/sound/items/weapons/punch1.ogg'
 	attack_verb_continuous = "pulverizes"
 	attack_verb_simple = "pulverize"
 	throw_blocked_message = "does nothing to the tough hide of"
@@ -141,7 +141,7 @@
 	if (!COOLDOWN_FINISHED(src, ability_animation_cooldown))
 		return
 	COOLDOWN_START(src, ability_animation_cooldown, 2 SECONDS)
-	playsound(src, 'sound/effects/magic/demon_attack1.ogg', vol = 50, vary = TRUE)
+	playsound(src, '../assets/sound/effects/magic/demon_attack1.ogg', vol = 50, vary = TRUE)
 	Shake(1, 0, 1.5 SECONDS)
 
 /// Called slightly before tentacles ability comes off cooldown, as a warning
@@ -189,7 +189,7 @@
 /mob/living/basic/mining/goliath/ancient
 	name = "ancient goliath"
 	desc = "A massive beast that uses long tentacles to ensnare its prey, threatening them is not advised under any conditions."
-	icon = 'icons/mob/simple/lavaland/lavaland_monsters_wide.dmi'
+	icon = '../assets/icons/mob/simple/lavaland/lavaland_monsters_wide.dmi'
 	icon_state = "ancient_goliath"
 	icon_living = "ancient_goliath"
 	icon_dead = "ancient_goliath_dead"
@@ -239,5 +239,5 @@
 /obj/item/goliath_saddle
 	name = "goliath saddle"
 	desc = "This rough saddle will give you a serviceable seat upon a goliath! Provided you can get one to stand still."
-	icon = 'icons/obj/mining.dmi'
+	icon = '../assets/icons/obj/mining.dmi'
 	icon_state = "goliath_saddle"

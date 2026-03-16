@@ -2,7 +2,7 @@
 
 /obj/machinery/mineral/stacking_unit_console
 	name = "stacking machine console"
-	icon = 'icons/obj/machines/mining_machines.dmi'
+	icon = '../assets/icons/obj/machines/mining_machines.dmi'
 	icon_state = "console"
 	desc = "Controls a stacking machine... in theory."
 	density = FALSE
@@ -87,7 +87,7 @@
 
 /obj/machinery/mineral/stacking_machine
 	name = "stacking machine"
-	icon = 'icons/obj/machines/mining_machines.dmi'
+	icon = '../assets/icons/obj/machines/mining_machines.dmi'
 	icon_state = "stacker"
 	desc = "A machine that automatically stacks acquired materials. Controlled by a nearby console."
 	density = TRUE

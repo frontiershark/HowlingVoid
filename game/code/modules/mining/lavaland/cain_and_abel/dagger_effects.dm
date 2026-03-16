@@ -4,7 +4,7 @@
 	anchored = TRUE
 	vis_flags = VIS_INHERIT_DIR | VIS_INHERIT_PLANE
 	layer = ABOVE_HUD_PLANE
-	icon = 'icons/effects/160x160.dmi'
+	icon = '../assets/icons/effects/160x160.dmi'
 	icon_state = "dagger_slash"
 	pixel_y = -64
 	base_pixel_y = -64
@@ -22,7 +22,7 @@
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	anchored = TRUE
 	vis_flags = VIS_INHERIT_PLANE
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	icon_state = "blood_wisp"
 	light_power = 2
 	light_range = 2
@@ -31,7 +31,7 @@
 //blade we hurl
 /obj/projectile/dagger
 	name = "Cain"
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	icon_state = "cain_abel_attack"
 	damage = 10
 	range = 9
@@ -40,7 +40,7 @@
 	light_color = "#589ac9"
 	speed = 3
 	can_hit_turfs = TRUE
-	hitsound = 'sound/items/weapons/zipline_hit.ogg'
+	hitsound = '../assets/sound/items/weapons/zipline_hit.ogg'
 	///effect we leave by after hit
 	var/effect_left = /obj/effect/temp_visual/dagger_engraved
 
@@ -51,7 +51,7 @@
 	if(isgroundlessturf(target_turf))
 		return null
 	var/obj/effect/temp_visual/dagger_engraved/engraved = new effect_left(target_turf)
-	firer.Beam(engraved, icon_state = "chain", icon = 'icons/obj/mining_zones/artefacts.dmi', maxdistance = 9, layer = BELOW_MOB_LAYER)
+	firer.Beam(engraved, icon_state = "chain", icon = '../assets/icons/obj/mining_zones/artefacts.dmi', maxdistance = 9, layer = BELOW_MOB_LAYER)
 	return engraved
 
 /obj/projectile/dagger/crystal
@@ -69,14 +69,14 @@
 
 //effect when monsters step on our crystals
 /obj/effect/temp_visual/dagger_lightning
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	icon_state = "lightning"
 	light_color = "#3d50db"
 	duration = 1.25 SECONDS
 
 //dagger engraved to the floor
 /obj/effect/temp_visual/dagger_engraved
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	icon_state = "cain_abel_engraved"
 	light_color = "#5767e1"
 	light_power = 2
@@ -133,14 +133,14 @@
 		new /obj/effect/temp_visual/dagger_crystal(get_turf(src))
 		return
 
-	playsound(src, 'sound/items/weapons/crystal_dagger_sound.ogg', 60, vary = TRUE, pressure_affected = FALSE)
+	playsound(src, '../assets/sound/items/weapons/crystal_dagger_sound.ogg', 60, vary = TRUE, pressure_affected = FALSE)
 	var/list/turfs_to_crystalize = border_diamond_range_turfs(src, range)
 	for(var/turf/turf_to_crystalize as anything in turfs_to_crystalize)
 		new /obj/effect/temp_visual/dagger_crystal(turf_to_crystalize)
 
 //effect when our whisps hit something
 /obj/effect/temp_visual/wisp_explosion
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	icon_state = "wisp_hit"
 	layer = ABOVE_ALL_MOB_LAYER
 	light_power = 2
@@ -150,11 +150,11 @@
 
 /obj/effect/temp_visual/wisp_explosion/Initialize(mapload)
 	. = ..()
-	playsound(get_turf(src), 'sound/items/weapons/effects/blood_wisp_explode.ogg', 60, vary = TRUE, pressure_affected = FALSE)
+	playsound(get_turf(src), '../assets/sound/items/weapons/effects/blood_wisp_explode.ogg', 60, vary = TRUE, pressure_affected = FALSE)
 
 //painful crystals to step on
 /obj/effect/temp_visual/dagger_crystal
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	icon_state = "cain_abel_crystal"
 	duration = 3 SECONDS
 	light_range = 3
@@ -183,7 +183,7 @@
 
 /obj/effect/temp_visual/dagger_crystal/proc/apply_crystal_effects(mob/living/victim)
 	victim.apply_status_effect(/datum/status_effect/dagger_stun)
-	playsound(victim, 'sound/items/weapons/bladeslice.ogg', 50, FALSE)
+	playsound(victim, '../assets/sound/items/weapons/bladeslice.ogg', 50, FALSE)
 	victim.apply_damage(victim.mob_size >= MOB_SIZE_LARGE ? applied_damage : applied_damage / 10, BRUTE)
 
 /obj/effect/temp_visual/dagger_crystal/proc/dissappear_gracefully()
@@ -197,7 +197,7 @@
 	light_power = 2
 	light_range = 2
 	light_color = "#d74e63"
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	icon_state = "blood_wisp"
 
 /obj/projectile/dagger_wisp/Initialize(mapload)

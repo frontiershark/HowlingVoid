@@ -4,9 +4,9 @@
 
 /datum/atom_skin/meson/glasses
 	preview_name = "Meson Glasses"
-	new_icon = 'icons/obj/clothing/glasses.dmi'
+	new_icon = '../assets/icons/obj/clothing/glasses.dmi'
 	new_icon_state = "meson"
-	new_worn_icon = 'icons/mob/clothing/eyes.dmi'
+	new_worn_icon = '../assets/icons/mob/clothing/eyes.dmi'
 
 /datum/atom_skin/meson/scouter
 	preview_name = "Meson Scouter"
@@ -32,9 +32,9 @@
 
 /datum/atom_skin/meson/engine/trayson
 	preview_name = "Engine Glasses"
-	new_icon = 'icons/obj/clothing/glasses.dmi'
+	new_icon = '../assets/icons/obj/clothing/glasses.dmi'
 	new_icon_state = "trayson-"
-	new_worn_icon = 'icons/mob/clothing/eyes.dmi'
+	new_worn_icon = '../assets/icons/mob/clothing/eyes.dmi'
 
 /datum/atom_skin/meson/engine/scouter
 	preview_name = "Engine Scouter"

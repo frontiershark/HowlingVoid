@@ -1,6 +1,6 @@
 // Small visual effect imparted onto rusted things by rust heretics.
 /obj/effect/glowing_rune
-	icon = 'icons/effects/eldritch.dmi'
+	icon = '../assets/icons/effects/eldritch.dmi'
 	icon_state = "small_rune_1"
 	anchored = TRUE
 	plane = FLOOR_PLANE

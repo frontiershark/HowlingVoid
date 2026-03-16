@@ -69,7 +69,7 @@
 	. = ..()
 	if(anchored == FALSE)
 		return
-	var/image/ore_input = image(icon='icons/obj/doors/airlocks/station/overlays.dmi', icon_state="unres_[input_dir]")
+	var/image/ore_input = image(icon='../assets/icons/obj/doors/airlocks/station/overlays.dmi', icon_state="unres_[input_dir]")
 
 	switch(input_dir)
 		if(NORTH)

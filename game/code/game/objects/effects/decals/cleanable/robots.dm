@@ -1,7 +1,7 @@
 /obj/effect/decal/cleanable/blood/gibs/robot_debris
 	name = "robot debris"
 	desc = "It's a useless heap of junk... <i>or is it?</i>"
-	icon = 'icons/mob/silicon/robots.dmi'
+	icon = '../assets/icons/mob/silicon/robots.dmi'
 	random_icon_states = list("gib1", "gib2", "gib3", "gib4", "gib5", "gib6", "gib7")
 	has_overlay = FALSE
 	squishy = FALSE

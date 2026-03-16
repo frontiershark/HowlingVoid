@@ -11,11 +11,11 @@
 	max_grab = GRAB_AGGRESSIVE
 
 	var/caste = ""
-	var/alt_icon = 'icons/mob/nonhuman-player/alienleap.dmi' //used to switch between the two alien icon files.
+	var/alt_icon = '../assets/icons/mob/nonhuman-player/alienleap.dmi' //used to switch between the two alien icon files.
 	var/leap_on_click = 0
 	var/pounce_cooldown = 0
 	var/pounce_cooldown_time = 3 SECONDS
-	death_sound = 'sound/mobs/non-humanoids/hiss/hiss6.ogg'
+	death_sound = '../assets/sound/mobs/non-humanoids/hiss/hiss6.ogg'
 	bodyparts = list(
 		/obj/item/bodypart/chest/alien,
 		/obj/item/bodypart/head/alien,
@@ -48,7 +48,7 @@ GLOBAL_LIST_INIT(strippable_alien_humanoid_items, create_strippable_list(list(
 	AddElement(/datum/element/strippable, GLOB.strippable_alien_humanoid_items)
 
 /mob/living/carbon/alien/adult/cuff_resist(obj/item/I)
-	playsound(src, 'sound/mobs/non-humanoids/hiss/hiss5.ogg', 40, TRUE, TRUE)  //Alien roars when starting to break free
+	playsound(src, '../assets/sound/mobs/non-humanoids/hiss/hiss5.ogg', 40, TRUE, TRUE)  //Alien roars when starting to break free
 	..(I, cuff_break = INSTANT_CUFFBREAK)
 
 /mob/living/carbon/alien/adult/resist_grab(moving_resist)
@@ -130,7 +130,7 @@ GLOBAL_LIST_INIT(strippable_alien_humanoid_items, create_strippable_list(list(
 	lucky_winner.visible_message(span_danger("[src] is attempting to devour [lucky_winner]!"), \
 			span_userdanger("[src] is attempting to devour you!"))
 
-	playsound(lucky_winner, 'sound/mobs/non-humanoids/alien/alien_eat.ogg', 100)
+	playsound(lucky_winner, '../assets/sound/mobs/non-humanoids/alien/alien_eat.ogg', 100)
 	if(!do_after(src, devour_time, lucky_winner, extra_checks = CALLBACK(src, PROC_REF(can_consume), lucky_winner)))
 		return TRUE
 	if(!can_consume(lucky_winner))
@@ -150,7 +150,7 @@ GLOBAL_LIST_INIT(strippable_alien_humanoid_items, create_strippable_list(list(
 	return TRUE
 
 /mob/living/carbon/alien/adult/get_butt_sprite()
-	return icon('icons/mob/butts.dmi', BUTT_SPRITE_XENOMORPH)
+	return icon('../assets/icons/mob/butts.dmi', BUTT_SPRITE_XENOMORPH)
 
 // Aliens can touch acid
 /mob/living/carbon/alien/can_touch_acid(atom/acided_atom, acid_power, acid_volume)

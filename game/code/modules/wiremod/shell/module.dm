@@ -93,7 +93,7 @@
 	qdel(action)
 
 /datum/action/item_action/mod/pinnable/circuit
-	button_icon = 'icons/mob/actions/actions_items.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_items.dmi'
 	button_icon_state = "bci_blank"
 
 	/// A reference to the module containing this action's component

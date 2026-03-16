@@ -2,7 +2,7 @@
 
 /obj/structure/kitchenspike_frame
 	name = "meatspike frame"
-	icon = 'icons/obj/service/kitchen.dmi' //NOVA EDIT - ICON OVERRIDDEN IN AESTHETICS MODULE
+	icon = '../assets/icons/obj/service/kitchen.dmi' //NOVA EDIT - ICON OVERRIDDEN IN AESTHETICS MODULE
 	icon_state = "spikeframe"
 	desc = "The frame of a meat spike."
 	density = TRUE
@@ -67,7 +67,7 @@
 
 /obj/structure/kitchenspike
 	name = "meat spike"
-	icon = 'icons/obj/service/kitchen.dmi' //NOVA EDIT - ICON OVERRIDDEN IN AESTHETICS MODULE
+	icon = '../assets/icons/obj/service/kitchen.dmi' //NOVA EDIT - ICON OVERRIDDEN IN AESTHETICS MODULE
 	icon_state = "spike"
 	desc = "A spike for collecting meat from animals."
 	density = TRUE
@@ -125,7 +125,7 @@
 	return ..()
 
 /obj/structure/kitchenspike/post_buckle_mob(mob/living/target)
-	playsound(src.loc, 'sound/effects/splat.ogg', 25, TRUE)
+	playsound(src.loc, '../assets/sound/effects/splat.ogg', 25, TRUE)
 	target.emote("scream")
 	target.add_splatter_floor()
 	target.adjust_brute_loss(30)

@@ -105,7 +105,7 @@
 		return
 	if(muted in muted_clients)
 		muted_clients.Remove(muted)
-		muted.computer.alert_call(muted, "You have been unmuted from [title]!", 'sound/machines/ping.ogg')
+		muted.computer.alert_call(muted, "You have been unmuted from [title]!", '../assets/sound/machines/ping.ogg')
 	else
 		muted_clients.Add(muted)
 		muted.computer.alert_call(muted, "You have been muted from [title]!")
@@ -114,7 +114,7 @@
 	if(pinger in muted_clients) //oh my god fuck off
 		return
 	add_status_message("[pinger.username] pinged [pinged.username].")
-	pinged.computer.alert_call(pinged, "You have been pinged in [title] by [pinger.username]!", 'sound/machines/ping.ogg')
+	pinged.computer.alert_call(pinged, "You have been pinged in [title] by [pinger.username]!", '../assets/sound/machines/ping.ogg')
 
 /datum/ntnet_conversation/proc/changeop(datum/computer_file/program/chatclient/newop, silent = FALSE)
 	if(!istype(newop))

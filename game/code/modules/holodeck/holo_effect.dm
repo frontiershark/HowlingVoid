@@ -5,7 +5,7 @@
 	These remove snowflake code for special holodeck functions.
 */
 /obj/effect/holodeck_effect
-	icon = 'icons/hud/screen_gen.dmi'
+	icon = '../assets/icons/hud/screen_gen.dmi'
 	icon_state = "x2"
 	invisibility = INVISIBILITY_ABSTRACT
 
@@ -25,7 +25,7 @@
 
 // Generates a holodeck-tracked card deck
 /obj/effect/holodeck_effect/cards
-	icon = 'icons/obj/toys/playing_cards.dmi'
+	icon = '../assets/icons/obj/toys/playing_cards.dmi'
 	icon_state = "deck_syndicate_full"
 
 /obj/effect/holodeck_effect/cards/activate(obj/machinery/computer/holodeck/holodeck)

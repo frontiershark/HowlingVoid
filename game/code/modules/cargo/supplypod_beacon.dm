@@ -1,11 +1,11 @@
 /obj/item/supplypod_beacon
 	name = "Supply Pod Beacon"
 	desc = "A device that can be linked to an Express Supply Console for precision supply pod deliveries."
-	icon = 'icons/obj/devices/tracker.dmi'
+	icon = '../assets/icons/obj/devices/tracker.dmi'
 	icon_state = "supplypod_beacon"
 	inhand_icon_state = "radio"
-	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/devices_righthand.dmi'
 	w_class = WEIGHT_CLASS_SMALL
 	armor_type = /datum/armor/supplypod_beacon
 	resistance_flags = FIRE_PROOF
@@ -28,17 +28,17 @@
 	switch(consoleStatus)
 		if (SP_LINKED)
 			linked = TRUE
-			playsound(src,'sound/machines/beep/twobeep.ogg',50,FALSE)
+			playsound(src,'../assets/sound/machines/beep/twobeep.ogg',50,FALSE)
 		if (SP_READY)
 			ready = TRUE
 		if (SP_LAUNCH)
 			launched = TRUE
-			playsound(src,'sound/machines/beep/triple_beep.ogg',50,FALSE)
-			playsound(src,'sound/machines/warning-buzzer.ogg',50,FALSE)
+			playsound(src,'../assets/sound/machines/beep/triple_beep.ogg',50,FALSE)
+			playsound(src,'../assets/sound/machines/warning-buzzer.ogg',50,FALSE)
 			addtimer(CALLBACK(src, PROC_REF(end_launch)), 33)//wait 3.3 seconds (time it takes for supplypod to land), then update icon
 		if (SP_UNLINK)
 			linked = FALSE
-			playsound(src,'sound/machines/synth/synth_no.ogg',50,FALSE)
+			playsound(src,'../assets/sound/machines/synth/synth_no.ogg',50,FALSE)
 		if (SP_UNREADY)
 			ready = FALSE
 	update_appearance()

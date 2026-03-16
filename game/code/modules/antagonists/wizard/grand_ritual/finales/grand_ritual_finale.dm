@@ -80,7 +80,7 @@
 /datum/grand_finale/magic
 	name = "Evolution"
 	desc = "The ultimate use of your gathered power! Give the crew their own magic, they'll surely realise that right and wrong have no meaning when you hold ultimate power!"
-	icon = 'icons/obj/scrolls.dmi'
+	icon = '../assets/icons/obj/scrolls.dmi'
 	icon_state = "scroll"
 
 /datum/grand_finale/magic/trigger(mob/living/carbon/human/invoker)

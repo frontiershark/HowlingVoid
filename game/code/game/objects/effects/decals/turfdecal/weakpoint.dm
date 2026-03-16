@@ -6,7 +6,7 @@
 /obj/effect/weakpoint
 	name = "weakpoint crack"
 	desc = "A suspicious crack runs along the ground."
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	icon_state = "weakpoint"
 
 	/// The required strength of explosion for a weakpoint to propogate

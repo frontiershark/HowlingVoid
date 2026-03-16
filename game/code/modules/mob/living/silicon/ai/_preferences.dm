@@ -102,25 +102,25 @@ GLOBAL_LIST_INIT(ai_hologram_category_options, list(
 // New items need to also be added to ai_hologram_icon_state list
 GLOBAL_LIST_INIT(ai_hologram_icons, list(
 	/* Animal */
-	AI_HOLOGRAM_BEAR = 'icons/mob/simple/animal.dmi',
-	AI_HOLOGRAM_CARP = 'icons/mob/simple/carp.dmi',
-	AI_HOLOGRAM_CAT = 'icons/mob/simple/pets.dmi',
-	AI_HOLOGRAM_CAT_2 = 'icons/mob/simple/pets.dmi',
-	AI_HOLOGRAM_CHICKEN = 'icons/mob/simple/animal.dmi',
-	AI_HOLOGRAM_CORGI = 'icons/mob/simple/pets.dmi',
-	AI_HOLOGRAM_COW = 'icons/mob/simple/cows.dmi',
-	AI_HOLOGRAM_CRAB = 'icons/mob/simple/animal.dmi',
-	AI_HOLOGRAM_FOX = 'icons/mob/simple/pets.dmi',
-	AI_HOLOGRAM_GOAT = 'icons/mob/simple/animal.dmi',
-	AI_HOLOGRAM_PARROT = 'icons/mob/simple/animal.dmi',
-	AI_HOLOGRAM_PUG = 'icons/mob/simple/pets.dmi',
-	AI_HOLOGRAM_SPIDER = 'icons/mob/simple/arachnoid.dmi',
+	AI_HOLOGRAM_BEAR = '../assets/icons/mob/simple/animal.dmi',
+	AI_HOLOGRAM_CARP = '../assets/icons/mob/simple/carp.dmi',
+	AI_HOLOGRAM_CAT = '../assets/icons/mob/simple/pets.dmi',
+	AI_HOLOGRAM_CAT_2 = '../assets/icons/mob/simple/pets.dmi',
+	AI_HOLOGRAM_CHICKEN = '../assets/icons/mob/simple/animal.dmi',
+	AI_HOLOGRAM_CORGI = '../assets/icons/mob/simple/pets.dmi',
+	AI_HOLOGRAM_COW = '../assets/icons/mob/simple/cows.dmi',
+	AI_HOLOGRAM_CRAB = '../assets/icons/mob/simple/animal.dmi',
+	AI_HOLOGRAM_FOX = '../assets/icons/mob/simple/pets.dmi',
+	AI_HOLOGRAM_GOAT = '../assets/icons/mob/simple/animal.dmi',
+	AI_HOLOGRAM_PARROT = '../assets/icons/mob/simple/animal.dmi',
+	AI_HOLOGRAM_PUG = '../assets/icons/mob/simple/pets.dmi',
+	AI_HOLOGRAM_SPIDER = '../assets/icons/mob/simple/arachnoid.dmi',
 	/* Unique */
-	AI_HOLOGRAM_DEFAULT = 'icons/mob/silicon/ai.dmi',
-	AI_HOLOGRAM_FACE = 'icons/mob/silicon/ai.dmi',
-	AI_HOLOGRAM_NARSIE = 'icons/mob/silicon/ai.dmi',
-	AI_HOLOGRAM_RATVAR = 'icons/mob/silicon/ai.dmi',
-	AI_HOLOGRAM_XENO = 'icons/mob/nonhuman-player/alien.dmi',
+	AI_HOLOGRAM_DEFAULT = '../assets/icons/mob/silicon/ai.dmi',
+	AI_HOLOGRAM_FACE = '../assets/icons/mob/silicon/ai.dmi',
+	AI_HOLOGRAM_NARSIE = '../assets/icons/mob/silicon/ai.dmi',
+	AI_HOLOGRAM_RATVAR = '../assets/icons/mob/silicon/ai.dmi',
+	AI_HOLOGRAM_XENO = '../assets/icons/mob/nonhuman-player/alien.dmi',
 ))
 
 // New items need to also be added to ai_hologram_icons list

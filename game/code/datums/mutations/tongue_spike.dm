@@ -12,7 +12,7 @@
 /datum/action/cooldown/spell/tongue_spike
 	name = "Launch spike"
 	desc = "Shoot your tongue out in the direction you're facing, embedding it and dealing damage until they remove it."
-	button_icon = 'icons/mob/actions/actions_genetic.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_genetic.dmi'
 	button_icon_state = "spike"
 
 	cooldown_time = 1 SECONDS
@@ -43,7 +43,7 @@
 /obj/item/hardened_spike
 	name = "biomass spike"
 	desc = "Hardened biomass, shaped into a spike. Very pointy!"
-	icon = 'icons/obj/weapons/thrown.dmi'
+	icon = '../assets/icons/obj/weapons/thrown.dmi'
 	icon_state = "tonguespike"
 	icon_angle = 45
 	force = 2
@@ -147,7 +147,7 @@
 	name = "Transfer Chemicals"
 	desc = "Send all of your reagents into whomever the chem spike is embedded in. One use."
 	background_icon_state = "bg_spell"
-	button_icon = 'icons/mob/actions/actions_genetic.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_genetic.dmi'
 	button_icon_state = "spikechemswap"
 	check_flags = AB_CHECK_CONSCIOUS
 

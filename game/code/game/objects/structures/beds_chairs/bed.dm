@@ -11,7 +11,7 @@
 	name = "bed"
 	desc = "This is used to lie in, sleep in or strap on."
 	icon_state = "bed"
-	icon = 'icons/obj/bed.dmi'
+	icon = '../assets/icons/obj/bed.dmi'
 	anchored = TRUE
 	can_buckle = TRUE
 	buckle_lying = 90
@@ -115,7 +115,7 @@
 /// Medical beds
 /obj/structure/bed/medical
 	name = "medical bed"
-	icon = 'icons/obj/medical/medical_bed.dmi'
+	icon = '../assets/icons/obj/medical/medical_bed.dmi'
 	desc = "A medical bed with wheels for assisted patient movement or medbay racing tournaments."
 	icon_state = "med_down"
 	base_icon_state = "med"
@@ -248,11 +248,11 @@
 /obj/item/emergency_bed
 	name = "roller bed"
 	desc = "A collapsed medical bed that can be carried around."
-	icon = 'icons/obj/medical/medical_bed.dmi'
+	icon = '../assets/icons/obj/medical/medical_bed.dmi'
 	icon_state = "emerg_folded"
 	inhand_icon_state = "emergencybed"
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/medical_righthand.dmi'
 	w_class = WEIGHT_CLASS_NORMAL // No more excuses, stop getting blood everywhere
 
 /obj/item/emergency_bed/attackby(obj/item/item, mob/living/user, list/modifiers, list/attack_modifiers)

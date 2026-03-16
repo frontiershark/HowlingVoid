@@ -45,14 +45,14 @@
 	desc = "Scan an enemy, to get their location and rebuke them, increasing their time between attacks."
 	background_icon_state = "bg_clock"
 	overlay_icon_state = "bg_clock_border"
-	button_icon = 'icons/mob/actions/actions_items.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_items.dmi'
 	button_icon_state = "scan"
 	school = SCHOOL_HOLY
 	cooldown_time = 35 SECONDS
 	spell_requirements = SPELL_REQUIRES_NO_ANTIMAGIC
 	antimagic_flags = MAGIC_RESISTANCE_MIND //Even god cannot penetrate the tin foil hat
 
-	ranged_mousepointer = 'icons/effects/mouse_pointers/scan_target.dmi'
+	ranged_mousepointer = '../assets/icons/effects/mouse_pointers/scan_target.dmi'
 
 /datum/action/cooldown/spell/pointed/scan/is_valid_target(atom/cast_on)
 	if(!isliving(cast_on))
@@ -89,7 +89,7 @@
 
 	healthscan(living_owner, living_scanned, 1, TRUE)
 
-	owner.playsound_local(get_turf(owner), 'sound/effects/magic/smoke.ogg', 50, TRUE)
+	owner.playsound_local(get_turf(owner), '../assets/sound/effects/magic/smoke.ogg', 50, TRUE)
 	owner.balloon_alert(owner, "[living_scanned] scanned")
 	addtimer(CALLBACK(src, PROC_REF(send_cooldown_end_message), cooldown_time))
 

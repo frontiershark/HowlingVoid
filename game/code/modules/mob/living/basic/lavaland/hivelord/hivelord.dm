@@ -2,7 +2,7 @@
 /mob/living/basic/mining/hivelord
 	name = "hivelord"
 	desc = "A levitating swarm of tiny creatures which act as a single individual. When threatened or hunting they rapidly replicate additional short-lived bodies."
-	icon = 'icons/mob/simple/lavaland/lavaland_monsters.dmi'
+	icon = '../assets/icons/mob/simple/lavaland/lavaland_monsters.dmi'
 	icon_state = "hivelord"
 	icon_living = "hivelord"
 	// icon_aggro = "hivelord_alert"
@@ -17,7 +17,7 @@
 	attack_verb_continuous = "weakly tackles"
 	attack_verb_simple = "weakly tackle"
 	speak_emote = list("telepathically cries")
-	attack_sound = 'sound/items/weapons/pierce.ogg'
+	attack_sound = '../assets/sound/items/weapons/pierce.ogg'
 	throw_blocked_message = "passes between the bodies of the"
 	obj_damage = 0
 	pass_flags = PASSTABLE
@@ -70,7 +70,7 @@
 /mob/living/basic/hivelord_brood
 	name = "hivelord brood"
 	desc = "Short-lived attack form of the hivelord. One isn't much of a threat, but..."
-	icon = 'icons/mob/simple/lavaland/lavaland_monsters.dmi'
+	icon = '../assets/icons/mob/simple/lavaland/lavaland_monsters.dmi'
 	icon_state = "hivelord_brood"
 	icon_living = "hivelord_brood"
 	icon_dead = "hivelord_brood"
@@ -93,7 +93,7 @@
 	attack_verb_continuous = "bites"
 	attack_verb_simple = "bite"
 	speak_emote = list("telepathically cries")
-	attack_sound = 'sound/items/weapons/bite.ogg'
+	attack_sound = '../assets/sound/items/weapons/bite.ogg'
 	attack_vis_effect = ATTACK_EFFECT_BITE
 	obj_damage = 0
 	density = FALSE

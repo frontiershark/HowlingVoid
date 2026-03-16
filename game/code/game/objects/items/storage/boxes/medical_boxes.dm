@@ -141,14 +141,14 @@
 /obj/item/storage/box/bandages
 	name = "box of bandages"
 	desc = "A box of DeForest brand gel bandages designed to treat blunt-force trauma."
-	icon = 'icons/obj/storage/box.dmi' // NOVA EDIT CHANGE
+	icon = '../assets/icons/obj/storage/box.dmi' // NOVA EDIT CHANGE
 	icon_state = "brutebox"
 	base_icon_state = "brutebox"
 	inhand_icon_state = "brutebox"
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
-	drop_sound = 'sound/items/handling/matchbox_drop.ogg'
-	pickup_sound = 'sound/items/handling/matchbox_pickup.ogg'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/medical_righthand.dmi'
+	drop_sound = '../assets/sound/items/handling/matchbox_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/matchbox_pickup.ogg'
 	illustration = null
 	w_class = WEIGHT_CLASS_SMALL
 	custom_price = PAYCHECK_CREW * 1.75
@@ -287,13 +287,13 @@
 	desc = "A stack of triage cards for quickly assessing the severity of a patient's condition."
 	icon_state = ""
 	bin_overlay_string = ""
-	lefthand_file = 'icons/mob/inhands/items_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items_righthand.dmi'
 	inhand_icon_state = "paper"
 	resistance_flags = FLAMMABLE
 	w_class = WEIGHT_CLASS_SMALL
-	drop_sound = 'sound/items/handling/paper_drop.ogg'
-	pickup_sound = 'sound/items/handling/paper_pickup.ogg'
+	drop_sound = '../assets/sound/items/handling/paper_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/paper_pickup.ogg'
 	total_paper = 20
 
 /obj/item/paper_bin/triage/fire_act(exposed_temperature, exposed_volume)

@@ -16,7 +16,7 @@
 /mob/living/basic/drone
 	name = "Drone"
 	desc = "A maintenance drone, an expendable robot built to perform station repairs."
-	icon = 'icons/mob/silicon/drone.dmi'
+	icon = '../assets/icons/mob/silicon/drone.dmi'
 	icon_state = "drone_maint_grey"
 	icon_living = "drone_maint_grey"
 	icon_dead = "drone_maint_dead"
@@ -207,7 +207,7 @@
 	dust()
 
 /mob/living/basic/drone/get_butt_sprite()
-	return icon('icons/mob/butts.dmi', BUTT_SPRITE_DRONE)
+	return icon('../assets/icons/mob/butts.dmi', BUTT_SPRITE_DRONE)
 
 /mob/living/basic/drone/examine(mob/user)
 	. = list()

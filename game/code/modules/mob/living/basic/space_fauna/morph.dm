@@ -4,7 +4,7 @@
 	real_name = "morph"
 	desc = "A revolting, pulsating pile of flesh."
 	speak_emote = list("gurgles")
-	icon = 'icons/mob/simple/animal.dmi'
+	icon = '../assets/icons/mob/simple/animal.dmi'
 	icon_state = "morph"
 	icon_living = "morph"
 	icon_dead = "morph_dead"
@@ -30,7 +30,7 @@
 
 	attack_verb_continuous = "glomps"
 	attack_verb_simple = "glomp"
-	attack_sound = 'sound/effects/blob/blobattack.ogg'
+	attack_sound = '../assets/sound/effects/blob/blobattack.ogg'
 	attack_vis_effect = ATTACK_EFFECT_BITE //nom nom nom
 	butcher_results = list(/obj/item/food/meat/slab = 2)
 

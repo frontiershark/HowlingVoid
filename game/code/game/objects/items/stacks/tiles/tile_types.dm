@@ -7,9 +7,9 @@
 	name = "broken tile"
 	singular_name = "broken tile"
 	desc = "A broken tile. This should not exist."
-	lefthand_file = 'icons/mob/inhands/items/tiles_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/tiles_righthand.dmi'
-	icon = 'icons/obj/tiles.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/tiles_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/tiles_righthand.dmi'
+	icon = '../assets/icons/obj/tiles.dmi'
 	w_class = WEIGHT_CLASS_NORMAL
 	force = 1
 	throwforce = 1
@@ -83,7 +83,7 @@
 		return
 	target_plating = target_plating.place_on_top(placed_turf_path, flags = CHANGETURF_INHERIT_AIR)
 	target_plating.setDir(turf_dir)
-	playsound(target_plating, 'sound/items/weapons/genhit.ogg', 50, TRUE)
+	playsound(target_plating, '../assets/sound/items/weapons/genhit.ogg', 50, TRUE)
 	return target_plating
 
 /obj/item/stack/tile/handle_openspace_click(turf/target, mob/user, list/modifiers)

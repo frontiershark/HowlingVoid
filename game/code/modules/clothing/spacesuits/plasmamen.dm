@@ -73,8 +73,8 @@
 /obj/item/clothing/head/helmet/space/plasmaman
 	name = "plasma envirosuit helmet"
 	desc = "A special containment helmet that allows plasma-based lifeforms to exist safely in an oxygenated environment. It is space-worthy, and may be worn in tandem with other EVA gear."
-	icon = 'icons/obj/clothing/head/plasmaman_hats.dmi'
-	worn_icon = 'icons/mob/clothing/head/plasmaman_head.dmi'
+	icon = '../assets/icons/obj/clothing/head/plasmaman_hats.dmi'
+	worn_icon = '../assets/icons/mob/clothing/head/plasmaman_head.dmi'
 	clothing_flags = STOPSPRESSUREDAMAGE | THICKMATERIAL | SNUG_FIT | STACKABLE_HELMET_EXEMPT | PLASMAMAN_PREVENT_IGNITION | HEADINTERNALS
 	icon_state = "plasmaman-helm"
 	inhand_icon_state = "plasmaman-helm"
@@ -181,12 +181,12 @@
 /obj/item/clothing/head/helmet/space/plasmaman/worn_overlays(mutable_appearance/standing, isinhands)
 	. = ..()
 	if(!isinhands && !up)
-		. += mutable_appearance('icons/mob/clothing/head/plasmaman_head.dmi', visor_icon)
+		. += mutable_appearance('../assets/icons/mob/clothing/head/plasmaman_head.dmi', visor_icon)
 
 /obj/item/clothing/head/helmet/space/plasmaman/separate_worn_overlays(mutable_appearance/standing, mutable_appearance/draw_target, isinhands = FALSE, icon_file, mutant_styles) // NOVA EDIT CHANGE - ORIGINAL: separate_worn_overlays(mutable_appearance/standing, mutable_appearance/draw_target, isinhands = FALSE, icon_file)
 	. = ..()
 	if(!isinhands && smile)
-		var/mutable_appearance/smiley = mutable_appearance('icons/mob/clothing/head/plasmaman_head.dmi', smile_state)
+		var/mutable_appearance/smiley = mutable_appearance('../assets/icons/mob/clothing/head/plasmaman_head.dmi', smile_state)
 		smiley.color = smile_color
 		. += smiley
 

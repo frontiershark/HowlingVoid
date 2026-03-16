@@ -12,7 +12,7 @@
 	force = 4
 	custom_materials = list(/datum/material/iron=SHEET_MATERIAL_AMOUNT)
 	clumsy_check = FALSE
-	fire_sound = 'sound/items/syringeproj.ogg'
+	fire_sound = '../assets/sound/items/syringeproj.ogg'
 	var/time_per_syringe = 250
 	var/syringes_left = 4
 	var/max_syringes = 4

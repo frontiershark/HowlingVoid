@@ -3,9 +3,9 @@
 
 /datum/atom_skin/plant_bag/original
 	preview_name = "Original"
-	new_icon = 'icons/obj/service/hydroponics/equipment.dmi'
+	new_icon = '../assets/icons/obj/service/hydroponics/equipment.dmi'
 	new_icon_state = "plantbag"
-	new_worn_icon = 'icons/mob/clothing/belt.dmi'
+	new_worn_icon = '../assets/icons/mob/clothing/belt.dmi'
 
 /datum/atom_skin/plant_bag/linen
 	preview_name = "Linen"

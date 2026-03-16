@@ -32,7 +32,7 @@ Regenerative extracts:
 	user.do_attack_animation(interacting_with)
 	H.revive(HEAL_ALL & ~HEAL_REFRESH_ORGANS)
 	core_effect(H, user)
-	playsound(H, 'sound/effects/splat.ogg', 40, TRUE)
+	playsound(H, '../assets/sound/effects/splat.ogg', 40, TRUE)
 	qdel(src)
 	return ITEM_INTERACT_SUCCESS
 
@@ -225,7 +225,7 @@ Regenerative extracts:
 /obj/item/slimecross/regenerative/gold/core_effect(mob/living/target, mob/user)
 	var/newcoin = get_random_coin()
 	var/obj/item/coin/C = new newcoin(target.loc)
-	playsound(C, 'sound/items/coinflip.ogg', 50, TRUE)
+	playsound(C, '../assets/sound/items/coinflip.ogg', 50, TRUE)
 	target.put_in_hand(C)
 
 /obj/item/slimecross/regenerative/oil
@@ -233,7 +233,7 @@ Regenerative extracts:
 	effect_desc = "Fully heals the target and flashes everyone in sight."
 
 /obj/item/slimecross/regenerative/oil/core_effect(mob/living/target, mob/user)
-	playsound(src, 'sound/items/weapons/flash.ogg', 100, TRUE)
+	playsound(src, '../assets/sound/items/weapons/flash.ogg', 100, TRUE)
 	for(var/mob/living/L in view(user,7))
 		L.flash_act()
 

@@ -3,7 +3,7 @@ GLOBAL_DATUM(cargo_sloth, /mob/living/basic/sloth)
 /mob/living/basic/sloth
 	name = "sloth"
 	desc = "An adorable, sleepy creature."
-	icon = 'icons/mob/simple/pets.dmi'
+	icon = '../assets/icons/mob/simple/pets.dmi'
 	icon_state = "sloth"
 	icon_living = "sloth"
 	icon_dead = "sloth_dead"
@@ -22,7 +22,7 @@ GLOBAL_DATUM(cargo_sloth, /mob/living/basic/sloth)
 
 	attack_verb_continuous = "bites"
 	attack_verb_simple = "bite"
-	attack_sound = 'sound/items/weapons/bite.ogg'
+	attack_sound = '../assets/sound/items/weapons/bite.ogg'
 	attack_vis_effect = ATTACK_EFFECT_BITE
 
 	mob_biotypes = MOB_ORGANIC|MOB_BEAST

@@ -3,8 +3,8 @@
 	desc = "A small device with a keyboard attached. Anything entered on the keyboard is played out the speaker. \n<span class='notice'>Ctrl-click the device to make it beep.</span> \n<span class='notice'>Ctrl-shift-click to name the device."
 	icon = 'modular_nova/modules/modular_items/icons/remote.dmi'
 	icon_state = "tts_device"
-	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/devices_righthand.dmi'
 	w_class = WEIGHT_CLASS_SMALL
 	obj_flags = UNIQUE_RENAME
 
@@ -31,13 +31,13 @@
 	var/noisechoice = tgui_input_list(user, "What noise would you like to make?", "Robot Noises", list("Beep","Buzz","Ping"))
 	if(noisechoice == "Beep")
 		user.audible_message("makes their TTS beep!", audible_message_flags = EMOTE_MESSAGE)
-		playsound(user, 'sound/machines/beep/twobeep.ogg', 50, 1, -1)
+		playsound(user, '../assets/sound/machines/beep/twobeep.ogg', 50, 1, -1)
 	if(noisechoice == "Buzz")
 		user.audible_message("makes their TTS buzz!", audible_message_flags = EMOTE_MESSAGE)
-		playsound(user, 'sound/machines/buzz/buzz-sigh.ogg', 50, 1, -1)
+		playsound(user, '../assets/sound/machines/buzz/buzz-sigh.ogg', 50, 1, -1)
 	if(noisechoice == "Ping")
 		user.audible_message("makes their TTS ping!", audible_message_flags = EMOTE_MESSAGE)
-		playsound(user, 'sound/machines/ping.ogg', 50, 1, -1)
+		playsound(user, '../assets/sound/machines/ping.ogg', 50, 1, -1)
 	if(!noisechoice)
 		return CLICK_ACTION_BLOCKING
 	return CLICK_ACTION_SUCCESS

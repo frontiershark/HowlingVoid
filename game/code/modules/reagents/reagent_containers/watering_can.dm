@@ -1,11 +1,11 @@
 /obj/item/reagent_containers/cup/watering_can
 	name = "watering can"
 	desc = "It's a watering can. It is scientifically proved that using a watering can to simulate rain increases plant happiness!"
-	icon = 'icons/obj/service/hydroponics/equipment.dmi'
+	icon = '../assets/icons/obj/service/hydroponics/equipment.dmi'
 	icon_state = "watering_can"
 	inhand_icon_state = "watering_can"
-	lefthand_file = 'icons/mob/inhands/equipment/hydroponics_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/hydroponics_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/hydroponics_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/hydroponics_righthand.dmi'
 	custom_materials = list(/datum/material/iron =SMALL_MATERIAL_AMOUNT * 2)
 	w_class = WEIGHT_CLASS_NORMAL
 	volume = 100

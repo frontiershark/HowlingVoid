@@ -6,7 +6,7 @@
 /obj/item/keycard
 	name = "security keycard"
 	desc = "This feels like it belongs to a door."
-	icon = 'icons/obj/fluff/puzzle_small.dmi'
+	icon = '../assets/icons/obj/fluff/puzzle_small.dmi'
 	icon_state = "keycard"
 	force = 0
 	throwforce = 0
@@ -39,7 +39,7 @@
 /obj/machinery/door/puzzle
 	name = "locked door"
 	desc = "This door only opens under certain conditions. It looks virtually indestructible."
-	icon = 'icons/obj/doors/puzzledoor/default.dmi'
+	icon = '../assets/icons/obj/doors/puzzledoor/default.dmi'
 	icon_state = "door_closed"
 	explosion_block = 3
 	heat_proof = TRUE
@@ -153,7 +153,7 @@
 /obj/structure/holobox
 	name = "holobox"
 	desc = "A hard-light box, containing a secure decryption key."
-	icon = 'icons/obj/fluff/puzzle_small.dmi'
+	icon = '../assets/icons/obj/fluff/puzzle_small.dmi'
 	icon_state = "laserbox"
 	density = TRUE
 	resistance_flags = INDESTRUCTIBLE | FIRE_PROOF | ACID_PROOF | LAVA_PROOF
@@ -162,7 +162,7 @@
 /obj/item/pressure_plate/hologrid
 	name = "hologrid"
 	desc = "A high power, electronic input port for a holobox, which can unlock the hologrid's storage compartment. Safe to stand on."
-	icon = 'icons/obj/fluff/puzzle_small.dmi'
+	icon = '../assets/icons/obj/fluff/puzzle_small.dmi'
 	icon_state = "lasergrid"
 	anchored = TRUE
 	trigger_mob = FALSE
@@ -210,7 +210,7 @@
 /obj/structure/light_puzzle
 	name = "light mechanism"
 	desc = "It's a mechanism that seems to power something when all the lights are lit up. It looks virtually indestructible."
-	icon = 'icons/obj/fluff/puzzle_small.dmi'
+	icon = '../assets/icons/obj/fluff/puzzle_small.dmi'
 	icon_state = "light_puzzle"
 	anchored = TRUE
 	explosion_block = 3
@@ -262,8 +262,8 @@
 	for(var/i in 1 to 9)
 		if(!light_list[i])
 			continue
-		var/mutable_appearance/lit_image = mutable_appearance('icons/obj/fluff/puzzle_small.dmi', "light_lit")
-		var/mutable_appearance/emissive_image = emissive_appearance('icons/obj/fluff/puzzle_small.dmi', "light_lit", src)
+		var/mutable_appearance/lit_image = mutable_appearance('../assets/icons/obj/fluff/puzzle_small.dmi', "light_lit")
+		var/mutable_appearance/emissive_image = emissive_appearance('../assets/icons/obj/fluff/puzzle_small.dmi', "light_lit", src)
 		lit_image.pixel_w = 8 * ((i % 3 || 3 ) - 1)
 		lit_image.pixel_z = -8 * (ROUND_UP(i / 3) - 1)
 		emissive_image.pixel_w = lit_image.pixel_w
@@ -283,7 +283,7 @@
 	y_clicked = (-(ROUND_UP((y_clicked - 4) / 8) - 4) - 1) * 3
 	light_clicked = x_clicked + y_clicked
 	switch_light(light_clicked)
-	playsound(src, 'sound/machines/click.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/machines/click.ogg', 50, TRUE)
 
 /obj/structure/light_puzzle/proc/switch_light(light)
 	var/list/updating_lights = list()
@@ -305,7 +305,7 @@
 	visible_message(span_boldnotice("[src] becomes fully charged!"))
 	powered = TRUE
 	SEND_SIGNAL(src, COMSIG_PUZZLE_COMPLETED)
-	playsound(src, 'sound/machines/synth/synth_yes.ogg', 100, TRUE)
+	playsound(src, '../assets/sound/machines/synth/synth_yes.ogg', 100, TRUE)
 
 //
 // literally just buttons
@@ -313,7 +313,7 @@
 
 /obj/machinery/puzzle
 	name = "abstract puzzle gizmo"
-	icon = 'icons/obj/machines/wallmounts.dmi'
+	icon = '../assets/icons/obj/machines/wallmounts.dmi'
 	resistance_flags = INDESTRUCTIBLE | FIRE_PROOF | ACID_PROOF | LAVA_PROOF
 	/// have we been pressed already?
 	var/used = FALSE
@@ -350,7 +350,7 @@
 /obj/machinery/puzzle/button
 	name = "control panel"
 	desc = "A panel that controls something nearby. I'm sure it being covered in hazard stripes is fine."
-	icon = 'icons/obj/machines/wallmounts.dmi'
+	icon = '../assets/icons/obj/machines/wallmounts.dmi'
 	icon_state = "lockdown0"
 	base_icon_state = "lockdown"
 
@@ -363,7 +363,7 @@
 	used = single_use
 	update_icon_state()
 	visible_message(span_notice("[user] presses a button on [src]."), span_notice("You press a button on [src]."))
-	playsound(src, 'sound/machines/terminal/terminal_button07.ogg', 45, TRUE)
+	playsound(src, '../assets/sound/machines/terminal/terminal_button07.ogg', 45, TRUE)
 	on_puzzle_complete()
 
 MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/puzzle/button, 32)
@@ -381,12 +381,12 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/puzzle/button, 32)
 	var/obj/item/keycard/key = attacking_item
 	var/correct_card = key.puzzle_id == id
 	balloon_alert_to_viewers("[correct_card ? "correct" : "incorrect"] card swiped[correct_card ? "" : "!"]")
-	playsound(src, 'sound/machines/card_slide.ogg', 45, TRUE)
+	playsound(src, '../assets/sound/machines/card_slide.ogg', 45, TRUE)
 	if(!correct_card)
 		return
 	used = TRUE
 	update_icon_state()
-	playsound(src, 'sound/machines/beep/beep.ogg', 45, TRUE)
+	playsound(src, '../assets/sound/machines/beep/beep.ogg', 45, TRUE)
 	on_puzzle_complete()
 
 MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/puzzle/keycardpad, 32)
@@ -419,11 +419,11 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/puzzle/keycardpad, 32)
 	var/correct = pass_input == password
 	balloon_alert_to_viewers("[correct ? "correct" : "wrong"] password[correct ? "" : "!"]")
 	if(!correct)
-		playsound(src, 'sound/machines/buzz/buzz-sigh.ogg', 45, TRUE)
+		playsound(src, '../assets/sound/machines/buzz/buzz-sigh.ogg', 45, TRUE)
 		return
 	used = single_use
 	update_icon_state()
-	playsound(src, 'sound/machines/terminal/terminal_button07.ogg', 45, TRUE)
+	playsound(src, '../assets/sound/machines/terminal/terminal_button07.ogg', 45, TRUE)
 	on_puzzle_complete()
 
 MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/puzzle/password, 32)
@@ -472,7 +472,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/puzzle/password/pin, 32)
 /obj/structure/puzzle_blockade
 	name = "shield gate"
 	desc = "A wall of solid light, likely defending something important. Virtually indestructible, must be a way around, or to disable it."
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	icon_state = "wave2"
 	resistance_flags = INDESTRUCTIBLE | FIRE_PROOF | ACID_PROOF | LAVA_PROOF
 	move_resist = MOVE_FORCE_OVERPOWERING
@@ -503,7 +503,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/puzzle/password/pin, 32)
 /obj/structure/puzzle_blockade/oneway
 	name = "one-way gate"
 	desc = "A wall of solid light, likely defending something important. Virtually indestructible."
-	icon = 'icons/obj/structures.dmi'
+	icon = '../assets/icons/obj/structures.dmi'
 	icon_state = "oneway"
 	base_icon_state = "oneway"
 	light_color = COLOR_BIOLUMINESCENCE_BLUE
@@ -527,7 +527,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/puzzle/password/pin, 32)
 /obj/effect/puzzle_poddoor_open
 	name = "puzzle-poddoor relay"
 	desc = "Activates pod doors if activated with a puzzle signal."
-	icon = 'icons/effects/mapping_helpers.dmi'
+	icon = '../assets/icons/effects/mapping_helpers.dmi'
 	icon_state = ""
 	anchored = TRUE
 	invisibility = INVISIBILITY_MAXIMUM
@@ -569,7 +569,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/puzzle/password/pin, 32)
 /obj/effect/decal/puzzle_dots
 	name = "dotted board"
 	desc = "A board filled with colored dots. What could this mean?"
-	icon = 'icons/obj/fluff/puzzle_small.dmi'
+	icon = '../assets/icons/obj/fluff/puzzle_small.dmi'
 	icon_state = "puzzle_dots"
 	layer = ABOVE_NORMAL_TURF_LAYER
 	plane = GAME_PLANE //visible over walls

@@ -1,7 +1,7 @@
 /obj/item/laser_pointer
 	name = "laser pointer"
 	desc = "Don't shine it in your eyes!"
-	icon = 'icons/obj/service/bureaucracy.dmi'
+	icon = '../assets/icons/obj/service/bureaucracy.dmi'
 	icon_state = "pointer"
 	inhand_icon_state = "pen"
 	worn_icon_state = "pen"
@@ -99,7 +99,7 @@
 		var/obj/item/stock_parts/attack_diode = attack_item
 		if(crystal_lens && attack_diode.rating < 3) //only tier 3 and up are small enough to fit
 			to_chat(user, span_warning("You try to jam \the [attack_item.name] in place, but \the [crystal_lens.name] is in the way!"))
-			playsound(src, 'sound/machines/airlock/airlock_alien_prying.ogg', 20)
+			playsound(src, '../assets/sound/machines/airlock/airlock_alien_prying.ogg', 20)
 			if(do_after(user, 2 SECONDS, src))
 				var/atom/atom_to_teleport = pick(user, attack_item)
 				if(atom_to_teleport == user)
@@ -108,12 +108,12 @@
 				else if(atom_to_teleport == attack_item)
 					attack_item.forceMove(drop_location())
 					to_chat(user, span_warning("You jam \the [attack_item.name] in too hard and break \the [crystal_lens.name] inside, teleporting \the [attack_item.name] away!"))
-				do_teleport(atom_to_teleport, get_turf(src), crystal_lens.blink_range, asoundin = 'sound/effects/phasein.ogg', channel = TELEPORT_CHANNEL_BLUESPACE)
+				do_teleport(atom_to_teleport, get_turf(src), crystal_lens.blink_range, asoundin = '../assets/sound/effects/phasein.ogg', channel = TELEPORT_CHANNEL_BLUESPACE)
 				qdel(crystal_lens)
 			return
 		if(!user.transferItemToLoc(attack_item, src))
 			return
-		playsound(src, 'sound/items/tools/screwdriver.ogg', 30)
+		playsound(src, '../assets/sound/items/tools/screwdriver.ogg', 30)
 		diode = attack_item
 		balloon_alert(user, "installed \the [diode.name]")
 		//we have a diode now, try starting a charge sequence in case the pointer was charging when we took out the diode
@@ -129,7 +129,7 @@
 		var/obj/item/stack/ore/bluespace_crystal/crystal_stack = attack_item
 		if(diode && diode.rating < 3) //only lasers of tier 3 and up can house a lens
 			to_chat(user, span_warning("You try to jam \the [crystal_stack.name] in front of the diode, but it's a bad fit!"))
-			playsound(src, 'sound/machines/airlock/airlock_alien_prying.ogg', 20)
+			playsound(src, '../assets/sound/machines/airlock/airlock_alien_prying.ogg', 20)
 			if(do_after(user, 2 SECONDS, src))
 				var/atom/atom_to_teleport = pick(user, src)
 				if(atom_to_teleport == user)
@@ -138,7 +138,7 @@
 				else if(atom_to_teleport == src)
 					forceMove(drop_location())
 					to_chat(user, span_warning("You press on \the [crystal_stack.name] too hard and \the [src] is teleported away!"))
-				do_teleport(atom_to_teleport, get_turf(src), crystal_stack.blink_range, asoundin = 'sound/effects/phasein.ogg', channel = TELEPORT_CHANNEL_BLUESPACE)
+				do_teleport(atom_to_teleport, get_turf(src), crystal_stack.blink_range, asoundin = '../assets/sound/effects/phasein.ogg', channel = TELEPORT_CHANNEL_BLUESPACE)
 				crystal_stack.use_tool(src, user, amount = 1) //use only one if we were installing from a stack of crystals
 			return
 		//the single crystal that we actually install
@@ -147,7 +147,7 @@
 			return
 		single_crystal.forceMove(src)
 		crystal_lens = single_crystal
-		playsound(src, 'sound/items/tools/screwdriver2.ogg', 30)
+		playsound(src, '../assets/sound/items/tools/screwdriver2.ogg', 30)
 		balloon_alert(user, "installed \the [crystal_lens.name]")
 		to_chat(user, span_notice("You install a [crystal_lens.name] in [src]. \
 			It can now be used to shine through obstacles at the cost of double the energy drain."))
@@ -293,7 +293,7 @@
 	icon_state = "pointer_[pointer_icon_state]"
 
 	//setup pointer blip
-	var/mutable_appearance/laser = mutable_appearance('icons/obj/weapons/guns/projectiles.dmi', pointer_icon_state)
+	var/mutable_appearance/laser = mutable_appearance('../assets/icons/obj/weapons/guns/projectiles.dmi', pointer_icon_state)
 	if(modifiers)
 		if(LAZYACCESS(modifiers, ICON_X))
 			laser.pixel_w = (text2num(LAZYACCESS(modifiers, ICON_X)) - 16)

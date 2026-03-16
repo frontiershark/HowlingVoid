@@ -7,11 +7,11 @@
 	name = "circuit board"
 	/// extension that is applied after the initial name AKA (Computer/Machine Board)
 	var/name_extension = null
-	icon = 'icons/obj/devices/circuitry_n_data.dmi'
+	icon = '../assets/icons/obj/devices/circuitry_n_data.dmi'
 	icon_state = "circuit_map"
 	inhand_icon_state = "electronic"
-	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/devices_righthand.dmi'
 	abstract_type = /obj/item/circuitboard
 	custom_materials = list(/datum/material/glass = HALF_SHEET_MATERIAL_AMOUNT)
 	w_class = WEIGHT_CLASS_SMALL

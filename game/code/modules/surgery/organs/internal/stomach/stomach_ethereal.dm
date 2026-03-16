@@ -102,7 +102,7 @@
 	carbon.visible_message(span_danger("[carbon] begins to spark violently!"))
 
 	var/static/mutable_appearance/overcharge //shameless copycode from lightning spell
-	overcharge = overcharge || mutable_appearance('icons/effects/effects.dmi', "electricity", EFFECTS_LAYER)
+	overcharge = overcharge || mutable_appearance('../assets/icons/effects/effects.dmi', "electricity", EFFECTS_LAYER)
 	carbon.add_overlay(overcharge)
 
 	if(do_after(carbon, 5 SECONDS, timed_action_flags = (IGNORE_USER_LOC_CHANGE|IGNORE_HELD_ITEM|IGNORE_INCAPACITATED)))
@@ -112,7 +112,7 @@
 				//fixed_mut_color is also ethereal color (for some reason)
 				carbon.flash_lighting_fx(5, 7, human.dna.species.fixed_mut_color ? human.dna.species.fixed_mut_color : human.dna.features[FEATURE_MUTANT_COLOR])
 
-		playsound(carbon, 'sound/effects/magic/lightningshock.ogg', 100, TRUE, extrarange = 5)
+		playsound(carbon, '../assets/sound/effects/magic/lightningshock.ogg', 100, TRUE, extrarange = 5)
 		carbon.cut_overlay(overcharge)
 		// Only a small amount of the energy gets discharged as the zap. The rest dissipates as heat. Keeps the damage and energy from the zap the same regardless of what STANDARD_CELL_CHARGE is.
 		var/discharged_energy = -adjust_charge(ETHEREAL_CHARGE_FULL - cell.charge()) * min(7500 / STANDARD_CELL_CHARGE, 1)
@@ -122,6 +122,6 @@
 		if(prob(10)) //chance of developing heart disease to dissuade overcharging oneself
 			carbon.apply_status_effect(/datum/status_effect/heart_attack)
 			to_chat(carbon, span_userdanger("You're pretty sure you just felt your heart stop for a second there.."))
-			carbon.playsound_local(carbon, 'sound/effects/singlebeat.ogg', 100, 0)
+			carbon.playsound_local(carbon, '../assets/sound/effects/singlebeat.ogg', 100, 0)
 
 		carbon.Paralyze(100)

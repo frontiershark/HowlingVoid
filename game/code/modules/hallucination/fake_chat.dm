@@ -115,7 +115,7 @@
 
 	// Display the message
 	if(!is_radio && !plus_runechat)
-		var/image/speech_overlay = image('icons/mob/effects/talk.dmi', speaker, "default0", layer = ABOVE_MOB_LAYER)
+		var/image/speech_overlay = image('../assets/icons/mob/effects/talk.dmi', speaker, "default0", layer = ABOVE_MOB_LAYER)
 		INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(flick_overlay_global), speech_overlay, list(hallucinator.client), 30)
 
 	if(plus_runechat)

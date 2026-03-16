@@ -8,7 +8,7 @@
 /datum/action/innate/timeout
 	name = "Call foul"
 	desc = "Puts a person in a timeout for a few seconds."
-	button_icon = 'icons/obj/clothing/masks.dmi'
+	button_icon = '../assets/icons/obj/clothing/masks.dmi'
 	button_icon_state = "whistle"
 	click_action = TRUE
 	enable_text = span_cult("You prepare to call a foul on someone...")
@@ -35,7 +35,7 @@
 
 /datum/action/innate/timeout/do_ability(mob/living/clicker, mob/living/carbon/human/target)
 	clicker.say("FOUL BY [target]!", forced = "whistle")
-	playsound(clicker, 'sound/items/whistle/whistle.ogg', 30, FALSE, 4)
+	playsound(clicker, '../assets/sound/items/whistle/whistle.ogg', 30, FALSE, 4)
 
 	new /obj/effect/timestop(get_turf(target), 0, 5 SECONDS, list(clicker), TRUE, TRUE)
 

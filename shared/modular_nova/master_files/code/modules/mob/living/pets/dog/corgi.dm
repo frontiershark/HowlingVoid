@@ -139,14 +139,14 @@
 	var/fire_sound
 	if(harmless)
 		fired_projectile = new /obj/item/ammo_casing/foam_dart(loc)
-		fired_projectile.icon = 'icons/obj/weapons/guns/toy.dmi'
+		fired_projectile.icon = '../assets/icons/obj/weapons/guns/toy.dmi'
 		fired_projectile.icon_state = "foamdart_proj"
-		fire_sound = 'sound/items/syringeproj.ogg'
+		fire_sound = '../assets/sound/items/syringeproj.ogg'
 	else
 		fired_projectile = new /obj/projectile/beam(loc)
-		fired_projectile.icon = 'icons/mob/effects/genetics.dmi'
+		fired_projectile.icon = '../assets/icons/mob/effects/genetics.dmi'
 		fired_projectile.icon_state = "eyelasers"
-		fire_sound = 'sound/items/weapons/taser.ogg'
+		fire_sound = '../assets/sound/items/weapons/taser.ogg'
 
 	playsound(loc, fire_sound, vol = 75, vary = TRUE)
 	fired_projectile.aim_projectile(target, source_turf)

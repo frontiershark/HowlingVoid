@@ -1,7 +1,7 @@
 /obj/vehicle/ridden/wheelchair //ported from Hippiestation (by Jujumatic)
 	name = "wheelchair"
 	desc = "A chair with big wheels. It looks like you can move in this on your own."
-	icon = 'icons/mob/rideables/vehicles.dmi'
+	icon = '../assets/icons/mob/rideables/vehicles.dmi'
 	icon_state = "wheelchair"
 	layer = OBJ_LAYER
 	max_integrity = 100
@@ -162,11 +162,11 @@
 /obj/item/wheelchair
 	name = "wheelchair"
 	desc = "A collapsed wheelchair that can be carried around."
-	icon = 'icons/mob/rideables/vehicles.dmi'
+	icon = '../assets/icons/mob/rideables/vehicles.dmi'
 	icon_state = "wheelchair_folded"
 	inhand_icon_state = "wheelchair_folded"
-	lefthand_file = 'icons/mob/inhands/items_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items_righthand.dmi'
 	w_class = WEIGHT_CLASS_NORMAL
 	force = 8 //Force is same as a chair
 	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 5)
@@ -192,11 +192,11 @@
 /obj/item/wheelchair/gold
 	name = "gold wheelchair"
 	desc = "A collapsed, shiny wheelchair that can be carried around."
-	icon = 'icons/mob/rideables/vehicles.dmi'
+	icon = '../assets/icons/mob/rideables/vehicles.dmi'
 	icon_state = "wheelchair_folded_gold"
 	inhand_icon_state = "wheelchair_folded_gold"
-	lefthand_file = 'icons/mob/inhands/items_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items_righthand.dmi'
 	force = 10
 	custom_materials = list(/datum/material/gold = SHEET_MATERIAL_AMOUNT * 5)
 	unfolded_type = /obj/vehicle/ridden/wheelchair/gold

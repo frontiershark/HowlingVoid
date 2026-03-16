@@ -6,8 +6,8 @@
 	inhand_icon_state = "cawfeeinhand"
 	lefthand_file = 'modular_nova/modules/bridge_assistant/icons/coffeeholder_lefthand.dmi'
 	righthand_file = 'modular_nova/modules/bridge_assistant/icons/coffeeholder_righthand.dmi'
-	drop_sound = 'sound/items/handling/cardboard_box/cardboardbox_drop.ogg'
-	pickup_sound = 'sound/items/handling/cardboard_box/cardboardbox_pickup.ogg'
+	drop_sound = '../assets/sound/items/handling/cardboard_box/cardboardbox_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/cardboard_box/cardboardbox_pickup.ogg'
 	foldable_result = /obj/item/stack/sheet/cardboard
 	storage_type = /datum/storage/box/coffee_tray
 

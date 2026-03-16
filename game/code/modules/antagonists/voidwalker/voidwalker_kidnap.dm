@@ -27,7 +27,7 @@ GLOBAL_LIST_EMPTY(voidwalker_void)
 /obj/effect/wisp_mobile
 	name = "wisp"
 
-	icon = 'icons/obj/weapons/voidwalker_items.dmi'
+	icon = '../assets/icons/obj/weapons/voidwalker_items.dmi'
 	icon_state = "wisp"
 
 	light_system = OVERLAY_LIGHT
@@ -87,7 +87,7 @@ GLOBAL_LIST_EMPTY(voidwalker_void)
 	var/mob/living/driver = locate(/mob/living) in contents
 	if(driver)
 		driver.heal_ordered_damage(heal_per_food, list(BRUTE, BURN, OXY))
-		playsound(src, 'sound/misc/server-ready.ogg', 50, TRUE, -1)
+		playsound(src, '../assets/sound/misc/server-ready.ogg', 50, TRUE, -1)
 
 /obj/effect/wisp_mobile/Exited(atom/movable/gone, direction)
 	. = ..()
@@ -116,7 +116,7 @@ GLOBAL_LIST_EMPTY(voidwalker_void)
 /// we only exist to be eaten by wisps for food 😔👊
 /obj/effect/wisp_food
 	name = "wisp"
-	icon = 'icons/obj/weapons/voidwalker_items.dmi'
+	icon = '../assets/icons/obj/weapons/voidwalker_items.dmi'
 	icon_state = "wisp"
 
 	color = COLOR_YELLOW

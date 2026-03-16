@@ -6,7 +6,7 @@
 	anchored = TRUE
 	density = TRUE
 	icon_state = "blob"
-	icon = 'icons/mob/nonhuman-player/blob.dmi'
+	icon = '../assets/icons/mob/nonhuman-player/blob.dmi'
 	color = rgb(145, 150, 0)
 
 /obj/effect/gluttony/CanAllowThrough(atom/movable/mover, border_dir)//So bullets will fly over and stuff.
@@ -26,16 +26,16 @@
 /obj/item/knife/envy //Envy's knife: Found in the Envy ruin. Attackers take on the appearance of whoever they strike.
 	name = "envy's knife"
 	desc = "Their success will be yours."
-	icon = 'icons/obj/weapons/stabby.dmi'
+	icon = '../assets/icons/obj/weapons/stabby.dmi'
 	icon_state = "envyknife"
 	inhand_icon_state = "envyknife"
-	lefthand_file = 'icons/mob/inhands/equipment/kitchen_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/kitchen_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/kitchen_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/kitchen_righthand.dmi'
 	force = 18
 	throwforce = 10
 	w_class = WEIGHT_CLASS_NORMAL
 	custom_materials = list(/datum/material/bone=SMALL_MATERIAL_AMOUNT)
-	hitsound = 'sound/items/weapons/bladeslice.ogg'
+	hitsound = '../assets/sound/items/weapons/bladeslice.ogg'
 
 /obj/item/knife/envy/afterattack(atom/target, mob/living/carbon/human/user, list/modifiers, list/attack_modifiers)
 	if(!istype(user) || !ishuman(target) || QDELETED(target))

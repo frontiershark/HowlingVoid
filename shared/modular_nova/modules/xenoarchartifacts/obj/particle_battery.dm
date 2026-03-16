@@ -203,14 +203,14 @@
 
 	if(should_refresh)
 		time = clamp(time, 0, inserted_battery?.capacity || time)
-		playsound(src, 'sound/machines/click.ogg', 25, FALSE)
+		playsound(src, '../assets/sound/machines/click.ogg', 25, FALSE)
 		interact(usr)
 		return
 
 	// -------- STARTUP --------
 	if(href_list["startup"])
 		if(inserted_battery?.battery_effect && inserted_battery.stored_charge > 0)
-			playsound(src, 'sound/machines/click.ogg', 25, FALSE)
+			playsound(src, '../assets/sound/machines/click.ogg', 25, FALSE)
 			activated = TRUE
 			timing = FALSE
 			cooldown_to_start = world.time + 10
@@ -222,7 +222,7 @@
 
 	// -------- SHUTDOWN --------
 	else if(href_list["shutdown"])
-		playsound(src, 'sound/machines/click.ogg', 25, FALSE)
+		playsound(src, '../assets/sound/machines/click.ogg', 25, FALSE)
 		shutdown_emission()
 		should_refresh = TRUE
 
@@ -234,7 +234,7 @@
 
 	// -------- EJECT BATTERY --------
 	else if(href_list["ejectbattery"])
-		playsound(src, 'sound/machines/click.ogg', 25, FALSE)
+		playsound(src, '../assets/sound/machines/click.ogg', 25, FALSE)
 		shutdown_emission()
 		inserted_battery.update_icon()
 		inserted_battery.forceMove(src.drop_location())

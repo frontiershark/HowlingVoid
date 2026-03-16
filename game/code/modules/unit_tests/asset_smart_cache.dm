@@ -13,8 +13,8 @@
 		var/imgid = replacetext(replacetext("[item]", "/obj/item/", ""), "/", "-")
 		insert_icon(imgid, get_display_icon_for(item))
 	// Get some coverage on each operation.
-	var/datum/universal_icon/I = uni_icon('icons/effects/effects.dmi', "nothing")
-	I.blend_icon(uni_icon('icons/effects/effects.dmi', "sparks"), ICON_OVERLAY)
+	var/datum/universal_icon/I = uni_icon('../assets/icons/effects/effects.dmi', "nothing")
+	I.blend_icon(uni_icon('../assets/icons/effects/effects.dmi', "sparks"), ICON_OVERLAY)
 	I.blend_color("#ff0000", ICON_MULTIPLY)
 	I.scale(64, 64)
 	I.crop(1, 1, 128, 64) // we'll test for the scale later.

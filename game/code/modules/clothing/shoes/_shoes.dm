@@ -1,13 +1,13 @@
 /obj/item/clothing/shoes
 	name = "shoes"
-	icon = 'icons/obj/clothing/shoes.dmi'
-	lefthand_file = 'icons/mob/inhands/clothing/shoes_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/clothing/shoes_righthand.dmi'
+	icon = '../assets/icons/obj/clothing/shoes.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/clothing/shoes_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/clothing/shoes_righthand.dmi'
 	abstract_type = /obj/item/clothing/shoes
 	desc = "Comfortable-looking shoes."
-	pickup_sound = 'sound/items/handling/shoes/sneakers_pickup1.ogg'
-	drop_sound = 'sound/items/handling/shoes/sneakers_drop1.ogg'
-	equip_sound = 'sound/items/equip/sneakers_equip1.ogg'
+	pickup_sound = '../assets/sound/items/handling/shoes/sneakers_pickup1.ogg'
+	drop_sound = '../assets/sound/items/handling/shoes/sneakers_drop1.ogg'
+	equip_sound = '../assets/sound/items/equip/sneakers_equip1.ogg'
 	sound_vary = TRUE
 	gender = PLURAL //Carn: for grammarically correct text-parsing
 	body_parts_covered = FEET
@@ -48,7 +48,7 @@
 		user.visible_message(span_suicide("[user] is bashing [user.p_their()] own head in with [src]! Ain't that a kick in the head?"))
 		for(var/i in 1 to 3)
 			sleep(0.3 SECONDS)
-			playsound(user, 'sound/items/weapons/genhit2.ogg', 50, TRUE)
+			playsound(user, '../assets/sound/items/weapons/genhit2.ogg', 50, TRUE)
 		return BRUTELOSS
 
 /obj/item/clothing/shoes/worn_overlays(mutable_appearance/standing, isinhands = FALSE, mutant_styles = NONE) // NOVA EDIT CHANGE - ORIGINAL: /obj/item/clothing/shoes/worn_overlays(mutable_appearance/standing, isinhands = FALSE)
@@ -56,7 +56,7 @@
 	if(isinhands)
 		return
 	if(damaged_clothes)
-		. += mutable_appearance('icons/effects/item_damage.dmi', "damagedshoe")
+		. += mutable_appearance('../assets/icons/effects/item_damage.dmi', "damagedshoe")
 
 /obj/item/clothing/shoes/separate_worn_overlays(mutable_appearance/standing, mutable_appearance/draw_target, isinhands = FALSE, icon_file, mutant_styles = NONE) // NOVA EDIT CHANGE - ORIGINAL: /obj/item/clothing/shoes/separate_worn_overlays(mutable_appearance/standing, mutable_appearance/draw_target, isinhands = FALSE, icon_file)
 	. = ..()

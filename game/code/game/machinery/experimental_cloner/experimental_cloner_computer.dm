@@ -123,29 +123,29 @@
 			if (isnull(stored_record))
 				return TRUE
 			stored_record = null
-			playsound(src, 'sound/machines/ping.ogg', vol = 100)
+			playsound(src, '../assets/sound/machines/ping.ogg', vol = 100)
 			return TRUE
 		if ("start_scan")
 			if (isnull(input))
 				balloon_alert(ui.user, "no linked scanner!")
-				playsound(src, 'sound/machines/buzz/buzz-two.ogg', 50, TRUE)
+				playsound(src, '../assets/sound/machines/buzz/buzz-two.ogg', 50, TRUE)
 				return TRUE
 			if (isnull(input.occupant))
 				balloon_alert(ui.user, "scanner empty!")
-				playsound(src, 'sound/machines/buzz/buzz-two.ogg', 50, TRUE)
+				playsound(src, '../assets/sound/machines/buzz/buzz-two.ogg', 50, TRUE)
 				return TRUE
 			if (!iscarbon(input.occupant))
 				balloon_alert(ui.user, "invalid subject!")
-				playsound(src, 'sound/machines/buzz/buzz-two.ogg', 50, TRUE)
+				playsound(src, '../assets/sound/machines/buzz/buzz-two.ogg', 50, TRUE)
 				return TRUE
 			var/mob/living/carbon/carbon_occupant = input.occupant
 			if (!carbon_occupant.has_dna())
 				balloon_alert(ui.user, "invalid subject!")
-				playsound(src, 'sound/machines/buzz/buzz-two.ogg', 50, TRUE)
+				playsound(src, '../assets/sound/machines/buzz/buzz-two.ogg', 50, TRUE)
 				return TRUE
 			if (input.scanning)
 				balloon_alert(ui.user, "scanner busy!")
-				playsound(src, 'sound/machines/buzz/buzz-two.ogg', 50, TRUE)
+				playsound(src, '../assets/sound/machines/buzz/buzz-two.ogg', 50, TRUE)
 				return TRUE
 
 			log_combat(ui.user, input.occupant, "irradiated via experimental clone scan")
@@ -154,15 +154,15 @@
 		if ("start_clone")
 			if (isnull(output))
 				balloon_alert(ui.user, "no linked pod!")
-				playsound(src, 'sound/machines/buzz/buzz-two.ogg', 50, TRUE)
+				playsound(src, '../assets/sound/machines/buzz/buzz-two.ogg', 50, TRUE)
 				return TRUE
 			if (output.running)
 				balloon_alert(ui.user, "pod busy!")
-				playsound(src, 'sound/machines/buzz/buzz-two.ogg', 50, TRUE)
+				playsound(src, '../assets/sound/machines/buzz/buzz-two.ogg', 50, TRUE)
 				return TRUE
 			if (isnull(stored_record))
 				balloon_alert(ui.user, "no stored DNA!")
-				playsound(src, 'sound/machines/buzz/buzz-two.ogg', 50, TRUE)
+				playsound(src, '../assets/sound/machines/buzz/buzz-two.ogg', 50, TRUE)
 				return TRUE
 
 			ui.user.log_message("began growing an experimental clone of [stored_record.name]", LOG_GAME, log_globally = TRUE)

@@ -50,7 +50,7 @@
 			return FALSE
 
 		REMOVE_TRAIT(worm, TRAIT_DEAF, BLOOD_WORM_HOST_TRAIT)
-		playsound(host, 'sound/effects/singlebeat.ogg', vol = 50, vary = TRUE, ignore_walls = FALSE)
+		playsound(host, '../assets/sound/effects/singlebeat.ogg', vol = 50, vary = TRUE, ignore_walls = FALSE)
 		ADD_TRAIT(worm, TRAIT_DEAF, BLOOD_WORM_HOST_TRAIT)
 
 		var/original_transform = host.transform

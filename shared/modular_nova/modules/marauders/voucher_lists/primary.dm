@@ -161,7 +161,7 @@
 /datum/voucher_set/traitor/primary_weapon/desword
 	name = /obj/item/dualsaber::name
 	description = /obj/item/dualsaber::desc
-	icon = 'icons/obj/weapons/transforming_energy.dmi'
+	icon = '../assets/icons/obj/weapons/transforming_energy.dmi'
 	icon_state = "dualsaberred1"
 	set_items = list(
 		/obj/item/dualsaber,

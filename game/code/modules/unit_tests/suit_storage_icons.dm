@@ -40,7 +40,7 @@
 				count++
 			continue
 
-		if(!icon_exists('icons/mob/clothing/belt_mirror.dmi', icon_state))
+		if(!icon_exists('../assets/icons/mob/clothing/belt_mirror.dmi', icon_state))
 			already_warned_icons += icon_state
 			log_test("\t[count] - [item_path] using invalid [worn_icon_state ? "worn_icon_state" : "icon_state"], \"[icon_state]\"")
 			count++

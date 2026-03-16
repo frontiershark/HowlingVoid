@@ -27,12 +27,12 @@
 /obj/item/storage/bag/trash
 	name = "trash bag"
 	desc = "It's the heavy-duty black polymer kind. Time to take out the trash!"
-	icon = 'icons/obj/service/janitor.dmi'
+	icon = '../assets/icons/obj/service/janitor.dmi'
 	icon_state = "trashbag"
 	inhand_icon_state = "trashbag"
 	worn_icon_state = "trashbag"
-	lefthand_file = 'icons/mob/inhands/equipment/custodial_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/custodial_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/custodial_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/custodial_righthand.dmi'
 	storage_type = /datum/storage/bag/trash
 	///If true, can be inserted into the janitor cart
 	var/insertable = TRUE
@@ -59,7 +59,7 @@
 
 /obj/item/storage/bag/trash/suicide_act(mob/living/user)
 	user.visible_message(span_suicide("[user] puts [src] over [user.p_their()] head and starts chomping at the insides! Disgusting!"))
-	playsound(loc, 'sound/items/eatfood.ogg', 50, TRUE, -1)
+	playsound(loc, '../assets/sound/items/eatfood.ogg', 50, TRUE, -1)
 	return TOXLOSS
 
 /obj/item/storage/bag/trash/update_icon_state()
@@ -95,7 +95,7 @@
 /obj/item/storage/bag/ore
 	name = "mining satchel"
 	desc = "This little bugger can be used to store and transport ores."
-	icon = 'icons/obj/mining.dmi'
+	icon = '../assets/icons/obj/mining.dmi'
 	icon_state = "satchel"
 	worn_icon_state = "satchel"
 	slot_flags = ITEM_SLOT_BELT | ITEM_SLOT_POCKETS
@@ -246,7 +246,7 @@
 
 /obj/item/storage/bag/plants
 	name = "plant bag"
-	icon = 'icons/obj/service/hydroponics/equipment.dmi'
+	icon = '../assets/icons/obj/service/hydroponics/equipment.dmi'
 	icon_state = "plantbag"
 	worn_icon_state = "plantbag"
 	resistance_flags = FLAMMABLE
@@ -286,7 +286,7 @@
 /obj/item/storage/bag/sheetsnatcher
 	name = "sheet snatcher"
 	desc = "A patented Nanotrasen storage system designed for any kind of mineral sheet."
-	icon = 'icons/obj/mining.dmi'
+	icon = '../assets/icons/obj/mining.dmi'
 	icon_state = "sheetsnatcher"
 	worn_icon_state = "satchel"
 	storage_type = /datum/storage/bag/sheet_snatcher
@@ -339,7 +339,7 @@
 /obj/item/storage/bag/books
 	name = "book bag"
 	desc = "A bag for books."
-	icon = 'icons/obj/service/library.dmi'
+	icon = '../assets/icons/obj/service/library.dmi'
 	icon_state = "bookbag"
 	worn_icon_state = "bookbag"
 	resistance_flags = FLAMMABLE
@@ -347,7 +347,7 @@
 
 /obj/item/storage/bag/tray
 	name = "serving tray"
-	icon = 'icons/obj/food/containers.dmi'
+	icon = '../assets/icons/obj/food/containers.dmi'
 	icon_state = "tray"
 	worn_icon_state = "tray"
 	desc = "A metal tray to lay food on."
@@ -374,9 +374,9 @@
 		do_scatter(tray_item)
 
 	if(prob(50))
-		playsound(M, 'sound/items/trayhit/trayhit1.ogg', 50, TRUE)
+		playsound(M, '../assets/sound/items/trayhit/trayhit1.ogg', 50, TRUE)
 	else
-		playsound(M, 'sound/items/trayhit/trayhit2.ogg', 50, TRUE)
+		playsound(M, '../assets/sound/items/trayhit/trayhit2.ogg', 50, TRUE)
 
 	if(ishuman(M))
 		if(prob(10))
@@ -418,13 +418,13 @@
 
 /obj/item/storage/bag/tray/cafeteria
 	name = "cafeteria tray"
-	icon = 'icons/obj/food/containers.dmi'
+	icon = '../assets/icons/obj/food/containers.dmi'
 	icon_state = "foodtray"
 	desc = "A cheap metal tray to pile today's meal onto."
 
 /obj/item/storage/bag/chemistry
 	name = "chemistry bag"
-	icon = 'icons/obj/medical/chemical.dmi'
+	icon = '../assets/icons/obj/medical/chemical.dmi'
 	icon_state = "bag"
 	worn_icon_state = "chembag"
 	desc = "A bag for storing pills, patches, and bottles."
@@ -467,7 +467,7 @@
 
 /obj/item/storage/bag/bio
 	name = "bio bag"
-	icon = 'icons/obj/medical/chemical.dmi'
+	icon = '../assets/icons/obj/medical/chemical.dmi'
 	icon_state = "biobag"
 	worn_icon_state = "biobag"
 	desc = "A bag for the safe transportation and disposal of biowaste and other virulent materials."
@@ -476,7 +476,7 @@
 
 /obj/item/storage/bag/xeno
 	name = "science bag"
-	icon = 'icons/obj/medical/chemical.dmi'
+	icon = '../assets/icons/obj/medical/chemical.dmi'
 	icon_state = "xenobag"
 	worn_icon_state = "xenobag"
 	desc = "A bag for the storage and transport of anomalous materials."
@@ -485,7 +485,7 @@
 
 /obj/item/storage/bag/construction
 	name = "construction bag"
-	icon = 'icons/obj/tools.dmi'
+	icon = '../assets/icons/obj/tools.dmi'
 	icon_state = "construction_bag"
 	worn_icon_state = "construction_bag"
 	desc = "A bag for storing small construction components."
@@ -496,7 +496,7 @@
 /obj/item/storage/bag/harpoon_quiver
 	name = "harpoon quiver"
 	desc = "A quiver for holding harpoons."
-	icon = 'icons/obj/weapons/bows/quivers.dmi'
+	icon = '../assets/icons/obj/weapons/bows/quivers.dmi'
 	icon_state = "quiver"
 	inhand_icon_state = null
 	worn_icon_state = "harpoon_quiver"
@@ -508,7 +508,7 @@
 
 /obj/item/storage/bag/rebar_quiver
 	name = "rebar quiver"
-	icon = 'icons/obj/weapons/bows/quivers.dmi'
+	icon = '../assets/icons/obj/weapons/bows/quivers.dmi'
 	icon_state = "rebar_quiver"
 	worn_icon_state = "rebar_quiver"
 	inhand_icon_state = "rebar_quiver"
@@ -575,7 +575,7 @@
 /obj/item/storage/bag/quiver
 	name = "quiver"
 	desc = "Holds arrows for your bow. Good, because while pocketing arrows is possible, it surely can't be pleasant."
-	icon = 'icons/obj/weapons/bows/quivers.dmi'
+	icon = '../assets/icons/obj/weapons/bows/quivers.dmi'
 	icon_state = "quiver"
 	inhand_icon_state = null
 	worn_icon_state = "harpoon_quiver"

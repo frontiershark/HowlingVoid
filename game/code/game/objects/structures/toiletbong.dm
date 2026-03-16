@@ -1,7 +1,7 @@
 /obj/structure/toiletbong
 	name = "toilet bong"
 	desc = "A repurposed toilet with re-arranged piping and an attached flamethrower. Why would anyone build this?"
-	icon = 'icons/obj/watercloset.dmi'
+	icon = '../assets/icons/obj/watercloset.dmi'
 	icon_state = "toiletbong"
 	base_icon_state = "toiletbong"
 	density = FALSE
@@ -15,7 +15,7 @@
 	AddElement(/datum/element/simple_rotation, post_rotation_proccall = PROC_REF(post_rotation))
 	create_storage(storage_type = /datum/storage/toiletbong)
 
-	weed_overlay = mutable_appearance('icons/obj/watercloset.dmi', "[base_icon_state]_overlay")
+	weed_overlay = mutable_appearance('../assets/icons/obj/watercloset.dmi', "[base_icon_state]_overlay")
 	START_PROCESSING(SSobj, src)
 
 /obj/structure/toiletbong/on_craft_completion(list/components, datum/crafting_recipe/current_recipe, atom/crafter)
@@ -55,7 +55,7 @@
 		if (item.resistance_flags & INDESTRUCTIBLE)
 			user.balloon_alert(user, "[item.name] is blocking the pipes!")
 			continue
-		playsound(src, 'sound/items/modsuit/flamethrower.ogg', 50)
+		playsound(src, '../assets/sound/items/modsuit/flamethrower.ogg', 50)
 
 		var/smoke_amount = DIAMOND_AREA(smokeradius)
 		do_chem_smoke(amount = smoke_amount, holder = src, location = loc, carry = reagents, carry_limit = 20, smoke_type = /datum/effect_system/fluid_spread/smoke/chem/smoke_machine)
@@ -85,7 +85,7 @@
 
 ///Called in the simple rotation's post_rotation callback, playing a sound cue to players.
 /obj/structure/toiletbong/proc/post_rotation(mob/user, degrees)
-	playsound(src, 'sound/items/deconstruct.ogg', 50)
+	playsound(src, '../assets/sound/items/deconstruct.ogg', 50)
 
 /obj/structure/toiletbong/crowbar_act(mob/living/user, obj/item/tool)
 	if(anchored)
@@ -106,7 +106,7 @@
 		return FALSE
 	obj_flags |= EMAGGED
 	smokeradius = 2
-	playsound(src, 'sound/effects/fish_splash.ogg', 50)
+	playsound(src, '../assets/sound/effects/fish_splash.ogg', 50)
 	balloon_alert(user, "toilet broke")
 	if (emag_card)
 		to_chat(user, span_boldwarning("The [emag_card] falls into the toilet. You fish it back out. Looks like you broke the toilet."))

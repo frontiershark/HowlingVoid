@@ -7,8 +7,8 @@
 	initial_reagent_flags = OPENCONTAINER | DUNKABLE
 	resistance_flags = ACID_PROOF
 	icon_state = "bottle"
-	lefthand_file = 'icons/mob/inhands/items/drinks_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/drinks_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/drinks_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/drinks_righthand.dmi'
 	reagent_container_liquid_sound = SFX_DEFAULT_LIQUID_SLOSH
 
 	/// Like Edible's food type, what kind of drink is this?
@@ -22,7 +22,7 @@
 	/// What kind of chem transfer method does this cup use. Defaults to INGEST
 	var/reagent_consumption_method = INGEST
 	/// What sound does our consumption play on consuming from the container?
-	var/consumption_sound = 'sound/items/drink.ogg'
+	var/consumption_sound = '../assets/sound/items/drink.ogg'
 	/// Whether to allow heating up the contents with a source of flame.
 	var/heatable = TRUE
 	/// Can we put a lid on this container?
@@ -170,7 +170,7 @@
 			return ITEM_INTERACT_BLOCKING
 
 		if (attach_assembly(tool, user))
-			playsound(src, 'sound/machines/click.ogg', 50, TRUE)
+			playsound(src, '../assets/sound/machines/click.ogg', 50, TRUE)
 			return ITEM_INTERACT_SUCCESS
 		return ITEM_INTERACT_BLOCKING
 
@@ -194,7 +194,7 @@
 		attached_cell.pixel_y = 0
 		attached_cell.pixel_z = -4
 		update_appearance()
-		playsound(src, 'sound/machines/click.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/machines/click.ogg', 50, TRUE)
 		return ITEM_INTERACT_SUCCESS
 
 	if (attached_cell && istype(tool, /obj/item/stack/cable_coil))
@@ -254,7 +254,7 @@
 	if (attached_cell)
 		. += attached_cell
 		if (cell_wired)
-			. += mutable_appearance('icons/obj/machines/cell_charger.dmi', "ccharger-[attached_cell.connector_type]-on")
+			. += mutable_appearance('../assets/icons/obj/machines/cell_charger.dmi', "ccharger-[attached_cell.connector_type]-on")
 
 // For player convinience, assume that the lids are rubber and can be pierced with a syringe
 /obj/item/reagent_containers/cup/is_refillable()
@@ -367,18 +367,18 @@
 /obj/item/reagent_containers/cup/beaker
 	name = "beaker"
 	desc = "A beaker. It can hold up to 60 units." //NOVA EDIT: Used to say can hold up to 50 units.
-	icon = 'icons/obj/medical/chemical.dmi'
+	icon = '../assets/icons/obj/medical/chemical.dmi'
 	icon_state = "beaker"
 	inhand_icon_state = "beaker"
-	lefthand_file = 'icons/mob/inhands/items_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items_righthand.dmi'
 	worn_icon_state = "beaker"
 	custom_materials = list(/datum/material/glass=SMALL_MATERIAL_AMOUNT*5)
 	fill_icon_thresholds = list(0, 1, 20, 40, 60, 80, 100)
 	volume = 60 //NOVA EDIT: Addition
 	possible_transfer_amounts = list(5,10,15,20,30,60) //NOVA EDIT: Addition
-	pickup_sound = 'sound/items/handling/beaker_pickup.ogg'
-	drop_sound = 'sound/items/handling/beaker_place.ogg'
+	pickup_sound = '../assets/sound/items/handling/beaker_pickup.ogg'
+	drop_sound = '../assets/sound/items/handling/beaker_place.ogg'
 	sound_vary = TRUE
 	can_lid = TRUE
 	assembly_pixel_y = 4
@@ -393,7 +393,7 @@
 /obj/item/reagent_containers/cup/beaker/jar
 	name = "honey jar"
 	desc = "A jar for honey. It can hold up to 50 units of sweet delight."
-	icon = 'icons/obj/medical/chemical.dmi'
+	icon = '../assets/icons/obj/medical/chemical.dmi'
 	icon_state = "vapour"
 	can_lid = FALSE
 
@@ -514,12 +514,12 @@
 /obj/item/reagent_containers/cup/bucket
 	name = "bucket"
 	desc = "It's a bucket. You can squeeze a mop's contents into it by using right-click." //NOVA EDIT CHANGE - ORIGINAL: desc = "It's a bucket."
-	icon = 'icons/obj/service/janitor.dmi'
-	worn_icon = 'icons/mob/clothing/head/utility.dmi'
+	icon = '../assets/icons/obj/service/janitor.dmi'
+	worn_icon = '../assets/icons/mob/clothing/head/utility.dmi'
 	icon_state = "bucket"
 	inhand_icon_state = "bucket"
-	lefthand_file = 'icons/mob/inhands/equipment/custodial_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/custodial_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/custodial_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/custodial_righthand.dmi'
 	fill_icon_state = "bucket"
 	fill_icon_thresholds = list(50, 90)
 	custom_materials = list(/datum/material/iron = SMALL_MATERIAL_AMOUNT * 2)
@@ -572,7 +572,7 @@
 			return ITEM_INTERACT_BLOCKING
 		reagents.trans_to(tool, 5, transferred_by = user)
 		user.balloon_alert(user, "doused [tool]")
-		playsound(src, 'sound/effects/slosh.ogg', 25, TRUE)
+		playsound(src, '../assets/sound/effects/slosh.ogg', 25, TRUE)
 		return ITEM_INTERACT_SUCCESS
 	if(isprox(tool)) //This works with wooden buckets for now. Somewhat unintended, but maybe someone will add sprites for it soon(TM)
 		to_chat(user, span_notice("You add [tool] to [src]."))
@@ -603,7 +603,7 @@
 			else
 				reagents.trans_to(tool, 5, transferred_by = user)
 				user.balloon_alert(user, "doused [tool]")
-				playsound(loc, 'sound/effects/slosh.ogg', 25, TRUE)
+				playsound(loc, '../assets/sound/effects/slosh.ogg', 25, TRUE)
 				return ITEM_INTERACT_SUCCESS
 	else if(isprox(tool)) //This works with wooden buckets for now. Somewhat unintended, but maybe someone will add sprites for it soon(TM)
 		to_chat(user, span_notice("You add [tool] to [src]."))
@@ -641,7 +641,7 @@
 	name = "pestle"
 	desc = "An ancient, simple tool used in conjunction with a mortar to grind or juice items."
 	w_class = WEIGHT_CLASS_SMALL
-	icon = 'icons/obj/medical/chemical.dmi'
+	icon = '../assets/icons/obj/medical/chemical.dmi'
 	icon_state = "pestle"
 	force = 7
 	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT)
@@ -679,8 +679,8 @@
 			to_chat(user, span_warning("You are too tired to work!"))
 			return ITEM_INTERACT_BLOCKING
 		var/list/choose_options = list(
-			"Grind" = image(icon = 'icons/hud/radial.dmi', icon_state = "radial_grind"),
-			"Juice" = image(icon = 'icons/hud/radial.dmi', icon_state = "radial_juice")
+			"Grind" = image(icon = '../assets/icons/hud/radial.dmi', icon_state = "radial_grind"),
+			"Juice" = image(icon = '../assets/icons/hud/radial.dmi', icon_state = "radial_juice")
 		)
 		var/picked_option = show_radial_menu(user, src, choose_options, radius = 38, require_near = TRUE)
 		if(!grinded || !in_range(src, user) || !user.is_holding(tool) || !picked_option)

@@ -2,7 +2,7 @@
 /obj/machinery/power/port_gen
 	name = "portable generator"
 	desc = "A portable generator for emergency backup power."
-	icon = 'icons/obj/machines/engine/other.dmi'
+	icon = '../assets/icons/obj/machines/engine/other.dmi'
 	icon_state = "portgen0_0"
 	base_icon_state = "portgen0"
 	density = TRUE
@@ -195,7 +195,7 @@
 				set_anchored(FALSE)
 				to_chat(user, span_notice("You unsecure the generator from the floor."))
 
-			playsound(src, 'sound/items/deconstruct.ogg', 50, TRUE)
+			playsound(src, '../assets/sound/items/deconstruct.ogg', 50, TRUE)
 			return
 		else if(O.tool_behaviour == TOOL_SCREWDRIVER)
 			toggle_panel_open()

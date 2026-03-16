@@ -4,16 +4,16 @@
 	desc = "An expertly modified RCD outfitted to construct plumbing machinery."
 	icon_state = "plumberer2"
 	inhand_icon_state = "plumberer"
-	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/tools_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/tools_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/tools_righthand.dmi'
 	worn_icon_state = "plumbing"
-	icon = 'icons/obj/tools.dmi'
+	icon = '../assets/icons/obj/tools.dmi'
 	slot_flags = ITEM_SLOT_BELT
 	banned_upgrades = RCD_ALL_UPGRADES & ~RCD_UPGRADE_SILO_LINK
 	matter = 200
 	max_matter = 200
-	drop_sound = 'sound/items/handling/tools/rcd_drop.ogg'
-	pickup_sound = 'sound/items/handling/tools/rcd_pickup.ogg'
+	drop_sound = '../assets/sound/items/handling/tools/rcd_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/tools/rcd_pickup.ogg'
 	sound_vary = TRUE
 
 	///category of design selected
@@ -215,7 +215,7 @@
 			balloon_alert(user, "tile is blocked!")
 		return FALSE
 
-	playsound(loc, 'sound/machines/click.ogg', 50, TRUE)
+	playsound(loc, '../assets/sound/machines/click.ogg', 50, TRUE)
 	if(ispath(blueprint, /obj/machinery/duct))
 		new blueprint(destination, GLOB.pipe_paint_colors[current_color], GLOB.plumbing_layers[current_layer])
 	else
@@ -255,7 +255,7 @@
 					balloon_alert(user, "storage full!")
 				matter += to_return
 				machine_target.deconstruct()
-				playsound(src, 'sound/machines/click.ogg', 50, TRUE) //this is just such a great sound effect
+				playsound(src, '../assets/sound/machines/click.ogg', 50, TRUE) //this is just such a great sound effect
 			return ITEM_INTERACT_SUCCESS
 
 	if(!isopenturf(interacting_with))

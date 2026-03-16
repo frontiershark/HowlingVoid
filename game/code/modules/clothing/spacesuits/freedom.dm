@@ -1,8 +1,8 @@
 /obj/item/clothing/head/helmet/space/freedom
 	name = "eagle helmet"
 	desc = "An advanced, space-proof helmet. It appears to be modeled after an old-world eagle."
-	icon = 'icons/obj/clothing/head/costume.dmi'
-	worn_icon = 'icons/mob/clothing/head/costume.dmi'
+	icon = '../assets/icons/obj/clothing/head/costume.dmi'
+	worn_icon = '../assets/icons/mob/clothing/head/costume.dmi'
 	icon_state = "griffinhat"
 	inhand_icon_state = null
 	armor_type = /datum/armor/space_freedom

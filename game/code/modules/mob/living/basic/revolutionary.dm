@@ -3,7 +3,7 @@
 	desc = "They stand for a cause..."
 	mob_biotypes = MOB_ORGANIC|MOB_HUMANOID
 	faction = list(FACTION_HOSTILE)
-	icon = 'icons/mob/simple/simple_human.dmi'
+	icon = '../assets/icons/mob/simple/simple_human.dmi'
 	gender = MALE
 	basic_mob_flags = DEL_ON_DEATH
 	attack_verb_continuous = "robusts"
@@ -13,7 +13,7 @@
 	melee_damage_lower = 15
 	melee_damage_upper = 20
 	obj_damage = 20
-	attack_sound = 'sound/items/weapons/smash.ogg'
+	attack_sound = '../assets/sound/items/weapons/smash.ogg'
 	ai_controller = /datum/ai_controller/basic_controller/revolutionary
 	/// list of weapons we can have
 	var/static/list/possible_weapons = list(
@@ -49,26 +49,26 @@
 	)
 	/// Monkey screeches
 	var/static/list/monkey_screeches = list(
-		'sound/mobs/non-humanoids/monkey/monkey_screech_1.ogg',
-		'sound/mobs/non-humanoids/monkey/monkey_screech_2.ogg',
-		'sound/mobs/non-humanoids/monkey/monkey_screech_3.ogg',
-		'sound/mobs/non-humanoids/monkey/monkey_screech_4.ogg',
+		'../assets/sound/mobs/non-humanoids/monkey/monkey_screech_1.ogg',
+		'../assets/sound/mobs/non-humanoids/monkey/monkey_screech_2.ogg',
+		'../assets/sound/mobs/non-humanoids/monkey/monkey_screech_3.ogg',
+		'../assets/sound/mobs/non-humanoids/monkey/monkey_screech_4.ogg',
 	)
 	/// Male screams
 	var/static/list/male_screams = list(
-		'sound/mobs/humanoids/human/scream/malescream_1.ogg',
-		'sound/mobs/humanoids/human/scream/malescream_2.ogg',
-		'sound/mobs/humanoids/human/scream/malescream_3.ogg',
-		'sound/mobs/humanoids/human/scream/malescream_4.ogg',
-		'sound/mobs/humanoids/human/scream/malescream_5.ogg',
+		'../assets/sound/mobs/humanoids/human/scream/malescream_1.ogg',
+		'../assets/sound/mobs/humanoids/human/scream/malescream_2.ogg',
+		'../assets/sound/mobs/humanoids/human/scream/malescream_3.ogg',
+		'../assets/sound/mobs/humanoids/human/scream/malescream_4.ogg',
+		'../assets/sound/mobs/humanoids/human/scream/malescream_5.ogg',
 	)
 	/// Female screams
 	var/static/list/female_screams = list(
-		'sound/mobs/humanoids/human/scream/femalescream_1.ogg',
-		'sound/mobs/humanoids/human/scream/femalescream_2.ogg',
-		'sound/mobs/humanoids/human/scream/femalescream_3.ogg',
-		'sound/mobs/humanoids/human/scream/femalescream_4.ogg',
-		'sound/mobs/humanoids/human/scream/femalescream_5.ogg',
+		'../assets/sound/mobs/humanoids/human/scream/femalescream_1.ogg',
+		'../assets/sound/mobs/humanoids/human/scream/femalescream_2.ogg',
+		'../assets/sound/mobs/humanoids/human/scream/femalescream_3.ogg',
+		'../assets/sound/mobs/humanoids/human/scream/femalescream_4.ogg',
+		'../assets/sound/mobs/humanoids/human/scream/femalescream_5.ogg',
 	)
 
 

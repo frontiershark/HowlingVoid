@@ -93,12 +93,12 @@
 	if(tail)
 		return tail.get_butt_sprite()
 
-	return icon('icons/mob/butts.dmi', human_owner.physique == FEMALE ? BUTT_SPRITE_HUMAN_FEMALE : BUTT_SPRITE_HUMAN_MALE)
+	return icon('../assets/icons/mob/butts.dmi', human_owner.physique == FEMALE ? BUTT_SPRITE_HUMAN_FEMALE : BUTT_SPRITE_HUMAN_MALE)
 
 /obj/item/bodypart/chest/monkey
-	icon = 'icons/mob/human/species/monkey/bodyparts.dmi'
-	icon_static = 'icons/mob/human/species/monkey/bodyparts.dmi'
-	icon_husk = 'icons/mob/human/species/monkey/bodyparts.dmi'
+	icon = '../assets/icons/mob/human/species/monkey/bodyparts.dmi'
+	icon_static = '../assets/icons/mob/human/species/monkey/bodyparts.dmi'
+	icon_husk = '../assets/icons/mob/human/species/monkey/bodyparts.dmi'
 	husk_type = "monkey"
 	icon_state = "default_monkey_chest"
 	limb_id = SPECIES_MONKEY
@@ -118,8 +118,8 @@
 	return ..()
 
 /obj/item/bodypart/chest/alien
-	icon = 'icons/mob/human/species/alien/bodyparts.dmi'
-	icon_static = 'icons/mob/human/species/alien/bodyparts.dmi'
+	icon = '../assets/icons/mob/human/species/alien/bodyparts.dmi'
+	icon_static = '../assets/icons/mob/human/species/alien/bodyparts.dmi'
 	icon_state = "alien_chest"
 	limb_id = BODYPART_ID_ALIEN
 	bodytype = BODYTYPE_ALIEN | BODYTYPE_ORGANIC
@@ -134,8 +134,8 @@
 	biological_state = BIO_STANDARD_ALIEN
 
 /obj/item/bodypart/chest/larva
-	icon = 'icons/mob/human/species/alien/bodyparts.dmi'
-	icon_static = 'icons/mob/human/species/alien/bodyparts.dmi'
+	icon = '../assets/icons/mob/human/species/alien/bodyparts.dmi'
+	icon_static = '../assets/icons/mob/human/species/alien/bodyparts.dmi'
 	icon_state = "larva_chest"
 	limb_id = BODYPART_ID_LARVA
 	is_dimorphic = FALSE
@@ -282,9 +282,9 @@
 	RegisterSignal(owner, SIGNAL_ADDTRAIT(TRAIT_PARALYSIS_L_ARM), PROC_REF(on_owner_paralysis_gain))
 
 /obj/item/bodypart/arm/left/monkey
-	icon = 'icons/mob/human/species/monkey/bodyparts.dmi'
-	icon_static = 'icons/mob/human/species/monkey/bodyparts.dmi'
-	icon_husk = 'icons/mob/human/species/monkey/bodyparts.dmi'
+	icon = '../assets/icons/mob/human/species/monkey/bodyparts.dmi'
+	icon_static = '../assets/icons/mob/human/species/monkey/bodyparts.dmi'
+	icon_husk = '../assets/icons/mob/human/species/monkey/bodyparts.dmi'
 	husk_type = "monkey"
 	icon_state = "default_monkey_l_arm"
 	limb_id = SPECIES_MONKEY
@@ -300,8 +300,8 @@
 	appendage_noun = "paw"
 
 /obj/item/bodypart/arm/left/alien
-	icon = 'icons/mob/human/species/alien/bodyparts.dmi'
-	icon_static = 'icons/mob/human/species/alien/bodyparts.dmi'
+	icon = '../assets/icons/mob/human/species/alien/bodyparts.dmi'
+	icon_static = '../assets/icons/mob/human/species/alien/bodyparts.dmi'
 	icon_state = "alien_l_arm"
 	limb_id = BODYPART_ID_ALIEN
 	bodytype = BODYTYPE_ALIEN | BODYTYPE_ORGANIC
@@ -364,9 +364,9 @@
 	RegisterSignal(owner, SIGNAL_ADDTRAIT(TRAIT_PARALYSIS_R_ARM), PROC_REF(on_owner_paralysis_gain))
 
 /obj/item/bodypart/arm/right/monkey
-	icon = 'icons/mob/human/species/monkey/bodyparts.dmi'
-	icon_static = 'icons/mob/human/species/monkey/bodyparts.dmi'
-	icon_husk = 'icons/mob/human/species/monkey/bodyparts.dmi'
+	icon = '../assets/icons/mob/human/species/monkey/bodyparts.dmi'
+	icon_static = '../assets/icons/mob/human/species/monkey/bodyparts.dmi'
+	icon_husk = '../assets/icons/mob/human/species/monkey/bodyparts.dmi'
 	husk_type = "monkey"
 	icon_state = "default_monkey_r_arm"
 	limb_id = SPECIES_MONKEY
@@ -382,8 +382,8 @@
 	appendage_noun = "paw"
 
 /obj/item/bodypart/arm/right/alien
-	icon = 'icons/mob/human/species/alien/bodyparts.dmi'
-	icon_static = 'icons/mob/human/species/alien/bodyparts.dmi'
+	icon = '../assets/icons/mob/human/species/alien/bodyparts.dmi'
+	icon_static = '../assets/icons/mob/human/species/alien/bodyparts.dmi'
 	icon_state = "alien_r_arm"
 	limb_id = BODYPART_ID_ALIEN
 	bodytype = BODYTYPE_ALIEN | BODYTYPE_ORGANIC
@@ -504,9 +504,9 @@
 	RegisterSignal(owner, SIGNAL_ADDTRAIT(TRAIT_PARALYSIS_L_LEG), PROC_REF(on_owner_paralysis_gain))
 
 /obj/item/bodypart/leg/left/monkey
-	icon = 'icons/mob/human/species/monkey/bodyparts.dmi'
-	icon_static = 'icons/mob/human/species/monkey/bodyparts.dmi'
-	icon_husk = 'icons/mob/human/species/monkey/bodyparts.dmi'
+	icon = '../assets/icons/mob/human/species/monkey/bodyparts.dmi'
+	icon_static = '../assets/icons/mob/human/species/monkey/bodyparts.dmi'
+	icon_husk = '../assets/icons/mob/human/species/monkey/bodyparts.dmi'
 	husk_type = "monkey"
 	icon_state = "default_monkey_l_leg"
 	limb_id = SPECIES_MONKEY
@@ -521,8 +521,8 @@
 	footprint_sprite = FOOTPRINT_SPRITE_PAWS
 
 /obj/item/bodypart/leg/left/alien
-	icon = 'icons/mob/human/species/alien/bodyparts.dmi'
-	icon_static = 'icons/mob/human/species/alien/bodyparts.dmi'
+	icon = '../assets/icons/mob/human/species/alien/bodyparts.dmi'
+	icon_static = '../assets/icons/mob/human/species/alien/bodyparts.dmi'
 	icon_state = "alien_l_leg"
 	limb_id = BODYPART_ID_ALIEN
 	bodytype = BODYTYPE_ALIEN | BODYTYPE_ORGANIC
@@ -584,9 +584,9 @@
 
 
 /obj/item/bodypart/leg/right/monkey
-	icon = 'icons/mob/human/species/monkey/bodyparts.dmi'
-	icon_static = 'icons/mob/human/species/monkey/bodyparts.dmi'
-	icon_husk = 'icons/mob/human/species/monkey/bodyparts.dmi'
+	icon = '../assets/icons/mob/human/species/monkey/bodyparts.dmi'
+	icon_static = '../assets/icons/mob/human/species/monkey/bodyparts.dmi'
+	icon_husk = '../assets/icons/mob/human/species/monkey/bodyparts.dmi'
 	husk_type = "monkey"
 	icon_state = "default_monkey_r_leg"
 	limb_id = SPECIES_MONKEY
@@ -601,8 +601,8 @@
 	footprint_sprite = FOOTPRINT_SPRITE_PAWS
 
 /obj/item/bodypart/leg/right/alien
-	icon = 'icons/mob/human/species/alien/bodyparts.dmi'
-	icon_static = 'icons/mob/human/species/alien/bodyparts.dmi'
+	icon = '../assets/icons/mob/human/species/alien/bodyparts.dmi'
+	icon_static = '../assets/icons/mob/human/species/alien/bodyparts.dmi'
 	icon_state = "alien_r_leg"
 	limb_id = BODYPART_ID_ALIEN
 	bodytype = BODYTYPE_ALIEN | BODYTYPE_ORGANIC

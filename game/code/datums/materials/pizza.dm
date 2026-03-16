@@ -13,7 +13,7 @@
 	beauty_modifier = 0.1
 	strength_modifier = 0.7
 	armor_modifiers = list(MELEE = 0.3, BULLET = 0.3, LASER = 1.2, ENERGY = 1.2, BOMB = 0.3, FIRE = 1, ACID = 1)
-	item_sound_override = 'sound/effects/meatslap.ogg'
+	item_sound_override = '../assets/sound/effects/meatslap.ogg'
 	turf_sound_override = FOOTSTEP_MEAT
 	texture_layer_icon_state = "pizza"
 	mat_rust_resistance = RUST_RESISTANCE_REINFORCED

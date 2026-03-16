@@ -2,7 +2,7 @@
 	name = "sticky tape"
 	singular_name = "sticky tape"
 	desc = "Used for sticking to things for sticking said things to people."
-	icon = 'icons/map_icons/items/_item.dmi'
+	icon = '../assets/icons/map_icons/items/_item.dmi'
 	icon_state = "/obj/item/stack/sticky_tape"
 	post_init_icon_state = "tape"
 	var/prefix = "sticky"
@@ -34,14 +34,14 @@
 	if(user.get_inactive_held_item() == src)
 		if(is_zero_amount(delete_if_zero = TRUE))
 			return
-		playsound(user, 'sound/items/duct_tape/duct_tape_rip.ogg', 50, TRUE)
+		playsound(user, '../assets/sound/items/duct_tape/duct_tape_rip.ogg', 50, TRUE)
 		if(!do_after(user, 1 SECONDS))
 			return
 		var/new_tape_gag = new tape_gag(src)
 		user.put_in_hands(new_tape_gag)
 		use(1)
 		to_chat(user, span_notice("You rip off a piece of tape."))
-		playsound(user, 'sound/items/duct_tape/duct_tape_snap.ogg', 50, TRUE)
+		playsound(user, '../assets/sound/items/duct_tape/duct_tape_snap.ogg', 50, TRUE)
 		return TRUE
 	return ..()
 
@@ -58,12 +58,12 @@
 		return ITEM_INTERACT_BLOCKING
 
 	user.visible_message(span_notice("[user] begins wrapping [target] with [src]."), span_notice("You begin wrapping [target] with [src]."))
-	playsound(user, 'sound/items/duct_tape/duct_tape_rip.ogg', 50, TRUE)
+	playsound(user, '../assets/sound/items/duct_tape/duct_tape_rip.ogg', 50, TRUE)
 
 	if(!do_after(user, 3 SECONDS, target=target))
 		return ITEM_INTERACT_BLOCKING
 
-	playsound(user, 'sound/items/duct_tape/duct_tape_snap.ogg', 50, TRUE)
+	playsound(user, '../assets/sound/items/duct_tape/duct_tape_snap.ogg', 50, TRUE)
 	use(1)
 	if(istype(target, /obj/item/clothing/gloves/fingerless))
 		var/obj/item/clothing/gloves/tackler/offbrand/O = new /obj/item/clothing/gloves/tackler/offbrand
@@ -103,7 +103,7 @@
 
 /obj/item/stack/sticky_tape/pointy
 	name = "pointy tape"
-	icon = 'icons/map_icons/items/_item.dmi'
+	icon = '../assets/icons/map_icons/items/_item.dmi'
 	icon_state = "/obj/item/stack/sticky_tape/pointy"
 	post_init_icon_state = "tape_spikes"
 	singular_name = "pointy tape"
@@ -176,7 +176,7 @@
 			return ITEM_INTERACT_BLOCKING
 
 		user.visible_message(span_notice("[user] begins repairing [robotic_pal] with [src]."), span_notice("You begin repairing [robotic_pal] with [src]."))
-		playsound(user, 'sound/items/duct_tape/duct_tape_rip.ogg', 50, TRUE)
+		playsound(user, '../assets/sound/items/duct_tape/duct_tape_rip.ogg', 50, TRUE)
 
 		if(!do_after(user, 3 SECONDS, target = robotic_pal))
 			return ITEM_INTERACT_BLOCKING
@@ -201,7 +201,7 @@
 		return ITEM_INTERACT_BLOCKING
 
 	user.visible_message(span_notice("[user] begins repairing [object_to_repair] with [src]."), span_notice("You begin repairing [object_to_repair] with [src]."))
-	playsound(user, 'sound/items/duct_tape/duct_tape_rip.ogg', 50, TRUE)
+	playsound(user, '../assets/sound/items/duct_tape/duct_tape_rip.ogg', 50, TRUE)
 
 	if(!do_after(user, 3 SECONDS, target = object_to_repair))
 		return ITEM_INTERACT_BLOCKING

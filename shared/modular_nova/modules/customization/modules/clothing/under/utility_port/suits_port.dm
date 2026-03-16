@@ -17,7 +17,7 @@
 /obj/item/clothing/suit/toggle/jacket/nova/colorable_bomber
 	name = "non-departmental jacket"
 	desc = "A comfortable jacket in a neutral black"
-	icon = 'icons/map_icons/clothing/suit/_suit.dmi'
+	icon = '../assets/icons/map_icons/clothing/suit/_suit.dmi'
 	icon_state = "/obj/item/clothing/suit/toggle/jacket/nova/colorable_bomber"
 	post_init_icon_state = "jacket"
 	greyscale_config = /datum/greyscale_config/dept_jacket
@@ -172,7 +172,7 @@
 
 /obj/item/clothing/suit/toggle/jacket/nova/flannel/gags
 	name = "flannel shirt"
-	icon = 'icons/map_icons/clothing/suit/_suit.dmi'
+	icon = '../assets/icons/map_icons/clothing/suit/_suit.dmi'
 	icon_state = "/obj/item/clothing/suit/toggle/jacket/nova/flannel/gags"
 	post_init_icon_state = "flannelgags"
 	greyscale_config = /datum/greyscale_config/flannelgags
@@ -185,7 +185,7 @@
 /obj/item/clothing/suit/nova/furred_trenchcoat
 	name = "furred trenchcoat"
 	desc = "A warm trenchcoat lined with fur, made for the cold, dark, and desperate winter nights."
-	icon = 'icons/map_icons/clothing/suit/_suit.dmi'
+	icon = '../assets/icons/map_icons/clothing/suit/_suit.dmi'
 	icon_state = "/obj/item/clothing/suit/nova/furred_trenchcoat"
 	post_init_icon_state = "coat"
 	body_parts_covered = CHEST|GROIN|ARMS
@@ -200,7 +200,7 @@
 /obj/item/clothing/suit/nova/overcoat
 	name = "regal overcoat"
 	desc = "An overcoat of regalness, it looks quite fancy."
-	icon = 'icons/map_icons/clothing/suit/_suit.dmi'
+	icon = '../assets/icons/map_icons/clothing/suit/_suit.dmi'
 	icon_state = "/obj/item/clothing/suit/nova/overcoat"
 	post_init_icon_state = "overcoat"
 	body_parts_covered = CHEST|ARMS
@@ -213,7 +213,7 @@
 /obj/item/clothing/suit/nova/sweater
 	name = "big sweater"
 	desc = "A big'ol sweater! Makes for an improvised blanket with how huge this thing is."
-	icon = 'icons/map_icons/clothing/suit/_suit.dmi'
+	icon = '../assets/icons/map_icons/clothing/suit/_suit.dmi'
 	icon_state = "/obj/item/clothing/suit/nova/sweater"
 	post_init_icon_state = "sweater"
 	body_parts_covered = CHEST|ARMS

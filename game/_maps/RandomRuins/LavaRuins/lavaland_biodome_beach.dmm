@@ -274,7 +274,7 @@
 	dir = 4
 	},
 /turf/open/floor/iron{
-	icon = 'icons/obj/fluff/beach.dmi';
+	icon = '../assets/icons/obj/fluff/beach.dmi';
 	icon_state = "sand"
 	},
 /area/ruin/powered/beach)
@@ -480,7 +480,7 @@
 	},
 /obj/effect/turf_decal/sand,
 /turf/open/floor/iron{
-	icon = 'icons/obj/fluff/beach.dmi';
+	icon = '../assets/icons/obj/fluff/beach.dmi';
 	icon_state = "sand"
 	},
 /area/ruin/powered/beach)

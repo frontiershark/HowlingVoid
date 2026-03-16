@@ -13,7 +13,7 @@
 /obj/item/paper
 	name = "paper"
 	gender = NEUTER
-	icon = 'icons/obj/service/bureaucracy.dmi'
+	icon = '../assets/icons/obj/service/bureaucracy.dmi'
 	icon_state = "paper"
 	inhand_icon_state = "paper"
 	worn_icon_state = "paper"
@@ -24,8 +24,8 @@
 	pressure_resistance = 0
 	resistance_flags = FLAMMABLE
 	max_integrity = 50
-	drop_sound = 'sound/items/handling/paper_drop.ogg'
-	pickup_sound = 'sound/items/handling/paper_pickup.ogg'
+	drop_sound = '../assets/sound/items/handling/paper_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/paper_pickup.ogg'
 	custom_materials = list(/datum/material/paper = HALF_SHEET_MATERIAL_AMOUNT / 2)
 	color = COLOR_WHITE
 	item_flags = SKIP_FANTASY_ON_SPAWN
@@ -93,7 +93,7 @@
 
 /obj/item/paper/custom_fire_overlay()
 	if (!custom_fire_overlay)
-		custom_fire_overlay = mutable_appearance('icons/obj/service/bureaucracy.dmi', "paper_onfire_overlay", appearance_flags = RESET_COLOR|KEEP_APART)
+		custom_fire_overlay = mutable_appearance('../assets/icons/obj/service/bureaucracy.dmi', "paper_onfire_overlay", appearance_flags = RESET_COLOR|KEEP_APART)
 	return custom_fire_overlay
 
 /obj/item/paper/proc/close_paper_ui()
@@ -286,7 +286,7 @@
  * * stamp_icon_state - Icon state for the stamp as part of overlay rendering.
 * * stamp_icon_state - An alternate Icon file can be passed for the stamp as part of overlay rendering if desired
  */
-/obj/item/paper/proc/add_stamp(stamp_class, stamp_x, stamp_y, rotation, stamp_icon_state, stamp_icon = 'icons/obj/service/bureaucracy.dmi')
+/obj/item/paper/proc/add_stamp(stamp_class, stamp_x, stamp_y, rotation, stamp_icon_state, stamp_icon = '../assets/icons/obj/service/bureaucracy.dmi')
 	var/new_stamp_datum = new /datum/paper_stamp(stamp_class, stamp_x, stamp_y, rotation)
 	LAZYADD(raw_stamp_data, new_stamp_datum);
 
@@ -448,7 +448,7 @@
 			add_stamp(writing_stats["stamp_class"], rand(0, 300), rand(0, 400), rand(0, 360), writing_stats["stamp_icon_state"], stamp_icon = writing_stats["stamp_icon"])
 			user.visible_message(span_notice("[user] blindly stamps [src] with \the [attacking_item]!"))
 			to_chat(user, span_notice("You stamp [src] with \the [attacking_item] the best you can!"))
-			playsound(src, 'sound/items/handling/standard_stamp.ogg', 50, vary = TRUE)
+			playsound(src, '../assets/sound/items/handling/standard_stamp.ogg', 50, vary = TRUE)
 		else
 			to_chat(user, span_notice("You ready your stamp over the paper! "))
 			ui_interact(user)
@@ -473,7 +473,7 @@
 		span_notice("[user] quickly stamps [src] with [tool] without looking."),
 		span_notice("You quickly stamp [src] with [tool] without looking."),
 	)
-	playsound(src, 'sound/items/handling/standard_stamp.ogg', 50, vary = TRUE)
+	playsound(src, '../assets/sound/items/handling/standard_stamp.ogg', 50, vary = TRUE)
 
 	return ITEM_INTERACT_BLOCKING // Stop the UI from opening.
 /**
@@ -629,7 +629,7 @@
 
 			add_stamp(stamp_class, stamp_x, stamp_y, stamp_rotation, stamp_icon_state, stamp_icon)
 			user.visible_message(span_notice("[user] stamps [src] with \the [holding.name]!"), span_notice("You stamp [src] with \the [holding.name]!"))
-			playsound(src, 'sound/items/handling/standard_stamp.ogg', 50, vary = TRUE)
+			playsound(src, '../assets/sound/items/handling/standard_stamp.ogg', 50, vary = TRUE)
 
 			update_appearance()
 			update_static_data_for_all_viewers()
@@ -849,11 +849,11 @@
 
 /obj/item/paper/construction
 	name = "construction paper"
-	icon = 'icons/effects/random_spawners.dmi'
+	icon = '../assets/icons/effects/random_spawners.dmi'
 
 /obj/item/paper/construction/Initialize(mapload)
 	. = ..()
-	icon = 'icons/obj/service/bureaucracy.dmi'
+	icon = '../assets/icons/obj/service/bureaucracy.dmi'
 	color = pick(COLOR_RED, COLOR_LIME, COLOR_LIGHT_ORANGE, COLOR_DARK_PURPLE, COLOR_FADED_PINK, COLOR_BLUE_LIGHT)
 	update_appearance()
 

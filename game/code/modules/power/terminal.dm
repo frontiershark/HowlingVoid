@@ -5,7 +5,7 @@
 
 /obj/machinery/power/terminal
 	name = "terminal"
-	icon = 'icons/obj/pipes_n_cables/structures.dmi'
+	icon = '../assets/icons/obj/pipes_n_cables/structures.dmi'
 	icon_state = "term"
 	desc = "It's an underfloor wiring terminal, used to draw power from the grid."
 	layer = WIRE_TERMINAL_LAYER //a bit above wires
@@ -59,7 +59,7 @@
 	user.visible_message(span_notice("[user.name] dismantles the cable terminal from [master]."))
 	balloon_alert(user, "cutting the cables...")
 
-	playsound(src.loc, 'sound/items/deconstruct.ogg', 50, TRUE)
+	playsound(src.loc, '../assets/sound/items/deconstruct.ogg', 50, TRUE)
 	if(I.use_tool(src, user, 50))
 		if(master && !master.can_terminal_dismantle())
 			return

@@ -16,7 +16,7 @@
 	)
 	result_atoms = list(/obj/item/clothing/suit/hooded/cultrobes/void)
 	cost = 1
-	research_tree_icon_path = 'icons/obj/clothing/suits/armor.dmi'
+	research_tree_icon_path = '../assets/icons/obj/clothing/suits/armor.dmi'
 	research_tree_icon_state = "void_cloak"
 	drafting_tier = 1
 
@@ -32,7 +32,7 @@
 	)
 	result_atoms = list(/obj/item/clothing/neck/eldritch_amulet)
 	cost = 1
-	research_tree_icon_path = 'icons/obj/antags/eldritch.dmi'
+	research_tree_icon_path = '../assets/icons/obj/antags/eldritch.dmi'
 	research_tree_icon_state = "eye_medalion"
 	drafting_tier = 1
 
@@ -48,7 +48,7 @@
 	)
 	result_atoms = list(/obj/item/reagent_containers/cup/beaker/eldritch)
 	cost = 1
-	research_tree_icon_path = 'icons/obj/antags/eldritch.dmi'
+	research_tree_icon_path = '../assets/icons/obj/antags/eldritch.dmi'
 	research_tree_icon_state = "eldritch_flask"
 	drafting_tier = 1
 
@@ -64,7 +64,7 @@
 	)
 	result_atoms = list(/obj/item/reagent_containers/cup/phylactery)
 	cost = 1
-	research_tree_icon_path = 'icons/obj/antags/eldritch.dmi'
+	research_tree_icon_path = '../assets/icons/obj/antags/eldritch.dmi'
 	research_tree_icon_state = "phylactery_2"
 	drafting_tier = 1
 
@@ -80,7 +80,7 @@
 	)
 	result_atoms = list(/obj/structure/destructible/eldritch_crucible)
 	cost = 1
-	research_tree_icon_path = 'icons/obj/antags/eldritch.dmi'
+	research_tree_icon_path = '../assets/icons/obj/antags/eldritch.dmi'
 	research_tree_icon_state = "crucible"
 	drafting_tier = 1
 
@@ -97,6 +97,6 @@
 	)
 	result_atoms = list(/obj/item/coin/eldritch)
 	cost = 1
-	research_tree_icon_path = 'icons/obj/economy.dmi'
+	research_tree_icon_path = '../assets/icons/obj/economy.dmi'
 	research_tree_icon_state = "coin_heretic"
 	drafting_tier = 1

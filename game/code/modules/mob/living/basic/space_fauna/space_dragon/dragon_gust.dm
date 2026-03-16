@@ -5,7 +5,7 @@
 /datum/action/cooldown/mob_cooldown/wing_buffet
 	name = "Wing Buffet"
 	desc = "Rise into the air and release a powerful gust from your wings, blowing attackers away. Becomes more tiring if used in quick succession."
-	button_icon = 'icons/effects/magic.dmi'
+	button_icon = '../assets/icons/effects/magic.dmi'
 	button_icon_state = "tornado"
 	cooldown_time = 1 SECONDS
 	melee_cooldown_time = 0
@@ -69,7 +69,7 @@
 	if (QDELETED(owner))
 		return
 	owner.pixel_y = 0
-	playsound(owner, 'sound/effects/gravhit.ogg', 100, TRUE)
+	playsound(owner, '../assets/sound/effects/gravhit.ogg', 100, TRUE)
 	for (var/mob/living/candidate in view(gust_distance, owner))
 		if(candidate == owner || candidate.faction_check_atom(owner))
 			continue

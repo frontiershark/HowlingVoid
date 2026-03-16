@@ -126,7 +126,7 @@
 
 	owner.visible_message(span_warning("[owner]'s body convulses a bit."))
 	playsound(owner, SFX_BODYFALL, 50, TRUE)
-	playsound(owner, 'sound/machines/defib/defib_zap.ogg', 75, TRUE, -1)
+	playsound(owner, '../assets/sound/machines/defib/defib_zap.ogg', 75, TRUE, -1)
 	owner.set_heartattack(FALSE)
 	owner.revive()
 	owner.emote("gasp")
@@ -306,7 +306,7 @@
 
 /obj/item/organ/cyberimp/chest/spine/on_mob_insert(mob/living/carbon/organ_owner, special, movement_flags)
 	. = ..()
-	stone_overlay = mutable_appearance(icon = 'icons/effects/effects.dmi', icon_state = "stone")
+	stone_overlay = mutable_appearance(icon = '../assets/icons/effects/effects.dmi', icon_state = "stone")
 	organ_owner.add_overlay(stone_overlay)
 	add_organ_trait(TRAIT_BOULDER_BREAKER)
 	if(core_applied)

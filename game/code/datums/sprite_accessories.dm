@@ -57,7 +57,7 @@
 ////////////////
 
 /datum/hair_mask
-	var/icon/icon = 'icons/mob/human/hair_masks.dmi'
+	var/icon/icon = '../assets/icons/mob/human/hair_masks.dmi'
 	var/icon_state = ""
 	/// Strict coverage zones will always have the hair mask applied to them, even if a piece of hair at that location would normally resist being masked.
 	/// If a piece of headware only covers the top of the head, it should only strictly cover the top zone. But a mostly-enclosed helmet might strictly cover almost all zones.
@@ -84,7 +84,7 @@
 GLOBAL_LIST_EMPTY(blended_hair_icons_cache)
 
 /datum/sprite_accessory/hair
-	icon = 'icons/mob/human/human_face.dmi'   // default icon for all hairs
+	icon = '../assets/icons/mob/human/human_face.dmi'   // default icon for all hairs
 	var/y_offset = 0 // Y offset to apply so we can have hair that reaches above the player sprite's visual bounding box
 
 	// Some hair will have "appendages", such as pony tails, that stick out from certain parts of the head. These can be layered above or below headwear and resist being masked away by hair masks.
@@ -121,7 +121,7 @@ GLOBAL_LIST_EMPTY(blended_hair_icons_cache)
 					cachedIcon = icon(icon, icon_state)
 					// mask the base icon
 					for(var/datum/hair_mask/mask as anything in hair_masks)
-						var/icon/mask_icon = icon('icons/mob/human/hair_masks.dmi', mask.icon_state)
+						var/icon/mask_icon = icon('../assets/icons/mob/human/hair_masks.dmi', mask.icon_state)
 						mask_icon.Shift(SOUTH, y_offset)
 						cachedIcon.Blend(mask_icon, ICON_ADD)
 
@@ -131,7 +131,7 @@ GLOBAL_LIST_EMPTY(blended_hair_icons_cache)
 						var/zone = hair_appendages_inner[appendage_icon_state]
 						for(var/datum/hair_mask/mask as anything in hair_masks)
 							if(zone & mask.strict_coverage_zones)
-								var/icon/mask_icon = icon('icons/mob/human/hair_masks.dmi', mask.icon_state)
+								var/icon/mask_icon = icon('../assets/icons/mob/human/hair_masks.dmi', mask.icon_state)
 								mask_icon.Shift(SOUTH, y_offset)
 								appendage_icon.Blend(mask_icon, ICON_ADD)
 						cachedIcon.Blend(appendage_icon, ICON_OVERLAY)
@@ -139,14 +139,14 @@ GLOBAL_LIST_EMPTY(blended_hair_icons_cache)
 					// No mask dodgers, so we can just mask the full (hopefully cached) icon
 					cachedIcon = icon(getCachedIcon())
 					for(var/datum/hair_mask/mask as anything in hair_masks)
-						var/icon/mask_icon = icon('icons/mob/human/hair_masks.dmi', mask.icon_state)
+						var/icon/mask_icon = icon('../assets/icons/mob/human/hair_masks.dmi', mask.icon_state)
 						mask_icon.Shift(SOUTH, y_offset)
 						cachedIcon.Blend(mask_icon, ICON_ADD)
 			else
 				// No hair appendages, so just apply all hair masks to the base icon
 				cachedIcon = icon(icon, icon_state)
 				for(var/datum/hair_mask/mask as anything in hair_masks)
-					var/icon/mask_icon = icon('icons/mob/human/hair_masks.dmi', mask.icon_state)
+					var/icon/mask_icon = icon('../assets/icons/mob/human/hair_masks.dmi', mask.icon_state)
 					mask_icon.Shift(SOUTH, y_offset)
 					cachedIcon.Blend(mask_icon, ICON_ADD)
 		else
@@ -988,7 +988,7 @@ GLOBAL_LIST_EMPTY(blended_hair_icons_cache)
 */
 
 /datum/sprite_accessory/gradient
-	icon = 'icons/mob/human/species/hair_gradients.dmi'
+	icon = '../assets/icons/mob/human/species/hair_gradients.dmi'
 	///whether this gradient applies to hair and/or beards. Some gradients do not work well on beards.
 	var/gradient_category = GRADIENT_APPLIES_TO_HAIR|GRADIENT_APPLIES_TO_FACIAL_HAIR
 
@@ -1083,7 +1083,7 @@ GLOBAL_LIST_EMPTY(blended_hair_icons_cache)
 /////////////////////////////
 
 /datum/sprite_accessory/facial_hair
-	icon = 'icons/mob/human/human_face.dmi'
+	icon = '../assets/icons/mob/human/human_face.dmi'
 	gender = MALE // barf (unless you're a dorf, dorfs dig chix w/ beards :P)
 	em_block = TRUE
 
@@ -1249,7 +1249,7 @@ GLOBAL_LIST_EMPTY(blended_hair_icons_cache)
 ///////////////////////////
 
 /datum/sprite_accessory/underwear
-	icon = 'icons/mob/clothing/underwear.dmi'
+	icon = '../assets/icons/mob/clothing/underwear.dmi'
 	use_static = FALSE
 	em_block = TRUE
 
@@ -1428,7 +1428,7 @@ GLOBAL_LIST_EMPTY(blended_hair_icons_cache)
 ////////////////////////////
 
 /datum/sprite_accessory/undershirt
-	icon = 'icons/mob/clothing/underwear.dmi'
+	icon = '../assets/icons/mob/clothing/underwear.dmi'
 	em_block = TRUE
 
 /datum/sprite_accessory/undershirt/nude
@@ -1715,7 +1715,7 @@ GLOBAL_LIST_EMPTY(blended_hair_icons_cache)
 ///////////////////////
 
 /datum/sprite_accessory/socks
-	icon = 'icons/mob/clothing/underwear.dmi'
+	icon = '../assets/icons/mob/clothing/underwear.dmi'
 	em_block = TRUE
 
 /datum/sprite_accessory/socks/nude
@@ -1885,7 +1885,7 @@ GLOBAL_LIST_EMPTY(blended_hair_icons_cache)
 /////////////////////////////
 
 /datum/sprite_accessory/lizard_markings
-	icon = 'icons/mob/human/species/lizard/lizard_markings.dmi'
+	icon = '../assets/icons/mob/human/species/lizard/lizard_markings.dmi'
 
 /datum/sprite_accessory/lizard_markings/dtiger
 	name = "Dark Tiger Body"
@@ -1909,7 +1909,7 @@ GLOBAL_LIST_EMPTY(blended_hair_icons_cache)
 
 ///Used for fish-infused tails, which come in different flavors.
 /datum/sprite_accessory/tails/fish
-	icon = 'icons/mob/human/fish_features.dmi'
+	icon = '../assets/icons/mob/human/fish_features.dmi'
 	color_src = TRUE
 
 /datum/sprite_accessory/tails/fish/simple
@@ -1937,7 +1937,7 @@ GLOBAL_LIST_EMPTY(blended_hair_icons_cache)
 	dimension_x = 36
 
 /datum/sprite_accessory/tails/lizard
-	icon = 'icons/mob/human/species/lizard/lizard_tails.dmi'
+	icon = '../assets/icons/mob/human/species/lizard/lizard_tails.dmi'
 	spine_key = SPINE_KEY_LIZARD
 
 /datum/sprite_accessory/tails/lizard/none
@@ -1968,7 +1968,7 @@ GLOBAL_LIST_EMPTY(blended_hair_icons_cache)
 
 /datum/sprite_accessory/tails/felinid/cat
 	name = "Cat"
-	icon = 'icons/mob/human/cat_features.dmi'
+	icon = '../assets/icons/mob/human/cat_features.dmi'
 	icon_state = "default"
 	color_src = HAIR_COLOR
 
@@ -1981,7 +1981,7 @@ GLOBAL_LIST_EMPTY(blended_hair_icons_cache)
 
 /datum/sprite_accessory/tails/monkey/default
 	name = "Monkey"
-	icon = 'icons/mob/human/species/monkey/monkey_tail.dmi'
+	icon = '../assets/icons/mob/human/species/monkey/monkey_tail.dmi'
 	icon_state = "default"
 	color_src = FALSE
 
@@ -1992,16 +1992,16 @@ GLOBAL_LIST_EMPTY(blended_hair_icons_cache)
 
 /datum/sprite_accessory/tails/xeno/default
 	name = "Xeno"
-	icon = 'icons/mob/human/species/alien/tail_xenomorph.dmi'
+	icon = '../assets/icons/mob/human/species/alien/tail_xenomorph.dmi'
 	dimension_x = 40
 
 /datum/sprite_accessory/tails/xeno/queen
 	name = "Xeno Queen"
-	icon = 'icons/mob/human/species/alien/tail_xenomorph_queen.dmi'
+	icon = '../assets/icons/mob/human/species/alien/tail_xenomorph_queen.dmi'
 	dimension_x = 64
 
 /datum/sprite_accessory/pod_hair
-	icon = 'icons/mob/human/species/podperson_hair.dmi'
+	icon = '../assets/icons/mob/human/species/podperson_hair.dmi'
 	em_block = TRUE
 
 /datum/sprite_accessory/pod_hair/ivy
@@ -2045,7 +2045,7 @@ GLOBAL_LIST_EMPTY(blended_hair_icons_cache)
 	icon_state = "hibiscus"
 
 /datum/sprite_accessory/snouts
-	icon = 'icons/mob/human/species/lizard/lizard_misc.dmi'
+	icon = '../assets/icons/mob/human/species/lizard/lizard_misc.dmi'
 	em_block = TRUE
 
 /datum/sprite_accessory/snouts/sharp
@@ -2065,7 +2065,7 @@ GLOBAL_LIST_EMPTY(blended_hair_icons_cache)
 	icon_state = "roundlight"
 
 /datum/sprite_accessory/horns
-	icon = 'icons/mob/human/species/lizard/lizard_misc.dmi'
+	icon = '../assets/icons/mob/human/species/lizard/lizard_misc.dmi'
 	em_block = TRUE
 
 /datum/sprite_accessory/horns/simple
@@ -2089,7 +2089,7 @@ GLOBAL_LIST_EMPTY(blended_hair_icons_cache)
 	icon_state = "angler"
 
 /datum/sprite_accessory/ears
-	icon = 'icons/mob/human/cat_features.dmi'
+	icon = '../assets/icons/mob/human/cat_features.dmi'
 	em_block = TRUE
 
 /datum/sprite_accessory/ears/cat
@@ -2123,18 +2123,18 @@ GLOBAL_LIST_EMPTY(blended_hair_icons_cache)
 	locked = TRUE
 
 /datum/sprite_accessory/ears/fox
-	icon = 'icons/mob/human/fox_features.dmi'
+	icon = '../assets/icons/mob/human/fox_features.dmi'
 	name = "Fox"
 	icon_state = "fox"
 	color_src = HAIR_COLOR
 	locked = TRUE
 
 /datum/sprite_accessory/wings
-	icon = 'icons/mob/human/species/wings.dmi'
+	icon = '../assets/icons/mob/human/species/wings.dmi'
 	em_block = TRUE
 
 /datum/sprite_accessory/wings_open
-	icon = 'icons/mob/human/species/wings.dmi'
+	icon = '../assets/icons/mob/human/species/wings.dmi'
 	em_block = TRUE
 
 /datum/sprite_accessory/wings/angel
@@ -2270,7 +2270,7 @@ GLOBAL_LIST_EMPTY(blended_hair_icons_cache)
 	dimension_y = 32
 
 /datum/sprite_accessory/frills
-	icon = 'icons/mob/human/species/lizard/lizard_misc.dmi'
+	icon = '../assets/icons/mob/human/species/lizard/lizard_misc.dmi'
 
 /datum/sprite_accessory/frills/simple
 	name = "Simple"
@@ -2285,11 +2285,11 @@ GLOBAL_LIST_EMPTY(blended_hair_icons_cache)
 	icon_state = "aqua"
 
 /datum/sprite_accessory/spines
-	icon = 'icons/mob/human/species/lizard/lizard_spines.dmi'
+	icon = '../assets/icons/mob/human/species/lizard/lizard_spines.dmi'
 	em_block = TRUE
 
 /datum/sprite_accessory/tail_spines
-	icon = 'icons/mob/human/species/lizard/lizard_spines.dmi'
+	icon = '../assets/icons/mob/human/species/lizard/lizard_spines.dmi'
 	em_block = TRUE
 
 /datum/sprite_accessory/spines/short
@@ -2333,7 +2333,7 @@ GLOBAL_LIST_EMPTY(blended_hair_icons_cache)
 	icon_state = "aqua"
 
 /datum/sprite_accessory/caps
-	icon = 'icons/mob/human/species/mush_cap.dmi'
+	icon = '../assets/icons/mob/human/species/mush_cap.dmi'
 	color_src = HAIR_COLOR
 	em_block = TRUE
 
@@ -2342,7 +2342,7 @@ GLOBAL_LIST_EMPTY(blended_hair_icons_cache)
 	icon_state = "round"
 
 /datum/sprite_accessory/moth_wings
-	icon = 'icons/mob/human/species/moth/moth_wings.dmi'
+	icon = '../assets/icons/mob/human/species/moth/moth_wings.dmi'
 	color_src = null
 	em_block = TRUE
 
@@ -2452,7 +2452,7 @@ GLOBAL_LIST_EMPTY(blended_hair_icons_cache)
 	icon_state = "dipped"
 
 /datum/sprite_accessory/moth_antennae //Finally splitting the sprite
-	icon = 'icons/mob/human/species/moth/moth_antennae.dmi'
+	icon = '../assets/icons/mob/human/species/moth/moth_antennae.dmi'
 	color_src = null
 
 /datum/sprite_accessory/moth_antennae/plain
@@ -2547,7 +2547,7 @@ GLOBAL_LIST_EMPTY(blended_hair_icons_cache)
 	icon_state = "dipped"
 
 /datum/sprite_accessory/moth_markings // the markings that moths can have. finally something other than the boring tan
-	icon = 'icons/mob/human/species/moth/moth_markings.dmi'
+	icon = '../assets/icons/mob/human/species/moth/moth_markings.dmi'
 	color_src = null
 
 /datum/sprite_accessory/moth_markings/reddish

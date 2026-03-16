@@ -1,6 +1,6 @@
 /obj/item/clothing/head/hats
-	icon = 'icons/obj/clothing/head/hats.dmi'
-	worn_icon = 'icons/mob/clothing/head/hats.dmi'
+	icon = '../assets/icons/obj/clothing/head/hats.dmi'
+	worn_icon = '../assets/icons/mob/clothing/head/hats.dmi'
 	abstract_type = /obj/item/clothing/head/hats
 
 /obj/item/clothing/head/hats/centhat
@@ -102,7 +102,7 @@
 /obj/item/clothing/head/flatcap
 	name = "flat cap"
 	desc = "A working man's cap."
-	icon = 'icons/map_icons/clothing/head/_head.dmi'
+	icon = '../assets/icons/map_icons/clothing/head/_head.dmi'
 	icon_state = "/obj/item/clothing/head/flatcap"
 	post_init_icon_state = "beret_flat"
 	greyscale_config = /datum/greyscale_config/beret
@@ -113,8 +113,8 @@
 /obj/item/clothing/head/cowboy
 	name = "cowboy hat"
 	desc = "Ain't nobody gonna cheat the hangman in my town."
-	icon = 'icons/obj/clothing/head/cowboy.dmi'
-	worn_icon = 'icons/mob/clothing/head/cowboy.dmi'
+	icon = '../assets/icons/obj/clothing/head/cowboy.dmi'
+	worn_icon = '../assets/icons/mob/clothing/head/cowboy.dmi'
 	icon_state = "cowboy_hat_brown"
 	worn_icon_state = "hunter"
 	inhand_icon_state = null
@@ -204,7 +204,7 @@
 /obj/item/clothing/head/costume/santa/gags
 	name = "santa hat"
 	desc = "On the first day of christmas my employer gave to me!"
-	icon = 'icons/map_icons/clothing/head/_head.dmi'
+	icon = '../assets/icons/map_icons/clothing/head/_head.dmi'
 	icon_state = "/obj/item/clothing/head/costume/santa/gags"
 	post_init_icon_state = "santa_hat"
 	greyscale_config = /datum/greyscale_config/santa_hat
@@ -215,7 +215,7 @@
 /obj/item/clothing/head/costume/jester
 	name = "jester hat"
 	desc = "A hat with bells, to add some merriness to the suit."
-	icon = 'icons/map_icons/clothing/head/_head.dmi'
+	icon = '../assets/icons/map_icons/clothing/head/_head.dmi'
 	icon_state = "/obj/item/clothing/head/costume/jester"
 	post_init_icon_state = "jester_map"
 	greyscale_config = /datum/greyscale_config/jester_hat
@@ -244,7 +244,7 @@
 /obj/item/clothing/head/costume/lizard
 	name = "lizardskin cloche hat"
 	desc = "How many lizards died to make this hat? Not enough."
-	icon = 'icons/map_icons/clothing/head/_head.dmi'
+	icon = '../assets/icons/map_icons/clothing/head/_head.dmi'
 	icon_state = "/obj/item/clothing/head/costume/lizard"
 	post_init_icon_state = "lizard_hat"
 	greyscale_config = /datum/greyscale_config/lizard_hat
@@ -340,7 +340,7 @@
 /obj/item/clothing/head/costume/ushanka
 	name = "ushanka"
 	desc = "Perfect for winter in Siberia, da?"
-	icon = 'icons/map_icons/clothing/head/_head.dmi'
+	icon = '../assets/icons/map_icons/clothing/head/_head.dmi'
 	icon_state = "/obj/item/clothing/head/costume/ushanka"
 	post_init_icon_state = "ushanka_gagdown"
 	greyscale_config = /datum/greyscale_config/ushanka

@@ -56,7 +56,7 @@
 
 	if(honkvirus_amount > 0) // EXTRA annoying, huh!
 		honkvirus_amount--
-		playsound(src, 'sound/items/bikehorn.ogg', 30, TRUE)
+		playsound(src, '../assets/sound/items/bikehorn.ogg', 30, TRUE)
 
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
@@ -198,7 +198,7 @@
 					else
 						user.put_in_hands(inserted_disk)
 					inserted_disk = null
-					playsound(src, 'sound/machines/card_slide.ogg', 50)
+					playsound(src, '../assets/sound/machines/card_slide.ogg', 50)
 					return TRUE
 
 				if("intelliCard")
@@ -207,18 +207,18 @@
 						return
 
 					if(airestore_app.try_eject(user))
-						playsound(src, 'sound/machines/card_slide.ogg', 50)
+						playsound(src, '../assets/sound/machines/card_slide.ogg', 50)
 						return TRUE
 
 				if("ID")
 					if(remove_id(user))
-						playsound(src, 'sound/machines/card_slide.ogg', 50)
+						playsound(src, '../assets/sound/machines/card_slide.ogg', 50)
 						return TRUE
 
 		if("PC_Imprint_ID")
 			imprint_id()
 			UpdateDisplay()
-			playsound(src, 'sound/machines/terminal/terminal_processing.ogg', 15, TRUE)
+			playsound(src, '../assets/sound/machines/terminal/terminal_processing.ogg', 15, TRUE)
 
 		if("PC_Pai_Interact")
 			switch(params["option"])

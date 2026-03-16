@@ -1,7 +1,7 @@
 /obj/item/toy/singlecard
 	name = "card"
 	desc = "A playing card used to play card games like poker."
-	icon = 'icons/obj/toys/playing_cards.dmi'
+	icon = '../assets/icons/obj/toys/playing_cards.dmi'
 	icon_state = "sc_Ace of Spades_nanotrasen"
 	w_class = WEIGHT_CLASS_TINY
 	worn_icon_state = "card"
@@ -103,7 +103,7 @@
 
 /obj/item/toy/singlecard/suicide_act(mob/living/carbon/user)
 	user.visible_message(span_suicide("[user] is slitting [user.p_their()] wrists with \the [src]! It looks like [user.p_they()] [user.p_have()] an unlucky card!"))
-	playsound(src, 'sound/items/weapons/bladeslice.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/weapons/bladeslice.ogg', 50, TRUE)
 	return BRUTELOSS
 
 /**

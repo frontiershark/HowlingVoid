@@ -7,7 +7,7 @@
 		mecha_action.set_chassis(src)
 
 /datum/action/vehicle/sealed/mecha
-	button_icon = 'icons/mob/actions/actions_mecha.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_mecha.dmi'
 	var/obj/vehicle/sealed/mecha/chassis
 
 /datum/action/vehicle/sealed/mecha/Destroy()
@@ -110,7 +110,7 @@
 
 	for(var/mob/occupant in occupants)
 		balloon_alert(occupant, "strafing [strafe?"on":"off"]")
-		occupant.playsound_local(src, 'sound/machines/terminal/terminal_eject.ogg', 50, TRUE)
+		occupant.playsound_local(src, '../assets/sound/machines/terminal/terminal_eject.ogg', 50, TRUE)
 	log_message("Toggled strafing mode [strafe?"on":"off"].", LOG_MECHA)
 
 	for(var/occupant in occupants)
@@ -227,7 +227,7 @@
 		picked_item.forceMove(cargo_hold.drop_location())
 		if(picked_item == chassis.ore_box)
 			chassis.ore_box = null
-		playsound(chassis, 'sound/items/weapons/tap.ogg', 50, TRUE)
+		playsound(chassis, '../assets/sound/items/weapons/tap.ogg', 50, TRUE)
 		cargo_hold.log_message("Unloaded [picked_item]. Cargo compartment capacity: [cargo_hold.cargo_capacity - cargo_hold.contents.len]", LOG_MECHA)
 		return
 
@@ -238,7 +238,7 @@
 		first_item.forceMove(cargo_hold.drop_location())
 		if(first_item == chassis.ore_box)
 			chassis.ore_box = null
-		playsound(chassis, 'sound/items/weapons/tap.ogg', 50, TRUE)
+		playsound(chassis, '../assets/sound/items/weapons/tap.ogg', 50, TRUE)
 		cargo_hold.log_message("Unloaded [first_item]. Cargo compartment capacity: [cargo_hold.cargo_capacity - cargo_hold.contents.len]", LOG_MECHA)
 	else
 		chassis.balloon_alert(owner, "cargo hold empty!")

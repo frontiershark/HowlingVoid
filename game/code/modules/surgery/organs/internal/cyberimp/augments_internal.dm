@@ -6,7 +6,7 @@
 	organ_flags = ORGAN_ROBOTIC
 	failing_desc = "seems to be broken."
 	/// icon of the bodypart overlay we're going to be applying to our owner
-	var/aug_icon = 'icons/mob/human/species/misc/bodypart_overlay_augmentations.dmi'
+	var/aug_icon = '../assets/icons/mob/human/species/misc/bodypart_overlay_augmentations.dmi'
 	/// icon_state of the bodypart overlay we're going to be applying to our owner
 	var/aug_overlay = null
 	/// Does the implant have an emissive overlay too?
@@ -255,7 +255,7 @@
 /obj/item/organ/cyberimp/brain/connector/ui_action_click()
 
 	to_chat(owner, span_warning("You start fiddling around with [src]..."))
-	playsound(owner, 'sound/items/taperecorder/tape_flip.ogg', 20, vary = TRUE) // asmr
+	playsound(owner, '../assets/sound/items/taperecorder/tape_flip.ogg', 20, vary = TRUE) // asmr
 
 	if(!do_after(owner, 1.5 SECONDS, owner)) // othwerwise it doesnt appear
 		to_chat(owner, span_warning("You were interrupted!"))
@@ -283,17 +283,17 @@
 	var/fail_string = owner.implant_skillchip(skillchip, force = FALSE)
 	if(fail_string)
 		to_chat(owner, span_warning(fail_string))
-		playsound(owner, 'sound/machines/buzz/buzz-sigh.ogg', 10, vary = TRUE)
+		playsound(owner, '../assets/sound/machines/buzz/buzz-sigh.ogg', 10, vary = TRUE)
 		return
 
 	var/refail_string = skillchip.try_activate_skillchip(silent = FALSE, force = FALSE)
 	if(refail_string)
 		to_chat(owner, span_warning(fail_string))
-		playsound(owner, 'sound/machines/buzz/buzz-two.ogg', 10, vary = TRUE)
+		playsound(owner, '../assets/sound/machines/buzz/buzz-two.ogg', 10, vary = TRUE)
 		return
 
 	// success!
-	playsound(owner, 'sound/machines/chime.ogg', 10, vary = TRUE)
+	playsound(owner, '../assets/sound/machines/chime.ogg', 10, vary = TRUE)
 
 /obj/item/organ/cyberimp/brain/connector/proc/remove_skillchip(obj/item/organ/brain/chippy_brain)
 	var/obj/item/skillchip/skillchip = show_radial_menu(owner, owner, chippy_brain.skillchips)
@@ -301,7 +301,7 @@
 		owner.remove_skillchip(skillchip, silent = FALSE)
 		skillchip.forceMove(owner.drop_location())
 		owner.put_in_hands(skillchip, del_on_fail = FALSE)
-		playsound(owner, 'sound/machines/click.ogg', 10, vary = TRUE)
+		playsound(owner, '../assets/sound/machines/click.ogg', 10, vary = TRUE)
 		to_chat(owner, span_warning("You take [skillchip] out of [src]."))
 		return
 
@@ -324,14 +324,14 @@
 		if(skillchip)
 			owner.remove_skillchip(skillchip, silent = TRUE)
 			skillchip.forceMove(owner.drop_location())
-			playsound(owner, 'sound/machines/terminal/terminal_eject.ogg', 25, TRUE)
+			playsound(owner, '../assets/sound/machines/terminal/terminal_eject.ogg', 25, TRUE)
 		else
 			remove_brain(chippy_brain, severity == EMP_LIGHT ? 1 : 2)
 	addtimer(CALLBACK(src, PROC_REF(reboot)), 90 / severity)
 
 /obj/item/organ/cyberimp/brain/connector/proc/remove_brain(obj/item/organ/brain/chippy_brain, severity = 1)
 	/* // NOVA EDIT REMOVAL START - blocks the brain damage and brain removal from the positive quirk.
-	playsound(owner, 'sound/effects/meatslap.ogg', 25, TRUE)
+	playsound(owner, '../assets/sound/effects/meatslap.ogg', 25, TRUE)
 	if(!chippy_brain)
 		return
 	chippy_brain.apply_organ_damage(20 * severity)
@@ -379,7 +379,7 @@
 
 /obj/item/organ/cyberimp/brain/surgical_processor/proc/load_surgeries(mob/living/user, obj/design_holder)
 	balloon_alert(user, "copying designs...")
-	playsound(src, 'sound/machines/terminal/terminal_processing.ogg', 25, TRUE)
+	playsound(src, '../assets/sound/machines/terminal/terminal_processing.ogg', 25, TRUE)
 	if(do_after(user, 1 SECONDS, target = design_holder))
 		if(istype(design_holder, /obj/item/disk/surgery))
 			var/obj/item/disk/surgery/surgery_disk = design_holder
@@ -387,7 +387,7 @@
 		else
 			var/obj/machinery/computer/operating/surgery_computer = design_holder
 			LAZYOR(loaded_surgeries, surgery_computer.advanced_surgeries)
-		playsound(src, 'sound/machines/terminal/terminal_success.ogg', 25, TRUE)
+		playsound(src, '../assets/sound/machines/terminal/terminal_success.ogg', 25, TRUE)
 		return ITEM_INTERACT_SUCCESS
 	return ITEM_INTERACT_BLOCKING
 

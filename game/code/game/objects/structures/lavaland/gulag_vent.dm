@@ -5,7 +5,7 @@
 /obj/structure/gulag_vent
 	name = "work pit"
 	desc = "A timeworn shaft, almost totally mined out. With a bit of effort you might be able to haul something up."
-	icon = 'icons/obj/mining_zones/terrain.dmi'
+	icon = '../assets/icons/obj/mining_zones/terrain.dmi'
 	icon_state = "ore_vent_active"
 	move_resist = MOVE_FORCE_EXTREMELY_STRONG
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF //This thing will take a beating.
@@ -50,4 +50,4 @@
 
 	living_user.visible_message(span_notice("[living_user] hauls a boulder out of [src]."))
 	living_user.apply_damage(stamina_damage_to_inflict, STAMINA)
-	playsound(src, 'sound/items/weapons/genhit.ogg', vol = 50, vary = TRUE)
+	playsound(src, '../assets/sound/items/weapons/genhit.ogg', vol = 50, vary = TRUE)

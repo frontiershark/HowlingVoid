@@ -22,7 +22,7 @@
 
 /obj/effect/anomaly/dimensional/Initialize(mapload, new_lifespan)
 	. = ..()
-	overlays += mutable_appearance('icons/effects/effects.dmi', "dimensional_overlay")
+	overlays += mutable_appearance('../assets/icons/effects/effects.dmi', "dimensional_overlay")
 
 	animate(src, transform = matrix()*0.85, time = 3, loop = -1)
 	animate(transform = matrix(), time = 3, loop = -1)
@@ -96,6 +96,6 @@
 	qdel(src)
 
 /obj/effect/temp_visual/transmute_tile_flash
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	icon_state = "shield-flash"
 	duration = 3

@@ -56,7 +56,7 @@
 
 /obj/effect/spawner/random/food_or_drink/cornchips
 	name = "boritos delivery"
-	icon = 'icons/obj/food/food.dmi'
+	icon = '../assets/icons/obj/food/food.dmi'
 	icon_state = "boritos"
 	loot = list(
 		/obj/item/food/cornchips,
@@ -68,12 +68,12 @@
 
 /obj/effect/spawner/random/food_or_drink/donkpockets/bitrunning
 	name = "donk pocket delivery"
-	icon = 'icons/obj/storage/box.dmi'
+	icon = '../assets/icons/obj/storage/box.dmi'
 	icon_state = "donkpocketbox"
 
 /obj/effect/spawner/random/food_or_drink/readydonk
 	name = "ready donk delivery"
-	icon = 'icons/obj/food/food.dmi'
+	icon = '../assets/icons/obj/food/food.dmi'
 	icon_state = "ready_donk_mac"
 	loot = list(
 		/obj/item/food/ready_donk,

@@ -1,7 +1,7 @@
 /obj/item/target
 	name = "shooting target"
 	desc = "A shooting target."
-	icon = 'icons/obj/structures.dmi'
+	icon = '../assets/icons/obj/structures.dmi'
 	icon_state = "target_h"
 	density = FALSE
 	max_integrity = 1800
@@ -51,7 +51,7 @@
 	if(. != BULLET_ACT_HIT)
 		return
 
-	var/image/bullet_hole = image('icons/effects/effects.dmi', "dent", OBJ_LAYER + 0.5)
+	var/image/bullet_hole = image('../assets/icons/effects/effects.dmi', "dent", OBJ_LAYER + 0.5)
 	bullet_hole.pixel_w = p_x - 1 //offset correction
 	bullet_hole.pixel_z = p_y - 1
 	if(hitting_projectile.damage_type != BRUTE)
@@ -84,4 +84,4 @@
 
 /obj/item/target/clown/bullet_act(obj/projectile/proj)
 	. = ..()
-	playsound(src, 'sound/items/bikehorn.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/bikehorn.ogg', 50, TRUE)

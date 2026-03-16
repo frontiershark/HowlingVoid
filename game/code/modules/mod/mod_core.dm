@@ -1,11 +1,11 @@
 /obj/item/mod/core
 	name = "MOD core"
 	desc = "A non-functional MOD core. Inform the admins if you see this."
-	icon = 'icons/obj/clothing/modsuit/mod_construction.dmi'
+	icon = '../assets/icons/obj/clothing/modsuit/mod_construction.dmi'
 	icon_state = "mod-core"
 	inhand_icon_state = "electronic"
-	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/devices_righthand.dmi'
 	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 1.05, /datum/material/glass = SHEET_MATERIAL_AMOUNT * 1.05)
 	/// MOD unit we are powering.
 	var/obj/item/mod/control/mod
@@ -243,7 +243,7 @@
 		mod.balloon_alert(user, "interrupted!")
 		return
 	mod.balloon_alert(user, "cell removed")
-	playsound(mod, 'sound/machines/click.ogg', 50, TRUE, SILENCED_SOUND_EXTRARANGE)
+	playsound(mod, '../assets/sound/machines/click.ogg', 50, TRUE, SILENCED_SOUND_EXTRARANGE)
 	var/obj/item/cell_to_move = cell
 	cell_to_move.forceMove(drop_location())
 	user.put_in_hands(cell_to_move)
@@ -261,15 +261,15 @@
 		return FALSE
 	if(!mod.open)
 		mod.balloon_alert(user, "cover closed!")
-		playsound(mod, 'sound/machines/scanner/scanbuzz.ogg', 25, TRUE, SILENCED_SOUND_EXTRARANGE)
+		playsound(mod, '../assets/sound/machines/scanner/scanbuzz.ogg', 25, TRUE, SILENCED_SOUND_EXTRARANGE)
 		return FALSE
 	if(cell)
 		mod.balloon_alert(user, "already has cell!")
-		playsound(mod, 'sound/machines/scanner/scanbuzz.ogg', 25, TRUE, SILENCED_SOUND_EXTRARANGE)
+		playsound(mod, '../assets/sound/machines/scanner/scanbuzz.ogg', 25, TRUE, SILENCED_SOUND_EXTRARANGE)
 		return FALSE
 	install_cell(attacking_item)
 	mod.balloon_alert(user, "cell installed")
-	playsound(mod, 'sound/machines/click.ogg', 50, TRUE, SILENCED_SOUND_EXTRARANGE)
+	playsound(mod, '../assets/sound/machines/click.ogg', 50, TRUE, SILENCED_SOUND_EXTRARANGE)
 	return TRUE
 
 /obj/item/mod/core/standard/proc/on_wearer_set(datum/source, mob/user)
@@ -524,7 +524,7 @@
 /obj/item/mod/core/soul
 	name = "MOD soul shard core"
 	desc = "A soul shard haphazardly jammed into a hand-crafted MOD core frame."
-	icon = 'icons/map_icons/items/_item.dmi'
+	icon = '../assets/icons/map_icons/items/_item.dmi'
 	icon_state = "/obj/item/mod/core/soul"
 	post_init_icon_state = "mod-core-soul"
 	var/base_desc

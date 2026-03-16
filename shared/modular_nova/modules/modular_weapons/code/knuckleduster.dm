@@ -11,7 +11,7 @@
 	worn_icon_state = "knuckledusters"
 	w_class = WEIGHT_CLASS_SMALL
 	obj_flags = CONDUCTS_ELECTRICITY
-	hitsound = 'sound/items/weapons/punch1.ogg'
+	hitsound = '../assets/sound/items/weapons/punch1.ogg'
 	force = 5
 	throwforce = 4
 	throw_speed = 3

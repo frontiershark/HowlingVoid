@@ -61,7 +61,7 @@
 /datum/status_effect/cloudstruck/on_creation(mob/living/new_owner, duration = 10 SECONDS)
 	src.duration = duration
 	if(!mob_overlay)
-		mob_overlay = mutable_appearance('icons/effects/eldritch.dmi', "cloud_swirl", ABOVE_MOB_LAYER)
+		mob_overlay = mutable_appearance('../assets/icons/effects/eldritch.dmi', "cloud_swirl", ABOVE_MOB_LAYER)
 	return ..()
 
 /datum/status_effect/cloudstruck/on_apply()
@@ -128,7 +128,7 @@
 	///overlay used to indicate that someone is marked
 	var/mutable_appearance/cosmic_overlay
 	/// icon file for the overlay
-	var/effect_icon = 'icons/effects/eldritch.dmi'
+	var/effect_icon = '../assets/icons/effects/eldritch.dmi'
 	/// icon state for the overlay
 	var/effect_icon_state = "cosmic_ring"
 	/// Storage for the spell caster
@@ -188,7 +188,7 @@
 	///overlay used to indicate that someone is marked
 	var/mutable_appearance/moon_insanity_overlay
 	/// icon file for the overlay
-	var/effect_icon = 'icons/effects/eldritch.dmi'
+	var/effect_icon = '../assets/icons/effects/eldritch.dmi'
 	/// icon state for the overlay
 	var/effect_icon_state = "moon_insanity_overlay"
 
@@ -408,7 +408,7 @@
 /atom/movable/screen/alert/status_effect/eldritch_parade
 	name = "Lunar Parade"
 	desc = "You MUST ENTER THE LUNAR PARADE! FOLLOW THE LIGHTS! LET THEM GUIDE YOU!"
-	icon = 'icons/obj/weapons/guns/projectiles.dmi'
+	icon = '../assets/icons/obj/weapons/guns/projectiles.dmi'
 	icon_state = "lunar_parade"
 
 /datum/status_effect/moon_parade

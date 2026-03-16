@@ -30,7 +30,7 @@
 	desc = "A greataxe of Hearthkin make. The runes on the blades glows a soft blue."
 	icon = 'modular_nova/modules/tribal_extended/icons/tribal_crushers.dmi' //Modified sprite from Roguetown
 	icon_state = "runic_axe"
-	worn_icon = 'icons/mob/clothing/back.dmi'
+	worn_icon = '../assets/icons/mob/clothing/back.dmi'
 	worn_icon_state = "crusher"
 	light_range = RUNIC_LIGHT_RANGE
 	light_power = RUNIC_LIGHT_POWER
@@ -103,19 +103,19 @@
 	for(var/turf/open/aoe in living_targets)
 		if(aoe != spin_center)
 			new /obj/effect/temp_visual/flying_rune(aoe)
-	playsound(usr, 'sound/effects/magic/tail_swing.ogg', 100, TRUE)
+	playsound(usr, '../assets/sound/effects/magic/tail_swing.ogg', 100, TRUE)
 	charged = FALSE
 	attempt_recharge_runes()
 
 ///visual feedback on ability use. Supposedly a glint of the sword's metal.
 /obj/effect/temp_visual/runic_spin
-	icon = 'icons/effects/eldritch.dmi'
+	icon = '../assets/icons/effects/eldritch.dmi'
 	icon_state = "ring_leader_effect"
 	duration = 2
 
 ///Visual feedback small rune pops where the spin happens.
 /obj/effect/temp_visual/flying_rune
-	icon = 'icons/effects/eldritch.dmi'
+	icon = '../assets/icons/effects/eldritch.dmi'
 	icon_state = "small_rune_11"
 	duration = 6
 
@@ -131,12 +131,12 @@
 	if(charged)
 		return
 	charged = TRUE
-	playsound(src.loc, 'sound/effects/magic/cosmic_energy.ogg', 60, TRUE)
+	playsound(src.loc, '../assets/sound/effects/magic/cosmic_energy.ogg', 60, TRUE)
 
 /obj/item/hearthkin_ship_fragment_inactive
 	name = "dormant fragment of the Stjarndrakkr"
 	desc = "A dormant piece of ancient tech, carbon-dated to roughly 300 years ago. One side is etched with strange symbols resembling Ættmál runes, their lines worn and shallow. Tribes whisper that only by carving them anew with a chisel can its purpose be revealed."
-	icon = 'icons/obj/antags/cult/items.dmi'
+	icon = '../assets/icons/obj/antags/cult/items.dmi'
 	icon_state = "cult_sharpener_used"
 	drop_sound = SFX_STONE_DROP
 	pickup_sound = SFX_STONE_PICKUP
@@ -144,7 +144,7 @@
 /obj/item/hearthkin_ship_fragment_active
 	name = "fragment of the Stjarndrakkr"
 	desc = "A piece of ancient tech, carbon-dated to roughly 300 years ago. One side is etched with strange glowing symbols resembling Ættmál runes. Perhaps the natives could uncover its purpose."
-	icon = 'icons/obj/antags/cult/items.dmi'
+	icon = '../assets/icons/obj/antags/cult/items.dmi'
 	icon_state = "cult_sharpener"
 	drop_sound = SFX_STONE_DROP
 	pickup_sound = SFX_STONE_PICKUP
@@ -161,14 +161,14 @@
 		return ITEM_INTERACT_BLOCKING
 
 	user.balloon_alert(user, "begins engraving runes...")
-	playsound(src, 'sound/effects/break_stone.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/effects/break_stone.ogg', 50, TRUE)
 	if(!do_after(user, 30 SECONDS, target = src))
 		user.visible_message(span_warning("[user]'s engraving was interrupted."))
 		return ITEM_INTERACT_BLOCKING
 
 	user.visible_message(span_notice("[user] completes the engraving — the fragment glows faintly."))
 	new /obj/item/hearthkin_ship_fragment_active(get_turf(src))
-	playsound(src, 'sound/effects/break_stone.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/effects/break_stone.ogg', 50, TRUE)
 	qdel(src)
 	return ITEM_INTERACT_SUCCESS
 

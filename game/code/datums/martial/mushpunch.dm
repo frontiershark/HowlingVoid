@@ -28,7 +28,7 @@
 	)
 	to_chat(attacker, span_danger("You [atk_verb] [defender] with such inhuman strength that it sends [defender.p_them()] flying backwards!"))
 	defender.apply_damage(final_damage, attacker.get_attack_type())
-	playsound(defender, 'sound/effects/meteorimpact.ogg', 25, TRUE, -1)
+	playsound(defender, '../assets/sound/effects/meteorimpact.ogg', 25, TRUE, -1)
 	var/throwtarget = get_edge_target_turf(attacker, get_dir(attacker, get_step_away(defender, attacker)))
 	defender.throw_at(throwtarget, 4, 2, attacker)//So stuff gets tossed around at the same time.
 	defender.Paralyze(2 SECONDS)
@@ -38,7 +38,7 @@
 	name = "odd mushroom"
 	desc = "<I>Sapienza Ophioglossoides</I>:An odd mushroom from the flesh of a mushroom person. \
 		It has apparently retained some innate power of its owner, as it quivers with barely-contained POWER!"
-	icon = 'icons/obj/service/hydroponics/seeds.dmi'
+	icon = '../assets/icons/obj/service/hydroponics/seeds.dmi'
 	icon_state = "mycelium-angel"
 
 /obj/item/mushpunch/attack_self(mob/living/user)

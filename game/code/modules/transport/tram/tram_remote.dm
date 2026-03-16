@@ -1,9 +1,9 @@
 /obj/item/assembly/control/transport/remote
 	icon_state = "tramremote_nis"
 	inhand_icon_state = "electronic"
-	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
-	icon = 'icons/obj/devices/remote.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/devices_righthand.dmi'
+	icon = '../assets/icons/obj/devices/remote.dmi'
 	name = "tram remote"
 	desc = "A remote control that can be linked to a tram. This can only go well."
 	w_class = WEIGHT_CLASS_TINY

@@ -33,7 +33,7 @@
 /obj/item/mod/module/pathfinder/Initialize(mapload)
 	. = ..()
 	implant = new(src)
-	jet_icon = image(icon = 'icons/obj/clothing/modsuit/mod_modules.dmi', icon_state = "mod_jet", layer = LOW_ITEM_LAYER)
+	jet_icon = image(icon = '../assets/icons/obj/clothing/modsuit/mod_modules.dmi', icon_state = "mod_jet", layer = LOW_ITEM_LAYER)
 
 
 /obj/item/mod/module/pathfinder/Destroy()
@@ -70,7 +70,7 @@
 		to_chat(user, span_notice("You implant yourself with [implant]."))
 	else
 		target.visible_message(span_notice("[user] implants [target]."), span_notice("[user] implants you with [implant]."))
-	playsound(src, 'sound/effects/spray.ogg', 30, TRUE, -6)
+	playsound(src, '../assets/sound/effects/spray.ogg', 30, TRUE, -6)
 
 /obj/item/mod/module/pathfinder/on_use(mob/activator)
 	. = ..()
@@ -93,7 +93,7 @@
 	balloon_alert(activator, "implanted")
 	if(!(activator == mod.wearer)) // someone else implanted you
 		balloon_alert(mod.wearer, "tracker implanted!")
-	playsound(src, 'sound/effects/spray.ogg', 30, TRUE, -6)
+	playsound(src, '../assets/sound/effects/spray.ogg', 30, TRUE, -6)
 
 /obj/item/mod/module/pathfinder/proc/attach(mob/living/user)
 	if(!ishuman(user))
@@ -105,7 +105,7 @@
 		return
 	mod.quick_deploy(user)
 	human_user.update_action_buttons(TRUE)
-	playsound(mod, 'sound/machines/ping.ogg', 50, TRUE)
+	playsound(mod, '../assets/sound/machines/ping.ogg', 50, TRUE)
 	drain_power(use_energy_cost)
 
 /obj/item/mod/module/pathfinder/proc/recall(mob/recaller)
@@ -151,12 +151,12 @@
 		var/obj/structure/closet/closet = container
 		if (!closet.opened)
 			if (!closet.open())
-				playsound(closet, 'sound/effects/bang.ogg', vol = 50, vary = TRUE)
+				playsound(closet, '../assets/sound/effects/bang.ogg', vol = 50, vary = TRUE)
 				closet.bust_open()
 
 
 	mod.add_overlay(jet_icon)
-	playsound(mod, 'sound/vehicles/rocketlaunch.ogg', vol = 80, vary = FALSE)
+	playsound(mod, '../assets/sound/vehicles/rocketlaunch.ogg', vol = 80, vary = FALSE)
 	var/turf/land_target = get_turf(implant.imp_in)
 	var/obj/structure/closet/supplypod/pod = podspawn(list(
 		"target" = get_turf(mod),
@@ -182,7 +182,7 @@
 	SIGNAL_HANDLER
 	in_transit = FALSE
 	mod.cut_overlay(jet_icon)
-	playsound(mod, 'sound/items/handling/toolbox/toolbox_drop.ogg', vol = 80, vary = FALSE)
+	playsound(mod, '../assets/sound/items/handling/toolbox/toolbox_drop.ogg', vol = 80, vary = FALSE)
 	if (implant?.imp_in?.Adjacent(src))
 		INVOKE_ASYNC(src, PROC_REF(attach), implant.imp_in)
 
@@ -220,7 +220,7 @@
 	check_flags = AB_CHECK_CONSCIOUS
 	background_icon_state = "bg_mod"
 	overlay_icon_state = "bg_mod_border"
-	button_icon = 'icons/mob/actions/actions_mod.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_mod.dmi'
 	button_icon_state = "recall"
 	/// The cooldown for the recall.
 	COOLDOWN_DECLARE(recall_cooldown)

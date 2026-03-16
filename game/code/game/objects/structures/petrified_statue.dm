@@ -96,7 +96,7 @@
 	new_statue.name = "statue of [petrified_mob.name]"
 	if(owner)
 		new_statue.befriend(owner)
-	new_statue.icon = 'icons/blanks/32x32.dmi'
+	new_statue.icon = '../assets/icons/blanks/32x32.dmi'
 	new_statue.icon_state = "nothing"
 	new_statue.appearance_flags |= KEEP_TOGETHER
 	new_statue.copy_overlays(src, cut_old = TRUE)
@@ -115,7 +115,7 @@
 		return FALSE
 	var/obj/structure/statue/petrified/new_statue = new(loc, src, statue_timer, save_brain)
 	new_statue.name = "statue of [name]"
-	new_statue.icon = 'icons/blanks/32x32.dmi'
+	new_statue.icon = '../assets/icons/blanks/32x32.dmi'
 	new_statue.icon_state = "nothing"
 	new_statue.appearance_flags |= KEEP_TOGETHER
 	new_statue.copy_overlays(src, cut_old = TRUE)

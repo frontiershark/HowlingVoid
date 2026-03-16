@@ -4,7 +4,7 @@
 
 /obj/effect/baseturf_helper //Set the baseturfs of every turf in the /area/ it is placed.
 	name = "baseturf editor"
-	icon = 'icons/effects/mapping_helpers.dmi'
+	icon = '../assets/icons/effects/mapping_helpers.dmi'
 	icon_state = ""
 	/// Replacing a specific turf
 	var/list/baseturf_to_replace
@@ -111,11 +111,11 @@
 /obj/effect/mapping_error
 	name = "I AM ERROR"
 	desc = "IF YOU SEE ME, YELL AT A MAPPER!!!"
-	icon = 'icons/effects/mapping_helpers.dmi'
+	icon = '../assets/icons/effects/mapping_helpers.dmi'
 	icon_state = "mapping_error"
 
 /obj/effect/mapping_helpers
-	icon = 'icons/effects/mapping_helpers.dmi'
+	icon = '../assets/icons/effects/mapping_helpers.dmi'
 	icon_state = ""
 	anchored = TRUE
 	// Unless otherwise specified, layer above everything
@@ -1217,7 +1217,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/mapping_helpers/no_atoms_ontop)
 
 /obj/effect/mapping_helpers/broken_floor
 	name = "broken floor"
-	icon = 'icons/turf/damaged.dmi'
+	icon = '../assets/icons/turf/damaged.dmi'
 	icon_state = "damaged1"
 	layer = ABOVE_NORMAL_TURF_LAYER
 	late = TRUE
@@ -1229,7 +1229,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/mapping_helpers/no_atoms_ontop)
 
 /obj/effect/mapping_helpers/burnt_floor
 	name = "burnt floor"
-	icon = 'icons/turf/damaged.dmi'
+	icon = '../assets/icons/turf/damaged.dmi'
 	icon_state = "floorscorched1"
 	layer = ABOVE_NORMAL_TURF_LAYER
 	late = TRUE
@@ -1377,7 +1377,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/mapping_helpers/no_atoms_ontop)
 
 /obj/effect/mapping_helpers/engraving
 	name = "engraving helper"
-	icon = 'icons/turf/wall_overlays.dmi'
+	icon = '../assets/icons/turf/wall_overlays.dmi'
 	icon_state = "engraving2"
 	late = TRUE
 	layer = ABOVE_NORMAL_TURF_LAYER
@@ -1405,7 +1405,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/mapping_helpers/no_atoms_ontop)
 /// Apply to a wall (or floor, technically) to ensure it is instantly destroyed by any explosion, even if usually invulnerable
 /obj/effect/mapping_helpers/bombable_wall
 	name = "bombable wall helper"
-	icon = 'icons/turf/overlays.dmi'
+	icon = '../assets/icons/turf/overlays.dmi'
 	icon_state = "explodable"
 
 /obj/effect/mapping_helpers/bombable_wall/Initialize(mapload)
@@ -1511,7 +1511,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/mapping_helpers/no_atoms_ontop)
 
 /obj/effect/mapping_helpers/wall_dent
 	name = "bullet impact dent"
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	icon_state = "bullet_hole"
 	/// Dent type to spawn
 	var/dent_type = WALL_DENT_SHOT

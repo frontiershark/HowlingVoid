@@ -3,7 +3,7 @@
 	desc = "Grants unlimited movement in darkness."
 	background_icon_state = "bg_alien"
 	overlay_icon_state = "bg_alien_border"
-	button_icon = 'icons/mob/actions/actions_minor_antag.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_minor_antag.dmi'
 	button_icon_state = "ninja_cloak"
 
 	spell_requirements = NONE
@@ -45,7 +45,7 @@
 		exit_jaunt(cast_on)
 		return
 
-	playsound(get_turf(owner), 'sound/effects/nightmare_poof.ogg', 50, TRUE, -1, ignore_walls = FALSE)
+	playsound(get_turf(owner), '../assets/sound/effects/nightmare_poof.ogg', 50, TRUE, -1, ignore_walls = FALSE)
 	cast_on.visible_message(span_boldwarning("[cast_on] melts into the shadows!"))
 	cast_on.SetAllImmobility(0)
 	cast_on.set_stamina_loss(0, FALSE)
@@ -108,7 +108,7 @@
 			reveal_turf.visible_message(span_boldwarning("[jaunter] is revealed by the light!"))
 		else
 			reveal_turf.visible_message(span_boldwarning("[jaunter] emerges from the darkness!"))
-		playsound(reveal_turf, 'sound/effects/nightmare_reappear.ogg', 50, TRUE, -1, ignore_walls = FALSE)
+		playsound(reveal_turf, '../assets/sound/effects/nightmare_reappear.ogg', 50, TRUE, -1, ignore_walls = FALSE)
 
 	return ..()
 

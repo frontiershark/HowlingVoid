@@ -191,7 +191,7 @@
 			hud_list[hud] = list()
 
 		else
-			var/image/I = image('modular_nova/master_files/icons/mob/huds/hud.dmi', src, "")	//NOVA EDIT: original filepath 'icons/mob/huds/hud.dmi'
+			var/image/I = image('modular_nova/master_files/icons/mob/huds/hud.dmi', src, "")	//NOVA EDIT: original filepath '../assets/icons/mob/huds/hud.dmi'
 			I.appearance_flags = RESET_COLOR|PIXEL_SCALE|KEEP_APART
 			hud_list[hud] = I
 		set_hud_image_active(hud, update_huds = FALSE) //by default everything is active. but dont add it to huds to keep control.
@@ -1038,7 +1038,7 @@
 		return mind.grab_ghost(force = force)
 
 ///Notify a ghost that its body is being revived
-/mob/proc/notify_revival(message = "Someone is trying to revive you. Re-enter your corpse if you want to be revived!", sound = 'sound/effects/genetics.ogg', atom/source = null, flashwindow = TRUE)
+/mob/proc/notify_revival(message = "Someone is trying to revive you. Re-enter your corpse if you want to be revived!", sound = '../assets/sound/effects/genetics.ogg', atom/source = null, flashwindow = TRUE)
 	var/mob/dead/observer/ghost = get_ghost()
 	if(ghost)
 		ghost.send_revival_notification(message, sound, source, flashwindow)
@@ -1101,27 +1101,27 @@
 			span_warning("[src] pulses red as [ismob(antimagic_source) ? p_they() : antimagic_source] absorbs magic energy!"),
 			span_userdanger("An intense magical aura pulses around [ismob(antimagic_source) ? "you" : antimagic_source] as it dissipates into the air!"),
 		)
-		antimagic_effect = mutable_appearance('icons/effects/effects.dmi', "shield-red", MOB_SHIELD_LAYER)
+		antimagic_effect = mutable_appearance('../assets/icons/effects/effects.dmi', "shield-red", MOB_SHIELD_LAYER)
 		antimagic_color = LIGHT_COLOR_BLOOD_MAGIC
-		playsound(src, 'sound/effects/magic/magic_block.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/effects/magic/magic_block.ogg', 50, TRUE)
 
 	else if(magic_flags & MAGIC_RESISTANCE_HOLY)
 		visible_message(
 			span_warning("[src] starts to glow as [ismob(antimagic_source) ? p_they() : antimagic_source] emits a halo of light!"),
 			span_userdanger("A feeling of warmth washes over [ismob(antimagic_source) ? "you" : antimagic_source] as rays of light surround your body and protect you!"),
 		)
-		antimagic_effect = mutable_appearance('icons/mob/effects/genetics.dmi', "servitude", -MUTATIONS_LAYER)
+		antimagic_effect = mutable_appearance('../assets/icons/mob/effects/genetics.dmi', "servitude", -MUTATIONS_LAYER)
 		antimagic_color = LIGHT_COLOR_HOLY_MAGIC
-		playsound(src, 'sound/effects/magic/magic_block_holy.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/effects/magic/magic_block_holy.ogg', 50, TRUE)
 
 	else if(magic_flags & MAGIC_RESISTANCE_MIND)
 		visible_message(
 			span_warning("[src] forehead shines as [ismob(antimagic_source) ? p_they() : antimagic_source] repulses magic from their mind!"),
 			span_userdanger("A feeling of cold splashes on [ismob(antimagic_source) ? "you" : antimagic_source] as your forehead reflects magic usering your mind!"),
 		)
-		antimagic_effect = mutable_appearance('icons/mob/effects/genetics.dmi', "telekinesishead", MOB_SHIELD_LAYER)
+		antimagic_effect = mutable_appearance('../assets/icons/mob/effects/genetics.dmi', "telekinesishead", MOB_SHIELD_LAYER)
 		antimagic_color = LIGHT_COLOR_DARK_BLUE
-		playsound(src, 'sound/effects/magic/magic_block_mind.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/effects/magic/magic_block_mind.ogg', 50, TRUE)
 
 	mob_light(range = 2, power = 2, color = antimagic_color, duration = 5 SECONDS)
 	add_overlay(antimagic_effect)

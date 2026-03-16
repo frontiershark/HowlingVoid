@@ -1,19 +1,19 @@
 /obj/item/clothing/under/rank/civilian/curator
 	name = "sensible suit"
 	desc = "It's very... sensible."
-	icon = 'icons/obj/clothing/under/suits.dmi'
+	icon = '../assets/icons/obj/clothing/under/suits.dmi'
 	icon_state = "red_suit"
 	inhand_icon_state = null
-	worn_icon = 'icons/mob/clothing/under/suits.dmi'
+	worn_icon = '../assets/icons/mob/clothing/under/suits.dmi'
 	can_adjust = FALSE
 
 /obj/item/clothing/under/rank/civilian/curator/skirt
 	name = "sensible suitskirt"
 	desc = "It's very... sensible."
-	icon = 'icons/obj/clothing/under/suits.dmi'
+	icon = '../assets/icons/obj/clothing/under/suits.dmi'
 	icon_state = "red_suit_skirt"
 	inhand_icon_state = null
-	worn_icon = 'icons/mob/clothing/under/suits.dmi'
+	worn_icon = '../assets/icons/mob/clothing/under/suits.dmi'
 	body_parts_covered = CHEST|GROIN|ARMS
 	can_adjust = FALSE
 	dying_key = DYE_REGISTRY_JUMPSKIRT
@@ -23,10 +23,10 @@
 /obj/item/clothing/under/rank/civilian/curator/treasure_hunter
 	name = "treasure hunter uniform"
 	desc = "A rugged uniform suitable for treasure hunting."
-	icon = 'icons/obj/clothing/under/civilian.dmi'
+	icon = '../assets/icons/obj/clothing/under/civilian.dmi'
 	icon_state = "curator"
 	inhand_icon_state = null
-	worn_icon = 'icons/mob/clothing/under/civilian.dmi'
+	worn_icon = '../assets/icons/mob/clothing/under/civilian.dmi'
 
 /obj/item/clothing/under/rank/civilian/curator/treasure_hunter/Initialize(mapload)
 	. = ..()
@@ -35,7 +35,7 @@
 /obj/item/clothing/under/rank/civilian/curator/nasa
 	name = "\improper NASA jumpsuit"
 	desc = "It has a NASA logo on it and is made of space-proofed materials."
-	icon = 'icons/map_icons/clothing/under/color.dmi'
+	icon = '../assets/icons/map_icons/clothing/under/color.dmi'
 	icon_state = "/obj/item/clothing/under/color"
 	post_init_icon_state = "jumpsuit"
 	inhand_icon_state = "jumpsuit"

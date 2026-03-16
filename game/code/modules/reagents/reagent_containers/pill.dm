@@ -1,12 +1,12 @@
 /obj/item/reagent_containers/applicator/pill
 	name = "pill"
 	desc = "A tablet or capsule."
-	icon = 'icons/obj/medical/chemical.dmi'
+	icon = '../assets/icons/obj/medical/chemical.dmi'
 	icon_state = "pill"
 	inhand_icon_state = "pill"
 	worn_icon_state = "nothing"
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/medical_righthand.dmi'
 	volume = 50
 	/// How many "layers" we have remaining. Each layer equates to 1 second of digestion
 	var/layers_remaining = 3

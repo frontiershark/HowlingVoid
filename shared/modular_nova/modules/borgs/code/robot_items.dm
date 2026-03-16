@@ -77,7 +77,7 @@
 /obj/item/borg/hydraulic_clamp
 	name = "integrated hydraulic clamp"
 	desc = "A neat way to lift and move around few small packages for quick and painless deliveries!"
-	icon = 'icons/obj/devices/mecha_equipment.dmi' // Just some temporary sprites because I don't have any unique one yet
+	icon = '../assets/icons/obj/devices/mecha_equipment.dmi' // Just some temporary sprites because I don't have any unique one yet
 	icon_state = "mecha_clamp"
 	/// How much power does it draw per operation?
 	var/charge_cost = STANDARD_CELL_CHARGE * 0.02
@@ -94,7 +94,7 @@
 	/// Can it hold mobs? (Dangerous, it is recommended to leave this to FALSE)
 	var/can_hold_mobs = FALSE
 	/// Audio for using the hydraulic clamp.
-	var/clamp_sound = 'sound/vehicles/mecha/hydraulic.ogg'
+	var/clamp_sound = '../assets/sound/vehicles/mecha/hydraulic.ogg'
 	/// Volume of the clamp's loading and unloading noise.
 	var/clamp_sound_volume = 25
 	/// Cooldown for the clamp.
@@ -306,7 +306,7 @@
 /obj/item/borg/paperplane_crossbow
 	name = "paper plane crossbow"
 	desc = "Be careful, don't aim for the eyes- Who am I kidding, <i>definitely</i> aim for the eyes!"
-	icon = 'icons/obj/weapons/guns/energy.dmi'
+	icon = '../assets/icons/obj/weapons/guns/energy.dmi'
 	icon_state = "crossbow"
 	/// How many planes does the crossbow currently have in its internal magazine?
 	var/planes = 4
@@ -364,7 +364,7 @@
 
 	var/obj/item/paperplane/syndicate/hardlight/plane_to_fire = new /obj/item/paperplane/syndicate/hardlight(get_turf(src.loc))
 
-	playsound(src.loc, 'sound/machines/click.ogg', 50, TRUE)
+	playsound(src.loc, '../assets/sound/machines/click.ogg', 50, TRUE)
 	plane_to_fire.throw_at(target, plane_to_fire.throw_range, plane_to_fire.throw_speed, user)
 	COOLDOWN_START(src, shooting_cooldown, shooting_delay)
 	user.visible_message(span_warning("[user] shoots a paper plane at [target]!"))
@@ -462,7 +462,7 @@
 	desc = "A cyborg fitted module resembling the jaws of life."
 	icon = 'modular_nova/modules/borgs/icons/robot_items.dmi'
 	icon_state = "jaws_pry_cyborg"
-	usesound = 'sound/items/tools/jaws_pry.ogg'
+	usesound = '../assets/sound/items/tools/jaws_pry.ogg'
 	force = 10
 	toolspeed = 0.5
 
@@ -471,25 +471,25 @@
 	. += " It's fitted with a [tool_behaviour == TOOL_CROWBAR ? "prying" : "cutting"] head."
 
 /obj/item/crowbar/cyborg/power/attack_self(mob/user)
-	playsound(get_turf(user), 'sound/items/tools/change_jaws.ogg', 50, TRUE)
+	playsound(get_turf(user), '../assets/sound/items/tools/change_jaws.ogg', 50, TRUE)
 	if(tool_behaviour == TOOL_CROWBAR)
 		tool_behaviour = TOOL_WIRECUTTER
 		to_chat(user, span_notice("You attach the cutting jaws to [src]."))
 		icon_state = "jaws_cutter_cyborg"
-		usesound = 'sound/items/tools/jaws_cut.ogg'
+		usesound = '../assets/sound/items/tools/jaws_cut.ogg'
 	else
 		tool_behaviour = TOOL_CROWBAR
 		to_chat(user, span_notice("You attach the prying jaws to [src]."))
 		icon_state = "jaws_pry_cyborg"
-		usesound = 'sound/items/tools/jaws_pry.ogg'
+		usesound = '../assets/sound/items/tools/jaws_pry.ogg'
 
 /obj/item/screwdriver/cyborg/power
 	name =	"automated drill"
 	desc = "A cyborg fitted module resembling the hand drill"
 	icon = 'modular_nova/modules/borgs/icons/robot_items.dmi'
 	icon_state = "drill_screw_cyborg"
-	hitsound = 'sound/items/tools/drill_hit.ogg'
-	usesound = 'sound/items/tools/drill_use.ogg'
+	hitsound = '../assets/sound/items/tools/drill_hit.ogg'
+	usesound = '../assets/sound/items/tools/drill_use.ogg'
 	toolspeed = 0.5
 	random_color = FALSE
 
@@ -498,7 +498,7 @@
 	. += " It's fitted with a [tool_behaviour == TOOL_SCREWDRIVER ? "screw" : "bolt"] head."
 
 /obj/item/screwdriver/cyborg/power/attack_self(mob/user)
-	playsound(get_turf(user), 'sound/items/tools/change_drill.ogg', 50, TRUE)
+	playsound(get_turf(user), '../assets/sound/items/tools/change_drill.ogg', 50, TRUE)
 	if(tool_behaviour == TOOL_SCREWDRIVER)
 		tool_behaviour = TOOL_WRENCH
 		to_chat(user, span_notice("You attach the bolt bit to [src]."))
@@ -511,13 +511,13 @@
 /// Shapeshifter
 /obj/item/borg_shapeshifter
 	name = "cyborg chameleon projector"
-	icon = 'icons/obj/devices/syndie_gadget.dmi'
+	icon = '../assets/icons/obj/devices/syndie_gadget.dmi'
 	icon_state = "shield0"
 	obj_flags = CONDUCTS_ELECTRICITY
 	item_flags = NOBLUDGEON
 	inhand_icon_state = "electronic"
-	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/devices_righthand.dmi'
 	w_class = WEIGHT_CLASS_SMALL
 	var/saved_icon
 	var/saved_bubble_icon
@@ -589,7 +589,7 @@
 
 /obj/item/borg_shapeshifter/proc/toggle(mob/living/silicon/robot/user)
 	if(active)
-		playsound(src, 'sound/effects/pop.ogg', 100, TRUE, -6)
+		playsound(src, '../assets/sound/effects/pop.ogg', 100, TRUE, -6)
 		to_chat(user, span_notice("You deactivate \the [src]."))
 		deactivate(user)
 	else
@@ -597,16 +597,16 @@
 			to_chat(user, span_notice("\the [src] is recharging."))
 			return
 		var/static/list/model_icons = sort_list(list(
-			"Medical" = image(icon = 'icons/mob/silicon/robots.dmi', icon_state = "medical"),
+			"Medical" = image(icon = '../assets/icons/mob/silicon/robots.dmi', icon_state = "medical"),
 			"Cargo" = image(icon = CYBORG_ICON_CARGO, icon_state = "cargoborg"),
-			"Engineer" = image(icon = 'icons/mob/silicon/robots.dmi', icon_state = "engineer"),
-			"Security" = image(icon = 'icons/mob/silicon/robots.dmi', icon_state = "sec"),
-			"Service" = image(icon = 'icons/mob/silicon/robots.dmi', icon_state = "service_f"),
-			"Janitor" = image(icon = 'icons/mob/silicon/robots.dmi', icon_state = "janitor"),
-			"Miner" = image(icon = 'icons/mob/silicon/robots.dmi', icon_state = "miner"),
-			"Peacekeeper" = image(icon = 'icons/mob/silicon/robots.dmi', icon_state = "peace"),
-			"Clown" = image(icon = 'icons/mob/silicon/robots.dmi', icon_state = "clown"),
-			"Syndicate" = image(icon = 'icons/mob/silicon/robots.dmi', icon_state = "synd_sec"),
+			"Engineer" = image(icon = '../assets/icons/mob/silicon/robots.dmi', icon_state = "engineer"),
+			"Security" = image(icon = '../assets/icons/mob/silicon/robots.dmi', icon_state = "sec"),
+			"Service" = image(icon = '../assets/icons/mob/silicon/robots.dmi', icon_state = "service_f"),
+			"Janitor" = image(icon = '../assets/icons/mob/silicon/robots.dmi', icon_state = "janitor"),
+			"Miner" = image(icon = '../assets/icons/mob/silicon/robots.dmi', icon_state = "miner"),
+			"Peacekeeper" = image(icon = '../assets/icons/mob/silicon/robots.dmi', icon_state = "peace"),
+			"Clown" = image(icon = '../assets/icons/mob/silicon/robots.dmi', icon_state = "clown"),
+			"Syndicate" = image(icon = '../assets/icons/mob/silicon/robots.dmi', icon_state = "synd_sec"),
 			"Spider Clan" = image(icon = CYBORG_ICON_NINJA, icon_state = "ninja_engi")
 		))
 		var/model_selection = show_radial_menu(user, user, model_icons, custom_check = CALLBACK(src, PROC_REF(check_menu), user), radius = 42, require_near = TRUE)
@@ -645,7 +645,7 @@
 		qdel(model)
 		animation_playing = TRUE
 		to_chat(user, span_notice("You activate \the [src]."))
-		playsound(src, 'sound/effects/seedling_chargeup.ogg', 100, TRUE, -6)
+		playsound(src, '../assets/sound/effects/seedling_chargeup.ogg', 100, TRUE, -6)
 		var/start = user.filters.len
 		var/X,Y,rsq,i,f
 		for(i=1, i<=7, ++i)
@@ -660,7 +660,7 @@
 			animate(f, offset=f:offset, time=0, loop=3, flags=ANIMATION_PARALLEL)
 			animate(offset=f:offset-1, time=rand()*20+10)
 		if (do_after(user, 5 SECONDS, target=user) && (!activationCost || user.cell.use(activationCost)))
-			playsound(src, 'sound/effects/bamf.ogg', 100, TRUE, -6)
+			playsound(src, '../assets/sound/effects/bamf.ogg', 100, TRUE, -6)
 			to_chat(user, span_notice("You are now disguised."))
 			activate(user)
 		else
@@ -678,7 +678,7 @@
 	var/list/reskin_icons = list()
 	for(var/skin in disguise_model.borg_skins)
 		var/list/details = disguise_model.borg_skins[skin]
-		var/image/reskin = image(icon = details[SKIN_ICON] || 'icons/mob/silicon/robots.dmi', icon_state = details[SKIN_ICON_STATE])
+		var/image/reskin = image(icon = details[SKIN_ICON] || '../assets/icons/mob/silicon/robots.dmi', icon_state = details[SKIN_ICON_STATE])
 		if (!isnull(details[SKIN_FEATURES]))
 			if (TRAIT_R_WIDE in details[SKIN_FEATURES])
 				reskin.pixel_x -= 16

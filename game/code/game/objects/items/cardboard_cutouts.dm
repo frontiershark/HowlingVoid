@@ -2,7 +2,7 @@
 /obj/item/cardboard_cutout
 	name = "cardboard cutout"
 	desc = "A vaguely humanoid cardboard cutout. It's completely blank."
-	icon = 'icons/obj/art/cardboard_cutout.dmi'
+	icon = '../assets/icons/obj/art/cardboard_cutout.dmi'
 	icon_state = "cutout_basic"
 	w_class = WEIGHT_CLASS_BULKY
 	resistance_flags = FLAMMABLE
@@ -50,7 +50,7 @@
 	if(!user.combat_mode || pushed_over || !isturf(loc))
 		return ..()
 	user.visible_message(span_warning("[user] pushes over [src]!"), span_danger("You push over [src]!"))
-	playsound(src, 'sound/items/weapons/genhit.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/weapons/genhit.ogg', 50, TRUE)
 	push_over()
 
 /obj/item/cardboard_cutout/equipped(mob/living/user, slot)
@@ -300,7 +300,7 @@
 	name = "Xenomorph"
 	applied_name = "alien hunter"
 	applied_desc = "A cardboard cutout of a xenomorph."
-	direct_icon = 'icons/mob/nonhuman-player/alien.dmi'
+	direct_icon = '../assets/icons/mob/nonhuman-player/alien.dmi'
 	direct_icon_state = "alienh"
 
 /datum/cardboard_cutout/xenomorph/get_name()
@@ -310,7 +310,7 @@
 	name = "Xenomorph Maid"
 	applied_name = "lusty xenomorph maid"
 	applied_desc = "A cardboard cutout of a xenomorph maid."
-	direct_icon = 'icons/mob/nonhuman-player/alien.dmi'
+	direct_icon = '../assets/icons/mob/nonhuman-player/alien.dmi'
 	direct_icon_state = "maid"
 
 /datum/cardboard_cutout/xenomorph_maid/get_name()
@@ -339,21 +339,21 @@
 	name = "Ian"
 	applied_name = "Ian"
 	applied_desc = "A cardboard cutout of the HoP's beloved corgi."
-	direct_icon = 'icons/mob/simple/pets.dmi'
+	direct_icon = '../assets/icons/mob/simple/pets.dmi'
 	direct_icon_state = "corgi"
 
 /datum/cardboard_cutout/slaughter_demon
 	name = "Slaughter Demon"
 	applied_name = "slaughter demon"
 	applied_desc = "A cardboard cutout of a slaughter demon."
-	direct_icon = 'icons/mob/simple/demon.dmi'
+	direct_icon = '../assets/icons/mob/simple/demon.dmi'
 	direct_icon_state = "slaughter_demon"
 
 /datum/cardboard_cutout/laughter_demon
 	name = "Laughter Demon"
 	applied_name = "laughter demon"
 	applied_desc = "A cardboard cutout of a laughter demon."
-	direct_icon = 'icons/mob/simple/demon.dmi'
+	direct_icon = '../assets/icons/mob/simple/demon.dmi'
 	direct_icon_state = "bow_demon"
 
 /datum/cardboard_cutout/security_officer

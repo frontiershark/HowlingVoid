@@ -57,7 +57,7 @@
 /obj/item/storage/box/snappops
 	name = "snap pop box"
 	desc = "Eight wrappers of fun! Ages 8 and up. Not suitable for children."
-	icon = 'icons/obj/toys/toy.dmi'
+	icon = '../assets/icons/obj/toys/toy.dmi'
 	icon_state = "spbox"
 	illustration = ""
 	storage_type = /datum/storage/box/snappops
@@ -69,16 +69,16 @@
 /obj/item/storage/box/matches
 	name = "matchbox"
 	desc = "A small box of Almost But Not Quite Plasma Premium Matches."
-	icon = 'icons/obj/cigarettes.dmi'
+	icon = '../assets/icons/obj/cigarettes.dmi'
 	icon_state = "matchbox"
 	inhand_icon_state = "zippo"
-	lefthand_file = 'icons/mob/inhands/items_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items_righthand.dmi'
 	worn_icon_state = "lighter"
 	w_class = WEIGHT_CLASS_TINY
 	slot_flags = ITEM_SLOT_BELT
-	drop_sound = 'sound/items/handling/matchbox_drop.ogg'
-	pickup_sound = 'sound/items/handling/matchbox_pickup.ogg'
+	drop_sound = '../assets/sound/items/handling/matchbox_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/matchbox_pickup.ogg'
 	custom_price = PAYCHECK_CREW * 0.4
 	base_icon_state = "matchbox"
 	illustration = null
@@ -108,8 +108,8 @@
 	name = "box of replacement bulbs"
 	desc = "This box is shaped on the inside so that only light tubes and bulbs fit."
 	inhand_icon_state = "syringe_kit"
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/medical_righthand.dmi'
 	foldable_result = /obj/item/stack/sheet/cardboard //BubbleWrap
 	illustration = "light"
 	storage_type = /datum/storage/box/lights
@@ -203,7 +203,7 @@
 /obj/item/storage/box/stickers
 	name = "sticker pack"
 	desc = "A pack of removable stickers. Removable? What a rip off!<br>On the back, <b>DO NOT GIVE TO THE CLOWN!</b> is printed in large lettering."
-	icon = 'icons/obj/toys/stickers.dmi'
+	icon = '../assets/icons/obj/toys/stickers.dmi'
 	icon_state = "stickerpack"
 	illustration = null
 	w_class = WEIGHT_CLASS_TINY

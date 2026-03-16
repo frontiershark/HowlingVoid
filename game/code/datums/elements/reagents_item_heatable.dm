@@ -34,7 +34,7 @@
 		var/cooling = (0 - source.reagents.chem_temp) * extinguisher.cooling_power * 2
 		source.reagents.expose_temperature(cooling)
 		source.balloon_alert(user, "cooled [source]")
-		playsound(source, 'sound/effects/extinguish.ogg', 75, TRUE, -3)
+		playsound(source, '../assets/sound/effects/extinguish.ogg', 75, TRUE, -3)
 		extinguisher.reagents.remove_all(1)
 		return ITEM_INTERACT_SUCCESS
 

@@ -30,7 +30,7 @@
 	if(!do_after(user, 0.2 SECONDS, src))
 		return
 
-	playsound(get_turf(user), 'sound/machines/click.ogg', 10, TRUE)
+	playsound(get_turf(user), '../assets/sound/machines/click.ogg', 10, TRUE)
 	register_machine(multitool.buffer)
 	to_chat(user, span_notice("You link [src] to the console in [multitool]'s buffer."))
 	return ITEM_INTERACT_SUCCESS

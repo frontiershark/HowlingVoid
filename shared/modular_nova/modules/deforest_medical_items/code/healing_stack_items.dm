@@ -10,8 +10,8 @@
 		vulnerable to new damage for several minutes after application."
 	icon = 'modular_nova/modules/deforest_medical_items/icons/stack_items.dmi'
 	icon_state = "subsplint"
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/medical_righthand.dmi'
 	inhand_icon_state = "sampler"
 	gender = PLURAL
 	singular_name = "subdermal splint applicator"
@@ -30,7 +30,7 @@
 		/datum/wound/muscle,
 	)
 	/// The sound we play upon successfully treating the wound
-	var/treatment_sound = 'sound/items/duct_tape/duct_tape_rip.ogg'
+	var/treatment_sound = '../assets/sound/items/duct_tape/duct_tape_rip.ogg'
 
 /// Searches for a wound that this item is capable of treating
 /obj/item/stack/medical/wound_recovery/proc/find_suitable_wound(obj/item/bodypart/limb)
@@ -128,8 +128,8 @@
 		Which red sun may this be referencing? Not even the producers of the balm are sure."
 	icon = 'modular_nova/modules/deforest_medical_items/icons/stack_items.dmi'
 	icon_state = "balm"
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/medical_righthand.dmi'
 	inhand_icon_state = "bandage"
 	gender = PLURAL
 	novariants = TRUE

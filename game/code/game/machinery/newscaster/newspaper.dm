@@ -6,11 +6,11 @@
 /obj/item/newspaper
 	name = "newspaper"
 	desc = "An issue of The Griffon, the newspaper circulating aboard Nanotrasen Space Stations."
-	icon = 'icons/obj/service/bureaucracy.dmi'
+	icon = '../assets/icons/obj/service/bureaucracy.dmi'
 	icon_state = "newspaper"
 	inhand_icon_state = "newspaper"
-	lefthand_file = 'icons/mob/inhands/items/books_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/books_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/books_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/books_righthand.dmi'
 	w_class = WEIGHT_CLASS_SMALL
 	attack_verb_continuous = list("baps")
 	attack_verb_simple = list("bap")
@@ -77,7 +77,7 @@
 	))
 	user.say(";JOURNALISM IS MY CALLING! EVERYBODY APPRECIATES UNBIASED REPORTI-GLORF", forced = "newspaper suicide")
 	var/obj/item/reagent_containers/cup/glass/bottle/whiskey/last_drink = new(user.loc)
-	playsound(user, 'sound/items/drink.ogg', vol = rand(10, 50), vary = TRUE)
+	playsound(user, '../assets/sound/items/drink.ogg', vol = rand(10, 50), vary = TRUE)
 	last_drink.reagents.trans_to(user, last_drink.reagents.total_volume, transferred_by = user)
 	user.visible_message(span_suicide("[user] downs the contents of [last_drink.name] in one gulp! Shoulda stuck to sudoku!"))
 	return TOXLOSS
@@ -97,7 +97,7 @@
 			balloon_alert(user, "interrupted!")
 			return ITEM_INTERACT_BLOCKING
 
-		playsound(src, 'sound/items/duct_tape/duct_tape_rip.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/items/duct_tape/duct_tape_rip.ogg', 50, TRUE)
 		punctured = TRUE
 		// User has additional arms or something, I dunno
 		if (isliving(loc))

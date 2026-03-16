@@ -126,7 +126,7 @@
 	if(isnull(fish_spot))
 		return null
 	var/obj/effect/fishing_float/float = new(get_turf(target), target)
-	playsound(float, 'sound/effects/splash.ogg', 100)
+	playsound(float, '../assets/sound/effects/splash.ogg', 100)
 	if(!PERFORM_ALL_TESTS(fish_sources))
 		var/happiness_percentage = source.ai_controller?.blackboard[BB_BASIC_HAPPINESS] * 0.01
 		var/fishing_speed = 10 SECONDS - round(4 SECONDS * happiness_percentage)
@@ -135,7 +135,7 @@
 			return
 	var/reward_loot = fish_spot.roll_mindless_reward(our_rod, source, target)
 	fish_spot.dispense_reward(reward_loot, source, target)
-	playsound(float, 'sound/effects/bigsplash.ogg', 100)
+	playsound(float, '../assets/sound/effects/bigsplash.ogg', 100)
 	qdel(float)
 
 /obj/item/fishing_rod/mob_fisher

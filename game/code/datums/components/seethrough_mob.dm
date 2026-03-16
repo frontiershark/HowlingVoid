@@ -115,7 +115,7 @@
 /datum/action/cooldown/toggle_seethrough
 	name = "Toggle Seethrough"
 	desc = "Allows you to see behind your massive body and click through it."
-	button_icon = 'icons/mob/actions/actions_xeno.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_xeno.dmi'
 	button_icon_state = "alien_sneak"
 	background_icon_state = "bg_alien"
 	cooldown_time = 1 SECONDS

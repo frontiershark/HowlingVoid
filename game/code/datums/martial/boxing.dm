@@ -266,7 +266,7 @@
 
 	experience_earned *= 2 //Double our experience gain on a crit hit
 
-	playsound(defender, 'sound/effects/coin2.ogg', 40, TRUE)
+	playsound(defender, '../assets/sound/effects/coin2.ogg', 40, TRUE)
 	new /obj/effect/temp_visual/crit(get_turf(defender))
 	skill_experience_adjustment(attacker, defender, experience_earned) //double experience for a successful crit
 

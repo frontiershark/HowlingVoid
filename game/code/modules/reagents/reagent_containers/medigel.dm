@@ -29,12 +29,12 @@
 /obj/item/reagent_containers/medigel
 	name = "medical gel"
 	desc = "A medical gel applicator bottle, designed for precision application, with an unscrewable cap."
-	icon = 'icons/obj/medical/chemical.dmi'
+	icon = '../assets/icons/obj/medical/chemical.dmi'
 	icon_state = "medigel"
 	inhand_icon_state = "spraycan"
 	worn_icon_state = "spraycan"
-	lefthand_file = 'icons/mob/inhands/equipment/hydroponics_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/hydroponics_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/hydroponics_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/hydroponics_righthand.dmi'
 	item_flags = NOBLUDGEON
 	obj_flags = UNIQUE_RENAME
 	initial_reagent_flags = OPENCONTAINER | NO_SPLASH
@@ -93,7 +93,7 @@
 		)
 
 	log_combat(user, interacting_with, "applied", src, reagents.get_reagent_log_string())
-	playsound(src, 'sound/effects/spray.ogg', 30, TRUE, -6)
+	playsound(src, '../assets/sound/effects/spray.ogg', 30, TRUE, -6)
 	reagents.trans_to(interacting_with, amount_per_transfer_from_this, transferred_by = user, methods = apply_type)
 	return ITEM_INTERACT_SUCCESS
 

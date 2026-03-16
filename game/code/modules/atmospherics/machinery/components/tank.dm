@@ -4,7 +4,7 @@
 	name = "pressure tank"
 	desc = "A large vessel containing pressurized gas."
 
-	icon = 'icons/map_icons/objects.dmi'
+	icon = '../assets/icons/map_icons/objects.dmi'
 	icon_state = "/obj/machinery/atmospherics/components/tank"
 	post_init_icon_state = "canister-0"
 	base_icon_state = "canister"
@@ -50,9 +50,9 @@
 
 	/// The sounds that play when the tank is breaking from overpressure
 	var/static/list/breaking_sounds = list(
-		'sound/effects/structure_stress/pop1.ogg',
-		'sound/effects/structure_stress/pop2.ogg',
-		'sound/effects/structure_stress/pop3.ogg',
+		'../assets/sound/effects/structure_stress/pop1.ogg',
+		'../assets/sound/effects/structure_stress/pop2.ogg',
+		'../assets/sound/effects/structure_stress/pop3.ogg',
 	)
 
 	/// Shared images for the knob overlay representing a side of the tank that is open to connections
@@ -74,7 +74,7 @@
 	if(!knob_overlays)
 		knob_overlays = list()
 		for(var/dir in GLOB.cardinals)
-			knob_overlays["[dir]"] = image('icons/obj/pipes_n_cables/stationary_canisters_misc.dmi', icon_state = "knob", dir = dir, layer = FLOAT_LAYER)
+			knob_overlays["[dir]"] = image('../assets/icons/obj/pipes_n_cables/stationary_canisters_misc.dmi', icon_state = "knob", dir = dir, layer = FLOAT_LAYER)
 
 	if(!crack_states)
 		crack_states = list()
@@ -86,7 +86,7 @@
 
 	AddComponent(/datum/component/gas_leaker, leak_rate = 0.05)
 	AddElement(/datum/element/volatile_gas_storage)
-	AddElement(/datum/element/crackable, 'icons/obj/pipes_n_cables/stationary_canisters_misc.dmi', crack_states)
+	AddElement(/datum/element/crackable, '../assets/icons/obj/pipes_n_cables/stationary_canisters_misc.dmi', crack_states)
 
 	RegisterSignal(src, COMSIG_MERGER_ADDING, PROC_REF(merger_adding))
 	RegisterSignal(src, COMSIG_MERGER_REMOVING, PROC_REF(merger_removing))
@@ -329,7 +329,7 @@
 
 	var/static/alpha_filter
 	if(!alpha_filter) // Gotta do this separate since the icon may not be correct at world init
-		alpha_filter = filter(type="alpha", icon = icon('icons/obj/pipes_n_cables/stationary_canisters_misc.dmi', "window-bg"))
+		alpha_filter = filter(type="alpha", icon = icon('../assets/icons/obj/pipes_n_cables/stationary_canisters_misc.dmi', "window-bg"))
 
 	var/list/new_underlays = list()
 	for(var/obj/effect/overlay/gas/gas as anything in air_contents.return_visuals(get_turf(src)))
@@ -528,7 +528,7 @@
 // Tank Frame Structure
 
 /obj/structure/tank_frame
-	icon = 'icons/obj/pipes_n_cables/stationary_canisters_misc.dmi'
+	icon = '../assets/icons/obj/pipes_n_cables/stationary_canisters_misc.dmi'
 	icon_state = "frame"
 	anchored = FALSE
 	density = TRUE

@@ -1,7 +1,7 @@
 /obj/item/fake_identity_kit
 	name = "fake identity kit"
 	desc = "All of the paperwork you need to get a fresh start and a perfect alibi, plus a little digital assistance to insert you into crew records."
-	icon = 'icons/obj/service/bureaucracy.dmi'
+	icon = '../assets/icons/obj/service/bureaucracy.dmi'
 	icon_state = "docs_mulligan"
 	w_class = WEIGHT_CLASS_TINY
 	interaction_flags_click = NEED_LITERACY|NEED_LIGHT|NEED_DEXTERITY|NEED_HANDS|ALLOW_RESTING
@@ -23,7 +23,7 @@
 		return
 
 	user.temporarilyRemoveItemFromInventory(src)
-	user.playsound_local(user, 'sound/items/cards/cardshuffle.ogg', 50, TRUE)
+	user.playsound_local(user, '../assets/sound/items/cards/cardshuffle.ogg', 50, TRUE)
 
 	var/obj/item/card/id/advanced/original_id = user.get_idcard(hand_first = FALSE)
 	if (original_id)
@@ -94,9 +94,9 @@
 	desc = "A radio signaller which uses a backdoor in the NT announcement system to trigger a fake announcement that you have just arrived there, then self-destructs."
 	icon_state = "signaller"
 	inhand_icon_state = "signaler"
-	icon = 'icons/obj/devices/new_assemblies.dmi'
-	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	icon = '../assets/icons/obj/devices/new_assemblies.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/devices_righthand.dmi'
 	interaction_flags_click = NEED_DEXTERITY|NEED_HANDS|ALLOW_RESTING
 
 /obj/item/arrival_announcer/attack_self(mob/living/user, modifiers)

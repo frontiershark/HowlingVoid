@@ -5,7 +5,7 @@
  */
 /area
 	name = "Space"
-	icon = 'icons/area/areas_misc.dmi'
+	icon = '../assets/icons/area/areas_misc.dmi'
 	icon_state = "unknown"
 	layer = AREA_LAYER
 	//Keeping this on the default plane, GAME_PLANE, will make area overlays fail to render on FLOOR_PLANE.
@@ -96,7 +96,7 @@
 	///Does this area immediately play an ambience track upon enter?
 	var/forced_ambience = FALSE
 	///The background droning loop that plays 24/7
-	var/ambient_buzz = 'sound/ambience/general/shipambience.ogg'
+	var/ambient_buzz = '../assets/sound/ambience/general/shipambience.ogg'
 	///The volume of the ambient buzz
 	var/ambient_buzz_vol = 35
 	///Used to decide what the minimum time between ambience is

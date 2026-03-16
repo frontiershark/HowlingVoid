@@ -96,10 +96,10 @@
 	icon = 'modular_nova/modules/cellguns/icons/obj/guns/mediguns/misc.dmi'
 	icon_state = "case_standard"
 	inhand_icon_state = "lockbox"
-	lefthand_file = 'icons/mob/inhands/equipment/briefcase_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/briefcase_righthand.dmi'
-	drop_sound = 'sound/items/handling/ammobox_drop.ogg'
-	pickup_sound =  'sound/items/handling/ammobox_pickup.ogg'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/briefcase_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/briefcase_righthand.dmi'
+	drop_sound = '../assets/sound/items/handling/ammobox_drop.ogg'
+	pickup_sound =  '../assets/sound/items/handling/ammobox_pickup.ogg'
 
 /obj/item/storage/briefcase/medicalgunset/standard
 	name = "VeyMedical CWM-479 cell-powered medigun case"

@@ -1,7 +1,7 @@
 /turf/open/misc/grass
 	name = "grass"
 	desc = "A patch of grass."
-	icon = 'icons/turf/floors.dmi'
+	icon = '../assets/icons/turf/floors.dmi'
 	icon_state = "grass"
 	base_icon_state = "grass"
 	baseturfs = /turf/open/misc/sandy_dirt
@@ -17,9 +17,9 @@
 	smooth_burnt = TRUE
 	layer = HIGH_TURF_LAYER
 	rust_resistance = RUST_RESISTANCE_ORGANIC
-	damaged_dmi = 'icons/turf/floors/grass_damaged.dmi'
+	damaged_dmi = '../assets/icons/turf/floors/grass_damaged.dmi'
 	/// The icon used for smoothing.
-	var/smooth_icon = 'icons/turf/floors/grass.dmi'
+	var/smooth_icon = '../assets/icons/turf/floors/grass.dmi'
 	/// The base icon_state for the broken state.
 	var/base_broken_icon_state = "grass_damaged"
 	/// The base icon_state for the burnt state.

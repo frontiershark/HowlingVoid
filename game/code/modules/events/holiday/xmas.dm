@@ -1,6 +1,6 @@
 /obj/item/toy/xmas_cracker
 	name = "xmas cracker"
-	icon = 'icons/obj/holiday/christmas.dmi'
+	icon = '../assets/icons/obj/holiday/christmas.dmi'
 	icon_state = "cracker"
 	desc = "Directions for use: Requires two people, one to pull each end."
 	w_class = WEIGHT_CLASS_TINY
@@ -31,7 +31,7 @@
 		other_half.cracked = 1
 		other_half.icon_state = "cracker2"
 		target.put_in_active_hand(other_half)
-		playsound(user, 'sound/effects/snap.ogg', 50, TRUE)
+		playsound(user, '../assets/sound/effects/snap.ogg', 50, TRUE)
 		return TRUE
 	return ..()
 
@@ -45,7 +45,7 @@
 
 /obj/effect/spawner/xmastree
 	name = "christmas tree spawner"
-	icon = 'icons/effects/landmarks_static.dmi'
+	icon = '../assets/icons/effects/landmarks_static.dmi'
 	icon_state = "x2"
 	layer = FLY_LAYER
 	plane = ABOVE_GAME_PLANE

@@ -57,7 +57,7 @@ GLOBAL_LIST_INIT(hailer_phrases, list(
 	visor_flags_cover = MASKCOVERSMOUTH | PEPPERPROOF
 	tint = 0
 	fishing_modifier = 0
-	unique_death = 'sound/items/sec_hailer/sec_death.ogg'
+	unique_death = '../assets/sound/items/sec_hailer/sec_death.ogg'
 	COOLDOWN_DECLARE(hailer_cooldown)
 	///Decides the phrases available for use; defines used are the last index of a category of available phrases
 	var/aggressiveness = AGGR_BAD_COP
@@ -100,7 +100,7 @@ GLOBAL_LIST_INIT(hailer_phrases, list(
 /obj/item/clothing/mask/gas/sechailer/cyborg
 	name = "security hailer"
 	desc = "A set of recognizable pre-recorded messages for cyborgs to use when apprehending criminals."
-	icon = 'icons/obj/devices/voice.dmi'
+	icon = '../assets/icons/obj/devices/voice.dmi'
 	icon_state = "taperecorder_idle"
 	slot_flags = null
 	aggressiveness = AGGR_GOOD_COP // Borgs are nicecurity!
@@ -205,7 +205,7 @@ GLOBAL_LIST_INIT(hailer_phrases, list(
 		return
 	COOLDOWN_START(src, whistle_cooldown, 10 SECONDS)
 	user.audible_message("<font color='red' size='5'><b>HALT!</b></font>")
-	playsound(src, 'sound/items/whistle/whistle.ogg', 50, FALSE, 4)
+	playsound(src, '../assets/sound/items/whistle/whistle.ogg', 50, FALSE, 4)
 
 /datum/action/item_action/halt
 	name = "HALT!"
@@ -223,7 +223,7 @@ GLOBAL_LIST_INIT(hailer_phrases, list(
 	if(!COOLDOWN_FINISHED(src, horn_cooldown))
 		return
 	COOLDOWN_START(src, horn_cooldown, 10 SECONDS)
-	playsound(src, 'sound/items/party_horn.ogg', 75, FALSE)
+	playsound(src, '../assets/sound/items/party_horn.ogg', 75, FALSE)
 	flick("party_horn_animated", src)
 
 /datum/action/item_action/toot

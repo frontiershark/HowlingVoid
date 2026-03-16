@@ -1,7 +1,7 @@
 /obj/machinery/door/window
 	name = "interior door"
 	desc = "A strong door."
-	icon = 'icons/obj/doors/windoor.dmi'
+	icon = '../assets/icons/obj/doors/windoor.dmi'
 	icon_state = "left"
 	layer = ABOVE_WINDOW_LAYER
 	closingLayer = ABOVE_WINDOW_LAYER
@@ -119,23 +119,23 @@
 	switch(dir)
 		if(NORTH,SOUTH)
 			if(unres_sides & NORTH)
-				var/mutable_appearance/side_overlay = mutable_appearance('icons/obj/doors/airlocks/station/overlays.dmi', "unres_1", FLOAT_LAYER, src, O_LIGHTING_VISUAL_PLANE, appearance_flags = RESET_COLOR | KEEP_APART)
+				var/mutable_appearance/side_overlay = mutable_appearance('../assets/icons/obj/doors/airlocks/station/overlays.dmi', "unres_1", FLOAT_LAYER, src, O_LIGHTING_VISUAL_PLANE, appearance_flags = RESET_COLOR | KEEP_APART)
 				side_overlay.color = LIGHT_COLOR_DEFAULT
 				side_overlay.pixel_z = dir == NORTH ? 31 : 6
 				. += side_overlay
 			if(unres_sides & SOUTH)
-				var/mutable_appearance/side_overlay = mutable_appearance('icons/obj/doors/airlocks/station/overlays.dmi', "unres_2", FLOAT_LAYER, src, O_LIGHTING_VISUAL_PLANE, appearance_flags = RESET_COLOR | KEEP_APART)
+				var/mutable_appearance/side_overlay = mutable_appearance('../assets/icons/obj/doors/airlocks/station/overlays.dmi', "unres_2", FLOAT_LAYER, src, O_LIGHTING_VISUAL_PLANE, appearance_flags = RESET_COLOR | KEEP_APART)
 				side_overlay.color = LIGHT_COLOR_DEFAULT
 				side_overlay.pixel_z = dir == NORTH ? -6 : -31
 				. += side_overlay
 		if(EAST,WEST)
 			if(unres_sides & EAST)
-				var/mutable_appearance/side_overlay = mutable_appearance('icons/obj/doors/airlocks/station/overlays.dmi', "unres_4", FLOAT_LAYER, src, O_LIGHTING_VISUAL_PLANE, appearance_flags = RESET_COLOR | KEEP_APART)
+				var/mutable_appearance/side_overlay = mutable_appearance('../assets/icons/obj/doors/airlocks/station/overlays.dmi', "unres_4", FLOAT_LAYER, src, O_LIGHTING_VISUAL_PLANE, appearance_flags = RESET_COLOR | KEEP_APART)
 				side_overlay.color = LIGHT_COLOR_DEFAULT
 				side_overlay.pixel_w = dir == EAST ? 31 : 6
 				. += side_overlay
 			if(unres_sides & WEST)
-				var/mutable_appearance/side_overlay = mutable_appearance('icons/obj/doors/airlocks/station/overlays.dmi', "unres_8", FLOAT_LAYER, src, O_LIGHTING_VISUAL_PLANE, appearance_flags = RESET_COLOR | KEEP_APART)
+				var/mutable_appearance/side_overlay = mutable_appearance('../assets/icons/obj/doors/airlocks/station/overlays.dmi', "unres_8", FLOAT_LAYER, src, O_LIGHTING_VISUAL_PLANE, appearance_flags = RESET_COLOR | KEEP_APART)
 				side_overlay.color = LIGHT_COLOR_DEFAULT
 				side_overlay.pixel_w = dir == EAST ? -6 : -31
 				. += side_overlay
@@ -249,7 +249,7 @@
 		operating = TRUE
 
 	run_animation(DOOR_OPENING_ANIMATION)
-	playsound(src, 'sound/machines/windowdoor.ogg', 100, TRUE)
+	playsound(src, '../assets/sound/machines/windowdoor.ogg', 100, TRUE)
 	var/passable_delay = animation_segment_delay(DOOR_OPENING_PASSABLE)
 	sleep(passable_delay)
 	set_density(FALSE)
@@ -293,7 +293,7 @@
 
 	operating = TRUE
 	run_animation(DOOR_CLOSING_ANIMATION)
-	playsound(src, 'sound/machines/windowdoor.ogg', 100, TRUE)
+	playsound(src, '../assets/sound/machines/windowdoor.ogg', 100, TRUE)
 	var/unpassable_delay = animation_segment_delay(DOOR_CLOSING_UNPASSABLE)
 	sleep(unpassable_delay)
 	set_density(TRUE)
@@ -328,9 +328,9 @@
 /obj/machinery/door/window/play_attack_sound(damage_amount, damage_type = BRUTE, damage_flag = 0)
 	switch(damage_type)
 		if(BRUTE)
-			playsound(src, 'sound/effects/glass/glasshit.ogg', 90, TRUE)
+			playsound(src, '../assets/sound/effects/glass/glasshit.ogg', 90, TRUE)
 		if(BURN)
-			playsound(src, 'sound/items/tools/welder.ogg', 100, TRUE)
+			playsound(src, '../assets/sound/items/tools/welder.ogg', 100, TRUE)
 
 /obj/machinery/door/window/on_deconstruction(disassembled)
 	if(disassembled)
@@ -465,7 +465,7 @@
 	if(istype(I, /obj/item/crowbar/power))
 		var/obj/item/crowbar/power/power_tool = I
 		if(power_tool.limit_jaws_access && forced)
-			playsound(src.loc, 'sound/machines/buzz/buzz-sigh.ogg', 50, FALSE)
+			playsound(src.loc, '../assets/sound/machines/buzz/buzz-sigh.ogg', 50, FALSE)
 			user.balloon_alert(user, "cannot pry open!")
 			return
 

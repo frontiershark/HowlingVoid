@@ -90,10 +90,10 @@
 	var/area_name = get_area_name(get_turf(owner))
 	// All "hearers" hear the same sound.
 	var/sound = pick(
-		'sound/items/knell/knell1.ogg',
-		'sound/items/knell/knell2.ogg',
-		'sound/items/knell/knell3.ogg',
-		'sound/items/knell/knell4.ogg',
+		'../assets/sound/items/knell/knell1.ogg',
+		'../assets/sound/items/knell/knell2.ogg',
+		'../assets/sound/items/knell/knell3.ogg',
+		'../assets/sound/items/knell/knell4.ogg',
 	)
 
 

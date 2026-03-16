@@ -48,7 +48,7 @@
 /turf/open/floor/plating/snowed
 	name = "snowed-over plating"
 	desc = "A section of heated plating, helps keep the snow from stacking up too high."
-	icon = 'icons/turf/snow.dmi'
+	icon = '../assets/icons/turf/snow.dmi'
 	icon_state = "snowplating"
 	base_icon_state = "snowplating"
 	initial_gas_mix = FROZEN_ATMOS
@@ -72,7 +72,7 @@
 	planetary_atmos = FALSE
 
 /turf/open/floor/plating/snowed/smoothed
-	icon = 'icons/turf/floors/snow_turf.dmi'
+	icon = '../assets/icons/turf/floors/snow_turf.dmi'
 	icon_state = "snow_turf-0"
 	base_icon_state = "snow_turf"
 	smoothing_flags = SMOOTH_BITMASK | SMOOTH_BORDER

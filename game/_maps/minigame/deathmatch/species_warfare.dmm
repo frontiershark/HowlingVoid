@@ -281,7 +281,7 @@
 	},
 /turf/open/chasm{
 	icon_state = "wood";
-	icon = 'icons/turf/floors.dmi';
+	icon = '../assets/icons/turf/floors.dmi';
 	base_icon_state = "wood";
 	name = "Dorms 4"
 	},
@@ -807,7 +807,7 @@
 "BH" = (
 /turf/open/chasm{
 	icon_state = "wood";
-	icon = 'icons/turf/floors.dmi';
+	icon = '../assets/icons/turf/floors.dmi';
 	base_icon_state = "wood";
 	name = "Dorms 4"
 	},

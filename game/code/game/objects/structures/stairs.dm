@@ -11,7 +11,7 @@
 
 /obj/structure/stairs
 	name = "stairs"
-	icon = 'icons/obj/stairs.dmi'
+	icon = '../assets/icons/obj/stairs.dmi'
 	icon_state = "stairs"
 	base_icon_state = "stairs"
 	anchored = TRUE
@@ -208,7 +208,7 @@
 
 /obj/structure/stairs/proc/get_pointing_image()
 	PROTECTED_PROC(TRUE)
-	var/image/point_image = image('icons/hud/screen_gen.dmi', src, "arrow_large_white_still")
+	var/image/point_image = image('../assets/icons/hud/screen_gen.dmi', src, "arrow_large_white_still")
 	point_image.color = COLOR_DARK_MODERATE_LIME_GREEN
 	point_image.appearance_flags |= KEEP_APART
 	point_image.transform = matrix().Turn(dir2angle(REVERSE_DIR(dir)))
@@ -322,7 +322,7 @@
 /obj/structure/stairs_frame
 	name = "stairs frame"
 	desc = "Everything you need to call something a staircase, aside from the stuff you actually step on."
-	icon = 'icons/obj/stairs.dmi'
+	icon = '../assets/icons/obj/stairs.dmi'
 	icon_state = "stairs_frame"
 	density = FALSE
 	anchored = FALSE
@@ -356,10 +356,10 @@
 		return TRUE
 	if(anchored)
 		anchored = FALSE
-		playsound(loc, 'sound/items/deconstruct.ogg', 50, TRUE)
+		playsound(loc, '../assets/sound/items/deconstruct.ogg', 50, TRUE)
 		return TRUE
 	anchored = TRUE
-	playsound(loc, 'sound/items/deconstruct.ogg', 50, TRUE)
+	playsound(loc, '../assets/sound/items/deconstruct.ogg', 50, TRUE)
 	return TRUE
 
 /obj/structure/stairs_frame/wrench_act_secondary(mob/living/user, obj/item/used_tool)
@@ -367,7 +367,7 @@
 	used_tool.play_tool_sound(src)
 	if(!used_tool.use_tool(src, user, 3 SECONDS))
 		return TRUE
-	playsound(loc, 'sound/items/deconstruct.ogg', 50, TRUE)
+	playsound(loc, '../assets/sound/items/deconstruct.ogg', 50, TRUE)
 	deconstruct(TRUE)
 	return TRUE
 

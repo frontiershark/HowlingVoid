@@ -13,7 +13,7 @@
 
 /datum/component/sound_player/Initialize(
 	volume = 30,
-	sounds = list('sound/items/bikehorn.ogg'),
+	sounds = list('../assets/sound/items/bikehorn.ogg'),
 	uses = -1,
 	signal_list = list(COMSIG_ATOM_ATTACK_HAND),
 )

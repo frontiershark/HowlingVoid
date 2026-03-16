@@ -1,5 +1,5 @@
 /datum/hud/dextrous/voidwalker
-	ui_style = 'icons/hud/screen_voidwalker.dmi'
+	ui_style = '../assets/icons/hud/screen_voidwalker.dmi'
 
 /datum/hud/dextrous/voidwalker/New(mob/living/owner)
 	. = ..()
@@ -31,7 +31,7 @@
 
 /atom/movable/screen/space_camo
 	name = "space camouflage toggle"
-	icon = 'icons/hud/screen_voidwalker.dmi'
+	icon = '../assets/icons/hud/screen_voidwalker.dmi'
 	icon_state = "camo_toggle"
 
 	/// Wheter or not we're toggled on or off
@@ -55,7 +55,7 @@
 
 /atom/movable/screen/vomit_jump
 	name = "vomit tracker"
-	icon = 'icons/hud/screen_voidwalker.dmi'
+	icon = '../assets/icons/hud/screen_voidwalker.dmi'
 	icon_state = "template"
 	/// So we can sort of loop through it
 	var/index = 1
@@ -110,4 +110,4 @@
 	index = (index % vomits.len) + 1
 
 	holder.forceMove(get_step(vomits[index], pick(GLOB.alldirs)))
-	usr.playsound_local(usr, 'sound/effects/phasein.ogg', 50, FALSE)
+	usr.playsound_local(usr, '../assets/sound/effects/phasein.ogg', 50, FALSE)

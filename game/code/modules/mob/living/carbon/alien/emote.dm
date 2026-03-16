@@ -17,4 +17,4 @@
 
 /datum/emote/living/alien/roar/get_sound(mob/living/user)
 	if(isalienadult(user))
-		return 'sound/mobs/non-humanoids/hiss/hiss5.ogg'
+		return '../assets/sound/mobs/non-humanoids/hiss/hiss5.ogg'

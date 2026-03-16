@@ -4,8 +4,8 @@
 	icon_state = "bio"
 	inhand_icon_state = "bio_hood"
 	desc = "A hood that protects the head and face from biological contaminants."
-	icon = 'icons/obj/clothing/head/bio.dmi'
-	worn_icon = 'icons/mob/clothing/head/bio.dmi'
+	icon = '../assets/icons/obj/clothing/head/bio.dmi'
+	worn_icon = '../assets/icons/mob/clothing/head/bio.dmi'
 	icon_state = "bio"
 	inhand_icon_state = "bio_hood"
 	clothing_flags = THICKMATERIAL | BLOCK_GAS_SMOKE_EFFECT | SNUG_FIT | STACKABLE_HELMET_EXEMPT | HEADINTERNALS
@@ -31,9 +31,9 @@
 /obj/item/clothing/suit/bio_suit
 	name = "bio suit"
 	desc = "A suit that protects against biological contamination."
-	icon = 'icons/obj/clothing/suits/bio.dmi'
+	icon = '../assets/icons/obj/clothing/suits/bio.dmi'
 	icon_state = "bio"
-	worn_icon = 'icons/mob/clothing/suits/bio.dmi'
+	worn_icon = '../assets/icons/mob/clothing/suits/bio.dmi'
 	inhand_icon_state = "bio_suit"
 	w_class = WEIGHT_CLASS_BULKY
 	clothing_flags = THICKMATERIAL

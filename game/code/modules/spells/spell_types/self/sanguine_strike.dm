@@ -9,7 +9,7 @@
 	desc = "Enchants your next weapon strike to deal more damage, heal you for damage dealt, and refill blood."
 	button_icon_state = "charge"
 
-	sound = 'sound/effects/magic/charge.ogg'
+	sound = '../assets/sound/effects/magic/charge.ogg'
 	// makes this spell not take blood from splattercasting
 	school = SCHOOL_SANGUINE
 	cooldown_time = 60 SECONDS
@@ -66,8 +66,8 @@
 	var/mob/living/living_target = target
 	if(living_target.get_blood_volume() < BLOOD_VOLUME_SURVIVE)
 		return
-	playsound(target, 'sound/effects/wounds/crackandbleed.ogg', 100)
-	playsound(target, 'sound/effects/magic/charge.ogg', 100)
+	playsound(target, '../assets/sound/effects/wounds/crackandbleed.ogg', 100)
+	playsound(target, '../assets/sound/effects/magic/charge.ogg', 100)
 	var/attack_direction = get_dir(user, living_target)
 	if(iscarbon(living_target))
 		var/mob/living/carbon/carbon_target = living_target

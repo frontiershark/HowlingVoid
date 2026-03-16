@@ -81,5 +81,5 @@
 ///Static bluespace stream used in its ghost poll icon.
 /obj/effect/bluespace_stream
 	name = "bluespace stream"
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	icon_state = "bluestream"

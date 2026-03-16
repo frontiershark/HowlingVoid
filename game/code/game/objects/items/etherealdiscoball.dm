@@ -1,7 +1,7 @@
 /obj/item/etherealballdeployer
 	name = "portable ethereal disco ball"
 	desc = "Press the button for a deployment of slightly-unethical PARTY!"
-	icon = 'icons/obj/devices/remote.dmi'
+	icon = '../assets/icons/obj/devices/remote.dmi'
 	icon_state = "ethdisco"
 
 /obj/item/etherealballdeployer/attack_self(mob/living/carbon/user)
@@ -13,7 +13,7 @@
 /obj/structure/etherealball
 	name = "ethereal disco ball"
 	desc = "The ethics of this discoball are questionable."
-	icon = 'icons/obj/machines/floor.dmi'
+	icon = '../assets/icons/obj/machines/floor.dmi'
 	icon_state = "ethdisco_head_0"
 	anchored = TRUE
 	density = TRUE

@@ -10,7 +10,7 @@
 	production = 4
 	potency = 15
 	growthstages = 4
-	growing_icon = 'icons/obj/service/hydroponics/growing_vegetables.dmi'
+	growing_icon = '../assets/icons/obj/service/hydroponics/growing_vegetables.dmi'
 	icon_grow = "soybean-grow"
 	icon_dead = "soybean-dead"
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
@@ -55,7 +55,7 @@
 //Now squeezable for imitation carpmeat
 /obj/item/food/grown/koibeans/attack_self(mob/living/user)
 	user.visible_message(span_notice("[user] crushes [src] into a slab of carplike meat."), span_notice("You crush [src] into something that resembles a slab of carplike meat."))
-	playsound(user, 'sound/effects/blob/blobattack.ogg', 50, TRUE)
+	playsound(user, '../assets/sound/effects/blob/blobattack.ogg', 50, TRUE)
 	var/obj/item/food/fishmeat/carp/imitation/fishie = new(null)
 	fishie.reagents.set_all_reagents_purity(seed.get_reagent_purity())
 	qdel(src)
@@ -87,7 +87,7 @@
 
 /obj/item/food/grown/butterbeans/attack_self(mob/living/user)
 	user.visible_message(span_notice("[user] crushes [src] into a pat of butter."), span_notice("You crush [src] into something that resembles butter."))
-	playsound(user, 'sound/effects/blob/blobattack.ogg', 50, TRUE)
+	playsound(user, '../assets/sound/effects/blob/blobattack.ogg', 50, TRUE)
 	var/obj/item/food/butterslice/butties = new(null)
 	butties.reagents.set_all_reagents_purity(seed.get_reagent_purity())
 	qdel(src)
@@ -108,7 +108,7 @@
 	potency = 10
 	growthstages = 4
 	icon_dead = "bean-dead"
-	growing_icon = 'icons/obj/service/hydroponics/growing_fruits.dmi'
+	growing_icon = '../assets/icons/obj/service/hydroponics/growing_fruits.dmi'
 	genes = list(/datum/plant_gene/trait/never_mutate, /datum/plant_gene/trait/repeated_harvest)
 	mutatelist = list(/obj/item/seeds/greenbean/jump)
 	reagents_add = list(/datum/reagent/consumable/nutriment/vitamin = 0.04, /datum/reagent/medicine/c2/multiver = 0.04) //They're good for you!

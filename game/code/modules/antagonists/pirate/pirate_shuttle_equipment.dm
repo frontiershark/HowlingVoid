@@ -3,7 +3,7 @@
 /obj/machinery/shuttle_scrambler
 	name = "Data Siphon"
 	desc = "This heap of machinery steals credits and data from unprotected systems and locks down cargo shuttles."
-	icon = 'icons/obj/machines/dominator.dmi'
+	icon = '../assets/icons/obj/machines/dominator.dmi'
 	icon_state = "dominator"
 	density = TRUE
 	/// Is the machine siphoning right now
@@ -123,7 +123,7 @@
 /obj/machinery/loot_locator
 	name = "Booty Locator"
 	desc = "This sophisticated machine scans the nearby space for items of value."
-	icon = 'icons/obj/machines/research.dmi'
+	icon = '../assets/icons/obj/machines/research.dmi'
 	icon_state = "tdoppler"
 	density = TRUE
 	/// Cooldown on locating booty.
@@ -172,7 +172,7 @@
 //Pad & Pad Terminal
 /obj/machinery/piratepad
 	name = "cargo hold pad"
-	icon = 'icons/obj/machines/telepad.dmi'
+	icon = '../assets/icons/obj/machines/telepad.dmi'
 	icon_state = "lpad-idle-off"
 	///This is the icon_state that this telepad uses when it's not in use.
 	var/idle_state = "lpad-idle-off"
@@ -329,7 +329,7 @@
 		for(var/datum/export/exported_datum in report.total_amount)
 			total_report.total_amount[exported_datum] += report.total_amount[exported_datum]
 			total_report.total_value[exported_datum] += report.total_value[exported_datum]
-		playsound(loc, 'sound/machines/wewewew.ogg', 70, TRUE)
+		playsound(loc, '../assets/sound/machines/wewewew.ogg', 70, TRUE)
 
 	points += value
 
@@ -439,7 +439,7 @@
 	var/mob_cost = get_cost(sold_item)
 	sold_item.process_capture(mob_cost, mob_cost * 1.2)
 	do_sparks(8, FALSE, sold_item)
-	playsound(picked_turf, 'sound/items/weapons/emitter2.ogg', 25, TRUE)
+	playsound(picked_turf, '../assets/sound/items/weapons/emitter2.ogg', 25, TRUE)
 	sold_item.flash_act()
 	sold_item.adjust_confusion(10 SECONDS)
 	sold_item.adjust_dizzy(10 SECONDS)

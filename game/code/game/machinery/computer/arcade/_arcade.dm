@@ -28,13 +28,13 @@
 		var/static/list/radial_menu_options
 		if(!radial_menu_options)
 			radial_menu_options = list(
-				"Reset Cabinet" = image(icon = 'icons/hud/radial.dmi', icon_state = "radial_reset"),
-				"Cancel" = image(icon = 'icons/hud/radial.dmi', icon_state = "radial_close"),
+				"Reset Cabinet" = image(icon = '../assets/icons/hud/radial.dmi', icon_state = "radial_reset"),
+				"Cancel" = image(icon = '../assets/icons/hud/radial.dmi', icon_state = "radial_close"),
 			)
 		var/radial_reset_menu = show_radial_menu(user, src, radial_menu_options, require_near = TRUE)
 		if(radial_reset_menu != "Reset Cabinet")
 			return ITEM_INTERACT_BLOCKING
-		playsound(loc, 'sound/items/rattling_keys.ogg', 25, TRUE)
+		playsound(loc, '../assets/sound/items/rattling_keys.ogg', 25, TRUE)
 		if(!do_after(user, 10 SECONDS, src))
 			return ITEM_INTERACT_BLOCKING
 		balloon_alert(user, "cabinet reset")
@@ -96,7 +96,7 @@
 		else
 			prizeselect = pick_weight(GLOB.arcade_prize_pool)
 		var/atom/movable/the_prize = new prizeselect(get_turf(src))
-		playsound(src, 'sound/machines/machine_vend.ogg', 50, TRUE, extrarange = -3)
+		playsound(src, '../assets/sound/machines/machine_vend.ogg', 50, TRUE, extrarange = -3)
 		visible_message(span_notice("[src] dispenses [the_prize]!"), span_notice("You hear a chime and a clunk."))
 
 /obj/machinery/computer/arcade/proc/victory_tickets(tickets, sound = TRUE)
@@ -104,4 +104,4 @@
 	visible_message(span_notice("[src] dispenses [tickets] ticket\s!"))
 	new /obj/item/stack/arcadeticket((get_turf(src)), tickets)
 	if(sound)
-		playsound(loc, 'sound/machines/arcade/win.ogg', 40)
+		playsound(loc, '../assets/sound/machines/arcade/win.ogg', 40)

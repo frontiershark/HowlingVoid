@@ -116,7 +116,7 @@
 	armor_type = /datum/armor/latex_gloves
 	clothing_traits = list(TRAIT_QUICK_CARRY)
 	resistance_flags = NONE
-	equip_sound = 'sound/items/equip/glove_equip.ogg'
+	equip_sound = '../assets/sound/items/equip/glove_equip.ogg'
 
 /datum/armor/latex_gloves
 	bio = 100
@@ -274,4 +274,4 @@
 	if(damage)
 		var/body_zone = pick(BODY_ZONE_R_ARM, BODY_ZONE_L_ARM)
 		user.apply_damage(damage, BRUTE, body_zone, user.run_armor_check(body_zone, MELEE))
-		playsound(src,'sound/items/weapons/bite.ogg', damage * 2, TRUE)
+		playsound(src,'../assets/sound/items/weapons/bite.ogg', damage * 2, TRUE)

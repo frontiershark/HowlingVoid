@@ -6,10 +6,10 @@
 	name = "latex glove"
 	desc = "Sterile and airtight."
 	icon_state = "latexballoon"
-	icon = 'icons/obj/weapons/hand.dmi'
+	icon = '../assets/icons/obj/weapons/hand.dmi'
 	inhand_icon_state = "greyscale_gloves"
-	lefthand_file = 'icons/mob/inhands/clothing/gloves_righthand.dmi'
-	righthand_file = 'icons/mob/inhands/clothing/gloves_lefthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/clothing/gloves_righthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/clothing/gloves_lefthand.dmi'
 	force = 0
 	throwforce = 0
 	w_class = WEIGHT_CLASS_TINY
@@ -34,8 +34,8 @@
 	switch(state)
 		if(INFLATED)
 			icon_state = "latexballoon_blow"
-			lefthand_file = 'icons/mob/inhands/items_lefthand.dmi'
-			righthand_file = 'icons/mob/inhands/items_righthand.dmi'
+			lefthand_file = '../assets/icons/mob/inhands/items_lefthand.dmi'
+			righthand_file = '../assets/icons/mob/inhands/items_righthand.dmi'
 			inhand_icon_state = "latexballoon"
 		if(POPPED)
 			icon_state = "latexballoon_bursted"
@@ -65,7 +65,7 @@
 		burst() // too much air, pop it!
 		return
 
-	playsound(src, 'sound/items/modsuit/inflate_bloon.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/modsuit/inflate_bloon.ogg', 50, TRUE)
 
 	balloon_alert(user, "you blow up the balloon!") // because it's a balloon obviously
 
@@ -82,7 +82,7 @@
 		return
 
 	set_state(POPPED)
-	playsound(src, 'sound/items/balloon_pop.ogg', 75, TRUE)
+	playsound(src, '../assets/sound/items/balloon_pop.ogg', 75, TRUE)
 	loc.assume_air(air_contents)
 
 /obj/item/latexballoon/ex_act(severity, target)

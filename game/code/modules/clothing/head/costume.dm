@@ -1,6 +1,6 @@
 /obj/item/clothing/head/costume
-	icon = 'icons/obj/clothing/head/costume.dmi'
-	worn_icon = 'icons/mob/clothing/head/costume.dmi'
+	icon = '../assets/icons/obj/clothing/head/costume.dmi'
+	worn_icon = '../assets/icons/mob/clothing/head/costume.dmi'
 	abstract_type = /obj/item/clothing/head/costume
 
 /obj/item/clothing/head/costume/powdered_wig
@@ -18,8 +18,8 @@
 
 /obj/item/clothing/head/syndicatefake
 	name = "black space-helmet replica"
-	icon = 'icons/obj/clothing/head/spacehelm.dmi'
-	worn_icon = 'icons/mob/clothing/head/spacehelm.dmi'
+	icon = '../assets/icons/obj/clothing/head/spacehelm.dmi'
+	worn_icon = '../assets/icons/mob/clothing/head/spacehelm.dmi'
 	icon_state = "syndicate-helm-black-red"
 	inhand_icon_state = "syndicate-helm-black-red"
 	desc = "A plastic replica of a Syndicate agent's space helmet. You'll look just like a real murderous Syndicate agent in this! This is a toy, it is not made for use in space!"
@@ -55,7 +55,7 @@
 	name = "maid headband"
 	desc = "Just like from one of those chinese cartoons!"
 	greyscale_colors = "#494955#EEEEEE"
-	icon = 'icons/map_icons/clothing/head/_head.dmi'
+	icon = '../assets/icons/map_icons/clothing/head/_head.dmi'
 	icon_state = "/obj/item/clothing/head/costume/maid_headband"
 	post_init_icon_state = "maid"
 	greyscale_config = /datum/greyscale_config/maid_headband
@@ -147,7 +147,7 @@
 
 /obj/item/clothing/head/costume/fancy
 	name = "fancy hat"
-	icon = 'icons/map_icons/clothing/head/_head.dmi'
+	icon = '../assets/icons/map_icons/clothing/head/_head.dmi'
 	icon_state = "/obj/item/clothing/head/costume/fancy"
 	post_init_icon_state = "fancy_hat"
 	greyscale_config = /datum/greyscale_config/fancy_hat
@@ -157,7 +157,7 @@
 
 /obj/item/clothing/head/costume/football_helmet
 	name = "football helmet"
-	icon = 'icons/map_icons/clothing/head/_head.dmi'
+	icon = '../assets/icons/map_icons/clothing/head/_head.dmi'
 	icon_state = "/obj/item/clothing/head/costume/football_helmet"
 	post_init_icon_state = "football_helmet"
 	greyscale_config = /datum/greyscale_config/football_helmet
@@ -170,8 +170,8 @@
 	desc = "A mysterious headgear made from the hollowed out remains of a status display. How very retro-retro-futuristic of you."
 	icon_state = "IPC_helmet"
 	inhand_icon_state = "syringe_kit"
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi' //Grandfathered in from the wallframe for status displays.
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/medical_lefthand.dmi' //Grandfathered in from the wallframe for status displays.
+	righthand_file = '../assets/icons/mob/inhands/equipment/medical_righthand.dmi'
 	clothing_flags = SNUG_FIT
 	flags_cover = HEADCOVERSEYES|HEADCOVERSMOUTH
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDESNOUT
@@ -204,7 +204,7 @@
 	inhand_icon_state = null
 	equip_sound = SFX_HEADSET_EQUIP
 	pickup_sound = SFX_HEADSET_PICKUP
-	drop_sound = 'sound/items/handling/headset/headset_drop1.ogg'
+	drop_sound = '../assets/sound/items/handling/headset/headset_drop1.ogg'
 
 /obj/item/clothing/head/costume/yuri
 	name = "yuri initiate helmet"
@@ -239,8 +239,8 @@
 /obj/item/clothing/head/costume/knight
 	name = "fake medieval helmet"
 	desc = "A classic metal helmet. Though, this one seems to be very obviously fake..."
-	icon = 'icons/obj/clothing/head/helmet.dmi'
-	worn_icon = 'icons/mob/clothing/head/helmet.dmi'
+	icon = '../assets/icons/obj/clothing/head/helmet.dmi'
+	worn_icon = '../assets/icons/mob/clothing/head/helmet.dmi'
 	icon_state = "knight_green"
 	inhand_icon_state = "knight_helmet"
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDESNOUT

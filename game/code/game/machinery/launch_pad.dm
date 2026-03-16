@@ -3,7 +3,7 @@
 /obj/machinery/launchpad
 	name = "bluespace launchpad"
 	desc = "A bluespace pad able to thrust matter through bluespace, teleporting it to or from nearby locations."
-	icon = 'icons/obj/machines/telepad.dmi'
+	icon = '../assets/icons/obj/machines/telepad.dmi'
 	icon_state = "lpad-idle"
 	active_power_usage = BASE_MACHINE_ACTIVE_CONSUMPTION * 2.5
 	hud_possible = list(DIAG_LAUNCHPAD_HUD)
@@ -98,7 +98,7 @@
 /// Updates diagnostic huds
 /obj/machinery/launchpad/proc/update_hud()
 	var/image/holder = hud_list[DIAG_LAUNCHPAD_HUD]
-	var/mutable_appearance/target = mutable_appearance('icons/effects/effects.dmi', "launchpad_target", ABOVE_NORMAL_TURF_LAYER, src, GAME_PLANE)
+	var/mutable_appearance/target = mutable_appearance('../assets/icons/effects/effects.dmi', "launchpad_target", ABOVE_NORMAL_TURF_LAYER, src, GAME_PLANE)
 	holder.appearance = target
 
 	update_indicator()
@@ -179,11 +179,11 @@
 		indicator_icon = "launchpad_pull"
 	update_indicator()
 
-	playsound(get_turf(src), 'sound/items/weapons/flash.ogg', 25, TRUE)
+	playsound(get_turf(src), '../assets/sound/items/weapons/flash.ogg', 25, TRUE)
 	teleporting = TRUE
 
 	if(!hidden)
-		playsound(target, 'sound/items/weapons/flash.ogg', 25, TRUE)
+		playsound(target, '../assets/sound/items/weapons/flash.ogg', 25, TRUE)
 		do_sparks(5, TRUE, target, spark_type = /datum/effect_system/basic/spark_spread/quantum)
 
 	sleep(teleport_speed)
@@ -199,7 +199,7 @@
 	if(!hidden)
 		// Takes twice as long to make sure it properly fades out.
 		Beam(target, icon_state = teleport_beam, time = BEAM_FADE_TIME*2, beam_type = /obj/effect/ebeam/launchpad)
-		playsound(target, 'sound/items/weapons/emitter2.ogg', 25, TRUE)
+		playsound(target, '../assets/sound/items/weapons/emitter2.ogg', 25, TRUE)
 
 	// use a lot of power
 	use_energy(active_power_usage)
@@ -212,7 +212,7 @@
 		source = dest
 		dest = target
 
-	playsound(get_turf(src), 'sound/items/weapons/emitter2.ogg', 25, TRUE)
+	playsound(get_turf(src), '../assets/sound/items/weapons/emitter2.ogg', 25, TRUE)
 	var/first = TRUE
 	for(var/atom/movable/ROI in source)
 		if(ROI == src)
@@ -321,7 +321,7 @@
 /obj/item/launchpad_remote
 	name = "folder"
 	desc = "A folder."
-	icon = 'icons/obj/service/bureaucracy.dmi'
+	icon = '../assets/icons/obj/service/bureaucracy.dmi'
 	icon_state = "folder"
 	w_class = WEIGHT_CLASS_SMALL
 	var/sending = TRUE

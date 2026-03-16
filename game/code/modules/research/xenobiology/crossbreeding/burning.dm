@@ -19,8 +19,8 @@ Burning extracts:
 		return
 	reagents.remove_reagent(/datum/reagent/toxin/plasma, 10)
 	to_chat(user, span_notice("You squeeze the extract, and it absorbs the plasma!"))
-	playsound(src, 'sound/effects/bubbles/bubbles.ogg', 50, TRUE)
-	playsound(src, 'sound/effects/magic/fireball.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/effects/bubbles/bubbles.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/effects/magic/fireball.ogg', 50, TRUE)
 	do_effect(user)
 
 /obj/item/slimecross/burning/proc/do_effect(mob/user) //If, for whatever reason, you don't want to delete the extract, don't do ..()
@@ -78,7 +78,7 @@ Burning extracts:
 /obj/item/slimecross/burning/metal/do_effect(mob/user)
 	for(var/turf/closed/wall/W in range(1,get_turf(user)))
 		W.dismantle_wall(1)
-		playsound(W, 'sound/effects/break_stone.ogg', 50, TRUE)
+		playsound(W, '../assets/sound/effects/break_stone.ogg', 50, TRUE)
 	user.visible_message(span_danger("[src] pulses violently, and shatters the walls around it!"))
 	..()
 
@@ -88,7 +88,7 @@ Burning extracts:
 
 /obj/item/slimecross/burning/yellow/do_effect(mob/user)
 	user.visible_message(span_danger("[src] explodes into an electrical field!"))
-	playsound(get_turf(src), 'sound/items/weapons/zapbang.ogg', 50, TRUE)
+	playsound(get_turf(src), '../assets/sound/items/weapons/zapbang.ogg', 50, TRUE)
 	for(var/mob/living/M in range(4,get_turf(user)))
 		if(M != user)
 			var/mob/living/carbon/C = M
@@ -146,7 +146,7 @@ Burning extracts:
 	user.visible_message(span_danger("[src] sparks, and lets off a shockwave of bluespace energy!"))
 	for(var/mob/living/L in range(1, get_turf(user)))
 		if(L != user)
-			do_teleport(L, get_turf(L), 6, asoundin = 'sound/effects/phasein.ogg', channel = TELEPORT_CHANNEL_BLUESPACE) //Somewhere between the effectiveness of fake and real BS crystal
+			do_teleport(L, get_turf(L), 6, asoundin = '../assets/sound/effects/phasein.ogg', channel = TELEPORT_CHANNEL_BLUESPACE) //Somewhere between the effectiveness of fake and real BS crystal
 			new /obj/effect/particle_effect/sparks(get_turf(L))
 			playsound(get_turf(L), SFX_SPARKS, 50, TRUE, SHORT_RANGE_SOUND_EXTRARANGE)
 	..()
@@ -251,7 +251,7 @@ Burning extracts:
 /// Inflicts a blastwave upon every mob within a small radius.
 /obj/item/slimecross/burning/oil/proc/boom()
 	var/turf/T = get_turf(src)
-	playsound(T, 'sound/effects/explosion/explosion2.ogg', 200, TRUE)
+	playsound(T, '../assets/sound/effects/explosion/explosion2.ogg', 200, TRUE)
 	for(var/mob/living/target in range(2, T))
 		new /obj/effect/temp_visual/explosion(get_turf(target))
 		SSexplosions.med_mov_atom += target

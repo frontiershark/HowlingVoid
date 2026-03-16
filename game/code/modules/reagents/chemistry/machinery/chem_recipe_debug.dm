@@ -26,7 +26,7 @@
 
 /obj/machinery/chem_recipe_debug
 	name = "chemical reaction tester"
-	icon = 'icons/obj/medical/chemical.dmi'
+	icon = '../assets/icons/obj/medical/chemical.dmi'
 	icon_state = "HPLC_debug"
 	density = TRUE
 	use_power = NO_POWER_USE

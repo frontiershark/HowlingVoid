@@ -4,7 +4,7 @@
 	desc = "Perform a detailed analysis of a deceased patient's body."
 	implements = list(/obj/item/autopsy_scanner = 1)
 	time = 10 SECONDS
-	success_sound = 'sound/machines/printer.ogg'
+	success_sound = '../assets/sound/machines/printer.ogg'
 	required_bodytype = (~BODYTYPE_ROBOTIC & ~BODYTYPE_SYNTHETIC) // NOVA EDIT CHANGE - SYNTH FLAGS  -Orginal: required_bodytype = ~BODYTYPE_ROBOTIC
 	operation_flags = OPERATION_MORBID | OPERATION_IGNORE_CLOTHES
 	all_surgery_states_required = SURGERY_SKIN_OPEN

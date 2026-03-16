@@ -2,14 +2,14 @@
 /obj/item/suit_sensor
 	name = "suit sensor"
 	desc = "That thingamabob medbay keeps telling you to set to 'Tracking Beacon'. It needs to be attached to a worn suit or dress to work."
-	icon = 'icons/obj/devices/tracker.dmi'
+	icon = '../assets/icons/obj/devices/tracker.dmi'
 	icon_state = "suit_sensor"
 	base_icon_state = "suit_sensor"
 	obj_flags = CONDUCTS_ELECTRICITY
 	w_class = WEIGHT_CLASS_TINY
 	custom_materials = list(/datum/material/iron= SMALL_MATERIAL_AMOUNT, /datum/material/glass= SMALL_MATERIAL_AMOUNT)
-	drop_sound = 'sound/items/handling/component_drop.ogg'
-	pickup_sound = 'sound/items/handling/component_pickup.ogg'
+	drop_sound = '../assets/sound/items/handling/component_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/component_pickup.ogg'
 	throwforce = 2
 	throw_speed = 3
 	throw_range = 7
@@ -68,7 +68,7 @@
 		broken = TRUE
 	else
 		set_mode(pick(SENSOR_OFF, SENSOR_OFF, SENSOR_OFF, SENSOR_LIVING, SENSOR_LIVING, SENSOR_VITALS, SENSOR_VITALS, SENSOR_COORDS))
-	playsound(source = src, soundin = 'sound/effects/sparks/sparks3.ogg', vol = 75, vary = TRUE, extrarange = SHORT_RANGE_SOUND_EXTRARANGE, ignore_walls = FALSE)
+	playsound(source = src, soundin = '../assets/sound/effects/sparks/sparks3.ogg', vol = 75, vary = TRUE, extrarange = SHORT_RANGE_SOUND_EXTRARANGE, ignore_walls = FALSE)
 
 /obj/item/suit_sensor/item_interaction(mob/living/user, obj/item/tool, list/modifiers)
 	if(!istype(tool, /obj/item/stack/cable_coil))

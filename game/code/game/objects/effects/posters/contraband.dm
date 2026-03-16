@@ -679,7 +679,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/contraband/roroco, 32)
 	var/turf/our_wall = get_turf_pixel(src)
 	our_wall.balloon_alert_to_viewers("it was a ruse!")
 	roll_and_drop(loc)
-	playsound(loc, 'sound/items/handling/paper_drop.ogg', 50, TRUE)
+	playsound(loc, '../assets/sound/items/handling/paper_drop.ogg', 50, TRUE)
 
 
 MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/contraband/fake_bombable, 32)

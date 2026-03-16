@@ -8,7 +8,7 @@
 /obj/item/mod/paint
 	name = "MOD paint kit"
 	desc = "This kit will repaint your MODsuit to something unique."
-	icon = 'icons/obj/clothing/modsuit/mod_construction.dmi'
+	icon = '../assets/icons/obj/clothing/modsuit/mod_construction.dmi'
 	icon_state = "paintkit"
 	var/obj/item/mod/control/editing_mod
 	var/atom/movable/screen/map_view/proxy_view
@@ -141,7 +141,7 @@
 /obj/item/mod/skin_applier
 	name = "MOD skin applier"
 	desc = "This one-use skin applier will add a skin to MODsuits of a specific type. Must be used on an inactive control unit."
-	icon = 'icons/obj/clothing/modsuit/mod_construction.dmi'
+	icon = '../assets/icons/obj/clothing/modsuit/mod_construction.dmi'
 	icon_state = null
 	var/skin = "civilian"
 

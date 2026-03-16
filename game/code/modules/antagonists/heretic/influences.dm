@@ -78,7 +78,7 @@
 
 /obj/effect/visible_heretic_influence
 	name = "pierced reality"
-	icon = 'icons/effects/eldritch.dmi'
+	icon = '../assets/icons/effects/eldritch.dmi'
 	icon_state = "pierced_illusion"
 	anchored = TRUE
 	interaction_flags_atom = INTERACT_ATOM_NO_FINGERPRINT_ATTACK_HAND|INTERACT_ATOM_NO_FINGERPRINT_INTERACT
@@ -90,7 +90,7 @@
 	addtimer(CALLBACK(src, PROC_REF(show_presence)), 15 SECONDS)
 	AddComponent(/datum/component/fishing_spot, GLOB.preset_fish_sources[/datum/fish_source/dimensional_rift])
 
-	var/image/silicon_image = image('icons/effects/eldritch.dmi', src, null, OBJ_LAYER)
+	var/image/silicon_image = image('../assets/icons/effects/eldritch.dmi', src, null, OBJ_LAYER)
 	silicon_image.override = TRUE
 	add_alt_appearance(/datum/atom_hud/alternate_appearance/basic/silicons, "pierced_reality", silicon_image)
 
@@ -165,7 +165,7 @@
 
 /obj/effect/heretic_influence
 	name = "reality smash"
-	icon = 'icons/effects/eldritch.dmi'
+	icon = '../assets/icons/effects/eldritch.dmi'
 	anchored = TRUE
 	interaction_flags_atom = INTERACT_ATOM_NO_FINGERPRINT_ATTACK_HAND|INTERACT_ATOM_NO_FINGERPRINT_INTERACT
 	resistance_flags = FIRE_PROOF | UNACIDABLE | ACID_PROOF
@@ -238,7 +238,7 @@
 	loc.balloon_alert(user, "draining influence...")
 
 	// Only gives you the dripping eye effect if you have faster drain speed than default
-	var/mutable_appearance/draining_overlay = mutable_appearance('icons/mob/effects/heretic_aura.dmi', "heretic_eye_dripping")
+	var/mutable_appearance/draining_overlay = mutable_appearance('../assets/icons/mob/effects/heretic_aura.dmi', "heretic_eye_dripping")
 	if(drain_speed < HERETIC_RIFT_DEFAULT_DRAIN_SPEED)
 		draining_overlay.pixel_y = 16
 		user.add_overlay(draining_overlay)

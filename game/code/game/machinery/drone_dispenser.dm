@@ -6,7 +6,7 @@
 	name = "drone shell dispenser"
 	desc = "A hefty machine that, when supplied with iron and glass, will periodically create a drone shell. Does not need to be manually operated."
 
-	icon = 'icons/obj/machines/drone_dispenser.dmi'
+	icon = '../assets/icons/obj/machines/drone_dispenser.dmi'
 	icon_state = "on"
 	density = TRUE
 
@@ -47,11 +47,11 @@
 	var/maximum_idle = 3
 
 	/// Sound that the drone dispnser plays when it's ready to start making more drones.
-	var/work_sound = 'sound/items/tools/rped.ogg'
+	var/work_sound = '../assets/sound/items/tools/rped.ogg'
 	/// Sound that the drone dispnser plays when it's created a new drone.
-	var/create_sound = 'sound/items/deconstruct.ogg'
+	var/create_sound = '../assets/sound/items/deconstruct.ogg'
 	/// Sound that the drone dispnser plays when it's recharged it's cooldown.
-	var/recharge_sound = 'sound/machines/ping.ogg'
+	var/recharge_sound = '../assets/sound/machines/ping.ogg'
 
 	/// String that's displayed for when the drone dispenser start working.
 	var/begin_create_message = "whirs to life!"
@@ -64,7 +64,7 @@
 	/// String that's displayed for when the drone dispenser is broken.
 	var/break_message = "lets out a tinny alarm before falling dark."
 	/// Sound that the drone dispnser plays when it's broken.
-	var/break_sound = 'sound/machines/warning-buzzer.ogg'
+	var/break_sound = '../assets/sound/machines/warning-buzzer.ogg'
 	/// Reference to the object's internal storage for materials.
 	var/datum/material_container/materials
 
@@ -139,7 +139,7 @@
 /obj/machinery/drone_dispenser/hivebot
 	name = "hivebot fabricator"
 	desc = "A large, bulky machine that whirs with activity, steam hissing from vents in its sides."
-	icon = 'icons/obj/machines/hivebot_fabricator.dmi'
+	icon = '../assets/icons/obj/machines/hivebot_fabricator.dmi'
 	icon_state = "hivebot_fab"
 	icon_off = "hivebot_fab"
 	icon_on = "hivebot_fab"

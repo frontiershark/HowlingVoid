@@ -5,17 +5,17 @@
 	force = 3
 	throwforce = 3
 	w_class = WEIGHT_CLASS_SMALL
-	icon = 'icons/mob/human/bodyparts.dmi'
+	icon = '../assets/icons/mob/human/bodyparts.dmi'
 	icon_state = "" //Leave this blank! Bodyparts are built using overlays
 	flags_1 = PREVENT_CONTENTS_EXPLOSION_1 //actually mindblowing
 	/// The icon for Organic limbs using greyscale
 	VAR_PROTECTED/icon_greyscale = DEFAULT_BODYPART_ICON_ORGANIC
 	///The icon for non-greyscale limbs
-	VAR_PROTECTED/icon_static = 'icons/mob/human/bodyparts.dmi'
+	VAR_PROTECTED/icon_static = '../assets/icons/mob/human/bodyparts.dmi'
 	///The icon for husked limbs
-	VAR_PROTECTED/icon_husk = 'icons/mob/human/bodyparts.dmi'
+	VAR_PROTECTED/icon_husk = '../assets/icons/mob/human/bodyparts.dmi'
 	///The icon for invisible limbs
-	VAR_PROTECTED/icon_invisible = 'icons/mob/human/bodyparts.dmi'
+	VAR_PROTECTED/icon_invisible = '../assets/icons/mob/human/bodyparts.dmi'
 	///The type of husk for building an iconstate
 	var/husk_type = "humanoid"
 	///The color to multiply the greyscaled husk sprites by. Can be null. Old husk sprite chest color is #A6A6A6
@@ -175,8 +175,8 @@
 	/// what visual effect is used when this limb is used to strike someone.
 	var/unarmed_attack_effect = ATTACK_EFFECT_PUNCH
 	/// Sounds when this bodypart is used in an umarmed attack
-	var/sound/unarmed_attack_sound = 'sound/items/weapons/punch1.ogg'
-	var/sound/unarmed_miss_sound = 'sound/items/weapons/punchmiss.ogg'
+	var/sound/unarmed_attack_sound = '../assets/sound/items/weapons/punch1.ogg'
+	var/sound/unarmed_miss_sound = '../assets/sound/items/weapons/punchmiss.ogg'
 	/// Lowest possible punch damage this bodypart can give. If this is set to 0, unarmed attacks will always miss.
 	var/unarmed_damage_low = 1
 	/// Highest possible punch damage this bodypart can ive.
@@ -590,7 +590,7 @@
 
 	. = ..()
 	if(IS_ORGANIC_LIMB(src))
-		playsound(get_turf(src), 'sound/misc/splort.ogg', 50, TRUE, -1)
+		playsound(get_turf(src), '../assets/sound/misc/splort.ogg', 50, TRUE, -1)
 	pixel_x = rand(-3, 3)
 	pixel_y = rand(-3, 3)
 
@@ -619,7 +619,7 @@
 
 	var/atom/drop_loc = drop_location()
 	if(IS_ORGANIC_LIMB(src))
-		playsound(drop_loc, 'sound/misc/splort.ogg', 50, TRUE, -1)
+		playsound(drop_loc, '../assets/sound/misc/splort.ogg', 50, TRUE, -1)
 
 	QDEL_NULL(current_gauze)
 
@@ -1335,14 +1335,14 @@
 	if(dropped && dmg_overlay_type)
 		if(brutestate)
 			// divided into two overlays: one that gets colored and one that doesn't.
-			var/image/brute_blood_overlay = image('icons/mob/effects/dam_mob.dmi', "[dmg_overlay_type]_[body_zone]_[brutestate]0", -DAMAGE_LAYER, dir = SOUTH)
+			var/image/brute_blood_overlay = image('../assets/icons/mob/effects/dam_mob.dmi', "[dmg_overlay_type]_[body_zone]_[brutestate]0", -DAMAGE_LAYER, dir = SOUTH)
 			brute_blood_overlay.color = get_color_from_blood_list(update_on ? update_on.get_blood_dna_list() : blood_dna_info) // living mobs can just get it fresh, dropped limbs use blood_dna_info
-			var/mutable_appearance/brute_damage_overlay = mutable_appearance('icons/mob/effects/dam_mob.dmi', "[dmg_overlay_type]_[body_zone]_[brutestate]0_overlay", -DAMAGE_LAYER, appearance_flags = RESET_COLOR)
+			var/mutable_appearance/brute_damage_overlay = mutable_appearance('../assets/icons/mob/effects/dam_mob.dmi', "[dmg_overlay_type]_[body_zone]_[brutestate]0_overlay", -DAMAGE_LAYER, appearance_flags = RESET_COLOR)
 			if(brute_damage_overlay)
 				brute_blood_overlay.overlays += brute_damage_overlay
 			. += brute_blood_overlay
 		if(burnstate)
-			. += image('icons/mob/effects/dam_mob.dmi', "[dmg_overlay_type]_[body_zone]_0[burnstate]", -DAMAGE_LAYER, dir = SOUTH)
+			. += image('../assets/icons/mob/effects/dam_mob.dmi', "[dmg_overlay_type]_[body_zone]_0[burnstate]", -DAMAGE_LAYER, dir = SOUTH)
 
 	if(is_husked)
 		. += huskify_image(thing_to_husk = limb)

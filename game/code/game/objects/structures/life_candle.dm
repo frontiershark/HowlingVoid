@@ -1,7 +1,7 @@
 /obj/structure/life_candle
 	name = "life candle"
 	desc = "You are dead. Insert quarter to continue."
-	icon = 'icons/obj/candle.dmi'
+	icon = '../assets/icons/obj/candle.dmi'
 	icon_state = "candle1"
 	light_color = LIGHT_COLOR_FIRE
 
@@ -22,7 +22,7 @@
 	var/datum/outfit/outfit
 	// How long until we respawn them after their death.
 	var/respawn_time = 50
-	var/respawn_sound = 'sound/effects/magic/staff_animation.ogg'
+	var/respawn_sound = '../assets/sound/effects/magic/staff_animation.ogg'
 
 /obj/structure/life_candle/Initialize(mapload)
 	. = ..()

@@ -165,8 +165,8 @@
 			var/obj/item/overslot = part_datum.overslotting
 			overslot.forceMove(mod.drop_location())
 	for(var/obj/item/part as anything in parts + mod)
-		part.icon = used_skin[MOD_ICON_OVERRIDE] || 'icons/obj/clothing/modsuit/mod_clothing.dmi'
-		part.worn_icon = used_skin[MOD_WORN_ICON_OVERRIDE] || 'icons/mob/clothing/modsuit/mod_clothing.dmi'
+		part.icon = used_skin[MOD_ICON_OVERRIDE] || '../assets/icons/obj/clothing/modsuit/mod_clothing.dmi'
+		part.worn_icon = used_skin[MOD_WORN_ICON_OVERRIDE] || '../assets/icons/mob/clothing/modsuit/mod_clothing.dmi'
 		// NOVA EDIT ADDITION START
 		if(part.supports_variations_flags & CLOTHING_DIGITIGRADE_VARIATION)
 			part.worn_icon_digi = used_skin[MOD_DIGITIGRADE_ICON_OVERRIDE] || DIGITIGRADE_MODPARTS_FILE

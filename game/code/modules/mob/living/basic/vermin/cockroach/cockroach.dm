@@ -111,7 +111,7 @@
 		for(var/mob/living/mob_in_turf in messy_turf)
 			mob_in_turf.visible_message(span_danger("[mob_in_turf] is splattered with blood!"), span_userdanger("You're splattered with blood!"))
 			mob_in_turf.add_blood_DNA(list("Non-human DNA" = random_human_blood_type()))
-			playsound(mob_in_turf, 'sound/effects/splat.ogg', 50, TRUE, extrarange = SILENCED_SOUND_EXTRARANGE)
+			playsound(mob_in_turf, '../assets/sound/effects/splat.ogg', 50, TRUE, extrarange = SILENCED_SOUND_EXTRARANGE)
 	return ..()
 
 /// Roach with a spiky hat, like a caltrop
@@ -126,7 +126,7 @@
 	obj_damage = 10
 	melee_attack_cooldown = 1 SECONDS
 	gold_core_spawnable = HOSTILE_SPAWN
-	attack_sound = 'sound/items/weapons/bladeslice.ogg'
+	attack_sound = '../assets/sound/items/weapons/bladeslice.ogg'
 	attack_vis_effect = ATTACK_EFFECT_SLASH
 	faction = list(FACTION_HOSTILE, FACTION_MAINT_CREATURES)
 	sharpness = SHARP_POINTY

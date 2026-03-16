@@ -1,7 +1,7 @@
 /obj/structure/chair/pew
 	name = "wooden pew"
 	desc = "Kneel here and pray."
-	icon = 'icons/obj/chairs_wide.dmi'
+	icon = '../assets/icons/obj/chairs_wide.dmi'
 	icon_state = "pewmiddle"
 	resistance_flags = FLAMMABLE
 	max_integrity = 70

@@ -130,7 +130,7 @@
 	animate(src, transform = matrix(), time = SHUTTER_MOVEMENT_DURATION, easing = CUBIC_EASING|EASE_OUT)
 
 /atom/movable/screen/lobby/background
-	icon = 'icons/hud/lobby/background.dmi'
+	icon = '../assets/icons/hud/lobby/background.dmi'
 	icon_state = "background"
 	layer = LOBBY_BACKGROUND_LAYER
 	screen_loc = "TOP,CENTER:-61"
@@ -157,7 +157,7 @@
 		return
 	flick("[base_icon_state]_pressed", src)
 	if(select_sound_play)
-		var/sound/ui_select_sound = sound('sound/misc/menu/ui_select1.ogg')
+		var/sound/ui_select_sound = sound('../assets/sound/misc/menu/ui_select1.ogg')
 		ui_select_sound.frequency = get_rand_frequency_low_range()
 		SEND_SOUND(hud.mymob, ui_select_sound)
 	update_appearance(UPDATE_ICON)
@@ -209,7 +209,7 @@
 /atom/movable/screen/lobby/button/character_setup
 	name = "View Character Setup"
 	screen_loc = "TOP:-70,CENTER:-54"
-	icon = 'icons/hud/lobby/character_setup.dmi'
+	icon = '../assets/icons/hud/lobby/character_setup.dmi'
 	icon_state = "character_setup_disabled"
 	base_icon_state = "character_setup"
 	enabled = FALSE
@@ -246,7 +246,7 @@
 /atom/movable/screen/lobby/button/ready
 	name = "Toggle Readiness"
 	screen_loc = "TOP:-8,CENTER:-65"
-	icon = 'icons/hud/lobby/ready.dmi'
+	icon = '../assets/icons/hud/lobby/ready.dmi'
 	icon_state = "not_ready"
 	base_icon_state = "not_ready"
 
@@ -295,7 +295,7 @@
 /atom/movable/screen/lobby/button/join
 	name = "Join Game"
 	screen_loc = "TOP:-13,CENTER:-58"
-	icon = 'icons/hud/lobby/join.dmi'
+	icon = '../assets/icons/hud/lobby/join.dmi'
 	icon_state = "" //Default to not visible
 	base_icon_state = "join_game"
 	enabled = null // set in init
@@ -369,7 +369,7 @@
 /atom/movable/screen/lobby/button/observe
 	name = "Observe"
 	screen_loc = "TOP:-40,CENTER:-54"
-	icon = 'icons/hud/lobby/observe.dmi'
+	icon = '../assets/icons/hud/lobby/observe.dmi'
 	icon_state = "observe_disabled"
 	base_icon_state = "observe"
 	enabled = null // set in init
@@ -398,7 +398,7 @@
 //Subtype the bottom buttons away so the collapse/expand shutter goes behind them
 /atom/movable/screen/lobby/button/bottom
 	layer = LOBBY_BOTTOM_BUTTON_LAYER
-	icon = 'icons/hud/lobby/bottom_buttons.dmi'
+	icon = '../assets/icons/hud/lobby/bottom_buttons.dmi'
 
 /atom/movable/screen/lobby/button/bottom/settings
 	name = "View Game Preferences"
@@ -511,7 +511,7 @@
 /atom/movable/screen/lobby/button/bottom/poll/update_overlays()
 	. = ..()
 	if(new_poll)
-		. += mutable_appearance('icons/hud/lobby/poll_overlay.dmi', "new_poll")
+		. += mutable_appearance('../assets/icons/hud/lobby/poll_overlay.dmi', "new_poll")
 
 /atom/movable/screen/lobby/button/bottom/poll/Click(location, control, params)
 	. = ..()
@@ -522,7 +522,7 @@
 
 /// A generic "sign up" button used by station traits
 /atom/movable/screen/lobby/button/sign_up
-	icon = 'icons/hud/lobby/signup_button.dmi'
+	icon = '../assets/icons/hud/lobby/signup_button.dmi'
 	icon_state = "signup"
 	base_icon_state = "signup"
 	always_available = FALSE
@@ -539,7 +539,7 @@
 
 /atom/movable/screen/lobby/button/collapse
 	name = "Collapse Lobby Menu"
-	icon = 'icons/hud/lobby/collapse_expand.dmi'
+	icon = '../assets/icons/hud/lobby/collapse_expand.dmi'
 	icon_state = "collapse"
 	base_icon_state = "collapse"
 	layer = LOBBY_BELOW_MENU_LAYER
@@ -636,17 +636,17 @@
 	animate(src, transform = transform, time = SHUTTER_MOVEMENT_DURATION + SHUTTER_WAIT_DURATION)
 	//then pull the button up with the shutter and leave it on the edge of the screen
 	animate(transform = transform.Translate(x = 0, y = 134), time = SHUTTER_MOVEMENT_DURATION, easing = CUBIC_EASING|EASE_IN)
-	SEND_SOUND(hud.mymob, sound('sound/misc/menu/menu_rollup1.ogg'))
+	SEND_SOUND(hud.mymob, sound('../assets/sound/misc/menu/menu_rollup1.ogg'))
 
 ///Extends the button back to its usual spot
 ///Sends a signal on the hud for the menu hud elements to listen to
 /atom/movable/screen/lobby/button/collapse/proc/expand_menu()
 	SEND_SIGNAL(hud, COMSIG_HUD_LOBBY_EXPANDED)
 	animate(src, transform = matrix(), time = SHUTTER_MOVEMENT_DURATION, easing = CUBIC_EASING|EASE_OUT)
-	SEND_SOUND(hud.mymob, sound('sound/misc/menu/menu_rolldown1.ogg'))
+	SEND_SOUND(hud.mymob, sound('../assets/sound/misc/menu/menu_rolldown1.ogg'))
 
 /atom/movable/screen/lobby/shutter
-	icon = 'icons/hud/lobby/shutter.dmi'
+	icon = '../assets/icons/hud/lobby/shutter.dmi'
 	icon_state = "shutter"
 	base_icon_state = "shutter"
 	screen_loc = "TOP:+143,CENTER:-73" //"home" position is off-screen
@@ -668,7 +668,7 @@
 /atom/movable/screen/lobby/button/start_now
 	name = "Start Now (LOCALHOST ONLY)"
 	screen_loc = "TOP:-146,CENTER:-54"
-	icon = 'icons/hud/lobby/start_now.dmi'
+	icon = '../assets/icons/hud/lobby/start_now.dmi'
 	icon_state = "start_now"
 	base_icon_state = "start_now"
 	always_available = FALSE
@@ -678,7 +678,7 @@
 	. = ..()
 	if(!. || !usr.client.is_localhost() || !check_rights_for(usr.client, R_SERVER))
 		return
-	SEND_SOUND(hud.mymob, sound('sound/effects/cartoon_sfx/cartoon_splat.ogg', volume = 50))
+	SEND_SOUND(hud.mymob, sound('../assets/sound/effects/cartoon_sfx/cartoon_splat.ogg', volume = 50))
 	SSticker.start_immediately = TRUE
 	if(SSticker.current_state == GAME_STATE_STARTUP)
 		to_chat(usr, span_admin("The server is still setting up, but the round will be started as soon as possible."))
@@ -690,7 +690,7 @@
 /atom/movable/screen/lobby/new_player_info
 	name = "New Player Info"
 	screen_loc = "EAST-3,CENTER:140"
-	icon = 'icons/hud/lobby/newplayer.dmi'
+	icon = '../assets/icons/hud/lobby/newplayer.dmi'
 	icon_state = null //we only show up when we get update appearance called, cause we need our overlay to not look bad.
 	base_icon_state = "newplayer"
 	maptext_height = 75
@@ -751,7 +751,7 @@
 	. += mutable_appearance(icon, "static_base", alpha = 20, layer = src.layer+0.03)
 	//we have this in a separate file because `generate_icon_alpha_mask` puts lighting even on non-existent pixels,
 	//giving the icon a weird background color.
-	var/mutable_appearance/scanline = mutable_appearance(generate_icon_alpha_mask('icons/hud/lobby/newplayer_scanline.dmi', "scanline"), alpha = 20, layer = src.layer+0.04)
+	var/mutable_appearance/scanline = mutable_appearance(generate_icon_alpha_mask('../assets/icons/hud/lobby/newplayer_scanline.dmi', "scanline"), alpha = 20, layer = src.layer+0.04)
 	scanline.pixel_y = OVERLAY_X_DIFF
 	scanline.pixel_x = OVERLAY_Y_DIFF
 	. += scanline

@@ -2,12 +2,12 @@
 	name = "improvised explosive"
 	desc = "An improvised explosive device."
 	w_class = WEIGHT_CLASS_SMALL
-	icon = 'icons/obj/weapons/grenade.dmi'
+	icon = '../assets/icons/obj/weapons/grenade.dmi'
 	base_icon_state = "pipebomb"
 	icon_state = "slicedapart"
 	inhand_icon_state = "flashbang"
-	lefthand_file = 'icons/mob/inhands/equipment/security_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/security_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/security_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/security_righthand.dmi'
 	throw_speed = 3
 	throw_range = 7
 	obj_flags = CONDUCTS_ELECTRICITY
@@ -155,7 +155,7 @@
 
 	if(effects[/obj/item/stack/ore/bluespace_crystal/refined])
 		for(var/mob/living/victim in view(light, loc))
-			do_teleport(victim, get_turf(victim), min(12, effects[/obj/item/stack/ore/bluespace_crystal/refined] * 3), asoundin = 'sound/effects/phasein.ogg', channel = TELEPORT_CHANNEL_BLUESPACE)
+			do_teleport(victim, get_turf(victim), min(12, effects[/obj/item/stack/ore/bluespace_crystal/refined] * 3), asoundin = '../assets/sound/effects/phasein.ogg', channel = TELEPORT_CHANNEL_BLUESPACE)
 
 	qdel(src)
 
@@ -173,7 +173,7 @@
 	name = "halved pipe"
 	desc = "Two half-size pipes made from one."
 	w_class = WEIGHT_CLASS_SMALL
-	icon = 'icons/obj/weapons/grenade.dmi'
+	icon = '../assets/icons/obj/weapons/grenade.dmi'
 	icon_state = "slicedapart"
 	/// Are wires inserted? If so, we are on the final step
 	var/wires_are_in = FALSE

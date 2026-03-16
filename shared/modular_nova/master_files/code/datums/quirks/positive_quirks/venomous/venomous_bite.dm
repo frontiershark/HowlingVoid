@@ -9,7 +9,7 @@
 	button_icon = 'modular_nova/master_files/icons/mob/actions/venomous_bite.dmi'
 	button_icon_state = "venom"
 
-	ranged_mousepointer = 'icons/effects/mouse_pointers/supplypod_pickturf.dmi'
+	ranged_mousepointer = '../assets/icons/effects/mouse_pointers/supplypod_pickturf.dmi'
 
 	check_flags = AB_CHECK_CONSCIOUS | AB_CHECK_INCAPACITATED | AB_CHECK_HANDS_BLOCKED // cant use it if cuffed
 
@@ -107,7 +107,7 @@
 	to_chat(target, span_userdanger(victim_message))
 
 	owner.do_attack_animation(target, ATTACK_EFFECT_BITE)
-	playsound(owner, 'sound/items/weapons/bite.ogg', 60, TRUE)
+	playsound(owner, '../assets/sound/items/weapons/bite.ogg', 60, TRUE)
 	if (covered)
 		return FALSE
 	var/wound_bonus = 0

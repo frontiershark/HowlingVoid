@@ -49,7 +49,7 @@
 		to_chat(victim, span_userdanger("[user] resets your [limb.plaintext_zone] with a disturbing <b>crunch</b>!"))
 
 	victim.emote("scream")
-	playsound(user, 'sound/effects/wounds/crack1.ogg', 70, TRUE)
+	playsound(user, '../assets/sound/effects/wounds/crack1.ogg', 70, TRUE)
 	qdel(src)
 
 /datum/wound/blunt/bone/critical
@@ -81,7 +81,7 @@
 		to_chat(victim, span_userdanger("[user] resets your [limb.plaintext_zone] with a disturbing <b>crunch</b>!"))
 
 	victim.emote("scream")
-	playsound(user, 'sound/effects/wounds/crack2.ogg', 70, TRUE)
+	playsound(user, '../assets/sound/effects/wounds/crack2.ogg', 70, TRUE)
 	qdel(src)
 
 /datum/design/alienbonesetter
@@ -122,8 +122,8 @@
 	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT*6, /datum/material/glass = SHEET_MATERIAL_AMOUNT*2, /datum/material/silver = SHEET_MATERIAL_AMOUNT*2, /datum/material/titanium =SHEET_MATERIAL_AMOUNT * 2.5)
 	icon_state = "combitool"
 	inhand_icon_state = "adv_retractor"
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/medical_righthand.dmi'
 	w_class = WEIGHT_CLASS_NORMAL
 	toolspeed = 0.7
 
@@ -159,7 +159,7 @@
 
 	tool_behaviour = (active ? TOOL_BONESET : TOOL_BLOODFILTER)
 	balloon_alert(user, "tools set to [active ? "set bones" : "filter blood"]")
-	playsound(user ? user : src, 'sound/items/tools/change_drill.ogg', 50, TRUE)
+	playsound(user ? user : src, '../assets/sound/items/tools/change_drill.ogg', 50, TRUE)
 	return COMPONENT_NO_DEFAULT_MESSAGE
 
 /obj/item/blood_filter/advanced/examine()

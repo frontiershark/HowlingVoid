@@ -11,8 +11,8 @@
 		sealed within the suit seems to hunger for the fleeting lifeforce found in the remains left in the remains of drakes. \
 		Feeding it drake remains seems to empower a suit piece, though turns the remains back to lifeless ash."
 	icon_state = "berserker"
-	icon = 'icons/obj/clothing/suits/armor.dmi'
-	worn_icon = 'icons/mob/clothing/suits/armor.dmi'
+	icon = '../assets/icons/obj/clothing/suits/armor.dmi'
+	worn_icon = '../assets/icons/mob/clothing/suits/armor.dmi'
 	worn_icon_digi = 'modular_nova/master_files/icons/mob/clothing/suit_digi.dmi' //NOVA EDIT ADDITION - Mutant Greyscale
 	hoodtype = /obj/item/clothing/head/hooded/berserker
 	armor_type = /datum/armor/hooded_berserker
@@ -55,8 +55,8 @@
 		sealed within the suit seems to hunger for the fleeting lifeforce found in the remains left in the remains of drakes. \
 		Feeding it drake remains seems to empower a suit piece, though turns the remains back to lifeless ash."
 	icon_state = "berserker"
-	icon = 'icons/obj/clothing/head/helmet.dmi'
-	worn_icon = 'icons/mob/clothing/head/helmet.dmi'
+	icon = '../assets/icons/obj/clothing/head/helmet.dmi'
+	worn_icon = '../assets/icons/mob/clothing/head/helmet.dmi'
 	armor_type = /datum/armor/hooded_berserker
 	actions_types = list(/datum/action/item_action/berserk_mode)
 	cold_protection = HEAD
@@ -113,7 +113,7 @@
 /obj/item/clothing/head/hooded/berserker/proc/berserk_mode(mob/living/carbon/human/user)
 	var/datum/action/item_action/berserk_mode/ragemode = locate() in actions
 	to_chat(user, span_cult("You enter berserk mode."))
-	playsound(user, 'sound/effects/magic/staff_healing.ogg', 50)
+	playsound(user, '../assets/sound/effects/magic/staff_healing.ogg', 50)
 	user.add_movespeed_modifier(/datum/movespeed_modifier/berserk)
 	user.physiology.brute_mod *= 0.5
 	user.next_move_modifier *= BERSERK_ATTACK_SPEED_MODIFIER
@@ -134,7 +134,7 @@
 	var/datum/action/item_action/berserk_mode/ragemode = locate() in actions
 	ragemode?.build_all_button_icons(UPDATE_BUTTON_STATUS)
 	to_chat(user, span_cult("You exit berserk mode."))
-	playsound(user, 'sound/effects/magic/summonitems_generic.ogg', 50)
+	playsound(user, '../assets/sound/effects/magic/summonitems_generic.ogg', 50)
 	user.remove_movespeed_modifier(/datum/movespeed_modifier/berserk)
 	user.physiology.brute_mod *= 2
 	user.next_move_modifier /= BERSERK_ATTACK_SPEED_MODIFIER

@@ -1,12 +1,12 @@
 /obj/item/holosign_creator
 	name = "holographic sign projector"
 	desc = "A handy-dandy holographic projector that displays a janitorial sign."
-	icon = 'icons/obj/devices/tool.dmi'
+	icon = '../assets/icons/obj/devices/tool.dmi'
 	icon_state = "signmaker"
 	inhand_icon_state = "electronic"
 	worn_icon_state = "electronic"
-	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/devices_righthand.dmi'
 	force = 0
 	w_class = WEIGHT_CLASS_SMALL
 	throwforce = 0
@@ -66,7 +66,7 @@
 		balloon_alert(user, "max capacity!")
 		return ITEM_INTERACT_BLOCKING
 
-	playsound(src, 'sound/machines/click.ogg', 20, TRUE)
+	playsound(src, '../assets/sound/machines/click.ogg', 20, TRUE)
 
 	if(creation_time)
 		holocreator_busy = TRUE

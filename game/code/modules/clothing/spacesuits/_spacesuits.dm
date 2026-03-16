@@ -5,8 +5,8 @@
 //      Meaning the the suit is defined directly after the corrisponding helmet. Just like below!
 /obj/item/clothing/head/helmet/space
 	name = "space helmet"
-	icon = 'icons/obj/clothing/head/spacehelm.dmi'
-	worn_icon = 'icons/mob/clothing/head/spacehelm.dmi'
+	icon = '../assets/icons/obj/clothing/head/spacehelm.dmi'
+	worn_icon = '../assets/icons/mob/clothing/head/spacehelm.dmi'
 	icon_state = "spaceold"
 	inhand_icon_state = "space_helmet"
 	desc = "A special helmet with solar UV shielding to protect your eyes from harmful rays."
@@ -25,9 +25,9 @@
 	resistance_flags = NONE
 	dog_fashion = null
 	sound_vary = TRUE
-	equip_sound = 'sound/items/handling/helmet/helmet_equip1.ogg'
-	pickup_sound = 'sound/items/handling/helmet/helmet_pickup1.ogg'
-	drop_sound = 'sound/items/handling/helmet/helmet_drop1.ogg'
+	equip_sound = '../assets/sound/items/handling/helmet/helmet_equip1.ogg'
+	pickup_sound = '../assets/sound/items/handling/helmet/helmet_pickup1.ogg'
+	drop_sound = '../assets/sound/items/handling/helmet/helmet_drop1.ogg'
 	///How much this helmet affects fishing difficulty
 	var/fishing_modifier = 3
 	///Icon state applied when we get spraypainted/peppersprayed. If null, does not add the dirt component
@@ -53,10 +53,10 @@
 	name = "space suit"
 	desc = "A suit that protects against low pressure environments. Has a big 13 on the back."
 	icon_state = "spaceold"
-	icon = 'icons/obj/clothing/suits/spacesuit.dmi'
-	lefthand_file = 'icons/mob/inhands/clothing/suits_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/clothing/suits_righthand.dmi'
-	worn_icon = 'icons/mob/clothing/suits/spacesuit.dmi'
+	icon = '../assets/icons/obj/clothing/suits/spacesuit.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/clothing/suits_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/clothing/suits_righthand.dmi'
+	worn_icon = '../assets/icons/mob/clothing/suits/spacesuit.dmi'
 	inhand_icon_state = "s_suit"
 	w_class = WEIGHT_CLASS_BULKY
 	clothing_flags = STOPSPRESSUREDAMAGE | THICKMATERIAL

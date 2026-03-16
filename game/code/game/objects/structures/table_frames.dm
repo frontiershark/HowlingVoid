@@ -12,7 +12,7 @@
 /obj/structure/table_frame
 	name = "table frame"
 	desc = "Four metal legs with four framing rods for a table. You could easily pass through this."
-	icon = 'icons/obj/structures.dmi'
+	icon = '../assets/icons/obj/structures.dmi'
 	icon_state = "table_frame"
 	density = FALSE
 	anchored = FALSE
@@ -44,7 +44,7 @@
 	tool.play_tool_sound(src)
 	if(!tool.use_tool(src, user, 3 SECONDS))
 		return ITEM_INTERACT_BLOCKING
-	playsound(loc, 'sound/items/deconstruct.ogg', 50, TRUE)
+	playsound(loc, '../assets/sound/items/deconstruct.ogg', 50, TRUE)
 	deconstruct(TRUE)
 	return ITEM_INTERACT_SUCCESS
 

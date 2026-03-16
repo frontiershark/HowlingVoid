@@ -1,6 +1,6 @@
 /mob/living/carbon/alien/adult/royal
 	//Common stuffs for Praetorian and Queen
-	icon = 'icons/mob/nonhuman-player/alienqueen.dmi'
+	icon = '../assets/icons/mob/nonhuman-player/alienqueen.dmi'
 	status_flags = 0
 	pixel_x = -16
 	base_pixel_x = -16
@@ -12,7 +12,7 @@
 	pressure_resistance = 200 //Because big, stompy xenos should not be blown around like paper.
 	butcher_results = list(/obj/item/food/meat/slab/xeno = 20, /obj/item/stack/sheet/animalhide/xeno = 3)
 
-	var/alt_inhands_file = 'icons/mob/nonhuman-player/alienqueen.dmi'
+	var/alt_inhands_file = '../assets/icons/mob/nonhuman-player/alienqueen.dmi'
 
 /mob/living/carbon/alien/adult/royal/Initialize(mapload)
 	. = ..()
@@ -140,7 +140,7 @@
 	desc = "Inject this into one of your grown children to promote her to a Praetorian!"
 	icon_state = "alien_medal"
 	item_flags = NOBLUDGEON | ABSTRACT | DROPDEL
-	icon = 'icons/mob/nonhuman-player/alien.dmi'
+	icon = '../assets/icons/mob/nonhuman-player/alien.dmi'
 
 /obj/item/queen_promotion/attack(mob/living/to_promote, mob/living/carbon/alien/adult/queen)
 	. = ..()

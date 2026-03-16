@@ -97,11 +97,11 @@ GLOBAL_LIST_INIT(preference_balls_sizes, list(
 
 GLOBAL_LIST_INIT(robotic_styles_list, list(
 	"None" = "None",
-	"Surplus" = 'icons/mob/augmentation/surplus_augments.dmi',
-	"Cyborg" = 'icons/mob/augmentation/augments.dmi',
-	"Engineering" = 'icons/mob/augmentation/augments_engineer.dmi',
-	"Mining" = 'icons/mob/augmentation/augments_mining.dmi',
-	"Security" = 'icons/mob/augmentation/augments_security.dmi',
+	"Surplus" = '../assets/icons/mob/augmentation/surplus_augments.dmi',
+	"Cyborg" = '../assets/icons/mob/augmentation/augments.dmi',
+	"Engineering" = '../assets/icons/mob/augmentation/augments_engineer.dmi',
+	"Mining" = '../assets/icons/mob/augmentation/augments_mining.dmi',
+	"Security" = '../assets/icons/mob/augmentation/augments_security.dmi',
 	"Morpheus Cyberkinetics" = 'modular_nova/master_files/icons/mob/augmentation/mcgipc.dmi',
 	"Bishop Cyberkinetics" = 'modular_nova/master_files/icons/mob/augmentation/bshipc.dmi',
 	"Bishop Cyberkinetics 2.0" = 'modular_nova/master_files/icons/mob/augmentation/bs2ipc.dmi',

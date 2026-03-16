@@ -4,7 +4,7 @@
 	background_icon_state = "bg_cult"
 	overlay_icon_state = "bg_cult_border"
 
-	button_icon = 'icons/mob/actions/actions_cult.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_cult.dmi'
 	button_icon_state = "floorconstruct"
 
 	school = SCHOOL_CONJURATION
@@ -21,7 +21,7 @@
 	background_icon_state = "bg_cult"
 	overlay_icon_state = "bg_cult_border"
 
-	button_icon = 'icons/mob/actions/actions_cult.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_cult.dmi'
 	button_icon_state = "lesserconstruct"
 
 	school = SCHOOL_CONJURATION

@@ -25,8 +25,8 @@
 	worn_icon_state = "saddle_leather"
 
 	inhand_icon_state = "syringe_kit" // placeholder
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/medical_righthand.dmi'
 
 /obj/item/riding_saddle/leather/Initialize(mapload)
 	. = ..()

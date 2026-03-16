@@ -13,7 +13,7 @@
 /obj/effect/grand_rune
 	name = "grand rune"
 	desc = "A flowing circle of shapes and runes is etched into the floor, the lines twist and move before your eyes."
-	icon = 'icons/effects/96x96.dmi'
+	icon = '../assets/icons/effects/96x96.dmi'
 	icon_state = "wizard_rune"
 	pixel_x = -33
 	pixel_y = 16
@@ -75,7 +75,7 @@
 	invoke_time = get_invoke_time()
 	if(!length(magic_words))
 		magic_words = pick(possible_magic_words)
-	var/image/silicon_image = image(icon = 'icons/effects/eldritch.dmi', icon_state = null, loc = src)
+	var/image/silicon_image = image(icon = '../assets/icons/effects/eldritch.dmi', icon_state = null, loc = src)
 	silicon_image.override = TRUE
 	add_alt_appearance(/datum/atom_hud/alternate_appearance/basic/silicons, "wizard_rune", silicon_image)
 	announce_rune()
@@ -164,7 +164,7 @@
 		on_invocation_complete(user)
 		return
 	flick("[icon_state]_flash", src)
-	playsound(src,'sound/effects/magic/staff_animation.ogg', 75, TRUE)
+	playsound(src,'../assets/sound/effects/magic/staff_animation.ogg', 75, TRUE)
 	INVOKE_ASYNC(src, PROC_REF(invoke_rune), user)
 
 /// Add special effects for casting a spell, basically you glow and hover in the air.
@@ -183,7 +183,7 @@
 /// Called when you actually finish the damn thing
 /obj/effect/grand_rune/proc/on_invocation_complete(mob/living/user)
 	is_in_use = FALSE
-	playsound(src,'sound/effects/magic/staff_change.ogg', 75, TRUE)
+	playsound(src,'../assets/sound/effects/magic/staff_change.ogg', 75, TRUE)
 	INVOKE_ASYNC(src, PROC_REF(summon_round_event), user) // Running the event sleeps
 	trigger_side_effects()
 	tear_reality()
@@ -332,7 +332,7 @@
 
 	var/datum/radial_menu_choice/choice_none = new()
 	choice_none.name = PICK_NOTHING
-	choice_none.image = image(icon = 'icons/mob/actions/actions_cult.dmi', icon_state = "draw")
+	choice_none.image = image(icon = '../assets/icons/mob/actions/actions_cult.dmi', icon_state = "draw")
 	choice_none.info = "The ultimate use of your gathered power! They will never expect you to continue to do \
 		exactly the same kind of thing you've been doing this whole time!"
 	options += list("[choice_none.name]" = choice_none)
@@ -394,7 +394,7 @@
 /obj/effect/decal/cleanable/grand_remains
 	name = "circle of ash"
 	desc = "Looks like someone's been drawing weird shapes with ash on the ground."
-	icon = 'icons/effects/96x96.dmi'
+	icon = '../assets/icons/effects/96x96.dmi'
 	icon_state = "wizard_rune_burned"
 	pixel_x = -28
 	pixel_y = -34

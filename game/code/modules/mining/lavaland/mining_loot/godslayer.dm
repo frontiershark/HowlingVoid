@@ -58,12 +58,12 @@
 		COOLDOWN_START(src, effect_cooldown, effect_cooldown_time) //This needs to happen first, otherwise there's an infinite loop
 		user.heal_ordered_damage(heal_amount, damage_heal_order)
 		user.visible_message(span_notice("[user] suddenly revives, as their armor swirls with demonic energy!"), span_notice("You suddenly feel invigorated!"))
-		playsound(user.loc, 'sound/effects/magic/clockwork/ratvar_attack.ogg', 50)
+		playsound(user.loc, '../assets/sound/effects/magic/clockwork/ratvar_attack.ogg', 50)
 
 /obj/item/clothing/head/hooded/cloakhood/godslayer
 	name = "godslayer helm"
-	icon = 'icons/obj/clothing/head/helmet.dmi'
-	worn_icon = 'icons/mob/clothing/head/helmet.dmi'
+	icon = '../assets/icons/obj/clothing/head/helmet.dmi'
+	worn_icon = '../assets/icons/mob/clothing/head/helmet.dmi'
 	icon_state = "godslayer"
 	desc = "The horns and skull of a wendigo, held together by the remaining icy energy of a demonic miner."
 	armor_type = /datum/armor/cloak_godslayer

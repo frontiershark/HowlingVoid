@@ -3,7 +3,7 @@
 /obj/effect/spawner/random/mining_loot
 	name = "random mining loot"
 	desc = "Spawns one random mining loot."
-	icon = 'icons/obj/storage/crates.dmi'
+	icon = '../assets/icons/obj/storage/crates.dmi'
 	icon_state = "necrocrate"
 	loot = list(
 		/obj/item/shared_storage/red = 1,
@@ -29,7 +29,7 @@
 /obj/effect/spawner/random/mining_loot/demonic
 	name = "random demonic mining loot"
 	desc = "Spawns one random mining loot from the demonic list."
-	icon = 'icons/obj/storage/crates.dmi'
+	icon = '../assets/icons/obj/storage/crates.dmi'
 	icon_state = "necrocrate"
 	loot = list(
 		/obj/item/shared_storage/red = 1,
@@ -55,7 +55,7 @@
 /obj/effect/spawner/random/mining_loot/pka_mod
 	name = "random rare PKA modkits"
 	desc = "Spawns one random rare PKA modkits."
-	icon = 'icons/obj/mining.dmi'
+	icon = '../assets/icons/obj/mining.dmi'
 	icon_state = "modkit"
 	loot = list(
 		/obj/item/borg/upgrade/modkit/aoe/mobs/andturfs = 1,

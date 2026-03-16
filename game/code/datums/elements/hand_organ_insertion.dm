@@ -42,7 +42,7 @@
 
 	user.balloon_alert(user, "inserting...")
 
-	playsound(user, 'sound/items/handling/surgery/organ2.ogg', vol = 80, vary = TRUE, ignore_walls = FALSE)
+	playsound(user, '../assets/sound/items/handling/surgery/organ2.ogg', vol = 80, vary = TRUE, ignore_walls = FALSE)
 
 	if (!do_after(user, insertion_time, extra_checks = CALLBACK(src, PROC_REF(can_insert_organ), user, organ)))
 		user.balloon_alert(user, "interrupted!")
@@ -58,7 +58,7 @@
 
 	user.balloon_alert(user, "inserted!")
 
-	playsound(user, 'sound/items/handling/surgery/organ1.ogg', vol = 80, vary = TRUE, ignore_walls = FALSE)
+	playsound(user, '../assets/sound/items/handling/surgery/organ1.ogg', vol = 80, vary = TRUE, ignore_walls = FALSE)
 
 	user.temporarilyRemoveItemFromInventory(organ, force = TRUE)
 	organ.Insert(user)

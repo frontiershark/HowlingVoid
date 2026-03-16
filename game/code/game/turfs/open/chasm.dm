@@ -3,7 +3,7 @@
 	name = "chasm"
 	desc = "Watch your step."
 	baseturfs = /turf/open/chasm
-	icon = 'icons/turf/floors/chasms.dmi'
+	icon = '../assets/icons/turf/floors/chasms.dmi'
 	icon_state = "chasms-255"
 	base_icon_state = "chasms"
 	smoothing_flags = SMOOTH_BITMASK | SMOOTH_BORDER
@@ -72,7 +72,7 @@
 		to_chat(user, span_warning("You need one rod to build a lattice."))
 		return
 	to_chat(user, span_notice("You construct a lattice."))
-	playsound(src, 'sound/items/weapons/genhit.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/weapons/genhit.ogg', 50, TRUE)
 	// Create a lattice, without reverting to our baseturf
 	new /obj/structure/lattice(src)
 
@@ -95,7 +95,7 @@
 
 // Chasms for Ice moon, with planetary atmos and glow
 /turf/open/chasm/icemoon
-	icon = 'icons/turf/floors/icechasms.dmi'
+	icon = '../assets/icons/turf/floors/icechasms.dmi'
 	icon_state = "icechasms-255"
 	base_icon_state = "icechasms"
 	initial_gas_mix = ICEMOON_DEFAULT_ATMOS
@@ -112,7 +112,7 @@
 
 // Chasms for the jungle, with planetary atmos and a different icon
 /turf/open/chasm/jungle
-	icon = 'icons/turf/floors/junglechasm.dmi'
+	icon = '../assets/icons/turf/floors/junglechasm.dmi'
 	icon_state = "junglechasm-255"
 	base_icon_state = "junglechasm"
 	planetary_atmos = TRUE

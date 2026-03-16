@@ -1,7 +1,7 @@
 /obj/structure/light_construct
 	name = "light fixture frame"
 	desc = "A light fixture under construction."
-	icon = 'icons/obj/lighting.dmi'
+	icon = '../assets/icons/obj/lighting.dmi'
 	icon_state = "tube-construct-stage1"
 	anchored = TRUE
 	layer = WALL_OBJ_LAYER
@@ -95,7 +95,7 @@
 		if(user.temporarilyRemoveItemFromInventory(tool))
 			user.visible_message(span_notice("[user] hooks up [tool] to [src]."), \
 			span_notice("You add [tool] to [src]."))
-			playsound(src, 'sound/machines/click.ogg', 50, TRUE)
+			playsound(src, '../assets/sound/machines/click.ogg', 50, TRUE)
 			tool.forceMove(src)
 			cell = tool
 			add_fingerprint(user)
@@ -114,7 +114,7 @@
 				if (tool.use_tool(src, user, 30, volume=50))
 					user.visible_message(span_notice("[user.name] deconstructs [src]."), \
 						span_notice("You deconstruct [src]."), span_hear("You hear a ratchet."))
-					playsound(src, 'sound/items/deconstruct.ogg', 75, TRUE)
+					playsound(src, '../assets/sound/items/deconstruct.ogg', 75, TRUE)
 					deconstruct()
 				return
 

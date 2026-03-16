@@ -148,7 +148,7 @@
 ///Pill bottle
 /datum/storage/pillbottle
 	allow_quick_gather = TRUE
-	open_sound = 'sound/items/handling/pill_bottle_open.ogg'
+	open_sound = '../assets/sound/items/handling/pill_bottle_open.ogg'
 	open_sound_vary = FALSE
 
 /datum/storage/pillbottle/New(atom/parent, max_slots, max_specific_storage, max_total_storage, rustle_sound, remove_rustle_sound)

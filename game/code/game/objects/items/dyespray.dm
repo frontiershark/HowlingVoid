@@ -2,7 +2,7 @@
 	name = "hair dye spray"
 	desc = "A spray to dye your hair any gradients you'd like."
 	w_class = WEIGHT_CLASS_TINY
-	icon = 'icons/obj/cosmetic.dmi'
+	icon = '../assets/icons/obj/cosmetic.dmi'
 	icon_state = "dyespray"
 
 /obj/item/dyespray/attack_self(mob/user)
@@ -72,7 +72,7 @@
 	else
 		human_target.set_facial_hair_gradient_style(new_grad_style, update = FALSE)
 		human_target.set_facial_hair_gradient_color(new_grad_color, update = TRUE)
-	playsound(src, 'sound/effects/spray.ogg', 10, vary = TRUE)
+	playsound(src, '../assets/sound/effects/spray.ogg', 10, vary = TRUE)
 */
 
 /obj/item/dyespray/proc/dye_organ(mob/living/carbon/human/target, mob/user)

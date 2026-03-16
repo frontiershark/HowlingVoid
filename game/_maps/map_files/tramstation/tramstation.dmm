@@ -43693,7 +43693,7 @@
 /obj/structure/window/spawner/directional/north,
 /obj/item/paper{
 	name = "station layout";
-	icon = 'icons/obj/scrolls.dmi';
+	icon = '../assets/icons/obj/scrolls.dmi';
 	icon_state = "blueprints";
 	default_raw_text = "A crude mapping of the station layout based on leaked internal documents and orbital snapshots taken during construction. I'm not sure how up-to-date this is anymore..";
 	inhand_icon_state = "blueprints"

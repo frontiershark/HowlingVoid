@@ -5,7 +5,7 @@
 
 /datum/wound/muscle
 	name = "Muscle Wound"
-	sound_effect = 'sound/effects/wounds/blood1.ogg'
+	sound_effect = '../assets/sound/effects/wounds/blood1.ogg'
 	wound_flags = (ACCEPTS_GAUZE | SPLINT_OVERLAY)
 
 	processes = TRUE
@@ -148,7 +148,7 @@
 
 /datum/wound/muscle/severe
 	name = "Ruptured Tendon"
-	sound_effect = 'sound/effects/wounds/blood2.ogg'
+	sound_effect = '../assets/sound/effects/wounds/blood2.ogg'
 	desc = "Patient's tendon has been severed, causing significant pain and near uselessness of limb."
 	treat_text = "A tight splint on the affected limb, as well as plenty of rest and sleep."
 	examine_desc = "is limp and awkwardly twitching, skin swollen and red"

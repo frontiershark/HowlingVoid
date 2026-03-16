@@ -1,7 +1,7 @@
 /obj/item/rwd
 	name = "rapid wiring device"
 	desc = "A device used to rapidly lay cable & pick up stray cable pieces laying around."
-	icon = 'icons/obj/tools.dmi'
+	icon = '../assets/icons/obj/tools.dmi'
 	icon_state = "rcl-0"
 	inhand_icon_state = "rcl-0"
 	opacity = FALSE
@@ -10,8 +10,8 @@
 	throw_speed = 1
 	throw_range = 7
 	w_class = WEIGHT_CLASS_NORMAL
-	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/tools_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/tools_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/tools_righthand.dmi'
 
 	/// maximum amount of cable this device can hold
 	var/max_amount = 210
@@ -128,9 +128,9 @@
 /obj/item/rwd/click_alt(mob/user)
 	if(!radial_menu)
 		radial_menu = list(
-			"Layer 1" = image(icon = 'icons/hud/radial.dmi', icon_state = "coil-red"),
-			"Layer 2" = image(icon = 'icons/hud/radial.dmi', icon_state = "coil-yellow"),
-			"Layer 3" = image(icon = 'icons/hud/radial.dmi', icon_state = "coil-blue"),
+			"Layer 1" = image(icon = '../assets/icons/hud/radial.dmi', icon_state = "coil-red"),
+			"Layer 2" = image(icon = '../assets/icons/hud/radial.dmi', icon_state = "coil-yellow"),
+			"Layer 3" = image(icon = '../assets/icons/hud/radial.dmi', icon_state = "coil-blue"),
 		)
 
 	var/layer_result = show_radial_menu(user, src, radial_menu, custom_check = CALLBACK(src, PROC_REF(check_menu), user), require_near = TRUE, tooltips = TRUE)

@@ -66,7 +66,7 @@
 		if(base_lighting_color == COLOR_STARLIGHT)
 			light = new(GLOB.starlight_overlays[offset + 1])
 		else
-			light = mutable_appearance('icons/effects/alphacolors.dmi', "white")
+			light = mutable_appearance('../assets/icons/effects/alphacolors.dmi', "white")
 			light.color = base_lighting_color
 		light.layer = LIGHTING_PRIMARY_LAYER
 		light.blend_mode = BLEND_ADD
@@ -80,7 +80,7 @@
 		// We rely on render_source working, and it DOES NOT APPEAR TO in area rendering
 		// So we're gonna have to update the area's overlay manually. everything else can be automatic tho
 		// Fortunately the first overlay is only ever used by the area, soooo
-		var/mutable_appearance/light = mutable_appearance('icons/effects/alphacolors.dmi', "white")
+		var/mutable_appearance/light = mutable_appearance('../assets/icons/effects/alphacolors.dmi', "white")
 		light.layer = LIGHTING_PRIMARY_LAYER
 		light.blend_mode = BLEND_ADD
 		light.appearance_flags = RESET_TRANSFORM | RESET_ALPHA | RESET_COLOR
@@ -108,7 +108,7 @@
 	area_has_base_lighting = TRUE
 
 /area/proc/starlight_changed(datum/source, old_star, new_star)
-	var/mutable_appearance/old_star_effect = mutable_appearance('icons/effects/alphacolors.dmi', "white")
+	var/mutable_appearance/old_star_effect = mutable_appearance('../assets/icons/effects/alphacolors.dmi', "white")
 	old_star_effect.layer = LIGHTING_PRIMARY_LAYER
 	old_star_effect.blend_mode = BLEND_ADD
 	old_star_effect.appearance_flags = RESET_TRANSFORM | RESET_ALPHA | RESET_COLOR
@@ -116,7 +116,7 @@
 	old_star_effect.alpha = base_lighting_alpha
 	SET_PLANE_W_SCALAR(old_star_effect, LIGHTING_PLANE, 0)
 	cut_overlay(old_star_effect)
-	var/mutable_appearance/new_star_effect = mutable_appearance('icons/effects/alphacolors.dmi', "white")
+	var/mutable_appearance/new_star_effect = mutable_appearance('../assets/icons/effects/alphacolors.dmi', "white")
 	new_star_effect.layer = LIGHTING_PRIMARY_LAYER
 	new_star_effect.blend_mode = BLEND_ADD
 	new_star_effect.appearance_flags = RESET_TRANSFORM | RESET_ALPHA | RESET_COLOR

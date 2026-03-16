@@ -36489,7 +36489,7 @@
 /area/station/science/xenobiology)
 "ksm" = (
 /obj/structure/rack{
-	icon = 'icons/obj/fluff/general.dmi';
+	icon = '../assets/icons/obj/fluff/general.dmi';
 	icon_state = "minibar";
 	name = "skeletal minibar"
 	},

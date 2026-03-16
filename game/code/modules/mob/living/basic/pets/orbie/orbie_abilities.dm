@@ -1,6 +1,6 @@
 /datum/action/cooldown/mob_cooldown/lights
 	name = "Toggle Lights"
-	button_icon = 'icons/mob/simple/pets.dmi'
+	button_icon = '../assets/icons/mob/simple/pets.dmi'
 	button_icon_state = "orbie_light_action"
 	background_icon_state = "bg_default"
 	overlay_icon_state = "bg_default_border"
@@ -13,7 +13,7 @@
 
 /datum/action/cooldown/mob_cooldown/capture_photo
 	name = "Camera"
-	button_icon = 'icons/mob/simple/pets.dmi'
+	button_icon = '../assets/icons/mob/simple/pets.dmi'
 	button_icon_state = "orbie_light_action"
 	background_icon_state = "bg_default"
 	overlay_icon_state = "bg_default_border"

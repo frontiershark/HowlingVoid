@@ -2,14 +2,14 @@
 /obj/item/ammo_box
 	name = "ammo box (null_reference_exception)"
 	desc = "A box of ammo."
-	icon = 'icons/obj/weapons/guns/ammo.dmi'
+	icon = '../assets/icons/obj/weapons/guns/ammo.dmi'
 	abstract_type = /obj/item/ammo_box
 	obj_flags = CONDUCTS_ELECTRICITY
 	slot_flags = ITEM_SLOT_BELT
 	inhand_icon_state = "syringe_kit"
 	worn_icon_state = "ammobox"
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/medical_righthand.dmi'
 	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT*15)
 	throwforce = 2
 	w_class = WEIGHT_CLASS_TINY
@@ -245,7 +245,7 @@
 	if(num_loaded)
 		if(!silent)
 			to_chat(user, span_notice("You load [num_loaded > 1 ? "[num_loaded] [casing_phrasing]s" : "a [casing_phrasing]"] into \the [src]!"))
-			playsound(src, 'sound/items/weapons/gun/general/mag_bullet_insert.ogg', 60, TRUE)
+			playsound(src, '../assets/sound/items/weapons/gun/general/mag_bullet_insert.ogg', 60, TRUE)
 		update_appearance()
 
 	return num_loaded
@@ -258,7 +258,7 @@
 	A.forceMove(drop_location())
 	if(!user.is_holding(src) || !user.put_in_hands(A)) //incase they're using TK
 		A.bounce_away(FALSE, NONE)
-	playsound(src, 'sound/items/weapons/gun/general/mag_bullet_insert.ogg', 60, TRUE)
+	playsound(src, '../assets/sound/items/weapons/gun/general/mag_bullet_insert.ogg', 60, TRUE)
 	to_chat(user, span_notice("You remove a [casing_phrasing] from [src]!"))
 	update_appearance()
 
@@ -301,8 +301,8 @@
 	desc = "A magazine of rounds, they look like error signs... this should probably be reported somewhere."
 	abstract_type = /obj/item/ammo_box/magazine
 	ammo_box_multiload = AMMO_BOX_MULTILOAD_IN // so you can't use a magazine like a bootleg speedloader
-	drop_sound = 'sound/items/handling/gun/ballistics/magazine/magazine_drop1.ogg'
-	pickup_sound = 'sound/items/handling/gun/ballistics/magazine/magazine_pickup1.ogg'
+	drop_sound = '../assets/sound/items/handling/gun/ballistics/magazine/magazine_drop1.ogg'
+	pickup_sound = '../assets/sound/items/handling/gun/ballistics/magazine/magazine_pickup1.ogg'
 
 ///Count of number of bullets in the magazine
 /obj/item/ammo_box/magazine/proc/ammo_count(countempties = TRUE)

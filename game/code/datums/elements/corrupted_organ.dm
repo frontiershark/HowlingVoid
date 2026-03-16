@@ -42,7 +42,7 @@
 		)
 		return
 	var/turf/origin_turf = get_turf(organ)
-	playsound(organ, 'sound/effects/magic/forcewall.ogg', vol = 100)
+	playsound(organ, '../assets/sound/effects/magic/forcewall.ogg', vol = 100)
 	new /obj/effect/temp_visual/curse_blast(origin_turf)
 	organ.visible_message(span_revenwarning("[organ] explodes in a burst of dark energy!"))
 	for(var/mob/living/target in range(1, origin_turf))
@@ -51,7 +51,7 @@
 	qdel(organ)
 
 /obj/effect/temp_visual/curse_blast
-	icon = 'icons/effects/64x64.dmi'
+	icon = '../assets/icons/effects/64x64.dmi'
 	pixel_x = -16
 	pixel_y = -16
 	icon_state = "curse"

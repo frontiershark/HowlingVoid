@@ -42,9 +42,9 @@
 /datum/action/select_guardian_battlecry
 	name = "Select Battlecry"
 	desc = "Update the really cool thing you shout whenever you attack."
-	button_icon = 'icons/obj/clothing/gloves.dmi'
+	button_icon = '../assets/icons/obj/clothing/gloves.dmi'
 	button_icon_state = "boxing"
-	background_icon = 'icons/hud/guardian.dmi'
+	background_icon = '../assets/icons/hud/guardian.dmi'
 	background_icon_state = "base"
 	/// How long can it be? Shouldn't be too long because we repeat this a shitload of times
 	var/max_length = 6

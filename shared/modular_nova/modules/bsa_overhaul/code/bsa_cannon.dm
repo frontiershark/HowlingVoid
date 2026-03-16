@@ -21,7 +21,7 @@
  * The parts are only used to build the full machine and are discarded after completion.
  */
 /obj/machinery/bsa
-	icon = 'icons/obj/machines/particle_accelerator.dmi'
+	icon = '../assets/icons/obj/machines/particle_accelerator.dmi'
 	density = TRUE
 	anchored = TRUE
 
@@ -122,7 +122,7 @@
 /obj/machinery/bsa/full
 	name = "Bluespace Artillery"
 	desc = "Long range bluespace artillery."
-	icon = 'icons/obj/machines/cannon.dmi'
+	icon = '../assets/icons/obj/machines/cannon.dmi'
 	icon_state = "cannon_west"
 	use_power = NO_POWER_USE // We use power when we're fired.
 	pixel_y = -32

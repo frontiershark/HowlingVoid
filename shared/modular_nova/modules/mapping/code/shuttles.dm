@@ -130,7 +130,7 @@
 
 /obj/effect/mob_spawn/ghost_role/human/guild/slaver
 	name = "Privateer Slaver"
-	icon = 'icons/obj/machines/sleeper.dmi'
+	icon = '../assets/icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper_s"
 	outfit = /datum/outfit/guild/slaver
 

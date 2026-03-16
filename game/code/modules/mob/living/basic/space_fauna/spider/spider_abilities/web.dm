@@ -2,7 +2,7 @@
 /datum/action/cooldown/mob_cooldown/lay_web
 	name = "Spin Web"
 	desc = "Spin a web to slow down potential prey."
-	button_icon = 'icons/mob/actions/actions_animal.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_animal.dmi'
 	button_icon_state = "spider_web"
 	background_icon_state = "bg_alien"
 	overlay_icon_state = "bg_alien_border"
@@ -150,7 +150,7 @@
 	name = "Web Effigy"
 	desc = "Shed durable webbing in the shape of your body. It is intimidating and can obstruct attackers. \
 		It will decay after some time."
-	button_icon = 'icons/mob/actions/actions_animal.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_animal.dmi'
 	button_icon_state = "shed_web_carcass"
 	background_icon_state = "bg_alien"
 	overlay_icon_state = "bg_alien_border"

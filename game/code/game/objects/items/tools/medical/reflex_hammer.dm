@@ -1,7 +1,7 @@
 /obj/item/reflexhammer
 	name = "reflex hammer"
 	desc = "A small plastic headed hammer, used to test for neurological damage."
-	icon = 'icons/obj/weapons/hammer.dmi'
+	icon = '../assets/icons/obj/weapons/hammer.dmi'
 	icon_state = "reflex_hammer"
 	icon_angle = -135
 	force = 1
@@ -17,5 +17,5 @@
 
 /obj/item/reflexhammer/suicide_act(mob/living/user)
 	user.visible_message(span_suicide("[user] is beating [user.p_them()]self to death with [src]! Unfortunately, it's not a real hammer! It looks like [user.p_theyre()] trying to commit suicide!"))
-	playsound(loc, 'sound/items/gavel.ogg', 50, TRUE, -1)
+	playsound(loc, '../assets/sound/items/gavel.ogg', 50, TRUE, -1)
 	return STAMINALOSS | SHAME

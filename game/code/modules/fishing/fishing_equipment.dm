@@ -9,7 +9,7 @@
 /obj/item/fishing_line
 	name = "fishing line reel"
 	desc = "A fishing line. In spite of its simplicity, the added length will make fishing a speck easier."
-	icon = 'icons/obj/fishing.dmi'
+	icon = '../assets/icons/obj/fishing.dmi'
 	icon_state = "reel_blue"
 	w_class = WEIGHT_CLASS_SMALL
 	///A bitfield of traits that this fishing line has, checked by fish traits and the minigame.
@@ -128,7 +128,7 @@
 	if(!target.safe_throw_at(destination, source.cast_range, 2, callback = throw_callback, gentle = please_be_gentle))
 		UnregisterSignal(target, COMSIG_MOVABLE_PRE_IMPACT)
 	else
-		playsound(src, 'sound/items/weapons/batonextend.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/items/weapons/batonextend.ogg', 50, TRUE)
 
 /obj/item/fishing_line/auto_reel/proc/catch_it_chucklenut(obj/item/source, atom/hit_atom, datum/thrownthing/throwingdatum)
 	SIGNAL_HANDLER
@@ -159,7 +159,7 @@
 /obj/item/fishing_hook
 	name = "simple fishing hook"
 	desc = "A simple fishing hook. Don't expect to hook onto anything without one."
-	icon = 'icons/obj/fishing.dmi'
+	icon = '../assets/icons/obj/fishing.dmi'
 	icon_state = "hook"
 	w_class = WEIGHT_CLASS_TINY
 
@@ -420,7 +420,7 @@
 	for(var/datum/map_template/shelter/fishing/spot as anything in typesof(/datum/map_template/shelter/fishing))
 		if(!spot::safe && !(obj_flags & EMAGGED))
 			continue
-		choices[spot::name] = image('icons/hud/radial_fishing.dmi', spot::radial_icon)
+		choices[spot::name] = image('../assets/icons/hud/radial_fishing.dmi', spot::radial_icon)
 		spot_ids_by_name[spot::name] = spot::shelter_id
 	var/choice = show_radial_menu(user, src, choices, radius = 38, custom_check = CALLBACK(src, TYPE_PROC_REF(/atom, can_interact), user), tooltips = TRUE)
 	if(!choice || used || !can_interact(user))
@@ -428,7 +428,7 @@
 	template_id = spot_ids_by_name[choice]
 	template = SSmapping.shelter_templates[template_id]
 	to_chat(user, span_notice("You change [src]'s selected fishing spot to [choice]."))
-	playsound(src, 'sound/items/pen_click.ogg', 20, TRUE, -3)
+	playsound(src, '../assets/sound/items/pen_click.ogg', 20, TRUE, -3)
 	return
 
 /obj/item/survivalcapsule/fishing/get_ignore_flags()
@@ -469,7 +469,7 @@
 /obj/item/storage/bag/fishing
 	name = "fishing bag"
 	desc = "A vibrant bag for storing caught fish."
-	icon = 'icons/obj/fishing.dmi'
+	icon = '../assets/icons/obj/fishing.dmi'
 	icon_state = "fishing_bag"
 	worn_icon_state = "fishing_bag"
 	resistance_flags = FLAMMABLE
@@ -496,20 +496,20 @@
 ///An item that allows the user to add and remove traits from a fish at their own discretion.
 /obj/item/fish_genegun
 	name = "fish gene-gun"
-	icon = 'icons/obj/fishing.dmi'
+	icon = '../assets/icons/obj/fishing.dmi'
 	icon_state = "fish_gun"
 	base_icon_state = "fish_gun"
 	inhand_icon_state = "gun" //Oh, the laziness
 	worn_icon_state = "gun"
-	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/guns_righthand.dmi'
 	desc = "A device designed to inject or extract traits to and from fish. It takes an empty syringe, which is converted into a fish gene injector once the trait is extracted. Repeated applications may kill the fish."
 	w_class = WEIGHT_CLASS_SMALL
 	force = 7
 	throwforce = 5
 	attack_verb_continuous = list("pricked", "stabbed", "poked")
 	attack_verb_simple = list("prick", "stab", "poke")
-	hitsound = 'sound/items/hypospray.ogg'
+	hitsound = '../assets/sound/items/hypospray.ogg'
 	//This can be an empty syringe or a gene injector
 	var/obj/item/loaded_injector
 
@@ -546,7 +546,7 @@
 	if(IsReachableBy(user)) //check that the user can actually reach the loaded injector (telekinesis yadda yadda)
 		user.put_in_hands(loaded)
 	balloon_alert(user, "gene-gun unloaded")
-	playsound(src, 'sound/items/weapons/gun/general/magazine_remove_full.ogg', 30, TRUE)
+	playsound(src, '../assets/sound/items/weapons/gun/general/magazine_remove_full.ogg', 30, TRUE)
 
 /obj/item/fish_genegun/Exited(atom/movable/gone)
 	. = ..()
@@ -570,7 +570,7 @@
 	to_chat(user, span_info("You load [item] into [src]."))
 	loaded_injector = item
 	update_appearance(UPDATE_ICON)
-	playsound(src, 'sound/items/weapons/gun/general/magazine_insert_full.ogg', 30, TRUE)
+	playsound(src, '../assets/sound/items/weapons/gun/general/magazine_insert_full.ogg', 30, TRUE)
 	return ITEM_INTERACT_SUCCESS
 
 /obj/item/fish_genegun/interact_with_atom(obj/interacting_with, mob/living/user, list/modifiers)
@@ -622,21 +622,21 @@
 	if(HAS_TRAIT(fish, TRAIT_FISH_GENEGUNNED))
 		fish.set_status(FISH_DEAD)
 	ADD_TRAIT(fish, TRAIT_FISH_GENEGUNNED, TRAIT_GENERIC)
-	playsound(fish, 'sound/items/hypospray.ogg', 30, TRUE)
+	playsound(fish, '../assets/sound/items/hypospray.ogg', 30, TRUE)
 	update_appearance(UPDATE_ICON)
 	return ITEM_INTERACT_SUCCESS
 
 ///The injector for the fish trait. Can be used on its own without a fish gene-gun as well.
 /obj/item/fish_gene
 	name = "fish trait injector"
-	icon = 'icons/obj/fishing.dmi'
+	icon = '../assets/icons/obj/fishing.dmi'
 	icon_state = "fish_trait_injector"
 	desc = "A single-use injector containing a specific trait that can be used on any (living) fish compatible with it."
 	w_class = WEIGHT_CLASS_TINY
 	inhand_icon_state = "dnainjector"
 	worn_icon_state = "pen"
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/medical_righthand.dmi'
 	throw_speed = 3
 	throw_range = 5
 	var/datum/fish_trait/trait_type
@@ -674,5 +674,5 @@
 	if(HAS_TRAIT(fish, TRAIT_FISH_GENEGUNNED))
 		fish.set_status(FISH_DEAD)
 	ADD_TRAIT(fish, TRAIT_FISH_GENEGUNNED, TRAIT_GENERIC)
-	playsound(fish, 'sound/items/hypospray.ogg', 25, TRUE)
+	playsound(fish, '../assets/sound/items/hypospray.ogg', 25, TRUE)
 	return ITEM_INTERACT_SUCCESS

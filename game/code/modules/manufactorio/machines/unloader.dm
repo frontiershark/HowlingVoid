@@ -1,7 +1,7 @@
 /obj/machinery/power/manufacturing/unloader
 	name = "manufacturing crate unloader"
 	desc = "Unloads crates (and ore boxes) passed into it, ejecting the empty crate to the side and its contents forwards. Use a multitool to flip the crate output."
-	icon = 'icons/obj/machines/mining_machines.dmi'
+	icon = '../assets/icons/obj/machines/mining_machines.dmi'
 	icon_state = "unloader-corner"
 	circuit = /obj/item/circuitboard/machine/manuunloader
 	/// power used per attempt to unload a crate

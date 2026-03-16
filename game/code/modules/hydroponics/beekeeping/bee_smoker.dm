@@ -4,11 +4,11 @@
 /obj/item/bee_smoker
 	name = "bee smoker"
 	desc = "A device which can be used to hypnotize bees!"
-	icon = 'icons/obj/service/hydroponics/equipment.dmi'
+	icon = '../assets/icons/obj/service/hydroponics/equipment.dmi'
 	icon_state = "bee_smoker"
 	inhand_icon_state = "bee_smoker"
-	lefthand_file = 'icons/mob/inhands/equipment/hydroponics_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/hydroponics_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/hydroponics_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/hydroponics_righthand.dmi'
 	item_flags = NOBLUDGEON
 	/// current level of fuel we have
 	var/current_herb_fuel = 50
@@ -54,7 +54,7 @@
 		return .
 
 	current_herb_fuel -= single_use_cost
-	playsound(src, 'sound/effects/spray2.ogg', 100, TRUE)
+	playsound(src, '../assets/sound/effects/spray2.ogg', 100, TRUE)
 	var/turf/target_turf = get_turf(interacting_with)
 	new /obj/effect/temp_visual/mook_dust(target_turf)
 	for(var/mob/living/basic/bee/friend in target_turf)
@@ -100,7 +100,7 @@
 
 /obj/item/bee_smoker/proc/alter_state()
 	activated = !activated
-	playsound(src, 'sound/items/tools/welderdeactivate.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/tools/welderdeactivate.ogg', 50, TRUE)
 
 	if(!activated)
 		beesmoke_loop.stop()

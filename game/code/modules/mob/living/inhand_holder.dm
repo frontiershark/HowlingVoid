@@ -8,8 +8,8 @@
 	slot_flags = NONE
 	/// Mob inside of us
 	var/mob/living/held_mob
-	lefthand_file = 'icons/mob/inhands/clothing/hats_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/clothing/hats_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/clothing/hats_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/clothing/hats_righthand.dmi'
 	body_parts_covered = HEAD
 	slot_flags = ITEM_SLOT_HEAD
 
@@ -130,7 +130,7 @@
 	var/mob/living/basic/drone/drone = contained
 	if(!drone)
 		return ..()
-	icon = 'icons/mob/silicon/drone.dmi'
+	icon = '../assets/icons/mob/silicon/drone.dmi'
 	icon_state = "[drone.visualAppearance]_hat"
 
 /obj/item/mob_holder/destructible

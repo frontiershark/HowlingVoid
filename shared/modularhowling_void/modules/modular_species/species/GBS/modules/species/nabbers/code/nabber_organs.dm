@@ -59,7 +59,7 @@
 		return
 
 	active = !active
-	playsound(owner, 'sound/machines/click.ogg', 50, TRUE)
+	playsound(owner, '../assets/sound/machines/click.ogg', 50, TRUE)
 
 	if(active)
 		flash_protect = FLASH_PROTECTION_WELDER

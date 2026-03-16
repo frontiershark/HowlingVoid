@@ -2,7 +2,7 @@
 /obj/machinery/reagentgrinder
 	name = "all-in-one grinder"
 	desc = "From BlenderTech. Will It Blend? Let's test it out!"
-	icon = 'icons/obj/machines/kitchen.dmi'
+	icon = '../assets/icons/obj/machines/kitchen.dmi'
 	icon_state = "juicer"
 	base_icon_state = "juicer"
 	active_power_usage = BASE_MACHINE_ACTIVE_CONSUMPTION * 0.0025
@@ -334,7 +334,7 @@
 	if(!user.can_perform_action(src, ALLOW_SILICON_REACH | FORBID_TELEKINESIS_REACH))
 		return
 
-	var/static/radial_eject = image(icon = 'icons/hud/radial.dmi', icon_state = "radial_eject")
+	var/static/radial_eject = image(icon = '../assets/icons/hud/radial.dmi', icon_state = "radial_eject")
 
 	//create list of options available
 	var/list/options = list()
@@ -344,10 +344,10 @@
 			continue
 
 		if(is_operational && anchored && !QDELETED(beaker) && !beaker.reagents.holder_full())
-			var/static/radial_grind = image(icon = 'icons/hud/radial.dmi', icon_state = "radial_grind")
+			var/static/radial_grind = image(icon = '../assets/icons/hud/radial.dmi', icon_state = "radial_grind")
 			options["grind"] = radial_grind
 
-			var/static/radial_juice = image(icon = 'icons/hud/radial.dmi', icon_state = "radial_juice")
+			var/static/radial_juice = image(icon = '../assets/icons/hud/radial.dmi', icon_state = "radial_juice")
 			options["juice"] = radial_juice
 
 		options["eject"] = radial_eject
@@ -358,12 +358,12 @@
 		options["eject"] = radial_eject
 		//mix reagents present inside
 		if(is_operational && anchored && beaker.reagents.total_volume)
-			var/static/radial_mix = image(icon = 'icons/hud/radial.dmi', icon_state = "radial_mix")
+			var/static/radial_mix = image(icon = '../assets/icons/hud/radial.dmi', icon_state = "radial_mix")
 			options["mix"] = radial_mix
 
 	//examine action if Ai is trying to see whats up
 	if(HAS_AI_ACCESS(user))
-		var/static/radial_examine = image(icon = 'icons/hud/radial.dmi', icon_state = "radial_examine")
+		var/static/radial_examine = image(icon = '../assets/icons/hud/radial.dmi', icon_state = "radial_examine")
 		options["examine"] = radial_examine
 
 	//display choices & perform action
@@ -420,9 +420,9 @@
 
 	Shake(pixelshiftx = 1, pixelshifty = 0, duration = duration)
 	if(!juicing)
-		playsound(src, 'sound/machines/blender.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/machines/blender.ogg', 50, TRUE)
 	else
-		playsound(src, 'sound/machines/juicer.ogg', 20, TRUE)
+		playsound(src, '../assets/sound/machines/juicer.ogg', 20, TRUE)
 
 	var/total_weight
 	var/item_weight
@@ -482,7 +482,7 @@
 
 	Shake(pixelshiftx = 1, pixelshifty = 0, duration = duration)
 
-	playsound(src, 'sound/machines/juicer.ogg', 20, TRUE)
+	playsound(src, '../assets/sound/machines/juicer.ogg', 20, TRUE)
 
 	addtimer(CALLBACK(src, PROC_REF(mix_complete), duration), duration)
 

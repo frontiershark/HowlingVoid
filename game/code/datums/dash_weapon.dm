@@ -2,7 +2,7 @@
 /datum/action/innate/dash
 	name = "Dash"
 	desc = "Teleport to the targeted location."
-	button_icon = 'icons/mob/actions/actions_items.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_items.dmi'
 	button_icon_state = "jetboot"
 	/// How many dash charges do we have?
 	var/current_charges = 1
@@ -11,9 +11,9 @@
 	/// How long does it take to get a dash charge back?
 	var/charge_rate = 25 SECONDS
 	/// What sound do we play on dash?
-	var/dash_sound = 'sound/effects/magic/blink.ogg'
+	var/dash_sound = '../assets/sound/effects/magic/blink.ogg'
 	/// What sound do we play on recharge?
-	var/recharge_sound = 'sound/effects/magic/charge.ogg'
+	var/recharge_sound = '../assets/sound/effects/magic/charge.ogg'
 	/// What effect does our beam use?
 	var/beam_effect = "blur"
 	/// How long does our beam last?

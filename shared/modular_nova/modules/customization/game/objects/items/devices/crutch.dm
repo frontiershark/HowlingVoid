@@ -10,7 +10,7 @@
 
 // stupid DM inheritance, we have to remove our icon overrides for subtypes
 /obj/item/cane/crutch/wood
-	icon = 'icons/obj/weapons/staff.dmi'
-	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
+	icon = '../assets/icons/obj/weapons/staff.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/melee_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/melee_righthand.dmi'
 

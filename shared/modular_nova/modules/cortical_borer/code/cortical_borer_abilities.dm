@@ -663,7 +663,7 @@
 	to_chat(cortical_owner.human_host, span_warning("Your brain begins to hurt..."))
 	var/turf/borer_turf = get_turf(cortical_owner)
 	new /obj/effect/decal/cleanable/vomit(borer_turf)
-	playsound(borer_turf, 'sound/effects/splat.ogg', 50, TRUE)
+	playsound(borer_turf, '../assets/sound/effects/splat.ogg', 50, TRUE)
 	var/logging_text = "[key_name(cortical_owner)] gave birth at [loc_name(borer_turf)]"
 	cortical_owner.log_message(logging_text, LOG_GAME)
 	owner.balloon_alert(owner, "egg laid")
@@ -677,7 +677,7 @@
 	var/obj/effect/decal/cleanable/blood/splatter/new_splatter = new /obj/effect/decal/cleanable/blood/splatter(borer_turf)
 	new_splatter.add_mob_blood(cortical_owner)
 
-	playsound(borer_turf, 'sound/effects/splat.ogg', 50, TRUE)
+	playsound(borer_turf, '../assets/sound/effects/splat.ogg', 50, TRUE)
 	var/logging_text = "[key_name(cortical_owner)] gave birth alone at [loc_name(borer_turf)]"
 	cortical_owner.log_message(logging_text, LOG_GAME)
 	owner.balloon_alert(owner, "egg laid")
@@ -823,7 +823,7 @@
 	if(cortical_owner.children_produced == GLOB.objective_egg_egg_number)
 		GLOB.successful_egg_number += 1
 
-	playsound(borer_turf, 'sound/effects/splat.ogg', 50, TRUE)
+	playsound(borer_turf, '../assets/sound/effects/splat.ogg', 50, TRUE)
 	var/logging_text = "[key_name(cortical_owner)] gave birth to an empowered borer at [loc_name(borer_turf)]"
 	cortical_owner.log_message(logging_text, LOG_GAME)
 	cortical_owner.balloon_alert(owner, "egg laid")

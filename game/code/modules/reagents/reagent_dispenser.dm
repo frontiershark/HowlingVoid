@@ -4,7 +4,7 @@
 /obj/structure/reagent_dispensers
 	name = "Dispenser"
 	desc = "..."
-	icon = 'icons/obj/medical/chemical_tanks.dmi'
+	icon = '../assets/icons/obj/medical/chemical_tanks.dmi'
 	icon_state = "water"
 	abstract_type = /obj/structure/reagent_dispensers
 	density = TRUE
@@ -209,7 +209,7 @@
 	if(leaking && reagents && reagents.total_volume >= amount_to_leak)
 		reagents.expose(get_turf(src), TOUCH, amount_to_leak / max(amount_to_leak, reagents.total_volume))
 		reagents.remove_reagent(reagent_id, amount_to_leak)
-		playsound(src, 'sound/effects/glug.ogg', 33, TRUE, SILENCED_SOUND_EXTRARANGE)
+		playsound(src, '../assets/sound/effects/glug.ogg', 33, TRUE, SILENCED_SOUND_EXTRARANGE)
 		return TRUE
 	return FALSE
 
@@ -314,7 +314,7 @@
 			return
 		reagents.trans_to(refilling_welder, refilling_welder.max_fuel, transferred_by = user)
 		user.visible_message(span_notice("[user] refills [user.p_their()] [refilling_welder.name]."), span_notice("You refill [refilling_welder]."))
-		playsound(src, 'sound/effects/refill.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/effects/refill.ogg', 50, TRUE)
 		refilling_welder.update_appearance()
 		return
 
@@ -325,7 +325,7 @@
 			return
 		reagents.trans_to(refilling_lighter, refilling_lighter.maximum_fuel, transferred_by = user)
 		user.visible_message(span_notice("[user] refills [user.p_their()] [refilling_lighter.name]."), span_notice("You refill [refilling_lighter]."))
-		playsound(src, 'sound/effects/refill.ogg', 25, TRUE)
+		playsound(src, '../assets/sound/effects/refill.ogg', 25, TRUE)
 		return
 
 	if(!reagents.has_reagent(/datum/reagent/fuel))
@@ -479,7 +479,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/reagent_dispensers/wall/peppertank, 3
 			overlay_tag = "100"
 		else
 			overlay_tag = "50" //Can't be 0, because there'd be no mixcolor
-		var/mutable_appearance/tank_overlay = mutable_appearance('icons/obj/medical/chemical_tanks.dmi', "water_cooler_overlay[overlay_tag]")
+		var/mutable_appearance/tank_overlay = mutable_appearance('../assets/icons/obj/medical/chemical_tanks.dmi', "water_cooler_overlay[overlay_tag]")
 		tank_overlay.color = mixcolor
 		. += tank_overlay
 
@@ -537,7 +537,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/reagent_dispensers/wall/peppertank, 3
 		visible_message(span_danger("\The [src] flips on it's side and spills everywhere!"))
 		chem_splash(get_turf(src), null, 2 + floor((reagents.total_volume) / 1000), list(reagents))
 	eject_jug(throw_away = TRUE)
-	playsound(src, 'sound/effects/glass/glassbash.ogg', 100)
+	playsound(src, '../assets/sound/effects/glass/glassbash.ogg', 100)
 	tip_over()
 
 /obj/structure/reagent_dispensers/water_cooler/proc/refresh_appearance()
@@ -642,7 +642,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/reagent_dispensers/wall/virusfood, 30
 /obj/structure/reagent_dispensers/servingdish
 	name = "serving dish"
 	desc = "A dish full of food slop for your bowl."
-	icon = 'icons/obj/service/kitchen.dmi'
+	icon = '../assets/icons/obj/service/kitchen.dmi'
 	icon_state = "serving"
 	reagent_id = /datum/reagent/consumable/nutraslop
 
@@ -680,7 +680,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/reagent_dispensers/wall/virusfood, 30
 	if(!reagents.total_volume)
 		return
 
-	var/mutable_appearance/tank_color = mutable_appearance('icons/obj/medical/chemical_tanks.dmi', "tank_chem_overlay")
+	var/mutable_appearance/tank_color = mutable_appearance('../assets/icons/obj/medical/chemical_tanks.dmi', "tank_chem_overlay")
 	tank_color.color = mix_color_from_reagents(reagents.reagent_list)
 	. += tank_color
 

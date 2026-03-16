@@ -1,7 +1,7 @@
 /mob/living/basic/leaper
 	name = "leaper"
 	desc = "Commonly referred to as 'leapers', the Geron Toad is a massive beast that spits out highly pressurized bubbles containing a unique toxin, knocking down its prey and then crushing it with its girth."
-	icon = 'icons/mob/simple/jungle/leaper.dmi'
+	icon = '../assets/icons/mob/simple/jungle/leaper.dmi'
 	icon_state = "leaper"
 	icon_living = "leaper"
 	icon_dead = "leaper_dead"
@@ -23,7 +23,7 @@
 	minimum_survivable_temperature = 0
 	maximum_survivable_temperature = INFINITY
 
-	attack_sound = 'sound/items/weapons/bladeslice.ogg'
+	attack_sound = '../assets/sound/items/weapons/bladeslice.ogg'
 	attack_vis_effect = ATTACK_EFFECT_SLASH
 	status_flags = CANSTUN
 	lighting_cutoff_red = 5

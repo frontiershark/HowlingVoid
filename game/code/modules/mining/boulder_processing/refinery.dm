@@ -8,7 +8,7 @@
 	desc = "BR for short. Accepts boulders and refines non-metallic ores into sheets using internal chemicals."
 	icon_state = "stacker"
 	circuit = /obj/item/circuitboard/machine/refinery
-	usage_sound = 'sound/machines/mining/refinery.ogg'
+	usage_sound = '../assets/sound/machines/mining/refinery.ogg'
 	action = "crushing"
 
 /obj/machinery/bouldertech/refinery/can_process_material(datum/material/possible_mat)
@@ -50,7 +50,7 @@
 	light_power = 3
 	light_color = "#ffaf55"
 	circuit = /obj/item/circuitboard/machine/smelter
-	usage_sound = 'sound/machines/mining/smelter.ogg'
+	usage_sound = '../assets/sound/machines/mining/smelter.ogg'
 	action = "smelting"
 
 /obj/machinery/bouldertech/refinery/smelter/Initialize(mapload)

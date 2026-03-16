@@ -94,7 +94,7 @@
 	return !isnull(alerts[category])
 
 /atom/movable/screen/alert
-	icon = 'icons/hud/screen_alert.dmi'
+	icon = '../assets/icons/hud/screen_alert.dmi'
 	icon_state = "template"
 	name = "Alert"
 	desc = "Something seems to have gone wrong with this alert, so report this bug please"
@@ -115,7 +115,7 @@
 	///If set, this overlay will be added to the icon.
 	var/overlay_state
 	///The file to fetch the overlay from
-	var/overlay_icon = 'icons/hud/screen_alert.dmi'
+	var/overlay_icon = '../assets/icons/hud/screen_alert.dmi'
 
 /atom/movable/screen/alert/Initialize(mapload, datum/hud/hud_owner)
 	. = ..()
@@ -261,7 +261,7 @@
 	desc = "You feel like your lungs are larger than usual! You're taking deeper breaths!"
 	icon_state = "bronchodilated"
 	use_user_hud_icon = TRUE
-	overlay_icon = 'icons/obj/medical/organs/organs.dmi'
+	overlay_icon = '../assets/icons/obj/medical/organs/organs.dmi'
 	overlay_state = "lungs"
 
 /atom/movable/screen/alert/bronchoconstricted
@@ -536,7 +536,7 @@
 	if(!QDELETED(rube) && !QDELETED(offerer))
 		offerer.visible_message(span_danger("[offerer] pulls away from [rube]'s slap at the last second, dodging the high-five entirely!"), span_nicegreen("[rube] fails to make contact with your hand, making an utter fool of [rube.p_them()]self!"), span_hear("You hear a disappointing sound of flesh not hitting flesh!"), ignored_mobs=rube)
 		to_chat(rube, span_userdanger("[uppertext("NO! [offerer] PULLS [offerer.p_their()] HAND AWAY FROM YOURS! YOU'RE TOO SLOW!")]"))
-		playsound(offerer, 'sound/items/weapons/thudswoosh.ogg', 100, TRUE, 1)
+		playsound(offerer, '../assets/sound/items/weapons/thudswoosh.ogg', 100, TRUE, 1)
 		rube.Knockdown(1 SECONDS)
 		offerer.add_mood_event("high_five", /datum/mood_event/down_low)
 		rube.add_mood_event("high_five", /datum/mood_event/too_slow)
@@ -570,7 +570,7 @@
 	name = "Succumb"
 	desc = "Shuffle off this mortal coil."
 	use_user_hud_icon = TRUE
-	overlay_icon = 'icons/mob/simple/mob.dmi'
+	overlay_icon = '../assets/icons/mob/simple/mob.dmi'
 	overlay_state = "ghost"
 	clickable_glow = TRUE
 	var/static/list/death_titles = list(
@@ -644,7 +644,7 @@
 
 /atom/movable/screen/alert/bloodsense/Initialize(mapload, datum/hud/hud_owner)
 	. = ..()
-	narnar = new('icons/hud/screen_alert.dmi', "mini_nar")
+	narnar = new('../assets/icons/hud/screen_alert.dmi', "mini_nar")
 	START_PROCESSING(SSprocessing, src)
 
 /atom/movable/screen/alert/bloodsense/Destroy()
@@ -970,7 +970,7 @@
 
 /atom/movable/screen/alert/poll_alert/Initialize(mapload)
 	. = ..()
-	signed_up_overlay = mutable_appearance('icons/hud/screen_gen.dmi', icon_state = "selector")
+	signed_up_overlay = mutable_appearance('../assets/icons/hud/screen_gen.dmi', icon_state = "selector")
 	register_context()
 
 /atom/movable/screen/alert/poll_alert/proc/set_role_overlay()

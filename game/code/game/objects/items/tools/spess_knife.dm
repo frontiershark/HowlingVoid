@@ -3,14 +3,14 @@
 /obj/item/spess_knife
 	name = "spess knife"
 	desc = "Unleash the cosmic ingenuity at your fingertips. It seamlessly shifts forms, revealing hidden talents that might just save the day. Who knows what secrets lie within this celestial tool?"
-	icon = 'icons/obj/tools.dmi'
+	icon = '../assets/icons/obj/tools.dmi'
 	icon_state = "spess_knife"
 	worn_icon_state = "spess_knife"
 	inside_belt_icon_state = "spess_knife"
 	inhand_icon_state = "spess_knife"
 	icon_angle = -90
-	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/tools_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/tools_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/tools_righthand.dmi'
 	w_class = WEIGHT_CLASS_TINY
 	obj_flags = CONDUCTS_ELECTRICITY
 	slot_flags = ITEM_SLOT_BELT
@@ -35,10 +35,10 @@
 		disabled = TRUE, \
 	)
 	options = list(
-		NO_TOOL = image(icon = 'icons/obj/tools.dmi', icon_state = initial(icon_state)),
-		TOOL_KNIFE = image(icon = 'icons/obj/tools.dmi', icon_state = "[initial(icon_state)]_[TOOL_KNIFE]"),
-		TOOL_SCREWDRIVER = image(icon = 'icons/obj/tools.dmi', icon_state = "[initial(icon_state)]_[TOOL_SCREWDRIVER]"),
-		TOOL_WIRECUTTER = image(icon = 'icons/obj/tools.dmi', icon_state = "[initial(icon_state)]_[TOOL_WIRECUTTER]"),
+		NO_TOOL = image(icon = '../assets/icons/obj/tools.dmi', icon_state = initial(icon_state)),
+		TOOL_KNIFE = image(icon = '../assets/icons/obj/tools.dmi', icon_state = "[initial(icon_state)]_[TOOL_KNIFE]"),
+		TOOL_SCREWDRIVER = image(icon = '../assets/icons/obj/tools.dmi', icon_state = "[initial(icon_state)]_[TOOL_SCREWDRIVER]"),
+		TOOL_WIRECUTTER = image(icon = '../assets/icons/obj/tools.dmi', icon_state = "[initial(icon_state)]_[TOOL_WIRECUTTER]"),
 	)
 
 /obj/item/spess_knife/attack_self(mob/user, modifiers)
@@ -69,7 +69,7 @@
 
 	update_tool_parameters()
 	update_appearance(UPDATE_ICON_STATE)
-	playsound(src, 'sound/items/weapons/empty.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/weapons/empty.ogg', 50, TRUE)
 
 /// Used to pick random tool behavior for the knife
 /obj/item/spess_knife/proc/pick_tool()

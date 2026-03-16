@@ -1,7 +1,7 @@
 /obj/item/food/drug
 	name = "generic drug"
 	desc = "I am error"
-	icon = 'icons/obj/medical/drugs.dmi'
+	icon = '../assets/icons/obj/medical/drugs.dmi'
 	abstract_type = /obj/item/food/drug
 	foodtypes = GROSS
 	food_flags = FOOD_FINGER_FOOD
@@ -38,14 +38,14 @@
 /obj/item/reagent_containers/cup/blastoff_ampoule
 	name = "bLaSToFF ampoule" //stylized name
 	desc = "A small ampoule. The liquid inside appears to be boiling violently.\nYou suspect it contains bLasSToFF; the drug thought to be the cause of the infamous Luna nightclub mass casualty incident."
-	icon = 'icons/obj/medical/drugs.dmi'
+	icon = '../assets/icons/obj/medical/drugs.dmi'
 	icon_state = "blastoff_ampoule"
 	base_icon_state = "blastoff_ampoule"
 	volume = 20
 	initial_reagent_flags = TRANSPARENT
 	list_reagents = list(/datum/reagent/drug/blastoff = 10)
 	reagent_consumption_method = INHALE
-	consumption_sound = 'sound/effects/spray2.ogg'
+	consumption_sound = '../assets/sound/effects/spray2.ogg'
 
 /obj/item/reagent_containers/cup/blastoff_ampoule/update_icon_state()
 	. = ..()
@@ -60,7 +60,7 @@
 	if(!user.can_perform_action(src, NEED_DEXTERITY) || is_open_container())
 		return ..()
 	add_container_flags(OPENCONTAINER)
-	playsound(src, 'sound/items/ampoule_snap.ogg', 40)
+	playsound(src, '../assets/sound/items/ampoule_snap.ogg', 40)
 	update_appearance()
 
 /obj/item/reagent_containers/cup/blastoff_ampoule/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum, do_splash = TRUE)

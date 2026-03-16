@@ -26,7 +26,7 @@
 
 /datum/emote/living/carbon/human/glasses/run_emote(mob/user, params, type_override, intentional)
 	. = ..()
-	var/image/emote_animation = image('icons/mob/human/emote_visuals.dmi', user, "glasses")
+	var/image/emote_animation = image('../assets/icons/mob/human/emote_visuals.dmi', user, "glasses")
 	flick_overlay_global(emote_animation, GLOB.clients, 1.6 SECONDS)
 
 /datum/emote/living/carbon/human/grumble
@@ -85,7 +85,7 @@
 	message = "salutes."
 	message_param = "salutes to %t."
 	hands_use_check = TRUE
-	sound = 'sound/mobs/humanoids/human/salute/salute.ogg'
+	sound = '../assets/sound/mobs/humanoids/human/salute/salute.ogg'
 
 /datum/emote/living/carbon/human/slit
 	key = "slit"

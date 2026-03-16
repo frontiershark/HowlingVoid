@@ -3,7 +3,7 @@
 
 /mob/living/basic/blood_worm/proc/enter_host(mob/living/carbon/human/new_host, silent = FALSE, gain_progress = TRUE)
 	if (!silent)
-		playsound(src, 'sound/effects/magic/enter_blood.ogg', vol = 60, vary = TRUE, ignore_walls = FALSE)
+		playsound(src, '../assets/sound/effects/magic/enter_blood.ogg', vol = 60, vary = TRUE, ignore_walls = FALSE)
 
 		visible_message(
 			message = span_bolddanger("\The [src] enter[p_s()] \the [new_host]!"),
@@ -93,7 +93,7 @@
 
 	forceMove(host.drop_location()) // This will call unregister_host() via Moved()
 
-	playsound(src, 'sound/effects/magic/exit_blood.ogg', vol = 60, vary = TRUE, ignore_walls = FALSE)
+	playsound(src, '../assets/sound/effects/magic/exit_blood.ogg', vol = 60, vary = TRUE, ignore_walls = FALSE)
 
 	Immobilize(leave_host_duration, ignore_canstun = TRUE)
 	incapacitate(leave_host_duration, ignore_canstun = TRUE)

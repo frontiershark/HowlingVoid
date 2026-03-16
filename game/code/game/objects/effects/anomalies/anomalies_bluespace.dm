@@ -1,7 +1,7 @@
 
 /obj/effect/anomaly/bluespace
 	name = "bluespace anomaly"
-	icon = 'icons/obj/weapons/guns/projectiles.dmi'
+	icon = '../assets/icons/obj/weapons/guns/projectiles.dmi'
 	icon_state = "bluespace"
 	density = TRUE
 	anomaly_core = /obj/item/assembly/signaler/anomaly/bluespace
@@ -25,7 +25,7 @@
 
 /obj/effect/anomaly/bluespace/detonate()
 	new /obj/effect/temp_visual/circle_wave/bluespace(get_turf(src))
-	playsound(src, 'sound/effects/magic/cosmic_energy.ogg', vol = 50)
+	playsound(src, '../assets/sound/effects/magic/cosmic_energy.ogg', vol = 50)
 
 	var/turf/impact_turf = pick(get_area_turfs(impact_area))
 	if(!impact_turf)
@@ -53,7 +53,7 @@
 	// Calculate previous position for transition
 	var/turf/beacon_turf = get_turf(chosen) // the turf of origin we're travelling TO
 
-	playsound(beacon_turf, 'sound/effects/phasein.ogg', 100, TRUE)
+	playsound(beacon_turf, '../assets/sound/effects/phasein.ogg', 100, TRUE)
 	priority_announce("Massive bluespace translocation detected.", "Anomaly Alert", ANNOUNCER_TRANSLOCATION) //NOVA EDIT CHANGE - ANNOUNCER
 
 	var/list/flashers = list()

@@ -220,5 +220,5 @@
 
 /datum/ai_planning_subtree/random_speech/insect/laugh
 	speech_chance = 5
-	sound = list('sound/mobs/non-humanoids/insect/chitter.ogg')
+	sound = list('../assets/sound/mobs/non-humanoids/insect/chitter.ogg')
 	emote_hear = list("laughs.")

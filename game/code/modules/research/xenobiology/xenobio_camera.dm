@@ -333,7 +333,7 @@
 
 /datum/action/innate/slime_place
 	name = "Place Slimes"
-	button_icon = 'icons/mob/actions/actions_silicon.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_silicon.dmi'
 	button_icon_state = "slime_down"
 
 /datum/action/innate/slime_place/Activate()
@@ -350,7 +350,7 @@
 
 /datum/action/innate/slime_pick_up
 	name = "Pick up Slime"
-	button_icon = 'icons/mob/actions/actions_silicon.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_silicon.dmi'
 	button_icon_state = "slime_up"
 
 /datum/action/innate/slime_pick_up/Activate()
@@ -369,7 +369,7 @@
 
 /datum/action/innate/feed_slime
 	name = "Feed Slimes"
-	button_icon = 'icons/mob/actions/actions_silicon.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_silicon.dmi'
 	button_icon_state = "monkey_down"
 
 /datum/action/innate/feed_slime/Activate()
@@ -387,7 +387,7 @@
 
 /datum/action/innate/monkey_recycle
 	name = "Recycle Monkeys"
-	button_icon = 'icons/mob/actions/actions_silicon.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_silicon.dmi'
 	button_icon_state = "monkey_up"
 
 /datum/action/innate/monkey_recycle/Activate()
@@ -404,7 +404,7 @@
 
 /datum/action/innate/slime_scan
 	name = "Scan Slime"
-	button_icon = 'icons/mob/actions/actions_silicon.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_silicon.dmi'
 	button_icon_state = "slime_scan"
 
 /datum/action/innate/slime_scan/Activate()
@@ -422,7 +422,7 @@
 
 /datum/action/innate/feed_potion
 	name = "Apply Potion"
-	button_icon = 'icons/mob/actions/actions_silicon.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_silicon.dmi'
 	button_icon_state = "slime_potion"
 
 /datum/action/innate/feed_potion/Activate()
@@ -448,7 +448,7 @@
 
 /datum/action/innate/hotkey_help
 	name = "Hotkey Help"
-	button_icon = 'icons/mob/actions/actions_silicon.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_silicon.dmi'
 	button_icon_state = "hotkey_help"
 
 /datum/action/innate/hotkey_help/Activate()
@@ -596,9 +596,9 @@
 
 ///Plays the sound in the given location. Easier to call w/ addtimer()
 /obj/machinery/computer/camera_advanced/xenobio/proc/handle_xeno_sounds(turf/open/target_turf, spitting)
-	var/tubesound = 'sound/effects/compressed_air/air_suck.ogg'
+	var/tubesound = '../assets/sound/effects/compressed_air/air_suck.ogg'
 	if(spitting)
-		tubesound = 'sound/effects/compressed_air/air_shoot.ogg'
+		tubesound = '../assets/sound/effects/compressed_air/air_shoot.ogg'
 	playsound(target_turf, tubesound, 50, TRUE, SHORT_RANGE_SOUND_EXTRARANGE)
 
 ///The sound that plays when a potion shatters. Easier to call w/ addtimer()
@@ -644,7 +644,7 @@
 
 /// The tube that sucks up/spits out the mob
 /obj/effect/abstract/xenosuction
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	icon_state = "xenotube_back"
 	layer = BELOW_MOB_LAYER
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT

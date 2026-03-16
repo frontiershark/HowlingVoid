@@ -31,7 +31,7 @@
 
 /datum/storage/alifil_pills
 	max_slots = 5
-	open_sound = 'sound/items/handling/pill_bottle_open.ogg'
+	open_sound = '../assets/sound/items/handling/pill_bottle_open.ogg'
 	open_sound_vary = FALSE
 
 /datum/storage/alifil_pills/New(atom/parent, max_slots, max_specific_storage, max_total_storage)
@@ -59,8 +59,8 @@
 	inhand_icon_state = "poisoning_kit"
 	desc = "A small medical kit that can only fit autoinjectors in it, these typically come with supplies to treat low level harm."
 	w_class = WEIGHT_CLASS_SMALL
-	drop_sound = 'sound/items/handling/ammobox_drop.ogg'
-	pickup_sound = 'sound/items/handling/ammobox_pickup.ogg'
+	drop_sound = '../assets/sound/items/handling/ammobox_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/ammobox_pickup.ogg'
 	custom_price = PAYCHECK_COMMAND * 3
 	storage_type = /datum/storage/civil_defence
 
@@ -141,8 +141,8 @@
 	worn_icon_state = "frontier"
 	worn_icon = 'modular_nova/modules/deforest_medical_items/icons/worn/worn.dmi'
 	worn_icon_teshari = 'modular_nova/modules/deforest_medical_items/icons/worn/worn_teshari.dmi'
-	pickup_sound = 'sound/items/handling/cloth/cloth_pickup1.ogg'
-	drop_sound = 'sound/items/handling/cloth/cloth_drop1.ogg'
+	pickup_sound = '../assets/sound/items/handling/cloth/cloth_pickup1.ogg'
+	drop_sound = '../assets/sound/items/handling/cloth/cloth_drop1.ogg'
 	slot_flags = ITEM_SLOT_BELT
 
 /obj/item/storage/medkit/frontier/stocked
@@ -171,8 +171,8 @@
 	worn_icon = 'modular_nova/modules/deforest_medical_items/icons/worn/worn.dmi'
 	worn_icon_teshari = 'modular_nova/modules/deforest_medical_items/icons/worn/worn_teshari.dmi'
 	worn_icon_state = "frontier"
-	pickup_sound = 'sound/items/handling/cloth/cloth_pickup1.ogg'
-	drop_sound = 'sound/items/handling/cloth/cloth_drop1.ogg'
+	pickup_sound = '../assets/sound/items/handling/cloth/cloth_pickup1.ogg'
+	drop_sound = '../assets/sound/items/handling/cloth/cloth_drop1.ogg'
 	storage_type = /datum/storage/medkit/combat
 
 /datum/storage/medkit/combat
@@ -203,9 +203,9 @@
 	inhand_icon_state = "satchel"
 	worn_icon = 'modular_nova/modules/deforest_medical_items/icons/worn/worn.dmi'
 	worn_icon_teshari = 'modular_nova/modules/deforest_medical_items/icons/worn/worn_teshari.dmi'
-	equip_sound = 'sound/items/equip/jumpsuit_equip.ogg'
-	pickup_sound = 'sound/items/handling/cloth/cloth_pickup1.ogg'
-	drop_sound = 'sound/items/handling/cloth/cloth_drop1.ogg'
+	equip_sound = '../assets/sound/items/equip/jumpsuit_equip.ogg'
+	pickup_sound = '../assets/sound/items/handling/cloth/cloth_pickup1.ogg'
+	drop_sound = '../assets/sound/items/handling/cloth/cloth_drop1.ogg'
 	slot_flags = ITEM_SLOT_BACK | ITEM_SLOT_BELT
 	storage_type = /datum/storage/duffel/deforest_medkit
 	zip_slowdown = 0.25 // Most won't notice normally but it'll hurt you if you're a paramedic or in combat
@@ -299,9 +299,9 @@
 	inhand_icon_state = "super_surgery"
 	worn_icon = 'modular_nova/modules/deforest_medical_items/icons/worn/worn.dmi'
 	worn_icon_teshari = 'modular_nova/modules/deforest_medical_items/icons/worn/worn_teshari.dmi'
-	equip_sound = 'sound/items/equip/jumpsuit_equip.ogg'
-	pickup_sound = 'sound/items/handling/cloth/cloth_pickup1.ogg'
-	drop_sound = 'sound/items/handling/cloth/cloth_drop1.ogg'
+	equip_sound = '../assets/sound/items/equip/jumpsuit_equip.ogg'
+	pickup_sound = '../assets/sound/items/handling/cloth/cloth_pickup1.ogg'
+	drop_sound = '../assets/sound/items/handling/cloth/cloth_drop1.ogg'
 	slot_flags = ITEM_SLOT_BACK | ITEM_SLOT_BELT
 	storage_type = /datum/storage/duffel/deforest_big_surgery
 	zip_slowdown = 0.5 // Its a bulkier bag and thus slows you down a little more when unzipped
@@ -408,9 +408,9 @@
 	inhand_icon_state = "technician"
 	worn_icon = 'modular_nova/modules/deforest_medical_items/icons/worn/worn.dmi'
 	worn_icon_teshari = 'modular_nova/modules/deforest_medical_items/icons/worn/worn_teshari.dmi'
-	equip_sound = 'sound/items/equip/jumpsuit_equip.ogg'
-	pickup_sound = 'sound/items/handling/cloth/cloth_pickup1.ogg'
-	drop_sound = 'sound/items/handling/cloth/cloth_drop1.ogg'
+	equip_sound = '../assets/sound/items/equip/jumpsuit_equip.ogg'
+	pickup_sound = '../assets/sound/items/handling/cloth/cloth_pickup1.ogg'
+	drop_sound = '../assets/sound/items/handling/cloth/cloth_drop1.ogg'
 	slot_flags = ITEM_SLOT_BACK | ITEM_SLOT_BELT
 	storage_type = /datum/storage/duffel/deforest_paramedic
 	zip_slowdown = 0.3 // Midrange between the other two bags

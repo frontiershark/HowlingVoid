@@ -4,8 +4,8 @@
 	pass_flags = PASSTABLE | PASSGLASS | PASSGRILLE
 	damage = 20
 	damage_type = BURN
-	hitsound = 'sound/items/weapons/sear.ogg'
-	hitsound_wall = 'sound/items/weapons/effects/searwall.ogg'
+	hitsound = '../assets/sound/items/weapons/sear.ogg'
+	hitsound_wall = '../assets/sound/items/weapons/effects/searwall.ogg'
 	armor_flag = LASER
 	eyeblur = 4 SECONDS
 	impact_effect_type = /obj/effect/temp_visual/impact_effect/red_laser
@@ -151,8 +151,8 @@
 	wound_bonus = 0
 	damage_falloff_tile = -0.1
 	color = "#dbc11d"
-	hitsound = 'sound/items/bikehorn.ogg' //honk
-	hitsound_wall = 'sound/items/bikehorn.ogg'
+	hitsound = '../assets/sound/items/bikehorn.ogg' //honk
+	hitsound_wall = '../assets/sound/items/bikehorn.ogg'
 
 /obj/projectile/beam/xray
 	name = "\improper X-ray beam"
@@ -174,7 +174,7 @@
 	damage = 30
 	damage_type = STAMINA
 	armor_flag = ENERGY
-	hitsound = 'sound/items/weapons/sear_disabler.ogg'
+	hitsound = '../assets/sound/items/weapons/sear_disabler.ogg'
 	impact_effect_type = /obj/effect/temp_visual/impact_effect/blue_laser
 	light_color = LIGHT_COLOR_BLUE
 	tracer_type = /obj/effect/projectile/tracer/disabler

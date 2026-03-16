@@ -1,5 +1,5 @@
 /particles/firing_smoke
-	icon = 'icons/effects/96x96.dmi'
+	icon = '../assets/icons/effects/96x96.dmi'
 	icon_state = "smoke5"
 	width = 500
 	height = 500

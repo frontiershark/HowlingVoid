@@ -26,11 +26,11 @@
 	bodytemp_cold_damage_limit = MINIMUM_TEMPERATURE_TO_MOVE // take damage below minimum movement temp
 	/// A list of spooky sounds we can play intermittantly.
 	var/static/list/spooks = list(
-		'sound/effects/hallucinations/growl1.ogg',
-		'sound/effects/hallucinations/growl2.ogg',
-		'sound/effects/hallucinations/growl3.ogg',
-		'sound/effects/hallucinations/veryfar_noise.ogg',
-		'sound/effects/hallucinations/wail.ogg',
+		'../assets/sound/effects/hallucinations/growl1.ogg',
+		'../assets/sound/effects/hallucinations/growl2.ogg',
+		'../assets/sound/effects/hallucinations/growl3.ogg',
+		'../assets/sound/effects/hallucinations/veryfar_noise.ogg',
+		'../assets/sound/effects/hallucinations/wail.ogg',
 		)
 	bodypart_overrides = list(
 		BODY_ZONE_HEAD = /obj/item/bodypart/head/mutant_zombie,
@@ -189,12 +189,12 @@
 		child-safe caps on bottles."
 	item_flags = ABSTRACT | DROPDEL
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
-	icon = 'icons/effects/blood.dmi'
+	icon = '../assets/icons/effects/blood.dmi'
 	icon_state = "bloodhand_left"
 	inhand_icon_state = "mutant"
 	lefthand_file = 'modular_nova/modules/mutants/icons/mutant_hand_lefthand.dmi'
 	righthand_file = 'modular_nova/modules/mutants/icons/mutant_hand_righthand.dmi'
-	hitsound = 'sound/effects/hallucinations/growl1.ogg'
+	hitsound = '../assets/sound/effects/hallucinations/growl1.ogg'
 	force = 26
 	sharpness = SHARP_EDGED
 	wound_bonus = -20

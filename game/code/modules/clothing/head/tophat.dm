@@ -21,7 +21,7 @@
 		return
 
 	COOLDOWN_START(src, rabbit_cooldown, RABBIT_CD_TIME)
-	playsound(get_turf(src), 'sound/items/weapons/emitter.ogg', 70)
+	playsound(get_turf(src), '../assets/sound/items/weapons/emitter.ogg', 70)
 	do_smoke(1, src, src, effect_type = /obj/effect/particle_effect/fluid/smoke/quick)
 
 	if(prob(10))

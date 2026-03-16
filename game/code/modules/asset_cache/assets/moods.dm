@@ -15,4 +15,4 @@
 	)
 	for(var/target_to_insert in mood_colors)
 		var/blended_color = mood_colors[target_to_insert]
-		insert_icon(target_to_insert, uni_icon('icons/hud/screen_gen.dmi', target_to_insert, color=blended_color))
+		insert_icon(target_to_insert, uni_icon('../assets/icons/hud/screen_gen.dmi', target_to_insert, color=blended_color))

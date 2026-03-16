@@ -12,7 +12,7 @@
 	var/datum/callback/on_began_forecast
 
 /datum/component/basic_mob_attack_telegraph/Initialize(
-	telegraph_icon = 'icons/mob/telegraphing/telegraph.dmi',
+	telegraph_icon = '../assets/icons/mob/telegraphing/telegraph.dmi',
 	telegraph_state = ATTACK_EFFECT_BITE,
 	display_telegraph_overlay = TRUE,
 	telegraph_duration = 0.4 SECONDS,

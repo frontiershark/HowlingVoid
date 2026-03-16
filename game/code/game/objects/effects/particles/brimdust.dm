@@ -1,5 +1,5 @@
 /particles/brimdust
-	icon = 'icons/effects/particles/generic.dmi'
+	icon = '../assets/icons/effects/particles/generic.dmi'
 	icon_state = "cross"
 	width = 100
 	height = 100

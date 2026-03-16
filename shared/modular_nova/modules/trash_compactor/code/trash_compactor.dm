@@ -169,7 +169,7 @@
 		var/wisdom = pick(GLOB.wisdoms)
 		say(wisdom)
 		balloon_alert(user, "trash compacted")
-		playsound(src, 'sound/machines/ping.ogg', 40, TRUE)
+		playsound(src, '../assets/sound/machines/ping.ogg', 40, TRUE)
 
 	// Check if we've reached required pieces of trash
 	if(tracker_key && trash_counts[tracker_key] >= (is_janitor(user) ? REQUIRED_TRASH_JANITOR : REQUIRED_TRASH_CREW))
@@ -195,7 +195,7 @@
 		else
 			new /obj/item/stack/spacecash/c100(drop_location())
 			say("[/obj/item/stack/spacecash/c100::value] credit bill dispensed! Please consider opening a bank account.")
-		playsound(src, 'sound/machines/chime.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/machines/chime.ogg', 50, TRUE)
 		return
 
 	// Handle non-janitor rewards
@@ -207,7 +207,7 @@
 
 	new ticket_type(drop_location())
 	say("Ration ticket dispensed! Thank you for your contribution to recycling.")
-	playsound(src, 'sound/machines/chime.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/machines/chime.ogg', 50, TRUE)
 
 	// Handle GAP card punching if inserted
 	if(inserted_card)
@@ -215,10 +215,10 @@
 			inserted_card.punches++
 			inserted_card.icon_state = "punchcard_[inserted_card.punches]"
 		if(inserted_card.punches == inserted_card.max_punches)
-			playsound(src, 'sound/items/party_horn.ogg', 100)
+			playsound(src, '../assets/sound/items/party_horn.ogg', 100)
 			say("Congratulations, you have finished your punchcard!")
 		else
-			playsound(src, 'sound/items/boxcutter_activate.ogg', 50)
+			playsound(src, '../assets/sound/items/boxcutter_activate.ogg', 50)
 			say("GAP card punched!")
 
 /// Processes-runs all valid trash items in a trash bag through the compactor.
@@ -234,7 +234,7 @@
 
 	if(processed_count > 0)
 		balloon_alert(user, "processed [processed_count] items")
-		playsound(src, 'sound/machines/ping.ogg', 60, TRUE)
+		playsound(src, '../assets/sound/machines/ping.ogg', 60, TRUE)
 	else
 		balloon_alert(user, "bag empty!")
 

@@ -64,7 +64,7 @@
 	/// List of action hud items the user has
 	var/list/datum/action/actions
 	///Cursor icon used when holding shift over things
-	var/examine_cursor_icon = 'icons/effects/mouse_pointers/examine_pointer.dmi'
+	var/examine_cursor_icon = '../assets/icons/effects/mouse_pointers/examine_pointer.dmi'
 
 	/// Mob bitflags
 	var/mob_flags = NONE

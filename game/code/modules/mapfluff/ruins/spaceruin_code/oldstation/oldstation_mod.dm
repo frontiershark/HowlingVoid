@@ -1,7 +1,7 @@
 /obj/machinery/mod_installer
 	name = "modular outerwear device installator"
 	desc = "An ancient machine that mounts a MOD unit onto the occupant."
-	icon = 'icons/obj/machines/mod_installer.dmi'
+	icon = '../assets/icons/obj/machines/mod_installer.dmi'
 	icon_state = "mod_installer"
 	base_icon_state = "mod_installer"
 	layer = ABOVE_WINDOW_LAYER
@@ -35,7 +35,7 @@
 	update_appearance()
 
 /obj/machinery/mod_installer/proc/play_install_sound()
-	playsound(src, 'sound/items/tools/rped.ogg', 30, FALSE)
+	playsound(src, '../assets/sound/items/tools/rped.ogg', 30, FALSE)
 
 /obj/machinery/mod_installer/update_icon_state()
 	icon_state = busy ? busy_icon_state : "[base_icon_state][state_open ? "_open" : null]"
@@ -69,7 +69,7 @@
 	if(!human_occupant.equip_to_slot_if_possible(mod_unit, mod_unit.slot_flags, qdel_on_fail = FALSE, disable_warning = TRUE))
 		return
 	human_occupant.update_action_buttons(TRUE)
-	playsound(src, 'sound/machines/ping.ogg', 30, FALSE)
+	playsound(src, '../assets/sound/machines/ping.ogg', 30, FALSE)
 	if(!human_occupant.dropItemToGround(human_occupant.wear_suit) || !human_occupant.dropItemToGround(human_occupant.head))
 		finish_completion()
 		return

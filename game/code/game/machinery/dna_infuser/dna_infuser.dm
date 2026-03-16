@@ -6,7 +6,7 @@
 /obj/machinery/dna_infuser
 	name = "\improper DNA infuser"
 	desc = "A defunct genetics machine for merging foreign DNA with a subject's own."
-	icon = 'icons/obj/machines/cloning.dmi'
+	icon = '../assets/icons/obj/machines/cloning.dmi'
 	icon_state = "infuser"
 	base_icon_state = "infuser"
 	density = TRUE
@@ -67,7 +67,7 @@
 		return
 	if(occupant && infusing_from)
 		if(!occupant.can_infuse(user))
-			playsound(src, 'sound/machines/scanner/scanbuzz.ogg', 35, vary = TRUE)
+			playsound(src, '../assets/sound/machines/scanner/scanbuzz.ogg', 35, vary = TRUE)
 			return
 		balloon_alert(user, "starting DNA infusion...")
 		start_infuse()
@@ -89,7 +89,7 @@
 		infusing_into = GLOB.infuser_entries[/datum/infuser_entry/fly]
 		fail_title = "Overcomplexity"
 		fail_explanation = "DNA too complicated to infuse. The machine needs to infuse simpler DNA first."
-	playsound(src, 'sound/machines/blender.ogg', 50, vary = TRUE)
+	playsound(src, '../assets/sound/machines/blender.ogg', 50, vary = TRUE)
 	to_chat(human_occupant, span_danger("Little needles repeatedly prick you!"))
 	human_occupant.take_overall_damage(10)
 	human_occupant.add_mob_memory(/datum/memory/dna_infusion, protagonist = human_occupant, deuteragonist = infusing_from, mutantlike = infusing_into.infusion_desc)
@@ -106,9 +106,9 @@
 	infusing = FALSE
 	infusing_into = null
 	QDEL_NULL(infusing_from)
-	playsound(src, 'sound/machines/microwave/microwave-end.ogg', 100, vary = FALSE)
+	playsound(src, '../assets/sound/machines/microwave/microwave-end.ogg', 100, vary = FALSE)
 	if(fail_explanation)
-		playsound(src, 'sound/machines/printer.ogg', 100, TRUE)
+		playsound(src, '../assets/sound/machines/printer.ogg', 100, TRUE)
 		visible_message(span_notice("[src] prints an error report."))
 		var/obj/item/paper/printed_paper = new /obj/item/paper(loc)
 		printed_paper.name = "error report - '[fail_title]'"
@@ -125,7 +125,7 @@
 		&& target.has_status_effect(infusing_into.status_effect_type) \
 	)
 		max_tier_allowed++
-		playsound(src, 'sound/machines/ding.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/machines/ding.ogg', 50, TRUE)
 		visible_message(span_notice("[src] dings as it records the results of the full infusion."))
 
 /obj/machinery/dna_infuser/update_icon_state()

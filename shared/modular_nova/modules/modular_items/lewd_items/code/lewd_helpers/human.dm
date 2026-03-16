@@ -264,7 +264,7 @@
 	var/mutable_appearance/vagina_overlay
 
 	if(!vagina_overlay)
-		vagina_overlay = sex_toy?.build_worn_icon(default_layer = VAGINA_LAYER, default_icon_file = 'icons/mob/clothing/under/default.dmi', isinhands = FALSE, override_file = icon_file)
+		vagina_overlay = sex_toy?.build_worn_icon(default_layer = VAGINA_LAYER, default_icon_file = '../assets/icons/mob/clothing/under/default.dmi', isinhands = FALSE, override_file = icon_file)
 
 	var/obj/item/bodypart/chest/chest_part = get_bodypart(BODY_ZONE_CHEST)
 	chest_part?.worn_uniform_offset?.apply_offset(vagina_overlay) // every day we stray further and further from god
@@ -287,7 +287,7 @@
 	var/mutable_appearance/anus_overlay
 
 	if(!anus_overlay)
-		anus_overlay = sex_toy?.build_worn_icon(default_layer = ANUS_LAYER, default_icon_file = 'icons/mob/clothing/under/default.dmi', isinhands = FALSE, override_file = icon_file)
+		anus_overlay = sex_toy?.build_worn_icon(default_layer = ANUS_LAYER, default_icon_file = '../assets/icons/mob/clothing/under/default.dmi', isinhands = FALSE, override_file = icon_file)
 
 	var/obj/item/bodypart/chest/chest_part = get_bodypart(BODY_ZONE_CHEST)
 
@@ -311,7 +311,7 @@
 	var/mutable_appearance/nipples_overlay
 
 	if(!nipples_overlay)
-		nipples_overlay = sex_toy?.build_worn_icon(default_layer = NIPPLES_LAYER, default_icon_file = 'icons/mob/clothing/under/default.dmi', isinhands = FALSE, override_file = icon_file)
+		nipples_overlay = sex_toy?.build_worn_icon(default_layer = NIPPLES_LAYER, default_icon_file = '../assets/icons/mob/clothing/under/default.dmi', isinhands = FALSE, override_file = icon_file)
 
 	var/obj/item/bodypart/chest/chest_part = get_bodypart(BODY_ZONE_CHEST)
 	chest_part?.worn_uniform_offset?.apply_offset(nipples_overlay) // then i realised something, something horrific
@@ -335,7 +335,7 @@
 	var/mutable_appearance/penis_overlay
 
 	if(!penis_overlay)
-		penis_overlay = sex_toy?.build_worn_icon(default_layer = PENIS_LAYER, default_icon_file = 'icons/mob/clothing/under/default.dmi', isinhands = FALSE, override_file = icon_file)
+		penis_overlay = sex_toy?.build_worn_icon(default_layer = PENIS_LAYER, default_icon_file = '../assets/icons/mob/clothing/under/default.dmi', isinhands = FALSE, override_file = icon_file)
 
 	var/obj/item/bodypart/chest/chest_part = get_bodypart(BODY_ZONE_CHEST)
 	chest_part?.worn_uniform_offset?.apply_offset(penis_overlay) // we can never escape, we are forever governed by sex(two)

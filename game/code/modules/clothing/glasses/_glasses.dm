@@ -1,9 +1,9 @@
 //Glasses
 /obj/item/clothing/glasses
 	name = "glasses"
-	icon = 'icons/obj/clothing/glasses.dmi'
-	lefthand_file = 'icons/mob/inhands/clothing/glasses_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/clothing/glasses_righthand.dmi'
+	icon = '../assets/icons/obj/clothing/glasses.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/clothing/glasses_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/clothing/glasses_righthand.dmi'
 	abstract_type = /obj/item/clothing/glasses
 	w_class = WEIGHT_CLASS_SMALL
 	slot_flags = ITEM_SLOT_EYES
@@ -119,7 +119,7 @@
 	throw_speed = 4
 	attack_verb_continuous = list("slices")
 	attack_verb_simple = list("slice")
-	hitsound = 'sound/items/weapons/bladeslice.ogg'
+	hitsound = '../assets/sound/items/weapons/bladeslice.ogg'
 	sharpness = SHARP_EDGED
 
 /obj/item/clothing/glasses/science
@@ -264,8 +264,8 @@
 	desc = "Such a dapper eyepiece!"
 	icon_state = "monocle"
 	inhand_icon_state = "headset" // lol
-	lefthand_file = 'icons/mob/inhands/items_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items_righthand.dmi'
 	clothing_traits = list(TRAIT_NEARSIGHTED_CORRECTED)
 
 /obj/item/clothing/glasses/material
@@ -297,7 +297,7 @@
 	throw_speed = 4
 	attack_verb_continuous = list("slices")
 	attack_verb_simple = list("slice")
-	hitsound = 'sound/items/weapons/bladeslice.ogg'
+	hitsound = '../assets/sound/items/weapons/bladeslice.ogg'
 	sharpness = SHARP_EDGED
 	glass_colour_type = /datum/client_colour/glass_colour/lightgreen
 
@@ -327,7 +327,7 @@
 	if(isliving(movable))
 		var/mob/living/crusher = movable
 		if(crusher.move_intent != MOVE_INTENT_WALK && (!(crusher.movement_type & MOVETYPES_NOT_TOUCHING_GROUND) || crusher.buckled))
-			playsound(src, 'sound/effects/footstep/glass_step.ogg', 30, TRUE)
+			playsound(src, '../assets/sound/effects/footstep/glass_step.ogg', 30, TRUE)
 			visible_message(span_warning("[crusher] steps on [src], damaging it!"))
 			take_damage(100, sound_effect = FALSE)
 
@@ -431,7 +431,7 @@
 	throw_speed = 4
 	attack_verb_continuous = list("slices")
 	attack_verb_simple = list("slice")
-	hitsound = 'sound/items/weapons/bladeslice.ogg'
+	hitsound = '../assets/sound/items/weapons/bladeslice.ogg'
 	sharpness = SHARP_EDGED
 
 /obj/item/clothing/glasses/sunglasses/gar/orange
@@ -466,7 +466,7 @@
 	name = "suspicious contact lens case"
 	desc = "A sinister red case that contains two shiny black contact lenses."
 	w_class = WEIGHT_CLASS_TINY
-	icon = 'icons/obj/devices/syndie_gadget.dmi'
+	icon = '../assets/icons/obj/devices/syndie_gadget.dmi'
 	icon_state = "contacts"
 
 /obj/item/syndicate_contacts/attack_self(mob/user, modifiers)

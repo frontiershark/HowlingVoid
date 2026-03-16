@@ -84,8 +84,8 @@
 
 				living_target.Paralyze(paralyze_time)
 				living_target.emote("scream")
-				playsound(living_target, 'sound/effects/blob/blobattack.ogg', 40, TRUE)
-				playsound(living_target, 'sound/effects/splat.ogg', 50, TRUE)
+				playsound(living_target, '../assets/sound/effects/blob/blobattack.ogg', 40, TRUE)
+				playsound(living_target, '../assets/sound/effects/splat.ogg', 50, TRUE)
 				post_crush_living(living_target, was_alive)
 				flags_to_return |= (SUCCESSFULLY_CRUSHED_MOB|SUCCESSFULLY_CRUSHED_ATOM)
 
@@ -100,7 +100,7 @@
 
 		var/matrix/to_turn = turn(transform, rotation)
 		animate(src, transform = to_turn, 0.2 SECONDS)
-		playsound(src, 'sound/effects/bang.ogg', 40)
+		playsound(src, '../assets/sound/effects/bang.ogg', 40)
 
 		visible_message(span_danger("[src] tips over, slamming hard onto [target]!"))
 		flags_to_return |= SUCCESSFULLY_FELL_OVER

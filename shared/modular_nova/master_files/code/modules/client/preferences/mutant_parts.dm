@@ -839,7 +839,7 @@
 /datum/preference/choiced/mutant_choice/pod_hair/icon_for(value)
 	var/static/datum/universal_icon/pod_head
 	if(isnull(pod_head))
-		pod_head = uni_icon('icons/mob/human/bodyparts_greyscale.dmi', "pod_head_m")
+		pod_head = uni_icon('../assets/icons/mob/human/bodyparts_greyscale.dmi', "pod_head_m")
 		pod_head.blend_color(COLOR_GREEN, ICON_MULTIPLY)
 	var/datum/sprite_accessory/pod_hair/pod_hair = SSaccessories.feature_list[FEATURE_POD_HAIR][value]
 	var/datum/universal_icon/icon_with_hair = pod_head.copy()

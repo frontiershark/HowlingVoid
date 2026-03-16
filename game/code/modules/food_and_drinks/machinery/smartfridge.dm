@@ -4,7 +4,7 @@
 /obj/machinery/smartfridge
 	name = "smartfridge"
 	desc = "Keeps cold things cold and hot things cold."
-	icon = 'icons/obj/machines/smartfridge.dmi'
+	icon = '../assets/icons/obj/machines/smartfridge.dmi'
 	icon_state = "smartfridge-icon"
 	base_icon_state = "smartfridge"
 	layer = BELOW_OBJ_LAYER
@@ -31,7 +31,7 @@
 	/// Whether the smartfridge is welded down to the floor disabling unwrenching
 	var/welded_down = FALSE
 	/// The sound of item retrieval
-	var/vend_sound = 'sound/machines/machine_vend.ogg'
+	var/vend_sound = '../assets/sound/machines/machine_vend.ogg'
 	layout_prefs_used = /datum/preference/choiced/tgui_layout/smartfridge
 
 /obj/machinery/smartfridge/Initialize(mapload)
@@ -252,9 +252,9 @@
 /obj/machinery/smartfridge/play_attack_sound(damage_amount, damage_type = BRUTE, damage_flag = 0)
 	switch(damage_type)
 		if(BRUTE)
-			playsound(src.loc, 'sound/effects/glass/glasshit.ogg', 75, TRUE)
+			playsound(src.loc, '../assets/sound/effects/glass/glasshit.ogg', 75, TRUE)
 		if(BURN)
-			playsound(src.loc, 'sound/items/tools/welder.ogg', 100, TRUE)
+			playsound(src.loc, '../assets/sound/items/tools/welder.ogg', 100, TRUE)
 
 /obj/machinery/smartfridge/atom_break(damage_flag)
 	playsound(src, SFX_SHATTER, 50, TRUE)

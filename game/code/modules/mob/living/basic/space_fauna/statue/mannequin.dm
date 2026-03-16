@@ -1,7 +1,7 @@
 /mob/living/basic/statue/mannequin
 	name = "mannequin"
 	desc = "Oh, so this is a dress-up game now."
-	icon = 'icons/mob/human/mannequin.dmi'
+	icon = '../assets/icons/mob/human/mannequin.dmi'
 	icon_state = "mannequin_wood_male"
 	icon_living = "mannequin_wood_male"
 	icon_dead = "mannequin_wood_male"

@@ -9,7 +9,7 @@
 /obj/machinery/power/tracker
 	name = "solar tracker"
 	desc = "A solar directional tracker."
-	icon = 'icons/obj/machines/solar.dmi'
+	icon = '../assets/icons/obj/machines/solar.dmi'
 	icon_state = "tracker_base"
 	density = TRUE
 	use_power = NO_POWER_USE
@@ -126,7 +126,7 @@
 
 /obj/machinery/power/tracker/crowbar_act(mob/user, obj/item/I)
 	if(I.use_tool(src, user, 0))
-		playsound(src.loc, 'sound/items/deconstruct.ogg', 50, TRUE)
+		playsound(src.loc, '../assets/sound/items/deconstruct.ogg', 50, TRUE)
 		user.visible_message(span_notice("[user] takes the glass off [src]."), span_notice("You take the glass off [src]."))
 		deconstruct(TRUE)
 	return TRUE
@@ -134,7 +134,7 @@
 /obj/machinery/power/tracker/atom_break(damage_flag)
 	. = ..()
 	if(.)
-		playsound(loc, 'sound/effects/glass/glassbr3.ogg', 100, TRUE)
+		playsound(loc, '../assets/sound/effects/glass/glassbr3.ogg', 100, TRUE)
 		unset_control()
 
 /obj/machinery/power/tracker/on_deconstruction(disassembled)

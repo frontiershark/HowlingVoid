@@ -115,7 +115,7 @@
 /datum/component/callouts/proc/callout_picker(mob/user, atom/clicked_atom)
 	var/list/callout_items = list()
 	for(var/datum/callout_option/callout_option as anything in callout_options)
-		callout_items[callout_option] = image(icon = 'icons/hud/radial.dmi', icon_state = callout_option::icon_state)
+		callout_items[callout_option] = image(icon = '../assets/icons/hud/radial.dmi', icon_state = callout_option::icon_state)
 
 	var/datum/callout_option/selection = show_radial_menu(user, get_turf(clicked_atom), callout_items, button_animation_flags = NONE, click_on_hover = TRUE, user_space = TRUE)
 	if (!selection)
@@ -129,7 +129,7 @@
 
 /obj/effect/temp_visual/callout
 	name = "callout"
-	icon = 'icons/effects/callouts.dmi'
+	icon = '../assets/icons/effects/callouts.dmi'
 	icon_state = "point"
 	plane = ABOVE_LIGHTING_PLANE
 	duration = CALLOUT_TIME

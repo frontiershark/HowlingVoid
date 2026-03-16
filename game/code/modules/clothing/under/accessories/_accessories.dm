@@ -11,8 +11,8 @@
 /obj/item/clothing/accessory
 	name = "Accessory"
 	desc = "Something has gone wrong!"
-	icon = 'icons/obj/clothing/accessories.dmi'
-	worn_icon = 'icons/mob/clothing/accessories.dmi'
+	icon = '../assets/icons/obj/clothing/accessories.dmi'
+	worn_icon = '../assets/icons/mob/clothing/accessories.dmi'
 	icon_state = "plasma"
 	inhand_icon_state = "" //no inhands
 	abstract_type = /obj/item/clothing/accessory

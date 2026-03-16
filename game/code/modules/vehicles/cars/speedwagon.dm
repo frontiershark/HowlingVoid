@@ -2,7 +2,7 @@
 /obj/vehicle/sealed/car/speedwagon
 	name = "BM Speedwagon"
 	desc = "Push it to the limit, walk along the razor's edge."
-	icon = 'icons/obj/toys/car.dmi'
+	icon = '../assets/icons/obj/toys/car.dmi'
 	icon_state = "speedwagon"
 	layer = LYING_MOB_LAYER
 	max_occupants = 4
@@ -30,7 +30,7 @@
 			var/atom/movable/flying_debris = bumped
 			flying_debris.throw_at(get_edge_target_turf(bumped, dir), 4, 3)
 		visible_message(span_danger("[src] crashes into [bumped]!"))
-		playsound(src, 'sound/effects/bang.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/effects/bang.ogg', 50, TRUE)
 	if(!ishuman(bumped))
 		return
 	var/mob/living/carbon/human/rammed = bumped
@@ -40,7 +40,7 @@
 	if(!crash_all)
 		rammed.throw_at(get_edge_target_turf(bumped, dir), 4, 3)
 		visible_message(span_danger("[src] crashes into [rammed]!"))
-		playsound(src, 'sound/effects/bang.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/effects/bang.ogg', 50, TRUE)
 
 /obj/vehicle/sealed/car/speedwagon/Moved(atom/old_loc, movement_dir, forced, list/old_locs, momentum_change = TRUE)
 	. = ..()

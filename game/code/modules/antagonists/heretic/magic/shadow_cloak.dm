@@ -5,9 +5,9 @@
 		Taking damage while cloaked may cause it to lift suddenly, causing negative effects. "
 	background_icon_state = "bg_heretic"
 	overlay_icon_state = "bg_heretic_border"
-	button_icon = 'icons/mob/actions/actions_minor_antag.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_minor_antag.dmi'
 	button_icon_state = "ninja_cloak"
-	sound = 'sound/effects/curse/curse2.ogg'
+	sound = '../assets/sound/effects/curse/curse2.ogg'
 
 	school = SCHOOL_FORBIDDEN
 	cooldown_time = 6 SECONDS
@@ -33,12 +33,12 @@
 /datum/action/cooldown/spell/shadow_cloak/before_cast(mob/living/cast_on)
 	. = ..()
 	sound = pick(
-		'sound/effects/curse/curse1.ogg',
-		'sound/effects/curse/curse2.ogg',
-		'sound/effects/curse/curse3.ogg',
-		'sound/effects/curse/curse4.ogg',
-		'sound/effects/curse/curse5.ogg',
-		'sound/effects/curse/curse6.ogg',
+		'../assets/sound/effects/curse/curse1.ogg',
+		'../assets/sound/effects/curse/curse2.ogg',
+		'../assets/sound/effects/curse/curse3.ogg',
+		'../assets/sound/effects/curse/curse4.ogg',
+		'../assets/sound/effects/curse/curse5.ogg',
+		'../assets/sound/effects/curse/curse6.ogg',
 	)
 	// We handle the CD on our own
 	return . | SPELL_NO_IMMEDIATE_COOLDOWN
@@ -63,7 +63,7 @@
 	StartCooldown(uncloak_timer / 3)
 
 /datum/action/cooldown/spell/shadow_cloak/proc/cloak_mob(mob/living/cast_on)
-	playsound(cast_on, 'sound/effects/chemistry/ahaha.ogg', 50, TRUE, -1, extrarange = SILENCED_SOUND_EXTRARANGE, frequency = 0.5)
+	playsound(cast_on, '../assets/sound/effects/chemistry/ahaha.ogg', 50, TRUE, -1, extrarange = SILENCED_SOUND_EXTRARANGE, frequency = 0.5)
 	cast_on.visible_message(
 		span_warning("[cast_on] disappears into the shadows!"),
 		span_notice("You disappear into the shadows, becoming unidentifiable."),
@@ -80,7 +80,7 @@
 	active_cloak = null
 
 	UnregisterSignal(cast_on, SIGNAL_REMOVETRAIT(TRAIT_ALLOW_HERETIC_CASTING))
-	playsound(cast_on, 'sound/effects/curse/curseattack.ogg', 50)
+	playsound(cast_on, '../assets/sound/effects/curse/curseattack.ogg', 50)
 	if(show_message)
 		cast_on.visible_message(
 			span_warning("[cast_on] appears from the shadows!"),
@@ -132,7 +132,7 @@
 	var/image/cloak_image
 
 /datum/status_effect/shadow_cloak/on_apply()
-	cloak_image = image('icons/effects/effects.dmi', owner, "curse", dir = owner.dir)
+	cloak_image = image('../assets/icons/effects/effects.dmi', owner, "curse", dir = owner.dir)
 	cloak_image.override = TRUE
 	cloak_image.alpha = 0
 	animate(cloak_image, alpha = 255, 0.2 SECONDS)

@@ -2,11 +2,11 @@
 	name = "binoculars"
 	desc = "Used for long-distance surveillance."
 	inhand_icon_state = "binoculars"
-	icon = 'icons/obj/devices/tool.dmi'
+	icon = '../assets/icons/obj/devices/tool.dmi'
 	icon_state = "binoculars"
 	worn_icon_state = "binoculars"
-	lefthand_file = 'icons/mob/inhands/items_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items_righthand.dmi'
 	slot_flags = ITEM_SLOT_NECK | ITEM_SLOT_BELT
 	w_class = WEIGHT_CLASS_SMALL
 

@@ -2,7 +2,7 @@
 /obj/machinery/experimental_cloner_scanner
 	name = "experimental cloning scanner"
 	desc = "An old prototype DNA scanner, compatible with an experimental cloning setup."
-	icon = 'icons/obj/machines/cloning.dmi'
+	icon = '../assets/icons/obj/machines/cloning.dmi'
 	icon_state = "scanner"
 	base_icon_state = "scanner"
 	density = TRUE
@@ -34,14 +34,14 @@
 /// Scan the occupant, eventually producing a [/datum/experimental_cloning_record]. Returns FALSE if unsuccessful.
 /obj/machinery/experimental_cloner_scanner/proc/start_scan()
 	if (machine_stat & BROKEN || machine_stat & NOPOWER || isnull(occupant))
-		playsound(src, 'sound/machines/scanner/scanbuzz.ogg', vol = 100)
+		playsound(src, '../assets/sound/machines/scanner/scanbuzz.ogg', vol = 100)
 		return FALSE
 
 	SSradiation.irradiate(occupant)
 	scanning = TRUE
 	locked = TRUE
 	update_use_power(ACTIVE_POWER_USE)
-	playsound(src, 'sound/machines/closet/closet_unlock.ogg', vol = 100)
+	playsound(src, '../assets/sound/machines/closet/closet_unlock.ogg', vol = 100)
 	soundloop.start()
 	scan_timer = addtimer(CALLBACK(src, PROC_REF(complete_scan)), scan_time, TIMER_STOPPABLE | TIMER_DELETE_ME)
 
@@ -58,7 +58,7 @@
 
 /// There's nobody in the tank, so nothing to scan
 /obj/machinery/experimental_cloner_scanner/proc/fail_scan()
-	playsound(src, 'sound/machines/scanner/scanbuzz.ogg', vol = 100)
+	playsound(src, '../assets/sound/machines/scanner/scanbuzz.ogg', vol = 100)
 	on_scan_stopped()
 
 /// Generic stuff to do when we're done scanning
@@ -66,7 +66,7 @@
 	update_use_power(NO_POWER_USE)
 	scanning = FALSE
 	if (locked)
-		playsound(src, 'sound/machines/closet/closet_unlock.ogg', vol = 100)
+		playsound(src, '../assets/sound/machines/closet/closet_unlock.ogg', vol = 100)
 	locked = FALSE
 	soundloop.stop()
 	deltimer(scan_timer)

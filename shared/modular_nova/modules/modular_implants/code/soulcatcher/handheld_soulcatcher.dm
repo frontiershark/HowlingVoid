@@ -7,8 +7,8 @@
 	icon_state = "soulcatcher-device"
 	inhand_icon_state = "electronic"
 	worn_icon_state = "electronic"
-	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/devices_righthand.dmi'
 	slot_flags = ITEM_SLOT_BELT
 	obj_flags = UNIQUE_RENAME
 	/// What soulcatcher datum is associated with this item?
@@ -63,7 +63,7 @@
 		if(!target_room)
 			return FALSE
 
-		SEND_SOUND(target_ghost, 'sound/announcer/notice/notice2.ogg')
+		SEND_SOUND(target_ghost, '../assets/sound/announcer/notice/notice2.ogg')
 		window_flash(target_ghost.client)
 
 		if(tgui_alert(target_ghost, "[user] wants to transfer you to [target_room] inside of a soulcatcher, do you accept?", name, list("Yes", "No"), 30 SECONDS, autofocus = FALSE) != "Yes")
@@ -86,7 +86,7 @@
 	if(!target_room)
 		return FALSE
 
-	SEND_SOUND(target_mob, 'sound/announcer/notice/notice2.ogg')
+	SEND_SOUND(target_mob, '../assets/sound/announcer/notice/notice2.ogg')
 	window_flash(target_mob.client)
 
 	if((tgui_alert(target_mob, "Do you wish to enter [target_room]? This will remove you from your body until you leave.", name, list("Yes", "No"), 30 SECONDS, FALSE) != "Yes") || (tgui_alert(target_mob, "Are you sure about this?", name, list("Yes", "No"), 30 SECONDS, FALSE) != "Yes"))

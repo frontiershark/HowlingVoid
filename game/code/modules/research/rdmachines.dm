@@ -4,7 +4,7 @@
 
 /obj/machinery/rnd
 	name = "R&D Device"
-	icon = 'icons/obj/machines/research.dmi'
+	icon = '../assets/icons/obj/machines/research.dmi'
 	density = TRUE
 	use_power = IDLE_POWER_USE
 

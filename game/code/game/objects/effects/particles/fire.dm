@@ -1,6 +1,6 @@
 // Fire related particles.
 /particles/bonfire
-	icon = 'icons/effects/particles/bonfire.dmi'
+	icon = '../assets/icons/effects/particles/bonfire.dmi'
 	icon_state = "bonfire"
 	width = 100
 	height = 100
@@ -18,7 +18,7 @@
 	spin = generator(GEN_NUM, -20, 20)
 
 /particles/embers
-	icon = 'icons/effects/particles/generic.dmi'
+	icon = '../assets/icons/effects/particles/generic.dmi'
 	icon_state = list("dot" = 4,"cross" = 1,"curl" = 1)
 	width = 64
 	height = 96

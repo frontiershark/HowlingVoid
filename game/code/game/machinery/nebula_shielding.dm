@@ -2,7 +2,7 @@
 /obj/machinery/nebula_shielding
 	density = TRUE
 
-	icon = 'icons/obj/machines/nebula_shielding.dmi'
+	icon = '../assets/icons/obj/machines/nebula_shielding.dmi'
 	pixel_x = -16
 
 	layer = FLY_LAYER
@@ -123,7 +123,7 @@
 	name = "emergency nebula radiation shielder"
 	desc = "Generates a field around the station to protect it from a radioactive nebula."
 
-	icon = 'icons/obj/machines/engine/other.dmi'
+	icon = '../assets/icons/obj/machines/engine/other.dmi'
 	icon_state = "portgen1_1"
 	pixel_x = 0
 

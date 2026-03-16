@@ -2,7 +2,7 @@
 /obj/effect/heretic_rune
 	name = "transmutation rune"
 	desc = "A flowing circle of shapes and runes is etched into the floor, filled with a thick black tar-like fluid. This one looks pretty small."
-	icon = 'icons/obj/antags/cult/rune.dmi'
+	icon = '../assets/icons/obj/antags/cult/rune.dmi'
 	icon_state = "main1"
 	anchored = TRUE
 	interaction_flags_atom = INTERACT_ATOM_ATTACK_HAND
@@ -14,7 +14,7 @@
 
 /obj/effect/heretic_rune/Initialize(mapload)
 	. = ..()
-	var/image/silicon_image = image(icon = 'icons/effects/eldritch.dmi', icon_state = null, loc = src)
+	var/image/silicon_image = image(icon = '../assets/icons/effects/eldritch.dmi', icon_state = null, loc = src)
 	silicon_image.override = TRUE
 	add_alt_appearance(/datum/atom_hud/alternate_appearance/basic/silicons, "heretic_rune", silicon_image)
 	ADD_TRAIT(src, TRAIT_MOPABLE, INNATE_TRAIT)
@@ -189,7 +189,7 @@
 	// This doesn't necessarily mean the ritual will succeed, but it's valid!
 	// Do the animations and associated feedback.
 	flick("[icon_state]_active", src)
-	playsound(user, 'sound/effects/magic/castsummon.ogg', 50, TRUE, extrarange = SILENCED_SOUND_EXTRARANGE, falloff_exponent = 10, ignore_walls = FALSE)
+	playsound(user, '../assets/sound/effects/magic/castsummon.ogg', 50, TRUE, extrarange = SILENCED_SOUND_EXTRARANGE, falloff_exponent = 10, ignore_walls = FALSE)
 
 	// - We temporarily make all of our chosen atoms invisible, as some rituals may sleep,
 	// and we don't want people to be able to run off with ritual items.
@@ -225,7 +225,7 @@
 
 /// A 3x3 heretic rune. The kind heretics actually draw in game.
 /obj/effect/heretic_rune/big
-	icon = 'icons/effects/96x96.dmi'
+	icon = '../assets/icons/effects/96x96.dmi'
 	icon_state = "transmutation_rune"
 	pixel_x = -30
 	pixel_y = 18
@@ -239,7 +239,7 @@
 
 /obj/effect/temp_visual/drawing_heretic_rune
 	duration = 30 SECONDS
-	icon = 'icons/effects/96x96.dmi'
+	icon = '../assets/icons/effects/96x96.dmi'
 	icon_state = "transmutation_rune"
 	pixel_x = -30
 	pixel_y = 18

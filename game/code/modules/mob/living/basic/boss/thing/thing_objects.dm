@@ -26,17 +26,17 @@
 			potential_target.take_damage(100, BRUTE)
 	if (hit_someone)
 		expiry_time /= 2
-		playsound(src, 'sound/items/weapons/slice.ogg', vol = 50, vary = TRUE, pressure_affected = FALSE)
+		playsound(src, '../assets/sound/items/weapons/slice.ogg', vol = 50, vary = TRUE, pressure_affected = FALSE)
 	else
-		playsound(src, 'sound/misc/splort.ogg', vol = 25, vary = TRUE, pressure_affected = FALSE)
+		playsound(src, '../assets/sound/misc/splort.ogg', vol = 25, vary = TRUE, pressure_affected = FALSE)
 
 	QDEL_IN(src, expiry_time)
 
 /obj/structure/thing_boss_spike/play_attack_sound(damage_amount, damage_type = BRUTE, damage_flag = 0)
 	if(damage_amount)
-		playsound(src, 'sound/effects/blob/blobattack.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/effects/blob/blobattack.ogg', 50, TRUE)
 	else
-		playsound(src, 'sound/items/weapons/tap.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/items/weapons/tap.ogg', 50, TRUE)
 
 /obj/structure/thing_boss_spike/CanAllowThrough(atom/movable/mover, border_dir)
 	. = ..()
@@ -49,7 +49,7 @@
 	return ..()
 
 /obj/effect/temp_visual/telegraphing/exclamation
-	icon = 'icons/mob/telegraphing/telegraph.dmi'
+	icon = '../assets/icons/mob/telegraphing/telegraph.dmi'
 	icon_state = "exclamation"
 	duration = 1 SECONDS
 
@@ -79,7 +79,7 @@
 	animate(src, alpha = 255, transform = matrix(), time = duration/3)
 
 /obj/effect/temp_visual/telegraphing/big
-	icon = 'icons/mob/telegraphing/telegraph_96x96.dmi'
+	icon = '../assets/icons/mob/telegraphing/telegraph_96x96.dmi'
 	icon_state = "target_largebox"
 	pixel_x = -32
 	pixel_y = -32
@@ -87,7 +87,7 @@
 	duration = 2 SECONDS
 
 /obj/effect/temp_visual/incoming_thing_acid
-	icon = 'icons/obj/weapons/guns/projectiles.dmi'
+	icon = '../assets/icons/obj/weapons/guns/projectiles.dmi'
 	icon_state = "toxin"
 	name = "acid"
 	desc = "Get out of the way!"
@@ -108,7 +108,7 @@
 
 /obj/effect/thing_acid
 	name = "stomach acid"
-	icon = 'icons/effects/acid.dmi'
+	icon = '../assets/icons/effects/acid.dmi'
 	icon_state = "default"
 	layer = BELOW_MOB_LAYER
 	plane = GAME_PLANE
@@ -132,7 +132,7 @@
 		var/blocked = victim.run_armor_check(zone, ACID)
 		victim.apply_damage(25, BURN, def_zone = zone, blocked = blocked)
 	to_chat(victim, span_userdanger("You are burnt by the acid!"))
-	playsound(victim, 'sound/effects/wounds/sizzle1.ogg', vol = 50, vary = TRUE)
+	playsound(victim, '../assets/sound/effects/wounds/sizzle1.ogg', vol = 50, vary = TRUE)
 	qdel(src)
 
 /obj/item/keycard/thing_boss

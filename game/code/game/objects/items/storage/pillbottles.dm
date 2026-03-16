@@ -6,14 +6,14 @@
 	name = "pill bottle"
 	desc = "It's an airtight container for storing medication."
 	icon_state = "pill_canister"
-	icon = 'icons/obj/medical/chemical.dmi'
+	icon = '../assets/icons/obj/medical/chemical.dmi'
 	inhand_icon_state = "contsolid"
 	worn_icon_state = "nothing"
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/medical_righthand.dmi'
 	w_class = WEIGHT_CLASS_SMALL
-	pickup_sound = 'sound/items/handling/pill_bottle_pickup.ogg'
-	drop_sound = 'sound/items/handling/pill_bottle_place.ogg'
+	pickup_sound = '../assets/sound/items/handling/pill_bottle_pickup.ogg'
+	drop_sound = '../assets/sound/items/handling/pill_bottle_place.ogg'
 	storage_type = /datum/storage/pillbottle
 
 	///Number of pills to spawn

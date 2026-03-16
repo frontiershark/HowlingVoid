@@ -18,7 +18,7 @@
 	if(!regen_core.preserve())
 		balloon_alert(user, "organ decayed!")
 		return
-	playsound(src, 'sound/effects/magic/demon_consume.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/effects/magic/demon_consume.ogg', 50, TRUE)
 	balloon_alert_to_viewers("[src] revitalizes [regen_core]!")
 	return
 
@@ -56,7 +56,7 @@
 
 	if(allow_transform < REQUIRED_OBSERVERS)
 		balloon_alert_to_viewers("[src] rejects the request, not enough viewers!")
-		playsound(src, 'sound/effects/magic/demon_consume.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/effects/magic/demon_consume.ogg', 50, TRUE)
 		human_user.adjust_brute_loss(10)
 		return
 
@@ -66,7 +66,7 @@
 
 		if(choice != "Yes")
 			balloon_alert_to_viewers("[src] feels rejected and punishes [human_user]!")
-			playsound(src, 'sound/effects/magic/demon_consume.ogg', 50, TRUE)
+			playsound(src, '../assets/sound/effects/magic/demon_consume.ogg', 50, TRUE)
 			human_user.adjust_brute_loss(50)
 			return
 
@@ -82,7 +82,7 @@
 			ADD_TRAIT(human_user, TRAIT_RESISTCOLD, ROUNDSTART_TRAIT)
 
 		ADD_TRAIT(human_user, TRAIT_PRIMITIVE, ROUNDSTART_TRAIT)
-		playsound(src, 'sound/effects/magic/demon_dies.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/effects/magic/demon_dies.ogg', 50, TRUE)
 		meat_counter++
 
 	return ..()
@@ -110,7 +110,7 @@
 		else
 			meat_counter++
 
-		playsound(get_turf(src),'sound/effects/magic/demon_consume.ogg', 100, TRUE)
+		playsound(get_turf(src),'../assets/sound/effects/magic/demon_consume.ogg', 100, TRUE)
 		var/delivery_key = viewable_living.fingerprintslast //key of whoever brought the body
 		var/mob/living/delivery_mob = get_mob_by_key(delivery_key) //mob of said key
 
@@ -144,7 +144,7 @@
 /obj/structure/reviving_ashwalker_egg
 	name = "occupied ashwalker egg"
 	desc = "Past the typical appearance of the yellow, man-sized egg, there seems to be a body floating within!"
-	icon = 'icons/mob/simple/lavaland/lavaland_monsters.dmi'
+	icon = '../assets/icons/mob/simple/lavaland/lavaland_monsters.dmi'
 	icon_state = "large_egg"
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | FREEZE_PROOF
 	max_integrity = 80

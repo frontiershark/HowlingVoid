@@ -3,7 +3,7 @@
 /datum/voucher_set/traitor/mod/nukie
 	name = "Syndicate MODsuit"
 	description = /datum/mod_theme/syndicate::desc
-	icon = 'icons/obj/clothing/modsuit/mod_clothing.dmi'
+	icon = '../assets/icons/obj/clothing/modsuit/mod_clothing.dmi'
 	icon_state = "syndicate-helmet-sealed"
 	set_items = list(
 		/obj/item/mod/module/storage/syndicate,
@@ -20,7 +20,7 @@
 /datum/voucher_set/traitor/mod/elite
 	name = "Elite MODsuit"
 	description = /datum/mod_theme/elite::desc
-	icon = 'icons/obj/clothing/modsuit/mod_clothing.dmi'
+	icon = '../assets/icons/obj/clothing/modsuit/mod_clothing.dmi'
 	icon_state = "elite-helmet-sealed"
 	set_items = list(
 		/obj/item/mod/module/storage/syndicate,
@@ -34,7 +34,7 @@
 /datum/voucher_set/traitor/mod/infiltrator
 	name = "Infiltrator MODsuit"
 	description = /datum/mod_theme/infiltrator::desc
-	icon = 'icons/obj/clothing/modsuit/mod_clothing.dmi'
+	icon = '../assets/icons/obj/clothing/modsuit/mod_clothing.dmi'
 	icon_state = "infiltrator-helmet-sealed"
 	set_items = list(
 		/obj/item/mod/module/emp_shield,

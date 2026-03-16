@@ -26,7 +26,7 @@
 	base_icon_state = "dephelmet"
 	worn_icon = 'modular_nova/modules/modular_items/lewd_items/icons/mob/lewd_clothing/lewd_hats.dmi'
 	greyscale_colors = "#383840#dc7ef4#383840#dc7ef4"
-	icon = 'icons/map_icons/clothing/head/_head.dmi'
+	icon = '../assets/icons/map_icons/clothing/head/_head.dmi'
 	icon_state = "/obj/item/clothing/head/deprivation_helmet"
 	post_init_icon_state = "dephelmet"
 	greyscale_config = /datum/greyscale_config/dephelmet
@@ -101,12 +101,12 @@
 	switch(user_client)
 		if("speech")
 			if(muzzle == TRUE)
-				playsound_if_pref(usr, 'sound/items/weapons/magout.ogg', 40, TRUE)
+				playsound_if_pref(usr, '../assets/sound/items/weapons/magout.ogg', 40, TRUE)
 				to_chat(usr, span_notice("Speech switch off."))
 				if(usr.get_item_by_slot(ITEM_SLOT_HEAD) == src)
 					REMOVE_TRAIT(usr, TRAIT_MUTE, CLOTHING_TRAIT)
 			else
-				playsound_if_pref(usr, 'sound/items/weapons/magin.ogg', 40, TRUE)
+				playsound_if_pref(usr, '../assets/sound/items/weapons/magin.ogg', 40, TRUE)
 				to_chat(usr, span_notice("Speech switch on."))
 				if(usr.get_item_by_slot(ITEM_SLOT_HEAD) == src)
 					ADD_TRAIT(usr, TRAIT_MUTE, CLOTHING_TRAIT)
@@ -114,12 +114,12 @@
 			muzzle = !muzzle
 		if("hearing")
 			if(earmuffs == TRUE)
-				playsound_if_pref(usr, 'sound/items/weapons/magout.ogg', 40, TRUE)
+				playsound_if_pref(usr, '../assets/sound/items/weapons/magout.ogg', 40, TRUE)
 				to_chat(usr, span_notice("Hearing switch off."))
 				if(usr.get_item_by_slot(ITEM_SLOT_HEAD) == src)
 					REMOVE_TRAIT(usr, TRAIT_DEAF, CLOTHING_TRAIT)
 			else
-				playsound_if_pref(usr, 'sound/items/weapons/magin.ogg', 40, TRUE)
+				playsound_if_pref(usr, '../assets/sound/items/weapons/magin.ogg', 40, TRUE)
 				to_chat(usr, span_notice("Hearing switch on."))
 				if(usr.get_item_by_slot(ITEM_SLOT_HEAD) == src)
 					ADD_TRAIT(usr, TRAIT_DEAF, CLOTHING_TRAIT)
@@ -128,12 +128,12 @@
 		if("vision")
 			var/mob/living/carbon/human/user = usr
 			if(prevent_vision == TRUE)
-				playsound_if_pref(usr, 'sound/items/weapons/magout.ogg', 40, TRUE)
+				playsound_if_pref(usr, '../assets/sound/items/weapons/magout.ogg', 40, TRUE)
 				to_chat(usr, span_notice("Vision switch off."))
 				if(usr.get_item_by_slot(ITEM_SLOT_HEAD) == src)
 					user.cure_blind("deprivation_helmet_[REF(src)]")
 			else
-				playsound_if_pref(usr, 'sound/items/weapons/magin.ogg', 40, TRUE)
+				playsound_if_pref(usr, '../assets/sound/items/weapons/magin.ogg', 40, TRUE)
 				to_chat(usr, span_notice("Vision switch on."))
 				if(usr.get_item_by_slot(ITEM_SLOT_HEAD) == src)
 					user.become_blind("deprivation_helmet_[REF(src)]")

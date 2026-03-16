@@ -3,7 +3,7 @@
 
 	circuit = /obj/item/circuitboard/machine/byteforge
 	desc = "A machine used by the quantum server. Quantum code converges here, materializing decrypted assets from the virtual abyss."
-	icon = 'icons/obj/machines/bitrunning.dmi'
+	icon = '../assets/icons/obj/machines/bitrunning.dmi'
 	icon_state = "byteforge"
 	base_icon_state = "byteforge"
 	obj_flags = BLOCKS_CONSTRUCTION | CAN_BE_HIT
@@ -58,7 +58,7 @@
 
 /// Does some sparks after it's done
 /obj/machinery/byteforge/proc/flash(atom/movable/thing)
-	playsound(src, 'sound/effects/magic/blink.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/effects/magic/blink.ogg', 50, TRUE)
 
 	do_sparks(5, TRUE, loc, spark_type = /datum/effect_system/basic/spark_spread/quantum)
 	set_light(l_on = FALSE)

@@ -6,7 +6,7 @@
 		A responsive data HUD gives you the ability to reflect lavaland-based projectiles by punching them with an empty hand. \
 		In addition, at high style, you are able to swap an item in your hand with one in your backpack by <b>hitting</b> one with another."
 	icon_state = "style_meter"
-	icon = 'icons/obj/clothing/glasses.dmi'
+	icon = '../assets/icons/obj/clothing/glasses.dmi'
 	/// The style meter component we give.
 	var/datum/component/style/style_meter
 	/// Mutable appearance added to the attached glasses
@@ -41,7 +41,7 @@
 	RegisterSignal(interacting_with, COMSIG_CLICK_ALT, PROC_REF(on_click_alt))
 	RegisterSignal(interacting_with, COMSIG_ATOM_TOOL_ACT(TOOL_MULTITOOL), PROC_REF(redirect_multitool))
 	balloon_alert(user, "style meter attached")
-	playsound(src, 'sound/machines/click.ogg', 30, TRUE)
+	playsound(src, '../assets/sound/machines/click.ogg', 30, TRUE)
 	if(!iscarbon(interacting_with.loc))
 		return .
 
@@ -125,7 +125,7 @@
 
 /atom/movable/screen/style_meter_background
 	icon_state = "style_meter_background"
-	icon = 'icons/hud/style_meter.dmi'
+	icon = '../assets/icons/hud/style_meter.dmi'
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	screen_loc = "WEST,CENTER-1:19"
 	maptext_height = 160
@@ -137,6 +137,6 @@
 
 /atom/movable/screen/style_meter
 	icon_state = "style_meter"
-	icon = 'icons/hud/style_meter.dmi'
+	icon = '../assets/icons/hud/style_meter.dmi'
 	layer = SCREENTIP_LAYER
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT

@@ -8,7 +8,7 @@
 	name = "floodlight frame"
 	desc = "A metal frame that requires wiring and a light tube to become a flood light."
 	max_integrity = 100
-	icon = 'icons/obj/lighting.dmi'
+	icon = '../assets/icons/obj/lighting.dmi'
 	icon_state = "floodlight_c1"
 	density = TRUE
 	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 5)
@@ -133,7 +133,7 @@
 /obj/machinery/power/floodlight
 	name = "floodlight"
 	desc = "A pole with powerful mounted lights on it. Due to its high power draw, it must be powered by a direct connection to a wire node."
-	icon = 'icons/obj/lighting.dmi'
+	icon = '../assets/icons/obj/lighting.dmi'
 	icon_state = "floodlight"
 	density = TRUE
 	max_integrity = 100
@@ -313,7 +313,7 @@
 	. = ..()
 	if(!.)
 		return
-	playsound(loc, 'sound/effects/glass/glassbr3.ogg', 100, TRUE)
+	playsound(loc, '../assets/sound/effects/glass/glassbr3.ogg', 100, TRUE)
 
 	var/obj/structure/floodlight_frame/floodlight_frame = new(loc)
 	floodlight_frame.state = FLOODLIGHT_NEEDS_LIGHTS
@@ -323,7 +323,7 @@
 	qdel(src)
 
 /obj/machinery/power/floodlight/play_attack_sound(damage_amount, damage_type = BRUTE, damage_flag = 0)
-	playsound(src, 'sound/effects/glass/glasshit.ogg', 75, TRUE)
+	playsound(src, '../assets/sound/effects/glass/glasshit.ogg', 75, TRUE)
 
 #undef FLOODLIGHT_OFF
 #undef FLOODLIGHT_LOW

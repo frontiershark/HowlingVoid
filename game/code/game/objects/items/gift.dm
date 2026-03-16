@@ -7,7 +7,7 @@
 /obj/item/gift
 	name = "gift"
 	desc = "PRESENTS!!!! eek!"
-	icon = 'icons/obj/storage/wrapping.dmi'
+	icon = '../assets/icons/obj/storage/wrapping.dmi'
 	icon_state = "giftdeliverypackage3"
 	inhand_icon_state = "gift"
 	resistance_flags = FLAMMABLE

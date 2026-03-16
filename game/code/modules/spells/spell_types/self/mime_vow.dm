@@ -3,7 +3,7 @@
 	desc = "Break your vow of silence. Permanently."
 	background_icon_state = "bg_mime"
 	overlay_icon_state = "bg_mime_border"
-	button_icon = 'icons/mob/actions/actions_mime.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_mime.dmi'
 	button_icon_state = "mime_speech"
 	panel = "Mime"
 

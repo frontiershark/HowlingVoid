@@ -38,8 +38,8 @@
 		balloon_alert_to_viewers("[src] tears!")
 		clothing_flags &= ~STOPSPRESSUREDAMAGE
 		torn = TRUE
-		playsound(src, 'sound/items/weapons/slashmiss.ogg', 50, TRUE)
-		playsound(src, 'sound/effects/refill.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/items/weapons/slashmiss.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/effects/refill.ogg', 50, TRUE)
 		update_appearance()
 
 

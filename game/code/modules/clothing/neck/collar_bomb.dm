@@ -3,10 +3,10 @@
 	name = "collar bomb"
 	desc = "A cumbersome collar of some sort, filled with just enough explosive to rip one's head off... at least that's what it reads on the front tag."
 	icon_state = "collar_bomb"
-	icon = 'icons/obj/clothing/neck.dmi'
+	icon = '../assets/icons/obj/clothing/neck.dmi'
 	inhand_icon_state = "reverse_bear_trap"
-	lefthand_file = 'icons/mob/inhands/items_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items_righthand.dmi'
 	clothing_flags = INEDIBLE_CLOTHING
 	armor_type = /datum/armor/collar_bomb
 	equip_delay_self = 6 SECONDS
@@ -56,13 +56,13 @@
 /obj/item/clothing/neck/collar_bomb/proc/explosive_countdown(ticks_left)
 	active = TRUE
 	if(ticks_left > 0)
-		playsound(src, 'sound/items/timer.ogg', 30, FALSE)
+		playsound(src, '../assets/sound/items/timer.ogg', 30, FALSE)
 		balloon_alert_to_viewers("[ticks_left]")
 		ticks_left--
 		addtimer(CALLBACK(src, PROC_REF(explosive_countdown), ticks_left), 1 SECONDS)
 		return
 
-	playsound(src, 'sound/effects/snap.ogg', 75, TRUE)
+	playsound(src, '../assets/sound/effects/snap.ogg', 75, TRUE)
 	if(!ishuman(loc))
 		balloon_alert_to_viewers("dud...")
 		active = FALSE
@@ -85,11 +85,11 @@
 /obj/item/collar_bomb_button
 	name = "big yellow button"
 	desc = "It looks like a big red button, except it's yellow. It comes with a heavy trigger, to avoid accidents."
-	icon = 'icons/obj/devices/assemblies.dmi'
+	icon = '../assets/icons/obj/devices/assemblies.dmi'
 	icon_state = "bigyellow"
 	inhand_icon_state = "electronic"
-	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/devices_righthand.dmi'
 	w_class = WEIGHT_CLASS_TINY
 	///The collar bomb it's associated with.
 	var/obj/item/clothing/neck/collar_bomb/collar
@@ -101,7 +101,7 @@
 	balloon_alert_to_viewers("pushing the button...")
 	if(!do_after(user, 1.2 SECONDS, target = src))
 		return
-	playsound(user, 'sound/machines/click.ogg', 25, TRUE)
+	playsound(user, '../assets/sound/machines/click.ogg', 25, TRUE)
 	if(!collar|| collar.active)
 		return
 	collar.explosive_countdown(ticks_left = 5)

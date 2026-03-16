@@ -7,7 +7,7 @@
 	base_icon_state = "netpod"
 	circuit = /obj/item/circuitboard/machine/netpod
 	desc = "A link to the netverse. It has an assortment of cables to connect yourself to a virtual domain."
-	icon = 'icons/obj/machines/bitrunning.dmi'
+	icon = '../assets/icons/obj/machines/bitrunning.dmi'
 	icon_state = "netpod"
 	max_integrity = 300
 	obj_flags = BLOCKS_CONSTRUCTION
@@ -161,7 +161,7 @@
 		return CLICK_ACTION_BLOCKING
 	copy_body = !copy_body
 	scanning_can_toggle = world.time + SCANNING_TOGGLE_COOLDOWN
-	playsound(src, 'sound/machines/click.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/machines/click.ogg', 50, TRUE)
 	user.balloon_alert_to_viewers(user, "scanning [copy_body ? "enabled" : "disabled"]")
 	return CLICK_ACTION_SUCCESS
 

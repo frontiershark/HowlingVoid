@@ -1,7 +1,7 @@
 ///Oozes are slime-esque creatures, they are highly gluttonous creatures primarily intended for player controll.
 /mob/living/simple_animal/hostile/ooze
 	name = "Ooze"
-	icon = 'icons/mob/vatgrowing.dmi'
+	icon = '../assets/icons/mob/vatgrowing.dmi'
 	icon_state = "gelatinous"
 	icon_living = "gelatinous"
 	icon_dead = "gelatinous_dead"
@@ -21,7 +21,7 @@
 	maxHealth = 200
 	attack_verb_continuous = "slimes"
 	attack_verb_simple = "slime"
-	attack_sound = 'sound/effects/blob/blobattack.ogg'
+	attack_sound = '../assets/sound/effects/blob/blobattack.ogg'
 	combat_mode = TRUE
 	environment_smash = ENVIRONMENT_SMASH_STRUCTURES
 	mob_size = MOB_SIZE_LARGE
@@ -149,7 +149,7 @@
 	desc = "Gain a temporary speed boost. Costs 10 nutrition and slowly raises your temperature"
 	background_icon_state = "bg_hive"
 	overlay_icon_state = "bg_hive_border"
-	button_icon = 'icons/mob/actions/actions_slime.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_slime.dmi'
 	button_icon_state = "metabolic_boost"
 	check_flags = AB_CHECK_CONSCIOUS|AB_CHECK_IMMOBILE
 	cooldown_time = 24 SECONDS
@@ -205,7 +205,7 @@
 	desc = "Consume a mob that you are dragging to gain nutrition from them."
 	background_icon_state = "bg_hive"
 	overlay_icon_state = "bg_hive_border"
-	button_icon = 'icons/mob/actions/actions_slime.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_slime.dmi'
 	button_icon_state = "consume"
 	check_flags = AB_CHECK_CONSCIOUS|AB_CHECK_IMMOBILE|AB_CHECK_INCAPACITATED
 	/// What do we call devouring something
@@ -247,7 +247,7 @@
 	vored_mob = target
 	vored_mob.forceMove(owner) ///AAAAAAAAAAAAAAAAAAAAAAHHH!!!
 	RegisterSignal(vored_mob, COMSIG_QDELETING, PROC_REF(stop_consuming))
-	playsound(owner,'sound/items/eatfood.ogg', rand(30,50), TRUE)
+	playsound(owner,'../assets/sound/items/eatfood.ogg', rand(30,50), TRUE)
 	owner.visible_message(span_warning("[owner] [devour_verb]s [target]!"), span_notice("You [devour_verb] [target]."))
 	START_PROCESSING(SSprocessing, src)
 	build_all_button_icons(UPDATE_BUTTON_NAME|UPDATE_BUTTON_ICON)
@@ -259,7 +259,7 @@
 	if (isnull(vored_mob))
 		return
 	vored_mob.forceMove(get_turf(owner))
-	playsound(get_turf(owner), 'sound/effects/splat.ogg', 50, TRUE)
+	playsound(get_turf(owner), '../assets/sound/effects/splat.ogg', 50, TRUE)
 	owner.visible_message(span_warning("[owner] pukes out [vored_mob]!"), span_notice("You puke out [vored_mob]."))
 	UnregisterSignal(vored_mob, COMSIG_QDELETING)
 	vored_mob = null
@@ -330,7 +330,7 @@
 	desc = "Fires a mending globule at someone, healing a specific limb of theirs."
 	background_icon_state = "bg_hive"
 	overlay_icon_state = "bg_hive_border"
-	button_icon = 'icons/mob/actions/actions_slime.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_slime.dmi'
 	button_icon_state = "globules"
 	check_flags = AB_CHECK_CONSCIOUS|AB_CHECK_INCAPACITATED
 	cooldown_time = 5 SECONDS
@@ -408,7 +408,7 @@
 /obj/item/mending_globule
 	name = "mending globule"
 	desc = "It somehow heals those who touch it."
-	icon = 'icons/obj/science/vatgrowing.dmi'
+	icon = '../assets/icons/obj/science/vatgrowing.dmi'
 	icon_state = "globule"
 	var/heals_left = 35
 
@@ -434,7 +434,7 @@
 	desc = "Puts a mob inside of a cocoon, allowing it to slowly heal."
 	background_icon_state = "bg_hive"
 	overlay_icon_state = "bg_hive_border"
-	button_icon = 'icons/mob/actions/actions_slime.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_slime.dmi'
 	button_icon_state = "gel_cocoon"
 	check_flags = AB_CHECK_CONSCIOUS|AB_CHECK_IMMOBILE|AB_CHECK_INCAPACITATED
 	cooldown_time = 10 SECONDS
@@ -474,7 +474,7 @@
 /obj/structure/gel_cocoon
 	name = "gel cocoon"
 	desc = "It looks gross, but helpful."
-	icon = 'icons/obj/science/vatgrowing.dmi'
+	icon = '../assets/icons/obj/science/vatgrowing.dmi'
 	icon_state = "gel_cocoon"
 	max_integrity = 50
 	var/mob/living/carbon/inhabitant
@@ -501,7 +501,7 @@
 ///This proc dumps the mob and handles associated audiovisual feedback
 /obj/structure/gel_cocoon/proc/dump_inhabitant(destroy_after = TRUE)
 	inhabitant.forceMove(get_turf(src))
-	playsound(get_turf(inhabitant), 'sound/effects/splat.ogg', 50, TRUE)
+	playsound(get_turf(inhabitant), '../assets/sound/effects/splat.ogg', 50, TRUE)
 	inhabitant.Paralyze(10)
 	inhabitant.visible_message(span_warning("[inhabitant] falls out of [src]!"), span_notice("You fall out of [src]."))
 	if(destroy_after)

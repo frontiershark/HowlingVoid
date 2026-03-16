@@ -11,9 +11,9 @@
 			mannequin.underwear_visibility = NONE
 			// Silicons only need a very basic preview since there is no customization for them.
 			if (istype(preview_job, /datum/job/ai))
-				return image('icons/mob/silicon/ai.dmi', icon_state = resolve_ai_icon(read_preference(/datum/preference/choiced/ai_core_display)), dir = SOUTH)
+				return image('../assets/icons/mob/silicon/ai.dmi', icon_state = resolve_ai_icon(read_preference(/datum/preference/choiced/ai_core_display)), dir = SOUTH)
 			if (istype(preview_job, /datum/job/cyborg))
-				return image('icons/mob/silicon/robots.dmi', icon_state = "robot", dir = SOUTH)
+				return image('../assets/icons/mob/silicon/robots.dmi', icon_state = "robot", dir = SOUTH)
 
 			mannequin.job = preview_job.title
 			mannequin.dress_up_as_job(

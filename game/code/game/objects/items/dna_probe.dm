@@ -11,10 +11,10 @@
 /obj/item/dna_probe
 	name = "DNA Sampler"
 	desc = "Can be used to take chemical and genetic samples of pretty much anything. Needs to be linked with a DNA vault first."
-	icon = 'icons/obj/medical/syringe.dmi'
+	icon = '../assets/icons/obj/medical/syringe.dmi'
 	inhand_icon_state = "sampler"
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/medical_righthand.dmi'
 	icon_state = "sampler"
 	item_flags = NOBLUDGEON
 	///What sources of DNA this sampler can extract from.
@@ -48,7 +48,7 @@
 	if(!our_vault)
 		dna_vault_ref = WEAKREF(target)//linking the dna vault with the probe
 		balloon_alert(user, "vault linked")
-		playsound(src, 'sound/machines/terminal/terminal_success.ogg', 50)
+		playsound(src, '../assets/sound/machines/terminal/terminal_success.ogg', 50)
 		return TRUE
 	return FALSE
 
@@ -73,14 +73,14 @@
 		target.animal_dna += stored_dna_animal
 		stored_dna_animal.Cut()
 	target.check_goal()
-	playsound(target, 'sound/machines/compiler/compiler-stage1.ogg', 50)
+	playsound(target, '../assets/sound/machines/compiler/compiler-stage1.ogg', 50)
 	to_chat(user, span_notice("[uploaded] new datapoints uploaded."))
 	return uploaded
 
 /obj/item/dna_probe/proc/scan_dna(atom/target, mob/user)
 	var/obj/machinery/dna_vault/our_vault = dna_vault_ref?.resolve()
 	if(!our_vault)
-		playsound(user, 'sound/machines/buzz/buzz-sigh.ogg', 50)
+		playsound(user, '../assets/sound/machines/buzz/buzz-sigh.ogg', 50)
 		balloon_alert(user, "need database!")
 		return
 	if(istype(target, /obj/machinery/hydroponics))
@@ -97,7 +97,7 @@
 			to_chat(user, span_alert("Plant needs to be ready to harvest to perform full data scan.")) //Because space dna is actually magic
 			return
 		stored_dna_plants[hydro_tray.myseed.type] = TRUE
-		playsound(src, 'sound/machines/compiler/compiler-stage2.ogg', 50)
+		playsound(src, '../assets/sound/machines/compiler/compiler-stage2.ogg', 50)
 		balloon_alert(user, "data added")
 		return TRUE
 	else if(ishuman(target))
@@ -112,7 +112,7 @@
 			to_chat(user, span_alert("No compatible DNA detected."))
 			return .
 		stored_dna_human[human_target.dna.unique_identity] = TRUE
-		playsound(src, 'sound/machines/compiler/compiler-stage2.ogg', 50)
+		playsound(src, '../assets/sound/machines/compiler/compiler-stage2.ogg', 50)
 		balloon_alert(user, "data added")
 		return TRUE
 
@@ -134,7 +134,7 @@
 		to_chat(user, span_alert("No compatible DNA detected."))
 		return .
 	stored_dna_animal[living_target.type] = TRUE
-	playsound(src, 'sound/machines/compiler/compiler-stage2.ogg', 50)
+	playsound(src, '../assets/sound/machines/compiler/compiler-stage2.ogg', 50)
 	balloon_alert(user, "data added")
 	return TRUE
 
@@ -165,7 +165,7 @@
 /obj/item/dna_probe/carp_scanner/scan_dna(atom/target, mob/user)
 	if(istype(target, /mob/living/basic/carp))
 		carp_dna_loaded = TRUE
-		playsound(src, 'sound/machines/compiler/compiler-stage2.ogg', 50)
+		playsound(src, '../assets/sound/machines/compiler/compiler-stage2.ogg', 50)
 		balloon_alert(user, "dna scanned")
 	else
 		return ..()

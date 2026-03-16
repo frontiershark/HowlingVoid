@@ -1127,7 +1127,7 @@
 /turf/open/indestructible/binary{
 	density = 1;
 	desc = "No, I am not going through this.";
-	icon = 'icons/obj/fluff/beach.dmi';
+	icon = '../assets/icons/obj/fluff/beach.dmi';
 	icon_state = "water";
 	name = "dirty water"
 	},
@@ -1293,7 +1293,7 @@
 	},
 /obj/structure/flora{
 	desc = "Looks frozen.";
-	icon = 'icons/obj/fluff/flora/snowflora.dmi';
+	icon = '../assets/icons/obj/fluff/flora/snowflora.dmi';
 	icon_state = "snowgrass_sw";
 	name = "frozen flora"
 	},
@@ -2311,7 +2311,7 @@
 	},
 /obj/structure/flora{
 	desc = "Looks frozen.";
-	icon = 'icons/obj/fluff/flora/snowflora.dmi';
+	icon = '../assets/icons/obj/fluff/flora/snowflora.dmi';
 	icon_state = "snowgrass3";
 	name = "frozen flora"
 	},
@@ -3443,7 +3443,7 @@
 	},
 /obj/structure/flora{
 	desc = "Looks frozen.";
-	icon = 'icons/obj/fluff/flora/snowflora.dmi';
+	icon = '../assets/icons/obj/fluff/flora/snowflora.dmi';
 	icon_state = "snowgrass2";
 	name = "frozen flora"
 	},
@@ -3847,7 +3847,7 @@
 	},
 /obj/structure/flora{
 	desc = "Looks frozen.";
-	icon = 'icons/obj/fluff/flora/snowflora.dmi';
+	icon = '../assets/icons/obj/fluff/flora/snowflora.dmi';
 	icon_state = "snowgrass3";
 	name = "frozen flora"
 	},
@@ -4435,7 +4435,7 @@
 	},
 /obj/structure/flora{
 	desc = "Looks frozen.";
-	icon = 'icons/obj/fluff/flora/snowflora.dmi';
+	icon = '../assets/icons/obj/fluff/flora/snowflora.dmi';
 	icon_state = "snowgrass2";
 	name = "frozen flora"
 	},
@@ -4460,7 +4460,7 @@
 /obj/structure/signpost/salvation{
 	density = 0;
 	desc = "An intercomm. Someone seems to be on the other end. I should use it.";
-	icon = 'icons/obj/machines/wallmounts.dmi';
+	icon = '../assets/icons/obj/machines/wallmounts.dmi';
 	icon_state = "intercom_prison";
 	max_integrity = 99999;
 	name = "\proper Fun Jail intercom";
@@ -5304,7 +5304,7 @@
 	},
 /obj/structure/flora{
 	desc = "Looks frozen.";
-	icon = 'icons/obj/fluff/flora/snowflora.dmi';
+	icon = '../assets/icons/obj/fluff/flora/snowflora.dmi';
 	icon_state = "snowgrass";
 	name = "frozen flora"
 	},

@@ -1,5 +1,5 @@
 /obj/machinery/atmospherics/components/unary
-	icon = 'icons/obj/machines/atmospherics/unary_devices.dmi'
+	icon = '../assets/icons/obj/machines/atmospherics/unary_devices.dmi'
 	dir = SOUTH
 	initialize_directions = SOUTH
 	device_type = UNARY

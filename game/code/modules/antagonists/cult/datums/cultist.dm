@@ -7,7 +7,7 @@
 	preview_outfit = /datum/outfit/cultist
 	pref_flag = ROLE_CULTIST
 	antag_hud_name = "cult"
-	stinger_sound = 'sound/music/antag/bloodcult/bloodcult_gain.ogg'
+	stinger_sound = '../assets/sound/music/antag/bloodcult/bloodcult_gain.ogg'
 	desensitized_modifier = DESENSITIZED_THRESHOLD
 
 	///Boolean on whether the starting equipment should be given to their inventory.
@@ -251,7 +251,7 @@
 
 	var/area/current_area = get_area(owner.current)
 	for(var/datum/mind/cult_mind as anything in cult_team.members)
-		SEND_SOUND(cult_mind, sound('sound/effects/hallucinations/veryfar_noise.ogg'))
+		SEND_SOUND(cult_mind, sound('../assets/sound/effects/hallucinations/veryfar_noise.ogg'))
 		to_chat(cult_mind, span_cult_large("The Cult's Master, [owner.current.name], has fallen in \the [current_area]!"))
 
 /datum/antagonist/cult/get_preview_icon()

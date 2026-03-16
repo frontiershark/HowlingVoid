@@ -53,10 +53,10 @@
 	add_fingerprint(newoccupant)
 	log_message("[newoccupant] moved in as pilot.", LOG_MECHA)
 	setDir(SOUTH)
-	playsound(src, 'sound/machines/windowdoor.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/machines/windowdoor.ogg', 50, TRUE)
 	set_mouse_pointer()
 	if(!internal_damage)
-		SEND_SOUND(newoccupant, sound('sound/vehicles/mecha/nominal.ogg',volume=50))
+		SEND_SOUND(newoccupant, sound('../assets/sound/vehicles/mecha/nominal.ogg',volume=50))
 	return TRUE
 
 ///proc called when a new mmi mob tries to enter this mech
@@ -107,7 +107,7 @@
 	setDir(SOUTH)
 	log_message("[brain_obj] moved in as pilot.", LOG_MECHA)
 	if(!internal_damage)
-		SEND_SOUND(brain_obj, sound('sound/vehicles/mecha/nominal.ogg',volume=50))
+		SEND_SOUND(brain_obj, sound('../assets/sound/vehicles/mecha/nominal.ogg',volume=50))
 	user.log_message("has put the MMI/posibrain of [key_name(brain_mob)] into [src]", LOG_GAME)
 	brain_mob.log_message("was put into [src] by [key_name(user)]", LOG_GAME, log_globally = FALSE)
 	return TRUE

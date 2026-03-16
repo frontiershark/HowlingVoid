@@ -201,7 +201,7 @@
 	icon_state = "arcane_barrage"
 	damage = 20
 	damage_type = BURN
-	hitsound = 'sound/items/weapons/barragespellhit.ogg'
+	hitsound = '../assets/sound/items/weapons/barragespellhit.ogg'
 
 /// Welds targets inside lockers, and throws the locker
 /obj/projectile/magic/locker
@@ -416,7 +416,7 @@
 	/// The duration of the trail before deleting.
 	var/trail_lifespan = 0 SECONDS
 	/// The icon the trail uses.
-	var/trail_icon = 'icons/effects/magic.dmi'
+	var/trail_icon = '../assets/icons/effects/magic.dmi'
 	/// The icon state the trail uses.
 	var/trail_icon_state = "arrow"
 	/// Can we spawn a trail effect again?
@@ -534,7 +534,7 @@
 	trigger_range = 0
 	can_only_hit_target = TRUE
 	paralyze = 6 SECONDS
-	hitsound = 'sound/effects/magic/mm_hit.ogg'
+	hitsound = '../assets/sound/effects/magic/mm_hit.ogg'
 
 	trail = TRUE
 	trail_lifespan = 0.5 SECONDS
@@ -552,7 +552,7 @@
 	damage = 30
 	damage_type = BRUTE
 	knockdown = 50
-	hitsound = 'sound/items/weapons/punch3.ogg'
+	hitsound = '../assets/sound/items/weapons/punch3.ogg'
 	trigger_range = 0
 	antimagic_flags = MAGIC_RESISTANCE_HOLY
 	range = 105
@@ -561,7 +561,7 @@
 /obj/projectile/magic/aoe/juggernaut/on_hit(atom/target, blocked = 0, pierce_hit)
 	. = ..()
 	var/turf/target_turf = get_turf(src)
-	playsound(target_turf, 'sound/items/weapons/resonator_blast.ogg', 100, FALSE)
+	playsound(target_turf, '../assets/sound/items/weapons/resonator_blast.ogg', 100, FALSE)
 	new /obj/effect/temp_visual/cult/sac(target_turf)
 	for(var/obj/adjacent_object in range(1, src))
 		if(!adjacent_object.density)
@@ -598,7 +598,7 @@
 /obj/projectile/magic/shrink
 	name = "shrink ray"
 	icon_state = "blue_laser"
-	hitsound = 'sound/items/weapons/shrink_hit.ogg'
+	hitsound = '../assets/sound/items/weapons/shrink_hit.ogg'
 	damage = 0
 	damage_type = STAMINA
 	armor_flag = ENERGY

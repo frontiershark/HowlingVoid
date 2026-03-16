@@ -14,7 +14,7 @@
 /obj/energy_ball
 	name = "energy ball"
 	desc = "An energy ball."
-	icon = 'icons/obj/machines/engine/energy_ball.dmi'
+	icon = '../assets/icons/obj/machines/engine/energy_ball.dmi'
 	icon_state = "energy_ball"
 	anchored = TRUE
 	appearance_flags = LONG_GLIDE
@@ -70,7 +70,7 @@
 
 		move(4 + orbiting_balls.len * 1.5)
 
-		playsound(src.loc, 'sound/effects/magic/lightningbolt.ogg', 100, TRUE, extrarange = 30)
+		playsound(src.loc, '../assets/sound/effects/magic/lightningbolt.ogg', 100, TRUE, extrarange = 30)
 
 		pixel_x = 0
 		pixel_y = 0
@@ -126,7 +126,7 @@
 		energy_to_lower = energy_to_raise - 20
 		energy_to_raise = energy_to_raise * 1.25
 
-		playsound(src.loc, 'sound/effects/magic/lightning_chargeup.ogg', 100, TRUE, extrarange = 30)
+		playsound(src.loc, '../assets/sound/effects/magic/lightning_chargeup.ogg', 100, TRUE, extrarange = 30)
 		addtimer(CALLBACK(src, PROC_REF(new_mini_ball)), 10 SECONDS)
 	else if(energy < energy_to_lower && orbiting_balls.len)
 		energy_to_raise = energy_to_raise / 1.25

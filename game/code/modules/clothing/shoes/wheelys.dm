@@ -1,8 +1,8 @@
 /obj/item/clothing/shoes/wheelys
 	name = "Wheely-Heels"
 	desc = "Uses patented retractable wheel technology. Never sacrifice speed for style - not that this provides much of either." //Thanks Fel
-	icon = 'icons/map_icons/clothing/shoes.dmi'
-	worn_icon = 'icons/mob/large-worn-icons/64x64/feet.dmi'
+	icon = '../assets/icons/map_icons/clothing/shoes.dmi'
+	worn_icon = '../assets/icons/mob/large-worn-icons/64x64/feet.dmi'
 	icon_state = "/obj/item/clothing/shoes/wheelys"
 	post_init_icon_state = "sneakers"
 	worn_icon_state = "wheelys"
@@ -53,7 +53,7 @@
 		worn_icon_state = "[initial(worn_icon_state)]-on"
 	else
 		worn_icon_state = "[initial(worn_icon_state)]"
-	playsound(src, 'sound/items/weapons/tap.ogg', 10, TRUE)
+	playsound(src, '../assets/sound/items/weapons/tap.ogg', 10, TRUE)
 	update_appearance()
 
 /obj/item/clothing/shoes/wheelys/Destroy()
@@ -63,7 +63,7 @@
 /obj/item/clothing/shoes/wheelys/rollerskates
 	name = "roller skates"
 	desc = "An EightO brand pair of roller skates. The wheels are retractable, though're quite bulky to walk in."
-	icon = 'icons/obj/clothing/shoes.dmi'
+	icon = '../assets/icons/obj/clothing/shoes.dmi'
 	icon_state = "rollerskates"
 	post_init_icon_state = null
 	inhand_icon_state = null
@@ -78,7 +78,7 @@
 /obj/item/clothing/shoes/wheelys/skishoes
 	name = "ski shoes"
 	desc = "A pair of shoes equipped with foldable skis! Very handy to move in snowy environments unimpeded."
-	icon = 'icons/obj/clothing/shoes.dmi'
+	icon = '../assets/icons/obj/clothing/shoes.dmi'
 	icon_state = "skishoes"
 	post_init_icon_state = null
 	inhand_icon_state = null

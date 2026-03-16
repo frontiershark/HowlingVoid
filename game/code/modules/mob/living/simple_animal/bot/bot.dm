@@ -1,7 +1,7 @@
 // AI (i.e. game AI, not the AI player) controlled bots
 /mob/living/simple_animal/bot
 	abstract_type = /mob/living/simple_animal/bot
-	icon = 'icons/mob/silicon/aibots.dmi'
+	icon = '../assets/icons/mob/silicon/aibots.dmi'
 	layer = MOB_LAYER
 	gender = NEUTER
 	mob_biotypes = MOB_ROBOTIC
@@ -97,7 +97,7 @@
 	///The type of data HUD the bot uses. Diagnostic by default.
 	var/data_hud_type = TRAIT_DIAGNOSTIC_HUD
 	var/datum/atom_hud/data/bot_path/private/path_hud
-	var/path_image_icon = 'icons/mob/silicon/aibots.dmi'
+	var/path_image_icon = '../assets/icons/mob/silicon/aibots.dmi'
 	var/path_image_icon_state = "path_indicator"
 	var/path_image_color = COLOR_WHITE
 	var/reset_access_timer_id
@@ -255,7 +255,7 @@
 		log_combat(user, src, "ejected [key_name(src)] from control of [src] ([initial(src.name)]).")
 	to_chat(src, span_warning("You feel yourself fade as your personality matrix is reset!"))
 	ghostize(can_reenter_corpse = FALSE)
-	playsound(src, 'sound/machines/ping.ogg', 30, TRUE)
+	playsound(src, '../assets/sound/machines/ping.ogg', 30, TRUE)
 	speak("Personality matrix reset!")
 	key = null
 
@@ -267,7 +267,7 @@
 
 /// Fired after something takes control of this mob
 /mob/living/simple_animal/bot/proc/post_possession()
-	playsound(src, 'sound/machines/ping.ogg', 30, TRUE)
+	playsound(src, '../assets/sound/machines/ping.ogg', 30, TRUE)
 	speak("New personality installed successfully!")
 	rename(src)
 

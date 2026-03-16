@@ -6,7 +6,7 @@
 /datum/wound/slash
 	name = "Slashing (Cut) Wound"
 	undiagnosed_name = "Cut"
-	sound_effect = 'sound/items/weapons/slice.ogg'
+	sound_effect = '../assets/sound/items/weapons/slice.ogg'
 
 /datum/wound/slash/get_self_check_description(self_aware)
 	if(!limb.can_bleed())
@@ -268,12 +268,12 @@
 	else
 		user.visible_message(span_danger("[user] begins cauterizing [victim]'s [limb.plaintext_zone] with [I]..."), span_warning("You begin cauterizing [user == victim ? "your" : "[victim]'s"] [limb.plaintext_zone] with [I]..."))
 
-	playsound(user, 'sound/items/handling/surgery/cautery1.ogg', 75, TRUE)
+	playsound(user, '../assets/sound/items/handling/surgery/cautery1.ogg', 75, TRUE)
 
 	if(!do_after(user, treatment_delay, target = victim, extra_checks = CALLBACK(src, PROC_REF(still_exists))))
 		return
 
-	playsound(user, 'sound/items/handling/surgery/cautery2.ogg', 75, TRUE)
+	playsound(user, '../assets/sound/items/handling/surgery/cautery2.ogg', 75, TRUE)
 
 	var/bleeding_wording = (!limb.can_bleed() ? "cuts" : "bleeding")
 	user.visible_message(span_green("[user] cauterizes some of the [bleeding_wording] on [victim]."), span_green("You cauterize some of the [bleeding_wording] on [victim]."))
@@ -301,7 +301,7 @@
 	treat_text_short = "Apply bandaging or suturing."
 	examine_desc = "has an open cut"
 	occur_text = "is cut open, slowly leaking blood"
-	sound_effect = 'sound/effects/wounds/blood1.ogg'
+	sound_effect = '../assets/sound/effects/wounds/blood1.ogg'
 	severity = WOUND_SEVERITY_MODERATE
 	initial_flow = 1.75
 	minimum_flow = 0.5
@@ -333,7 +333,7 @@
 	treat_text_short = "Apply bandaging, suturing, clotting agents, or cauterization."
 	examine_desc = "has a severe cut"
 	occur_text = "is ripped open, veins spurting blood"
-	sound_effect = 'sound/effects/wounds/blood2.ogg'
+	sound_effect = '../assets/sound/effects/wounds/blood2.ogg'
 	severity = WOUND_SEVERITY_SEVERE
 	initial_flow = 2.75
 	minimum_flow = 2
@@ -367,7 +367,7 @@
 	treat_text_short = "Apply bandaging, suturing, clotting agents, or cauterization."
 	examine_desc = "is carved down to the bone, spraying blood wildly"
 	occur_text = "is torn open, spraying blood wildly"
-	sound_effect = 'sound/effects/wounds/blood3.ogg'
+	sound_effect = '../assets/sound/effects/wounds/blood3.ogg'
 	severity = WOUND_SEVERITY_CRITICAL
 	initial_flow = 3.75
 	minimum_flow = 3.5

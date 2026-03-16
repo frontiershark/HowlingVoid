@@ -7,7 +7,7 @@
 	antag_moodlet = /datum/mood_event/blood_worm
 	hijack_speed = 0.5
 	show_to_ghosts = TRUE // I mean let's be honest, even the roundstart versions will become painfully apparent soon enough.
-	stinger_sound = 'sound/effects/magic/exit_blood.ogg'
+	stinger_sound = '../assets/sound/effects/magic/exit_blood.ogg'
 	ui_name = "AntagInfoBloodWorm"
 
 	var/datum/team/blood_worm/team = null
@@ -81,7 +81,7 @@
 	return ..()
 
 /datum/antagonist/blood_worm/get_preview_icon()
-	var/icon/icon = icon('icons/mob/nonhuman-player/blood_worm_32x32.dmi', "juvenile")
+	var/icon/icon = icon('../assets/icons/mob/nonhuman-player/blood_worm_32x32.dmi', "juvenile")
 
 	icon.Crop(1, 1, 32, 32)
 	icon.Shift(SOUTH, 4)

@@ -24,20 +24,20 @@ If the scythe isn't empowered when you sheath it, you take a heap of damage and 
 		return ..()
 
 	to_chat(owner, span_userdanger("[scythe] tears into you for your unworthy display of arrogance!"))
-	playsound(owner, 'sound/effects/magic/demon_attack1.ogg', 50, TRUE)
+	playsound(owner, '../assets/sound/effects/magic/demon_attack1.ogg', 50, TRUE)
 	owner.apply_damage(25, BRUTE, hand, wound_bonus = 10, sharpness = SHARP_EDGED)
 	return ..()
 
 /obj/item/vorpalscythe
 	name = "vorpal scythe"
 	desc = "Reap what you sow."
-	icon = 'icons/obj/weapons/staff.dmi'
+	icon = '../assets/icons/obj/weapons/staff.dmi'
 	icon_state = "vorpalscythe"
 	inhand_icon_state = "vorpalscythe"
 	worn_icon_state = null
 	icon_angle = -35 // Scythes look better when slightly angled
-	lefthand_file = 'icons/mob/inhands/64x64_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/64x64_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/64x64_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/64x64_righthand.dmi'
 	inhand_x_dimension = 64
 	inhand_y_dimension = 64
 	w_class = WEIGHT_CLASS_GIGANTIC
@@ -150,7 +150,7 @@ If the scythe isn't empowered when you sheath it, you take a heap of damage and 
 	log_combat(user, potential_reaping, "prepared to use [src] to decapitate")
 
 	if(do_after(user,  15 SECONDS * death_knell_speed_mod, target = potential_reaping))
-		playsound(get_turf(potential_reaping), 'sound/items/weapons/bladeslice.ogg', 250, TRUE)
+		playsound(get_turf(potential_reaping), '../assets/sound/items/weapons/bladeslice.ogg', 250, TRUE)
 		reaped_head.dismember()
 		user.visible_message(span_danger("[user] swings [src] down, slicing [potential_reaping]'s [head_name] clean off! You think [src] may have grown stronger!"), span_notice("As you perform the death knell on [potential_reaping], [src] gains power! For a time..."))
 		if(potential_empowerment == SCYTHE_SATED) //We don't want actual player heads to go wandering off, but it'll be funny if a bunch of monkeyhuman heads started floating around

@@ -4,7 +4,7 @@
 
 /obj/item/mecha_parts
 	name = "mecha part"
-	icon = 'icons/mob/rideables/mech_construct.dmi'
+	icon = '../assets/icons/mob/rideables/mech_construct.dmi'
 	icon_state = "blank"
 	abstract_type = /obj/item/mecha_parts
 	w_class = WEIGHT_CLASS_GIGANTIC
@@ -335,11 +335,11 @@
 
 /obj/item/circuitboard/mecha
 	name = "exosuit circuit board"
-	icon = 'icons/obj/devices/circuitry_n_data.dmi'
+	icon = '../assets/icons/obj/devices/circuitry_n_data.dmi'
 	icon_state = "std_mod"
 	inhand_icon_state = "electronic"
-	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/devices_righthand.dmi'
 	obj_flags = CONDUCTS_ELECTRICITY
 	force = 5
 	w_class = WEIGHT_CLASS_SMALL

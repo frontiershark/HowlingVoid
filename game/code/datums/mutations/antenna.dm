@@ -11,7 +11,7 @@
 /obj/item/implant/radio/antenna
 	name = "internal antenna organ"
 	desc = "The internal organ part of the antenna. Science has not yet given it a good name."
-	icon = 'icons/obj/devices/voice.dmi'//maybe make a unique sprite later. not important
+	icon = '../assets/icons/obj/devices/voice.dmi'//maybe make a unique sprite later. not important
 	icon_state = "walkietalkie"
 
 /obj/item/implant/radio/antenna/Initialize(mapload)
@@ -36,7 +36,7 @@
 /datum/mutation/antenna/New(datum/mutation/copymut)
 	..()
 	if(!(type in visual_indicators))
-		visual_indicators[type] = list(mutable_appearance('icons/mob/effects/genetics.dmi', "antenna", -FRONT_MUTATIONS_LAYER+1))//-MUTATIONS_LAYER+1
+		visual_indicators[type] = list(mutable_appearance('../assets/icons/mob/effects/genetics.dmi', "antenna", -FRONT_MUTATIONS_LAYER+1))//-MUTATIONS_LAYER+1
 
 /datum/mutation/antenna/get_visual_indicator()
 	return visual_indicators[type][1]
@@ -61,7 +61,7 @@
 	spell_requirements = SPELL_REQUIRES_NO_ANTIMAGIC
 	antimagic_flags = MAGIC_RESISTANCE_MIND
 
-	ranged_mousepointer = 'icons/effects/mouse_pointers/mindswap_target.dmi'
+	ranged_mousepointer = '../assets/icons/effects/mouse_pointers/mindswap_target.dmi'
 
 /datum/action/cooldown/spell/pointed/mindread/Grant(mob/grant_to)
 	. = ..()
@@ -178,7 +178,7 @@
 /datum/mutation/mindreader/New(datum/mutation/copymut)
 	..()
 	if(!(type in visual_indicators))
-		visual_indicators[type] = list(mutable_appearance('icons/mob/effects/genetics.dmi', "antenna", -FRONT_MUTATIONS_LAYER+1))
+		visual_indicators[type] = list(mutable_appearance('../assets/icons/mob/effects/genetics.dmi', "antenna", -FRONT_MUTATIONS_LAYER+1))
 
 /datum/mutation/mindreader/get_visual_indicator()
 	return visual_indicators[type][1]

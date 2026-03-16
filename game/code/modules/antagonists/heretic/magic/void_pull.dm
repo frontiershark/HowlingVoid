@@ -3,9 +3,9 @@
 	desc = "Calls the void, damaging, knocking down, pulling people closer, and stunning people nearby."
 	background_icon_state = "bg_heretic"
 	overlay_icon_state = "bg_heretic_border"
-	button_icon = 'icons/mob/actions/actions_ecult.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_ecult.dmi'
 	button_icon_state = "voidpull"
-	sound = 'sound/effects/magic/voidblink.ogg'
+	sound = '../assets/sound/effects/magic/voidblink.ogg'
 
 	school = SCHOOL_FORBIDDEN
 	cooldown_time = 30 SECONDS

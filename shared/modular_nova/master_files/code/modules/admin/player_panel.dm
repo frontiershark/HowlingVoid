@@ -450,7 +450,7 @@ GLOBAL_LIST_INIT(pp_limbs, list(
 					if (!targeted_limb)
 						continue
 					targeted_limb.dismember()
-					playsound(punished_mob, 'sound/effects/bamf.ogg', 70)
+					playsound(punished_mob, '../assets/sound/effects/bamf.ogg', 70)
 				else
 					punished_mob.regenerate_limb(limb)
 

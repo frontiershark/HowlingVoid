@@ -695,18 +695,18 @@
 /datum/chemical_reaction/scream/on_reaction(datum/reagents/holder, datum/equilibrium/reaction, created_volume)
 	/// List of screams to play.
 	var/static/list/screams = list(
-		'sound/mobs/humanoids/human/scream/femalescream_1.ogg',
-		'sound/mobs/humanoids/human/scream/femalescream_2.ogg',
-		'sound/mobs/humanoids/human/scream/femalescream_3.ogg',
-		'sound/mobs/humanoids/human/scream/femalescream_4.ogg',
-		'sound/mobs/humanoids/human/scream/femalescream_5.ogg',
-		'sound/mobs/humanoids/human/scream/malescream_1.ogg',
-		'sound/mobs/humanoids/human/scream/malescream_2.ogg',
-		'sound/mobs/humanoids/human/scream/malescream_3.ogg',
-		'sound/mobs/humanoids/human/scream/malescream_4.ogg',
-		'sound/mobs/humanoids/human/scream/malescream_5.ogg',
-		'sound/mobs/humanoids/human/scream/malescream_6.ogg',
-		'sound/mobs/humanoids/human/scream/wilhelm_scream.ogg',
+		'../assets/sound/mobs/humanoids/human/scream/femalescream_1.ogg',
+		'../assets/sound/mobs/humanoids/human/scream/femalescream_2.ogg',
+		'../assets/sound/mobs/humanoids/human/scream/femalescream_3.ogg',
+		'../assets/sound/mobs/humanoids/human/scream/femalescream_4.ogg',
+		'../assets/sound/mobs/humanoids/human/scream/femalescream_5.ogg',
+		'../assets/sound/mobs/humanoids/human/scream/malescream_1.ogg',
+		'../assets/sound/mobs/humanoids/human/scream/malescream_2.ogg',
+		'../assets/sound/mobs/humanoids/human/scream/malescream_3.ogg',
+		'../assets/sound/mobs/humanoids/human/scream/malescream_4.ogg',
+		'../assets/sound/mobs/humanoids/human/scream/malescream_5.ogg',
+		'../assets/sound/mobs/humanoids/human/scream/malescream_6.ogg',
+		'../assets/sound/mobs/humanoids/human/scream/wilhelm_scream.ogg',
 	)
 
 	playsound(holder.my_atom, pick(screams), created_volume*5,TRUE)
@@ -952,7 +952,7 @@
 	results = list(/datum/reagent/eigenstate = 1)
 	required_reagents = list(/datum/reagent/bluespace = 1, /datum/reagent/stable_plasma = 1, /datum/reagent/consumable/caramel = 1)
 	mix_message = "the reaction zaps suddenly!"
-	mix_sound = 'sound/effects/chemistry/bluespace.ogg'
+	mix_sound = '../assets/sound/effects/chemistry/bluespace.ogg'
 	//FermiChem vars:
 	required_temp = 350
 	optimal_temp = 600
@@ -984,7 +984,7 @@
 		eigen.data["location_created"] = location
 
 	do_sparks(5,FALSE,location)
-	playsound(location, 'sound/effects/phasein.ogg', 80, TRUE)
+	playsound(location, '../assets/sound/effects/phasein.ogg', 80, TRUE)
 
 /datum/chemical_reaction/eigenstate/overheated(datum/reagents/holder, datum/equilibrium/equilibrium, step_volume_added)
 	. = ..()
@@ -992,7 +992,7 @@
 		return
 	var/turf/location = get_turf(holder.my_atom)
 	do_sparks(3,FALSE,location)
-	playsound(location, 'sound/effects/phasein.ogg', 80, TRUE)
+	playsound(location, '../assets/sound/effects/phasein.ogg', 80, TRUE)
 	for(var/mob/living/nearby_mob in range(location, 3))
 		do_sparks(3,FALSE,nearby_mob)
 		do_teleport(nearby_mob, get_turf(holder.my_atom), 3, no_effects=TRUE)
@@ -1007,7 +1007,7 @@
 	var/turf/location = get_turf(holder.my_atom)
 	do_sparks(3,FALSE,location)
 	holder.chem_temp += 10
-	playsound(location, 'sound/effects/phasein.ogg', 80, TRUE)
+	playsound(location, '../assets/sound/effects/phasein.ogg', 80, TRUE)
 	for(var/obj/machinery/duct/duct in range(location, 3))
 		do_teleport(duct, location, 3, no_effects=TRUE)
 		equilibrium.data["ducts_teleported"] = TRUE //If we teleported a duct - call the process in

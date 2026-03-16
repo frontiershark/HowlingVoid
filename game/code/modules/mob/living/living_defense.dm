@@ -233,9 +233,9 @@
 	if(silent || !client?.prefs.read_preference(/datum/preference/toggle/sound_combatmode))
 		return
 	if(combat_mode)
-		SEND_SOUND(src, sound('sound/misc/ui_togglecombat.ogg', volume = 25)) //Sound from interbay!
+		SEND_SOUND(src, sound('../assets/sound/misc/ui_togglecombat.ogg', volume = 25)) //Sound from interbay!
 	else
-		SEND_SOUND(src, sound('sound/misc/ui_toggleoffcombat.ogg', volume = 25)) //Slightly modified version of the above
+		SEND_SOUND(src, sound('../assets/sound/misc/ui_toggleoffcombat.ogg', volume = 25)) //Slightly modified version of the above
 
 /mob/living/hitby(atom/movable/AM, skipcatch, hitpush = TRUE, blocked = FALSE, datum/thrownthing/throwingdatum)
 	if(!isitem(AM))
@@ -246,7 +246,7 @@
 			blocked = TRUE
 			return SUCCESSFUL_BLOCK
 		else
-			playsound(loc, 'sound/items/weapons/genhit.ogg', 50, TRUE, -1) //Item sounds are handled in the item itself
+			playsound(loc, '../assets/sound/items/weapons/genhit.ogg', 50, TRUE, -1) //Item sounds are handled in the item itself
 			if(!isvendor(AM) && !iscarbon(AM)) //Vendors have special interactions, while carbon mobs already generate visible messages!
 				visible_message(span_danger("[src] is hit by [AM]!"), \
 							span_userdanger("You're hit by [AM]!"))
@@ -369,7 +369,7 @@
 	if(user.grab_state >= user.max_grab)
 		return
 	user.changeNext_move(CLICK_CD_GRABBING)
-	var/sound_to_play = 'sound/items/weapons/thudswoosh.ogg'
+	var/sound_to_play = '../assets/sound/items/weapons/thudswoosh.ogg'
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 		if(H.dna.species.grab_sound)
@@ -511,7 +511,7 @@
 	user.do_attack_animation(src, ATTACK_EFFECT_BITE)
 	if (HAS_TRAIT(user, TRAIT_PERFECT_ATTACKER) || prob(75))
 		log_combat(user, src, "attacked")
-		playsound(loc, 'sound/items/weapons/bite.ogg', 50, TRUE, -1)
+		playsound(loc, '../assets/sound/items/weapons/bite.ogg', 50, TRUE, -1)
 		visible_message(span_danger("[user.name] bites [src]!"), \
 						span_userdanger("[user.name] bites you!"), span_hear("You hear a chomp!"), COMBAT_MESSAGE_RANGE, user)
 		to_chat(user, span_danger("You bite [src]!"))
@@ -538,7 +538,7 @@
 			visible_message(span_danger("[L.name] bites [src]!"), \
 							span_userdanger("[L.name] bites you!"), span_hear("You hear a chomp!"), COMBAT_MESSAGE_RANGE, L)
 			to_chat(L, span_danger("You bite [src]!"))
-			playsound(loc, 'sound/items/weapons/bite.ogg', 50, TRUE, -1)
+			playsound(loc, '../assets/sound/items/weapons/bite.ogg', 50, TRUE, -1)
 			return TRUE
 		else
 			visible_message(span_danger("[L.name]'s bite misses [src]!"), \
@@ -638,7 +638,7 @@
 		GLOB.cult_narsie.souls += 1
 		if((GLOB.cult_narsie.souls == GLOB.cult_narsie.soul_goal) && (GLOB.cult_narsie.resolved == FALSE))
 			GLOB.cult_narsie.resolved = TRUE
-			sound_to_playing_players('sound/announcer/alarm/nuke_alarm.ogg', 70)
+			sound_to_playing_players('../assets/sound/announcer/alarm/nuke_alarm.ogg', 70)
 			addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(cult_ending_helper), CULT_VICTORY_MASS_CONVERSION), 12 SECONDS)
 			addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(ending_helper)), 27 SECONDS)
 	if(client)
@@ -701,7 +701,7 @@
 	sound_damage(ear_damage, deaf)
 
 	if(send_sound)
-		SEND_SOUND(src, sound('sound/items/weapons/flash_ring.ogg',0, 1, 0, 250))
+		SEND_SOUND(src, sound('../assets/sound/items/weapons/flash_ring.ogg',0, 1, 0, 250))
 
 	if(ears.damage >= 15 && prob(ears.damage - 5))
 		to_chat(src, span_userdanger("You can't hear anything!"))
@@ -732,7 +732,7 @@
  */
 /mob/living/proc/do_slap_animation(atom/slapped)
 	do_attack_animation(slapped, no_effect=TRUE)
-	var/mutable_appearance/glove_appearance = mutable_appearance('icons/effects/effects.dmi', "slapglove")
+	var/mutable_appearance/glove_appearance = mutable_appearance('../assets/icons/effects/effects.dmi', "slapglove")
 	glove_appearance.pixel_z = 10 // should line up with head
 	glove_appearance.pixel_w = 10
 	var/atom/movable/flick_visual/glove = slapped.flick_overlay_view(glove_appearance, 1 SECONDS)
@@ -779,10 +779,10 @@
 	var/shove_flags = target.get_shove_flags(src, weapon)
 	if(weapon)
 		do_attack_animation(target, used_item = weapon)
-		playsound(target, 'sound/effects/glass/glassbash.ogg', 50, TRUE, -1)
+		playsound(target, '../assets/sound/effects/glass/glassbash.ogg', 50, TRUE, -1)
 	else
 		do_attack_animation(target, ATTACK_EFFECT_DISARM)
-		playsound(target, 'sound/items/weapons/shove.ogg', 50, TRUE, -1)
+		playsound(target, '../assets/sound/items/weapons/shove.ogg', 50, TRUE, -1)
 	if (ishuman(target) && isnull(weapon))
 		var/mob/living/carbon/human/human_target = target
 		human_target.w_uniform?.add_fingerprint(src)

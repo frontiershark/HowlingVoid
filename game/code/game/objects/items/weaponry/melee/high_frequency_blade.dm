@@ -2,12 +2,12 @@
 	name = "high frequency blade"
 	desc = "A sword reinforced by a powerful alternating current and resonating at extremely high vibration frequencies. \
 		This oscillation weakens the molecular bonds of anything it cuts, thereby increasing its cutting ability."
-	icon = 'icons/obj/weapons/sword.dmi'
+	icon = '../assets/icons/obj/weapons/sword.dmi'
 	icon_state = "hfrequency0"
 	worn_icon_state = "hfrequency0"
 	icon_angle = -45
-	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/swords_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/swords_righthand.dmi'
 	force = 10
 	wound_bonus = 25
 	exposed_wound_bonus = 50
@@ -16,7 +16,7 @@
 	attack_speed = CLICK_CD_HYPER_RAPID
 	embed_type = /datum/embedding/hfr_blade
 	block_chance = 25
-	block_sound = 'sound/items/weapons/parry.ogg'
+	block_sound = '../assets/sound/items/weapons/parry.ogg'
 	sharpness = SHARP_EDGED
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BACK
@@ -89,8 +89,8 @@
 	previous_target = WEAKREF(target)
 	previous_x = x_slashed
 	previous_y = y_slashed
-	playsound(src, 'sound/items/weapons/bladeslice.ogg', 100, vary = TRUE)
-	playsound(src, 'sound/items/weapons/zapbang.ogg', 50, vary = TRUE)
+	playsound(src, '../assets/sound/items/weapons/bladeslice.ogg', 100, vary = TRUE)
+	playsound(src, '../assets/sound/items/weapons/zapbang.ogg', 50, vary = TRUE)
 	if(isliving(target))
 		var/mob/living/living_target = target
 		living_target.apply_damage(force*damage_mod, BRUTE, sharpness = SHARP_EDGED, wound_bonus = wound_bonus, exposed_wound_bonus = exposed_wound_bonus, def_zone = user.zone_selected)

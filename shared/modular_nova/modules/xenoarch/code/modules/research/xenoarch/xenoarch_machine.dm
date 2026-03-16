@@ -266,7 +266,7 @@
 /obj/machinery/xenoarch/recoverer/proc/recover_item(obj/insert_obj, obj/delete_obj)
 	var/src_turf = get_turf(src)
 	new insert_obj(src_turf)
-	playsound(src, 'sound/machines/click.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/machines/click.ogg', 50, TRUE)
 	qdel(delete_obj)
 
 /obj/machinery/xenoarch/digger

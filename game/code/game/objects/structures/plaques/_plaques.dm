@@ -1,5 +1,5 @@
 /obj/structure/plaque //This is a plaque you can craft with gold, then permanently engrave a title and description on, with a fountain pen.
-	icon = 'icons/obj/signs.dmi'
+	icon = '../assets/icons/obj/signs.dmi'
 	icon_state = "blankplaque"
 	name = "blank plaque"
 	desc = "A blank plaque, use a fancy pen to engrave it. It can be detached from the wall with a wrench."
@@ -50,7 +50,7 @@
 	I.play_tool_sound(src)
 	if(!I.use_tool(src, user, 4 SECONDS))
 		return TRUE
-	playsound(src, 'sound/items/deconstruct.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/deconstruct.ogg', 50, TRUE)
 	user.visible_message(span_notice("[user] unfastens [src]."), \
 		span_notice("You unfasten [src]."))
 	var/obj/item/plaque/unwrenched_plaque = new (get_turf(user))
@@ -115,11 +115,11 @@
 	return ..()
 
 /obj/item/plaque //The item version of the above.
-	icon = 'icons/obj/signs.dmi'
+	icon = '../assets/icons/obj/signs.dmi'
 	icon_state = "blankplaque"
 	inhand_icon_state = "blankplaque"
-	lefthand_file = 'icons/mob/inhands/items_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items_righthand.dmi'
 	name = "blank plaque"
 	desc = "A blank plaque, use a fancy pen to engrave it. It can be placed on a wall."
 	w_class = WEIGHT_CLASS_NORMAL
@@ -205,7 +205,7 @@
 		placed_plaque.pixel_x = -32
 	user.visible_message(span_notice("[user] fastens [src] to [target_turf]."), \
 		span_notice("You attach [src] to [target_turf]."))
-	playsound(target_turf, 'sound/items/deconstruct.ogg', 50, TRUE)
+	playsound(target_turf, '../assets/sound/items/deconstruct.ogg', 50, TRUE)
 	if(engraved)
 		placed_plaque.name = name
 		placed_plaque.desc = desc

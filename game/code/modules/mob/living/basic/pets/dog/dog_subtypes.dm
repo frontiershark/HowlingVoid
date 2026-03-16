@@ -4,7 +4,7 @@
 	name = "\improper pug"
 	real_name = "pug"
 	desc = "They're a pug."
-	icon = 'icons/mob/simple/pets.dmi'
+	icon = '../assets/icons/mob/simple/pets.dmi'
 	icon_state = "pug"
 	icon_living = "pug"
 	icon_dead = "pug_dead"
@@ -29,7 +29,7 @@
 	name = "\improper bull terrier"
 	real_name = "bull terrier"
 	desc = "They're a bull terrier."
-	icon = 'icons/mob/simple/pets.dmi'
+	icon = '../assets/icons/mob/simple/pets.dmi'
 	icon_state = "bullterrier"
 	icon_living = "bullterrier"
 	icon_dead = "bullterrier_dead"
@@ -86,7 +86,7 @@
 	icon_state = "breaddog"
 	icon_living = "breaddog"
 	icon_dead = "breaddog_dead"
-	head_icon = 'icons/mob/clothing/head/pets_head.dmi'
+	head_icon = '../assets/icons/mob/clothing/head/pets_head.dmi'
 	health = 50
 	maxHealth = 50
 	gender = NEUTER
@@ -95,7 +95,7 @@
 	/obj/item/food/meat/slab = 2)
 	response_harm_continuous = "takes a bite out of"
 	response_harm_simple = "take a bite out of"
-	attacked_sound = 'sound/items/eatfood.ogg'
+	attacked_sound = '../assets/sound/items/eatfood.ogg'
 	held_state = "breaddog"
 	worn_slot_flags = ITEM_SLOT_HEAD
 	//just ensuring the mats contained by the dog when spawned are the same of when crafted

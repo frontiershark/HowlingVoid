@@ -59,7 +59,7 @@
 		return ..()
 
 	to_chat(owner, span_warning("Your [name] splatters with an unnerving squelch!"))
-	playsound(owner, 'sound/effects/blob/blobattack.ogg', 60, TRUE)
+	playsound(owner, '../assets/sound/effects/blob/blobattack.ogg', 60, TRUE)
 	owner.adjust_blood_volume(-SLIME_LIMB_BLOOD_LOSS)
 	return ..()
 
@@ -68,7 +68,7 @@
 		return ..()
 
 	to_chat(owner, span_warning("Your [name] splatters with an unnerving squelch!"))
-	playsound(owner, 'sound/effects/blob/blobattack.ogg', 60, TRUE)
+	playsound(owner, '../assets/sound/effects/blob/blobattack.ogg', 60, TRUE)
 	owner.adjust_blood_volume(-SLIME_LIMB_BLOOD_LOSS)
 	return ..()
 
@@ -77,7 +77,7 @@
 		return ..()
 
 	to_chat(owner, span_warning("Your [name] splatters with an unnerving squelch!"))
-	playsound(owner, 'sound/effects/blob/blobattack.ogg', 60, TRUE)
+	playsound(owner, '../assets/sound/effects/blob/blobattack.ogg', 60, TRUE)
 	owner.adjust_blood_volume(-SLIME_LIMB_BLOOD_LOSS)
 	return ..()
 
@@ -86,7 +86,7 @@
 		return ..()
 
 	to_chat(owner, span_warning("Your [name] splatters with an unnerving squelch!"))
-	playsound(owner, 'sound/effects/blob/blobattack.ogg', 60, TRUE)
+	playsound(owner, '../assets/sound/effects/blob/blobattack.ogg', 60, TRUE)
 	owner.adjust_blood_volume(-SLIME_LIMB_BLOOD_LOSS)
 	return ..()
 
@@ -95,7 +95,7 @@
 		return ..()
 
 	to_chat(owner, span_warning("Your [name] splatters with an unnerving squelch!"))
-	playsound(owner, 'sound/effects/blob/blobattack.ogg', 60, TRUE)
+	playsound(owner, '../assets/sound/effects/blob/blobattack.ogg', 60, TRUE)
 	owner.adjust_blood_volume(-SLIME_LIMB_BLOOD_LOSS)
 	return ..()
 
@@ -104,7 +104,7 @@
 		return ..()
 
 	to_chat(owner, span_warning("Your [name] splatters with an unnerving squelch!"))
-	playsound(owner, 'sound/effects/blob/blobattack.ogg', 60, TRUE)
+	playsound(owner, '../assets/sound/effects/blob/blobattack.ogg', 60, TRUE)
 	owner.adjust_blood_volume(-SLIME_LIMB_BLOOD_LOSS)
 	return ..()
 
@@ -113,7 +113,7 @@
 		return ..()
 
 	to_chat(owner, span_warning("Your [name] splatters with an unnerving squelch!"))
-	playsound(owner, 'sound/effects/blob/blobattack.ogg', 60, TRUE)
+	playsound(owner, '../assets/sound/effects/blob/blobattack.ogg', 60, TRUE)
 	owner.adjust_blood_volume(-SLIME_LIMB_BLOOD_LOSS)
 	return ..()
 

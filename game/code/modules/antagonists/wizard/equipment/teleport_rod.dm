@@ -7,9 +7,9 @@
 		causing you to take damage from further uses until you stabilize once more."
 	icon_state = "tele_wand_er"
 	inhand_icon_state = "tele_wand_er"
-	icon = 'icons/obj/weapons/guns/magic.dmi'
-	lefthand_file = 'icons/mob/inhands/weapons/staves_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/staves_righthand.dmi'
+	icon = '../assets/icons/obj/weapons/guns/magic.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/staves_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/staves_righthand.dmi'
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF | UNACIDABLE
 	item_flags = NOBLUDGEON
 	light_system = OVERLAY_LIGHT
@@ -85,7 +85,7 @@
 
 	. = ITEM_INTERACT_SUCCESS
 
-	var/sound/teleport_sound = sound('sound/effects/magic/summonitems_generic.ogg')
+	var/sound/teleport_sound = sound('../assets/sound/effects/magic/summonitems_generic.ogg')
 	teleport_sound.pitch = 0.5
 	// Handle our own pizzaz rather than doing it in do_teleport
 	new /obj/effect/temp_visual/teleport_flux(start_turf, user.dir)
@@ -223,7 +223,7 @@
 
 /// Particles for Teleport Flux and other similar effects
 /particles/teleport_flux
-	icon = 'icons/effects/particles/echo.dmi'
+	icon = '../assets/icons/effects/particles/echo.dmi'
 	icon_state = list("echo1" = 3, "echo2" = 1, "echo3" = 1)
 	width = 40
 	height = 80

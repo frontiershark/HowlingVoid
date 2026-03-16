@@ -2,7 +2,7 @@
 /datum/grand_finale/clown
 	name = "Jubilation"
 	desc = "The ultimate use of your gathered power! Rewrite time so that everyone went to clown college! Now they'll prank each other for you!"
-	icon = 'icons/obj/clothing/masks.dmi'
+	icon = '../assets/icons/obj/clothing/masks.dmi'
 	icon_state = "clown"
 	glow_colour = "#ffff0048"
 

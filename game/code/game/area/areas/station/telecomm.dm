@@ -5,14 +5,14 @@
 /area/station/tcommsat
 	icon_state = "tcomsatcham"
 	ambientsounds = list(
-		'sound/ambience/engineering/ambisin2.ogg',
-		'sound/ambience/misc/signal.ogg',
-		'sound/ambience/misc/signal.ogg',
-		'sound/ambience/general/ambigen9.ogg',
-		'sound/ambience/engineering/ambitech.ogg',
-		'sound/ambience/engineering/ambitech2.ogg',
-		'sound/ambience/engineering/ambitech3.ogg',
-		'sound/ambience/misc/ambimystery.ogg',
+		'../assets/sound/ambience/engineering/ambisin2.ogg',
+		'../assets/sound/ambience/misc/signal.ogg',
+		'../assets/sound/ambience/misc/signal.ogg',
+		'../assets/sound/ambience/general/ambigen9.ogg',
+		'../assets/sound/ambience/engineering/ambitech.ogg',
+		'../assets/sound/ambience/engineering/ambitech2.ogg',
+		'../assets/sound/ambience/engineering/ambitech3.ogg',
+		'../assets/sound/ambience/misc/ambimystery.ogg',
 		)
 	airlock_wires = /datum/wires/airlock/engineering
 

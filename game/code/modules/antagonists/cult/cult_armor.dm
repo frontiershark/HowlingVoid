@@ -7,8 +7,8 @@
 	name = "ancient cultist robes"
 	desc = "A ragged, dusty set of robes. Strange letters line the inside."
 	icon_state = "cultrobes"
-	icon = 'icons/obj/clothing/suits/armor.dmi'
-	worn_icon = 'icons/mob/clothing/suits/armor.dmi'
+	icon = '../assets/icons/obj/clothing/suits/armor.dmi'
+	worn_icon = '../assets/icons/mob/clothing/suits/armor.dmi'
 	inhand_icon_state = "cultrobes"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	allowed = list(/obj/item/tome, /obj/item/melee/cultblade, /obj/item/melee/sickly_blade/cursed)
@@ -32,8 +32,8 @@
 
 /obj/item/clothing/head/hooded/cult_hoodie
 	name = "ancient cultist hood"
-	icon = 'icons/obj/clothing/head/helmet.dmi'
-	worn_icon = 'icons/mob/clothing/head/helmet.dmi'
+	icon = '../assets/icons/obj/clothing/head/helmet.dmi'
+	worn_icon = '../assets/icons/mob/clothing/head/helmet.dmi'
 	icon_state = "culthood"
 	inhand_icon_state = "culthood"
 	desc = "A torn, dust-caked hood. Strange letters line the inside."
@@ -112,10 +112,10 @@
 	if(IS_CULTIST(exorcist))
 		return
 	balloon_alert(exorcist, "exorcising...")
-	playsound(src, 'sound/effects/hallucinations/veryfar_noise.ogg', 40, TRUE)
+	playsound(src, '../assets/sound/effects/hallucinations/veryfar_noise.ogg', 40, TRUE)
 	if(!do_after(exorcist, 4 SECONDS, target = src))
 		return
-	playsound(src, 'sound/effects/pray_chaplain.ogg', 60, TRUE)
+	playsound(src, '../assets/sound/effects/pray_chaplain.ogg', 60, TRUE)
 
 	exorcist.visible_message(span_notice("[exorcist] purifies [src]!"))
 	var/new_item_path = GLOB.holy_armor_type || pick(subtypesof(/obj/item/storage/box/holy))
@@ -204,7 +204,7 @@
 	AddComponent( \
 		/datum/component/shielded, \
 		recharge_start_delay = 0 SECONDS, \
-		shield_icon_file = 'icons/effects/cult.dmi', \
+		shield_icon_file = '../assets/icons/effects/cult.dmi', \
 		shield_icon = "shield-cult", \
 		run_hit_callback = CALLBACK(src, PROC_REF(shield_damaged)), \
 	)

@@ -1,7 +1,7 @@
 /obj/item/food/tortilla
 	name = "tortilla"
 	desc = "The base for all your burritos."
-	icon = 'icons/obj/food/food_ingredients.dmi'
+	icon = '../assets/icons/obj/food/food_ingredients.dmi'
 	icon_state = "tortilla"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 3,
@@ -18,7 +18,7 @@
 /obj/item/food/burrito
 	name = "burrito"
 	desc = "Tortilla wrapped goodness."
-	icon = 'icons/obj/food/mexican.dmi'
+	icon = '../assets/icons/obj/food/mexican.dmi'
 	icon_state = "burrito"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 2,
@@ -34,7 +34,7 @@
 /obj/item/food/cheesyburrito
 	name = "cheesy burrito"
 	desc = "It's a burrito filled with cheese."
-	icon = 'icons/obj/food/mexican.dmi'
+	icon = '../assets/icons/obj/food/mexican.dmi'
 	icon_state = "cheesyburrito"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 3,
@@ -50,7 +50,7 @@
 /obj/item/food/carneburrito
 	name = "carne asada burrito"
 	desc = "The best burrito for meat lovers."
-	icon = 'icons/obj/food/mexican.dmi'
+	icon = '../assets/icons/obj/food/mexican.dmi'
 	icon_state = "carneburrito"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 2,
@@ -67,7 +67,7 @@
 /obj/item/food/fuegoburrito
 	name = "fuego plasma burrito"
 	desc = "A super spicy burrito."
-	icon = 'icons/obj/food/mexican.dmi'
+	icon = '../assets/icons/obj/food/mexican.dmi'
 	icon_state = "fuegoburrito"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 3,
@@ -84,7 +84,7 @@
 /obj/item/food/nachos
 	name = "nachos"
 	desc = "Chips from Space Mexico."
-	icon = 'icons/obj/food/mexican.dmi'
+	icon = '../assets/icons/obj/food/mexican.dmi'
 	icon_state = "nachos"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 6,
@@ -99,7 +99,7 @@
 /obj/item/food/cheesynachos
 	name = "cheesy nachos"
 	desc = "The delicious combination of nachos and melting cheese."
-	icon = 'icons/obj/food/mexican.dmi'
+	icon = '../assets/icons/obj/food/mexican.dmi'
 	icon_state = "cheesynachos"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 6,
@@ -115,7 +115,7 @@
 /obj/item/food/cubannachos
 	name = "Cuban nachos"
 	desc = "That's some dangerously spicy nachos."
-	icon = 'icons/obj/food/mexican.dmi'
+	icon = '../assets/icons/obj/food/mexican.dmi'
 	icon_state = "cubannachos"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 7,
@@ -131,7 +131,7 @@
 /obj/item/food/taco
 	name = "classic taco"
 	desc = "A traditional taco with meat, cheese, and lettuce."
-	icon = 'icons/obj/food/mexican.dmi'
+	icon = '../assets/icons/obj/food/mexican.dmi'
 	icon_state = "taco"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 2,
@@ -171,7 +171,7 @@
 /obj/item/food/enchiladas
 	name = "enchiladas"
 	desc = "Viva La Mexico!"
-	icon = 'icons/obj/food/mexican.dmi'
+	icon = '../assets/icons/obj/food/mexican.dmi'
 	icon_state = "enchiladas"
 	bite_consumption = 4
 	food_reagents = list(
@@ -207,7 +207,7 @@
 /obj/item/food/chipsandsalsa
 	name = "chips and salsa"
 	desc = "Some tortilla chips with a cup of zesty salsa. Highly addictive!"
-	icon = 'icons/obj/food/mexican.dmi'
+	icon = '../assets/icons/obj/food/mexican.dmi'
 	icon_state = "chipsandsalsa"
 	trash_type = /obj/item/reagent_containers/cup/bowl
 	food_reagents = list(
@@ -223,7 +223,7 @@
 /obj/item/food/classic_chimichanga
 	name = "classic chimichanga"
 	desc = "A deep-fried burrito packed with a generous amount of meat and cheese."
-	icon = 'icons/obj/food/mexican.dmi'
+	icon = '../assets/icons/obj/food/mexican.dmi'
 	icon_state = "classic_chimichanga"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 8,
@@ -239,7 +239,7 @@
 /obj/item/food/vegetarian_chimichanga
 	name = "vegetarian chimichanga"
 	desc = "A deep-fried burrito packed with a generous amount of baked vegetables, for the non-meat eaters."
-	icon = 'icons/obj/food/mexican.dmi'
+	icon = '../assets/icons/obj/food/mexican.dmi'
 	icon_state = "vegetarian_chimichanga"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 8,
@@ -253,7 +253,7 @@
 /obj/item/food/hard_taco_shell
 	name = "hard taco shell"
 	desc = "A hard taco shell, just waiting to be stuffed with ingredients. Use an ingredient on it to start making custom tacos!"
-	icon = 'icons/obj/food/mexican.dmi'
+	icon = '../assets/icons/obj/food/mexican.dmi'
 	icon_state = "hard_taco_shell"
 	food_reagents = list(/datum/reagent/consumable/nutriment = 2)
 	tastes = list("hard corn tortilla" = 1)
@@ -277,7 +277,7 @@
 /obj/item/food/classic_hard_shell_taco
 	name = "classic hard-shell taco"
 	desc = "A classically-made hard-shell taco, the most satisfying crunch in the galaxy."
-	icon = 'icons/obj/food/mexican.dmi'
+	icon = '../assets/icons/obj/food/mexican.dmi'
 	icon_state = "classic_hard_shell_taco"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 8,
@@ -293,7 +293,7 @@
 /obj/item/food/plain_hard_shell_taco
 	name = "plain hard-shell taco"
 	desc = "A hard-shell taco with just meat, for the picky eaters and children in us all."
-	icon = 'icons/obj/food/mexican.dmi'
+	icon = '../assets/icons/obj/food/mexican.dmi'
 	icon_state = "plain_hard_shell_taco"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 6,
@@ -309,7 +309,7 @@
 /obj/item/food/refried_beans
 	name = "refried beans"
 	desc = "A steaming bowl of delicious refried beans, a common staple in Mexican cuisine."
-	icon = 'icons/obj/food/mexican.dmi'
+	icon = '../assets/icons/obj/food/mexican.dmi'
 	icon_state = "refried_beans"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 6,
@@ -325,7 +325,7 @@
 /obj/item/food/spanish_rice
 	name = "spanish rice"
 	desc = "A bowl of delicious spanish rice, cooked in a tomato sauce which gives it the orange color."
-	icon = 'icons/obj/food/mexican.dmi'
+	icon = '../assets/icons/obj/food/mexican.dmi'
 	icon_state = "spanish_rice"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 6,
@@ -340,7 +340,7 @@
 /obj/item/food/pineapple_salsa
 	name = "pineapple salsa"
 	desc = "A not-so liquid salsa made of pineapples, tomatoes, onions, and chilis. Makes for delightfully contrasting flavors."
-	icon = 'icons/obj/food/mexican.dmi'
+	icon = '../assets/icons/obj/food/mexican.dmi'
 	icon_state = "pineapple_salsa"
 	trash_type = /obj/item/reagent_containers/cup/bowl
 	food_reagents = list(

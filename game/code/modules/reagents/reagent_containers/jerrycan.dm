@@ -40,9 +40,9 @@
 /obj/item/reagent_containers/cup/jerrycan
 	name = "plastic jerrycan"
 	desc = "A voluminous container made from the finest HDPE.\n\nNow with integrated Smart Cap™ technology to prevent expensive spills when handling industrial liquids."
-	icon = 'icons/obj/medical/chemical.dmi'
-	righthand_file = 'icons/mob/inhands/items/chemistry_righthand.dmi'
-	lefthand_file = 'icons/mob/inhands/items/chemistry_lefthand.dmi'
+	icon = '../assets/icons/obj/medical/chemical.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/chemistry_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/chemistry_lefthand.dmi'
 	icon_state = "jerrycan"
 	inhand_icon_state = "jerrycan"
 	base_icon_state = "jerrycan"

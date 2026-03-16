@@ -6,7 +6,7 @@
 	desc = "I wonder what they'll order..."
 	gender = NEUTER
 
-	icon = 'icons/mob/simple/tourists.dmi'
+	icon = '../assets/icons/mob/simple/tourists.dmi'
 	icon_state = "amerifat"
 	icon_living = "amerifat"
 

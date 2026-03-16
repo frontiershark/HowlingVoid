@@ -18,7 +18,7 @@
 /datum/action/cooldown/spell/farsight
 	name = "Farsight"
 	desc = "You can see further than normal."
-	button_icon = 'icons/mob/actions/actions_ecult.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_ecult.dmi'
 	button_icon_state = "eye"
 
 	school = SCHOOL_TRANSMUTATION

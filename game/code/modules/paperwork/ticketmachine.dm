@@ -3,7 +3,7 @@
 
 /obj/machinery/ticket_machine
 	name = "ticket machine"
-	icon = 'icons/obj/service/bureaucracy.dmi'
+	icon = '../assets/icons/obj/service/bureaucracy.dmi'
 	icon_state = "ticketmachine"
 	base_icon_state = "ticketmachine"
 	desc = "A marvel of bureaucratic engineering encased in an efficient plastic shell. It can be refilled with a hand labeler refill roll and linked to buttons with a multitool."
@@ -73,7 +73,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/ticket_machine, 32)
 /obj/item/wallframe/ticket_machine
 	name = "ticket machine frame"
 	desc = "An unmounted ticket machine. Attach it to a wall to use."
-	icon = 'icons/obj/service/bureaucracy.dmi'
+	icon = '../assets/icons/obj/service/bureaucracy.dmi'
 	icon_state = "ticketmachine_off"
 	result_path = /obj/machinery/ticket_machine
 	pixel_shift = 32
@@ -88,7 +88,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/ticket_machine, 32)
 	if(LAZYLEN(tickets))
 		current_ticket = tickets[1]
 		current_number++ //Increment the one we're serving.
-		playsound(src, 'sound/announcer/announcement/announce_dig.ogg', 50, FALSE)
+		playsound(src, '../assets/sound/announcer/announcement/announce_dig.ogg', 50, FALSE)
 		say("Now serving [current_ticket]!")
 		if(!(obj_flags & EMAGGED))
 			current_ticket.audible_message(span_notice("\the [current_ticket] vibrates!"), hearing_distance = SAMETILE_MESSAGE_RANGE)
@@ -214,7 +214,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/ticket_machine, 32)
 	if((user_ref in ticket_holders) && !(obj_flags & EMAGGED))
 		to_chat(user, span_warning("You already have a ticket!"))
 		return
-	playsound(src, 'sound/machines/terminal/terminal_insert_disc.ogg', 100, FALSE)
+	playsound(src, '../assets/sound/machines/terminal/terminal_insert_disc.ogg', 100, FALSE)
 	ticket_number++
 	to_chat(user, span_notice("You take a ticket from [src], looks like you're number [ticket_number] in queue..."))
 	var/obj/item/ticket_machine_ticket/theirticket = new (get_turf(src), ticket_number)
@@ -235,7 +235,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/ticket_machine, 32)
 /obj/item/ticket_machine_ticket
 	name = "\improper ticket"
 	desc = "A ticket which shows your place in the Head of Personnel's line. Made from Nanotrasen patented NanoPaper®. Though solid, its form seems to shimmer slightly. Feels (and burns) just like the real thing."
-	icon = 'icons/obj/service/bureaucracy.dmi'
+	icon = '../assets/icons/obj/service/bureaucracy.dmi'
 	icon_state = "ticket"
 	maptext_x = 7
 	maptext_y = 10

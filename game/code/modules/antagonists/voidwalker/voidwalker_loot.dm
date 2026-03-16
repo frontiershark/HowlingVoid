@@ -2,7 +2,7 @@
 /obj/item/clothing/head/helmet/skull/cosmic
 	name = "cosmic skull"
 	desc = "You can see and feel the surrounding space pulsing through it..."
-	icon = 'icons/obj/weapons/voidwalker_items.dmi'
+	icon = '../assets/icons/obj/weapons/voidwalker_items.dmi'
 	icon_state = "cosmic_skull_charged"
 
 	light_on = TRUE
@@ -37,13 +37,13 @@
 
 	if(starer.has_trauma_type(/datum/brain_trauma/voided/stable))
 		starer.put_in_hands(new /obj/item/void_eater(), TRUE, forced = TRUE)
-		playsound(starer, 'sound/effects/blob/blobattack.ogg', 60, TRUE)
+		playsound(starer, '../assets/sound/effects/blob/blobattack.ogg', 60, TRUE)
 	else
 		starer.cure_trauma_type(/datum/brain_trauma/voided) //this wouldn't make much sense to have anymore
 		starer.gain_trauma(/datum/brain_trauma/voided/stable)
 
 	to_chat(user, span_purple("And a whole world opens up to you."))
-	playsound(get_turf(user), 'sound/effects/curse/curse5.ogg', 60)
+	playsound(get_turf(user), '../assets/sound/effects/curse/curse5.ogg', 60)
 
 /**
  * An armblade that pops windows
@@ -51,20 +51,20 @@
 /obj/item/void_eater
 	name = "void eater" //as opposed to full eater
 	desc = "A deformed appendage, capable of shattering any glass and any flesh."
-	icon = 'icons/obj/weapons/voidwalker_items.dmi'
+	icon = '../assets/icons/obj/weapons/voidwalker_items.dmi'
 	icon_state = "tentacle"
 	inhand_icon_state = "tentacle"
 	icon_angle = 180
 	force = 25
 	armour_penetration = 35
-	lefthand_file = 'icons/mob/inhands/antag/voidwalker_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/antag/voidwalker_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/antag/voidwalker_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/antag/voidwalker_righthand.dmi'
 	blocks_emissive = EMISSIVE_BLOCK_NONE
 	item_flags = ABSTRACT | DROPDEL
 	resistance_flags = INDESTRUCTIBLE | ACID_PROOF | FIRE_PROOF | LAVA_PROOF | UNACIDABLE
 	w_class = WEIGHT_CLASS_HUGE
 	tool_behaviour = TOOL_MINING
-	hitsound = 'sound/items/weapons/bladeslice.ogg'
+	hitsound = '../assets/sound/items/weapons/bladeslice.ogg'
 	wound_bonus = -30
 	exposed_wound_bonus = 20
 

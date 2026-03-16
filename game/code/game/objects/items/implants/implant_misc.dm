@@ -72,7 +72,7 @@
 	var/radio_type = /obj/item/radio // NOVA EDIT ADDITION
 	var/radio_key
 	var/subspace_transmission = FALSE
-	icon = 'icons/obj/devices/voice.dmi'
+	icon = '../assets/icons/obj/devices/voice.dmi'
 	icon_state = "walkietalkie"
 
 	implant_info = "Automatically activates upon implantation. Provides radio transmission and reception capabilities."
@@ -114,7 +114,7 @@
 
 /obj/item/implant/radio/slime
 	name = "slime radio"
-	icon = 'icons/obj/medical/organs/organs.dmi'
+	icon = '../assets/icons/obj/medical/organs/organs.dmi'
 	icon_state = "adamantine_resonator"
 	radio_key = /obj/item/encryptionkey/headset_sci
 	subspace_transmission = TRUE

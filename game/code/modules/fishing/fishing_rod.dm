@@ -1,11 +1,11 @@
 /obj/item/fishing_rod
 	name = "fishing rod"
 	desc = "You can fish with this."
-	icon = 'icons/obj/fishing.dmi'
+	icon = '../assets/icons/obj/fishing.dmi'
 	icon_state = "fishing_rod"
 	icon_angle = -45
-	lefthand_file = 'icons/mob/inhands/equipment/fishing_rod_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/fishing_rod_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/fishing_rod_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/fishing_rod_righthand.dmi'
 	inhand_icon_state = "rod"
 	inhand_x_dimension = 64
 	inhand_y_dimension = 64
@@ -658,7 +658,7 @@
 			return
 
 	update_icon()
-	playsound(src, 'sound/items/click.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/click.ogg', 50, TRUE)
 
 ///assign an item to the given slot and its standard effects, while Exited() should handle unsetting the slot.
 /obj/item/fishing_rod/proc/set_slot(obj/item/equipment, slot)
@@ -695,7 +695,7 @@
 		SEND_SIGNAL(gone, COMSIG_ITEM_FISHING_ROD_UNSLOTTED, src, slot)
 
 /obj/item/fishing_rod/proc/get_frame(datum/fishing_challenge/challenge)
-	return mutable_appearance('icons/hud/fishing_hud.dmi', frame_state)
+	return mutable_appearance('../assets/icons/hud/fishing_hud.dmi', frame_state)
 
 ///Found in the fishing toolbox (the hook and line are separate items)
 /obj/item/fishing_rod/unslotted
@@ -784,7 +784,7 @@
 	inhand_icon_state = active ? "rod" : null // When inactive, there is no inhand icon_state.
 	if(user)
 		balloon_alert(user, active ? "extended" : "collapsed")
-	playsound(src, 'sound/items/weapons/batonextend.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/weapons/batonextend.ogg', 50, TRUE)
 	update_appearance()
 	QDEL_NULL(fishing_line)
 	return COMPONENT_NO_DEFAULT_MESSAGE
@@ -882,7 +882,7 @@
 
 /obj/projectile/fishing_cast
 	name = "fishing hook"
-	icon = 'icons/obj/fishing.dmi'
+	icon = '../assets/icons/obj/fishing.dmi'
 	icon_state = "hook"
 	damage = 0
 	range = 5

@@ -10,7 +10,7 @@
 /obj/item/documents
 	name = "secret documents"
 	desc = "\"Top Secret\" documents."
-	icon = 'icons/obj/service/bureaucracy.dmi'
+	icon = '../assets/icons/obj/service/bureaucracy.dmi'
 	icon_state = "docs_generic"
 	inhand_icon_state = "paper"
 	throwforce = 0

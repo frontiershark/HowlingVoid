@@ -6,7 +6,7 @@
 /obj/structure/mecha_wreckage
 	name = "exosuit wreckage"
 	desc = "Remains of some unfortunate mecha. Completely irreparable, but perhaps something can be salvaged."
-	icon = 'icons/mob/rideables/mecha.dmi'
+	icon = '../assets/icons/mob/rideables/mecha.dmi'
 	density = TRUE
 	anchored = FALSE
 	opacity = FALSE
@@ -34,7 +34,7 @@
 	AI.apply_damage(150, BURN) //Give the AI a bit of damage from the "shock" of being suddenly shut down
 	INVOKE_ASYNC(AI, TYPE_PROC_REF(/mob/living/silicon, death)) //The damage is not enough to kill the AI, but to be 'corrupted files' in need of repair.
 	AI.forceMove(src) //Put the dead AI inside the wreckage for recovery
-	add_overlay(mutable_appearance('icons/obj/weapons/guns/projectiles.dmi', "green_laser")) //Overlay for the recovery beacon
+	add_overlay(mutable_appearance('../assets/icons/obj/weapons/guns/projectiles.dmi', "green_laser")) //Overlay for the recovery beacon
 	AI.controlled_equipment = null
 	AI.remote_control = null
 
@@ -43,7 +43,7 @@
 		QDEL_NULL(AI)
 	QDEL_LIST(crowbar_salvage)
 	src.visible_message(span_danger("[src]'s superstructure folds in on itself, collapsing into a heap of unsalvageable scrap!"))
-	playsound(src, 'sound/effects/meteorimpact.ogg', 100, TRUE)
+	playsound(src, '../assets/sound/effects/meteorimpact.ogg', 100, TRUE)
 	for(var/mob/living/witness in range(2, src))
 		shake_camera(witness, 2, 1)
 	new /obj/effect/decal/cleanable/blood/gibs/robot_debris(get_turf(src))
@@ -229,7 +229,7 @@
 
 /obj/structure/mecha_wreckage/savannah_ivanov
 	name = "\improper Savannah-Ivanov wreckage"
-	icon = 'icons/mob/rideables/coop_mech.dmi'
+	icon = '../assets/icons/mob/rideables/coop_mech.dmi'
 	icon_state = "savannah_ivanov-broken"
 	welder_salvage = list(/obj/item/stack/sheet/mineral/silver, /obj/item/stack/sheet/iron, /obj/item/stack/rods)
 	parts = list(

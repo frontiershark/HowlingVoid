@@ -10,8 +10,8 @@
 	worn_icon_state = "mg34"
 	inhand_icon_state = "mg34"
 	fire_sound = 'modularhowling_void/modules/ported_content/ark_station/nri_stuff/sound/guns/fire/mg34_fire.ogg'
-	rack_sound = 'sound/items/weapons/gun/l6/l6_rack.ogg'
-	suppressed_sound = 'sound/items/weapons/gun/general/heavy_shot_suppressed.ogg'
+	rack_sound = '../assets/sound/items/weapons/gun/l6/l6_rack.ogg'
+	suppressed_sound = '../assets/sound/items/weapons/gun/general/heavy_shot_suppressed.ogg'
 	fire_sound_volume = 70
 	weapon_weight = WEAPON_HEAVY
 	slot_flags = ITEM_SLOT_BACK
@@ -43,7 +43,7 @@
 		return
 	cover_open = !cover_open
 	to_chat(user, span_notice("You [cover_open ? "open" : "close"] [src]'s cover."))
-	playsound(src, 'sound/items/weapons/gun/l6/l6_door.ogg', 60, TRUE)
+	playsound(src, '../assets/sound/items/weapons/gun/l6/l6_door.ogg', 60, TRUE)
 	update_appearance()
 	return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 

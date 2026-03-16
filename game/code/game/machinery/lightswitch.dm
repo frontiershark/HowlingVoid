@@ -1,7 +1,7 @@
 /// The light switch. Can have multiple per area.
 /obj/machinery/light_switch
 	name = "light switch"
-	icon = 'icons/obj/machines/wallmounts.dmi' //NOVA EDIT - ICON OVERRIDDEN IN AESTHETICS MODULE
+	icon = '../assets/icons/obj/machines/wallmounts.dmi' //NOVA EDIT - ICON OVERRIDDEN IN AESTHETICS MODULE
 	icon_state = "light-nopower"
 	base_icon_state = "light"
 	desc = "Make dark."
@@ -80,7 +80,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/light_switch, 26)
 	if(!tool.use_tool(src, user, 40, volume = 50))
 		return ITEM_INTERACT_BLOCKING
 	user.visible_message(span_notice("[user] unscrews [src]!"), span_notice("You detach [src] from the wall."))
-	playsound(src, 'sound/items/deconstruct.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/deconstruct.ogg', 50, TRUE)
 	deconstruct(TRUE)
 	return ITEM_INTERACT_SUCCESS
 
@@ -116,7 +116,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/light_switch, 26)
 /obj/item/wallframe/light_switch
 	name = "light switch"
 	desc = "An unmounted light switch. Attach it to a wall to use."
-	icon = 'icons/obj/machines/wallmounts.dmi'
+	icon = '../assets/icons/obj/machines/wallmounts.dmi'
 	icon_state = "light-nopower"
 	result_path = /obj/machinery/light_switch
 	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT)

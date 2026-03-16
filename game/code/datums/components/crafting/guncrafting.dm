@@ -14,7 +14,7 @@
 /obj/item/weaponcrafting/receiver
 	name = "modular receiver"
 	desc = "A prototype modular receiver and trigger assembly for a firearm."
-	icon = 'icons/obj/weapons/improvised.dmi'
+	icon = '../assets/icons/obj/weapons/improvised.dmi'
 	icon_state = "receiver"
 	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 5.5, /datum/material/cardboard = SHEET_MATERIAL_AMOUNT)
 
@@ -31,7 +31,7 @@
 	desc = "A classic rifle stock that doubles as a grip, roughly carved out of wood."
 	custom_materials = list(/datum/material/wood = SHEET_MATERIAL_AMOUNT * 8)
 	resistance_flags = FLAMMABLE
-	icon = 'icons/obj/weapons/improvised.dmi'
+	icon = '../assets/icons/obj/weapons/improvised.dmi'
 	icon_state = "riflestock"
 
 /obj/item/weaponcrafting/stock/create_slapcraft_component()
@@ -45,7 +45,7 @@
 /obj/item/weaponcrafting/giant_wrench
 	name = "Big Slappy parts kit"
 	desc = "Illegal parts to make a giant like wrench commonly known as a Big Slappy."
-	icon = 'icons/obj/weapons/improvised.dmi'
+	icon = '../assets/icons/obj/weapons/improvised.dmi'
 	icon_state = "weaponkit_gw"
 
 /obj/item/weaponcrafting/giant_wrench/create_slapcraft_component() // slappycraft
@@ -63,7 +63,7 @@
 /obj/item/weaponcrafting/gunkit // These don't get a slapcraft component, it's added to the gun - more intuitive player-facing to slap the kit onto the gun.
 	name = "generic gun parts kit"
 	desc = "It's an empty gun parts container! Why do you have this?"
-	icon = 'icons/obj/weapons/improvised.dmi'
+	icon = '../assets/icons/obj/weapons/improvised.dmi'
 	icon_state = "kitsuitcase"
 
 /obj/item/weaponcrafting/gunkit/nuclear

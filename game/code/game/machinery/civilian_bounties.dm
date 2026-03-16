@@ -76,11 +76,11 @@
 		return FALSE
 	if(!inserted_scan_id)
 		status_report = "Please insert your ID first."
-		playsound(loc, 'sound/machines/synth/synth_no.ogg', 30 , TRUE)
+		playsound(loc, '../assets/sound/machines/synth/synth_no.ogg', 30 , TRUE)
 		return FALSE
 	if(!inserted_scan_id.registered_account.civilian_bounty)
 		status_report = "Please accept a new civilian bounty first."
-		playsound(loc, 'sound/machines/synth/synth_no.ogg', 30 , TRUE)
+		playsound(loc, '../assets/sound/machines/synth/synth_no.ogg', 30 , TRUE)
 		return FALSE
 	status_report = "Civilian Bounty: "
 	var/obj/machinery/piratepad/civilian/pad = pad_ref?.resolve()
@@ -95,16 +95,16 @@
 				continue
 		if(inserted_scan_id.registered_account.civilian_bounty.applies_to(possible_shippable))
 			status_report += "Target Applicable."
-			playsound(loc, 'sound/machines/synth/synth_yes.ogg', 30 , TRUE)
+			playsound(loc, '../assets/sound/machines/synth/synth_yes.ogg', 30 , TRUE)
 			return
 	status_report += "Not Applicable."
-	playsound(loc, 'sound/machines/synth/synth_no.ogg', 30 , TRUE)
+	playsound(loc, '../assets/sound/machines/synth/synth_no.ogg', 30 , TRUE)
 
 /**
  * This fully rewrites base behavior in order to only check for bounty objects, and no other types of objects like pirate-pads do.
  */
 /obj/machinery/computer/piratepad_control/civilian/send()
-	playsound(loc, 'sound/machines/wewewew.ogg', 70, TRUE)
+	playsound(loc, '../assets/sound/machines/wewewew.ogg', 70, TRUE)
 	if(!sending)
 		return
 	var/datum/bank_account/id_account = inserted_scan_id?.registered_account
@@ -146,7 +146,7 @@
 	pad.visible_message(span_notice("[pad] activates!"))
 	flick(pad.sending_state,pad)
 	pad.icon_state = pad.idle_state
-	playsound(loc, 'sound/machines/synth/synth_yes.ogg', 30 , TRUE)
+	playsound(loc, '../assets/sound/machines/synth/synth_yes.ogg', 30 , TRUE)
 	sending = FALSE
 
 ///Here is where cargo bounties are added to the player's bank accounts, then adjusted and scaled into a civilian bounty.
@@ -267,7 +267,7 @@
 /obj/machinery/computer/piratepad_control/civilian/proc/pick_bounty(datum/bounty/choice)
 	var/datum/bank_account/id_account = inserted_scan_id?.registered_account
 	if(!id_account?.bounties?[choice])
-		playsound(loc, 'sound/machines/synth/synth_no.ogg', 40 , TRUE)
+		playsound(loc, '../assets/sound/machines/synth/synth_no.ogg', 40 , TRUE)
 		return
 	id_account.set_bounty(id_account.bounties[choice], inserted_scan_id)
 	id_account.bounties = null
@@ -345,13 +345,13 @@
 
 	if(target)
 		if(holder_item && inserting_item.insert_id(target))
-			playsound(src, 'sound/machines/terminal/terminal_insert_disc.ogg', 50, FALSE)
+			playsound(src, '../assets/sound/machines/terminal/terminal_insert_disc.ogg', 50, FALSE)
 		else
 			id_eject(user, target)
 
 	user.visible_message(span_notice("[user] inserts \the [card_to_insert] into \the [src]."),
 						span_notice("You insert \the [card_to_insert] into \the [src]."))
-	playsound(src, 'sound/machines/terminal/terminal_insert_disc.ogg', 50, FALSE)
+	playsound(src, '../assets/sound/machines/terminal/terminal_insert_disc.ogg', 50, FALSE)
 	ui_interact(user)
 	return TRUE
 
@@ -364,7 +364,7 @@
 		try_put_in_hand(target, user)
 		user.visible_message(span_notice("[user] gets \the [target] from \the [src]."), \
 							span_notice("You get \the [target] from \the [src]."))
-		playsound(src, 'sound/machines/terminal/terminal_insert_disc.ogg', 50, FALSE)
+		playsound(src, '../assets/sound/machines/terminal/terminal_insert_disc.ogg', 50, FALSE)
 		inserted_scan_id = null
 		return TRUE
 
@@ -372,7 +372,7 @@
 /obj/item/bounty_cube
 	name = "bounty cube"
 	desc = "A bundle of compressed hardlight data, containing a completed bounty. Sell this on the cargo shuttle to claim it!"
-	icon = 'icons/obj/economy.dmi'
+	icon = '../assets/icons/obj/economy.dmi'
 	icon_state = "bounty_cube"
 	///Value of the bounty that this bounty cube sells for.
 	var/bounty_value = 0
@@ -482,7 +482,7 @@
 /obj/item/civ_bounty_beacon
 	name = "civilian bounty beacon"
 	desc = "N.T. approved civilian bounty beacon, toss it down and you will have a bounty pad and computer delivered to you."
-	icon = 'icons/obj/machines/floor.dmi'
+	icon = '../assets/icons/obj/machines/floor.dmi'
 	icon_state = "floor_beacon"
 	var/uses = 2
 

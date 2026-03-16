@@ -34,7 +34,7 @@
 		if(!user.transferItemToLoc(cell, src))
 			return
 
-		playsound(loc, 'sound/machines/click.ogg', 50, 1)
+		playsound(loc, '../assets/sound/machines/click.ogg', 50, 1)
 		to_chat(user, span_notice("You install [cell]."))
 		ammo_type += new cell.ammo_type(src)
 		installedcells += cell

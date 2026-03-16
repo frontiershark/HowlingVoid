@@ -2,7 +2,7 @@
 /datum/grand_finale/midas
 	name = "Transformation"
 	desc = "The ultimate use of your gathered power! Turn their precious station into something much MORE precious, materially speaking!"
-	icon = 'icons/obj/stack_objects.dmi'
+	icon = '../assets/icons/obj/stack_objects.dmi'
 	icon_state = "sheet-gold_2"
 	glow_colour = "#dbdd4c48"
 	var/static/list/permitted_transforms = list( // Non-dangerous only

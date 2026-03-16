@@ -1,6 +1,6 @@
 
 /particles/unusual_effect
-	icon = 'icons/effects/particles/pollen.dmi'
+	icon = '../assets/icons/effects/particles/pollen.dmi'
 	icon_state = "pollen"
 	width = 100
 	height = 100

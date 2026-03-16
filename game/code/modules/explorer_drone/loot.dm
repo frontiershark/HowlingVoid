@@ -112,14 +112,14 @@ GLOBAL_LIST_INIT(adventure_loot_generator_index,generate_generator_index())
 /obj/item/antique
 	name = "antique"
 	desc = "Valuable and completely incomprehensible."
-	icon = 'icons/obj/exploration.dmi'
+	icon = '../assets/icons/obj/exploration.dmi'
 	icon_state = "antique"
 
 /// Supply pack unlocker chip
 /obj/item/trade_chip
 	name = "trade contract chip"
 	desc = "Uses the station's cargo network to contact a black market supplier, allowing the purchase of a new crate type at cargo console."
-	icon = 'icons/obj/exploration.dmi'
+	icon = '../assets/icons/obj/exploration.dmi'
 	icon_state = "trade_chip"
 	/// Supply pack type enabled by this chip
 	var/unlocked_pack_type
@@ -145,11 +145,11 @@ GLOBAL_LIST_INIT(adventure_loot_generator_index,generate_generator_index())
 /obj/item/firelance
 	name = "fire lance"
 	desc = "Melts everything in front of you. Takes a while to start and operate."
-	icon = 'icons/obj/exploration.dmi'
+	icon = '../assets/icons/obj/exploration.dmi'
 	icon_state = "firelance"
 	inhand_icon_state = "firelance"
-	righthand_file = 'icons/mob/inhands/items/firelance_righthand.dmi'
-	lefthand_file = 'icons/mob/inhands/items/firelance_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/firelance_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/firelance_lefthand.dmi'
 	var/windup_time = 10 SECONDS
 	var/melt_range = 3
 	var/obj/item/stock_parts/power_store/cell

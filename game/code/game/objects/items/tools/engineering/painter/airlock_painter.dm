@@ -2,7 +2,7 @@
 	name = "airlock painter"
 	desc = "An advanced autopainter preprogrammed with several paintjobs for airlocks. Use it on an airlock during or after construction to change the paintjob."
 	desc_controls = "Alt-Click to remove the ink cartridge."
-	icon = 'icons/obj/devices/tool.dmi'
+	icon = '../assets/icons/obj/devices/tool.dmi'
 	icon_state = "paint_sprayer"
 	inhand_icon_state = "paint_sprayer"
 	worn_icon_state = "painter"
@@ -13,7 +13,7 @@
 	obj_flags = CONDUCTS_ELECTRICITY
 	item_flags = NOBLUDGEON
 	slot_flags = ITEM_SLOT_BELT
-	usesound = 'sound/effects/spray2.ogg'
+	usesound = '../assets/sound/effects/spray2.ogg'
 
 	/// The ink cartridge to pull charges from.
 	var/obj/item/toner/ink = null
@@ -52,7 +52,7 @@
 /obj/item/airlock_painter/proc/use_paint(mob/user)
 	if(can_use(user))
 		ink.charges--
-		playsound(src.loc, 'sound/effects/spray2.ogg', 50, TRUE)
+		playsound(src.loc, '../assets/sound/effects/spray2.ogg', 50, TRUE)
 		return TRUE
 	else
 		return FALSE
@@ -101,7 +101,7 @@
 		// TODO maybe add some colorful vomit?
 
 		user.visible_message(span_suicide("[user] vomits out [user.p_their()] [L]!"))
-		playsound(user.loc, 'sound/effects/splat.ogg', 50, TRUE)
+		playsound(user.loc, '../assets/sound/effects/splat.ogg', 50, TRUE)
 
 		L.forceMove(T)
 
@@ -140,7 +140,7 @@
 			return
 		to_chat(user, span_notice("You install [W] into [src]."))
 		ink = W
-		playsound(src.loc, 'sound/machines/click.ogg', 50, TRUE)
+		playsound(src.loc, '../assets/sound/machines/click.ogg', 50, TRUE)
 	else
 		return ..()
 
@@ -148,7 +148,7 @@
 	if(!ink)
 		return CLICK_ACTION_BLOCKING
 
-	playsound(src.loc, 'sound/machines/click.ogg', 50, TRUE)
+	playsound(src.loc, '../assets/sound/machines/click.ogg', 50, TRUE)
 	ink.forceMove(user.drop_location())
 	user.put_in_hands(ink)
 	to_chat(user, span_notice("You remove [ink] from [src]."))

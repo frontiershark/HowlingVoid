@@ -27,7 +27,7 @@
 	for (var/mob/living/carbon/human/check_human as anything in human_mobs)
 		if (!IS_HERETIC(check_human) && !prob(5)) // Throw in some false positives
 			continue
-		var/image/invisible_man = image('icons/blanks/32x32.dmi', check_human, "nothing")
+		var/image/invisible_man = image('../assets/icons/blanks/32x32.dmi', check_human, "nothing")
 		invisible_man.override = TRUE
 		LAZYADD(hallucinations, invisible_man)
 
@@ -42,7 +42,7 @@
 	LAZYNULL(hallucinations)
 
 /obj/item/organ/eyes/corrupt/penlight_examine(mob/living/viewer, obj/item/examtool)
-	viewer.playsound_local(src, 'sound/effects/magic/magic_block_mind.ogg', 75, FALSE)
+	viewer.playsound_local(src, '../assets/sound/effects/magic/magic_block_mind.ogg', 75, FALSE)
 	if(!viewer.is_blind() && !IS_HERETIC_OR_MONSTER(viewer))
 		to_chat(viewer, span_danger("Your eyes sizzle in their sockets as eldritch energies assault them!"))
 		viewer.emote("scream")
@@ -214,7 +214,7 @@
 	COOLDOWN_START(src, hand_cooldown, rand(6 SECONDS, 45 SECONDS)) // Wide variance to put you off guard
 
 /obj/item/organ/heart/corrupt/hear_beat_noise(mob/living/hearer)
-	hearer.playsound_local(src, 'sound/effects/magic/hereticknock.ogg', 75, FALSE)
+	hearer.playsound_local(src, '../assets/sound/effects/magic/hereticknock.ogg', 75, FALSE)
 	if(!IS_HERETIC_OR_MONSTER(hearer))
 		hearer.emote("scream")
 		hearer.add_mood_event("gates_of_mansus", /datum/mood_event/gates_of_mansus)
@@ -259,7 +259,7 @@
 	our_turf.assume_air(mix_to_spawn)
 
 /obj/item/organ/lungs/corrupt/hear_breath_noise(mob/living/hearer)
-	hearer.playsound_local(src, 'sound/effects/magic/voidblink.ogg', 75, FALSE)
+	hearer.playsound_local(src, '../assets/sound/effects/magic/voidblink.ogg', 75, FALSE)
 	if(!IS_HERETIC_OR_MONSTER(hearer))
 		hearer.adjust_timed_status_effect(15 SECONDS, /datum/status_effect/speech/slurring/heretic)
 		hearer.emote("scream")

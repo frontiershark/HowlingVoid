@@ -48,7 +48,7 @@
 	if (!gibbed && length(contents))
 		var/turf/drop_turf = drop_location()
 		if (istype(drop_turf))
-			playsound(drop_turf, 'sound/effects/splat.ogg', 50, TRUE)
+			playsound(drop_turf, '../assets/sound/effects/splat.ogg', 50, TRUE)
 			drop_turf.add_vomit_floor(src)
 	return ..()
 

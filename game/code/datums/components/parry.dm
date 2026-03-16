@@ -118,7 +118,7 @@
 	if (!isnull(parry_callback))
 		parry_callback.Invoke(user)
 
-	user.playsound_local(source.loc, 'sound/effects/parry.ogg', 50, TRUE)
+	user.playsound_local(source.loc, '../assets/sound/effects/parry.ogg', 50, TRUE)
 	user.overlay_fullscreen("projectile_parry", /atom/movable/screen/fullscreen/crit/projectile_parry, 2)
 	addtimer(CALLBACK(user, TYPE_PROC_REF(/mob, clear_fullscreen), "projectile_parry"), 0.25 SECONDS)
 	return PROJECTILE_INTERRUPT_HIT_PHASE

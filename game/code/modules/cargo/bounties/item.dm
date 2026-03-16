@@ -45,7 +45,7 @@
 /obj/item/bounty_voucher
 	name = "bounty voucher"
 	desc = "A certificate for ONE FREE BOUNTY of your choice! Wow!"
-	icon = 'icons/obj/service/bureaucracy.dmi'
+	icon = '../assets/icons/obj/service/bureaucracy.dmi'
 	icon_state = "paperslip_words"
 
 /obj/item/bounty_voucher/attack_self(mob/user, modifiers)
@@ -60,5 +60,5 @@
 	var/datum/bounty/new_chore = text2path("[choice]")
 	id.registered_account.set_bounty(new new_chore, id)
 	balloon_alert(user, "new bounty acquired!")
-	playsound(src, 'sound/effects/coin2.ogg', 30, TRUE)
+	playsound(src, '../assets/sound/effects/coin2.ogg', 30, TRUE)
 	qdel(src)

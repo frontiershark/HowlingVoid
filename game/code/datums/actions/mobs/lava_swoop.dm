@@ -3,7 +3,7 @@
 
 /datum/action/cooldown/mob_cooldown/lava_swoop
 	name = "Lava Swoop"
-	button_icon = 'icons/effects/effects.dmi'
+	button_icon = '../assets/icons/effects/effects.dmi'
 	button_icon_state = "lavastaff_warn"
 	desc = "Allows you to chase a target while raining lava down."
 	cooldown_time = 4 SECONDS
@@ -95,7 +95,7 @@
 	animate(owner, alpha = 255, transform = oldtransform, descentTime)
 	SLEEP_CHECK_DEATH(descentTime, owner)
 	owner.mouse_opacity = initial(owner.mouse_opacity)
-	playsound(owner.loc, 'sound/effects/meteorimpact.ogg', 200, TRUE)
+	playsound(owner.loc, '../assets/sound/effects/meteorimpact.ogg', 200, TRUE)
 	for(var/mob/living/victim in orange(1, owner) - owner)
 		victim.adjust_brute_loss(75)
 		if(!QDELETED(victim)) // Some mobs are deleted on death
@@ -191,7 +191,7 @@
 /obj/effect/temp_visual/dragon_swoop
 	name = "certain death"
 	desc = "Don't just stand there, move!"
-	icon = 'icons/effects/96x96.dmi'
+	icon = '../assets/icons/effects/96x96.dmi'
 	icon_state = "landing"
 	layer = BELOW_MOB_LAYER
 	plane = GAME_PLANE
@@ -201,7 +201,7 @@
 	duration = 10
 
 /obj/effect/temp_visual/dragon_flight
-	icon = 'icons/mob/simple/lavaland/96x96megafauna.dmi'
+	icon = '../assets/icons/mob/simple/lavaland/96x96megafauna.dmi'
 	icon_state = "dragon"
 	layer = ABOVE_ALL_MOB_LAYER
 	pixel_x = -32

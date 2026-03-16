@@ -63,7 +63,7 @@
 	if (steps_travelled < steps_to_hatch)
 		return
 	visible_message(span_boldnotice("[src] splits and unfurls into a baby Watcher!"))
-	playsound(new_loc, 'sound/effects/splat.ogg', 50, TRUE)
+	playsound(new_loc, '../assets/sound/effects/splat.ogg', 50, TRUE)
 	new /obj/effect/decal/cleanable/greenglow(new_loc)
 	new /obj/item/watcher_hatchling(new_loc)
 	qdel(src)
@@ -93,7 +93,7 @@
 /obj/item/watcher_hatchling
 	name = "watcher hatchling"
 	desc = "A newly born watcher, apparently free of the Necropolis' corruption. Perhaps one of the last."
-	icon = 'icons/mob/simple/lavaland/lavaland_monsters.dmi'
+	icon = '../assets/icons/mob/simple/lavaland/lavaland_monsters.dmi'
 	icon_state = "watcher_baby"
 	w_class = WEIGHT_CLASS_SMALL
 	/// The effect we create when out and about
@@ -140,7 +140,7 @@
 /// Orbiting visual which shoots at mining mobs
 /obj/effect/watcher_orbiter
 	name = "watcher hatchling"
-	icon = 'icons/mob/simple/lavaland/lavaland_monsters.dmi'
+	icon = '../assets/icons/mob/simple/lavaland/lavaland_monsters.dmi'
 	icon_state = "watcher_baby"
 	layer = EDGED_TURF_LAYER // Don't render under lightbulbs
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
@@ -153,7 +153,7 @@
 	/// Type of projectile we fire
 	var/projectile_type = /obj/projectile/baby_watcher_blast
 	/// Sound to make when we shoot
-	var/projectile_sound = 'sound/items/weapons/pierce.ogg'
+	var/projectile_sound = '../assets/sound/items/weapons/pierce.ogg'
 	/// Time between taking potshots at goliaths
 	var/fire_delay = 5 SECONDS
 	/// How much faster do we shoot when avenging our parent?

@@ -9,7 +9,7 @@
 	w_class = WEIGHT_CLASS_TINY
 	attack_verb_simple = list("cut", "stabbed", "chebbed")
 	sharpness = SHARP_EDGED
-	hitsound = 'sound/items/weapons/bladeslice.ogg'
+	hitsound = '../assets/sound/items/weapons/bladeslice.ogg'
 	wound_bonus = 10
 	exposed_wound_bonus = 15
 	tool_behaviour = TOOL_KNIFE
@@ -19,7 +19,7 @@
 /obj/item/straight_razor/proc/shave(mob/living/carbon/human/target_human)
 	target_human.facial_hairstyle = "Shaved"
 	target_human.update_body_parts()
-	playsound(loc, 'sound/items/unsheath.ogg', 20, TRUE)
+	playsound(loc, '../assets/sound/items/unsheath.ogg', 20, TRUE)
 
 /obj/item/straight_razor/attack(mob/attacked_mob, mob/living/user)
 	if(ishuman(attacked_mob))

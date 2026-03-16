@@ -12,20 +12,20 @@
 /obj/item/storage/backpack
 	name = "backpack"
 	desc = "You wear this on your back and put items into it."
-	icon = 'icons/obj/storage/backpack.dmi'
-	worn_icon = 'icons/mob/clothing/back/backpack.dmi'
+	icon = '../assets/icons/obj/storage/backpack.dmi'
+	worn_icon = '../assets/icons/mob/clothing/back/backpack.dmi'
 	icon_state = "backpack"
 	inhand_icon_state = "backpack"
-	lefthand_file = 'icons/mob/inhands/equipment/backpack_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/backpack_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/backpack_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/backpack_righthand.dmi'
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BACK //ERROOOOO
 	resistance_flags = NONE
 	max_integrity = 300
 	storage_type = /datum/storage/backpack
-	pickup_sound = 'sound/items/handling/backpack/backpack_pickup1.ogg'
-	drop_sound = 'sound/items/handling/backpack/backpack_drop1.ogg'
-	equip_sound = 'sound/items/equip/backpack_equip.ogg'
+	pickup_sound = '../assets/sound/items/handling/backpack/backpack_pickup1.ogg'
+	drop_sound = '../assets/sound/items/handling/backpack/backpack_drop1.ogg'
+	equip_sound = '../assets/sound/items/equip/backpack_equip.ogg'
 	sound_vary = TRUE
 
 /obj/item/storage/backpack/Initialize(mapload)
@@ -39,12 +39,12 @@
 /obj/item/bag_of_holding_inert
 	name = "inert bag of holding"
 	desc = "What is currently a just an unwieldy block of metal with a slot ready to accept a bluespace anomaly core."
-	icon = 'icons/obj/storage/backpack.dmi'
-	worn_icon = 'icons/mob/clothing/back/backpack.dmi'
+	icon = '../assets/icons/obj/storage/backpack.dmi'
+	worn_icon = '../assets/icons/mob/clothing/back/backpack.dmi'
 	icon_state = "bag_of_holding-inert"
 	inhand_icon_state = "brokenpack"
-	lefthand_file = 'icons/mob/inhands/equipment/backpack_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/backpack_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/backpack_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/backpack_righthand.dmi'
 	w_class = WEIGHT_CLASS_BULKY
 	resistance_flags = FIRE_PROOF
 	item_flags = NO_MAT_REDEMPTION
@@ -242,8 +242,8 @@
 /obj/item/storage/backpack/saddlepack
 	name = "saddlepack"
 	desc = "A backpack designed to be saddled on a mount or carried on your back, and switch between the two on the fly. It's quite spacious, at the cost of making you feel like a literal pack mule."
-	icon = 'icons/obj/storage/ethereal.dmi'
-	worn_icon = 'icons/mob/clothing/back/ethereal.dmi'
+	icon = '../assets/icons/obj/storage/ethereal.dmi'
+	worn_icon = '../assets/icons/mob/clothing/back/ethereal.dmi'
 	icon_state = "saddlepack"
 	storage_type = /datum/storage/backpack/saddle
 
@@ -264,7 +264,7 @@
 	attack_verb_simple = list("MEAT", "MEAT MEAT")
 	custom_materials = list(/datum/material/meat = SHEET_MATERIAL_AMOUNT * 15) // MEAT
 	///Sounds used in the squeak component
-	var/list/meat_sounds = list('sound/effects/blob/blobattack.ogg' = 1)
+	var/list/meat_sounds = list('../assets/sound/effects/blob/blobattack.ogg' = 1)
 	///Reagents added to the edible component on top of the meat material, ingested when you EAT the MEAT
 	var/list/meat_reagents = list(
 		/datum/reagent/consumable/nutriment/vitamin = 15,
@@ -414,10 +414,10 @@
 	desc = "A trendy looking messenger bag; sometimes known as a courier bag. Fashionable and portable."
 	icon_state = "messenger"
 	inhand_icon_state = "messenger"
-	icon = 'icons/obj/storage/backpack.dmi'
-	worn_icon = 'icons/mob/clothing/back/backpack.dmi'
-	lefthand_file = 'icons/mob/inhands/equipment/backpack_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/backpack_righthand.dmi'
+	icon = '../assets/icons/obj/storage/backpack.dmi'
+	worn_icon = '../assets/icons/mob/clothing/back/backpack.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/backpack_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/backpack_righthand.dmi'
 
 /obj/item/storage/backpack/messenger/eng
 	name = "industrial messenger bag"

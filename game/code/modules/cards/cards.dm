@@ -52,7 +52,7 @@
 		card.transform = Matrix
 		card.update_appearance()
 
-	playsound(src, 'sound/items/cards/cardshuffle.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/cards/cardshuffle.ogg', 50, TRUE)
 
 	if(istype(src, /obj/item/toy/cards/cardhand))
 		qdel(src)
@@ -135,7 +135,7 @@
 	cards -= card
 
 	update_appearance()
-	playsound(src, 'sound/items/cards/cardflip.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/cards/cardflip.ogg', 50, TRUE)
 	return card
 
 /// Picks what card the user draws from the deck

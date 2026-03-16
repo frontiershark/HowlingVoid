@@ -3,7 +3,7 @@
 /mob/living/basic/bot/cleanbot
 	name = "\improper Cleanbot"
 	desc = "A little cleaning robot, he looks so excited!"
-	icon = 'icons/mob/silicon/aibots.dmi'
+	icon = '../assets/icons/mob/silicon/aibots.dmi'
 	icon_state = "cleanbot0"
 	health = 25
 	maxHealth = 25
@@ -329,7 +329,7 @@
 		return NONE
 
 	visible_message(span_danger("[src] sprays hydrofluoric acid at [target]!"))
-	playsound(src, 'sound/effects/spray2.ogg', 50, TRUE, -6)
+	playsound(src, '../assets/sound/effects/spray2.ogg', 50, TRUE, -6)
 	target.acid_act(75, 10)
 	return COMPONENT_CANCEL_ATTACK_CHAIN
 

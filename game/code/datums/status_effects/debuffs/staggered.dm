@@ -73,7 +73,7 @@
 		COMSIG_LIVING_STATUS_IMMOBILIZE), PROC_REF(clear_daze)
 	)
 	ADD_TRAIT(owner, TRAIT_DAZED, TRAIT_STATUS_EFFECT(id))
-	dazed_overlay = mutable_appearance(icon = 'icons/effects/effects.dmi', icon_state = "dazed")
+	dazed_overlay = mutable_appearance(icon = '../assets/icons/effects/effects.dmi', icon_state = "dazed")
 	owner.add_overlay(dazed_overlay)
 	return TRUE
 

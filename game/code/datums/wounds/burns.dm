@@ -7,7 +7,7 @@
 	name = "Burn Wound"
 	undiagnosed_name = "Burns"
 	a_or_from = "from"
-	sound_effect = 'sound/effects/wounds/sizzle1.ogg'
+	sound_effect = '../assets/sound/effects/wounds/sizzle1.ogg'
 
 /datum/wound/burn/flesh
 	name = "Burn (Flesh) Wound"
@@ -349,7 +349,7 @@
 	occur_text = "vaporizes as flesh, bone, and fat melt together in a horrifying mess"
 	severity = WOUND_SEVERITY_CRITICAL
 	damage_multiplier_penalty = 1.3
-	sound_effect = 'sound/effects/wounds/sizzle2.ogg'
+	sound_effect = '../assets/sound/effects/wounds/sizzle2.ogg'
 	threshold_penalty = 25
 	status_effect_type = /datum/status_effect/wound/burn/flesh/critical
 	treatable_by = list(/obj/item/flashlight/pen/paramedic)

@@ -3,7 +3,7 @@
 /obj/item/sparkler
 	name = "sparkler"
 	desc = "A little stick coated with metal powder and barium nitrate, burns with a pleasing sparkle."
-	icon = 'icons/obj/holiday/holiday_misc.dmi'
+	icon = '../assets/icons/obj/holiday/holiday_misc.dmi'
 	icon_state = "sparkler"
 	w_class = WEIGHT_CLASS_TINY
 	heat = 1000
@@ -29,14 +29,14 @@
 	lit = TRUE
 	icon_state = "sparkler_on"
 	force = 6
-	hitsound = 'sound/items/tools/welder.ogg'
+	hitsound = '../assets/sound/items/tools/welder.ogg'
 	name = "lit [initial(name)]"
 	attack_verb_continuous = list("burns")
 	attack_verb_simple = list("burn")
 	set_light(l_range = 2, l_power = 2)
 	damtype = BURN
 	START_PROCESSING(SSobj, src)
-	playsound(src, 'sound/effects/fuse.ogg', 20, TRUE)
+	playsound(src, '../assets/sound/effects/fuse.ogg', 20, TRUE)
 	update_appearance()
 
 /obj/item/sparkler/process(seconds_per_tick)
@@ -62,10 +62,10 @@
 /obj/item/grenade/firecracker
 	name = "large firecracker"
 	desc = "Outlawed in most of the sector. Doubles as an excellent finger remover."
-	icon = 'icons/obj/holiday/holiday_misc.dmi'
+	icon = '../assets/icons/obj/holiday/holiday_misc.dmi'
 	icon_state = "firecracker"
-	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/devices_righthand.dmi'
 	w_class = WEIGHT_CLASS_SMALL
 	inhand_icon_state = "flare"
 	throw_speed = 3
@@ -92,7 +92,7 @@
 	if(det_time)
 		det_time -= 10
 		to_chat(user, span_notice("You shorten the fuse of [src] with [item]."))
-		playsound(src, 'sound/items/tools/wirecutter.ogg', 20, TRUE)
+		playsound(src, '../assets/sound/items/tools/wirecutter.ogg', 20, TRUE)
 		icon_state = initial(icon_state) + "_[det_time]"
 		update_appearance()
 	else
@@ -104,7 +104,7 @@
 		add_fingerprint(user)
 		if(msg)
 			to_chat(user, span_warning("You prime [src]! [capitalize(DisplayTimeText(det_time))]!"))
-	playsound(src, 'sound/effects/fuse.ogg', volume, TRUE)
+	playsound(src, '../assets/sound/effects/fuse.ogg', volume, TRUE)
 	active = TRUE
 	icon_state = initial(icon_state) + "_active"
 	addtimer(CALLBACK(src, PROC_REF(detonate)), isnull(delayoverride)? det_time : delayoverride)

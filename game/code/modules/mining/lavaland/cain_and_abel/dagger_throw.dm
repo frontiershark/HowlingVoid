@@ -32,12 +32,12 @@
 
 	var/list/throw_settings = throw_options[throw_mode]
 	COOLDOWN_START(src, throw_cooldown, throw_settings["cooldown"])
-	var/atom/dagger = user.fire_projectile(throw_settings["projectile"], target, 'sound/items/weapons/fwoosh.ogg', user)
+	var/atom/dagger = user.fire_projectile(throw_settings["projectile"], target, '../assets/sound/items/weapons/fwoosh.ogg', user)
 	if(isnull(dagger))
 		return
 
 	set_dagger_icon(thrown = TRUE) //when we throw a dagger, we'll only be holding 1
-	user.Beam(dagger, icon_state = "chain", icon = 'icons/obj/mining_zones/artefacts.dmi', maxdistance = 9, layer = BELOW_MOB_LAYER)
+	user.Beam(dagger, icon_state = "chain", icon = '../assets/icons/obj/mining_zones/artefacts.dmi', maxdistance = 9, layer = BELOW_MOB_LAYER)
 	RegisterSignal(dagger, COMSIG_QDELETING, PROC_REF(reset_dagger_icon))
 	RegisterSignal(dagger, COMSIG_PROJECTILE_SELF_ON_HIT, PROC_REF(on_dagger_hit))
 

@@ -13,7 +13,7 @@
 	/// If true, command will not appear in radial menu and can only be accessed through speech
 	var/hidden = FALSE
 	/// Icon to display in radial menu
-	var/icon/radial_icon = 'icons/hud/radial_pets.dmi'
+	var/icon/radial_icon = '../assets/icons/hud/radial_pets.dmi'
 	/// Icon state to display in radial menu
 	var/radial_icon_state
 	/// Speech strings to listen out for
@@ -167,7 +167,7 @@
 		commander.manual_emote(manual_emote_text)
 		return
 	RegisterSignal(commander, COMSIG_MOB_CLICKON, PROC_REF(click_on_target))
-	commander.client?.mouse_override_icon = 'icons/effects/mouse_pointers/pet_paw.dmi'
+	commander.client?.mouse_override_icon = '../assets/icons/effects/mouse_pointers/pet_paw.dmi'
 	commander.update_mouse_pointer()
 
 /datum/pet_command/proc/click_on_target(mob/living/source, atom/target, list/modifiers)

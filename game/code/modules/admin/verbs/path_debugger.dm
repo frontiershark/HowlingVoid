@@ -116,13 +116,13 @@ GLOBAL_DATUM_INIT(pathfind_dude, /obj/pathfind_guy, new())
 	return turf_images
 
 /datum/action/innate/path_debug/proc/render_turf(turf/draw, direction)
-	var/image/arrow = image('icons/turf/debug.dmi', draw, "arrow", PATH_ARROW_DEBUG_LAYER, direction)
+	var/image/arrow = image('../assets/icons/turf/debug.dmi', draw, "arrow", PATH_ARROW_DEBUG_LAYER, direction)
 	SET_PLANE_EXPLICIT(arrow, BALLOON_CHAT_PLANE, draw)
 	return arrow
 
 /datum/action/innate/path_debug/jps
 	name = "JPS Test"
-	button_icon = 'icons/turf/debug.dmi'
+	button_icon = '../assets/icons/turf/debug.dmi'
 	button_icon_state = "jps"
 
 	// Mirror vars for jps calls
@@ -172,11 +172,11 @@ GLOBAL_DATUM_INIT(pathfind_dude, /obj/pathfind_guy, new())
 /datum/action/innate/path_debug/jps/build_visuals()
 	. = ..()
 	if(source_turf)
-		var/image/start = image('icons/turf/debug.dmi', source_turf, "start", PATH_DEBUG_LAYER)
+		var/image/start = image('../assets/icons/turf/debug.dmi', source_turf, "start", PATH_DEBUG_LAYER)
 		SET_PLANE_EXPLICIT(start, BALLOON_CHAT_PLANE, source_turf)
 		display_images += start
 	if(target_turf)
-		var/image/end = image('icons/turf/debug.dmi', target_turf, "end", PATH_DEBUG_LAYER)
+		var/image/end = image('../assets/icons/turf/debug.dmi', target_turf, "end", PATH_DEBUG_LAYER)
 		SET_PLANE_EXPLICIT(end, BALLOON_CHAT_PLANE, target_turf)
 		display_images += end
 
@@ -192,7 +192,7 @@ GLOBAL_DATUM_INIT(pathfind_dude, /obj/pathfind_guy, new())
 
 /datum/action/innate/path_debug/sssp
 	name = "Pathmap Test"
-	button_icon = 'icons/turf/debug.dmi'
+	button_icon = '../assets/icons/turf/debug.dmi'
 	button_icon_state = "sssp"
 
 	// Mirror vars for sssp calls
@@ -234,12 +234,12 @@ GLOBAL_DATUM_INIT(pathfind_dude, /obj/pathfind_guy, new())
 /datum/action/innate/path_debug/sssp/build_visuals()
 	. = ..()
 	if(source_turf)
-		var/image/start = image('icons/turf/debug.dmi', source_turf, "start", PATH_DEBUG_LAYER)
+		var/image/start = image('../assets/icons/turf/debug.dmi', source_turf, "start", PATH_DEBUG_LAYER)
 		SET_PLANE_EXPLICIT(start, BALLOON_CHAT_PLANE, source_turf)
 		display_images += start
 
 	if(target_turf)
-		var/image/end = image('icons/turf/debug.dmi', target_turf, "end", PATH_DEBUG_LAYER)
+		var/image/end = image('../assets/icons/turf/debug.dmi', target_turf, "end", PATH_DEBUG_LAYER)
 		SET_PLANE_EXPLICIT(end, BALLOON_CHAT_PLANE, target_turf)
 		display_images += end
 		if(shown_map)

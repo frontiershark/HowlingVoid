@@ -5,7 +5,7 @@
 /turf/closed/indestructible/titanium
 	name = "wall"
 	desc = "A light-weight titanium wall used in shuttles."
-	icon = 'icons/turf/walls/shuttle_wall.dmi'
+	icon = '../assets/icons/turf/walls/shuttle_wall.dmi'
 	icon_state = "shuttle_wall-0"
 	base_icon_state = "shuttle_wall"
 	flags_1 = CAN_BE_DIRTY_1
@@ -15,7 +15,7 @@
 	canSmoothWith = SMOOTH_GROUP_SHUTTLE_PARTS + SMOOTH_GROUP_AIRLOCK + SMOOTH_GROUP_TITANIUM_WALLS
 
 /turf/closed/indestructible/titanium/nodiagonal
-	icon = MAP_SWITCH('icons/turf/walls/shuttle_wall.dmi', 'icons/turf/walls/misc_wall.dmi')
+	icon = MAP_SWITCH('../assets/icons/turf/walls/shuttle_wall.dmi', '../assets/icons/turf/walls/misc_wall.dmi')
 	icon_state = MAP_SWITCH("shuttle_wall-0", "shuttle_nd")
 	base_icon_state = "shuttle_wall"
 	smoothing_flags = SMOOTH_BITMASK

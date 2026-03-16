@@ -1,5 +1,5 @@
 /obj/item/borg/sight
-	icon = 'icons/obj/clothing/glasses.dmi'
+	icon = '../assets/icons/obj/clothing/glasses.dmi'
 	///Define to a sight mode that we give to a cyborg while this item is equipped.
 	var/sight_mode = null
 

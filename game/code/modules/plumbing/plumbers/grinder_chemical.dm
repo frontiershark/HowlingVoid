@@ -40,10 +40,10 @@
 
 	var/list/options = list()
 
-	var/static/radial_grind = image(icon = 'icons/hud/radial.dmi', icon_state = "radial_grind")
+	var/static/radial_grind = image(icon = '../assets/icons/hud/radial.dmi', icon_state = "radial_grind")
 	options["grind"] = radial_grind
 
-	var/static/radial_juice = image(icon = 'icons/hud/radial.dmi', icon_state = "radial_juice")
+	var/static/radial_juice = image(icon = '../assets/icons/hud/radial.dmi', icon_state = "radial_juice")
 	options["juice"] = radial_juice
 
 	var/choice = show_radial_menu(

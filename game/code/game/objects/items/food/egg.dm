@@ -4,7 +4,7 @@
 /obj/item/food/chocolateegg
 	name = "chocolate egg"
 	desc = "Such, sweet, fattening food."
-	icon = 'icons/obj/food/egg.dmi'
+	icon = '../assets/icons/obj/food/egg.dmi'
 	icon_state = "chocolateegg"
 	food_reagents = list(/datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/sugar = 2, /datum/reagent/consumable/coco = 2, /datum/reagent/consumable/nutriment/vitamin = 1)
 	tastes = list("chocolate" = 4, "sweetness" = 1)
@@ -19,7 +19,7 @@ GLOBAL_VAR_INIT(chicks_from_eggs, 0)
 /obj/item/food/egg
 	name = "egg"
 	desc = "An egg!"
-	icon = 'icons/obj/food/egg.dmi'
+	icon = '../assets/icons/obj/food/egg.dmi'
 	icon_state = "egg"
 	inhand_icon_state = "egg"
 	food_reagents = list(/datum/reagent/consumable/eggyolk = 2, /datum/reagent/consumable/eggwhite = 4)
@@ -133,7 +133,7 @@ GLOBAL_VAR_INIT(chicks_from_eggs, 0)
 		broken_egg.pixel_x = clamp(text2num(LAZYACCESS(modifiers, ICON_X)) - 16, -(ICON_SIZE_X/2), ICON_SIZE_X/2)
 	if(LAZYACCESS(modifiers, ICON_Y))
 		broken_egg.pixel_y = clamp(text2num(LAZYACCESS(modifiers, ICON_Y)) - 16, -(ICON_SIZE_Y/2), ICON_SIZE_Y/2)
-	playsound(user, 'sound/items/sheath.ogg', 40, TRUE)
+	playsound(user, '../assets/sound/items/sheath.ogg', 40, TRUE)
 	reagents.trans_to(broken_egg, reagents.total_volume, copy_only = TRUE)
 
 	hit_griddle.AddToGrill(broken_egg, user)
@@ -175,7 +175,7 @@ GLOBAL_VAR_INIT(chicks_from_eggs, 0)
 	inhand_icon_state = "egg-yellow"
 
 /obj/item/food/egg/penguin_egg
-	icon = 'icons/mob/simple/penguins.dmi'
+	icon = '../assets/icons/mob/simple/penguins.dmi'
 	icon_state = "penguin_egg"
 
 /obj/item/food/egg/fertile
@@ -199,7 +199,7 @@ GLOBAL_VAR_INIT(chicks_from_eggs, 0)
 /obj/item/food/friedegg
 	name = "fried egg"
 	desc = "A fried egg. Would go well with a touch of salt and pepper."
-	icon = 'icons/obj/food/egg.dmi'
+	icon = '../assets/icons/obj/food/egg.dmi'
 	icon_state = "friedegg"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment/protein = 3,
@@ -215,7 +215,7 @@ GLOBAL_VAR_INIT(chicks_from_eggs, 0)
 /obj/item/food/rawegg
 	name = "raw egg"
 	desc = "Supposedly good for you, if you can stomach it. Better fried."
-	icon = 'icons/obj/food/egg.dmi'
+	icon = '../assets/icons/obj/food/egg.dmi'
 	icon_state = "rawegg"
 	food_reagents = list() // Receives all reagents from its whole egg counterpart
 	bite_consumption = 1
@@ -230,7 +230,7 @@ GLOBAL_VAR_INIT(chicks_from_eggs, 0)
 /obj/item/food/boiledegg
 	name = "boiled egg"
 	desc = "A hard boiled egg."
-	icon = 'icons/obj/food/egg.dmi'
+	icon = '../assets/icons/obj/food/egg.dmi'
 	icon_state = "egg"
 	inhand_icon_state = "egg"
 	food_reagents = list(
@@ -248,7 +248,7 @@ GLOBAL_VAR_INIT(chicks_from_eggs, 0)
 /obj/item/food/eggsausage
 	name = "egg with sausage"
 	desc = "A good egg with a side of sausages."
-	icon = 'icons/obj/food/egg.dmi'
+	icon = '../assets/icons/obj/food/egg.dmi'
 	icon_state = "eggsausage"
 	food_reagents = list(/datum/reagent/consumable/nutriment/protein = 8, /datum/reagent/consumable/nutriment/vitamin = 2, /datum/reagent/consumable/nutriment = 4)
 	foodtypes = MEAT | FRIED | BREAKFAST
@@ -266,7 +266,7 @@ GLOBAL_VAR_INIT(chicks_from_eggs, 0)
 /obj/item/food/omelette //FUCK THIS
 	name = "omelette du fromage"
 	desc = "That's all you can say!"
-	icon = 'icons/obj/food/egg.dmi'
+	icon = '../assets/icons/obj/food/egg.dmi'
 	icon_state = "omelette"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment/protein = 10,
@@ -304,7 +304,7 @@ GLOBAL_VAR_INIT(chicks_from_eggs, 0)
 /obj/item/food/benedict
 	name = "eggs benedict"
 	desc = "There is only one egg on this, how rude."
-	icon = 'icons/obj/food/egg.dmi'
+	icon = '../assets/icons/obj/food/egg.dmi'
 	icon_state = "benedict"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment/vitamin = 6,
@@ -321,7 +321,7 @@ GLOBAL_VAR_INIT(chicks_from_eggs, 0)
 /obj/item/food/eggwrap
 	name = "egg wrap"
 	desc = "The precursor to Pigs in a Blanket."
-	icon = 'icons/obj/food/egg.dmi'
+	icon = '../assets/icons/obj/food/egg.dmi'
 	icon_state = "eggwrap"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 6,
@@ -336,7 +336,7 @@ GLOBAL_VAR_INIT(chicks_from_eggs, 0)
 /obj/item/food/chawanmushi
 	name = "chawanmushi"
 	desc = "A legendary egg custard that makes friends out of enemies. Probably too hot for a cat to eat."
-	icon = 'icons/obj/food/egg.dmi'
+	icon = '../assets/icons/obj/food/egg.dmi'
 	icon_state = "chawanmushi"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 4,
@@ -351,7 +351,7 @@ GLOBAL_VAR_INIT(chicks_from_eggs, 0)
 /obj/item/food/spore_sack
 	name = "spore sack"
 	desc = "A spore sack. blobby and gooey!"
-	icon = 'icons/obj/food/egg.dmi'
+	icon = '../assets/icons/obj/food/egg.dmi'
 	icon_state = "spore_sack"
 	base_icon_state = "spore_sack"
 	inhand_icon_state = "egg"
@@ -382,7 +382,7 @@ GLOBAL_VAR_INIT(chicks_from_eggs, 0)
 		broken_egg.pixel_x = clamp(text2num(LAZYACCESS(modifiers, ICON_X)) - 16, -(ICON_SIZE_X/2), ICON_SIZE_X/2)
 	if(LAZYACCESS(modifiers, ICON_Y))
 		broken_egg.pixel_y = clamp(text2num(LAZYACCESS(modifiers, ICON_Y)) - 16, -(ICON_SIZE_Y/2), ICON_SIZE_Y/2)
-	playsound(user, 'sound/items/sheath.ogg', 40, TRUE)
+	playsound(user, '../assets/sound/items/sheath.ogg', 40, TRUE)
 	reagents.trans_to(broken_egg, reagents.total_volume, copy_only = TRUE)
 
 	hit_griddle.AddToGrill(broken_egg, user)

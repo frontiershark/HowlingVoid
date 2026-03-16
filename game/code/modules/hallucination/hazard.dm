@@ -58,7 +58,7 @@
 
 /obj/effect/client_image_holder/hallucination/danger/lava
 	name = "lava"
-	image_icon = 'icons/turf/floors/lava.dmi'
+	image_icon = '../assets/icons/turf/floors/lava.dmi'
 
 /obj/effect/client_image_holder/hallucination/danger/lava/generate_image()
 	var/turf/danger_turf = get_turf(src)
@@ -71,7 +71,7 @@
 
 /obj/effect/client_image_holder/hallucination/danger/chasm
 	name = "chasm"
-	image_icon = 'icons/turf/floors/chasms.dmi'
+	image_icon = '../assets/icons/turf/floors/chasms.dmi'
 
 /obj/effect/client_image_holder/hallucination/danger/chasm/generate_image()
 	var/turf/danger_turf = get_turf(src)
@@ -87,7 +87,7 @@
 
 /obj/effect/client_image_holder/hallucination/danger/anomaly
 	name = "flux wave anomaly"
-	image_icon = 'icons/effects/anomalies.dmi'
+	image_icon = '../assets/icons/effects/anomalies.dmi'
 	image_state = "flux"
 	image_layer = OBJ_LAYER + 0.01
 

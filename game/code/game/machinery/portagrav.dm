@@ -2,7 +2,7 @@
 	anchored = FALSE
 	density = TRUE
 	interaction_flags_machine = INTERACT_MACHINE_ALLOW_SILICON
-	icon = 'icons/obj/machines/gravity_generator.dmi'
+	icon = '../assets/icons/obj/machines/gravity_generator.dmi'
 	icon_state = "portagrav"
 	base_icon_state = "portagrav"
 	name = "Portable Gravity Unit"
@@ -229,7 +229,7 @@
 	. = ..()
 	if(.)
 		return
-	playsound(src, 'sound/machines/terminal/terminal_button07.ogg', 45, TRUE)
+	playsound(src, '../assets/sound/machines/terminal/terminal_button07.ogg', 45, TRUE)
 	switch(action)
 		if("adjust_grav")
 			var/adjustment = text2num(params["adjustment"])

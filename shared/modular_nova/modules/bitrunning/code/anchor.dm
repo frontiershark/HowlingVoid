@@ -30,7 +30,7 @@
 	desc = "Highly stable connection protocol, and consequentially a trojan, used by bitrunners during attacks on high-value targets when numbers are key and \
 	just three attempts aren't enough.<br>\
 	In several seconds it will merge itself with the code, becoming nigh-invisible to any means of detection."
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	icon_state = "curse"
 	invisibility = INVISIBILITY_NONE
 

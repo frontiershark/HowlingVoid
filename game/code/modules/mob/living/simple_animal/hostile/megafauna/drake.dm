@@ -36,9 +36,9 @@
 	maxHealth = 2500
 	attack_verb_continuous = "chomps"
 	attack_verb_simple = "chomp"
-	attack_sound = 'sound/effects/magic/demon_attack1.ogg'
+	attack_sound = '../assets/sound/effects/magic/demon_attack1.ogg'
 	attack_vis_effect = ATTACK_EFFECT_BITE
-	icon = 'icons/mob/simple/lavaland/96x96megafauna.dmi'
+	icon = '../assets/icons/mob/simple/lavaland/96x96megafauna.dmi'
 	icon_state = "dragon"
 	icon_living = "dragon"
 	icon_dead = "dragon_dead"
@@ -69,7 +69,7 @@
 	crusher_achievement_type = /datum/award/achievement/boss/drake_crusher
 	score_achievement_type = /datum/award/score/drake_score
 	death_message = "collapses into a pile of bones, its flesh sloughing away."
-	death_sound = 'sound/effects/magic/demon_dies.ogg'
+	death_sound = '../assets/sound/effects/magic/demon_dies.ogg'
 	footstep_type = FOOTSTEP_MOB_HEAVY
 	summon_line = "ROOOOOOOOAAAAAAAAAAAR!"
 	/// Fire cone ability
@@ -214,9 +214,9 @@
 
 /obj/effect/temp_visual/lava_warning/proc/fall(reset_time)
 	var/turf/T = get_turf(src)
-	playsound(T,'sound/effects/magic/fleshtostone.ogg', 80, TRUE)
+	playsound(T,'../assets/sound/effects/magic/fleshtostone.ogg', 80, TRUE)
 	sleep(duration)
-	playsound(T,'sound/effects/magic/fireball.ogg', 200, TRUE)
+	playsound(T,'../assets/sound/effects/magic/fireball.ogg', 200, TRUE)
 
 	for(var/mob/living/L in T.contents - owner)
 		if(istype(L, /mob/living/simple_animal/hostile/megafauna/dragon))
@@ -238,7 +238,7 @@
 /obj/effect/temp_visual/drakewall
 	desc = "An ash drakes true flame."
 	name = "Fire Barrier"
-	icon = 'icons/effects/fire.dmi'
+	icon = '../assets/icons/effects/fire.dmi'
 	icon_state = "light"
 	anchored = TRUE
 	opacity = FALSE
@@ -248,14 +248,14 @@
 	color = COLOR_DARK_ORANGE
 
 /obj/effect/temp_visual/lava_safe
-	icon = 'icons/obj/service/hand_of_god_structures.dmi'
+	icon = '../assets/icons/obj/service/hand_of_god_structures.dmi'
 	icon_state = "trap-earth"
 	layer = BELOW_MOB_LAYER
 	light_range = 2
 	duration = 13
 
 /obj/effect/temp_visual/fireball
-	icon = 'icons/effects/magic.dmi'
+	icon = '../assets/icons/effects/magic.dmi'
 	icon_state = "fireball"
 	name = "fireball"
 	desc = "Get out of the way!"
@@ -270,7 +270,7 @@
 	animate(src, pixel_z = 0, time = duration)
 
 /obj/effect/temp_visual/target
-	icon = 'icons/mob/actions/actions_items.dmi'
+	icon = '../assets/icons/mob/actions/actions_items.dmi'
 	icon_state = "sniper_zoom"
 	layer = BELOW_MOB_LAYER
 	plane = GAME_PLANE
@@ -283,7 +283,7 @@
 
 /obj/effect/temp_visual/target/proc/fall(list/flame_hit)
 	var/turf/T = get_turf(src)
-	playsound(T,'sound/effects/magic/fleshtostone.ogg', 80, TRUE)
+	playsound(T,'../assets/sound/effects/magic/fleshtostone.ogg', 80, TRUE)
 	new /obj/effect/temp_visual/fireball(T)
 	sleep(duration)
 	if(ismineralturf(T))

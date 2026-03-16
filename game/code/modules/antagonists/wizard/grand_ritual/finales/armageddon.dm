@@ -7,7 +7,7 @@
 	name = "Annihilation"
 	desc = "This crew have offended you beyond the realm of pranks. Make the ultimate sacrifice to teach them a lesson your elders can really respect. \
 		YOU WILL NOT SURVIVE THIS."
-	icon = 'icons/mob/simple/lavaland/lavaland_monsters.dmi'
+	icon = '../assets/icons/mob/simple/lavaland/lavaland_monsters.dmi'
 	icon_state = "legion_head"
 	minimum_time = 90 MINUTES // This will probably immediately end the round if it gets finished.
 	ritual_invoke_time = 60 SECONDS // Really give the crew some time to interfere with this one.
@@ -31,7 +31,7 @@
 	)
 
 /datum/grand_finale/armageddon/trigger(mob/living/carbon/human/invoker)
-	priority_announce(pick(possible_last_words), null, 'sound/effects/magic/voidblink.ogg', sender_override = "[invoker.real_name]", color_override = "purple")
+	priority_announce(pick(possible_last_words), null, '../assets/sound/effects/magic/voidblink.ogg', sender_override = "[invoker.real_name]", color_override = "purple")
 	var/turf/current_location = get_turf(invoker)
 	invoker.gib(DROP_ALL_REMAINS)
 

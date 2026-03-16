@@ -2,7 +2,7 @@
 /mob/living/basic/mining/brimdemon
 	name = "brimdemon"
 	desc = "A volatile creature resembling an enormous horned skull. Its response to almost any stimulus is to unleash a beam of infernal energy."
-	icon = 'icons/mob/simple/lavaland/lavaland_monsters.dmi'
+	icon = '../assets/icons/mob/simple/lavaland/lavaland_monsters.dmi'
 	icon_state = "brimdemon"
 	icon_living = "brimdemon"
 	icon_dead = "brimdemon_dead"
@@ -14,13 +14,13 @@
 	speak_emote = list("cackles")
 	melee_damage_lower = 7.5
 	melee_damage_upper = 7.5
-	attack_sound = 'sound/items/weapons/bite.ogg'
+	attack_sound = '../assets/sound/items/weapons/bite.ogg'
 	melee_attack_cooldown = 0.6 SECONDS
 	attack_vis_effect = ATTACK_EFFECT_BITE
 	attack_verb_continuous = "bites"
 	attack_verb_simple = "bite"
 	death_message = "wails as infernal energy escapes from its wounds, leaving it an empty husk."
-	death_sound = 'sound/effects/magic/demon_dies.ogg'
+	death_sound = '../assets/sound/effects/magic/demon_dies.ogg'
 	light_color = LIGHT_COLOR_BLOOD_MAGIC
 	light_power = 5
 	light_range = 1.4
@@ -68,7 +68,7 @@
 /// Show a funny animation before doing an explosion
 /obj/effect/temp_visual/brim_burst
 	name = "bursting brimdemon"
-	icon = 'icons/mob/simple/lavaland/lavaland_monsters.dmi'
+	icon = '../assets/icons/mob/simple/lavaland/lavaland_monsters.dmi'
 	icon_state = "brimdemon_dead"
 	duration = 1.9 SECONDS
 
@@ -84,7 +84,7 @@
 /// Make an explosion
 /obj/effect/temp_visual/brim_burst/proc/bang()
 	var/turf/origin_turf = get_turf(src)
-	playsound(origin_turf, 'sound/effects/pop_expl.ogg', 50)
+	playsound(origin_turf, '../assets/sound/effects/pop_expl.ogg', 50)
 	new /obj/effect/temp_visual/explosion/fast(origin_turf)
 	var/list/possible_targets = range(1, origin_turf)
 	for(var/mob/living/target in possible_targets)

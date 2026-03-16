@@ -13,7 +13,7 @@
 	cooldown_time = 1 SECONDS
 
 /obj/item/mod/module/bikehorn/on_use(mob/activator)
-	playsound(src, 'sound/items/bikehorn.ogg', 100, FALSE)
+	playsound(src, '../assets/sound/items/bikehorn.ogg', 100, FALSE)
 	drain_power(use_energy_cost)
 
 ///Advanced Balloon Blower - Blows a long balloon.
@@ -52,7 +52,7 @@
 	do_sparks(2, TRUE, mod.wearer)
 	mod.wearer.Beam(target,icon_state="lightning[rand(1,12)]", time = 5)
 	if(microwave_target.microwave_act(microwaver = mod.wearer) & COMPONENT_MICROWAVE_SUCCESS)
-		playsound(src, 'sound/machines/microwave/microwave-end.ogg', 50, FALSE)
+		playsound(src, '../assets/sound/machines/microwave/microwave-end.ogg', 50, FALSE)
 	else
 		balloon_alert(mod.wearer, "can't be microwaved!")
 	do_sparks(2, TRUE, microwave_target)
@@ -75,7 +75,7 @@
 /obj/item/mod/module/waddle/on_part_activation()
 	var/obj/item/shoes = mod.get_part_from_slot(ITEM_SLOT_FEET)
 	if(shoes)
-		shoes.AddComponent(/datum/component/squeak, list('sound/effects/footstep/clownstep1.ogg'=1,'sound/effects/footstep/clownstep2.ogg'=1), 50, falloff_exponent = 20) //die off quick please
+		shoes.AddComponent(/datum/component/squeak, list('../assets/sound/effects/footstep/clownstep1.ogg'=1,'../assets/sound/effects/footstep/clownstep2.ogg'=1), 50, falloff_exponent = 20) //die off quick please
 	mod.wearer.AddElementTrait(TRAIT_WADDLING, REF(src), /datum/element/waddling)
 	if(is_clown_job(mod.wearer.mind?.assigned_role))
 		mod.wearer.add_mood_event("clownshoes", /datum/mood_event/clownshoes)
@@ -119,4 +119,4 @@
 /obj/item/mod/module/selfcleaner/on_use(mob/activator)
 	activator.wash(CLEAN_WASH)
 	drain_power(use_energy_cost)
-	playsound(activator, 'sound/effects/spray.ogg', 50, FALSE)
+	playsound(activator, '../assets/sound/effects/spray.ogg', 50, FALSE)

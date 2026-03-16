@@ -65,7 +65,7 @@
 	LAZYREMOVE(recently_warned, mob_ref_key)
 
 /obj/effect/gravity_fluff_field
-	icon = 'icons/obj/smooth_structures/grav_field.dmi'
+	icon = '../assets/icons/obj/smooth_structures/grav_field.dmi'
 	icon_state = "grav_field-0"
 	base_icon_state = "grav_field"
 	anchored = TRUE
@@ -108,7 +108,7 @@
 	SIGNAL_HANDLER
 	cut_overlay(emissive)
 	// because it uses a different name
-	emissive = emissive_appearance('icons/obj/smooth_structures/grav_field_emissive.dmi', "grav_field_emissive-[splittext(icon_state, "-")[2]]", src)
+	emissive = emissive_appearance('../assets/icons/obj/smooth_structures/grav_field_emissive.dmi', "grav_field_emissive-[splittext(icon_state, "-")[2]]", src)
 	add_overlay(emissive)
 
 // Subtype which adds a subtle overlay to all turfs

@@ -18,7 +18,7 @@
 /obj/structure/mirror
 	name = "mirror"
 	desc = "Mirror mirror on the wall, who's the most robust of them all?"
-	icon = 'icons/obj/watercloset.dmi'
+	icon = '../assets/icons/obj/watercloset.dmi'
 	icon_state = "mirror"
 	movement_type = FLOATING
 	density = FALSE
@@ -42,11 +42,11 @@
 
 /obj/structure/mirror/proc/update_choices()
 	for(var/i in mirror_options)
-		mirror_options[i] = icon('icons/hud/radial.dmi', i)
+		mirror_options[i] = icon('../assets/icons/hud/radial.dmi', i)
 
 /obj/structure/mirror/Initialize(mapload)
 	. = ..()
-	var/static/list/reflection_filter = alpha_mask_filter(icon = icon('icons/obj/watercloset.dmi', "mirror_mask"))
+	var/static/list/reflection_filter = alpha_mask_filter(icon = icon('../assets/icons/obj/watercloset.dmi', "mirror_mask"))
 	var/static/matrix/reflection_matrix = matrix(0.75, 0, 0, 0, 0.75, 0)
 	AddComponent(/datum/component/reflection, \
 		reflection_filter = reflection_filter, \
@@ -95,7 +95,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/mirror/broken, 28)
 	tool.play_tool_sound(src)
 	if(tool.use_tool(src, user, 3 SECONDS))
 		user.visible_message(span_notice("[user] detaches [src]!"), span_notice("You detach [src] from the wall."))
-		playsound(loc, 'sound/items/deconstruct.ogg', 50, TRUE)
+		playsound(loc, '../assets/sound/items/deconstruct.ogg', 50, TRUE)
 		deconstruct()
 		return ITEM_INTERACT_SUCCESS
 	return ITEM_INTERACT_BLOCKING
@@ -342,14 +342,14 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/mirror/broken, 28)
 /obj/structure/mirror/play_attack_sound(damage_amount, damage_type = BRUTE, damage_flag = 0)
 	switch(damage_type)
 		if(BRUTE)
-			playsound(src, 'sound/effects/hit_on_shattered_glass.ogg', 70, TRUE)
+			playsound(src, '../assets/sound/effects/hit_on_shattered_glass.ogg', 70, TRUE)
 		if(BURN)
-			playsound(src, 'sound/effects/hit_on_shattered_glass.ogg', 70, TRUE)
+			playsound(src, '../assets/sound/effects/hit_on_shattered_glass.ogg', 70, TRUE)
 
 /obj/item/wallframe/mirror
 	name = "mirror"
 	desc = "An unmounted mirror. Attach it to a wall to use."
-	icon = 'icons/obj/watercloset.dmi'
+	icon = '../assets/icons/obj/watercloset.dmi'
 	icon_state = "mirror"
 	custom_materials = list(/datum/material/glass = SHEET_MATERIAL_AMOUNT * 5, /datum/material/silver = SHEET_MATERIAL_AMOUNT * 2)
 	result_path = /obj/structure/mirror

@@ -160,7 +160,7 @@
 		for(var/heading in list(NORTH,SOUTH,EAST,WEST))
 			if(!(unres_sides & heading))
 				continue
-			var/mutable_appearance/floorlight = mutable_appearance('icons/obj/doors/airlocks/station/overlays.dmi', "unres_[heading]", FLOAT_LAYER, src, ABOVE_LIGHTING_PLANE)
+			var/mutable_appearance/floorlight = mutable_appearance('../assets/icons/obj/doors/airlocks/station/overlays.dmi', "unres_[heading]", FLOAT_LAYER, src, ABOVE_LIGHTING_PLANE)
 			switch (heading)
 				if (NORTH)
 					floorlight.pixel_w = 0
@@ -421,8 +421,8 @@
 	name = "tram door"
 	icon = 'modular_nova/modules/aesthetics/airlock/icons/airlocks/tram/tram.dmi'
 	overlays_file = 'modular_nova/modules/aesthetics/airlock/icons/airlocks/tram/tram_overlays.dmi'
-	doorOpen = 'sound/machines/tram/tramopen.ogg'
-	doorClose = 'sound/machines/tram/tramclose.ogg'
+	doorOpen = '../assets/sound/machines/tram/tramopen.ogg'
+	doorClose = '../assets/sound/machines/tram/tramclose.ogg'
 
 /obj/machinery/door/airlock/tram/set_light(l_range, l_power, l_color = NONSENSICAL_VALUE, l_angle, l_dir, l_height, l_on)
 	return

@@ -6,8 +6,8 @@
 	custom_materials = list(/datum/material/cardboard = SHEET_MATERIAL_AMOUNT, /datum/material/iron = HALF_SHEET_MATERIAL_AMOUNT)
 	assembly_behavior = ASSEMBLY_TOGGLEABLE_INPUT
 	var/armed = FALSE
-	drop_sound = 'sound/items/handling/component_drop.ogg'
-	pickup_sound = 'sound/items/handling/component_pickup.ogg'
+	drop_sound = '../assets/sound/items/handling/component_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/component_pickup.ogg'
 	var/obj/item/host = null
 	var/turf/host_turf = null
 
@@ -89,7 +89,7 @@
 					to_chat(user, span_warning("Your hand slips, setting off the trigger!"))
 					pulse()
 		update_appearance()
-		playsound(loc, 'sound/items/weapons/handcuffs.ogg', 30, TRUE, -3)
+		playsound(loc, '../assets/sound/items/weapons/handcuffs.ogg', 30, TRUE, -3)
 
 /obj/item/assembly/mousetrap/update_icon_state()
 	icon_state = "mousetrap[armed ? "armed" : ""]"
@@ -116,7 +116,7 @@
 	if(ishuman(target))
 		var/mob/living/carbon/human/victim = target
 		if(HAS_TRAIT(victim, TRAIT_PIERCEIMMUNE))
-			playsound(src, 'sound/effects/snap.ogg', 50, TRUE)
+			playsound(src, '../assets/sound/effects/snap.ogg', 50, TRUE)
 			pulse()
 			return FALSE
 		switch(type)
@@ -142,7 +142,7 @@
 	else if(isregalrat(target))
 		visible_message(span_bolddanger("Skreeeee!")) //He's simply too large to be affected by a tiny mouse trap.
 
-	playsound(src, 'sound/effects/snap.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/effects/snap.ogg', 50, TRUE)
 	pulse()
 
 /**
@@ -173,7 +173,7 @@
 		to_chat(user, span_notice("You disarm [src]."))
 	armed = !armed
 	update_appearance()
-	playsound(src, 'sound/items/weapons/handcuffs.ogg', 30, TRUE, -3)
+	playsound(src, '../assets/sound/items/weapons/handcuffs.ogg', 30, TRUE, -3)
 
 
 // Clumsy check only

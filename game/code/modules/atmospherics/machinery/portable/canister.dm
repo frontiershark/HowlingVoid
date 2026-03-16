@@ -6,7 +6,7 @@
 /obj/machinery/portable_atmospherics/canister
 	name = "canister"
 	desc = "A canister for the storage of gas."
-	icon = 'icons/map_icons/objects.dmi'
+	icon = '../assets/icons/map_icons/objects.dmi'
 	icon_state = "/obj/machinery/portable_atmospherics/canister"
 	post_init_icon_state = ""
 	greyscale_config = /datum/greyscale_config/canister
@@ -82,7 +82,7 @@
 	. = ..()
 	if(!allowed(user))
 		to_chat(user, span_alert("Error - Unauthorized User."))
-		playsound(src, 'sound/machines/compiler/compiler-failure.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/machines/compiler/compiler-failure.ogg', 50, TRUE)
 		return
 
 /obj/machinery/portable_atmospherics/canister/add_context(atom/source, list/context, obj/item/held_item, mob/user)
@@ -354,24 +354,24 @@
 	. = ..()
 
 	if(shielding_powered)
-		. += mutable_appearance('icons/obj/pipes_n_cables/canisters.dmi', "shielding")
-		. += emissive_appearance('icons/obj/pipes_n_cables/canisters.dmi', "shielding", src)
+		. += mutable_appearance('../assets/icons/obj/pipes_n_cables/canisters.dmi', "shielding")
+		. += emissive_appearance('../assets/icons/obj/pipes_n_cables/canisters.dmi', "shielding", src)
 
 	if(panel_open)
-		. += mutable_appearance('icons/obj/pipes_n_cables/canisters.dmi', "cell_hatch")
+		. += mutable_appearance('../assets/icons/obj/pipes_n_cables/canisters.dmi', "cell_hatch")
 
 	///Function is used to actually set the overlays
 	if(machine_stat & BROKEN)
-		. += mutable_appearance('icons/obj/pipes_n_cables/canisters.dmi', "broken")
+		. += mutable_appearance('../assets/icons/obj/pipes_n_cables/canisters.dmi', "broken")
 	if(holding)
-		. += mutable_appearance('icons/obj/pipes_n_cables/canisters.dmi', "can-open")
+		. += mutable_appearance('../assets/icons/obj/pipes_n_cables/canisters.dmi', "can-open")
 	if(connected_port)
-		. += mutable_appearance('icons/obj/pipes_n_cables/canisters.dmi', "can-connector")
+		. += mutable_appearance('../assets/icons/obj/pipes_n_cables/canisters.dmi', "can-connector")
 
 	var/light_state = get_pressure_state()
 	if(light_state) //happens when pressure is below 10kpa which means no light
-		. += mutable_appearance('icons/obj/pipes_n_cables/canisters.dmi', light_state)
-		. += emissive_appearance('icons/obj/pipes_n_cables/canisters.dmi', "[light_state]-light", src, alpha = src.alpha)
+		. += mutable_appearance('../assets/icons/obj/pipes_n_cables/canisters.dmi', light_state)
+		. += emissive_appearance('../assets/icons/obj/pipes_n_cables/canisters.dmi', "[light_state]-light", src, alpha = src.alpha)
 
 	update_window()
 
@@ -386,10 +386,10 @@
 
 	var/static/alpha_filter
 	if(!alpha_filter) // Gotta do this separate since the icon may not be correct at world init
-		alpha_filter = filter(type="alpha", icon = icon('icons/obj/pipes_n_cables/canisters.dmi', "window-base"))
+		alpha_filter = filter(type="alpha", icon = icon('../assets/icons/obj/pipes_n_cables/canisters.dmi', "window-base"))
 
 	cut_overlay(window)
-	window = image('icons/obj/pipes_n_cables/canisters.dmi', icon_state = "window-base", layer = FLOAT_LAYER)
+	window = image('../assets/icons/obj/pipes_n_cables/canisters.dmi', icon_state = "window-base", layer = FLOAT_LAYER)
 	var/list/window_overlays = list()
 	for(var/visual in air_contents.return_visuals(get_turf(src)))
 		var/image/new_visual = image(visual, layer = FLOAT_LAYER)
@@ -489,7 +489,7 @@
 	atom_break()
 
 	set_density(FALSE)
-	playsound(src.loc, 'sound/effects/spray.ogg', 10, TRUE, -3)
+	playsound(src.loc, '../assets/sound/effects/spray.ogg', 10, TRUE, -3)
 	investigate_log("was destroyed.", INVESTIGATE_ATMOS)
 
 	if(holding)

@@ -1,7 +1,7 @@
 /mob/living/basic/clown
 	name = "Clown"
 	desc = "A denizen of Clown Planet."
-	icon = 'icons/mob/simple/clown_mobs.dmi'
+	icon = '../assets/icons/mob/simple/clown_mobs.dmi'
 	icon_state = "clown"
 	icon_living = "clown"
 	icon_dead = "clown_dead"
@@ -17,8 +17,8 @@
 	health = 75
 	melee_damage_lower = 10
 	melee_damage_upper = 10
-	attack_sound = 'sound/items/bikehorn.ogg'
-	attacked_sound = 'sound/items/bikehorn.ogg'
+	attack_sound = '../assets/sound/items/bikehorn.ogg'
+	attacked_sound = '../assets/sound/items/bikehorn.ogg'
 	environment_smash = ENVIRONMENT_SMASH_NONE
 	basic_mob_flags = DEL_ON_DEATH
 	initial_language_holder = /datum/language_holder/clown
@@ -34,7 +34,7 @@
 	var/list/emotes = list(
 		BB_EMOTE_SAY = list("HONK!!", "Honk!", "Welcome to Clown Planet!"),
 		BB_EMOTE_HEAR = list("honks!", "squeaks!"),
-		BB_EMOTE_SOUND = list('sound/items/bikehorn.ogg'), //WE LOVE TO PARTY
+		BB_EMOTE_SOUND = list('../assets/sound/items/bikehorn.ogg'), //WE LOVE TO PARTY
 		BB_SPEAK_CHANCE = 5,
 	)
 	///do we waddle (honk)
@@ -258,7 +258,7 @@
 	armour_penetration = 20
 	attack_verb_continuous = "steals the girlfriend of"
 	attack_verb_simple = "steal the girlfriend of"
-	attack_sound = 'sound/items/airhorn/airhorn2.ogg'
+	attack_sound = '../assets/sound/items/airhorn/airhorn2.ogg'
 	loot = list(
 		/obj/effect/gibspawner/human,
 		/obj/effect/spawner/foam_starter/small,
@@ -405,7 +405,7 @@
 		BB_EMOTE_SAY = list("hey, buddy!", "HONK!!!", "H-h-h-H-HOOOOONK!!!!", "HONKHONKHONK!!!", "HEY, BUCKO, GET BACK HERE!!!", "HOOOOOOOONK!!!"),
 		BB_EMOTE_SEE = list("jiggles!", "wobbles!"),
 	)
-	death_sound = 'sound/misc/sadtrombone.ogg'
+	death_sound = '../assets/sound/misc/sadtrombone.ogg'
 	waddles = FALSE
 	///This is the list of items we are ready to regurgitate,
 	var/list/prank_pouch = list()
@@ -477,7 +477,7 @@
 			adjust_brute_loss(-maxHealth * 0.1)
 		qdel(eaten_atom)
 
-	playsound(loc,'sound/items/eatfood.ogg', rand(30,50), TRUE)
+	playsound(loc,'../assets/sound/items/eatfood.ogg', rand(30,50), TRUE)
 	flick("glutton_mouth", src)
 
 /mob/living/basic/clown/mutant/glutton/tamed(mob/living/tamer, atom/food)
@@ -494,7 +494,7 @@
 	desc = "Regurgitates a single item from the depths of your pouch."
 	background_icon_state = "bg_changeling"
 	overlay_icon_state = "bg_changeling_border"
-	button_icon = 'icons/mob/actions/actions_animal.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_animal.dmi'
 	button_icon_state = "regurgitate"
 	check_flags = AB_CHECK_CONSCIOUS|AB_CHECK_INCAPACITATED
 	click_to_activate = TRUE
@@ -539,7 +539,7 @@
 	projected_morsel.forceMove(pouch_owner.loc)
 	projected_morsel.throw_at(spit_at, 8, 2, pouch_owner)
 	flick("glutton_mouth", pouch_owner)
-	playsound(pouch_owner, 'sound/misc/soggy.ogg', 75)
+	playsound(pouch_owner, '../assets/sound/misc/soggy.ogg', 75)
 
 	StartCooldown()
 	return TRUE
@@ -567,7 +567,7 @@
 	emotes = list(
 		BB_EMOTE_SAY = list("HONK!!", "Honk!", "YA-HONK!!!"),
 		BB_EMOTE_SEE = list("bites into the banana!", "plucks a banana off its head!", "photosynthesizes!"),
-		BB_EMOTE_SOUND = list('sound/items/bikehorn.ogg'),
+		BB_EMOTE_SOUND = list('../assets/sound/items/bikehorn.ogg'),
 	)
 
 /mob/living/basic/clown/banana/Initialize(mapload)
@@ -586,7 +586,7 @@
 	desc = "Shake loose a few banana peels."
 	cooldown_time = 8 SECONDS
 	button_icon_state = "rustle"
-	button_icon = 'icons/mob/actions/actions_clown.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_clown.dmi'
 	background_icon_state = "bg_nature"
 	overlay_icon_state = "bg_nature_border"
 	///which type of peel to spawn
@@ -605,7 +605,7 @@
 	var/peels_to_spawn = min(peel_amount, reachable_turfs.len)
 	for(var/i in 1 to peels_to_spawn)
 		new banana_type(pick_n_take(reachable_turfs))
-	playsound(owner, 'sound/mobs/non-humanoids/clown/clownana_rustle.ogg', 60)
+	playsound(owner, '../assets/sound/mobs/non-humanoids/clown/clownana_rustle.ogg', 60)
 	animate(owner, time = 0.1 SECONDS, pixel_w = 6, easing = CUBIC_EASING | EASE_OUT, flags = ANIMATION_PARALLEL|ANIMATION_RELATIVE)
 	animate(time = 0.2 SECONDS, pixel_w = -8, easing = CUBIC_EASING, flags = ANIMATION_RELATIVE)
 	animate(time = 0.1 SECONDS, pixel_w = 2, easing = CUBIC_EASING | EASE_IN, flags = ANIMATION_RELATIVE)
@@ -615,7 +615,7 @@
 /datum/action/cooldown/exquisite_bunch
 	name = "Exquisite Bunch"
 	desc = "Pluck your finest bunch of bananas from your head. This bunch is especially nutrious to monkeykind. A gentle tap will trigger an explosive ripening process."
-	button_icon = 'icons/obj/service/hydroponics/harvest.dmi'
+	button_icon = '../assets/icons/obj/service/hydroponics/harvest.dmi'
 	cooldown_time = 60 SECONDS
 	button_icon_state = "banana_bunch"
 	background_icon_state = "bg_nature"
@@ -636,7 +636,7 @@
 	if(!do_after(owner, 1 SECONDS))
 		activating = FALSE
 		return
-	playsound(owner, 'sound/mobs/non-humanoids/clown/hehe.ogg', 100)
+	playsound(owner, '../assets/sound/mobs/non-humanoids/clown/hehe.ogg', 100)
 	if(!do_after(owner, 1 SECONDS))
 		activating = FALSE
 		return
@@ -646,6 +646,6 @@
 /datum/action/cooldown/exquisite_bunch/Activate(atom/target)
 	. = ..()
 	new /obj/item/food/grown/banana/bunch(get_step(owner.loc, owner.dir))
-	playsound(owner, 'sound/items/bikehorn.ogg', 60)
-	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(playsound), owner, 'sound/mobs/non-humanoids/clown/hohoho.ogg', 100, 1), 1 SECONDS)
+	playsound(owner, '../assets/sound/items/bikehorn.ogg', 60)
+	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(playsound), owner, '../assets/sound/mobs/non-humanoids/clown/hohoho.ogg', 100, 1), 1 SECONDS)
 	StartCooldown()

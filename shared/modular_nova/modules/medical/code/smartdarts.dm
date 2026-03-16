@@ -151,6 +151,6 @@
 	injectee.visible_message(span_notice("[src] embeds itself into [injectee]"), span_notice("You feel a small prick as [src] embeds itself into you."))
 	if(prevention_used) //Used to signal that allergens were not injected into the target mob.
 		injectee.visible_message(span_notice("[src] lets out a short beep."), span_notice("You hear a short beep from [src]."))
-		playsound(loc, 'sound/machines/ping.ogg', 50, 1, -1)
+		playsound(loc, '../assets/sound/machines/ping.ogg', 50, 1, -1)
 	return BULLET_ACT_HIT
 

@@ -3,7 +3,7 @@
 /obj/item/rcl
 	name = "rapid pipe cleaner layer"
 	desc = "A device used to rapidly deploy pipe cleaners. It has screws on the side which can be removed to slide off the pipe cleaners. Do not use without insulation!"
-	icon = 'icons/obj/tools.dmi'
+	icon = '../assets/icons/obj/tools.dmi'
 	icon_state = "rcl-0"
 	inhand_icon_state = "rcl-0"
 	var/obj/structure/pipe_cleaner/last
@@ -20,8 +20,8 @@
 	var/list/colors = list("red", "yellow", "green", "blue", "pink", "orange", "cyan", "white")
 	var/current_color_index = 1
 	var/ghetto = FALSE
-	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/tools_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/tools_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/tools_righthand.dmi'
 	var/datum/radial_menu/persistent/wiring_gui_menu
 	var/mob/listeningTo
 
@@ -243,7 +243,7 @@
 		var/pipe_cleanersuffix = "[min(fromdir,dirnum)]-[max(fromdir,dirnum)]"
 		if(fromdir == dirnum) //pipe_cleaners can't loop back on themselves
 			pipe_cleanersuffix = "invalid"
-		var/image/img = image(icon = 'icons/hud/radial.dmi', icon_state = "cable_[pipe_cleanersuffix]")
+		var/image/img = image(icon = '../assets/icons/hud/radial.dmi', icon_state = "cable_[pipe_cleanersuffix]")
 		img.color = GLOB.cable_colors[colors[current_color_index]]
 		wiredirs[icondir] = img
 	return wiredirs
@@ -342,10 +342,10 @@
 
 /datum/action/item_action/rcl_col
 	name = "Change Cable Color"
-	button_icon = 'icons/mob/actions/actions_items.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_items.dmi'
 	button_icon_state = "rcl_rainbow"
 
 /datum/action/item_action/rcl_gui
 	name = "Toggle Fast Wiring Gui"
-	button_icon = 'icons/mob/actions/actions_items.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_items.dmi'
 	button_icon_state = "rcl_gui"

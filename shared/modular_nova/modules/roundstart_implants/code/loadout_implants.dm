@@ -75,7 +75,7 @@
 			Retract()
 		owner.set_jitter_if_lower(severity == EMP_LIGHT ? 5 SECONDS : 10 SECONDS)
 		do_sparks(2, TRUE, owner)
-		playsound(owner, 'sound/items/tools/change_drill.ogg', 40, TRUE)
+		playsound(owner, '../assets/sound/items/tools/change_drill.ogg', 40, TRUE)
 
 /obj/item/organ/cyberimp/arm/toolkit/adjuster/Initialize(mapload)
 	. = ..()
@@ -136,7 +136,7 @@
 		owner.flash_act(1, 1)
 		owner.set_eye_blur_if_lower(severity == EMP_LIGHT ? 5 SECONDS : 10 SECONDS)
 		do_sparks(5, TRUE, owner)
-		playsound(owner, 'sound/items/tools/welder.ogg', 50, TRUE)
+		playsound(owner, '../assets/sound/items/tools/welder.ogg', 50, TRUE)
 
 /obj/item/organ/cyberimp/arm/toolkit/arc_welder/Initialize(mapload)
 	. = ..()
@@ -204,7 +204,7 @@
 					span_warning("Your serving tray implant malfunctions, spilling everything!")
 				)
 				do_sparks(2, TRUE, owner)
-				playsound(owner, 'sound/items/trayhit/trayhit1.ogg', 50, TRUE)
+				playsound(owner, '../assets/sound/items/trayhit/trayhit1.ogg', 50, TRUE)
 			break
 
 /obj/item/organ/cyberimp/arm/toolkit/civilian_lighter
@@ -229,7 +229,7 @@
 		)
 		do_sparks(3, TRUE, owner)
 		owner.adjust_fire_stacks(1)
-		playsound(owner, 'sound/items/lighter/lighter_on.ogg', 50, TRUE)
+		playsound(owner, '../assets/sound/items/lighter/lighter_on.ogg', 50, TRUE)
 
 /obj/item/organ/cyberimp/arm/toolkit/blacksteel_forging
 	name = "Blacksteel 'Starforge' metalworking toolset implant"
@@ -255,7 +255,7 @@
 			Retract()
 		owner.adjust_bodytemperature(severity == EMP_LIGHT ? 10 * BODYTEMP_NORMAL : 5 * BODYTEMP_NORMAL)
 		do_sparks(3, TRUE, owner)
-		playsound(owner, 'sound/items/tools/welder.ogg', 40, TRUE)
+		playsound(owner, '../assets/sound/items/tools/welder.ogg', 40, TRUE)
 
 /obj/item/organ/cyberimp/arm/toolkit/blacksteel_forging/Initialize(mapload)
 	. = ..()
@@ -292,7 +292,7 @@
 				span_warning("[owner]'s arm suddenly spews out paper in all directions!"),
 				span_warning("Your bureaucracy implant malfunctions, spewing papers everywhere!")
 			)
-			playsound(owner, 'sound/items/poster/poster_ripped.ogg', 50, TRUE)
+			playsound(owner, '../assets/sound/items/poster/poster_ripped.ogg', 50, TRUE)
 		break
 
 /obj/item/organ/cyberimp/arm/toolkit/cargo

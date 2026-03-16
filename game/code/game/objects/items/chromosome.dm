@@ -1,6 +1,6 @@
 /obj/item/chromosome
 	name = "blank chromosome"
-	icon = 'icons/obj/science/chromosomes.dmi'
+	icon = '../assets/icons/obj/science/chromosomes.dmi'
 	icon_state = ""
 	abstract_type = /obj/item/chromosome
 	desc = "A tube holding chromosomal data."

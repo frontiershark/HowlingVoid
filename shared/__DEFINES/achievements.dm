@@ -1,8 +1,8 @@
 // Keep the identifiers here below 32 characters, you can put the full display name in the actual achievement datum
 
 /// Achievements icon set
-#define ACHIEVEMENTS_SET 'icons/ui/achievements/achievements.dmi'
-#define PDA_THEMES_PROGRESS_SET 'icons/ui/achievements/pda_themes.dmi'
+#define ACHIEVEMENTS_SET '../assets/icons/ui/achievements/achievements.dmi'
+#define PDA_THEMES_PROGRESS_SET '../assets/icons/ui/achievements/pda_themes.dmi'
 
 #define ACHIEVEMENT_DEFAULT "default"
 #define ACHIEVEMENT_SCORE "score"

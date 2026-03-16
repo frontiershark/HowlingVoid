@@ -10,13 +10,13 @@
 	VAR_PRIVATE/list/cached_organ_manipulation_options
 
 	/// Sound played when starting to insert an organ
-	var/insert_preop_sound = 'sound/items/handling/surgery/organ2.ogg'
+	var/insert_preop_sound = '../assets/sound/items/handling/surgery/organ2.ogg'
 	/// Sound played when starting to remove an organ
-	var/remove_preop_sound = 'sound/items/handling/surgery/hemostat1.ogg'
+	var/remove_preop_sound = '../assets/sound/items/handling/surgery/hemostat1.ogg'
 	/// Sound played when successfully inserting an organ
-	var/insert_success_sound = 'sound/items/handling/surgery/organ1.ogg'
+	var/insert_success_sound = '../assets/sound/items/handling/surgery/organ1.ogg'
 	/// Sound played when successfully removing an organ
-	var/remove_success_sound = 'sound/items/handling/surgery/organ2.ogg'
+	var/remove_success_sound = '../assets/sound/items/handling/surgery/organ2.ogg'
 
 	/// Implements used to insert organs
 	var/list/insert_implements = list(
@@ -37,7 +37,7 @@
 	return "[..()] / organ"
 
 /datum/surgery_operation/limb/organ_manipulation/get_default_radial_image()
-	return image('icons/obj/medical/surgery_ui.dmi', "surgery_any")
+	return image('../assets/icons/obj/medical/surgery_ui.dmi', "surgery_any")
 
 /// Checks that the passed organ can be inserted/removed
 /datum/surgery_operation/limb/organ_manipulation/proc/organ_check(obj/item/bodypart/limb, obj/item/organ/organ)
@@ -121,7 +121,7 @@
 	if(!option)
 		option = new()
 		option.image = get_generic_limb_radial_image(limb.body_zone)
-		option.image.overlays += add_radial_overlays(list(image('icons/hud/screen_gen.dmi', "arrow_large_still"), organ.type))
+		option.image.overlays += add_radial_overlays(list(image('../assets/icons/hud/screen_gen.dmi', "arrow_large_still"), organ.type))
 		option.name = "insert [initial(organ.name)]"
 		option.info = "insert [initial(organ.name)] into the [limb.owner ? "patient" : "limb"]."
 		LAZYSET(cached_organ_manipulation_options, "[organ.type]_insert", option)

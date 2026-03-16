@@ -6,7 +6,7 @@
 /obj/machinery/power/solar
 	name = "solar panel"
 	desc = "A solar panel. Generates electricity when in contact with sunlight."
-	icon = 'icons/obj/machines/solar.dmi'
+	icon = '../assets/icons/obj/machines/solar.dmi'
 	icon_state = "sp_base"
 	density = TRUE
 	use_power = NO_POWER_USE
@@ -101,7 +101,7 @@
 
 /obj/machinery/power/solar/crowbar_act(mob/user, obj/item/I)
 	if(I.use_tool(src, user, 0))
-		playsound(src.loc, 'sound/items/deconstruct.ogg', 50, TRUE)
+		playsound(src.loc, '../assets/sound/items/deconstruct.ogg', 50, TRUE)
 		user.visible_message(span_notice("[user] takes the glass off [src]."), span_notice("You take the glass off [src]."))
 		deconstruct(TRUE)
 	return TRUE
@@ -110,17 +110,17 @@
 	switch(damage_type)
 		if(BRUTE)
 			if(machine_stat & BROKEN)
-				playsound(loc, 'sound/effects/hit_on_shattered_glass.ogg', 60, TRUE)
+				playsound(loc, '../assets/sound/effects/hit_on_shattered_glass.ogg', 60, TRUE)
 			else
-				playsound(loc, 'sound/effects/glass/glasshit.ogg', 90, TRUE)
+				playsound(loc, '../assets/sound/effects/glass/glasshit.ogg', 90, TRUE)
 		if(BURN)
-			playsound(loc, 'sound/items/tools/welder.ogg', 100, TRUE)
+			playsound(loc, '../assets/sound/items/tools/welder.ogg', 100, TRUE)
 
 
 /obj/machinery/power/solar/atom_break(damage_flag)
 	. = ..()
 	if(.)
-		playsound(loc, 'sound/effects/glass/glassbr3.ogg', 100, TRUE)
+		playsound(loc, '../assets/sound/effects/glass/glassbr3.ogg', 100, TRUE)
 		unset_control()
 		// Make sure user can see it's broken
 		var/new_angle = rand(160, 200)
@@ -282,11 +282,11 @@
 /obj/item/solar_assembly
 	name = "solar panel assembly"
 	desc = "A solar panel assembly kit, allows constructions of a solar panel, or with a tracking circuit board, a solar tracker."
-	icon = 'icons/obj/machines/solar.dmi'
+	icon = '../assets/icons/obj/machines/solar.dmi'
 	icon_state = "sp_base"
 	inhand_icon_state = "electropack"
-	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/devices_righthand.dmi'
 	w_class = WEIGHT_CLASS_BULKY // Pretty big!
 	anchored = FALSE
 	var/tracker = 0
@@ -355,7 +355,7 @@
 		if(!my_sheet.use(2))
 			to_chat(user, span_warning("You don't have enough glass to complete the tracker."))
 			return
-		playsound(src.loc, 'sound/machines/click.ogg', 50, TRUE)
+		playsound(src.loc, '../assets/sound/machines/click.ogg', 50, TRUE)
 		user.visible_message(span_notice("[user] places the glass on the solar assembly."),span_notice("You place the glass on the solar assembly."))
 		new /obj/machinery/power/tracker/(get_turf(src), src)
 		return TRUE
@@ -409,7 +409,7 @@
 			return
 
 		var/datum/material/glass_material = my_sheet.material_type
-		playsound(src.loc, 'sound/machines/click.ogg', 50, TRUE)
+		playsound(src.loc, '../assets/sound/machines/click.ogg', 50, TRUE)
 		user.visible_message(span_notice("[user] places the glass on the solar assembly."), span_notice("You place the glass on the solar assembly."))
 		var/obj/machinery/power/solar/mySolar = new /obj/machinery/power/solar(get_turf(src), src)
 		mySolar.power_tier = glass_material_to_tier[glass_material]
@@ -426,7 +426,7 @@
 /obj/machinery/power/solar_control
 	name = "solar panel control"
 	desc = "A controller for solar panel arrays."
-	icon = 'icons/obj/machines/computer.dmi'
+	icon = '../assets/icons/obj/machines/computer.dmi'
 	icon_state = "computer"
 	density = TRUE
 	use_power = IDLE_POWER_USE
@@ -616,16 +616,16 @@
 	switch(damage_type)
 		if(BRUTE)
 			if(machine_stat & BROKEN)
-				playsound(src.loc, 'sound/effects/hit_on_shattered_glass.ogg', 70, TRUE)
+				playsound(src.loc, '../assets/sound/effects/hit_on_shattered_glass.ogg', 70, TRUE)
 			else
-				playsound(src.loc, 'sound/effects/glass/glasshit.ogg', 75, TRUE)
+				playsound(src.loc, '../assets/sound/effects/glass/glasshit.ogg', 75, TRUE)
 		if(BURN)
-			playsound(src.loc, 'sound/items/tools/welder.ogg', 100, TRUE)
+			playsound(src.loc, '../assets/sound/items/tools/welder.ogg', 100, TRUE)
 
 /obj/machinery/power/solar_control/atom_break(damage_flag)
 	. = ..()
 	if(.)
-		playsound(loc, 'sound/effects/glass/glassbr3.ogg', 100, TRUE)
+		playsound(loc, '../assets/sound/effects/glass/glassbr3.ogg', 100, TRUE)
 
 /obj/machinery/power/solar_control/process()
 	lastgen = gen

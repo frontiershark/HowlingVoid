@@ -54,7 +54,7 @@
 	if(istype(hand_item, weapon_type))
 		user.temporarilyRemoveItemFromInventory(hand_item, TRUE) //DROPDEL will delete the item
 		if(!silent)
-			playsound(user, 'sound/effects/blob/blobattack.ogg', 30, TRUE)
+			playsound(user, '../assets/sound/effects/blob/blobattack.ogg', 30, TRUE)
 			user.visible_message(span_warning("With a sickening crunch, [user] reforms [user.p_their()] [weapon_name_simple] into an arm!"), span_notice("We assimilate the [weapon_name_simple] back into our body."), span_italics("You hear organic matter ripping and tearing!"))
 		user.update_held_items()
 		return TRUE
@@ -82,7 +82,7 @@
 	var/obj/item/W = new weapon_type(user, silent)
 	user.put_in_hands(W)
 	if(!silent)
-		playsound(user, 'sound/effects/blob/blobattack.ogg', 30, TRUE)
+		playsound(user, '../assets/sound/effects/blob/blobattack.ogg', 30, TRUE)
 	return W
 
 
@@ -144,7 +144,7 @@
 
 		if(blood_on_castoff)
 			H.add_splatter_floor()
-			playsound(H.loc, 'sound/effects/splat.ogg', 50, TRUE) //So real sounds
+			playsound(H.loc, '../assets/sound/effects/splat.ogg', 50, TRUE) //So real sounds
 
 		changeling.chem_recharge_slowdown -= recharge_slowdown
 		return 1
@@ -188,19 +188,19 @@
 /obj/item/melee/arm_blade
 	name = "arm blade"
 	desc = "A grotesque blade made out of bone and flesh that cleaves through people as a hot knife through butter."
-	icon = 'icons/obj/weapons/changeling_items.dmi'
+	icon = '../assets/icons/obj/weapons/changeling_items.dmi'
 	icon_state = "arm_blade"
 	inhand_icon_state = "arm_blade"
 	icon_angle = 180
-	lefthand_file = 'icons/mob/inhands/antag/changeling_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/antag/changeling_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/antag/changeling_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/antag/changeling_righthand.dmi'
 	item_flags = NEEDS_PERMIT | ABSTRACT | DROPDEL
 	w_class = WEIGHT_CLASS_HUGE
 	force = 25
 	throwforce = 0 //Just to be on the safe side
 	throw_range = 0
 	throw_speed = 0
-	hitsound = 'sound/items/weapons/bladeslice.ogg'
+	hitsound = '../assets/sound/items/weapons/bladeslice.ogg'
 	attack_verb_continuous = list("attacks", "slashes", "slices", "tears", "lacerates", "rips", "dices", "cuts")
 	attack_verb_simple = list("attack", "slash", "slice", "tear", "lacerate", "rip", "dice", "cut")
 	sharpness = SHARP_EDGED
@@ -249,7 +249,7 @@
 		if(opening.hasPower())
 			user.visible_message(span_warning("[user] jams [src] into the airlock and starts prying it open!"), span_warning("We start forcing the [opening] open."), \
 			span_hear("You hear a metal screeching sound."))
-			playsound(opening, 'sound/machines/airlock/airlock_alien_prying.ogg', 100, TRUE)
+			playsound(opening, '../assets/sound/machines/airlock/airlock_alien_prying.ogg', 100, TRUE)
 			if(!do_after(user, 10 SECONDS, target = opening))
 				return
 		//user.say("Heeeeeeeeeerrre's Johnny!")
@@ -285,12 +285,12 @@
 /obj/item/gun/magic/tentacle
 	name = "tentacle"
 	desc = "A fleshy tentacle that can stretch out and grab things or people."
-	icon = 'icons/obj/weapons/changeling_items.dmi'
+	icon = '../assets/icons/obj/weapons/changeling_items.dmi'
 	icon_state = "tentacle"
 	inhand_icon_state = "tentacle"
 	icon_angle = 180
-	lefthand_file = 'icons/mob/inhands/antag/changeling_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/antag/changeling_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/antag/changeling_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/antag/changeling_righthand.dmi'
 	item_flags = NEEDS_PERMIT | ABSTRACT | DROPDEL | NOBLUDGEON
 	flags_1 = NONE
 	w_class = WEIGHT_CLASS_HUGE
@@ -298,7 +298,7 @@
 	antimagic_flags = NONE
 	pinless = TRUE
 	ammo_type = /obj/item/ammo_casing/magic/tentacle
-	fire_sound = 'sound/effects/splat.ogg'
+	fire_sound = '../assets/sound/effects/splat.ogg'
 	force = 0
 	max_charges = 1
 	fire_delay = 1 DECISECONDS
@@ -354,7 +354,7 @@
 	damage = 0
 	damage_type = BRUTE
 	range = 8
-	hitsound = 'sound/items/weapons/shove.ogg'
+	hitsound = '../assets/sound/items/weapons/shove.ogg'
 	var/chain
 	var/obj/item/ammo_casing/magic/tentacle/source //the item that shot it
 	///Click params that were used to fire the tentacle shot
@@ -512,10 +512,10 @@
 	name = "shield-like mass"
 	desc = "A mass of tough, boney tissue. You can still see the fingers as a twisted pattern in the shield."
 	item_flags = ABSTRACT | DROPDEL
-	icon = 'icons/obj/weapons/changeling_items.dmi'
+	icon = '../assets/icons/obj/weapons/changeling_items.dmi'
 	icon_state = "ling_shield"
-	lefthand_file = 'icons/mob/inhands/antag/changeling_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/antag/changeling_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/antag/changeling_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/antag/changeling_righthand.dmi'
 	block_chance = 50
 	is_bashable = FALSE
 
@@ -659,7 +659,7 @@
 		return NONE
 	visible_message(span_boldwarning("As [user] shoves [tool] into [src], [src] begins to mutate."))
 	var/mob/living/carbon/wearer = loc
-	playsound(wearer, 'sound/effects/blob/attackblob.ogg', 60, TRUE)
+	playsound(wearer, '../assets/sound/effects/blob/attackblob.ogg', 60, TRUE)
 	wearer.temporarilyRemoveItemFromInventory(wearer.head, TRUE)
 	wearer.equip_to_slot_if_possible(new /obj/item/clothing/head/helmet/changeling_hivehead/legion(wearer), ITEM_SLOT_HEAD, 1, 1, 1)
 	qdel(tool)
@@ -670,7 +670,7 @@
 	desc = "Release a group of bees to attack all other lifeforms."
 	background_icon_state = "bg_demon"
 	overlay_icon_state = "bg_demon_border"
-	button_icon = 'icons/mob/simple/bees.dmi'
+	button_icon = '../assets/icons/mob/simple/bees.dmi'
 	button_icon_state = "queen_item"
 	cooldown_time = 30 SECONDS
 	///The mob we're going to spawn
@@ -699,7 +699,7 @@
 ///Our tell that we're using this ability. Usually a sound and a visible message.area
 /datum/action/cooldown/hivehead_spawn_minions/proc/do_tell()
 	owner.visible_message(span_warning("[owner]'s head begins to buzz as bees begin to pour out!"), span_warning("We release the bees."), span_hear("You hear a loud buzzing sound!"))
-	playsound(owner, 'sound/mobs/non-humanoids/bee/bee_swarm.ogg', 60, TRUE)
+	playsound(owner, '../assets/sound/mobs/non-humanoids/bee/bee_swarm.ogg', 60, TRUE)
 
 ///Stuff we want to do to our minions. This is in its own proc so subtypes can override this behaviour.
 /datum/action/cooldown/hivehead_spawn_minions/proc/minion_additional_changes(mob/living/basic/minion)
@@ -718,7 +718,7 @@
 /datum/action/cooldown/hivehead_spawn_minions/legion
 	name = "Release Legion"
 	desc = "Release a group of legion to attack all other lifeforms."
-	button_icon = 'icons/mob/simple/lavaland/lavaland_monsters.dmi'
+	button_icon = '../assets/icons/mob/simple/lavaland/lavaland_monsters.dmi'
 	button_icon_state = "legion_head"
 	cooldown_time = 15 SECONDS
 	spawn_type = /mob/living/basic/mining/legion_brood
@@ -726,7 +726,7 @@
 
 /datum/action/cooldown/hivehead_spawn_minions/legion/do_tell()
 	owner.visible_message(span_warning("[owner]'s head begins to shake as legion begin to pour out!"), span_warning("We release the legion."), span_hear("You hear a loud squishing sound!"))
-	playsound(owner, 'sound/effects/blob/attackblob.ogg', 60, TRUE)
+	playsound(owner, '../assets/sound/effects/blob/attackblob.ogg', 60, TRUE)
 
 /datum/action/cooldown/hivehead_spawn_minions/legion/minion_additional_changes(mob/living/basic/minion)
 	var/mob/living/basic/mining/legion_brood/brood = minion

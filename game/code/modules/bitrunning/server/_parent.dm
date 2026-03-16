@@ -7,7 +7,7 @@
 	circuit = /obj/item/circuitboard/machine/quantum_server
 	density = TRUE
 	desc = "A hulking computational machine designed to fabricate virtual domains."
-	icon = 'icons/obj/machines/bitrunning.dmi'
+	icon = '../assets/icons/obj/machines/bitrunning.dmi'
 	base_icon_state = "qserver"
 	icon_state = "qserver"
 	/// Affects server cooldown efficiency
@@ -122,9 +122,9 @@
 	glitch_chance *= 2
 	threat_prob_max *= 2
 
-	add_overlay(mutable_appearance('icons/obj/machines/bitrunning.dmi', "emag_overlay"))
+	add_overlay(mutable_appearance('../assets/icons/obj/machines/bitrunning.dmi', "emag_overlay"))
 	balloon_alert(user, "system jailbroken...")
-	playsound(src, 'sound/effects/sparks/sparks1.ogg', 35, vary = TRUE)
+	playsound(src, '../assets/sound/effects/sparks/sparks1.ogg', 35, vary = TRUE)
 
 
 /obj/machinery/quantum_server/update_appearance(updates)

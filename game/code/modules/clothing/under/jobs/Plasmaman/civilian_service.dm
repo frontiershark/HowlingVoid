@@ -4,8 +4,8 @@
 	desc = "A special containment suit that allows plasma-based lifeforms to exist safely in an oxygenated environment, and automatically extinguishes them in a crisis. Despite being airtight, it's not spaceworthy."
 	icon_state = "plasmaman"
 	inhand_icon_state = "plasmaman"
-	icon = 'icons/obj/clothing/under/plasmaman.dmi'
-	worn_icon = 'icons/mob/clothing/under/plasmaman.dmi'
+	icon = '../assets/icons/obj/clothing/under/plasmaman.dmi'
+	worn_icon = '../assets/icons/mob/clothing/under/plasmaman.dmi'
 	clothing_flags = PLASMAMAN_PREVENT_IGNITION | NO_ZONE_DISABLING
 	armor_type = /datum/armor/clothing_under/plasmaman
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
@@ -76,7 +76,7 @@
 	name = "envirosuit extinguisher cartridge"
 	desc = "A cartridge loaded with a compressed extinguisher mix, used to refill the automatic extinguisher on plasma envirosuits."
 	icon_state = "plasmarefill"
-	icon = 'icons/obj/canisters.dmi'
+	icon = '../assets/icons/obj/canisters.dmi'
 
 /obj/item/clothing/under/plasmaman/cargo
 	name = "cargo plasma envirosuit"

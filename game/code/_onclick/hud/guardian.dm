@@ -1,5 +1,5 @@
 /datum/hud/guardian
-	ui_style = 'icons/hud/guardian.dmi'
+	ui_style = '../assets/icons/hud/guardian.dmi'
 
 /datum/hud/guardian/New(mob/living/basic/guardian/owner)
 	..()
@@ -100,7 +100,7 @@
 	..()
 
 /atom/movable/screen/guardian
-	icon = 'icons/hud/guardian.dmi'
+	icon = '../assets/icons/hud/guardian.dmi'
 	mouse_over_pointer = MOUSE_HAND_POINTER
 
 /atom/movable/screen/guardian/manifest

@@ -1,7 +1,7 @@
 /obj/item/gun/ballistic/rifle
 	name = "Bolt Rifle"
 	desc = "Some kind of bolt action rifle. You get the feeling you shouldn't have this."
-	icon = 'icons/obj/weapons/guns/wide_guns.dmi'
+	icon = '../assets/icons/obj/weapons/guns/wide_guns.dmi'
 	icon_state = "sakhno"
 	w_class = WEIGHT_CLASS_BULKY
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/boltaction
@@ -9,12 +9,12 @@
 	bolt_type = BOLT_TYPE_LOCKING
 	semi_auto = FALSE
 	internal_magazine = TRUE
-	fire_sound = 'sound/items/weapons/gun/rifle/shot_heavy.ogg'
+	fire_sound = '../assets/sound/items/weapons/gun/rifle/shot_heavy.ogg'
 	fire_sound_volume = 90
-	rack_sound = 'sound/items/weapons/gun/rifle/bolt_out.ogg'
-	bolt_drop_sound = 'sound/items/weapons/gun/rifle/bolt_in.ogg'
-	drop_sound = 'sound/items/handling/gun/ballistics/rifle/rifle_drop1.ogg'
-	pickup_sound = 'sound/items/handling/gun/ballistics/rifle/rifle_pickup1.ogg'
+	rack_sound = '../assets/sound/items/weapons/gun/rifle/bolt_out.ogg'
+	bolt_drop_sound = '../assets/sound/items/weapons/gun/rifle/bolt_in.ogg'
+	drop_sound = '../assets/sound/items/handling/gun/ballistics/rifle/rifle_drop1.ogg'
+	pickup_sound = '../assets/sound/items/handling/gun/ballistics/rifle/rifle_pickup1.ogg'
 	tac_reloads = FALSE
 	/// Does the bolt need to be open to interact with the gun (e.g. magazine interactions)?
 	var/need_bolt_lock_to_interact = FALSE
@@ -94,7 +94,7 @@
 		else
 			unjam_chance += 10
 			balloon_alert(user, "jammed!")
-			playsound(user,'sound/items/weapons/jammed.ogg', 75, TRUE)
+			playsound(user,'../assets/sound/items/weapons/jammed.ogg', 75, TRUE)
 			return FALSE
 	return ..()
 
@@ -116,12 +116,12 @@
 /obj/item/gun/ballistic/rifle/boltaction/harpoon
 	name = "ballistic harpoon gun"
 	desc = "A weapon favored by carp hunters, but just as infamously employed by agents of the Animal Rights Consortium against human aggressors. Because it's ironic."
-	icon = 'icons/obj/weapons/guns/ballistic.dmi'
+	icon = '../assets/icons/obj/weapons/guns/ballistic.dmi'
 	icon_state = "speargun"
 	inhand_icon_state = "speargun"
 	worn_icon_state = "speargun"
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/boltaction/harpoon
-	fire_sound = 'sound/items/weapons/gun/sniper/shot.ogg'
+	fire_sound = '../assets/sound/items/weapons/gun/sniper/shot.ogg'
 	can_be_sawn_off = FALSE
 
 	SET_BASE_PIXEL(0, 0)
@@ -174,8 +174,8 @@
 	name = "\improper Donk Co. Jezail"
 	desc = "A mass-manufactured bolt-action sporting rifle with a distinctively long barrel. Powerful enough to take down a space bear from a thousand paces. The lengthened barrel gives it good accuracy and power, even at range."
 	w_class = WEIGHT_CLASS_HUGE
-	lefthand_file = 'icons/mob/inhands/weapons/64x_guns_left.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/64x_guns_right.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/64x_guns_left.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/64x_guns_right.dmi'
 	inhand_x_dimension = 64
 	inhand_y_dimension = 64
 	icon_state = "jezail"
@@ -196,11 +196,11 @@
 	desc = "A handcrafted crossbow. \
 		   Aside from conventional sharpened iron rods, it can also fire specialty ammo made from the atmos crystalizer - zaukerite, metallic hydrogen, and healium rods all work. \
 		   Very slow to reload - you can craft the crossbow with a crowbar to loosen the crossbar, but risk a misfire, or worse..."
-	icon = 'icons/obj/weapons/guns/ballistic.dmi'
+	icon = '../assets/icons/obj/weapons/guns/ballistic.dmi'
 	icon_state = "rebarxbow"
 	inhand_icon_state = "rebarxbow"
 	worn_icon_state = "rebarxbow"
-	rack_sound = 'sound/items/weapons/gun/sniper/rack.ogg'
+	rack_sound = '../assets/sound/items/weapons/gun/sniper/rack.ogg'
 	mag_display = FALSE
 	empty_indicator = TRUE
 	bolt_type = BOLT_TYPE_OPEN
@@ -214,7 +214,7 @@
 	weapon_weight = WEAPON_HEAVY
 	initial_caliber = CALIBER_REBAR
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/boltaction/rebarxbow/normal
-	fire_sound = 'sound/items/xbow_lock.ogg'
+	fire_sound = '../assets/sound/items/xbow_lock.ogg'
 	can_be_sawn_off = FALSE
 	tac_reloads = FALSE
 	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 3.1, /datum/material/glass = SMALL_MATERIAL_AMOUNT * 1.2)
@@ -298,7 +298,7 @@
 	icon_state = "pipegun"
 	inhand_icon_state = "pipegun"
 	worn_icon_state = "pipegun"
-	fire_sound = 'sound/items/weapons/gun/sniper/shot.ogg'
+	fire_sound = '../assets/sound/items/weapons/gun/sniper/shot.ogg'
 	custom_materials = list(/datum/material/wood = SHEET_MATERIAL_AMOUNT * 8, /datum/material/iron = SHEET_MATERIAL_AMOUNT * 8, /datum/material/cardboard = SHEET_MATERIAL_AMOUNT)
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/boltaction/pipegun
 
@@ -429,20 +429,20 @@
 	desc = "A boltaction anti-materiel rifle, utilizing .50 BMG cartridges. While technically outdated in modern arms markets, it still works exceptionally well as \
 		an anti-personnel rifle. In particular, the employment of modern armored MODsuits utilizing advanced armor plating has given this weapon a new home on the battlefield. \
 		It is also able to be suppressed... somehow."
-	icon = 'icons/obj/weapons/guns/ballistic.dmi'
+	icon = '../assets/icons/obj/weapons/guns/ballistic.dmi'
 	icon_state = "sniper"
-	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/guns_righthand.dmi'
 	inhand_x_dimension = 32
 	inhand_y_dimension = 32
 	weapon_weight = WEAPON_HEAVY
 	inhand_icon_state = "sniper"
 	worn_icon_state = null
-	fire_sound = 'sound/items/weapons/gun/sniper/shot.ogg'
+	fire_sound = '../assets/sound/items/weapons/gun/sniper/shot.ogg'
 	fire_sound_volume = 90
-	load_sound = 'sound/items/weapons/gun/sniper/mag_insert.ogg'
-	rack_sound = 'sound/items/weapons/gun/sniper/rack.ogg'
-	suppressed_sound = 'sound/items/weapons/gun/general/heavy_shot_suppressed.ogg'
+	load_sound = '../assets/sound/items/weapons/gun/sniper/mag_insert.ogg'
+	rack_sound = '../assets/sound/items/weapons/gun/sniper/rack.ogg'
+	suppressed_sound = '../assets/sound/items/weapons/gun/general/heavy_shot_suppressed.ogg'
 	recoil = 2
 	accepted_magazine_type = /obj/item/ammo_box/magazine/sniper_rounds
 	internal_magazine = FALSE
@@ -467,9 +467,9 @@
 /obj/item/gun/ballistic/rifle/sniper_rifle/reset_fire_cd()
 	. = ..()
 	if(suppressed)
-		playsound(src, 'sound/machines/eject.ogg', 25, TRUE, ignore_walls = FALSE, extrarange = SILENCED_SOUND_EXTRARANGE, falloff_distance = 0)
+		playsound(src, '../assets/sound/machines/eject.ogg', 25, TRUE, ignore_walls = FALSE, extrarange = SILENCED_SOUND_EXTRARANGE, falloff_distance = 0)
 	else
-		playsound(src, 'sound/machines/eject.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/machines/eject.ogg', 50, TRUE)
 
 /obj/item/gun/ballistic/rifle/sniper_rifle/syndicate
 	desc = "A boltaction anti-materiel rifle, utilizing .50 BMG cartridges. While technically outdated in modern arms markets, it still works exceptionally well as \
@@ -486,7 +486,7 @@
 		establishment of the Third Soviet Union in the Spinward Sector. In the wake of the union's collapse, these weapons now hold a \
 		unique place in history amongst the populace of the sector. However, they are strangely rarer than the Sakhno M2442 Army. \
 		Frontier settlers are known for owning one of these for hunting purposes. Or fighting off annoying tax collectors."
-	icon = 'icons/obj/weapons/guns/wide_guns.dmi'
+	icon = '../assets/icons/obj/weapons/guns/wide_guns.dmi'
 	icon_state = "sks"
 	worn_icon_state = "sks"
 	inhand_icon_state = "sks"
@@ -517,15 +517,15 @@
 	name = "\improper Lahti L-39"
 	desc = "The Lahti L-39, now manufactured in space with better materials making it more portable and reliable- still loaded in the same massive cartridge, \
 		this thing was made to go through a tank and come out the other end- imagine what it could do to an exosuit, there's also a completely useless sight which is totally obstructed by the magazine."
-	icon = 'icons/obj/weapons/guns/lahtil39.dmi'
+	icon = '../assets/icons/obj/weapons/guns/lahtil39.dmi'
 	icon_state = "lahtil"
 	inhand_icon_state = "sniper"
 	worn_icon_state = "sniper"
-	fire_sound = 'sound/items/weapons/gun/sniper/shot.ogg'
+	fire_sound = '../assets/sound/items/weapons/gun/sniper/shot.ogg'
 	fire_sound_volume = 90
-	load_sound = 'sound/items/weapons/gun/sniper/mag_insert.ogg'
-	rack_sound = 'sound/items/weapons/gun/sniper/rack.ogg'
-	suppressed_sound = 'sound/items/weapons/gun/general/heavy_shot_suppressed.ogg'
+	load_sound = '../assets/sound/items/weapons/gun/sniper/mag_insert.ogg'
+	rack_sound = '../assets/sound/items/weapons/gun/sniper/rack.ogg'
+	suppressed_sound = '../assets/sound/items/weapons/gun/general/heavy_shot_suppressed.ogg'
 	mag_display = FALSE
 	recoil = 15
 	w_class = WEIGHT_CLASS_BULKY

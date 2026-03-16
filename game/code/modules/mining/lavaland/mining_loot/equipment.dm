@@ -2,9 +2,9 @@
 /obj/item/rod_of_asclepius
 	name = "\improper Rod of Asclepius"
 	desc = "A wooden rod about the size of your forearm with a snake carved around it, winding its way up the sides of the rod. Something about it seems to inspire in you the responsibilty and duty to help others."
-	icon = 'icons/obj/mining_zones/artefacts.dmi'
-	lefthand_file = 'icons/mob/inhands/weapons/staves_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/staves_righthand.dmi'
+	icon = '../assets/icons/obj/mining_zones/artefacts.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/staves_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/staves_righthand.dmi'
 	icon_state = "asclepius_dormant"
 	inhand_icon_state = "asclepius_dormant"
 	icon_angle = -45
@@ -74,7 +74,7 @@
 /obj/item/warp_cube
 	name = "blue cube"
 	desc = "A mysterious blue cube."
-	icon = 'icons/obj/mining_zones/artefacts.dmi'
+	icon = '../assets/icons/obj/mining_zones/artefacts.dmi'
 	icon_state = "blue_cube"
 	var/teleport_color = "#3FBAFD"
 	var/obj/item/warp_cube/linked
@@ -142,7 +142,7 @@
 /obj/item/immortality_talisman
 	name = "\improper Immortality Talisman"
 	desc = "A dread talisman that can render you completely invulnerable."
-	icon = 'icons/obj/mining_zones/artefacts.dmi'
+	icon = '../assets/icons/obj/mining_zones/artefacts.dmi'
 	icon_state = "talisman"
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
 	actions_types = list(/datum/action/item_action/immortality)
@@ -167,7 +167,7 @@
 	name = "hole in reality"
 	desc = "It's shaped an awful lot like a person."
 	icon_state = "blank"
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	var/vanish_description = "vanishes from reality"
 	// Weakref to the user who we're "acting" on
 	var/datum/weakref/user_ref
@@ -229,7 +229,7 @@
 /obj/item/shared_storage
 	name = "paradox bag"
 	desc = "Somehow, it's in two places at once."
-	icon = 'icons/obj/mining_zones/artefacts.dmi'
+	icon = '../assets/icons/obj/mining_zones/artefacts.dmi'
 	icon_state = "paradox_bag"
 	worn_icon_state = "paradoxbag"
 	slot_flags = ITEM_SLOT_BELT

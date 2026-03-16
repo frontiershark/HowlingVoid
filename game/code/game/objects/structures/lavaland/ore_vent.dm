@@ -8,7 +8,7 @@
 /obj/structure/ore_vent
 	name = "ore vent"
 	desc = "An ore vent, brimming with underground ore. Scan with an advanced mining scanner to start extracting ore from it."
-	icon = 'icons/obj/mining_zones/terrain.dmi'
+	icon = '../assets/icons/obj/mining_zones/terrain.dmi'
 	icon_state = "ore_vent"
 	base_icon_state = "ore_vent"
 	move_resist = MOVE_FORCE_EXTREMELY_STRONG
@@ -84,7 +84,7 @@
 		SSore_generation.processed_vents += src
 		icon_state = icon_state_tapped
 		update_appearance(UPDATE_ICON_STATE)
-		add_overlay(mutable_appearance('icons/obj/mining_zones/terrain.dmi', "well", ABOVE_MOB_LAYER))
+		add_overlay(mutable_appearance('../assets/icons/obj/mining_zones/terrain.dmi', "well", ABOVE_MOB_LAYER))
 
 	RegisterSignal(src, COMSIG_SPAWNER_SPAWNED_DEFAULT, PROC_REF(anti_cheese))
 	RegisterSignal(src, COMSIG_SPAWNER_SPAWNED, PROC_REF(log_mob_spawned))
@@ -124,14 +124,14 @@
 		/* NOVA EDIT CHANGE START - ORIGINAL:
 		if(do_after(user, boulder_size * 1 SECONDS, src))
 			user.apply_damage(20, STAMINA)
-			playsound(src, 'sound/items/weapons/genhit.ogg', 50, TRUE)
+			playsound(src, '../assets/sound/items/weapons/genhit.ogg', 50, TRUE)
 		*/ 
 		if(!do_after(user, boulder_size * 1 SECONDS, src))
 			user.balloon_alert(user, "stay still!")
 			return
 		user.balloon_alert(user, i > 2 ? "got one!" : "digging around...")
 		user.apply_damage(20, STAMINA)
-		playsound(src, 'sound/items/weapons/genhit.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/items/weapons/genhit.ogg', 50, TRUE)
 		// NOVA EDIT CHANGE END
 	produce_boulder(TRUE)
 	visible_message(span_notice("You've successfully produced a boulder! Boy are your arms tired."))
@@ -358,7 +358,7 @@
 			user_id_card.registered_account.mining_points += point_reward_val
 			user_id_card.registered_account.bank_card_talk("You have been awarded [point_reward_val] mining points for your efforts.")
 	reset_drone(success = TRUE)
-	add_overlay(mutable_appearance('icons/obj/mining_zones/terrain.dmi', "well", ABOVE_MOB_LAYER))
+	add_overlay(mutable_appearance('../assets/icons/obj/mining_zones/terrain.dmi', "well", ABOVE_MOB_LAYER))
 
 /**
  * Sends our node back to base and cleans up after the reference
@@ -388,7 +388,7 @@
 			balloon_alert(user, "already scanning!")
 			return
 		balloon_alert(user, "scanning...")
-		playsound(src, 'sound/items/timer.ogg', 30, TRUE)
+		playsound(src, '../assets/sound/items/timer.ogg', 30, TRUE)
 		if(!do_after(user, 4 SECONDS, src))
 			return
 

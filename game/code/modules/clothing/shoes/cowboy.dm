@@ -11,7 +11,7 @@
 	/// Do these boots have spur sounds?
 	var/has_spurs = FALSE
 	/// The jingle jangle jingle of our spurs
-	var/list/spur_sound = list('sound/effects/footstep/spurs1.ogg'=1,'sound/effects/footstep/spurs2.ogg'=1,'sound/effects/footstep/spurs3.ogg'=1)
+	var/list/spur_sound = list('../assets/sound/effects/footstep/spurs1.ogg'=1,'../assets/sound/effects/footstep/spurs2.ogg'=1,'../assets/sound/effects/footstep/spurs3.ogg'=1)
 
 /datum/armor/shoes_cowboy
 	bio = 90
@@ -87,7 +87,7 @@
 /obj/item/clothing/shoes/cowboy/lizard
 	name = "lizardskin boots"
 	desc = "You can hear a faint hissing from inside the boots; you hope it is just a mournful ghost."
-	icon = 'icons/map_icons/clothing/shoes.dmi'
+	icon = '../assets/icons/map_icons/clothing/shoes.dmi'
 	icon_state = "/obj/item/clothing/shoes/cowboy/lizard"
 	post_init_icon_state = "lizardboots"
 	greyscale_config = /datum/greyscale_config/lizard_shoes

@@ -199,7 +199,7 @@
 		return
 
 	var/turf/draw_to = master_SW || master_NE || master_SE || master_NW
-	var/mutable_appearance/display = mutable_appearance('icons/turf/debug.dmi', "corner_color", LIGHT_DEBUG_LAYER, draw_to, BALLOON_CHAT_PLANE)
+	var/mutable_appearance/display = mutable_appearance('../assets/icons/turf/debug.dmi', "corner_color", LIGHT_DEBUG_LAYER, draw_to, BALLOON_CHAT_PLANE)
 	if(x > draw_to.x)
 		display.pixel_w = 16
 	else

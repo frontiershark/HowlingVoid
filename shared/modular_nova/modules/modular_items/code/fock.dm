@@ -19,11 +19,11 @@
 	special_desc = "Made by a disgruntled inventor that got into an argument with the FTU over their colonial prybars, the Full Override Control Kit \
 	is marketed as a solution to emergency situations where the integrity of machinery is of less concern than the lives at stake of their users. \
 	Sadly, some unsavory types had been known to be using the F.O.C.K. to do the exact kind of activities that the inventor wanted to stop. "
-	icon = 'icons/obj/devices/tool.dmi'
+	icon = '../assets/icons/obj/devices/tool.dmi'
 	icon_state = "multitool"
 	inhand_icon_state = "multitool"
-	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/tools_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/tools_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/tools_righthand.dmi'
 	custom_premium_price = PAYCHECK_COMMAND * 3
 
 /obj/item/multitool/fock/interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)
@@ -39,7 +39,7 @@
 	return ..()
 
 /obj/item/multitool/fock/proc/hack_door(obj/machinery/door/door, mob/living/user) //stolen from Pai hacking
-	playsound(src, 'sound/machines/airlock/airlock_alien_prying.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/machines/airlock/airlock_alien_prying.ogg', 50, TRUE)
 	balloon_alert(user, "overriding...")
 	do_sparks(4, TRUE, door)
 	visible_message(span_warning("Sparks fly out of [door]!"))

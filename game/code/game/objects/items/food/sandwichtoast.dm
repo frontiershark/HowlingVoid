@@ -1,7 +1,7 @@
 /obj/item/food/sandwich
 	name = "sandwich"
 	desc = "A grand creation of meat, cheese, bread, and several leaves of lettuce! Arthur Dent would be proud."
-	icon = 'icons/obj/food/burgerbread.dmi'
+	icon = '../assets/icons/obj/food/burgerbread.dmi'
 	icon_state = "sandwich"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 6,
@@ -82,7 +82,7 @@
 /obj/item/food/griddle_toast
 	name = "griddle toast"
 	desc = "Thick cut bread, griddled to perfection."
-	icon = 'icons/obj/food/burgerbread.dmi'
+	icon = '../assets/icons/obj/food/burgerbread.dmi'
 	icon_state = "griddle_toast"
 	food_reagents = list(/datum/reagent/consumable/nutriment/vitamin = 3)
 	tastes = list("toast" = 1)
@@ -94,7 +94,7 @@
 /obj/item/food/butteredtoast
 	name = "buttered toast"
 	desc = "Butter lightly spread over a piece of toast."
-	icon = 'icons/obj/food/burgerbread.dmi'
+	icon = '../assets/icons/obj/food/burgerbread.dmi'
 	icon_state = "butteredtoast"
 	bite_consumption = 3
 	food_reagents = list(
@@ -110,7 +110,7 @@
 /obj/item/food/jelliedtoast
 	name = "jellied toast"
 	desc = "A slice of toast covered with delicious jam."
-	icon = 'icons/obj/food/burgerbread.dmi'
+	icon = '../assets/icons/obj/food/burgerbread.dmi'
 	icon_state = "jellytoast"
 	bite_consumption = 3
 	tastes = list("toast" = 1, "jelly" = 1)
@@ -130,7 +130,7 @@
 /obj/item/food/twobread
 	name = "two bread"
 	desc = "This seems awfully bitter."
-	icon = 'icons/obj/food/burgerbread.dmi'
+	icon = '../assets/icons/obj/food/burgerbread.dmi'
 	icon_state = "twobread"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 3,
@@ -145,7 +145,7 @@
 /obj/item/food/hotdog
 	name = "hotdog"
 	desc = "Fresh footlong ready to go down on."
-	icon = 'icons/obj/food/meat.dmi'
+	icon = '../assets/icons/obj/food/meat.dmi'
 	icon_state = "hotdog"
 	bite_consumption = 3
 	food_reagents = list(
@@ -169,7 +169,7 @@
 /obj/item/food/danish_hotdog
 	name = "danish hotdog"
 	desc = "Appetizing bun, with a sausage in the middle, covered with sauce, fried onion and pickles rings"
-	icon = 'icons/obj/food/meat.dmi'
+	icon = '../assets/icons/obj/food/meat.dmi'
 	icon_state = "danish_hotdog"
 	bite_consumption = 4
 	food_reagents = list(

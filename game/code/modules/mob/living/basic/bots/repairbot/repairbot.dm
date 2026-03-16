@@ -2,7 +2,7 @@
 /mob/living/basic/bot/repairbot
 	name = "\improper Repairbot"
 	desc = "I can fix it!"
-	icon = 'icons/mob/silicon/aibots.dmi'
+	icon = '../assets/icons/mob/silicon/aibots.dmi'
 	icon_state = "repairbot1"
 	base_icon_state = "repairbot"
 	pass_flags = parent_type::pass_flags | PASSTABLE
@@ -50,18 +50,18 @@
 	)
 	///our neutral voicelines
 	var/static/list/neutral_voicelines = list(
-		REPAIRBOT_VOICED_BRICK = 'sound/mobs/non-humanoids/repairbot/brick.ogg',
-		REPAIRBOT_VOICED_ENTROPY = 'sound/mobs/non-humanoids/repairbot/entropy.ogg',
-		REPAIRBOT_VOICED_FIX_IT = 'sound/mobs/non-humanoids/repairbot/fixit.ogg',
-		REPAIRBOT_VOICED_FIX_TOUCH = 'sound/mobs/non-humanoids/repairbot/fixtouch.ogg',
-		REPAIRBOT_VOICED_HOLE = 'sound/mobs/non-humanoids/repairbot/patchingholes.ogg',
-		REPAIRBOT_VOICED_PAY = 'sound/mobs/non-humanoids/repairbot/pay.ogg',
+		REPAIRBOT_VOICED_BRICK = '../assets/sound/mobs/non-humanoids/repairbot/brick.ogg',
+		REPAIRBOT_VOICED_ENTROPY = '../assets/sound/mobs/non-humanoids/repairbot/entropy.ogg',
+		REPAIRBOT_VOICED_FIX_IT = '../assets/sound/mobs/non-humanoids/repairbot/fixit.ogg',
+		REPAIRBOT_VOICED_FIX_TOUCH = '../assets/sound/mobs/non-humanoids/repairbot/fixtouch.ogg',
+		REPAIRBOT_VOICED_HOLE = '../assets/sound/mobs/non-humanoids/repairbot/patchingholes.ogg',
+		REPAIRBOT_VOICED_PAY = '../assets/sound/mobs/non-humanoids/repairbot/pay.ogg',
 	)
 	///our emagged voicelines
 	var/static/list/emagged_voicelines = list(
-		REPAIRBOT_VOICED_ENTROPY = 'sound/mobs/non-humanoids/repairbot/entropy.ogg',
-		REPAIRBOT_VOICED_STRINGS = 'sound/mobs/non-humanoids/repairbot/strings.ogg',
-		REPAIRBOT_VOICED_PASSION = 'sound/mobs/non-humanoids/repairbot/passionproject.ogg',
+		REPAIRBOT_VOICED_ENTROPY = '../assets/sound/mobs/non-humanoids/repairbot/entropy.ogg',
+		REPAIRBOT_VOICED_STRINGS = '../assets/sound/mobs/non-humanoids/repairbot/strings.ogg',
+		REPAIRBOT_VOICED_PASSION = '../assets/sound/mobs/non-humanoids/repairbot/passionproject.ogg',
 	)
 	///types we can retrieve from our ui
 	var/static/list/retrievable_types = list(
@@ -364,9 +364,9 @@
 	desc = "A most robust bot!"
 	attack_verb_continuous = list("robusts")
 	attack_verb_simple = list("robust")
-	hitsound = 'sound/items/weapons/smash.ogg'
-	drop_sound = 'sound/items/handling/toolbox/toolbox_drop.ogg'
-	pickup_sound = 'sound/items/handling/toolbox/toolbox_pickup.ogg'
+	hitsound = '../assets/sound/items/weapons/smash.ogg'
+	drop_sound = '../assets/sound/items/handling/toolbox/toolbox_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/toolbox/toolbox_pickup.ogg'
 	///the bot we own
 	var/atom/movable/our_bot
 

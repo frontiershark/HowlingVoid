@@ -48,7 +48,7 @@
 	equipAntagOnDummy(mannequin, ert)
 
 	CHECK_TICK
-	var/icon/preview_icon = icon('icons/effects/effects.dmi', "nothing")
+	var/icon/preview_icon = icon('../assets/icons/effects/effects.dmi', "nothing")
 	preview_icon.Scale(48+32, 16+32)
 	CHECK_TICK
 	mannequin.setDir(NORTH)

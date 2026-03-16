@@ -106,7 +106,7 @@
 		<a href='byond://?src=[REF(src)];different_event=1'>SOMETHING ELSE</a>)</font>")
 	for(var/client/staff as anything in GLOB.admins)
 		if(staff?.prefs.read_preference(/datum/preference/toggle/comms_notification))
-			SEND_SOUND(staff, sound('sound/misc/server-ready.ogg'))
+			SEND_SOUND(staff, sound('../assets/sound/misc/server-ready.ogg'))
 	sleep(RANDOM_EVENT_ADMIN_INTERVENTION_TIME * 0.5)
 
 	if(triggering)

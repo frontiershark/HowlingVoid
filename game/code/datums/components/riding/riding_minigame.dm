@@ -47,9 +47,9 @@
 	set_difficulty(ridden, rider)
 	RegisterSignal(rider, COMSIG_MOB_UNBUCKLED, PROC_REF(lose_minigame))
 	RegisterSignal(ridden, COMSIG_MOVABLE_ATTEMPTED_MOVE, PROC_REF(on_ridden_moved))
-	minigame_holder = image(icon='icons/effects/effects.dmi', loc=rider,icon_state="nothing", layer = 0)
+	minigame_holder = image(icon='../assets/icons/effects/effects.dmi', loc=rider,icon_state="nothing", layer = 0)
 	minigame_holder.pixel_w = 32
-	heart_counter = image(icon='icons/effects/effects.dmi', loc=rider,icon_state="nothing", layer = 0)
+	heart_counter = image(icon='../assets/icons/effects/effects.dmi', loc=rider,icon_state="nothing", layer = 0)
 	heart_counter.pixel_z = -32
 	SET_PLANE_EXPLICIT(minigame_holder, ABOVE_HUD_PLANE, rider)
 	SET_PLANE_EXPLICIT(heart_counter, ABOVE_HUD_PLANE, rider)
@@ -74,7 +74,7 @@
 	var/x_offset = 0
 	for(var/direction in void_arrow_order)
 		var/obj/effect/overlay/vis/ride_minigame/new_arrow = new
-		new_arrow.icon = 'icons/effects/riding_minigame.dmi'
+		new_arrow.icon = '../assets/icons/effects/riding_minigame.dmi'
 		new_arrow.icon_state = "blank_arrow"
 		new_arrow.setDir(text2dir(direction))
 		new_arrow.pixel_x = x_offset
@@ -88,7 +88,7 @@
 	var/x_offset = -32
 	for(var/i in 1 to required_successes)
 		var/obj/effect/overlay/vis/ride_minigame/heart = new
-		heart.icon = 'icons/effects/effects.dmi'
+		heart.icon = '../assets/icons/effects/effects.dmi'
 		heart.icon_state = "empty_heart"
 		heart.pixel_x = x_offset
 		x_offset += 8
@@ -119,7 +119,7 @@
 	current_attempts++
 	var/picked_arrow = pick(possible_arrows)
 	var/obj/effect/overlay/vis/ride_minigame/new_arrow = new
-	new_arrow.icon = 'icons/effects/riding_minigame.dmi'
+	new_arrow.icon = '../assets/icons/effects/riding_minigame.dmi'
 	new_arrow.icon_state = "[picked_arrow]_arrow"
 	new_arrow.alpha = 0
 	new_arrow.layer = ABOVE_ALL_MOB_LAYER + 0.1

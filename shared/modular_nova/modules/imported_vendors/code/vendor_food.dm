@@ -55,7 +55,7 @@
 /obj/item/food/vendor_tray_meal/Initialize(mapload)
 	. = ..()
 	if(hot_and_steamy)
-		overlays += mutable_appearance('icons/effects/steam.dmi', "steam_triple", ABOVE_OBJ_LAYER)
+		overlays += mutable_appearance('../assets/icons/effects/steam.dmi', "steam_triple", ABOVE_OBJ_LAYER)
 
 /obj/item/food/vendor_tray_meal/examine_more(mob/user)
 	. = ..()

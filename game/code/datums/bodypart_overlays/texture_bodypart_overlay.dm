@@ -28,20 +28,20 @@
 /datum/bodypart_overlay/texture/spacey
 	blocks_emissive = EMISSIVE_BLOCK_NONE
 	texture_icon_state = "spacey"
-	texture_icon = 'icons/mob/human/textures.dmi'
+	texture_icon = '../assets/icons/mob/human/textures.dmi'
 	overlay_priority = BODYPART_OVERLAY_VOIDWALKER_CURSE
 
 /datum/bodypart_overlay/texture/carpskin
 	texture_icon_state = "carpskin"
-	texture_icon = 'icons/mob/human/textures.dmi'
+	texture_icon = '../assets/icons/mob/human/textures.dmi'
 	overlay_priority = BODYPART_OVERLAY_CARP_INFUSION
 
 /datum/bodypart_overlay/texture/checkered
 	texture_icon_state = "checkered"
-	texture_icon = 'icons/mob/human/textures.dmi'
+	texture_icon = '../assets/icons/mob/human/textures.dmi'
 	overlay_priority = BODYPART_OVERLAY_CSS_SUICIDE
 
 /datum/bodypart_overlay/texture/fishscale
 	texture_icon_state = "fishscale"
-	texture_icon = 'icons/mob/human/textures.dmi'
+	texture_icon = '../assets/icons/mob/human/textures.dmi'
 	overlay_priority = BODYPART_OVERLAY_FISH_INFUSION

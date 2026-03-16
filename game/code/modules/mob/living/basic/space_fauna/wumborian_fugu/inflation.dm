@@ -6,7 +6,7 @@
 /datum/action/cooldown/fugu_expand
 	name = "Inflate"
 	desc = "Temporarily increases your size, making you significantly more dangerous and durable!"
-	button_icon = 'icons/mob/actions/actions_animal.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_animal.dmi'
 	button_icon_state = "expand"
 	background_icon_state = "bg_fugu"
 	overlay_icon_state = "bg_fugu_border"

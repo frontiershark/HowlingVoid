@@ -10,7 +10,7 @@ GLOBAL_LIST_INIT(command_strings, list(
 
 /mob/living/basic/bot
 	abstract_type = /mob/living/basic/bot
-	icon = 'icons/mob/silicon/aibots.dmi'
+	icon = '../assets/icons/mob/silicon/aibots.dmi'
 	layer = MOB_LAYER
 	gender = NEUTER
 	mob_biotypes = MOB_ROBOTIC
@@ -76,7 +76,7 @@ GLOBAL_LIST_INIT(command_strings, list(
 	///The trim type that will grant additional acces
 	var/datum/id_trim/additional_access
 	///file the path icon is stored in
-	var/path_image_icon = 'icons/mob/silicon/aibots.dmi'
+	var/path_image_icon = '../assets/icons/mob/silicon/aibots.dmi'
 	///state of the path icon
 	var/path_image_icon_state = "path_indicator"
 	///what color this path icon will use
@@ -249,7 +249,7 @@ GLOBAL_LIST_INIT(command_strings, list(
 		log_combat(user, src, "ejected [key_name(src)] from control of [src] ([initial(src.name)]).")
 	to_chat(src, span_warning("You feel yourself fade as your personality matrix is reset!"))
 	ghostize(can_reenter_corpse = FALSE)
-	playsound(src, 'sound/machines/ping.ogg', 30, TRUE)
+	playsound(src, '../assets/sound/machines/ping.ogg', 30, TRUE)
 	speak("Personality matrix reset!")
 	key = null
 
@@ -261,7 +261,7 @@ GLOBAL_LIST_INIT(command_strings, list(
 
 /// Fired after something takes control of this mob
 /mob/living/basic/bot/proc/post_possession()
-	playsound(src, 'sound/machines/ping.ogg', 30, TRUE)
+	playsound(src, '../assets/sound/machines/ping.ogg', 30, TRUE)
 	speak("New personality installed successfully!")
 	rename(src)
 

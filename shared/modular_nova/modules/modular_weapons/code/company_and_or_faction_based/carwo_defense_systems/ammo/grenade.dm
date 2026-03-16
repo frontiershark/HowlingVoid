@@ -98,7 +98,7 @@
 
 /obj/projectile/bullet/c980grenade/smoke/fuse_activation(atom/target)
 	playsound(src, 'modular_nova/modules/modular_weapons/sounds/grenade_burst.ogg', 50, TRUE, -3)
-	playsound(src, 'sound/effects/smoke.ogg', 50, TRUE, -3)
+	playsound(src, '../assets/sound/effects/smoke.ogg', 50, TRUE, -3)
 	do_smoke(GRENADE_SMOKE_RANGE, src, src, smoke_type = /datum/effect_system/fluid_spread/smoke/bad)
 
 /obj/item/ammo_box/c980grenade/smoke
@@ -206,7 +206,7 @@
 /obj/projectile/bullet/c980grenade/shrapnel/phosphor/fuse_activation(atom/target)
 	. = ..()
 
-	playsound(src, 'sound/effects/smoke.ogg', 50, TRUE, -3)
+	playsound(src, '../assets/sound/effects/smoke.ogg', 50, TRUE, -3)
 	do_smoke(GRENADE_SMOKE_RANGE, src, src, smoke_type = /datum/effect_system/fluid_spread/smoke/quick)
 
 /obj/item/ammo_box/c980grenade/shrapnel/phosphor
@@ -239,7 +239,7 @@
 
 /obj/projectile/bullet/c980grenade/riot/fuse_activation(atom/target)
 	playsound(src, 'modular_nova/modules/modular_weapons/sounds/grenade_burst.ogg', 50, TRUE, -3)
-	playsound(src, 'sound/effects/smoke.ogg', 50, TRUE, -3)
+	playsound(src, '../assets/sound/effects/smoke.ogg', 50, TRUE, -3)
 	do_chem_smoke(GRENADE_SMOKE_RANGE, src, src, /datum/reagent/consumable/condensedcapsaicin, 10, smoke_type = /datum/effect_system/fluid_spread/smoke/chem)
 
 /obj/item/ammo_box/c980grenade/riot

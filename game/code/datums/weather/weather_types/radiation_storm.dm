@@ -11,7 +11,7 @@
 	weather_duration_lower = 1 MINUTES
 	weather_duration_upper = 2.5 MINUTES
 	weather_color = "green"
-	weather_sound = 'sound/announcer/alarm/bloblarm.ogg'
+	weather_sound = '../assets/sound/announcer/alarm/bloblarm.ogg'
 
 	end_duration = 10 SECONDS
 	end_message = span_notice("The air seems to be cooling off again.")

@@ -3,7 +3,7 @@
 /obj/machinery/suit_storage_unit
 	name = "suit storage unit"
 	desc = "An industrial unit made to hold, charge, and decontaminate equipment. It comes with a built-in UV cauterization mechanism. A small warning label advises that organic matter should not be placed into the unit."
-	icon = 'icons/obj/machines/suit_storage.dmi'
+	icon = '../assets/icons/obj/machines/suit_storage.dmi'
 	icon_state = "classic"
 	base_icon_state = "classic"
 	power_channel = AREA_USAGE_EQUIP
@@ -356,9 +356,9 @@
 	var/list/choices = list()
 
 	if (locked)
-		choices["unlock"] = icon('icons/hud/radial.dmi', "radial_unlock")
+		choices["unlock"] = icon('../assets/icons/hud/radial.dmi', "radial_unlock")
 	else if (state_open)
-		choices["close"] = icon('icons/hud/radial.dmi', "radial_close")
+		choices["close"] = icon('../assets/icons/hud/radial.dmi', "radial_close")
 
 		for (var/item_key in items)
 			var/item = vars[item_key]
@@ -368,9 +368,9 @@
 				// If the item doesn't exist, put a silhouette in its place
 				choices[item_key] = items[item_key]
 	else
-		choices["open"] = icon('icons/hud/radial.dmi', "radial_open")
-		choices["disinfect"] = icon('icons/hud/radial.dmi', "radial_disinfect")
-		choices["lock"] = icon('icons/hud/radial.dmi', "radial_lock")
+		choices["open"] = icon('../assets/icons/hud/radial.dmi', "radial_open")
+		choices["disinfect"] = icon('../assets/icons/hud/radial.dmi', "radial_disinfect")
+		choices["lock"] = icon('../assets/icons/hud/radial.dmi', "radial_lock")
 
 	var/choice = show_radial_menu(
 		user,
@@ -506,7 +506,7 @@
 		locked = FALSE
 		if(uv_super)
 			visible_message(span_warning("[src]'s door creaks open with a loud whining noise. A cloud of foul black smoke escapes from its chamber."))
-			playsound(src, 'sound/machines/airlock/airlock_alien_prying.ogg', 50, TRUE)
+			playsound(src, '../assets/sound/machines/airlock/airlock_alien_prying.ogg', 50, TRUE)
 			do_smoke(0, src, src, smoke_type = /datum/effect_system/fluid_spread/smoke/bad/black)
 			QDEL_NULL(helmet)
 			QDEL_NULL(suit)
@@ -521,7 +521,7 @@
 			else
 				visible_message(span_warning("[src]'s door slides open, barraging you with the nauseating smell of charred flesh."))
 				qdel(mob_occupant.GetComponent(/datum/component/irradiated))
-			playsound(src, 'sound/machines/airlock/airlockclose.ogg', 25, TRUE)
+			playsound(src, '../assets/sound/machines/airlock/airlockclose.ogg', 25, TRUE)
 			var/list/things_to_clear = list() //Done this way since using GetAllContents on the SSU itself would include circuitry and such.
 			if(suit)
 				things_to_clear += suit

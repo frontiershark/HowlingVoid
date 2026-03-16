@@ -20,8 +20,8 @@
 	armour_penetration = 100
 	wound_bonus = 80
 	wound_falloff_tile = 0
-	hitsound = 'sound/effects/bang.ogg'
-	hitsound_wall = 'sound/effects/bang.ogg'
+	hitsound = '../assets/sound/effects/bang.ogg'
+	hitsound_wall = '../assets/sound/effects/bang.ogg'
 	max_pierces = 3
 	speed = 4
 	random_crits_enabled = FALSE

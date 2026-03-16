@@ -98,7 +98,7 @@
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDESNOUT
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH | PEPPERPROOF
 
-	playsound(src, 'sound/items/modsuit/magnetic_harness.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/modsuit/magnetic_harness.ogg', 50, TRUE)
 	face_shield = shield_in_question
 
 	icon_state = "bulletproof_glass"
@@ -120,7 +120,7 @@
 		face_shield = null // just to be safe
 	else
 		user.put_in_hands(face_shield)
-		playsound(src, 'sound/items/modsuit/magnetic_harness.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/items/modsuit/magnetic_harness.ogg', 50, TRUE)
 		face_shield = null
 
 	icon_state = initial(icon_state)

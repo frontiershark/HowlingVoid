@@ -8,7 +8,7 @@
 /mob/living/basic/gorilla
 	name = "Gorilla"
 	desc = "A ground-dwelling, predominantly herbivorous ape which usually inhabits the forests of central Africa but today is quite far away from there."
-	icon = 'icons/mob/simple/gorilla.dmi'
+	icon = '../assets/icons/mob/simple/gorilla.dmi'
 	icon_state = "crawling"
 	icon_living = "crawling"
 	icon_dead = "dead"
@@ -31,7 +31,7 @@
 	obj_damage = 40
 	attack_verb_continuous = "pummels"
 	attack_verb_simple = "pummel"
-	attack_sound = 'sound/items/weapons/punch1.ogg'
+	attack_sound = '../assets/sound/items/weapons/punch1.ogg'
 	unique_name = TRUE
 	ai_controller = /datum/ai_controller/basic_controller/gorilla
 	faction = list(FACTION_MONKEY, FACTION_JUNGLE)
@@ -151,7 +151,7 @@
 /// Cargo's wonderful mascot, the tranquil box-carrying ape
 /mob/living/basic/gorilla/cargorilla
 	name = "Cargorilla" // Overriden, normally
-	icon = 'icons/mob/simple/cargorillia.dmi'
+	icon = '../assets/icons/mob/simple/cargorillia.dmi'
 	desc = "Cargo's pet gorilla. They seem to have an 'I love Mom' tattoo."
 	maxHealth = 200
 	health = 200

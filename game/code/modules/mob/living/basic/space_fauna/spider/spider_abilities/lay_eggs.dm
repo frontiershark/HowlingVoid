@@ -1,7 +1,7 @@
 /datum/action/cooldown/mob_cooldown/lay_eggs
 	name = "Lay Eggs"
 	desc = "Lay a cluster of eggs, which will soon grow into a normal spider."
-	button_icon = 'icons/mob/actions/actions_animal.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_animal.dmi'
 	button_icon_state = "lay_eggs"
 	background_icon_state = "bg_alien"
 	overlay_icon_state = "bg_alien_border"

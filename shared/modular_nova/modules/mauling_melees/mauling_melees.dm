@@ -11,7 +11,7 @@
 	force = 20
 	w_class = WEIGHT_CLASS_BULKY
 	throwforce = 10
-	hitsound = 'sound/items/weapons/bladeslice.ogg'
+	hitsound = '../assets/sound/items/weapons/bladeslice.ogg'
 	throw_speed = 1
 	throw_range = 5
 	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 6)

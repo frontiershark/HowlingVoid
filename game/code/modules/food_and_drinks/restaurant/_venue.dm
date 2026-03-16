@@ -161,7 +161,7 @@
 /obj/machinery/restaurant_portal
 	name = "restaurant portal"
 	desc = "A robot-only gate into the wonders of Space Station cuisine!"
-	icon = 'icons/obj/machines/restaurant_portal.dmi'
+	icon = '../assets/icons/obj/machines/restaurant_portal.dmi'
 	icon_state = "portal"
 	base_icon_state = "portal"
 	anchored = TRUE
@@ -236,7 +236,7 @@
 
 	for(var/type_key in SSrestaurant.all_venues)
 		var/datum/venue/venue = SSrestaurant.all_venues[type_key]
-		radial_items[venue.name] = image('icons/obj/machines/restaurant_portal.dmi', venue.name)
+		radial_items[venue.name] = image('../assets/icons/obj/machines/restaurant_portal.dmi', venue.name)
 		radial_results[venue.name] = type_key
 
 	var/choice = show_radial_menu(user, src, radial_items, null, require_near = TRUE)
@@ -316,7 +316,7 @@
 /obj/structure/holosign/robot_seat
 	density = FALSE
 	desc = "Used to indicate a place to sit for a robot tourist. I better be careful."
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	icon_state = "eating_zone"
 	layer = BELOW_MOB_LAYER
 	use_vis_overlay = FALSE

@@ -88,7 +88,7 @@
 
 /obj/machinery/self_actualization_device/close_machine(atom/movable/target, density_to_set = TRUE)
 	..()
-	playsound(src, 'sound/machines/click.ogg', 50)
+	playsound(src, '../assets/sound/machines/click.ogg', 50)
 	if(!occupant)
 		return FALSE
 	if(!ishuman(occupant))
@@ -158,7 +158,7 @@
 	if(COOLDOWN_FINISHED(src, advert_time))
 		COOLDOWN_START(src, advert_time, rand(ADVERT_TIME, ADVERT_TIME * 2))
 		say(pick(advertisements))
-		playsound(loc, 'sound/machines/chime.ogg', 30, FALSE)
+		playsound(loc, '../assets/sound/machines/chime.ogg', 30, FALSE)
 
 	use_energy(active_power_usage)
 
@@ -173,11 +173,11 @@
 	if(player_consent != NO_CONSENT)
 		return
 
-	playsound(loc, 'sound/machines/chime.ogg', 30, FALSE)
+	playsound(loc, '../assets/sound/machines/chime.ogg', 30, FALSE)
 	say("Procedure validation in progress...")
 	var/mob/living/carbon/human/human_occupant = occupant
 	if(!isnull(human_occupant.ckey) && isnull(human_occupant.client)) // player mob, currently disconnected
-		playsound(src, 'sound/machines/buzz/buzz-sigh.ogg', 50, FALSE)
+		playsound(src, '../assets/sound/machines/buzz/buzz-sigh.ogg', 50, FALSE)
 		say("ERROR: Validation failed: No elicited response from occupant genes. Subject may be suffering from Sudden Sleep Disorder.")
 		return
 
@@ -197,7 +197,7 @@
 		update_appearance()
 	else
 		player_consent = NO_CONSENT
-		playsound(src, 'sound/machines/buzz/buzz-sigh.ogg', 50, FALSE)
+		playsound(src, '../assets/sound/machines/buzz/buzz-sigh.ogg', 50, FALSE)
 		say("ERROR: Validation failed: Occupant genes have willfully rejected the procedure. You may try again if you think this was an error.")
 		update_appearance()
 
@@ -221,12 +221,12 @@
 		var/datum/preferences/check_prefs = patient.client?.prefs
 		if(!istype(check_prefs))
 			say("Uh-oh! We tried to contact user manufacturer, but they blocked our requests. Aborting operation.")
-			playsound(src, 'sound/machines/microwave/microwave-end.ogg', 100, FALSE)
+			playsound(src, '../assets/sound/machines/microwave/microwave-end.ogg', 100, FALSE)
 			open_machine()
 			return
 		if(!is_augmented_enough(check_prefs))
 			say("Uh-oh! It seems like your manufacturer has provided blueprints with organic components to actualize your body! Aborting operation.")
-			playsound(src, 'sound/machines/microwave/microwave-end.ogg', 100, FALSE)
+			playsound(src, '../assets/sound/machines/microwave/microwave-end.ogg', 100, FALSE)
 			open_machine()
 			return
 		old_ai_brain.undeploy()
@@ -247,7 +247,7 @@
 		message_admins("[key_name_admin(patient)] has used the Self-Actualization Device, and changed the name of their character. \
 		Original Name: [original_name], New Name: [patient.dna.real_name]. \
 		This may be a false positive from changing from a humanized monkey into a character, so be careful.")
-	playsound(src, 'sound/machines/microwave/microwave-end.ogg', 100, FALSE)
+	playsound(src, '../assets/sound/machines/microwave/microwave-end.ogg', 100, FALSE)
 	say("Procedure complete! Enjoy your life being a new you!")
 
 	open_machine()

@@ -3,7 +3,7 @@
 /obj/structure/noticeboard
 	name = "notice board"
 	desc = "A board for pinning important notices upon. It is made of the finest Spanish cork."
-	icon = 'icons/obj/wallmounts.dmi'
+	icon = '../assets/icons/obj/wallmounts.dmi'
 	icon_state = "noticeboard"
 	density = FALSE
 	anchored = TRUE
@@ -131,7 +131,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/noticeboard, 32)
 /obj/item/wallframe/noticeboard
 	name = "notice board"
 	desc = "Right now it's more of a clipboard. Attach to a wall to use."
-	icon = 'icons/obj/wallmounts.dmi'
+	icon = '../assets/icons/obj/wallmounts.dmi'
 	icon_state = "noticeboard"
 	custom_materials = list(
 		/datum/material/wood = SHEET_MATERIAL_AMOUNT,

@@ -1,6 +1,6 @@
 //unsorted miscellaneous temporary visuals
 /obj/effect/temp_visual/dir_setting/bloodsplatter
-	icon = 'icons/effects/blood.dmi'
+	icon = '../assets/icons/effects/blood.dmi'
 	icon_state = "splatter1"
 	base_icon_state = "splatter"
 	duration = 5
@@ -58,7 +58,7 @@
 	randomdir = 0
 
 /obj/effect/temp_visual/dir_setting/firing_effect
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	icon_state = "firing_effect"
 	duration = 3
 
@@ -83,12 +83,12 @@
 	..()
 
 /obj/effect/temp_visual/dir_setting/firing_effect/blue
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	icon_state = "firing_effect_blue"
 	duration = 3
 
 /obj/effect/temp_visual/dir_setting/firing_effect/red
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	icon_state = "firing_effect_red"
 	duration = 3
 
@@ -98,7 +98,7 @@
 
 /obj/effect/temp_visual/dir_setting/ninja
 	name = "ninja shadow"
-	icon = 'icons/mob/simple/mob.dmi'
+	icon = '../assets/icons/mob/simple/mob.dmi'
 	icon_state = "uncloak"
 	duration = 9
 
@@ -117,7 +117,7 @@
 
 /obj/effect/temp_visual/dir_setting/wraith
 	name = "shadow"
-	icon = 'icons/mob/nonhuman-player/cult.dmi'
+	icon = '../assets/icons/mob/nonhuman-player/cult.dmi'
 	icon_state = "phase_shift2_cult"
 	duration = 0.6 SECONDS
 
@@ -154,7 +154,7 @@
 	icon_state = "curseblob"
 
 /obj/effect/temp_visual/dir_setting/curse/grasp_portal
-	icon = 'icons/effects/64x64.dmi'
+	icon = '../assets/icons/effects/64x64.dmi'
 	layer = ABOVE_ALL_MOB_LAYER
 	plane = ABOVE_GAME_PLANE
 	pixel_y = -16
@@ -173,7 +173,7 @@
 /obj/effect/temp_visual/bsa_splash
 	name = "\improper Bluespace energy wave"
 	desc = "A massive, rippling wave of bluepace energy, all rapidly exhausting itself the moment it leaves the concentrated beam of light."
-	icon = 'icons/effects/beam_splash.dmi'
+	icon = '../assets/icons/effects/beam_splash.dmi'
 	icon_state = "beam_splash_e"
 	layer = ABOVE_ALL_MOB_LAYER
 	plane = ABOVE_GAME_PLANE
@@ -191,7 +191,7 @@
 /obj/effect/temp_visual/bsa_impact
 	name = "\improper Bluespace Artillery detonation"
 	desc = "Tearing into conventional space once more, the immense energy of the beam is delivered directly into the target and its surroundings."
-	icon = 'icons/effects/96x160.dmi'
+	icon = '../assets/icons/effects/96x160.dmi'
 	icon_state = "bsa_impact_ex"
 	layer = ABOVE_ALL_MOB_LAYER
 	plane = ABOVE_GAME_PLANE
@@ -201,7 +201,7 @@
 
 /obj/effect/temp_visual/wizard
 	name = "water"
-	icon = 'icons/mob/simple/mob.dmi'
+	icon = '../assets/icons/mob/simple/mob.dmi'
 	icon_state = "reappear"
 	duration = 5
 
@@ -210,7 +210,7 @@
 	duration = 12
 
 /obj/effect/temp_visual/monkeyify
-	icon = 'icons/mob/simple/mob.dmi'
+	icon = '../assets/icons/mob/simple/mob.dmi'
 	icon_state = "h2monkey"
 	duration = 22
 
@@ -218,7 +218,7 @@
 	icon_state = "monkey2h"
 
 /obj/effect/temp_visual/borgflash
-	icon = 'icons/mob/simple/mob.dmi'
+	icon = '../assets/icons/mob/simple/mob.dmi'
 	icon_state = "blspell"
 	duration = 5
 
@@ -268,7 +268,7 @@
 	duration = 5
 
 /obj/effect/temp_visual/fire
-	icon = 'icons/effects/fire.dmi'
+	icon = '../assets/icons/effects/fire.dmi'
 	icon_state = "heavy"
 	light_range = LIGHT_RANGE_FIRE
 	light_color = LIGHT_COLOR_FIRE
@@ -314,7 +314,7 @@
 	apply_wibbly_filters(src)
 
 /obj/effect/temp_visual/gib_animation
-	icon = 'icons/mob/simple/mob.dmi'
+	icon = '../assets/icons/mob/simple/mob.dmi'
 	duration = 15
 
 /obj/effect/temp_visual/gib_animation/Initialize(mapload, gib_icon)
@@ -322,10 +322,10 @@
 	. = ..()
 
 /obj/effect/temp_visual/gib_animation/animal
-	icon = 'icons/mob/simple/animal.dmi'
+	icon = '../assets/icons/mob/simple/animal.dmi'
 
 /obj/effect/temp_visual/mummy_animation
-	icon = 'icons/mob/simple/mob.dmi'
+	icon = '../assets/icons/mob/simple/mob.dmi'
 	icon_state = "mummy_revive"
 	duration = 20
 
@@ -343,7 +343,7 @@
 
 /obj/effect/temp_visual/kinetic_blast
 	name = "kinetic explosion"
-	icon = 'icons/obj/weapons/guns/projectiles.dmi'
+	icon = '../assets/icons/obj/weapons/guns/projectiles.dmi'
 	icon_state = "kinetic_blast"
 	layer = ABOVE_ALL_MOB_LAYER
 	plane = ABOVE_GAME_PLANE
@@ -351,7 +351,7 @@
 
 /obj/effect/temp_visual/explosion
 	name = "explosion"
-	icon = 'icons/effects/96x96.dmi'
+	icon = '../assets/icons/effects/96x96.dmi'
 	icon_state = "explosion"
 	pixel_x = -32
 	pixel_y = -32
@@ -428,7 +428,7 @@
 
 /obj/effect/temp_visual/heart
 	name = "heart"
-	icon = 'icons/mob/simple/animal.dmi'
+	icon = '../assets/icons/mob/simple/animal.dmi'
 	icon_state = "heart"
 	duration = 25
 
@@ -440,7 +440,7 @@
 
 /obj/effect/temp_visual/annoyed
 	name = "annoyed"
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	icon_state = "annoyed"
 	duration = 25
 
@@ -452,7 +452,7 @@
 
 /obj/effect/temp_visual/bleed
 	name = "bleed"
-	icon = 'icons/effects/bleed.dmi'
+	icon = '../assets/icons/effects/bleed.dmi'
 	icon_state = "bleed0"
 	duration = 10
 	var/shrink = TRUE
@@ -513,7 +513,7 @@
 	duration = 2 SECONDS
 
 /obj/effect/constructing_effect
-	icon = 'icons/effects/rcd.dmi'
+	icon = '../assets/icons/effects/rcd.dmi'
 	icon_state = ""
 	layer = ABOVE_ALL_MOB_LAYER
 	plane = ABOVE_GAME_PLANE
@@ -584,7 +584,7 @@
 /obj/effect/constructing_effect/proc/attacked(mob/user)
 	user.do_attack_animation(src, ATTACK_EFFECT_PUNCH)
 	user.changeNext_move(CLICK_CD_MELEE)
-	playsound(loc, 'sound/items/weapons/egloves.ogg', vol = 80, vary = TRUE)
+	playsound(loc, '../assets/sound/items/weapons/egloves.ogg', vol = 80, vary = TRUE)
 	end()
 
 /obj/effect/constructing_effect/attackby(obj/item/weapon, mob/user, list/modifiers, list/attack_modifiers)
@@ -599,12 +599,12 @@
 
 /obj/effect/temp_visual/thunderbolt
 	icon_state = "thunderbolt"
-	icon = 'icons/effects/32x96.dmi'
+	icon = '../assets/icons/effects/32x96.dmi'
 	duration = 0.6 SECONDS
 
 /obj/effect/temp_visual/light_ash
 	icon_state = "light_ash"
-	icon = 'icons/effects/weather_effects.dmi'
+	icon = '../assets/icons/effects/weather_effects.dmi'
 	duration = 3.2 SECONDS
 
 /obj/effect/temp_visual/sonar_ping
@@ -753,7 +753,7 @@
 
 /obj/effect/temp_visual/mech_attack_aoe_charge
 	name = "mech attack aoe charge"
-	icon = 'icons/effects/96x96.dmi'
+	icon = '../assets/icons/effects/96x96.dmi'
 	icon_state = "mech_attack_aoe_charge"
 	duration = 0.5 SECONDS
 	pixel_x = -32
@@ -761,7 +761,7 @@
 
 /obj/effect/temp_visual/mech_attack_aoe_attack
 	name = "mech attack aoe attack"
-	icon = 'icons/effects/96x96.dmi'
+	icon = '../assets/icons/effects/96x96.dmi'
 	icon_state = "mech_attack_aoe_attack"
 	duration = 0.5 SECONDS
 	pixel_x = -32
@@ -769,7 +769,7 @@
 
 /obj/effect/temp_visual/spotlight
 	name = "Spotlight"
-	icon = 'icons/effects/light_overlays/light_64.dmi'
+	icon = '../assets/icons/effects/light_overlays/light_64.dmi'
 	icon_state = "spotlight"
 	duration = 5 MINUTES
 	pixel_x = -16
@@ -777,7 +777,7 @@
 
 /// Visual effect spawned when the bioscrambler scrambles your bio
 /obj/effect/temp_visual/circle_wave
-	icon = 'icons/effects/64x64.dmi'
+	icon = '../assets/icons/effects/64x64.dmi'
 	icon_state = "circle_wave"
 	pixel_x = -16
 	pixel_y = -16

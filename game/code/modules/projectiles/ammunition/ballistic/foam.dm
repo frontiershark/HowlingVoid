@@ -3,7 +3,7 @@
 	desc = "It's Donk or Don't! Ages 8 and up."
 	projectile_type = /obj/projectile/bullet/foam_dart
 	caliber = CALIBER_FOAM
-	icon = 'icons/obj/weapons/guns/toy.dmi'
+	icon = '../assets/icons/obj/weapons/guns/toy.dmi'
 	icon_state = "foamdart"
 	base_icon_state = "foamdart"
 	custom_materials = list(/datum/material/iron = SMALL_MATERIAL_AMOUNT * 0.1125)

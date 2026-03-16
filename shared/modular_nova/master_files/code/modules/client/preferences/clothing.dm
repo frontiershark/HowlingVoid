@@ -49,11 +49,11 @@
 /datum/preference/choiced/bra/icon_for(value)
 	var/static/datum/universal_icon/body
 	if (isnull(body))
-		body = uni_icon('icons/mob/human/bodyparts_greyscale.dmi', "human_r_arm")
-		body.blend_icon(uni_icon('icons/mob/human/bodyparts_greyscale.dmi', "human_l_arm"), ICON_OVERLAY)
-		body.blend_icon(uni_icon('icons/mob/human/bodyparts_greyscale.dmi', "human_r_hand"), ICON_OVERLAY)
-		body.blend_icon(uni_icon('icons/mob/human/bodyparts_greyscale.dmi', "human_l_hand"), ICON_OVERLAY)
-		body.blend_icon(uni_icon('icons/mob/human/bodyparts_greyscale.dmi', "human_chest_m"), ICON_OVERLAY)
+		body = uni_icon('../assets/icons/mob/human/bodyparts_greyscale.dmi', "human_r_arm")
+		body.blend_icon(uni_icon('../assets/icons/mob/human/bodyparts_greyscale.dmi', "human_l_arm"), ICON_OVERLAY)
+		body.blend_icon(uni_icon('../assets/icons/mob/human/bodyparts_greyscale.dmi', "human_r_hand"), ICON_OVERLAY)
+		body.blend_icon(uni_icon('../assets/icons/mob/human/bodyparts_greyscale.dmi', "human_l_hand"), ICON_OVERLAY)
+		body.blend_icon(uni_icon('../assets/icons/mob/human/bodyparts_greyscale.dmi', "human_chest_m"), ICON_OVERLAY)
 
 	var/datum/universal_icon/icon_with_bra = body.copy()
 

@@ -1,7 +1,7 @@
 /obj/item/market_uplink
 	name = "\improper Market Uplink"
 	desc = "A market uplink. Usable with markets. You probably shouldn't have this!"
-	icon = 'icons/obj/devices/blackmarket.dmi'
+	icon = '../assets/icons/obj/devices/blackmarket.dmi'
 	icon_state = "uplink"
 	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 0.65, /datum/material/glass = SMALL_MATERIAL_AMOUNT * 3.3)
 	// UI variables.
@@ -152,7 +152,7 @@
 /obj/item/market_uplink/blackmarket
 	name = "\improper Black Market Uplink"
 	desc = "An illegal black market uplink. If command wanted you to have these, they wouldn't have made it so hard to get one."
-	icon = 'icons/obj/devices/blackmarket.dmi'
+	icon = '../assets/icons/obj/devices/blackmarket.dmi'
 	icon_state = "uplink"
 	//The original black market uplink
 	accessible_markets = list(/datum/market/blackmarket)

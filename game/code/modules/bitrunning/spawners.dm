@@ -60,7 +60,7 @@
 	name = "Virtual Pirate Remains"
 	desc = "Some inanimate bones. They feel like they could spring to life at any moment!"
 	density = FALSE
-	icon = 'icons/effects/blood.dmi'
+	icon = '../assets/icons/effects/blood.dmi'
 	icon_state = "remains"
 	prompt_name = "a virtual skeleton pirate"
 	you_are_text = "You are a virtual pirate. Yarrr!"
@@ -83,7 +83,7 @@
 //Syndicate
 /obj/effect/mob_spawn/ghost_role/human/virtual_domain/syndie
 	name = "Virtual Syndicate Sleeper"
-	icon = 'icons/obj/machines/sleeper.dmi'
+	icon = '../assets/icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper_s"
 	prompt_name = "a virtual syndicate operative"
 	you_are_text = "You are a virtual syndicate operative."

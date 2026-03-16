@@ -1,7 +1,7 @@
 /obj/item/wallframe/light_fixture
 	name = "light fixture frame"
 	desc = "Used for building lights."
-	icon = 'icons/obj/lighting.dmi'
+	icon = '../assets/icons/obj/lighting.dmi'
 	icon_state = "tube-construct-item"
 	result_path = /obj/structure/light_construct
 	wall_external = TRUE
@@ -54,7 +54,7 @@
 		balloon_alert(user, "already has a light!")
 		return
 
-	playsound(src.loc, 'sound/machines/click.ogg', 75, TRUE)
+	playsound(src.loc, '../assets/sound/machines/click.ogg', 75, TRUE)
 	user.visible_message(span_notice("[user.name] attaches [src] to the floor."),
 		span_notice("You attach [src] to the floor."),
 		span_hear("You hear clicking."))

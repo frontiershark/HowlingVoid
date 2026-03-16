@@ -82,8 +82,8 @@
 	icon = 'modular_nova/modules/magfed_turret/icons/turrets/ruins.dmi'
 	icon_state = "35_spider_toolbox"
 	inhand_icon_state = "smoke" //I dont want to squash-make something. This should cover until i work something.
-	lefthand_file = 'icons/mob/inhands/equipment/security_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/security_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/security_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/security_righthand.dmi'
 	throw_speed = 2
 	w_class = WEIGHT_CLASS_NORMAL // This isn't going to spawn outside of ruins/ghost roles, so it being small shouldn't be too big of a concern?
 	quick_deployable = TRUE

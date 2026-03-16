@@ -58,7 +58,7 @@
 	var/altlayeroverlay = FALSE
 	if(set_overlay_offset(piping_layer) == 2)
 		altlayeroverlay = TRUE
-	overclock_overlay = mutable_appearance('icons/obj/machines/atmospherics/binary_devices.dmi', "vpumpoverclock[altlayeroverlay ? "2" : ""]")
+	overclock_overlay = mutable_appearance('../assets/icons/obj/machines/atmospherics/binary_devices.dmi', "vpumpoverclock[altlayeroverlay ? "2" : ""]")
 	if(overclocked && on && is_operational)
 		add_overlay(overclock_overlay)
 	else

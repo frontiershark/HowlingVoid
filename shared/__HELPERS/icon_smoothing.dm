@@ -278,7 +278,7 @@ xxx xxx xxx
 	#undef SMOOTH_AGAINST
 	#undef SEARCH_ADJ_IN_DIR
 
-#define DEFAULT_UNDERLAY_ICON 'icons/turf/floors.dmi'
+#define DEFAULT_UNDERLAY_ICON '../assets/icons/turf/floors.dmi'
 #define DEFAULT_UNDERLAY_ICON_STATE "plating"
 
 ///Changes the icon state based on the new junction bitmask
@@ -460,7 +460,7 @@ xxx xxx xxx
 //Example smooth wall
 /turf/closed/wall/smooth
 	name = "smooth wall"
-	icon = 'icons/turf/smooth_wall.dmi'
+	icon = '../assets/icons/turf/smooth_wall.dmi'
 	icon_state = "smooth_wall-0"
 	base_icon_state = "smooth_wall"
 	smoothing_flags = SMOOTH_BITMASK|SMOOTH_DIAGONAL_CORNERS|SMOOTH_BORDER

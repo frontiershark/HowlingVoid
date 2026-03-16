@@ -1,14 +1,14 @@
 // fire leaper bubble ability
 /datum/action/cooldown/mob_cooldown/projectile_attack/leaper_bubble
 	name = "Fire Leaper Bubble"
-	button_icon = 'icons/obj/weapons/guns/projectiles.dmi'
+	button_icon = '../assets/icons/obj/weapons/guns/projectiles.dmi'
 	button_icon_state = "leaper"
 	desc = "Fires a poisonous leaper bubble towards the victim!"
 	background_icon_state = "bg_revenant"
 	overlay_icon_state = "bg_revenant_border"
 	cooldown_time = 7 SECONDS
 	projectile_type = /obj/projectile/leaper
-	projectile_sound = 'sound/effects/snap.ogg'
+	projectile_sound = '../assets/sound/effects/snap.ogg'
 	shared_cooldown = NONE
 
 // bubble ability objects and effects
@@ -18,7 +18,7 @@
 	paralyze = 5 SECONDS
 	damage = 0
 	range = 7
-	hitsound = 'sound/effects/snap.ogg'
+	hitsound = '../assets/sound/effects/snap.ogg'
 	nondirectional_sprite = TRUE
 	impact_effect_type = /obj/effect/temp_visual/leaper_projectile_impact
 
@@ -38,7 +38,7 @@
 
 /obj/effect/temp_visual/leaper_projectile_impact
 	name = "leaper bubble"
-	icon = 'icons/obj/weapons/guns/projectiles.dmi'
+	icon = '../assets/icons/obj/weapons/guns/projectiles.dmi'
 	icon_state = "leaper_bubble_pop"
 	layer = ABOVE_ALL_MOB_LAYER
 	duration = 3 SECONDS
@@ -50,7 +50,7 @@
 /obj/effect/decal/cleanable/leaper_sludge
 	name = "leaper sludge"
 	desc = "A small pool of sludge, containing trace amounts of leaper venom."
-	icon = 'icons/effects/tomatodecal.dmi'
+	icon = '../assets/icons/effects/tomatodecal.dmi'
 	icon_state = "tomato_floor1"
 
 // bubble ability reagent
@@ -73,7 +73,7 @@
 /obj/structure/leaper_bubble
 	name = "leaper bubble"
 	desc = "A floating bubble containing leaper venom. The contents are under a surprising amount of pressure."
-	icon = 'icons/obj/weapons/guns/projectiles.dmi'
+	icon = '../assets/icons/obj/weapons/guns/projectiles.dmi'
 	icon_state = "leaper"
 	max_integrity = 10
 	density = FALSE
@@ -90,7 +90,7 @@
 
 /obj/structure/leaper_bubble/Destroy()
 	new /obj/effect/temp_visual/leaper_projectile_impact(get_turf(src))
-	playsound(src,'sound/effects/snap.ogg', 50, TRUE)
+	playsound(src,'../assets/sound/effects/snap.ogg', 50, TRUE)
 	return ..()
 
 /obj/structure/leaper_bubble/proc/on_entered(datum/source, atom/movable/bubbled)
@@ -99,7 +99,7 @@
 		return
 	var/mob/living/bubbled_mob = bubbled
 
-	playsound(src, 'sound/effects/snap.ogg',50, TRUE)
+	playsound(src, '../assets/sound/effects/snap.ogg',50, TRUE)
 	bubbled_mob.Paralyze(5 SECONDS)
 	if(iscarbon(bubbled_mob))
 		bubbled_mob.reagents.add_reagent(/datum/reagent/toxin/leaper_venom, 5)
@@ -110,7 +110,7 @@
 // blood rain ability
 /datum/action/cooldown/mob_cooldown/blood_rain
 	name = "Blood Rain"
-	button_icon = 'icons/effects/effects.dmi'
+	button_icon = '../assets/icons/effects/effects.dmi'
 	button_icon_state = "blood_effect_falling"
 	background_icon_state = "bg_revenant"
 	overlay_icon_state = "bg_revenant_border"
@@ -135,7 +135,7 @@
 	if(!length(possible_turfs))
 		return FALSE
 
-	playsound(owner, 'sound/effects/magic/fireball.ogg', 70, TRUE)
+	playsound(owner, '../assets/sound/effects/magic/fireball.ogg', 70, TRUE)
 	new /obj/effect/temp_visual/blood_drop_rising(get_turf(owner))
 	addtimer(CALLBACK(src, PROC_REF(fire_droplets), possible_turfs), 1.5 SECONDS)
 	StartCooldown()
@@ -154,7 +154,7 @@
 // blood rain effects
 /obj/effect/temp_visual/blood_drop_rising
 	name = "leaper bubble"
-	icon = 'icons/obj/weapons/guns/projectiles.dmi'
+	icon = '../assets/icons/obj/weapons/guns/projectiles.dmi'
 	icon_state = "leaper"
 	layer = ABOVE_ALL_MOB_LAYER
 	duration = 1 SECONDS
@@ -165,7 +165,7 @@
 
 /obj/effect/temp_visual/blood_drop_falling
 	name = "leaper bubble"
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	icon_state = "blood_effect_falling"
 	layer = ABOVE_ALL_MOB_LAYER
 	duration = 0.7 SECONDS
@@ -177,12 +177,12 @@
 	animate(src, pixel_y = 0, time = duration)
 
 /obj/effect/temp_visual/blood_drop_falling/proc/create_blood_structure()
-	playsound(src, 'sound/effects/snap.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/effects/snap.ogg', 50, TRUE)
 	new /obj/structure/leaper_bubble(get_turf(src))
 
 /obj/effect/temp_visual/shadow_telegraph
 	name = "shadow"
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	icon_state = "shadow_telegraph"
 	duration = 1.5 SECONDS
 
@@ -207,7 +207,7 @@
 	return TRUE
 
 /datum/action/cooldown/mob_cooldown/belly_flop/proc/flop_on_turf(turf/target, original_pixel_y)
-	playsound(get_turf(owner), 'sound/effects/meteorimpact.ogg', 200, TRUE)
+	playsound(get_turf(owner), '../assets/sound/effects/meteorimpact.ogg', 200, TRUE)
 	for(var/mob/living/victim in oview(1, owner))
 		if(victim in owner.buckled_mobs)
 			continue
@@ -223,7 +223,7 @@
 /obj/effect/temp_visual/leaper_crush
 	name = "grim tidings"
 	desc = "Incoming leaper!"
-	icon = 'icons/effects/96x96.dmi'
+	icon = '../assets/icons/effects/96x96.dmi'
 	icon_state = "lily_pad"
 	layer = BELOW_MOB_LAYER
 	plane = GAME_PLANE
@@ -233,7 +233,7 @@
 // summon toads ability
 /datum/action/cooldown/spell/conjure/limit_summons/create_suicide_toads
 	name = "Summon Suicide Toads"
-	button_icon = 'icons/mob/simple/animal.dmi'
+	button_icon = '../assets/icons/mob/simple/animal.dmi'
 	button_icon_state = "frog_trash"
 	background_icon_state = "bg_revenant"
 	overlay_icon_state = "bg_revenant_border"

@@ -23,10 +23,10 @@
 /obj/item/instrument/piano_synth/headphones
 	name = "headphones"
 	desc = "Unce unce unce unce. Boop!"
-	icon = 'icons/obj/clothing/accessories.dmi'
-	worn_icon = 'icons/mob/clothing/head/costume.dmi'
-	lefthand_file = 'icons/mob/inhands/clothing/ears_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/clothing/ears_righthand.dmi'
+	icon = '../assets/icons/obj/clothing/accessories.dmi'
+	worn_icon = '../assets/icons/mob/clothing/head/costume.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/clothing/ears_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/clothing/ears_righthand.dmi'
 	icon_state = "headphones"
 	inhand_icon_state = "headphones"
 	slot_flags = ITEM_SLOT_EARS | ITEM_SLOT_HEAD
@@ -35,7 +35,7 @@
 	custom_price = PAYCHECK_CREW * 2.5
 	equip_sound = SFX_HEADSET_EQUIP
 	pickup_sound = SFX_HEADSET_PICKUP
-	drop_sound = 'sound/items/handling/headset/headset_drop1.ogg'
+	drop_sound = '../assets/sound/items/handling/headset/headset_drop1.ogg'
 	instrument_range = 1
 	circuit_type = /obj/item/circuit_component/synth/headphones
 	shell_capacity = SHELL_CAPACITY_TINY
@@ -60,7 +60,7 @@
 	name = "\improper Nanotrasen space pods"
 	desc = "Flex your money, AND ignore what everyone else says, all at once!"
 	icon_state = "spacepods"
-	worn_icon = 'icons/mob/clothing/ears.dmi'
+	worn_icon = '../assets/icons/mob/clothing/ears.dmi'
 	inhand_icon_state = null
 	slot_flags = ITEM_SLOT_EARS
 	strip_delay = 10 SECONDS //air pods don't fall out

@@ -124,7 +124,7 @@ among other potential differences. This granularity is helpful for things like t
 /obj/item/broken_missile
 	name = "broken missile"
 	desc = "A missile that did not detonate. The tail has snapped and it is in no way fit to be used again."
-	icon = 'icons/obj/weapons/guns/projectiles.dmi'
+	icon = '../assets/icons/obj/weapons/guns/projectiles.dmi'
 	icon_state = "missile_broken"
 	w_class = WEIGHT_CLASS_TINY
 

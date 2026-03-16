@@ -4,7 +4,7 @@
 /datum/action/cooldown/mob_cooldown/watcher_gaze
 	name = "Disorienting Gaze"
 	desc = "After a delay, flash everyone looking at you."
-	button_icon = 'icons/mob/actions/actions_animal.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_animal.dmi'
 	button_icon_state = "gaze"
 	background_icon_state = "bg_demon"
 	overlay_icon_state = "bg_demon_border"
@@ -56,7 +56,7 @@
 		if (!apply_effect(viewer))
 			continue
 		var/image/flashed_overlay = image(
-			icon = 'icons/effects/eldritch.dmi',
+			icon = '../assets/icons/effects/eldritch.dmi',
 			loc = viewer,
 			icon_state = "eye_flash"
 		)
@@ -83,7 +83,7 @@
 /// Display an animated overlay over our head to indicate what's going on
 /datum/action/cooldown/mob_cooldown/watcher_gaze/proc/show_indicator_overlay(overlay_state)
 	clear_current_overlay()
-	current_overlay = image(icon = 'icons/effects/eldritch.dmi', loc = owner, icon_state = overlay_state, layer = ABOVE_ALL_MOB_LAYER)
+	current_overlay = image(icon = '../assets/icons/effects/eldritch.dmi', loc = owner, icon_state = overlay_state, layer = ABOVE_ALL_MOB_LAYER)
 	current_overlay.pixel_w = -owner.pixel_x
 	current_overlay.pixel_z = 28
 	SET_PLANE_EXPLICIT(current_overlay, ABOVE_LIGHTING_PLANE, owner)

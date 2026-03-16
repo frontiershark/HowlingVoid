@@ -20,9 +20,9 @@ GLOBAL_LIST_INIT(fish_compatible_fluid_types, list(
 	name = "fish"
 	desc = "very bland"
 	abstract_type = /obj/item/fish
-	icon = 'icons/obj/aquarium/fish.dmi'
-	lefthand_file = 'icons/mob/inhands/fish_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/fish_righthand.dmi'
+	icon = '../assets/icons/obj/aquarium/fish.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/fish_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/fish_righthand.dmi'
 	icon_angle = 180
 	force = 6
 	throwforce = 6
@@ -30,7 +30,7 @@ GLOBAL_LIST_INIT(fish_compatible_fluid_types, list(
 	attack_verb_continuous = list("slaps", "whacks")
 	attack_verb_simple = list("slap", "whack")
 	hitsound = SFX_DEFAULT_FISH_SLAP
-	drop_sound = 'sound/mobs/non-humanoids/fish/fish_drop1.ogg'
+	drop_sound = '../assets/sound/mobs/non-humanoids/fish/fish_drop1.ogg'
 	pickup_sound = SFX_FISH_PICKUP
 	sound_vary = TRUE
 	obj_flags = UNIQUE_RENAME
@@ -50,7 +50,7 @@ GLOBAL_LIST_INIT(fish_compatible_fluid_types, list(
 	var/sprite_height
 
 	///this icon file will be used for in-aquarium visual for the fish
-	var/dedicated_in_aquarium_icon = 'icons/obj/aquarium/fish.dmi'
+	var/dedicated_in_aquarium_icon = '../assets/icons/obj/aquarium/fish.dmi'
 	/**
 	 * The icon_state that will be used for in-aquarium visual for the fish
 	 * If not set, "[initial(icon_state)]_small" will be used instead
@@ -344,7 +344,7 @@ GLOBAL_LIST_INIT(fish_compatible_fluid_types, list(
 	return ITEM_INTERACT_SUCCESS
 
 /obj/item/fish/proc/released(atom/location, mob/living/user)
-	playsound(location, 'sound/effects/splash.ogg', 50)
+	playsound(location, '../assets/sound/effects/splash.ogg', 50)
 	SEND_SIGNAL(location, COMSIG_FISH_RELEASED_INTO, src, user)
 	qdel(src)
 
@@ -1597,14 +1597,14 @@ GLOBAL_LIST_INIT(fish_compatible_fluid_types, list(
 			)
 		var/body_zone = pick(BODY_ZONE_R_ARM, BODY_ZONE_L_ARM)
 		user.apply_damage((force * 0.2) + w_class * 2, BRUTE, body_zone, user.run_armor_check(body_zone, MELEE))
-		playsound(src,'sound/items/weapons/bite.ogg', 45, TRUE, -1)
+		playsound(src,'../assets/sound/items/weapons/bite.ogg', 45, TRUE, -1)
 	else
 		if(in_aquarium)
 			to_chat(user, span_notice("[src] dances around!"))
 		else
 			to_chat(user, span_notice("You pet [src] as you hold [p_they()]."))
 		user.add_mood_event("petted_fish", /datum/mood_event/fish_petting, src, HAS_MIND_TRAIT(user, TRAIT_MORBID))
-		playsound(src, 'sound/items/weapons/thudswoosh.ogg', 30, TRUE, -1)
+		playsound(src, '../assets/sound/items/weapons/thudswoosh.ogg', 30, TRUE, -1)
 	addtimer(CALLBACK(src, PROC_REF(undo_petted)), 30 SECONDS)
 	return TRUE
 

@@ -11,16 +11,16 @@
 /obj/item/storage/medkit
 	name = "medkit"
 	desc = "It's an emergency medical kit for those serious boo-boos."
-	icon = 'icons/obj/storage/medkit.dmi'
+	icon = '../assets/icons/obj/storage/medkit.dmi'
 	icon_state = "medkit"
 	inhand_icon_state = "medkit"
 	worn_icon_state = "nothing" // NOVA EDIT ADDITION - Removes 'no texture' state from medkit worn sprite
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/medical_righthand.dmi'
 	throw_speed = 3
 	throw_range = 7
-	drop_sound = 'sound/items/handling/medkit/medkit_drop.ogg'
-	pickup_sound = 'sound/items/handling/medkit/medkit_pick_up.ogg'
+	drop_sound = '../assets/sound/items/handling/medkit/medkit_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/medkit/medkit_pick_up.ogg'
 	sound_vary = TRUE
 	storage_type = /datum/storage/medkit
 
@@ -351,7 +351,7 @@
 /obj/item/storage/medkit/coroner
 	name = "compact coroner's medkit"
 	desc = "A smaller medical kit designed primarily for assisting in dissecting the deceased, rather than treating the living."
-	icon = 'icons/obj/storage/medkit.dmi'
+	icon = '../assets/icons/obj/storage/medkit.dmi'
 	icon_state = "compact_coronerkit"
 	inhand_icon_state = "coronerkit"
 	storage_type = /datum/storage/medkit/coroner
@@ -397,11 +397,11 @@
 /obj/item/storage/organbox
 	name = "organ transport box"
 	desc = "An advanced box with a cooling mechanism that uses cryostylane or other cold reagents to keep the organs or bodyparts inside preserved."
-	icon = 'icons/obj/storage/case.dmi'
+	icon = '../assets/icons/obj/storage/case.dmi'
 	icon_state = "organbox"
 	base_icon_state = "organbox"
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/medical_righthand.dmi'
 	throw_speed = 3
 	throw_range = 7
 	custom_premium_price = PAYCHECK_CREW * 4
@@ -495,10 +495,10 @@
 	desc = "A wooden rack for storing test tubes."
 	icon_state = "rack"
 	base_icon_state = "rack"
-	icon = 'icons/obj/medical/chemical.dmi'
+	icon = '../assets/icons/obj/medical/chemical.dmi'
 	inhand_icon_state = "contsolid"
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/medical_righthand.dmi'
 	w_class = WEIGHT_CLASS_SMALL
 	storage_type = /datum/storage/test_tube_rack
 	custom_materials = list(/datum/material/wood = SHEET_MATERIAL_AMOUNT)

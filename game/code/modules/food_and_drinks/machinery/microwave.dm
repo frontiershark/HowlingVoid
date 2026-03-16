@@ -20,7 +20,7 @@
 /obj/machinery/microwave
 	name = "microwave oven"
 	desc = "Cooks and boils stuff."
-	icon = 'icons/obj/machines/microwave.dmi'
+	icon = '../assets/icons/obj/machines/microwave.dmi'
 	base_icon_state = ""
 	icon_state = "mw_complete"
 	appearance_flags = KEEP_TOGETHER | LONG_GLIDE | PIXEL_SCALE
@@ -79,10 +79,10 @@
 		-2,
 		-3,
 	)
-	var/static/radial_examine = image(icon = 'icons/hud/radial.dmi', icon_state = "radial_examine")
-	var/static/radial_eject = image(icon = 'icons/hud/radial.dmi', icon_state = "radial_eject")
-	var/static/radial_cook = image(icon = 'icons/hud/radial.dmi', icon_state = "radial_cook")
-	var/static/radial_charge = image(icon = 'icons/hud/radial.dmi', icon_state = "radial_charge")
+	var/static/radial_examine = image(icon = '../assets/icons/hud/radial.dmi', icon_state = "radial_examine")
+	var/static/radial_eject = image(icon = '../assets/icons/hud/radial.dmi', icon_state = "radial_eject")
+	var/static/radial_cook = image(icon = '../assets/icons/hud/radial.dmi', icon_state = "radial_cook")
+	var/static/radial_charge = image(icon = '../assets/icons/hud/radial.dmi', icon_state = "radial_charge")
 
 	// we show the button even if the proc will not work
 	var/static/list/radial_options = list("eject" = radial_eject, "cook" = radial_cook, "charge" = radial_charge)
@@ -493,7 +493,7 @@
 
 	vampire_charging_enabled = !vampire_charging_enabled
 	balloon_alert(user, "set to [vampire_charging_enabled ? "charge" : "cook"]")
-	playsound(src, 'sound/machines/beep/twobeep_high.ogg', 50, FALSE)
+	playsound(src, '../assets/sound/machines/beep/twobeep_high.ogg', 50, FALSE)
 	if(HAS_SILICON_ACCESS(user))
 		visible_message(span_notice("[user] sets \the [src] to [vampire_charging_enabled ? "charge" : "cook"]."), blind_message = span_notice("You hear \the [src] make an informative beep!"))
 	return CLICK_ACTION_SUCCESS
@@ -592,11 +592,11 @@
 
 	if(wire_disabled)
 		audible_message("[src] buzzes.")
-		playsound(src, 'sound/machines/buzz/buzz-sigh.ogg', 50, FALSE)
+		playsound(src, '../assets/sound/machines/buzz/buzz-sigh.ogg', 50, FALSE)
 		return
 
 	if(cell_powered && cell?.charge < TIER_1_CELL_CHARGE_RATE * efficiency)
-		playsound(src, 'sound/machines/buzz/buzz-sigh.ogg', 50, FALSE)
+		playsound(src, '../assets/sound/machines/buzz/buzz-sigh.ogg', 50, FALSE)
 		balloon_alert(cooker, "no power draw!")
 		return
 
@@ -632,7 +632,7 @@
 /obj/machinery/microwave/proc/wzhzhzh()
 	if(cell_powered && !isnull(cell))
 		if(!cell.use(TIER_1_CELL_CHARGE_RATE * efficiency))
-			playsound(src, 'sound/machines/buzz/buzz-sigh.ogg', 50, FALSE)
+			playsound(src, '../assets/sound/machines/buzz/buzz-sigh.ogg', 50, FALSE)
 			return
 
 	visible_message(span_notice("\The [src] turns on."), null, span_hear("You hear a microwave humming."))
@@ -665,7 +665,7 @@
 
 /obj/machinery/microwave/proc/muck()
 	wzhzhzh()
-	playsound(loc, 'sound/effects/splat.ogg', 50, TRUE)
+	playsound(loc, '../assets/sound/effects/splat.ogg', 50, TRUE)
 	dirty_anim_playing = TRUE
 	update_appearance()
 	cook_loop(type = MICROWAVE_MUCK, cycles = 4)
@@ -791,7 +791,7 @@
 
 /obj/machinery/microwave/proc/open(autoclose = 2 SECONDS)
 	open = TRUE
-	playsound(loc, 'sound/machines/click.ogg', 15, TRUE, -3)
+	playsound(loc, '../assets/sound/machines/click.ogg', 15, TRUE, -3)
 	update_appearance()
 	addtimer(CALLBACK(src, PROC_REF(close)), autoclose)
 
@@ -807,13 +807,13 @@
 /obj/machinery/microwave/proc/vampire(mob/cooker)
 	var/obj/item/modular_computer/vampire_pda = LAZYACCESS(ingredients, 1)
 	if(isnull(vampire_pda))
-		playsound(src, 'sound/machines/buzz/buzz-sigh.ogg', 50, FALSE)
+		playsound(src, '../assets/sound/machines/buzz/buzz-sigh.ogg', 50, FALSE)
 		after_finish_loop()
 		return
 
 	vampire_cell = vampire_pda.internal_cell
 	if(isnull(vampire_cell))
-		playsound(src, 'sound/machines/buzz/buzz-sigh.ogg', 50, FALSE)
+		playsound(src, '../assets/sound/machines/buzz/buzz-sigh.ogg', 50, FALSE)
 		after_finish_loop()
 		return
 
@@ -824,7 +824,7 @@
 /obj/machinery/microwave/proc/charge(mob/cooker)
 	if(!vampire_charging_capable)
 		balloon_alert(cooker, "needs upgrade!")
-		playsound(src, 'sound/machines/buzz/buzz-sigh.ogg', 50, FALSE)
+		playsound(src, '../assets/sound/machines/buzz/buzz-sigh.ogg', 50, FALSE)
 		return
 
 	if(operating || broken > 0 || panel_open || dirty >= MAX_MICROWAVE_DIRTINESS)
@@ -832,14 +832,14 @@
 
 	if(wire_disabled)
 		audible_message("[src] buzzes.")
-		playsound(src, 'sound/machines/buzz/buzz-sigh.ogg', 50, FALSE)
+		playsound(src, '../assets/sound/machines/buzz/buzz-sigh.ogg', 50, FALSE)
 		return
 
 	// We should only be charging PDAs
 	for(var/atom/movable/potential_item as anything in ingredients)
 		if(!istype(potential_item, /obj/item/modular_computer))
 			balloon_alert(cooker, "pda only!")
-			playsound(src, 'sound/machines/buzz/buzz-sigh.ogg', 50, FALSE)
+			playsound(src, '../assets/sound/machines/buzz/buzz-sigh.ogg', 50, FALSE)
 			eject()
 			return
 
@@ -897,7 +897,7 @@
 		broken = REALLY_BROKEN
 		explosion(src, light_impact_range = 2, flame_range = 1)
 
-	// playsound(src, 'sound/machines/chime.ogg', 50, FALSE)
+	// playsound(src, '../assets/sound/machines/chime.ogg', 50, FALSE)
 	after_finish_loop()
 
 /// Type of microwave that automatically turns it self on erratically. Probably don't use this outside of the holodeck program "Microwave Paradise".

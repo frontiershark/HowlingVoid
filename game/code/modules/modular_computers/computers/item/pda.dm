@@ -1,6 +1,6 @@
 /obj/item/modular_computer/pda
 	name = "pda"
-	icon = 'icons/map_icons/items/pda.dmi'
+	icon = '../assets/icons/map_icons/items/pda.dmi'
 	icon_state = "/obj/item/modular_computer/pda"
 	post_init_icon_state = "pda"
 	worn_icon_state = "nothing"
@@ -8,11 +8,11 @@
 	greyscale_config = /datum/greyscale_config/tablet
 	greyscale_colors = "#999875#a92323"
 
-	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/devices_righthand.dmi'
 	inhand_icon_state = "electronic"
 
-	overlays_icon = 'icons/obj/devices/modular_pda.dmi'
+	overlays_icon = '../assets/icons/obj/devices/modular_pda.dmi'
 
 	steel_sheet_cost = 2
 	custom_materials = list(/datum/material/iron=SMALL_MATERIAL_AMOUNT * 3, /datum/material/glass=SMALL_MATERIAL_AMOUNT, /datum/material/plastic=SMALL_MATERIAL_AMOUNT)
@@ -167,7 +167,7 @@
 	else
 		balloon_alert(user, "inserted [tool]")
 		inserted_item = tool
-		playsound(src, 'sound/machines/pda_button/pda_button1.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/machines/pda_button/pda_button1.ogg', 50, TRUE)
 	return ITEM_INTERACT_SUCCESS
 
 
@@ -194,7 +194,7 @@
 		user.put_in_hands(inserted_item)
 		inserted_item = null
 		update_appearance()
-		playsound(src, 'sound/machines/pda_button/pda_button2.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/machines/pda_button/pda_button2.ogg', 50, TRUE)
 
 /obj/item/modular_computer/pda/proc/swap_pen(mob/user, obj/item/tool)
 	if(inserted_item)
@@ -202,7 +202,7 @@
 		user.put_in_hands(inserted_item)
 		inserted_item = tool
 		update_appearance()
-		playsound(src, 'sound/machines/pda_button/pda_button1.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/machines/pda_button/pda_button1.ogg', 50, TRUE)
 
 /obj/item/modular_computer/pda/proc/explode(mob/target, mob/bomber, from_message_menu = FALSE)
 	var/turf/current_turf = get_turf(src)
@@ -317,7 +317,7 @@
  */
 /obj/item/modular_computer/pda/silicon
 	name = "modular interface"
-	icon = 'icons/obj/devices/modular_pda.dmi'
+	icon = '../assets/icons/obj/devices/modular_pda.dmi'
 	icon_state = "tablet-silicon"
 	post_init_icon_state = null
 	base_icon_state = "tablet-silicon"

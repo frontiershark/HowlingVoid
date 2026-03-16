@@ -18,7 +18,7 @@ effective or pretty fucking useless.
 /obj/item/batterer
 	name = "mind batterer"
 	desc = "A strange device with twin antennas."
-	icon = 'icons/obj/devices/syndie_gadget.dmi'
+	icon = '../assets/icons/obj/devices/syndie_gadget.dmi'
 	icon_state = "batterer"
 	throwforce = 5
 	w_class = WEIGHT_CLASS_TINY
@@ -26,8 +26,8 @@ effective or pretty fucking useless.
 	throw_range = 7
 	obj_flags = CONDUCTS_ELECTRICITY
 	inhand_icon_state = "electronic"
-	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/devices_righthand.dmi'
 
 	var/times_used = 0 //Number of times it's been used.
 	var/max_uses = 2
@@ -51,7 +51,7 @@ effective or pretty fucking useless.
 		else
 			to_chat(M, span_userdanger("You feel a sudden, electric jolt travel through your head."))
 
-	playsound(src.loc, 'sound/misc/interference.ogg', 50, TRUE)
+	playsound(src.loc, '../assets/sound/misc/interference.ogg', 50, TRUE)
 	to_chat(user, span_notice("You trigger [src]."))
 	times_used += 1
 	if(times_used >= max_uses)
@@ -205,7 +205,7 @@ effective or pretty fucking useless.
 /datum/action/item_action/stealth_mode
 	name = "Toggle Stealth"
 	desc = "Makes you invisible to the naked eye."
-	button_icon = 'icons/mob/actions/actions_minor_antag.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_minor_antag.dmi'
 	button_icon_state = "ninja_cloak"
 	/// Whether stealth is active or not
 	var/stealth_engaged = FALSE
@@ -297,11 +297,11 @@ effective or pretty fucking useless.
 /obj/item/shadowcloak
 	name = "cloaker belt"
 	desc = "Makes you invisible for short periods of time. Recharges in darkness, even while active."
-	icon = 'icons/obj/clothing/belts.dmi'
+	icon = '../assets/icons/obj/clothing/belts.dmi'
 	icon_state = "utility"
 	inhand_icon_state = "utility"
-	lefthand_file = 'icons/mob/inhands/equipment/belt_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/belt_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/belt_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/belt_righthand.dmi'
 	worn_icon_state = "utility"
 	slot_flags = ITEM_SLOT_BELT
 	attack_verb_continuous = list("whips", "lashes", "disciplines")
@@ -324,7 +324,7 @@ effective or pretty fucking useless.
 /obj/item/jammer
 	name = "radio jammer"
 	desc = "Device used to disrupt nearby radio communication. Alternate function creates a powerful disruptor wave which disables all nearby listening devices."
-	icon = 'icons/obj/devices/syndie_gadget.dmi'
+	icon = '../assets/icons/obj/devices/syndie_gadget.dmi'
 	icon_state = "jammer"
 	var/active = FALSE
 

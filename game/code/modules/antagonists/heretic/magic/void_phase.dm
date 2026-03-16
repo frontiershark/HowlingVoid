@@ -5,9 +5,9 @@
 		It has a minimum range of 3 tiles and a maximum range of 9 tiles."
 	background_icon_state = "bg_heretic"
 	overlay_icon_state = "bg_heretic_border"
-	button_icon = 'icons/mob/actions/actions_ecult.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_ecult.dmi'
 	button_icon_state = "voidblink"
-	ranged_mousepointer = 'icons/effects/mouse_pointers/throw_target.dmi'
+	ranged_mousepointer = '../assets/icons/effects/mouse_pointers/throw_target.dmi'
 
 	school = SCHOOL_FORBIDDEN
 	cooldown_time = 20 SECONDS
@@ -50,7 +50,7 @@
 /// Does the AOE effect of the blinka t the passed turf
 /datum/action/cooldown/spell/pointed/void_phase/proc/cause_aoe(turf/target_turf, effect_type = /obj/effect/temp_visual/voidin)
 	new effect_type(target_turf)
-	playsound(target_turf, 'sound/effects/magic/voidblink.ogg', 60, FALSE)
+	playsound(target_turf, '../assets/sound/effects/magic/voidblink.ogg', 60, FALSE)
 	for(var/mob/living/living_mob in range(damage_radius, target_turf))
 		if(IS_HERETIC_OR_MONSTER(living_mob) || living_mob == owner)
 			continue
@@ -60,7 +60,7 @@
 		living_mob.apply_status_effect(/datum/status_effect/void_chill, 2)
 
 /obj/effect/temp_visual/voidin
-	icon = 'icons/effects/96x96.dmi'
+	icon = '../assets/icons/effects/96x96.dmi'
 	icon_state = "void_blink_in"
 	alpha = 150
 	duration = 6
@@ -68,7 +68,7 @@
 	pixel_y = -32
 
 /obj/effect/temp_visual/voidout
-	icon = 'icons/effects/96x96.dmi'
+	icon = '../assets/icons/effects/96x96.dmi'
 	icon_state = "void_blink_out"
 	alpha = 150
 	duration = 6

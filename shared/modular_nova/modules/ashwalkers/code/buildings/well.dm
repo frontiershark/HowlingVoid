@@ -32,7 +32,7 @@
 
 		reagents.trans_to(attacking_welder, attacking_welder.max_fuel, transferred_by = user)
 		user.visible_message(span_notice("[user] refills [user.p_their()] [attacking_welder.name]."), span_notice("You refill [attacking_welder]."))
-		playsound(src, 'sound/effects/refill.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/effects/refill.ogg', 50, TRUE)
 		attacking_welder.update_appearance()
 		return
 

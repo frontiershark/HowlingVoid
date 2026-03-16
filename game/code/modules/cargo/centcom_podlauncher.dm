@@ -572,11 +572,11 @@ ADMIN_VERB(centcom_podlauncher, R_ADMIN, "Config/Launch Supplypod", "Configure a
 		return
 	if (!forceClear && (launcherActivated || picking_dropoff_turf)) //If the launching param is true, we give the user new mouse icons.
 		if(launcherActivated)
-			holder.mouse_up_icon = 'icons/effects/mouse_pointers/supplypod_target.dmi' //Icon for when mouse is released
-			holder.mouse_down_icon = 'icons/effects/mouse_pointers/supplypod_down_target.dmi' //Icon for when mouse is pressed
+			holder.mouse_up_icon = '../assets/icons/effects/mouse_pointers/supplypod_target.dmi' //Icon for when mouse is released
+			holder.mouse_down_icon = '../assets/icons/effects/mouse_pointers/supplypod_down_target.dmi' //Icon for when mouse is pressed
 		else if(picking_dropoff_turf)
-			holder.mouse_up_icon = 'icons/effects/mouse_pointers/supplypod_pickturf.dmi' //Icon for when mouse is released
-			holder.mouse_down_icon = 'icons/effects/mouse_pointers/supplypod_pickturf_down.dmi' //Icon for when mouse is pressed
+			holder.mouse_up_icon = '../assets/icons/effects/mouse_pointers/supplypod_pickturf.dmi' //Icon for when mouse is released
+			holder.mouse_down_icon = '../assets/icons/effects/mouse_pointers/supplypod_pickturf_down.dmi' //Icon for when mouse is pressed
 		holder.mouse_override_icon = holder.mouse_up_icon //Icon for idle mouse (same as icon for when released)
 		holder.mouse_pointer_icon = holder.mouse_override_icon
 		holder.click_intercept = src //Create a click_intercept so we know where the user is clicking
@@ -866,7 +866,7 @@ GLOBAL_DATUM_INIT(podlauncher, /datum/centcom_podlauncher, new)
 
 /obj/effect/client_image_holder/supplypod_selector // Shows which item will be taken next
 	name = "Supply Selector (Only you can see this)"
-	image_icon = 'icons/obj/supplypods_32x32.dmi'
+	image_icon = '../assets/icons/obj/supplypods_32x32.dmi'
 	image_state = "selector"
 	image_layer = FLY_LAYER
 	layer = FLY_LAYER
@@ -875,7 +875,7 @@ GLOBAL_DATUM_INIT(podlauncher, /datum/centcom_podlauncher, new)
 
 /obj/effect/client_image_holder/dropoff_location // Shows where revese pods lands
 	name = "Dropoff Location (Only you can see this)"
-	image_icon = 'icons/obj/supplypods_32x32.dmi'
+	image_icon = '../assets/icons/obj/supplypods_32x32.dmi'
 	image_state = "dropoff_indicator"
 	image_layer = FLY_LAYER
 	layer = FLY_LAYER

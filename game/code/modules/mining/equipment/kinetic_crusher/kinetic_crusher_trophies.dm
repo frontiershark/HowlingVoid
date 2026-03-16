@@ -5,7 +5,7 @@
 /obj/item/crusher_trophy
 	name = "tail spike"
 	desc = "A strange spike with no usage."
-	icon = 'icons/obj/mining_zones/artefacts.dmi'
+	icon = '../assets/icons/obj/mining_zones/artefacts.dmi'
 	icon_state = "tail_spike"
 	/// if it has a bonus effect, this is how much that effect is
 	var/bonus_value = 10

@@ -251,26 +251,26 @@
 				stored_rod.take_damage(0.5, armour_penetration = 100)
 				src.Shake(duration = 0.5 SECONDS)
 				var/damage_sound = pick(
-					'sound/effects/structure_stress/pop1.ogg',
-					'sound/effects/structure_stress/pop2.ogg',
-					'sound/effects/structure_stress/pop3.ogg',
+					'../assets/sound/effects/structure_stress/pop1.ogg',
+					'../assets/sound/effects/structure_stress/pop2.ogg',
+					'../assets/sound/effects/structure_stress/pop3.ogg',
 				)
 				playsound(src, damage_sound, 50, TRUE, extrarange = -3)
 				return FALSE
 			else //Yes. Spamming the eject button can unjam it.
 				jam(user, FALSE) //We did it!
 				toggle_active(user, FALSE) //Turning it off.
-				playsound(src, 'sound/machines/shutter.ogg', 50, TRUE, extrarange = -3)
+				playsound(src, '../assets/sound/machines/shutter.ogg', 50, TRUE, extrarange = -3)
 				return FALSE
 		stored_rod.forceMove(our_turf)
 		stored_rod.throw_at(get_edge_target_turf(src, pick(GLOB.alldirs)), rand(3, 6), 5)
-		playsound(src, 'sound/items/weapons/gun/general/grenade_launch.ogg', 50, TRUE, extrarange = -3)
+		playsound(src, '../assets/sound/items/weapons/gun/general/grenade_launch.ogg', 50, TRUE, extrarange = -3)
 	else
 		if(jammed)
 			return FALSE
 		if(!user?.put_in_hands(stored_rod))
 			stored_rod.forceMove(our_turf)
-		playsound(src, 'sound/items/weapons/gun/shotgun/insert_shell.ogg', 50, TRUE, frequency = -1, extrarange = -3)
+		playsound(src, '../assets/sound/items/weapons/gun/shotgun/insert_shell.ogg', 50, TRUE, frequency = -1, extrarange = -3)
 	stored_rod = null
 	STOP_PROCESSING(SSmachines, src)
 	update_appearance(UPDATE_ICON)
@@ -288,7 +288,7 @@
 	stored_rod = desired_rod
 	update_appearance(UPDATE_ICON)
 	START_PROCESSING(SSmachines, src)
-	playsound(src, 'sound/items/weapons/gun/shotgun/insert_shell.ogg', 50, TRUE, frequency = 1, extrarange = -3)
+	playsound(src, '../assets/sound/items/weapons/gun/shotgun/insert_shell.ogg', 50, TRUE, frequency = 1, extrarange = -3)
 	if(user)
 		user.log_message("inserted a rod into [src]", LOG_GAME)
 		investigate_log("had a rod inserted by [key_name(user)] at [AREACOORD(src)].", INVESTIGATE_ENGINE)
@@ -312,7 +312,7 @@
 
 	jammed = desired_state
 
-	playsound(src, 'sound/effects/pressureplate.ogg', 50, TRUE, extrarange = -3)
+	playsound(src, '../assets/sound/effects/pressureplate.ogg', 50, TRUE, extrarange = -3)
 
 	return TRUE
 
@@ -353,7 +353,7 @@
 
 	update_appearance(UPDATE_ICON)
 
-	playsound(src, 'sound/machines/eject.ogg', 50, TRUE, extrarange = -3)
+	playsound(src, '../assets/sound/machines/eject.ogg', 50, TRUE, extrarange = -3)
 
 	return TRUE
 
@@ -374,7 +374,7 @@
 
 	update_appearance(UPDATE_ICON)
 
-	playsound(src, 'sound/machines/creak.ogg', 50, TRUE, extrarange = -3)
+	playsound(src, '../assets/sound/machines/creak.ogg', 50, TRUE, extrarange = -3)
 
 	return TRUE
 

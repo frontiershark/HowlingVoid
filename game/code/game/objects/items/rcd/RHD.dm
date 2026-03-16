@@ -126,7 +126,7 @@
 	construction_upgrades |= design_disk.upgrade
 	if((design_disk.upgrade & RCD_UPGRADE_SILO_LINK) && !silo_mats)
 		silo_mats = new (src, FALSE, FALSE)
-	playsound(loc, 'sound/machines/click.ogg', 50, TRUE)
+	playsound(loc, '../assets/sound/machines/click.ogg', 50, TRUE)
 	qdel(design_disk)
 	update_static_data_for_all_viewers()
 	return TRUE
@@ -147,7 +147,7 @@
 		if(ammo.ammoamt <= 0)
 			qdel(ammo)
 		matter += load
-		playsound(loc, 'sound/machines/click.ogg', 50, TRUE)
+		playsound(loc, '../assets/sound/machines/click.ogg', 50, TRUE)
 		loaded = TRUE
 	else if(isstack(item))
 		loaded = loadwithsheets(item, user)
@@ -164,13 +164,13 @@
 		var/amount_to_use = min(the_stack.amount, maxsheets)
 		the_stack.use(amount_to_use)
 		matter += the_stack.matter_amount * amount_to_use
-		playsound(loc, 'sound/machines/click.ogg', 50, TRUE)
+		playsound(loc, '../assets/sound/machines/click.ogg', 50, TRUE)
 		return TRUE
 	balloon_alert(user, "storage full!")
 	return FALSE
 
 /obj/item/construction/attack_self(mob/user)
-	playsound(loc, 'sound/effects/pop.ogg', 50, FALSE)
+	playsound(loc, '../assets/sound/effects/pop.ogg', 50, FALSE)
 	if(prob(20))
 		spark_system.start()
 
@@ -200,7 +200,7 @@
 		if(!dry_run)
 			matter -= amount
 			update_appearance()
-			playsound(loc, 'sound/items/deconstruct.ogg', 50, TRUE)
+			playsound(loc, '../assets/sound/items/deconstruct.ogg', 50, TRUE)
 	else
 		if(!silo_mats.can_use_resource(user_data = ID_DATA(user)))
 			if(user)
@@ -212,7 +212,7 @@
 			return FALSE
 		if(!dry_run)
 			amount = silo_mats.use_materials(list(/datum/material/iron = SILO_USE_AMOUNT), multiplier = amount, action = "RESTOCKED", name = "x restocked an RCD", user_data = ID_DATA(user))
-			playsound(loc, 'sound/items/deconstruct.ogg', 50, TRUE)
+			playsound(loc, '../assets/sound/items/deconstruct.ogg', 50, TRUE)
 	return dry_run ? TRUE : amount
 
 /obj/item/construction/ui_static_data(mob/user)
@@ -295,7 +295,7 @@
 /obj/item/rcd_upgrade
 	name = "RCD advanced design disk"
 	desc = "It seems to be empty."
-	icon = 'icons/obj/devices/floppy_disks.dmi'
+	icon = '../assets/icons/obj/devices/floppy_disks.dmi'
 	icon_state = "datadisk3"
 	var/upgrade
 

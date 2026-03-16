@@ -3,7 +3,7 @@
  */
 /obj/effect/particle_effect/fluid/smoke
 	name = "smoke"
-	icon = 'icons/effects/96x96.dmi'
+	icon = '../assets/icons/effects/96x96.dmi'
 	icon_state = "smoke"
 	pixel_x = -32
 	pixel_y = -32

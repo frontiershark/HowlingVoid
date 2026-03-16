@@ -626,7 +626,7 @@ GLOBAL_VAR_INIT(library_table_modified, 0)
 		say("Printer currently unavailable, please wait a moment.")
 		return FALSE
 	COOLDOWN_START(src, printer_cooldown, PRINTER_COOLDOWN)
-	playsound(src, 'sound/machines/printer.ogg', 50)
+	playsound(src, '../assets/sound/machines/printer.ogg', 50)
 	addtimer(call_after, 4.1 SECONDS)
 	return TRUE
 
@@ -683,7 +683,7 @@ GLOBAL_VAR_INIT(library_table_modified, 0)
  */
 /obj/machinery/libraryscanner
 	name = "scanner control interface"
-	icon = 'icons/obj/service/library.dmi'
+	icon = '../assets/icons/obj/service/library.dmi'
 	icon_state = "bigscanner"
 	desc = "It's an industrial strength book scanner. Perfect!"
 	circuit = /obj/item/circuitboard/machine/libraryscanner
@@ -713,7 +713,7 @@ GLOBAL_VAR_INIT(library_table_modified, 0)
 		if(held_book)
 			user.put_in_hands(held_book)
 		held_book = hitby
-		playsound(src, 'sound/machines/eject.ogg', 70)
+		playsound(src, '../assets/sound/machines/eject.ogg', 70)
 		return TRUE
 	return ..()
 
@@ -751,14 +751,14 @@ GLOBAL_VAR_INIT(library_table_modified, 0)
 				return
 			cache = held_book.book_data.return_copy()
 			flick("bigscanner1", src)
-			playsound(src, 'sound/machines/scanner/scanner.ogg', vol = 50, vary = TRUE)
+			playsound(src, '../assets/sound/machines/scanner/scanner.ogg', vol = 50, vary = TRUE)
 			return TRUE
 		if("clear")
 			cache = null
 			return TRUE
 		if("eject")
 			ui.user.put_in_hands(held_book)
-			playsound(src, 'sound/machines/eject.ogg', 70)
+			playsound(src, '../assets/sound/machines/eject.ogg', 70)
 			return TRUE
 
 /*
@@ -766,7 +766,7 @@ GLOBAL_VAR_INIT(library_table_modified, 0)
  */
 /obj/machinery/bookbinder
 	name = "book binder"
-	icon = 'icons/obj/service/library.dmi'
+	icon = '../assets/icons/obj/service/library.dmi'
 	icon_state = "binder"
 	desc = "Only intended for binding paper products."
 	circuit = /obj/item/circuitboard/machine/bookbinder
@@ -820,7 +820,7 @@ GLOBAL_VAR_INIT(library_table_modified, 0)
 	user.visible_message(span_notice("[user] loads some paper into [src]."), span_notice("You load some paper into [src]."))
 	audible_message(span_hear("[src] begins to hum as it warms up its printing drums."))
 	busy = TRUE
-	playsound(src, 'sound/machines/printer.ogg', 50)
+	playsound(src, '../assets/sound/machines/printer.ogg', 50)
 	flick("binder1", src)
 	addtimer(CALLBACK(src, PROC_REF(bind_book), draw_from), 4.1 SECONDS)
 

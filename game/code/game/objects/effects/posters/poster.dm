@@ -14,7 +14,7 @@
 /obj/item/poster
 	name = "poorly coded poster"
 	desc = "You probably shouldn't be holding this."
-	icon = 'icons/obj/poster.dmi'
+	icon = '../assets/icons/obj/poster.dmi'
 	force = 0
 	resistance_flags = FLAMMABLE
 	w_class = WEIGHT_CLASS_SMALL
@@ -116,7 +116,7 @@
 	placed_poster.poster_item_type = type
 	poster_structure = null
 	flick("poster_being_set", placed_poster)
-	playsound(src, 'sound/items/poster/poster_being_created.ogg', 100, TRUE)
+	playsound(src, '../assets/sound/items/poster/poster_being_created.ogg', 100, TRUE)
 	qdel(src)
 
 	var/turf/user_drop_location = get_turf(user)
@@ -137,7 +137,7 @@
 	name = "poster"
 	var/original_name
 	desc = "A large piece of space-resistant printed paper."
-	icon = 'icons/obj/poster.dmi'
+	icon = '../assets/icons/obj/poster.dmi'
 	anchored = TRUE
 	buildable_sign = FALSE //Cannot be unwrenched from a wall.
 	var/ruined = FALSE
@@ -284,7 +284,7 @@
 
 /obj/structure/sign/poster/proc/tear_poster(mob/user)
 	visible_message(span_notice("[user] rips [src] in a single, decisive motion!") )
-	playsound(src.loc, 'sound/items/poster/poster_ripped.ogg', 100, TRUE)
+	playsound(src.loc, '../assets/sound/items/poster/poster_ripped.ogg', 100, TRUE)
 	spring_trap(user)
 
 	var/obj/structure/sign/poster/ripped/torn_poster = new(loc)

@@ -33,7 +33,7 @@
 /obj/item/organ/ears/shadekin
 	name = "shadekin ears"
 	desc = "Ears, covered in fur."
-	icon = 'icons/obj/clothing/head/costume.dmi'
+	icon = '../assets/icons/obj/clothing/head/costume.dmi'
 	icon_state = "kitty"
 	damage_multiplier = 2.5 // Shadekins big ears are easy to damage with loud noises.
 	overrides_sprite_datum_organ_type = TRUE

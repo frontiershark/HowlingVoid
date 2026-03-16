@@ -2,7 +2,7 @@
 	gender = PLURAL
 	name = "dirt"
 	desc = "Upon closer examination, it's still dirt."
-	icon = 'icons/turf/floors.dmi'
+	icon = '../assets/icons/turf/floors.dmi'
 	icon_state = "dirt"
 	base_icon_state = "dirt"
 	baseturfs = /turf/open/chasm/jungle
@@ -50,7 +50,7 @@
 /turf/open/misc/dirt/jungle/wasteland //Like a more fun version of living in Arizona.
 	name = "cracked earth"
 	desc = "Looks a bit dry."
-	icon = 'icons/turf/floors.dmi'
+	icon = '../assets/icons/turf/floors.dmi'
 	icon_state = "wasteland"
 	base_icon_state = "wasteland"
 	slowdown = 1
@@ -73,7 +73,7 @@
 	baseturfs = /turf/open/misc/dirt
 	icon_state = "junglegrass"
 	base_icon_state = "junglegrass"
-	smooth_icon = 'icons/turf/floors/junglegrass.dmi'
+	smooth_icon = '../assets/icons/turf/floors/junglegrass.dmi'
 
 /turf/open/misc/grass/jungle/lavaland
 	initial_gas_mix = LAVALAND_DEFAULT_ATMOS

@@ -2,7 +2,7 @@
 /datum/action/cooldown/mob_cooldown/fire_breath/ice
 	name = "Ice Breath"
 	desc = "Fire a cold line of fire towards the enemy!"
-	button_icon = 'icons/effects/magic.dmi'
+	button_icon = '../assets/icons/effects/magic.dmi'
 	button_icon_state = "fireball"
 	cooldown_time = 6 SECONDS
 	fire_range = 7
@@ -20,7 +20,7 @@
 
 /datum/action/cooldown/mob_cooldown/fire_breath/ice/New(Target, original)
 	. = ..()
-	forecast_overlay = image('icons/mob/simple/icemoon/icemoon_monsters.dmi', forecast_overlay_state)
+	forecast_overlay = image('../assets/icons/mob/simple/icemoon/icemoon_monsters.dmi', forecast_overlay_state)
 
 /// Apply our specific fire breathing shape, in proc form so we can override it in subtypes
 /datum/action/cooldown/mob_cooldown/fire_breath/ice/attack_sequence(atom/target)
@@ -49,7 +49,7 @@
 /datum/action/cooldown/mob_cooldown/fire_breath/ice/eruption
 	name = "Ice Eruption"
 	desc = "Unleash cold fire in all directions"
-	button_icon = 'icons/effects/fire.dmi'
+	button_icon = '../assets/icons/effects/fire.dmi'
 	button_icon_state = "light"
 	cooldown_time = 6 SECONDS
 	click_to_activate = FALSE

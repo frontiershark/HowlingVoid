@@ -10,7 +10,7 @@
 /datum/preference/choiced/species_feature/pod_hair/icon_for(value)
 	var/datum/sprite_accessory/pod_hair = get_accessory_for_value(value)
 
-	var/datum/universal_icon/icon_with_hair = uni_icon('icons/mob/human/bodyparts_greyscale.dmi', "pod_head_m")
+	var/datum/universal_icon/icon_with_hair = uni_icon('../assets/icons/mob/human/bodyparts_greyscale.dmi', "pod_head_m")
 
 	var/datum/universal_icon/icon_adj = uni_icon(pod_hair.icon, "m_pod_hair_[pod_hair.icon_state]_ADJ")
 	var/datum/universal_icon/icon_front = uni_icon(pod_hair.icon, "m_pod_hair_[pod_hair.icon_state]_FRONT")

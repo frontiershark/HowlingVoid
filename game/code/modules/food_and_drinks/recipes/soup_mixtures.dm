@@ -8,7 +8,7 @@
 	burning_temperature = 520
 	default_container = /obj/item/reagent_containers/cup/bowl
 	glass_price = FOOD_PRICE_CHEAP
-	fallback_icon = 'icons/obj/food/soupsalad.dmi'
+	fallback_icon = '../assets/icons/obj/food/soupsalad.dmi'
 	fallback_icon_state = "bowl"
 	restaurant_order = /datum/custom_order/reagent/soup
 
@@ -1357,7 +1357,7 @@
 
 /datum/glass_style/has_foodtype/soup/atrakor_dumplings
 	required_drink_type = /datum/reagent/consumable/nutriment/soup/atrakor_dumplings
-	icon = 'icons/obj/food/lizard.dmi'
+	icon = '../assets/icons/obj/food/lizard.dmi'
 	icon_state = "atrakor_dumplings"
 	drink_type = MEAT | VEGETABLES | NUTS
 
@@ -1387,7 +1387,7 @@
 
 /datum/glass_style/has_foodtype/soup/meatball_noodles
 	required_drink_type = /datum/reagent/consumable/nutriment/soup/meatball_noodles
-	icon = 'icons/obj/food/lizard.dmi'
+	icon = '../assets/icons/obj/food/lizard.dmi'
 	icon_state = "meatball_noodles"
 	drink_type = MEAT | VEGETABLES | NUTS
 
@@ -1416,7 +1416,7 @@
 
 /datum/glass_style/has_foodtype/soup/black_broth
 	required_drink_type = /datum/reagent/consumable/nutriment/soup/black_broth
-	icon = 'icons/obj/food/lizard.dmi'
+	icon = '../assets/icons/obj/food/lizard.dmi'
 	icon_state = "black_broth"
 	drink_type = MEAT | VEGETABLES | GORE
 
@@ -1449,7 +1449,7 @@
 
 /datum/glass_style/has_foodtype/soup/jellyfish
 	required_drink_type = /datum/reagent/consumable/nutriment/soup/jellyfish
-	icon = 'icons/obj/food/lizard.dmi'
+	icon = '../assets/icons/obj/food/lizard.dmi'
 	icon_state = "jellyfish_stew"
 	drink_type = MEAT | VEGETABLES | GORE
 
@@ -1489,7 +1489,7 @@
 
 /datum/glass_style/has_foodtype/soup/rootbread
 	required_drink_type = /datum/reagent/consumable/nutriment/soup/rootbread
-	icon = 'icons/obj/food/lizard.dmi'
+	icon = '../assets/icons/obj/food/lizard.dmi'
 	icon_state = "rootbread_soup"
 	drink_type = MEAT | VEGETABLES
 
@@ -1522,7 +1522,7 @@
 /datum/glass_style/has_foodtype/soup/cottonball
 	required_drink_type = /datum/reagent/consumable/nutriment/soup/cottonball
 	name = "flöfrölenmæsch"
-	icon = 'icons/obj/food/moth.dmi'
+	icon = '../assets/icons/obj/food/moth.dmi'
 	icon_state = "moth_cotton_soup"
 	drink_type = VEGETABLES | CLOTH
 
@@ -1552,7 +1552,7 @@
 /datum/glass_style/has_foodtype/soup/cheese
 	required_drink_type = /datum/reagent/consumable/nutriment/soup/cheese
 	name = "ælosterrmæsch"
-	icon = 'icons/obj/food/moth.dmi'
+	icon = '../assets/icons/obj/food/moth.dmi'
 	icon_state = "moth_cheese_soup"
 	drink_type = DAIRY | GRAIN
 
@@ -1584,7 +1584,7 @@
 /datum/glass_style/has_foodtype/soup/seed
 	required_drink_type = /datum/reagent/consumable/nutriment/soup/seed
 	name = "misklmæsch"
-	icon = 'icons/obj/food/moth.dmi'
+	icon = '../assets/icons/obj/food/moth.dmi'
 	icon_state = "moth_seed_soup"
 	drink_type = VEGETABLES
 
@@ -1616,7 +1616,7 @@
 /datum/glass_style/has_foodtype/soup/beans
 	required_drink_type = /datum/reagent/consumable/nutriment/soup/beans
 	name = "prickeldröndolhaskl"
-	icon = 'icons/obj/food/moth.dmi'
+	icon = '../assets/icons/obj/food/moth.dmi'
 	icon_state = "moth_bean_stew"
 	drink_type = VEGETABLES
 
@@ -1648,7 +1648,7 @@
 /datum/glass_style/has_foodtype/soup/moth_oats
 	required_drink_type = /datum/reagent/consumable/nutriment/soup/moth_oats
 	name = "häfmisklhaskl"
-	icon = 'icons/obj/food/moth.dmi'
+	icon = '../assets/icons/obj/food/moth.dmi'
 	icon_state = "moth_oat_stew"
 	drink_type = VEGETABLES | GRAIN
 
@@ -1676,7 +1676,7 @@
 /datum/glass_style/has_foodtype/soup/fire_soup
 	required_drink_type = /datum/reagent/consumable/nutriment/soup/fire_soup
 	name = "tömpröttkrakklmæsch"
-	icon = 'icons/obj/food/moth.dmi'
+	icon = '../assets/icons/obj/food/moth.dmi'
 	icon_state = "moth_fire_soup"
 	drink_type = VEGETABLES | DAIRY
 
@@ -1709,7 +1709,7 @@
 /datum/glass_style/has_foodtype/soup/rice_porridge
 	required_drink_type = /datum/reagent/consumable/nutriment/soup/rice_porridge
 	name = "rice porridge"
-	icon = 'icons/obj/food/moth.dmi'
+	icon = '../assets/icons/obj/food/moth.dmi'
 	icon_state = "rice_porridge"
 	drink_type = GRAIN
 
@@ -1738,7 +1738,7 @@
 /datum/glass_style/has_foodtype/soup/cornmeal_porridge
 	required_drink_type = /datum/reagent/consumable/nutriment/soup/cornmeal_porridge
 	name = "cornmeal porridge"
-	icon = 'icons/obj/food/moth.dmi'
+	icon = '../assets/icons/obj/food/moth.dmi'
 	icon_state = "cornmeal_porridge"
 	drink_type = GRAIN
 
@@ -1762,7 +1762,7 @@
 /datum/glass_style/has_foodtype/soup/cheese_porridge
 	required_drink_type = /datum/reagent/consumable/nutriment/soup/cheese_porridge
 	name = "cheesy porridge"
-	icon = 'icons/obj/food/moth.dmi'
+	icon = '../assets/icons/obj/food/moth.dmi'
 	icon_state = "cheesy_porridge"
 	drink_type = DAIRY | GRAIN
 
@@ -1793,7 +1793,7 @@
 /datum/glass_style/has_foodtype/soup/toechtauese_rice_porridge
 	required_drink_type = /datum/reagent/consumable/nutriment/soup/toechtauese_rice_porridge
 	name = "töchtaüse rice porridge"
-	icon = 'icons/obj/food/moth.dmi'
+	icon = '../assets/icons/obj/food/moth.dmi'
 	icon_state = "toechtauese_rice_porridge"
 	drink_type = GRAIN | VEGETABLES
 
@@ -1823,7 +1823,7 @@
 /datum/glass_style/has_foodtype/soup/red_porridge
 	required_drink_type = /datum/reagent/consumable/nutriment/soup/red_porridge
 	name = "eltsløsk ül a priktæolk"
-	icon = 'icons/obj/food/moth.dmi'
+	icon = '../assets/icons/obj/food/moth.dmi'
 	icon_state = "red_porridge"
 	drink_type = VEGETABLES | SUGAR | DAIRY
 
@@ -1938,7 +1938,7 @@
 /datum/glass_style/has_foodtype/soup/shoyu_ramen
 	required_drink_type = /datum/reagent/consumable/nutriment/soup/shoyu_ramen
 	name = "shōyu ramen"
-	icon = 'icons/obj/food/martian.dmi'
+	icon = '../assets/icons/obj/food/martian.dmi'
 	icon_state = "shoyu_ramen"
 	drink_type = MEAT | GRAIN | VEGETABLES | SEAFOOD
 
@@ -1970,7 +1970,7 @@
 /datum/glass_style/has_foodtype/soup/gyuramen
 	required_drink_type = /datum/reagent/consumable/nutriment/soup/gyuramen
 	name = "gyuramen miy käzu"
-	icon = 'icons/obj/food/martian.dmi'
+	icon = '../assets/icons/obj/food/martian.dmi'
 	icon_state = "gyuramen"
 	drink_type = MEAT | GRAIN | DAIRY | VEGETABLES
 
@@ -2002,7 +2002,7 @@
 /datum/glass_style/has_foodtype/soup/new_osaka_sunrise
 	required_drink_type = /datum/reagent/consumable/nutriment/soup/new_osaka_sunrise
 	name = "\improper New Osaka Sunrise soup"
-	icon = 'icons/obj/food/martian.dmi'
+	icon = '../assets/icons/obj/food/martian.dmi'
 	icon_state = "new_osaka_sunrise"
 	drink_type = VEGETABLES | BREAKFAST
 
@@ -2033,7 +2033,7 @@
 /datum/glass_style/has_foodtype/soup/satsuma_black
 	required_drink_type = /datum/reagent/consumable/nutriment/soup/satsuma_black
 	name = "\improper Satsuma Black soup"
-	icon = 'icons/obj/food/martian.dmi'
+	icon = '../assets/icons/obj/food/martian.dmi'
 	icon_state = "satsuma_black"
 	drink_type = SEAFOOD | GRAIN | VEGETABLES
 
@@ -2064,7 +2064,7 @@
 /datum/glass_style/has_foodtype/soup/dragon_ramen
 	required_drink_type = /datum/reagent/consumable/nutriment/soup/dragon_ramen
 	name = "\improper Dragon Style ramen"
-	icon = 'icons/obj/food/martian.dmi'
+	icon = '../assets/icons/obj/food/martian.dmi'
 	icon_state = "dragon_ramen"
 	drink_type = SEAFOOD | GRAIN | VEGETABLES
 
@@ -2098,7 +2098,7 @@
 /datum/glass_style/has_foodtype/soup/hong_kong_borscht
 	required_drink_type = /datum/reagent/consumable/nutriment/soup/hong_kong_borscht
 	name = "\improper Hong Kong borscht"
-	icon = 'icons/obj/food/martian.dmi'
+	icon = '../assets/icons/obj/food/martian.dmi'
 	icon_state = "hong_kong_borscht"
 	drink_type = MEAT | VEGETABLES
 
@@ -2131,7 +2131,7 @@
 /datum/glass_style/has_foodtype/soup/hong_kong_macaroni
 	required_drink_type = /datum/reagent/consumable/nutriment/soup/hong_kong_macaroni
 	name = "\improper Hong Kong macaroni soup"
-	icon = 'icons/obj/food/martian.dmi'
+	icon = '../assets/icons/obj/food/martian.dmi'
 	icon_state = "hong_kong_macaroni"
 	drink_type = MEAT | VEGETABLES | GRAIN
 
@@ -2161,7 +2161,7 @@
 /datum/glass_style/has_foodtype/soup/foxs_prize_soup
 	required_drink_type = /datum/reagent/consumable/nutriment/soup/foxs_prize_soup
 	name = "fox's prize soup"
-	icon = 'icons/obj/food/martian.dmi'
+	icon = '../assets/icons/obj/food/martian.dmi'
 	icon_state = "foxs_prize_soup"
 	drink_type = MEAT | VEGETABLES
 
@@ -2189,7 +2189,7 @@
 /datum/glass_style/has_foodtype/soup/secret_noodle_soup
 	required_drink_type = /datum/reagent/consumable/nutriment/soup/secret_noodle_soup
 	name = "secret noodle soup"
-	icon = 'icons/obj/food/martian.dmi'
+	icon = '../assets/icons/obj/food/martian.dmi'
 	icon_state = "secret_noodle_soup"
 	drink_type = MEAT | VEGETABLES | GRAIN
 
@@ -2217,7 +2217,7 @@
 /datum/glass_style/has_foodtype/soup/budae_jjigae
 	required_drink_type = /datum/reagent/consumable/nutriment/soup/budae_jjigae
 	name = "budae-jjigae"
-	icon = 'icons/obj/food/martian.dmi'
+	icon = '../assets/icons/obj/food/martian.dmi'
 	icon_state = "budae_jjigae"
 	drink_type = MEAT | VEGETABLES | GRAIN
 

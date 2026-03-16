@@ -3,7 +3,7 @@
 	desc = "Create a magical barrier that only you can pass through."
 	button_icon_state = "shield"
 
-	sound = 'sound/effects/magic/forcewall.ogg'
+	sound = '../assets/sound/effects/magic/forcewall.ogg'
 	school = SCHOOL_TRANSMUTATION
 	cooldown_time = 10 SECONDS
 	cooldown_reduction_per_rank = 1.25 SECONDS
@@ -34,7 +34,7 @@
 	background_icon_state = "bg_demon"
 	overlay_icon_state = "bg_demon_border"
 
-	button_icon = 'icons/mob/actions/actions_cult.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_cult.dmi'
 	button_icon_state = "cultforcewall"
 
 	cooldown_time = 40 SECONDS
@@ -47,7 +47,7 @@
 	desc = "Form an invisible three tile wide blockade."
 	background_icon_state = "bg_mime"
 	overlay_icon_state = "bg_mime_border"
-	button_icon = 'icons/mob/actions/actions_mime.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_mime.dmi'
 	button_icon_state = "invisible_blockade"
 	check_flags = AB_CHECK_CONSCIOUS|AB_CHECK_HANDS_BLOCKED|AB_CHECK_INCAPACITATED
 	panel = "Mime"

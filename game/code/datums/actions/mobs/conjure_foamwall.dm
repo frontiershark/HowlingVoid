@@ -2,7 +2,7 @@
 	name = "Foam wall"
 	desc = "Create a wall of foam."
 
-	button_icon = 'icons/effects/effects.dmi'
+	button_icon = '../assets/icons/effects/effects.dmi'
 	button_icon_state = "metalfoam"
 
 	cooldown_time = 2 MINUTES

@@ -8,14 +8,14 @@ RSF
 /obj/item/rsf
 	name = "\improper Rapid-Service-Fabricator"
 	desc = "A device used to rapidly deploy service items."
-	icon = 'icons/obj/tools.dmi'
+	icon = '../assets/icons/obj/tools.dmi'
 	icon_state = "rsf"
 	inhand_icon_state = "rsf"
 	base_icon_state = "rsf"
 	///The icon state to revert to when the tool is empty
 	var/spent_icon_state = "rsf_empty"
-	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/tools_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/tools_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/tools_righthand.dmi'
 	opacity = FALSE
 	density = FALSE
 	anchored = FALSE
@@ -84,14 +84,14 @@ RSF
 		else
 			qdel(W)
 		matter = tempMatter //We add its value
-		playsound(src.loc, 'sound/machines/click.ogg', 10, TRUE)
+		playsound(src.loc, '../assets/sound/machines/click.ogg', 10, TRUE)
 		to_chat(user, span_notice("\The [src] now holds [matter]/[max_matter] [discriptor]."))
 		icon_state = base_icon_state//and set the icon state to the base state
 	else
 		return ..()
 
 /obj/item/rsf/attack_self(mob/user)
-	playsound(src.loc, 'sound/effects/pop.ogg', 50, FALSE)
+	playsound(src.loc, '../assets/sound/effects/pop.ogg', 50, FALSE)
 	var/target = cost_by_item
 	var/cost = 0
 	//Warning, prepare for bodgecode
@@ -131,7 +131,7 @@ RSF
 	if (!is_allowed(interacting_with))
 		return NONE
 	if(use_matter(dispense_cost, user))//If we can charge that amount of charge, we do so and return true
-		playsound(loc, 'sound/machines/click.ogg', 10, TRUE)
+		playsound(loc, '../assets/sound/machines/click.ogg', 10, TRUE)
 		var/atom/meme = new to_dispense(get_turf(interacting_with))
 		to_chat(user, span_notice("[action_type] [meme.name]..."))
 		cooldown = world.time + cooldowndelay

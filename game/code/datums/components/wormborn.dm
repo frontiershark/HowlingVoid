@@ -30,7 +30,7 @@
 /mob/living/basic/wizard_worm
 	name = "Magic Worm"
 	desc = "Large blue worm. What happens if you put your hand in his mouth?."
-	icon = 'icons/mob/simple/mob.dmi'
+	icon = '../assets/icons/mob/simple/mob.dmi'
 	icon_state = "wizard_start"
 	icon_living = "wizard_start"
 	base_icon_state = "wizard"

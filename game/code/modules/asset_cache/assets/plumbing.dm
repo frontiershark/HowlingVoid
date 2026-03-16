@@ -4,16 +4,16 @@
 /datum/asset/spritesheet_batched/plumbing/create_spritesheets()
 	//load only what we need from the icon files,format is icon_file_name = list of icon_states we need from this file
 	var/list/essentials = list(
-		'icons/obj/medical/iv_drip.dmi' = list("plumb"),
-		'icons/obj/pipes_n_cables/hydrochem/fluid_ducts.dmi' = list("nduct"),
-		'icons/hud/radial.dmi' = list(
+		'../assets/icons/obj/medical/iv_drip.dmi' = list("plumb"),
+		'../assets/icons/obj/pipes_n_cables/hydrochem/fluid_ducts.dmi' = list("nduct"),
+		'../assets/icons/hud/radial.dmi' = list(
 			"plumbing_layer1",
 			"plumbing_layer2",
 			"plumbing_layer4",
 			"plumbing_layer8",
 			"plumbing_layer16",
 		),
-		'icons/obj/pipes_n_cables/hydrochem/plumbers.dmi' = list(
+		'../assets/icons/obj/pipes_n_cables/hydrochem/plumbers.dmi' = list(
 			"synthesizer",
 			"reaction_chamber",
 			"grinder_chemical",

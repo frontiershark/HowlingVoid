@@ -91,7 +91,7 @@
 	else
 		var/datum/pipeline/vent_parent = ventcrawl_target.parents[1]
 		if(vent_parent && (vent_parent.members.len || vent_parent.other_atmos_machines))
-			ventcrawl_target.flick_overlay_static(image('icons/effects/vent_indicator.dmi', "arrow", ABOVE_MOB_LAYER, dir = get_dir(src.loc, ventcrawl_target.loc)), 2 SECONDS)
+			ventcrawl_target.flick_overlay_static(image('../assets/icons/effects/vent_indicator.dmi', "arrow", ABOVE_MOB_LAYER, dir = get_dir(src.loc, ventcrawl_target.loc)), 2 SECONDS)
 			visible_message(span_notice("[src] begins climbing into the ventilation system...") ,span_notice("You begin climbing into the ventilation system..."))
 			if(!do_after(src, 2.5 SECONDS, target = ventcrawl_target, extra_checks = CALLBACK(src, PROC_REF(can_enter_vent), ventcrawl_target)))
 				return
@@ -100,7 +100,7 @@
 			if(ventcrawl_target.welded) // in case it got welded during our sleep
 				to_chat(src, span_warning("You can't crawl around a welded vent!"))
 				return
-			ventcrawl_target.flick_overlay_static(image('icons/effects/vent_indicator.dmi', "insert", ABOVE_MOB_LAYER), 1 SECONDS)
+			ventcrawl_target.flick_overlay_static(image('../assets/icons/effects/vent_indicator.dmi', "insert", ABOVE_MOB_LAYER), 1 SECONDS)
 			visible_message(span_notice("[src] scrambles into the ventilation ducts!"), span_notice("You climb into the ventilation ducts."))
 			move_into_vent(ventcrawl_target)
 		else

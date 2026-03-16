@@ -1,5 +1,5 @@
 /atom/movable/screen/ai
-	icon = 'icons/hud/screen_ai.dmi'
+	icon = '../assets/icons/hud/screen_ai.dmi'
 	mouse_over_pointer = MOUSE_HAND_POINTER
 
 /atom/movable/screen/ai/Click()
@@ -235,7 +235,7 @@
 	ai.down()
 
 /datum/hud/ai
-	ui_style = 'icons/hud/screen_ai.dmi'
+	ui_style = '../assets/icons/hud/screen_ai.dmi'
 
 /datum/hud/ai/New(mob/owner)
 	..()

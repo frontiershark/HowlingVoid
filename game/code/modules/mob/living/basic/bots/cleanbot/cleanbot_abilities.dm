@@ -20,7 +20,7 @@
 /datum/action/cooldown/mob_cooldown/bot/foam
 	name = "Foam"
 	desc = "Spread foam all around you!"
-	button_icon = 'icons/effects/effects.dmi'
+	button_icon = '../assets/icons/effects/effects.dmi'
 	button_icon_state = "mfoam"
 	cooldown_time = 20 SECONDS
 	click_to_activate = FALSE

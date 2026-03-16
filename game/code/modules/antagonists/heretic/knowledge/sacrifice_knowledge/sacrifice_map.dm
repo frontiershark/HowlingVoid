@@ -69,7 +69,7 @@ GLOBAL_LIST_EMPTY(heretic_sacrifice_landmarks)
 
 /area/centcom/heretic_sacrifice/Initialize(mapload)
 	if(!ambientsounds)
-		ambientsounds = GLOB.ambience_assoc[ambience_index] + 'sound/ambience/misc/ambiatm1.ogg'
+		ambientsounds = GLOB.ambience_assoc[ambience_index] + '../assets/sound/ambience/misc/ambiatm1.ogg'
 	return ..()
 
 /area/centcom/heretic_sacrifice/ash //also, the default

@@ -3,7 +3,7 @@
 /obj/item/slime_extract
 	name = "slime extract"
 	desc = "Goo extracted from a slime. Legends claim these to have \"magical powers\"."
-	icon = 'icons/mob/simple/slimes.dmi'
+	icon = '../assets/icons/mob/simple/slimes.dmi'
 	icon_state = "grey-core"
 	force = 0
 	w_class = WEIGHT_CLASS_TINY
@@ -86,7 +86,7 @@
 	target_slime.applied_crossbreed_amount++
 	qdel(src)
 	to_chat(user, span_notice("You feed the slime [src], [target_slime.applied_crossbreed_amount == 1 ? "starting to mutate its core." : "further mutating its core."]"))
-	playsound(target_slime, 'sound/effects/blob/attackblob.ogg', 50, TRUE)
+	playsound(target_slime, '../assets/sound/effects/blob/attackblob.ogg', 50, TRUE)
 
 	if(target_slime.applied_crossbreed_amount >= SLIME_EXTRACT_CROSSING_REQUIRED)
 		target_slime.spawn_corecross()
@@ -162,14 +162,14 @@ GLOBAL_LIST_INIT(slime_extract_auto_activate_reactions, init_slime_auto_activate
 			var/obj/item/food/monkeycube/M = new
 			if(!user.put_in_active_hand(M))
 				M.forceMove(user.drop_location())
-			playsound(user, 'sound/effects/splat.ogg', 50, TRUE)
+			playsound(user, '../assets/sound/effects/splat.ogg', 50, TRUE)
 			to_chat(user, span_notice("You spit out a monkey cube."))
 			return 120
 		if(SLIME_ACTIVATE_MAJOR)
 			to_chat(user, span_notice("Your [name] starts pulsing..."))
 			if(do_after(user, 4 SECONDS, target = user))
 				var/mob/living/basic/slime/new_slime = new(get_turf(user), /datum/slime_type/grey)
-				playsound(user, 'sound/effects/splat.ogg', 50, TRUE)
+				playsound(user, '../assets/sound/effects/splat.ogg', 50, TRUE)
 				to_chat(user, span_notice("You spit out [new_slime]."))
 				return 350
 			else
@@ -189,7 +189,7 @@ GLOBAL_LIST_INIT(slime_extract_auto_activate_reactions, init_slime_auto_activate
 			if(do_after(user, 4 SECONDS, target = user))
 				var/mob/living/spawned_mob = create_random_mob(user.drop_location(), FRIENDLY_SPAWN)
 				spawned_mob.add_faction(FACTION_NEUTRAL)
-				playsound(user, 'sound/effects/splat.ogg', 50, TRUE)
+				playsound(user, '../assets/sound/effects/splat.ogg', 50, TRUE)
 				user.visible_message(span_warning("[user] spits out [spawned_mob]!"), span_notice("You spit out [spawned_mob]!"))
 				return 300
 
@@ -201,7 +201,7 @@ GLOBAL_LIST_INIT(slime_extract_auto_activate_reactions, init_slime_auto_activate
 					spawned_mob.add_faction(FACTION_NEUTRAL)
 				else
 					spawned_mob.add_faction(FACTION_SLIME)
-				playsound(user, 'sound/effects/splat.ogg', 50, TRUE)
+				playsound(user, '../assets/sound/effects/splat.ogg', 50, TRUE)
 				user.visible_message(span_warning("[user] spits out [spawned_mob]!"), span_warning("You spit out [spawned_mob]!"))
 				return 600
 
@@ -220,7 +220,7 @@ GLOBAL_LIST_INIT(slime_extract_auto_activate_reactions, init_slime_auto_activate
 			ADD_TRAIT(food_item, TRAIT_FOOD_SILVER, INNATE_TRAIT)
 			if(!user.put_in_active_hand(food_item))
 				food_item.forceMove(user.drop_location())
-			playsound(user, 'sound/effects/splat.ogg', 50, TRUE)
+			playsound(user, '../assets/sound/effects/splat.ogg', 50, TRUE)
 			user.visible_message(span_warning("[user] spits out [food_item]!"), span_notice("You spit out [food_item]!"))
 			return 200
 		if(SLIME_ACTIVATE_MAJOR)
@@ -228,7 +228,7 @@ GLOBAL_LIST_INIT(slime_extract_auto_activate_reactions, init_slime_auto_activate
 			var/obj/O = new drink_type
 			if(!user.put_in_active_hand(O))
 				O.forceMove(user.drop_location())
-			playsound(user, 'sound/effects/splat.ogg', 50, TRUE)
+			playsound(user, '../assets/sound/effects/splat.ogg', 50, TRUE)
 			user.visible_message(span_warning("[user] spits out [O]!"), span_notice("You spit out [O]!"))
 			return 200
 
@@ -243,7 +243,7 @@ GLOBAL_LIST_INIT(slime_extract_auto_activate_reactions, init_slime_auto_activate
 			var/obj/item/stack/sheet/glass/O = new(null, 5)
 			if(!user.put_in_active_hand(O))
 				O.forceMove(user.drop_location())
-			playsound(user, 'sound/effects/splat.ogg', 50, TRUE)
+			playsound(user, '../assets/sound/effects/splat.ogg', 50, TRUE)
 			user.visible_message(span_warning("[user] spits out [O]!"), span_notice("You spit out [O]!"))
 			return 150
 
@@ -251,7 +251,7 @@ GLOBAL_LIST_INIT(slime_extract_auto_activate_reactions, init_slime_auto_activate
 			var/obj/item/stack/sheet/iron/O = new(null, 5)
 			if(!user.put_in_active_hand(O))
 				O.forceMove(user.drop_location())
-			playsound(user, 'sound/effects/splat.ogg', 50, TRUE)
+			playsound(user, '../assets/sound/effects/splat.ogg', 50, TRUE)
 			user.visible_message(span_warning("[user] spits out [O]!"), span_notice("You spit out [O]!"))
 			return 200
 
@@ -284,7 +284,7 @@ GLOBAL_LIST_INIT(slime_extract_auto_activate_reactions, init_slime_auto_activate
 			var/obj/item/stack/sheet/mineral/plasma/O = new(null, 1)
 			if(!user.put_in_active_hand(O))
 				O.forceMove(user.drop_location())
-			playsound(user, 'sound/effects/splat.ogg', 50, TRUE)
+			playsound(user, '../assets/sound/effects/splat.ogg', 50, TRUE)
 			user.visible_message(span_warning("[user] spits out [O]!"), span_notice("You spit out [O]!"))
 			return 150
 
@@ -457,7 +457,7 @@ GLOBAL_LIST_INIT(slime_extract_auto_activate_reactions, init_slime_auto_activate
 			var/obj/item/slimepotion/renaming/O = new(null, 1)
 			if(!user.put_in_active_hand(O))
 				O.forceMove(user.drop_location())
-			playsound(user, 'sound/effects/splat.ogg', 50, TRUE)
+			playsound(user, '../assets/sound/effects/splat.ogg', 50, TRUE)
 			user.visible_message(span_warning("[user] spits out [O]!"), span_notice("You spit out [O]!"))
 			return 150
 
@@ -465,7 +465,7 @@ GLOBAL_LIST_INIT(slime_extract_auto_activate_reactions, init_slime_auto_activate
 			var/obj/item/slimepotion/sentience/O = new(null, 1)
 			if(!user.put_in_active_hand(O))
 				O.forceMove(user.drop_location())
-			playsound(user, 'sound/effects/splat.ogg', 50, TRUE)
+			playsound(user, '../assets/sound/effects/splat.ogg', 50, TRUE)
 			user.visible_message(span_warning("[user] spits out [O]!"), span_notice("You spit out [O]!"))
 			return 450
 
@@ -498,7 +498,7 @@ GLOBAL_LIST_INIT(slime_extract_auto_activate_reactions, init_slime_auto_activate
 	switch(activation_type)
 		if(SLIME_ACTIVATE_MINOR)
 			to_chat(user, span_warning("You vomit slippery oil."))
-			playsound(user, 'sound/effects/splat.ogg', 50, TRUE)
+			playsound(user, '../assets/sound/effects/splat.ogg', 50, TRUE)
 			new /obj/effect/decal/cleanable/blood/oil/slippery(get_turf(user))
 			return 450
 
@@ -556,7 +556,7 @@ GLOBAL_LIST_INIT(slime_extract_auto_activate_reactions, init_slime_auto_activate
 			to_chat(user, span_warning("You feel your body vibrating..."))
 			if(do_after(user, 2.5 SECONDS, target = user))
 				to_chat(user, span_warning("You teleport!"))
-				do_teleport(user, get_turf(user), 6, asoundin = 'sound/items/weapons/emitter2.ogg', channel = TELEPORT_CHANNEL_BLUESPACE)
+				do_teleport(user, get_turf(user), 6, asoundin = '../assets/sound/items/weapons/emitter2.ogg', channel = TELEPORT_CHANNEL_BLUESPACE)
 				return 300
 
 		if(SLIME_ACTIVATE_MAJOR)
@@ -572,7 +572,7 @@ GLOBAL_LIST_INIT(slime_extract_auto_activate_reactions, init_slime_auto_activate
 				if(teleport_x && teleport_y && teleport_z)
 					var/turf/T = locate(teleport_x, teleport_y, teleport_z)
 					to_chat(user, span_notice("You snap back to your anchor point!"))
-					do_teleport(user, T,  asoundin = 'sound/items/weapons/emitter2.ogg', channel = TELEPORT_CHANNEL_BLUESPACE)
+					do_teleport(user, T,  asoundin = '../assets/sound/items/weapons/emitter2.ogg', channel = TELEPORT_CHANNEL_BLUESPACE)
 					return 450
 
 
@@ -588,7 +588,7 @@ GLOBAL_LIST_INIT(slime_extract_auto_activate_reactions, init_slime_auto_activate
 			var/obj/item/O = new chosen(null)
 			if(!user.put_in_active_hand(O))
 				O.forceMove(user.drop_location())
-			playsound(user, 'sound/effects/splat.ogg', 50, TRUE)
+			playsound(user, '../assets/sound/effects/splat.ogg', 50, TRUE)
 			user.visible_message(span_warning("[user] spits out [O]!"), span_notice("You spit out [O]!"))
 			return 150
 
@@ -598,7 +598,7 @@ GLOBAL_LIST_INIT(slime_extract_auto_activate_reactions, init_slime_auto_activate
 			var/obj/item/O = new chosen(null)
 			if(!user.put_in_active_hand(O))
 				O.forceMove(user.drop_location())
-			playsound(user, 'sound/effects/splat.ogg', 50, TRUE)
+			playsound(user, '../assets/sound/effects/splat.ogg', 50, TRUE)
 			user.visible_message(span_warning("[user] spits out [O]!"), span_notice("You spit out [O]!"))
 			return 250
 
@@ -632,7 +632,7 @@ GLOBAL_LIST_INIT(slime_extract_auto_activate_reactions, init_slime_auto_activate
 			var/obj/item/camera/O = new(null, 1)
 			if(!user.put_in_active_hand(O))
 				O.forceMove(user.drop_location())
-			playsound(user, 'sound/effects/splat.ogg', 50, TRUE)
+			playsound(user, '../assets/sound/effects/splat.ogg', 50, TRUE)
 			user.visible_message(span_warning("[user] spits out [O]!"), span_notice("You spit out [O]!"))
 			return 150
 
@@ -662,7 +662,7 @@ GLOBAL_LIST_INIT(slime_extract_auto_activate_reactions, init_slime_auto_activate
 			var/obj/item/O = new chosen(null)
 			if(!user.put_in_active_hand(O))
 				O.forceMove(user.drop_location())
-			playsound(user, 'sound/effects/splat.ogg', 50, TRUE)
+			playsound(user, '../assets/sound/effects/splat.ogg', 50, TRUE)
 			user.visible_message(span_warning("[user] spits out [O]!"), span_notice("You spit out [O]!"))
 			return 150
 
@@ -681,7 +681,7 @@ GLOBAL_LIST_INIT(slime_extract_auto_activate_reactions, init_slime_auto_activate
 /obj/item/slimepotion
 	name = "slime potion"
 	desc = "A hard yet gelatinous capsule excreted by a slime, containing mysterious substances."
-	icon = 'icons/obj/medical/chemical.dmi'
+	icon = '../assets/icons/obj/medical/chemical.dmi'
 	w_class = WEIGHT_CLASS_TINY
 
 /obj/item/slimepotion/interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)

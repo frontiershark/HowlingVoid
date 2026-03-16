@@ -3,7 +3,7 @@
 	desc = "A small device capable of administering short bursts of aerosolized chemicals. Requires a canister to function."
 	w_class = WEIGHT_CLASS_SMALL
 
-	icon = 'icons/obj/medical/chemical.dmi'
+	icon = '../assets/icons/obj/medical/chemical.dmi'
 	icon_state = "inhaler_generic"
 
 	custom_materials = list(/datum/material/plastic = SHEET_MATERIAL_AMOUNT * 0.1)
@@ -214,7 +214,7 @@
 	desc = "A small canister filled with aerosolized reagents for use in a inhaler."
 	w_class = WEIGHT_CLASS_TINY
 
-	icon = 'icons/obj/medical/chemical.dmi'
+	icon = '../assets/icons/obj/medical/chemical.dmi'
 	icon_state = "canister_generic"
 
 	initial_reagent_flags = SEALED_CONTAINER | DRAINABLE | REFILLABLE | NO_SPLASH
@@ -225,14 +225,14 @@
 	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 0.2)
 
 	/// The sound that plays when we are used.
-	var/puff_sound = 'sound/effects/spray.ogg'
+	var/puff_sound = '../assets/sound/effects/spray.ogg'
 	/// The volume of [puff_sound]
 	var/puff_volume = 20
 
 	/// The sound that plays when someone TRIES to insert us.
-	var/pre_insert_sound = 'sound/items/taperecorder/tape_flip.ogg'
+	var/pre_insert_sound = '../assets/sound/items/taperecorder/tape_flip.ogg'
 	/// The sound that plays when we are removed or inserted.
-	var/post_insert_sound = 'sound/items/taperecorder/taperecorder_close.ogg'
+	var/post_insert_sound = '../assets/sound/items/taperecorder/taperecorder_close.ogg'
 
 	/// The volume of [pre_insert_sound]
 	var/pre_insert_volume = 50

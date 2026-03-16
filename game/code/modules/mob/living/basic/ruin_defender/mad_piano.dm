@@ -4,7 +4,7 @@
 /mob/living/basic/mad_piano
 	name = "space piano"
 	desc = "This is a space piano, like a regular piano, but always in tune! Even if the musician isn't."
-	icon = 'icons/mob/simple/mad_piano.dmi'
+	icon = '../assets/icons/mob/simple/mad_piano.dmi'
 	icon_state = "calm"
 	mob_size = MOB_SIZE_HUGE
 	move_resist = INFINITY
@@ -18,7 +18,7 @@
 	speed = 2
 	gender = NEUTER
 	basic_mob_flags = DEL_ON_DEATH
-	attack_sound = 'sound/effects/piano_hit.ogg'
+	attack_sound = '../assets/sound/effects/piano_hit.ogg'
 	attack_vis_effect = ATTACK_EFFECT_BITE
 	attack_verb_continuous = "bites"
 	attack_verb_simple = "bite"

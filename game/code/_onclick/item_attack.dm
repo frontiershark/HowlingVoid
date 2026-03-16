@@ -240,7 +240,7 @@
 
 	if(!LAZYACCESS(attack_modifiers, SILENCE_HITSOUND))
 		if(!final_force && !HAS_TRAIT(src, TRAIT_CUSTOM_TAP_SOUND))
-			playsound(src, 'sound/items/weapons/tap.ogg', get_clamped_volume(), TRUE, -1)
+			playsound(src, '../assets/sound/items/weapons/tap.ogg', get_clamped_volume(), TRUE, -1)
 		else if(hitsound)
 			playsound(src, hitsound, get_clamped_volume(), TRUE, extrarange = stealthy_audio ? SILENCED_SOUND_EXTRARANGE : -1, falloff_distance = 0)
 

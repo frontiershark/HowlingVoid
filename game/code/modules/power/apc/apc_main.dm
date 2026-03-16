@@ -17,7 +17,7 @@
 /obj/machinery/power/apc
 	name = "area power controller"
 	desc = "A control terminal for the area's electrical systems."
-	icon = 'icons/obj/machines/wallmounts.dmi'
+	icon = '../assets/icons/obj/machines/wallmounts.dmi'
 	icon_state = "apc0"
 	use_power = NO_POWER_USE
 	req_access = null
@@ -273,7 +273,7 @@
 			offset_old = pixel_x
 			pixel_x = -APC_PIXEL_OFFSET
 
-	var/image/hud_image = image(icon = 'icons/mob/huds/hud.dmi', icon_state = "apc_hacked")
+	var/image/hud_image = image(icon = '../assets/icons/mob/huds/hud.dmi', icon_state = "apc_hacked")
 	hud_image.pixel_w = pixel_x
 	hud_image.pixel_z = pixel_y
 	hud_list = list(
@@ -444,9 +444,9 @@
 	say("Remote access detected.[locked ? " Interface unlocked." : ""]")
 	to_chat(remote_control_user, span_danger("[icon2html(src, remote_control_user)] Connected to [src]."))
 	if(locked)
-		playsound(src, 'sound/machines/terminal/terminal_on.ogg', 25, FALSE)
+		playsound(src, '../assets/sound/machines/terminal/terminal_on.ogg', 25, FALSE)
 		locked = FALSE
-	playsound(src, 'sound/machines/terminal/terminal_alert.ogg', 50, FALSE)
+	playsound(src, '../assets/sound/machines/terminal/terminal_alert.ogg', 50, FALSE)
 	update_appearance()
 
 /**
@@ -462,8 +462,8 @@
 	to_chat(remote_control_user, span_danger("[icon2html(src, remote_control_user)] Disconnected from [src]."))
 	if(!mute)
 		say("Remote access canceled. Interface locked.")
-		playsound(src, 'sound/machines/terminal/terminal_off.ogg', 25, FALSE)
-		playsound(src, 'sound/machines/terminal/terminal_alert.ogg', 50, FALSE)
+		playsound(src, '../assets/sound/machines/terminal/terminal_off.ogg', 25, FALSE)
+		playsound(src, '../assets/sound/machines/terminal/terminal_alert.ogg', 50, FALSE)
 	update_appearance()
 	remote_control_user = null
 

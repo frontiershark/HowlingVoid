@@ -1,5 +1,5 @@
 /mob/living/basic/trooper
-	icon = 'icons/mob/simple/simple_human.dmi'
+	icon = '../assets/icons/mob/simple/simple_human.dmi'
 	mob_biotypes = MOB_ORGANIC|MOB_HUMANOID
 	sentience_type = SENTIENCE_HUMANOID
 	maxHealth = 100
@@ -10,7 +10,7 @@
 	melee_damage_upper = 10
 	attack_verb_continuous = "punches"
 	attack_verb_simple = "punch"
-	attack_sound = 'sound/items/weapons/punch1.ogg'
+	attack_sound = '../assets/sound/items/weapons/punch1.ogg'
 	melee_attack_cooldown = 1.2 SECONDS
 	combat_mode = TRUE
 	unsuitable_atmos_damage = 7.5

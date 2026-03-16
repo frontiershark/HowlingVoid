@@ -12,7 +12,7 @@
 #define MAX_BATTLE_LENGTH 50
 
 /obj/item/toy/mecha
-	icon = 'icons/obj/toys/toy.dmi'
+	icon = '../assets/icons/obj/toys/toy.dmi'
 	icon_state = "fivestarstoy"
 	verb_say = "beeps"
 	verb_ask = "beeps"
@@ -130,7 +130,7 @@
 		to_chat(user, span_notice("You play with [src]."))
 		timer = world.time + cooldown
 		if(!quiet)
-			playsound(user, 'sound/vehicles/mecha/mechstep.ogg', 20, TRUE)
+			playsound(user, '../assets/sound/vehicles/mecha/mechstep.ogg', 20, TRUE)
 	else
 		. = ..()
 
@@ -194,7 +194,7 @@
 		to_chat(user, span_notice("You telekinetically play with [src]."))
 		timer = world.time + cooldown
 		if(!quiet)
-			playsound(user, 'sound/vehicles/mecha/mechstep.ogg', 20, TRUE)
+			playsound(user, '../assets/sound/vehicles/mecha/mechstep.ogg', 20, TRUE)
 	return COMPONENT_CANCEL_ATTACK_CHAIN
 
 
@@ -225,12 +225,12 @@
 		switch(i)
 			if(1, 3)
 				SpinAnimation(5, 0)
-				playsound(src, 'sound/vehicles/mecha/mechstep.ogg', 30, TRUE)
+				playsound(src, '../assets/sound/vehicles/mecha/mechstep.ogg', 30, TRUE)
 				user.adjust_brute_loss(25)
 				user.adjust_stamina_loss(50)
 			if(2)
 				user.SpinAnimation(5, 0)
-				playsound(user, 'sound/items/weapons/smash.ogg', 20, TRUE)
+				playsound(user, '../assets/sound/items/weapons/smash.ogg', 20, TRUE)
 				combat_health-- //we scratched it!
 			if(4)
 				say(special_attack_cry + "!!")
@@ -331,14 +331,14 @@
 											span_danger("You begin charging [attacker]'s special attack!"))
 					else //just attack
 						attacker.SpinAnimation(5, 0)
-						playsound(attacker, 'sound/vehicles/mecha/mechstep.ogg', 30, TRUE)
+						playsound(attacker, '../assets/sound/vehicles/mecha/mechstep.ogg', 30, TRUE)
 						combat_health--
 						attacker_controller.visible_message(span_danger("[attacker] devastates [src]!"), \
 											span_danger("You ram [attacker] into [src]!"), \
 											span_hear("You hear hard plastic smacking hard plastic."), COMBAT_MESSAGE_RANGE)
 						if(prob(5))
 							combat_health--
-							playsound(src, 'sound/effects/meteorimpact.ogg', 20, TRUE)
+							playsound(src, '../assets/sound/effects/meteorimpact.ogg', 20, TRUE)
 							attacker_controller.visible_message(span_boldwarning("...and lands a CRIPPLING BLOW!"), \
 												span_boldwarning("...and you land a CRIPPLING blow on [src]!"), null, COMBAT_MESSAGE_RANGE)
 
@@ -358,7 +358,7 @@
 										span_danger("[src] and [attacker] clash dramatically, causing sparks to fly!"), \
 										span_hear("You hear hard plastic rubbing against hard plastic."), COMBAT_MESSAGE_RANGE)
 				if(5) //both win
-					playsound(attacker, 'sound/items/weapons/parry.ogg', 20, TRUE)
+					playsound(attacker, '../assets/sound/items/weapons/parry.ogg', 20, TRUE)
 					if(prob(50))
 						attacker_controller.visible_message(span_danger("[src]'s attack deflects off of [attacker]."), \
 											span_danger("[src]'s attack deflects off of [attacker]."), \
@@ -375,14 +375,14 @@
 										span_danger("You begin charging [src]'s special attack!"))
 					else //just attack
 						SpinAnimation(5, 0)
-						playsound(src, 'sound/vehicles/mecha/mechstep.ogg', 30, TRUE)
+						playsound(src, '../assets/sound/vehicles/mecha/mechstep.ogg', 30, TRUE)
 						attacker.combat_health--
 						src_controller.visible_message(span_danger("[src] smashes [attacker]!"), \
 										span_danger("You smash [src] into [attacker]!"), \
 										span_hear("You hear hard plastic smashing hard plastic."), COMBAT_MESSAGE_RANGE)
 						if(prob(5))
 							attacker.combat_health--
-							playsound(attacker, 'sound/effects/meteorimpact.ogg', 20, TRUE)
+							playsound(attacker, '../assets/sound/effects/meteorimpact.ogg', 20, TRUE)
 							src_controller.visible_message(span_boldwarning("...and lands a CRIPPLING BLOW!"), \
 											span_boldwarning("...and you land a CRIPPLING blow on [attacker]!"), null, COMBAT_MESSAGE_RANGE)
 				else
@@ -396,13 +396,13 @@
 	var/list/winlines = list("YOU'RE NOTHING BUT SCRAP!", "I'LL YIELD TO NONE!", "GLORY IS MINE!", "AN EASY FIGHT.", "YOU SHOULD HAVE NEVER FACED ME.", "ROCKED AND SOCKED.")
 
 	if(attacker.combat_health <= 0 && combat_health <= 0) //both lose
-		playsound(src, 'sound/machines/warning-buzzer.ogg', 20, TRUE)
+		playsound(src, '../assets/sound/machines/warning-buzzer.ogg', 20, TRUE)
 		attacker_controller.visible_message(span_boldnotice("MUTUALLY ASSURED DESTRUCTION!! [src] and [attacker] both end up destroyed!"), \
 							span_boldnotice("Both [src] and [attacker] are destroyed!"))
 	else if(attacker.combat_health <= 0) //src wins
 		wins++
 		attacker.losses++
-		playsound(attacker, 'sound/effects/light_flicker.ogg', 20, TRUE)
+		playsound(attacker, '../assets/sound/effects/light_flicker.ogg', 20, TRUE)
 		attacker_controller.visible_message(span_notice("[attacker] falls apart!"), \
 							span_notice("[attacker] falls apart!"), null, COMBAT_MESSAGE_RANGE)
 		say("[pick(winlines)]")
@@ -411,7 +411,7 @@
 	else if (combat_health <= 0) //attacker wins
 		attacker.wins++
 		losses++
-		playsound(src, 'sound/effects/light_flicker.ogg', 20, TRUE)
+		playsound(src, '../assets/sound/effects/light_flicker.ogg', 20, TRUE)
 		src_controller.visible_message(span_notice("[src] collapses!"), \
 						span_notice("[src] collapses!"), null, COMBAT_MESSAGE_RANGE)
 		attacker.say("[pick(winlines)]")
@@ -477,14 +477,14 @@
 	switch(special_attack_type)
 		if(SPECIAL_ATTACK_DAMAGE) //+2 damage
 			victim.combat_health-=2
-			playsound(src, 'sound/items/weapons/marauder.ogg', 20, TRUE)
+			playsound(src, '../assets/sound/items/weapons/marauder.ogg', 20, TRUE)
 		if(SPECIAL_ATTACK_HEAL) //+2 healing
 			combat_health+=2
-			playsound(src, 'sound/vehicles/mecha/mech_shield_raise.ogg', 20, TRUE)
+			playsound(src, '../assets/sound/vehicles/mecha/mech_shield_raise.ogg', 20, TRUE)
 		if(SPECIAL_ATTACK_UTILITY) //+1 heal, +1 damage
 			victim.combat_health--
 			combat_health++
-			playsound(src, 'sound/vehicles/mecha/mechmove01.ogg', 30, TRUE)
+			playsound(src, '../assets/sound/vehicles/mecha/mechmove01.ogg', 30, TRUE)
 		if(SPECIAL_ATTACK_OTHER) //other
 			super_special_attack(victim)
 		else
@@ -572,7 +572,7 @@
 	special_attack_cry = "MEGA HORN"
 
 /obj/item/toy/mecha/honk/super_special_attack(obj/item/toy/mecha/victim)
-	playsound(src, 'sound/mobs/non-humanoids/honkbot/honkbot_evil_laugh.ogg', 20, TRUE)
+	playsound(src, '../assets/sound/mobs/non-humanoids/honkbot/honkbot_evil_laugh.ogg', 20, TRUE)
 	victim.special_attack_cooldown += 3 //Adds cooldown to the other mech and gives a minor self heal
 	combat_health++
 
@@ -606,7 +606,7 @@
 	special_attack_cry = "KILLER CLAMP"
 
 /obj/item/toy/mecha/deathripley/super_special_attack(obj/item/toy/mecha/victim)
-	playsound(src, 'sound/items/weapons/sonic_jackhammer.ogg', 20, TRUE)
+	playsound(src, '../assets/sound/items/weapons/sonic_jackhammer.ogg', 20, TRUE)
 	if(victim.combat_health < combat_health) //Instantly kills the other mech if its health is below ours.
 		say("EXECUTE!!")
 		victim.combat_health = 0

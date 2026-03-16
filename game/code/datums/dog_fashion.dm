@@ -66,10 +66,10 @@
 
 
 /datum/dog_fashion/head
-	icon_file = 'icons/mob/simple/corgi_head.dmi'
+	icon_file = '../assets/icons/mob/simple/corgi_head.dmi'
 
 /datum/dog_fashion/back
-	icon_file = 'icons/mob/simple/corgi_back.dmi'
+	icon_file = '../assets/icons/mob/simple/corgi_back.dmi'
 
 /datum/dog_fashion/back/armorvest
 	obj_icon_state = "armor"

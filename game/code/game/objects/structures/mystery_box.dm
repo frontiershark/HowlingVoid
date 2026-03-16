@@ -115,7 +115,7 @@ GLOBAL_LIST_INIT(mystery_fishing, list(
 /obj/structure/mystery_box
 	name = "mystery box"
 	desc = "A wooden crate that seems equally magical and mysterious, capable of granting the user all kinds of different pieces of gear."
-	icon = 'icons/obj/storage/crates.dmi'
+	icon = '../assets/icons/obj/storage/crates.dmi'
 	icon_state = "wooden"
 	pixel_y = -4
 	anchored = TRUE
@@ -123,10 +123,10 @@ GLOBAL_LIST_INIT(mystery_fishing, list(
 	max_integrity = 99999
 	damage_deflection = 100
 
-	var/crate_open_sound = 'sound/machines/crate/crate_open.ogg'
-	var/crate_close_sound = 'sound/machines/crate/crate_close.ogg'
-	var/open_sound = 'sound/effects/mysterybox/mbox_full.ogg'
-	var/grant_sound = 'sound/effects/mysterybox/mbox_end.ogg'
+	var/crate_open_sound = '../assets/sound/machines/crate/crate_open.ogg'
+	var/crate_close_sound = '../assets/sound/machines/crate/crate_close.ogg'
+	var/open_sound = '../assets/sound/effects/mysterybox/mbox_full.ogg'
+	var/grant_sound = '../assets/sound/effects/mysterybox/mbox_end.ogg'
 	/// The box's current state, and whether it can be interacted with in different ways
 	var/box_state = MYSTERY_BOX_STANDBY
 	/// The object that represents the rapidly changing item that will be granted upon being claimed. Is not, itself, an item.
@@ -305,7 +305,7 @@ GLOBAL_LIST_INIT(mystery_fishing, list(
 /obj/effect/abstract/mystery_box_item
 	name = "???"
 	desc = "Who knows what it'll be??"
-	icon = 'icons/obj/weapons/guns/ballistic.dmi'
+	icon = '../assets/icons/obj/weapons/guns/ballistic.dmi'
 	icon_state = "revolver"
 	pixel_z = -4
 	uses_integrity = FALSE

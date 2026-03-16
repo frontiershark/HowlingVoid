@@ -38,7 +38,7 @@ GLOBAL_LIST_EMPTY_TYPED(has_antagonist_huds, /datum/atom_hud/alternate_appearanc
 
 	antag_hud_images = get_antag_hud_images(mind)
 
-	var/image/first_antagonist = get_antag_image(1) || image(icon('icons/blanks/32x32.dmi', "nothing"), mind.current)
+	var/image/first_antagonist = get_antag_image(1) || image(icon('../assets/icons/blanks/32x32.dmi', "nothing"), mind.current)
 
 	RegisterSignals(
 		mind,
@@ -88,7 +88,7 @@ GLOBAL_LIST_EMPTY_TYPED(has_antagonist_huds, /datum/atom_hud/alternate_appearanc
 
 /datum/atom_hud/alternate_appearance/basic/antagonist_hud/proc/update_icon()
 	if (antag_hud_images.len == 0)
-		image.icon = icon('icons/blanks/32x32.dmi', "nothing")
+		image.icon = icon('../assets/icons/blanks/32x32.dmi', "nothing")
 	else
 		image.icon = icon(get_antag_image(index).icon, get_antag_image(index).icon_state)
 

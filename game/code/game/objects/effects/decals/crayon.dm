@@ -1,7 +1,7 @@
 /obj/effect/decal/cleanable/crayon
 	name = "rune"
 	desc = "Graffiti. Damn kids."
-	icon = 'icons/effects/crayondecal.dmi'
+	icon = '../assets/icons/effects/crayondecal.dmi'
 	icon_state = "rune1"
 	gender = NEUTER
 	mergeable_decal = FALSE

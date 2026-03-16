@@ -3,7 +3,7 @@
 /obj/effect/spawner/random/lavaland_mob
 	name = "random lavaland mob"
 	desc = "Spawns a random lavaland mob."
-	icon = 'icons/mob/simple/lavaland/lavaland_monsters.dmi'
+	icon = '../assets/icons/mob/simple/lavaland/lavaland_monsters.dmi'
 	icon_state = "large_egg"
 	loot = list(
 		/mob/living/basic/mining/bileworm = 1,
@@ -19,7 +19,7 @@
 /obj/effect/spawner/random/lavaland_mob/watcher
 	name = "random watcher"
 	desc = "Chance to spawn a rare shiny version."
-	icon = 'icons/mob/simple/lavaland/lavaland_monsters_wide.dmi'
+	icon = '../assets/icons/mob/simple/lavaland/lavaland_monsters_wide.dmi'
 	icon_state = "watcher"
 	pixel_x = -12
 	loot = list(
@@ -32,7 +32,7 @@
 /obj/effect/spawner/random/lavaland_mob/goliath
 	name = "random goliath"
 	desc = "Chance to spawn a rare shiny version."
-	icon = 'icons/mob/simple/lavaland/lavaland_monsters_wide.dmi'
+	icon = '../assets/icons/mob/simple/lavaland/lavaland_monsters_wide.dmi'
 	icon_state = "goliath"
 	pixel_x = -12
 	loot = list(
@@ -53,7 +53,7 @@
 /obj/effect/spawner/random/lavaland_mob/raptor
 	name = "random raptor"
 	desc = "Chance to spawn a rare shiny version."
-	icon = 'icons/mob/simple/lavaland/raptor_big.dmi'
+	icon = '../assets/icons/mob/simple/lavaland/raptor_big.dmi'
 	icon_state = "raptor_red"
 	pixel_x = -12
 	loot = list(
@@ -81,7 +81,7 @@
 
 /obj/effect/spawner/random/lavaland_mob/raptor/baby
 	name = "random raptor chick"
-	icon = 'icons/mob/simple/lavaland/raptor_baby.dmi'
+	icon = '../assets/icons/mob/simple/lavaland/raptor_baby.dmi'
 	icon_state = "baby_red"
 	pixel_x = 0
 	loot = list(

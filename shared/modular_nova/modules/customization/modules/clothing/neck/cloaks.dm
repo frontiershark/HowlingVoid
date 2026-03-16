@@ -31,7 +31,7 @@
 /obj/item/clothing/neck/ranger_poncho
 	name = "ranger poncho"
 	desc = "Aim for the Heart, Ramon."
-	icon = 'icons/map_icons/clothing/neck.dmi'
+	icon = '../assets/icons/map_icons/clothing/neck.dmi'
 	icon_state = "/obj/item/clothing/neck/ranger_poncho"
 	post_init_icon_state = "ranger_poncho"
 	greyscale_config = /datum/greyscale_config/ranger_poncho
@@ -47,7 +47,7 @@
 /obj/item/clothing/neck/long_cape
 	name = "long cape"
 	desc = "A graceful cloak that carefully surrounds your body."
-	icon = 'icons/map_icons/clothing/neck.dmi'
+	icon = '../assets/icons/map_icons/clothing/neck.dmi'
 	icon_state = "/obj/item/clothing/neck/long_cape"
 	post_init_icon_state = "long_cape"
 	greyscale_config = /datum/greyscale_config/long_cape
@@ -63,7 +63,7 @@
 /obj/item/clothing/neck/wide_cape
 	name = "wide cape"
 	desc = "A proud, broad-shouldered cloak with which you can protect the honor of your back."
-	icon = 'icons/map_icons/clothing/neck.dmi'
+	icon = '../assets/icons/map_icons/clothing/neck.dmi'
 	icon_state = "/obj/item/clothing/neck/wide_cape"
 	post_init_icon_state = "wide_cape"
 	greyscale_config = /datum/greyscale_config/wide_cape

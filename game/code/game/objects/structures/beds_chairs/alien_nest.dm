@@ -3,7 +3,7 @@
 /obj/structure/bed/nest
 	name = "alien nest"
 	desc = "It's a gruesome pile of thick, sticky resin shaped like a nest."
-	icon = 'icons/obj/smooth_structures/alien/nest.dmi'
+	icon = '../assets/icons/obj/smooth_structures/alien/nest.dmi'
 	icon_state = "nest-0"
 	base_icon_state = "nest"
 	max_integrity = 120
@@ -13,7 +13,7 @@
 	build_stack_type = null
 	elevation = 0
 	can_deconstruct = FALSE
-	var/static/mutable_appearance/nest_overlay = mutable_appearance('icons/mob/nonhuman-player/alien.dmi', "nestoverlay", LYING_MOB_LAYER)
+	var/static/mutable_appearance/nest_overlay = mutable_appearance('../assets/icons/mob/nonhuman-player/alien.dmi', "nestoverlay", LYING_MOB_LAYER)
 
 /obj/structure/bed/nest/Initialize(mapload)
 	. = ..()
@@ -124,9 +124,9 @@
 /obj/structure/bed/nest/play_attack_sound(damage_amount, damage_type = BRUTE, damage_flag = 0)
 	switch(damage_type)
 		if(BRUTE)
-			playsound(loc, 'sound/effects/blob/attackblob.ogg', 100, TRUE)
+			playsound(loc, '../assets/sound/effects/blob/attackblob.ogg', 100, TRUE)
 		if(BURN)
-			playsound(loc, 'sound/items/tools/welder.ogg', 100, TRUE)
+			playsound(loc, '../assets/sound/items/tools/welder.ogg', 100, TRUE)
 
 /obj/structure/bed/nest/attack_alien(mob/living/carbon/alien/user, list/modifiers)
 	if(!user.combat_mode)

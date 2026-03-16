@@ -1,7 +1,7 @@
 //Projectile dampening field that slows projectiles and lowers their damage for an energy cost deducted every 1/5 second.
 /datum/proximity_monitor/advanced/bubble/projectile_dampener
 	///overlay we apply to caught bullets
-	var/static/image/new_bullet_overlay= image('icons/effects/fields.dmi', "projectile_dampen_effect")
+	var/static/image/new_bullet_overlay= image('../assets/icons/effects/fields.dmi', "projectile_dampen_effect")
 	/// datum that holds the effects we apply on caught bullets
 	var/datum/dampener_projectile_effects/bullet_effects
 

@@ -10,15 +10,15 @@
 
 /area/ruin/interdyne_planetary_base // used as parent type and for turret control
 	name = "Interdyne Pharmaceuticals Spinward Sector Base"
-	icon = 'icons/area/areas_centcom.dmi'
+	icon = '../assets/icons/area/areas_centcom.dmi'
 	icon_state = "syndie-control"
 	ambience_index = AMBIENCE_DANGER
-	ambient_buzz = 'sound/ambience/lavaland/magma.ogg'
+	ambient_buzz = '../assets/sound/ambience/lavaland/magma.ogg'
 	area_flags = BLOBS_ALLOWED
 
 /area/ruin/interdyne_planetary_base/cargo
 	name = "Interdyne Cargo Bay"
-	icon = 'icons/area/areas_station.dmi'
+	icon = '../assets/icons/area/areas_station.dmi'
 	icon_state = "mining"
 
 /area/ruin/interdyne_planetary_base/cargo/deck
@@ -32,7 +32,7 @@
 
 /area/ruin/interdyne_planetary_base/cargo/obs
 	name = "Interdyne Observation Center"
-	icon = 'icons/area/areas_centcom.dmi'
+	icon = '../assets/icons/area/areas_centcom.dmi'
 	icon_state = "observatory"
 	ambience_index = AMBIENCE_DANGER
 
@@ -42,20 +42,20 @@
 		ambientsounds = temp_ambientsounds.Copy()
 		ambientsounds += list(
 			'modular_nova/modules/random_ship_event/random_ships/heliostatic_inspectors/sounds/morse.ogg',
-			'sound/ambience/engineering/ambitech.ogg',
-			'sound/ambience/misc/signal.ogg',
+			'../assets/sound/ambience/engineering/ambitech.ogg',
+			'../assets/sound/ambience/misc/signal.ogg',
 			'modular_nova/modules/random_ship_event/random_ships/heliostatic_inspectors/sounds/morse.ogg',
 		)
 	return ..()
 
 /area/ruin/interdyne_planetary_base/main
 	name = "Interdyne Main Hall"
-	icon = 'icons/area/areas_station.dmi'
+	icon = '../assets/icons/area/areas_station.dmi'
 	icon_state = "hall"
 
 /area/ruin/interdyne_planetary_base/main/vault
 	name = "Interdyne Vault"
-	icon = 'icons/area/areas_centcom.dmi'
+	icon = '../assets/icons/area/areas_centcom.dmi'
 	icon_state = "syndie-control"
 
 /area/ruin/interdyne_planetary_base/main/dorms
@@ -72,7 +72,7 @@
 
 /area/ruin/interdyne_planetary_base/med
 	name = "Interdyne Medical Wing"
-	icon = 'icons/area/areas_station.dmi'
+	icon = '../assets/icons/area/areas_station.dmi'
 	icon_state = "medbay"
 	ambience_index = AMBIENCE_MEDICAL
 
@@ -89,12 +89,12 @@
 	name = "Interdyne Morgue"
 	icon_state = "morgue"
 	ambience_index = AMBIENCE_SPOOKY
-	ambientsounds = list('sound/ambience/icemoon/ambiicemelody4.ogg') // creepy, but a bit wistful
+	ambientsounds = list('../assets/sound/ambience/icemoon/ambiicemelody4.ogg') // creepy, but a bit wistful
 	sound_environment = SOUND_AREA_SMALL_ENCLOSED
 
 /area/ruin/interdyne_planetary_base/science
 	name = "Interdyne Science Wing"
-	icon = 'icons/area/areas_station.dmi'
+	icon = '../assets/icons/area/areas_station.dmi'
 	icon_state = "science"
 
 /area/ruin/interdyne_planetary_base/science/xeno
@@ -103,7 +103,7 @@
 
 /area/ruin/interdyne_planetary_base/serv
 	name = "Interdyne Service Wing"
-	icon = 'icons/area/areas_station.dmi'
+	icon = '../assets/icons/area/areas_station.dmi'
 	icon_state = "hall_service"
 
 /area/ruin/interdyne_planetary_base/serv/rstrm
@@ -127,7 +127,7 @@
 
 /area/ruin/interdyne_planetary_base/eng
 	name = "Interdyne Engineering"
-	icon = 'icons/area/areas_station.dmi'
+	icon = '../assets/icons/area/areas_station.dmi'
 	icon_state = "maint_electrical" // given interdyne's powerplant is rtg's, thought this looked good on the frontend for mappers
 	ambient_buzz = 'modular_nova/modules/random_ship_event/random_ships/heliostatic_inspectors/sounds/gear_loop.ogg'
 
@@ -136,8 +136,8 @@
 		var/list/temp_ambientsounds = GLOB.ambience_assoc[ambience_index]
 		ambientsounds = temp_ambientsounds.Copy()
 		ambientsounds += list(
-			'sound/items/geiger/low1.ogg',
-			'sound/items/geiger/low2.ogg',
+			'../assets/sound/items/geiger/low1.ogg',
+			'../assets/sound/items/geiger/low2.ogg',
 		)
 	return ..()
 

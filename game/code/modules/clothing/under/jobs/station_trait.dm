@@ -2,8 +2,8 @@
  * Outfits limited to station trait jobs
  */
 /obj/item/clothing/under/rank/station_trait
-	icon = 'icons/obj/clothing/under/station_trait.dmi'
-	worn_icon = 'icons/mob/clothing/under/station_trait.dmi'
+	icon = '../assets/icons/obj/clothing/under/station_trait.dmi'
+	worn_icon = '../assets/icons/mob/clothing/under/station_trait.dmi'
 	abstract_type = /obj/item/clothing/under/rank/station_trait
 
 /obj/item/clothing/under/rank/station_trait/human_ai

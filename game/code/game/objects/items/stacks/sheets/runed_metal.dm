@@ -73,7 +73,7 @@ GLOBAL_LIST_INIT(runed_metal_recipes, list( \
 	singular_name = "runed metal sheet"
 	icon_state = "sheet-runed"
 	inhand_icon_state = "sheet-runed"
-	icon = 'icons/obj/stack_objects.dmi'
+	icon = '../assets/icons/obj/stack_objects.dmi'
 	mats_per_unit = list(/datum/material/runedmetal = SHEET_MATERIAL_AMOUNT)
 	construction_path_type = "runed"
 	merge_type = /obj/item/stack/sheet/runed_metal

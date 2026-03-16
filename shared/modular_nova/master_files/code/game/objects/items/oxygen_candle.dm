@@ -13,7 +13,7 @@
 
 /obj/item/oxygen_candle/attack_self(mob/user)
 	if(!pulled)
-		playsound(src, 'sound/effects/fuse.ogg', 75, 1)
+		playsound(src, '../assets/sound/effects/fuse.ogg', 75, 1)
 		balloon_alert(user, "cord pulled")
 		icon_state = "oxycandle_burning"
 		pulled = TRUE

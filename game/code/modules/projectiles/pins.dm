@@ -1,7 +1,7 @@
 /obj/item/firing_pin
 	name = "electronic firing pin"
 	desc = "A small authentication device, to be inserted into a firearm receiver to allow operation. NT safety regulations require all new designs to incorporate one."
-	icon = 'icons/obj/devices/gunmod.dmi'
+	icon = '../assets/icons/obj/devices/gunmod.dmi'
 	icon_state = "firing_pin"
 	inhand_icon_state = "pen"
 	worn_icon_state = "pen"
@@ -149,7 +149,7 @@
 	force_replace = TRUE
 
 /obj/item/firing_pin/clown/pin_auth(mob/living/user)
-	playsound(src, 'sound/items/bikehorn.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/bikehorn.ogg', 50, TRUE)
 	return FALSE
 
 // Ultra-honk pin, clown's deadly joke item.
@@ -158,7 +158,7 @@
 	name = "ultra hilarious firing pin"
 
 /obj/item/firing_pin/clown/ultra/pin_auth(mob/living/user)
-	playsound(src.loc, 'sound/items/bikehorn.ogg', 50, TRUE)
+	playsound(src.loc, '../assets/sound/items/bikehorn.ogg', 50, TRUE)
 	if(QDELETED(user))  //how the hell...?
 		stack_trace("/obj/item/firing_pin/clown/ultra/pin_auth called with a [isnull(user) ? "null" : "invalid"] user.")
 		return TRUE

@@ -3,12 +3,12 @@
 */
 /obj/item/vending_refill
 	name = "resupply canister"
-	icon = 'icons/obj/vending_restock.dmi'
+	icon = '../assets/icons/obj/vending_restock.dmi'
 	icon_state = "refill_snack"
 	inhand_icon_state = "restock_unit"
 	desc = "A vending machine restock cart."
-	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/devices_righthand.dmi'
 	obj_flags = CONDUCTS_ELECTRICITY
 	force = 7
 	throwforce = 10

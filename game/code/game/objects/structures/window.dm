@@ -28,9 +28,9 @@
 	var/glass_amount = 1
 	var/real_explosion_block //ignore this, just use explosion_block
 	var/break_sound = SFX_SHATTER
-	var/knock_sound = 'sound/effects/glass/glassknock.ogg'
-	var/bash_sound = 'sound/effects/glass/glassbash.ogg'
-	var/hit_sound = 'sound/effects/glass/glasshit.ogg'
+	var/knock_sound = '../assets/sound/effects/glass/glassknock.ogg'
+	var/bash_sound = '../assets/sound/effects/glass/glassbash.ogg'
+	var/hit_sound = '../assets/sound/effects/glass/glasshit.ogg'
 	///Datum that the shard and debris type is pulled from for when the glass is broken.
 	var/datum/material/glass_material_datum = /datum/material/glass
 	/// Whether or not we're disappearing but dramatically
@@ -257,7 +257,7 @@
 	var/obj/item/stack/sheet/G = new glass_type(user.loc, glass_amount)
 	if (!QDELETED(G))
 		G.add_fingerprint(user)
-	playsound(src, 'sound/items/deconstruct.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/deconstruct.ogg', 50, TRUE)
 	to_chat(user, span_notice("You successfully disassemble [src]."))
 	qdel(src)
 	return ITEM_INTERACT_SUCCESS
@@ -335,9 +335,9 @@
 			if(damage_amount)
 				playsound(src, hit_sound, 75, TRUE)
 			else
-				playsound(src, 'sound/items/weapons/tap.ogg', 50, TRUE)
+				playsound(src, '../assets/sound/items/weapons/tap.ogg', 50, TRUE)
 		if(BURN)
-			playsound(src, 'sound/items/tools/welder.ogg', 100, TRUE)
+			playsound(src, '../assets/sound/items/tools/welder.ogg', 100, TRUE)
 
 
 /obj/structure/window/atom_deconstruct(disassembled = TRUE)
@@ -428,7 +428,7 @@
 	ratio = CEILING(ratio*4, 1) * 25
 	if(ratio > 75)
 		return
-	. += mutable_appearance('icons/obj/structures.dmi', "damage[ratio]", -(layer+0.1))
+	. += mutable_appearance('../assets/icons/obj/structures.dmi', "damage[ratio]", -(layer+0.1))
 
 /obj/structure/window/should_atmos_process(datum/gas_mixture/air, exposed_temperature)
 	return exposed_temperature > T0C + heat_resistance
@@ -467,7 +467,7 @@
 	addtimer(CALLBACK(src, TYPE_PROC_REF(/atom/movable, forceMove), loc), time_to_go + time_to_return) //we back boys
 	addtimer(VARSET_CALLBACK(src, dramatically_disappearing, FALSE), time_to_go + time_to_return) //also set the var back
 	addtimer(CALLBACK(src, TYPE_PROC_REF(/atom, update_appearance)), time_to_go + time_to_return)
-	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(playsound), get_turf(src), 'sound/effects/glass/glass_reverse.ogg', 70, TRUE), time_to_go + time_to_return)
+	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(playsound), get_turf(src), '../assets/sound/effects/glass/glass_reverse.ogg', 70, TRUE), time_to_go + time_to_return)
 
 	var/obj/structure/grille/grill = take_grill ? (locate(/obj/structure/grille) in loc) : null
 	if(grill)
@@ -701,7 +701,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/window/reinforced/tinted/frosted/spaw
 /obj/structure/window/fulltile
 	name = "full tile window"
 	desc = "A full tile window."
-	icon = 'icons/obj/smooth_structures/window.dmi' //NOVA EDIT - ICON OVERRIDDEN IN AESTHETICS MODULE
+	icon = '../assets/icons/obj/smooth_structures/window.dmi' //NOVA EDIT - ICON OVERRIDDEN IN AESTHETICS MODULE
 	icon_state = "window-0"
 	base_icon_state = "window"
 	max_integrity = 100
@@ -723,7 +723,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/window/reinforced/tinted/frosted/spaw
 	anchored = FALSE
 
 /obj/structure/window/plasma/fulltile
-	icon = 'icons/obj/smooth_structures/plasma_window.dmi' //NOVA EDIT - ICON OVERRIDDEN IN AESTHETICS MODULE
+	icon = '../assets/icons/obj/smooth_structures/plasma_window.dmi' //NOVA EDIT - ICON OVERRIDDEN IN AESTHETICS MODULE
 	icon_state = "plasma_window-0"
 	base_icon_state = "plasma_window"
 	max_integrity = 400
@@ -740,7 +740,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/window/reinforced/tinted/frosted/spaw
 	anchored = FALSE
 
 /obj/structure/window/reinforced/plasma/fulltile
-	icon = 'icons/obj/smooth_structures/rplasma_window.dmi' //NOVA EDIT - ICON OVERRIDDEN IN AESTHETICS MODULE
+	icon = '../assets/icons/obj/smooth_structures/rplasma_window.dmi' //NOVA EDIT - ICON OVERRIDDEN IN AESTHETICS MODULE
 	icon_state = "rplasma_window-0"
 	base_icon_state = "rplasma_window"
 	state = RWINDOW_SECURE
@@ -761,7 +761,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/window/reinforced/tinted/frosted/spaw
 /obj/structure/window/reinforced/fulltile
 	name = "full tile reinforced window"
 	desc = "A full tile window that is reinforced with metal rods."
-	icon = 'icons/obj/smooth_structures/reinforced_window.dmi' //NOVA EDIT - ICON OVERRIDDEN IN AESTHETICS MODULE
+	icon = '../assets/icons/obj/smooth_structures/reinforced_window.dmi' //NOVA EDIT - ICON OVERRIDDEN IN AESTHETICS MODULE
 	icon_state = "reinforced_window-0"
 	base_icon_state = "reinforced_window"
 	max_integrity = 150
@@ -785,7 +785,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/window/reinforced/tinted/frosted/spaw
 	state = WINDOW_OUT_OF_FRAME
 
 /obj/structure/window/reinforced/tinted/fulltile
-	icon = 'icons/obj/smooth_structures/tinted_window.dmi' //NOVA EDIT - ICON OVERRIDDEN IN AESTHETICS MODULE
+	icon = '../assets/icons/obj/smooth_structures/tinted_window.dmi' //NOVA EDIT - ICON OVERRIDDEN IN AESTHETICS MODULE
 	icon_state = "tinted_window-0"
 	base_icon_state = "tinted_window"
 	fulltile = TRUE
@@ -799,7 +799,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/window/reinforced/tinted/frosted/spaw
 	opacity = TRUE
 
 /obj/structure/window/reinforced/fulltile/ice
-	icon = 'icons/obj/smooth_structures/rice_window.dmi'
+	icon = '../assets/icons/obj/smooth_structures/rice_window.dmi'
 	icon_state = "rice_window-0"
 	base_icon_state = "rice_window"
 	max_integrity = 150
@@ -809,7 +809,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/window/reinforced/tinted/frosted/spaw
 /obj/structure/window/reinforced/shuttle//this is called reinforced because it is reinforced w/titanium
 	name = "shuttle window"
 	desc = "A reinforced, air-locked pod window."
-	icon = 'icons/obj/smooth_structures/shuttle_window.dmi'
+	icon = '../assets/icons/obj/smooth_structures/shuttle_window.dmi'
 	icon_state = "shuttle_window-0"
 	base_icon_state = "shuttle_window"
 	max_integrity = 150
@@ -867,7 +867,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/window/reinforced/tinted/frosted/spaw
 /obj/structure/window/reinforced/plasma/plastitanium
 	name = "plastitanium window"
 	desc = "A durable looking window made of an alloy of plasma and titanium."
-	icon = 'icons/obj/smooth_structures/plastitanium_window.dmi'
+	icon = '../assets/icons/obj/smooth_structures/plastitanium_window.dmi'
 	icon_state = "plastitanium_window-0"
 	base_icon_state = "plastitanium_window"
 	max_integrity = 1200
@@ -890,7 +890,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/window/reinforced/tinted/frosted/spaw
 /obj/structure/window/reinforced/plasma/plastitanium/indestructible
 	name = "plastitanium window"
 	desc = "A durable looking window made of an alloy of plasma and titanium."
-	icon = 'icons/obj/smooth_structures/plastitanium_window.dmi'
+	icon = '../assets/icons/obj/smooth_structures/plastitanium_window.dmi'
 	icon_state = "plastitanium_window-0"
 	base_icon_state = "plastitanium_window"
 	max_integrity = 1200
@@ -926,7 +926,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/window/reinforced/tinted/frosted/spaw
 /obj/structure/window/paperframe
 	name = "paper frame"
 	desc = "A fragile separator made of thin wood and paper."
-	icon = 'icons/obj/smooth_structures/paperframes.dmi'
+	icon = '../assets/icons/obj/smooth_structures/paperframes.dmi'
 	icon_state = "paperframes-0"
 	base_icon_state = "paperframes"
 	opacity = TRUE
@@ -945,11 +945,11 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/window/reinforced/tinted/frosted/spaw
 	resistance_flags = FLAMMABLE
 	armor_type = /datum/armor/none
 	knock_sound = SFX_PAGE_TURN
-	bash_sound = 'sound/items/weapons/slashmiss.ogg'
-	break_sound = 'sound/items/poster/poster_ripped.ogg'
-	hit_sound = 'sound/items/weapons/slashmiss.ogg'
-	var/static/mutable_appearance/torn = mutable_appearance('icons/obj/smooth_structures/structure_variations.dmi',icon_state = "paper-torn", layer = ABOVE_OBJ_LAYER - 0.1)
-	var/static/mutable_appearance/paper = mutable_appearance('icons/obj/smooth_structures/structure_variations.dmi',icon_state = "paper-whole", layer = ABOVE_OBJ_LAYER - 0.1)
+	bash_sound = '../assets/sound/items/weapons/slashmiss.ogg'
+	break_sound = '../assets/sound/items/poster/poster_ripped.ogg'
+	hit_sound = '../assets/sound/items/weapons/slashmiss.ogg'
+	var/static/mutable_appearance/torn = mutable_appearance('../assets/icons/obj/smooth_structures/structure_variations.dmi',icon_state = "paper-torn", layer = ABOVE_OBJ_LAYER - 0.1)
+	var/static/mutable_appearance/paper = mutable_appearance('../assets/icons/obj/smooth_structures/structure_variations.dmi',icon_state = "paper-whole", layer = ABOVE_OBJ_LAYER - 0.1)
 
 /obj/structure/window/paperframe/Initialize(mapload)
 	. = ..()
@@ -1008,7 +1008,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/window/reinforced/tinted/frosted/spaw
 /obj/structure/window/bronze
 	name = "brass window"
 	desc = "A paper-thin pane of translucent yet reinforced brass. Nevermind, this is just weak bronze!"
-	icon = 'icons/obj/smooth_structures/structure_variations.dmi'
+	icon = '../assets/icons/obj/smooth_structures/structure_variations.dmi'
 	icon_state = "clockwork_window-single"
 	glass_type = /obj/item/stack/sheet/bronze
 	custom_materials = list(/datum/material/bronze = SHEET_MATERIAL_AMOUNT * 1)
@@ -1019,7 +1019,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/window/bronze/spawner, 0)
 	anchored = FALSE
 
 /obj/structure/window/bronze/fulltile
-	icon = 'icons/obj/smooth_structures/clockwork_window.dmi'
+	icon = '../assets/icons/obj/smooth_structures/clockwork_window.dmi'
 	icon_state = "clockwork_window-0"
 	base_icon_state = "clockwork_window"
 	smoothing_flags = SMOOTH_BITMASK

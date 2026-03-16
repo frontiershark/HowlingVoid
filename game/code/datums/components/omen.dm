@@ -209,7 +209,7 @@
 		to_chat(our_guy, span_warning("What a horrible night... To have a curse!"))
 
 	if(prob(30 * luck_mod) && our_guy.get_bodypart(BODY_ZONE_HEAD)) /// Bonk!
-		playsound(our_guy, 'sound/effects/tableheadsmash.ogg', 90, TRUE)
+		playsound(our_guy, '../assets/sound/effects/tableheadsmash.ogg', 90, TRUE)
 		our_guy.visible_message(span_danger("[our_guy] hits [our_guy.p_their()] head really badly falling down!"), span_userdanger("You hit your head really badly falling down!"))
 		our_guy.apply_damage(75 * damage_mod, BRUTE, BODY_ZONE_HEAD, attacking_item = "slipping")
 		our_guy.apply_damage(100 * damage_mod, BRAIN)
@@ -224,7 +224,7 @@
 	if(incidents_left == INFINITY || bless_result != BLESSING_SUCCESS)
 		return
 
-	playsound(our_guy, 'sound/effects/pray_chaplain.ogg', 40, TRUE)
+	playsound(our_guy, '../assets/sound/effects/pray_chaplain.ogg', 40, TRUE)
 	to_chat(our_guy, span_green("You feel fantastic!"))
 	qdel(src)
 

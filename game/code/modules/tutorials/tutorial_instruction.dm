@@ -1,5 +1,5 @@
 /atom/movable/screen/tutorial_instruction
-	icon = 'icons/effects/alphacolors.dmi'
+	icon = '../assets/icons/effects/alphacolors.dmi'
 	icon_state = "white"
 	color = COLOR_NEARLY_ALL_BLACK
 	alpha = 0

@@ -2,7 +2,7 @@
 /datum/action/cooldown/ink_spit
 	name = "Spit Ink"
 	desc = "Spits ink at someone, blinding them temporarily."
-	button_icon = 'icons/hud/radial_fishing.dmi'
+	button_icon = '../assets/icons/hud/radial_fishing.dmi'
 	button_icon_state = "oil"
 	base_background_icon_state = "bg_default"
 	active_background_icon_state = "bg_default_on"
@@ -53,7 +53,7 @@
 	ink.aim_projectile(target, clicker, modifiers)
 	ink.firer = clicker
 	ink.fire()
-	playsound(clicker, 'sound/items/weapons/pierce.ogg', 20, TRUE, -1)
+	playsound(clicker, '../assets/sound/items/weapons/pierce.ogg', 20, TRUE, -1)
 	clicker.newtonian_move(get_angle(target, clicker))
 	StartCooldown()
 	return TRUE

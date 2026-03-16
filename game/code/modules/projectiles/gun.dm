@@ -4,7 +4,7 @@
 /obj/item/gun
 	name = "gun"
 	desc = "It's a gun. It's pretty terrible, though."
-	icon = 'icons/obj/weapons/guns/ballistic.dmi'
+	icon = '../assets/icons/obj/weapons/guns/ballistic.dmi'
 	icon_state = "revolver"
 	inhand_icon_state = "gun"
 	worn_icon_state = "gun"
@@ -35,15 +35,15 @@
 
 	var/gun_flags = NONE
 
-	var/fire_sound = 'sound/items/weapons/gun/pistol/shot.ogg'
+	var/fire_sound = '../assets/sound/items/weapons/gun/pistol/shot.ogg'
 	var/vary_fire_sound = TRUE
 	var/fire_sound_volume = 50
-	var/dry_fire_sound = 'sound/items/weapons/gun/general/dry_fire.ogg'
+	var/dry_fire_sound = '../assets/sound/items/weapons/gun/general/dry_fire.ogg'
 	var/dry_fire_sound_volume = 30
 	/// Whether or not a message is displayed when fired
 	var/suppressed = SUPPRESSED_NONE
 	var/can_suppress = FALSE
-	var/suppressed_sound = 'sound/items/weapons/gun/general/heavy_shot_suppressed.ogg'
+	var/suppressed_sound = '../assets/sound/items/weapons/gun/general/heavy_shot_suppressed.ogg'
 	var/suppressed_volume = 60
 	/// Whether a gun can be unsuppressed. for ballistics, also determines if it generates a suppressor overlay
 	var/can_unsuppress = TRUE
@@ -97,8 +97,8 @@
 	/// Often utilized as a "purely visual" form of recoil (as it can be disabled)
 	var/min_recoil = 0
 
-	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/guns_righthand.dmi'
 
 	var/obj/item/firing_pin/pin = /obj/item/firing_pin //standard firing pin for most guns
 	/// True if a gun dosen't need a pin, mostly used for abstract guns like tentacles and meathooks
@@ -299,7 +299,7 @@
 	var/mob/living/holder = loc
 	if(holder.is_holding(src) && holder.stat < UNCONSCIOUS)
 		to_chat(holder, span_boldwarning("[src] breaks down!"))
-		holder.playsound_local(get_turf(src), 'sound/items/weapons/smash.ogg', 50, TRUE)
+		holder.playsound_local(get_turf(src), '../assets/sound/items/weapons/smash.ogg', 50, TRUE)
 	return ..()
 
 /obj/item/gun/emp_act(severity)
@@ -338,7 +338,7 @@
 			span_notice("[user] spins [src] around [user.p_their()] finger by the trigger. That's pretty badass."),
 			span_notice("You spin [src] around your finger by the trigger. That's pretty badass."),
 		)
-		playsound(src, 'sound/items/handling/ammobox_pickup.ogg', 20, FALSE)
+		playsound(src, '../assets/sound/items/handling/ammobox_pickup.ogg', 20, FALSE)
 
 	return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 

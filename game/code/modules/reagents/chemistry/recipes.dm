@@ -25,7 +25,7 @@
 	///The message shown to nearby people upon mixing, if applicable
 	var/mix_message = "The solution begins to bubble."
 	///The sound played upon mixing, if applicable
-	var/mix_sound = 'sound/effects/bubbles/bubbles.ogg'
+	var/mix_sound = '../assets/sound/effects/bubbles/bubbles.ogg'
 
 	/// Set to TRUE if you want the recipe to only react when it's BELOW the required temp.
 	var/is_cold_recipe = FALSE
@@ -218,7 +218,7 @@
 		message_admins(message, 0, 1)
 		log_game("[reaction_name] chemical mob spawn reaction occuring at [AREACOORD(T)] carried by [key_name(M)] with last fingerprint [A.fingerprintslast? A.fingerprintslast : "N/A"]")
 
-		playsound(get_turf(holder.my_atom), 'sound/effects/phasein.ogg', 100, TRUE)
+		playsound(get_turf(holder.my_atom), '../assets/sound/effects/phasein.ogg', 100, TRUE)
 
 		for(var/mob/living/carbon/C in viewers(get_turf(holder.my_atom), null))
 			C.flash_act()
@@ -362,7 +362,7 @@
  */
 /datum/chemical_reaction/proc/explode_deafen(datum/reagents/holder, datum/equilibrium/equilibrium, power = 3, stun = 20, range = 2)
 	var/location = get_turf(holder.my_atom)
-	playsound(location, 'sound/effects/bang.ogg', 25, TRUE)
+	playsound(location, '../assets/sound/effects/bang.ogg', 25, TRUE)
 	for(var/mob/living/living in get_hearers_in_view(range, location))
 		living.soundbang_act(SOUNDBANG_NORMAL, stun, power)
 
@@ -415,7 +415,7 @@
 	var/turf/this_turf = get_turf(holder.my_atom)
 	if(sound_and_text)
 		holder.my_atom.audible_message("The [holder.my_atom] suddenly explodes, sending a shockwave rippling through the air!")
-		playsound(this_turf, 'sound/effects/chemistry/shockwave_explosion.ogg', 80, TRUE)
+		playsound(this_turf, '../assets/sound/effects/chemistry/shockwave_explosion.ogg', 80, TRUE)
 	//Modified goonvortex
 	for(var/atom/movable/movey in orange(range, this_turf))
 		if(isliving(movey) && damage)

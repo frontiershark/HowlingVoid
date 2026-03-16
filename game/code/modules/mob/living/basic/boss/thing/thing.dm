@@ -2,7 +2,7 @@
 #define RUIN_QUEUE "the_thing_depleter"
 /mob/living/basic/boss/thing
 	name = "\improper Thing"
-	icon = 'icons/mob/simple/icemoon/thething.dmi'
+	icon = '../assets/icons/mob/simple/icemoon/thething.dmi'
 	icon_state = "p1"
 	icon_dead = "dead"
 	gender = NEUTER
@@ -16,7 +16,7 @@
 	melee_attack_cooldown = CLICK_CD_SLOW
 	attack_verb_continuous = "eviscerates"
 	attack_verb_simple = "eviscerate"
-	attack_sound = 'sound/items/weapons/bladeslice.ogg'
+	attack_sound = '../assets/sound/items/weapons/bladeslice.ogg'
 	attack_vis_effect = ATTACK_EFFECT_SLASH
 	speed = 3.5 //dont make this any faster PLEASE
 	gps_name = "L-4 Biohazard Beacon"
@@ -141,13 +141,13 @@
 		CRASH("The Thing tried to return to spawn_loc but it was null! This shouldnt happen")
 	for(var/turf/open/target in RANGE_TURFS(1, loc))
 		new /obj/effect/temp_visual/mook_dust(target)
-	playsound(loc, 'sound/effects/meteorimpact.ogg', 40, TRUE)
+	playsound(loc, '../assets/sound/effects/meteorimpact.ogg', 40, TRUE)
 	visible_message(span_danger("[src] retreats through the ground back to where it came from!"))
 	forceMove(spawn_loc)
 
 /// The Thing is successfully hit by incendiary fire while downed by damage (alternatively takes too much damage if not ruin spawned)
 /mob/living/basic/boss/thing/proc/phase_successfully_depleted()
-	playsound(src, 'sound/effects/pop_expl.ogg', 65)
+	playsound(src, '../assets/sound/effects/pop_expl.ogg', 65)
 	ai_controller?.set_blackboard_key(BB_THETHING_NOAOE, FALSE)
 	remove_traits(list(TRAIT_GODMODE, TRAIT_IMMOBILIZED), MEGAFAUNA_TRAIT)
 	deltimer(phase_invulnerability_timer)
@@ -277,7 +277,7 @@
 			icon_state = "thingdepleter"
 		return
 	new /obj/effect/temp_visual/circle_wave/orange(loc)
-	playsound(src, 'sound/effects/explosion/explosion3.ogg', 100)
+	playsound(src, '../assets/sound/effects/explosion/explosion3.ogg', 100)
 	animate(src, transform = matrix()*1.5, time = 0.2 SECONDS)
 	animate(transform = matrix(), time = 0)
 	the_thing.phase_successfully_depleted()
@@ -292,7 +292,7 @@
 /obj/structure/aggro_gate
 	name = "biohazard gate"
 	desc = "A wall of solid light, only activating when a human is endangered by a biohazard, unfortunately that does little for safety as it locks you in with said biohazard. Virtually indestructible, you must evade (or kill) the threat."
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	icon_state = "wave2"
 	resistance_flags = INDESTRUCTIBLE | FIRE_PROOF | ACID_PROOF | LAVA_PROOF
 	move_resist = MOVE_FORCE_OVERPOWERING

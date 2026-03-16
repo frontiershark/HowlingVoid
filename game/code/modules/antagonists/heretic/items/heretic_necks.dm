@@ -107,7 +107,7 @@
 /obj/item/clothing/neck/eldritch_amulet
 	name = "warm eldritch medallion"
 	desc = "A strange medallion. Peering through the crystalline surface, the world around you melts away. You see your own beating heart, and the pulsing of a thousand others."
-	icon = 'icons/obj/antags/eldritch.dmi'
+	icon = '../assets/icons/obj/antags/eldritch.dmi'
 	icon_state = "eye_medalion"
 	w_class = WEIGHT_CLASS_SMALL
 	resistance_flags = FIRE_PROOF | UNACIDABLE | ACID_PROOF
@@ -142,7 +142,7 @@
 /obj/item/clothing/neck/fake_heretic_amulet
 	name = "religious icon"
 	desc = "A strange medallion, which makes its wearer look like they're part of some cult."
-	icon = 'icons/obj/antags/eldritch.dmi'
+	icon = '../assets/icons/obj/antags/eldritch.dmi'
 	icon_state = "eye_medalion"
 	w_class = WEIGHT_CLASS_SMALL
 
@@ -150,15 +150,15 @@
 /obj/item/clothing/neck/heretic_focus/moon_amulet
 	name = "moonlight amulet"
 	desc = "A piece of the mind, the soul and the moon. Gazing into it makes your head spin and hear whispers of laughter and joy."
-	icon = 'icons/obj/antags/eldritch.dmi'
+	icon = '../assets/icons/obj/antags/eldritch.dmi'
 	icon_state = "moon_amulette"
 	w_class = WEIGHT_CLASS_SMALL
 	/// How much damage does this item do to the targets sanity?
 	var/sanity_damage = 20
 	var/list/possible_sounds = list(
-		'sound/items/sitcom_laugh/SitcomLaugh1.ogg',
-		'sound/items/sitcom_laugh/SitcomLaugh2.ogg',
-		'sound/items/sitcom_laugh/SitcomLaugh3.ogg',
+		'../assets/sound/items/sitcom_laugh/SitcomLaugh1.ogg',
+		'../assets/sound/items/sitcom_laugh/SitcomLaugh2.ogg',
+		'../assets/sound/items/sitcom_laugh/SitcomLaugh3.ogg',
 	)
 	var/valid_weapon_type = /obj/item/melee/sickly_blade
 	var/sanity_threshold = SANITY_LEVEL_INSANE

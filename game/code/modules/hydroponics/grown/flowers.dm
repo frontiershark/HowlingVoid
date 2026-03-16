@@ -12,7 +12,7 @@
 	potency = 20
 	instability = 1 //Flowers have 1 instability, if you want to breed out instability, crossbreed with flowers.
 	growthstages = 3
-	growing_icon = 'icons/obj/service/hydroponics/growing_flowers.dmi'
+	growing_icon = '../assets/icons/obj/service/hydroponics/growing_flowers.dmi'
 	icon_grow = "poppy-grow"
 	icon_dead = "poppy-dead"
 	genes = list(/datum/plant_gene/trait/preserved, /datum/plant_gene/trait/opium_production)
@@ -39,7 +39,7 @@
 	plantname = "Lily Plants"
 	product = /obj/item/food/grown/poppy/lily
 	growthstages = 3
-	growing_icon = 'icons/obj/service/hydroponics/growing_flowers.dmi'
+	growing_icon = '../assets/icons/obj/service/hydroponics/growing_flowers.dmi'
 	icon_grow = "lily-grow"
 	icon_dead = "lily-dead"
 	genes = list(/datum/plant_gene/trait/preserved)
@@ -68,7 +68,7 @@
 	growthstages = 4
 	weed_rate = 2
 	weed_chance = 10
-	growing_icon = 'icons/obj/service/hydroponics/growing_flowers.dmi'
+	growing_icon = '../assets/icons/obj/service/hydroponics/growing_flowers.dmi'
 	icon_grow = "spacemanstrumpet-grow"
 	icon_dead = "spacemanstrumpet-dead"
 	mutatelist = null
@@ -94,7 +94,7 @@
 	plantname = "Geranium Plants"
 	product = /obj/item/food/grown/poppy/geranium
 	growthstages = 3
-	growing_icon = 'icons/obj/service/hydroponics/growing_flowers.dmi'
+	growing_icon = '../assets/icons/obj/service/hydroponics/growing_flowers.dmi'
 	icon_grow = "geranium-grow"
 	icon_dead = "geranium-dead"
 	genes = list(/datum/plant_gene/trait/preserved)
@@ -145,7 +145,7 @@
 	instability = 1
 	growthstages = 4
 	genes = list(/datum/plant_gene/trait/plant_type/weed_hardy, /datum/plant_gene/trait/preserved)
-	growing_icon = 'icons/obj/service/hydroponics/growing_flowers.dmi'
+	growing_icon = '../assets/icons/obj/service/hydroponics/growing_flowers.dmi'
 	reagents_add = list(/datum/reagent/consumable/nutriment = 0.04)
 	graft_gene = /datum/plant_gene/trait/plant_type/weed_hardy
 
@@ -173,7 +173,7 @@
 	yield = 2
 	instability = 1
 	growthstages = 3
-	growing_icon = 'icons/obj/service/hydroponics/growing_flowers.dmi'
+	growing_icon = '../assets/icons/obj/service/hydroponics/growing_flowers.dmi'
 	icon_grow = "sunflower-grow"
 	icon_dead = "sunflower-dead"
 	mutatelist = list(/obj/item/seeds/sunflower/moonflower, /obj/item/seeds/sunflower/novaflower)
@@ -185,8 +185,8 @@
 	desc = "It's beautiful! A certain person might beat you to death if you trample these."
 	icon_state = "sunflower"
 	inhand_icon_state = "sunflower"
-	lefthand_file = 'icons/mob/inhands/weapons/plants_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/plants_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/plants_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/plants_righthand.dmi'
 	foodtypes = VEGETABLES
 	damtype = BURN
 	force = 0
@@ -205,8 +205,8 @@
 	name = "moonflower seed pack"
 	desc = "These seeds grow into moonflowers."
 	icon_state = "seed-moonflower"
-	lefthand_file = 'icons/mob/inhands/items/food_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/food_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/food_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/food_righthand.dmi'
 	species = "moonflower"
 	plantname = "Moonflowers"
 	icon_grow = "moonflower-grow"
@@ -249,8 +249,8 @@
 	desc = "These beautiful flowers have a crisp smokey scent, like a summer bonfire."
 	icon_state = "novaflower"
 	inhand_icon_state = "novaflower"
-	lefthand_file = 'icons/mob/inhands/weapons/plants_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/plants_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/plants_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/plants_righthand.dmi'
 	damtype = BURN
 	force = 0
 	slot_flags = ITEM_SLOT_HEAD
@@ -279,7 +279,7 @@
 	instability = 20 //Roses crossbreed easily, and there's many many species of them.
 	growthstages = 3
 	genes = list(/datum/plant_gene/trait/repeated_harvest, /datum/plant_gene/trait/backfire/rose_thorns, /datum/plant_gene/trait/preserved)
-	growing_icon = 'icons/obj/service/hydroponics/growing_flowers.dmi'
+	growing_icon = '../assets/icons/obj/service/hydroponics/growing_flowers.dmi'
 	icon_grow = "rose-grow"
 	icon_dead = "rose-dead"
 	mutatelist = list(/obj/item/seeds/carbon_rose)
@@ -294,8 +294,8 @@
 	icon_state = "rose"
 	inhand_icon_state = "rose"
 	worn_icon_state = "rose"
-	lefthand_file = 'icons/mob/inhands/items/food_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/food_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/food_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/food_righthand.dmi'
 	slot_flags = ITEM_SLOT_HEAD | ITEM_SLOT_MASK
 	alternate_worn_layer = ABOVE_BODY_FRONT_HEAD_LAYER
 	bite_consumption_mod = 2
@@ -324,7 +324,7 @@
 	instability = 3
 	growthstages = 3
 	genes = list(/datum/plant_gene/reagent/preset/carbon, /datum/plant_gene/trait/preserved)
-	growing_icon = 'icons/obj/service/hydroponics/growing_flowers.dmi'
+	growing_icon = '../assets/icons/obj/service/hydroponics/growing_flowers.dmi'
 	icon_grow = "carbonrose-grow"
 	icon_dead = "carbonrose-dead"
 	reagents_add = list(/datum/reagent/plastic_polymers = 0.05)
@@ -336,8 +336,8 @@
 	name = "carbon rose"
 	desc = "The all new fleur d'amour gris - the flower of love, modernized, with no harsh thorns."
 	icon_state = "carbonrose"
-	lefthand_file = 'icons/mob/inhands/weapons/plants_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/plants_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/plants_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/plants_righthand.dmi'
 	force = 0
 	throwforce = 0
 	slot_flags = ITEM_SLOT_HEAD

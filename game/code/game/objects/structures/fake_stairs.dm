@@ -2,7 +2,7 @@
 /obj/structure/fake_stairs
 	gender = PLURAL
 	name = "stairs"
-	icon = 'icons/obj/stairs.dmi'
+	icon = '../assets/icons/obj/stairs.dmi'
 	icon_state = "stairs"
 	anchored = TRUE
 	move_resist = INFINITY

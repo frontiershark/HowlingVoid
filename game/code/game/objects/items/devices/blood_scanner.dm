@@ -1,12 +1,12 @@
 ///Pricks people with a big needle and gives the user a bunch of info about bloodtype, tox damage, other such stuff. if you fuck up it stabs the guy a bit.
 /obj/item/blood_scanner
 	name = "hemoanalytic scanner"
-	icon = 'icons/obj/devices/scanner.dmi'
+	icon = '../assets/icons/obj/devices/scanner.dmi'
 	icon_state = "bloodscanner"
 	inhand_icon_state = "healthanalyzer"
 	worn_icon_state = "healthanalyzer"
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/medical_righthand.dmi'
 	desc = "This Me-Lo Tech branded medical device can detect abnormalities in blood flow or composition. There is a button on the side which scans the patient's blood for common medicines."
 	obj_flags = CONDUCTS_ELECTRICITY
 	item_flags = NOBLUDGEON

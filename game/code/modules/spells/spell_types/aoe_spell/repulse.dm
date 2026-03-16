@@ -73,7 +73,7 @@
 	name = "Repulse"
 	desc = "This spell throws everything around the user away."
 	button_icon_state = "repulse"
-	sound = 'sound/effects/magic/repulse.ogg'
+	sound = '../assets/sound/effects/magic/repulse.ogg'
 
 	school = SCHOOL_EVOCATION
 	invocation = "GITTAH WEIGH!"
@@ -88,10 +88,10 @@
 	desc = "Throw back attackers with a sweep of your tail."
 	background_icon_state = "bg_alien"
 	overlay_icon_state = "bg_alien_border"
-	button_icon = 'icons/mob/actions/actions_xeno.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_xeno.dmi'
 	button_icon_state = "tailsweep"
 	panel = "Alien"
-	sound = 'sound/effects/magic/tail_swing.ogg'
+	sound = '../assets/sound/effects/magic/tail_swing.ogg'
 
 	cooldown_time = 15 SECONDS
 	spell_requirements = NONE
@@ -106,7 +106,7 @@
 /datum/action/cooldown/spell/aoe/repulse/xeno/cast(atom/cast_on)
 	if(iscarbon(cast_on))
 		var/mob/living/carbon/carbon_caster = cast_on
-		playsound(get_turf(carbon_caster), 'sound/mobs/non-humanoids/hiss/hiss5.ogg', 80, TRUE, TRUE)
+		playsound(get_turf(carbon_caster), '../assets/sound/mobs/non-humanoids/hiss/hiss5.ogg', 80, TRUE, TRUE)
 		carbon_caster.spin(0.6 SECONDS, 1)
 	if(isliving(cast_on) && !is_strongman(cast_on))
 		addtimer(CALLBACK(src, PROC_REF(after_spin)), 0.6 SECONDS, TIMER_DELETE_ME)

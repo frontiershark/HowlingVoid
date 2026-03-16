@@ -63,7 +63,7 @@
 		return
 	user.changeNext_move(CLICK_CD_MELEE) // Ugh. Ideally we shouldn't be setting cooldowns outside of click code.
 	user.do_attack_animation(src, ATTACK_EFFECT_PUNCH)
-	playsound(loc, 'sound/items/weapons/tap.ogg', 40, TRUE, -1)
+	playsound(loc, '../assets/sound/items/weapons/tap.ogg', 40, TRUE, -1)
 	user.visible_message(span_danger("[user] hits [src]. Nothing happens."), null, null, COMBAT_MESSAGE_RANGE)
 	log_message("Attack by hand/paw (no damage). Attacker - [user].", LOG_MECHA, color="red")
 
@@ -72,7 +72,7 @@
 
 /obj/vehicle/sealed/mecha/attack_alien(mob/living/user, list/modifiers)
 	log_message("Attack by alien. Attacker - [user].", LOG_MECHA, color="red")
-	playsound(loc, 'sound/items/weapons/slash.ogg', 100, TRUE)
+	playsound(loc, '../assets/sound/items/weapons/slash.ogg', 100, TRUE)
 	attack_generic(user, rand(user.melee_damage_lower, user.melee_damage_upper), BRUTE, MELEE, 0)
 
 /obj/vehicle/sealed/mecha/attack_animal(mob/living/simple_animal/user, list/modifiers)
@@ -84,7 +84,7 @@
 		var/play_soundeffect = 1
 		if(user.environment_smash)
 			play_soundeffect = 0
-			playsound(src, 'sound/effects/bang.ogg', 50, TRUE)
+			playsound(src, '../assets/sound/effects/bang.ogg', 50, TRUE)
 		var/animal_damage = rand(user.melee_damage_lower,user.melee_damage_upper)
 		if(user.obj_damage)
 			animal_damage = user.obj_damage
@@ -295,7 +295,7 @@
 		cell = tool
 		balloon_alert(user, "installed power cell")
 		diag_hud_set_mechcell()
-		playsound(src, 'sound/items/tools/screwdriver2.ogg', 50, FALSE)
+		playsound(src, '../assets/sound/items/tools/screwdriver2.ogg', 50, FALSE)
 		log_message("Power cell installed", LOG_MECHA)
 		return ITEM_INTERACT_SUCCESS
 
@@ -309,7 +309,7 @@
 
 		scanmod = tool
 		balloon_alert(user, "installed scanning module")
-		playsound(src, 'sound/items/tools/screwdriver2.ogg', 50, FALSE)
+		playsound(src, '../assets/sound/items/tools/screwdriver2.ogg', 50, FALSE)
 		log_message("[tool] installed", LOG_MECHA)
 		update_part_values()
 		return ITEM_INTERACT_SUCCESS
@@ -324,7 +324,7 @@
 
 		capacitor = tool
 		balloon_alert(user, "installed capacitor")
-		playsound(src, 'sound/items/tools/screwdriver2.ogg', 50, FALSE)
+		playsound(src, '../assets/sound/items/tools/screwdriver2.ogg', 50, FALSE)
 		log_message("[tool] installed", LOG_MECHA)
 		update_part_values()
 		return ITEM_INTERACT_SUCCESS
@@ -339,7 +339,7 @@
 
 		servo = tool
 		balloon_alert(user, "installed servo")
-		playsound(src, 'sound/items/tools/screwdriver2.ogg', 50, FALSE)
+		playsound(src, '../assets/sound/items/tools/screwdriver2.ogg', 50, FALSE)
 		log_message("[tool] installed", LOG_MECHA)
 		update_part_values()
 		return ITEM_INTERACT_SUCCESS

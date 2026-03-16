@@ -3,7 +3,7 @@
 /obj/item/resurrection_crystal
 	name = "resurrection crystal"
 	desc = "When used by anything holding it, this crystal gives them a second chance at life if they die."
-	icon = 'icons/obj/mining.dmi'
+	icon = '../assets/icons/obj/mining.dmi'
 	icon_state = "demonic_crystal"
 
 /obj/item/resurrection_crystal/attack_self(mob/living/user)
@@ -98,7 +98,7 @@
 /obj/item/ice_energy_crystal
 	name = "ice energy crystal"
 	desc = "Remnants of the demonic frost miners ice energy."
-	icon = 'icons/obj/mining_zones/artefacts.dmi'
+	icon = '../assets/icons/obj/mining_zones/artefacts.dmi'
 	icon_state = "ice_crystal"
 	w_class = WEIGHT_CLASS_TINY
 	throwforce = 0

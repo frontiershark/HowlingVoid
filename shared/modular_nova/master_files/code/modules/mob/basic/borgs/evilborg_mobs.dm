@@ -26,7 +26,7 @@
 	/// How often can we shoot?
 	var/ranged_cooldown = 3 SECONDS
 	/// Projectile sound
-	var/projectilesound = 'sound/items/weapons/gun/pistol/shot.ogg'
+	var/projectilesound = '../assets/sound/items/weapons/gun/pistol/shot.ogg'
 	/// What gun shoot
 	var/casingtype = /obj/item/ammo_casing/c9mm
 	/// bursty bois
@@ -64,7 +64,7 @@
 	melee_damage_upper = 25
 	attack_verb_continuous = "saws"
 	attack_verb_simple = "saw"
-	attack_sound = 'sound/items/weapons/chainsawhit.ogg'
+	attack_sound = '../assets/sound/items/weapons/chainsawhit.ogg'
 	ai_controller = /datum/ai_controller/basic_controller/evilborgs
 
 /*
@@ -83,7 +83,7 @@
 	melee_damage_upper = 18
 	attack_verb_continuous = "smacks"
 	attack_verb_simple = "smack"
-	attack_sound = 'sound/items/weapons/cqchit1.ogg'
+	attack_sound = '../assets/sound/items/weapons/cqchit1.ogg'
 	ai_controller = /datum/ai_controller/basic_controller/evilborgs
 
 /*
@@ -103,7 +103,7 @@
 	melee_damage_upper = 15
 	attack_verb_continuous = "welds"
 	attack_verb_simple = "weld"
-	attack_sound = 'sound/items/tools/welder.ogg'
+	attack_sound = '../assets/sound/items/tools/welder.ogg'
 	ai_controller = /datum/ai_controller/basic_controller/evilborgs
 
 /*
@@ -122,7 +122,7 @@
 	melee_damage_upper = 8
 	attack_verb_continuous = "gunbutts"
 	attack_verb_simple = "gunbutt"
-	attack_sound = 'sound/items/weapons/smash.ogg'
+	attack_sound = '../assets/sound/items/weapons/smash.ogg'
 	ai_controller = /datum/ai_controller/basic_controller/evilborgs/ranged
 	burst_shots = 2
 	ranged_attacker = TRUE
@@ -155,7 +155,7 @@
 	melee_damage_upper = 12
 	attack_verb_continuous = "pokes"
 	attack_verb_simple = "stab"
-	attack_sound = 'sound/items/weapons/genhit2.ogg'
+	attack_sound = '../assets/sound/items/weapons/genhit2.ogg'
 	ai_controller = /datum/ai_controller/basic_controller/evilborgs
 
 /*
@@ -174,7 +174,7 @@
 	melee_damage_upper = 12
 	attack_verb_continuous = "cleaves"
 	attack_verb_simple = "smash"
-	attack_sound = 'sound/items/weapons/bladeslice.ogg'
+	attack_sound = '../assets/sound/items/weapons/bladeslice.ogg'
 	ai_controller = /datum/ai_controller/basic_controller/evilborgs
 
 /*
@@ -193,7 +193,7 @@
 	melee_damage_upper = 18
 	attack_verb_continuous = "bites"
 	attack_verb_simple = "bite"
-	attack_sound = 'sound/items/weapons/bite.ogg'
+	attack_sound = '../assets/sound/items/weapons/bite.ogg'
 	ai_controller = /datum/ai_controller/basic_controller/evilborgs
 
 /*
@@ -212,7 +212,7 @@
 	melee_damage_upper = 12
 	attack_verb_continuous = "gunbutts"
 	attack_verb_simple = "gunbutt"
-	attack_sound = 'sound/items/weapons/smash.ogg'
+	attack_sound = '../assets/sound/items/weapons/smash.ogg'
 	ai_controller = /datum/ai_controller/basic_controller/evilborgs/burst
 	burst_shots = 5
 	ranged_cooldown = 1.2 SECONDS
@@ -249,5 +249,5 @@
 	melee_damage_upper = 15
 	attack_verb_continuous = "claws"
 	attack_verb_simple = "punch"
-	attack_sound = 'sound/items/weapons/genhit2.ogg'
+	attack_sound = '../assets/sound/items/weapons/genhit2.ogg'
 	ai_controller = /datum/ai_controller/basic_controller/evilborgs

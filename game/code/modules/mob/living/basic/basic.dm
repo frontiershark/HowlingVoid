@@ -1,7 +1,7 @@
 ///Simple animals 2.0, This time, let's really try to keep it simple. This basetype should purely be used as a base-level for implementing simplified behaviours for things such as damage and attacks. Everything else should be in components or AI behaviours.
 /mob/living/basic
 	name = "basic mob"
-	icon = 'icons/mob/simple/animal.dmi'
+	icon = '../assets/icons/mob/simple/animal.dmi'
 	abstract_type = /mob/living/basic
 	health = 20
 	maxHealth = 20
@@ -308,7 +308,7 @@
 	var/fire_icon = "generic_fire"
 	if(!GLOB.fire_appearances[fire_icon])
 		GLOB.fire_appearances[fire_icon] = mutable_appearance(
-			'icons/mob/effects/onfire.dmi',
+			'../assets/icons/mob/effects/onfire.dmi',
 			fire_icon,
 			-HIGHEST_LAYER,
 			appearance_flags = RESET_COLOR|KEEP_APART,

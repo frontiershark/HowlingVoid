@@ -3,7 +3,7 @@
 	name = "supermatter spider"
 	desc= "A sliver of supermatter placed upon a robotically enhanced pedestal."
 
-	icon = 'icons/mob/simple/smspider.dmi'
+	icon = '../assets/icons/mob/simple/smspider.dmi'
 	icon_state = "smspider"
 	icon_living = "smspider"
 	icon_dead = "smspider_dead"
@@ -16,7 +16,7 @@
 
 	attack_verb_continuous = "slices"
 	attack_verb_simple = "slice"
-	attack_sound = 'sound/effects/supermatter.ogg'
+	attack_sound = '../assets/sound/effects/supermatter.ogg'
 	attack_vis_effect = ATTACK_EFFECT_CLAW
 
 	maxHealth = 10
@@ -70,7 +70,7 @@
 
 /// Simple proc that plays the supermatter dusting sound and sends a visible message.
 /mob/living/basic/supermatter_spider/proc/dust_feedback(atom/target)
-	playsound(get_turf(src), 'sound/effects/supermatter.ogg', 10, TRUE)
+	playsound(get_turf(src), '../assets/sound/effects/supermatter.ogg', 10, TRUE)
 	visible_message(span_danger("[src] knocks into [target], turning [target.p_them()] to dust in a brilliant flash of light!"))
 
 /mob/living/basic/supermatter_spider/overcharged

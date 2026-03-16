@@ -48,7 +48,7 @@
 		return
 
 	to_chat(mod.wearer, span_danger("[src] makes an ominous click sound..."))
-	playsound(src, 'sound/items/modsuit/springlock.ogg', 75, TRUE)
+	playsound(src, '../assets/sound/items/modsuit/springlock.ogg', 75, TRUE)
 	addtimer(CALLBACK(src, PROC_REF(snap_shut)), rand(3 SECONDS, 5 SECONDS))
 	RegisterSignals(mod, list(COMSIG_MOD_ACTIVATE, COMSIG_MOD_PART_RETRACTING), PROC_REF(on_activate_spring_block))
 	set_off = TRUE
@@ -84,8 +84,8 @@
 		return
 	mod.wearer.visible_message("[src] inside [mod.wearer]'s [mod.name] snaps shut, mutilating the user inside!", span_userdanger("*SNAP*"))
 	mod.wearer.emote("scream")
-	playsound(mod.wearer, 'sound/effects/snap.ogg', 75, TRUE, frequency = 0.5)
-	playsound(mod.wearer, 'sound/effects/splat.ogg', 50, TRUE, frequency = 0.5)
+	playsound(mod.wearer, '../assets/sound/effects/snap.ogg', 75, TRUE, frequency = 0.5)
+	playsound(mod.wearer, '../assets/sound/effects/splat.ogg', 50, TRUE, frequency = 0.5)
 	mod.wearer.client?.give_award(/datum/award/achievement/misc/springlock, mod.wearer)
 
 	mod.wearer.get_bodypart(BODY_ZONE_CHEST)?.receive_damage(200, forced = TRUE, sharpness = SHARP_POINTY) // Chest always gets hit, from the back piece you're wearing
@@ -149,7 +149,7 @@
 	music_player.unlisten_all()
 	if(deleting)
 		return
-	SEND_SOUND(mod.wearer, sound('sound/machines/terminal/terminal_off.ogg', volume = 50, channel = CHANNEL_JUKEBOX))
+	SEND_SOUND(mod.wearer, sound('../assets/sound/machines/terminal/terminal_off.ogg', volume = 50, channel = CHANNEL_JUKEBOX))
 
 /obj/item/mod/module/visor/rave/generate_worn_overlay(obj/item/source, mutable_appearance/standing)
 	. = ..()
@@ -200,7 +200,7 @@
 	required_slots = list(ITEM_SLOT_OCLOTHING|ITEM_SLOT_ICLOTHING)
 
 /obj/item/mod/module/tanner/on_use(mob/activator)
-	playsound(src, 'sound/machines/microwave/microwave-end.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/machines/microwave/microwave-end.ogg', 50, TRUE)
 	var/datum/reagents/holder = new()
 	holder.add_reagent(/datum/reagent/spraytan, 10)
 	holder.trans_to(mod.wearer, 10, methods = VAPOR)
@@ -227,7 +227,7 @@
 	if(!do_after(mod.wearer, blowing_time, target = mod))
 		return FALSE
 	mod.wearer.adjust_oxy_loss(oxygen_damage)
-	playsound(src, 'sound/items/modsuit/inflate_bloon.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/modsuit/inflate_bloon.ogg', 50, TRUE)
 	var/obj/item/balloon = new balloon_path(get_turf(src))
 	mod.wearer.put_in_hands(balloon)
 	drain_power(use_energy_cost)
@@ -255,7 +255,7 @@
 	crisp_paper.desc = "It's crisp and warm to the touch. Must be fresh."
 
 	var/obj/structure/table/nearby_table = locate() in range(1, mod.wearer)
-	playsound(get_turf(src), 'sound/machines/click.ogg', 50, TRUE)
+	playsound(get_turf(src), '../assets/sound/machines/click.ogg', 50, TRUE)
 	balloon_alert(mod.wearer, "dispensed paper[nearby_table ? " onto table":""]")
 
 	mod.wearer.put_in_hands(crisp_paper)
@@ -305,7 +305,7 @@
 			choices[possible_icon_state] = image(src.icon, icon_states[possible_icon_state])
 	var/chosen_icon_state = show_radial_menu(user, user, choices, custom_check = CALLBACK(src, PROC_REF(check_menu), src, user), require_near = TRUE)
 	if(chosen_icon_state)
-		playsound(src, 'sound/machines/click.ogg', 30, TRUE, -3)
+		playsound(src, '../assets/sound/machines/click.ogg', 30, TRUE, -3)
 		src.icon_state = icon_states[chosen_icon_state]
 
 /obj/item/stamp/mod/proc/check_menu(datum/target, mob/user)
@@ -335,7 +335,7 @@
 		mod.wearer.visible_message("As [mod.wearer] flips, [mod.wearer.buckled_mobs[1]] flies off of [mod.wearer.p_their()] back!")
 		mod.wearer.unbuckle_all_mobs()
 
-	playsound(src, 'sound/effects/curse/curseattack.ogg', 50)
+	playsound(src, '../assets/sound/effects/curse/curseattack.ogg', 50)
 	mod.wearer.AddElement(/datum/element/forced_gravity, NEGATIVE_GRAVITY)
 	RegisterSignal(mod.wearer, COMSIG_MOVABLE_MOVED, PROC_REF(check_upstairs))
 	RegisterSignal(mod.wearer, COMSIG_MOB_SAY, PROC_REF(on_talk))
@@ -352,7 +352,7 @@
 
 /obj/item/mod/module/atrocinator/on_deactivation(mob/activator, display_message = TRUE, deleting = FALSE)
 	if(!deleting)
-		playsound(src, 'sound/effects/curse/curseattack.ogg', 50)
+		playsound(src, '../assets/sound/effects/curse/curseattack.ogg', 50)
 	qdel(mod.wearer.RemoveElement(/datum/element/forced_gravity, NEGATIVE_GRAVITY))
 	UnregisterSignal(mod.wearer, COMSIG_MOVABLE_MOVED)
 	UnregisterSignal(mod.wearer, COMSIG_MOB_SAY)
@@ -394,14 +394,14 @@
 		return
 
 	if(!(step_count % 2))
-		playsound(current_turf, 'sound/items/modsuit/atrocinator_step.ogg', 50)
+		playsound(current_turf, '../assets/sound/items/modsuit/atrocinator_step.ogg', 50)
 	step_count++
 
 #define FLY_TIME (5 SECONDS)
 
 /obj/item/mod/module/atrocinator/proc/fly_away()
 	you_fucked_up = TRUE
-	playsound(src, 'sound/effects/whirthunk.ogg', 75)
+	playsound(src, '../assets/sound/effects/whirthunk.ogg', 75)
 	to_chat(mod.wearer, span_userdanger("That was stupid."))
 	investigate_log("has flown off into space due to the [src].", INVESTIGATE_DEATHS)
 	mod.wearer.Stun(FLY_TIME, ignore_canstun = TRUE)

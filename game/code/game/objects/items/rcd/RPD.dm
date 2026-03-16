@@ -16,16 +16,16 @@
 #define PIPE_LAYER(num) (1 << (num - 1))
 
 ///Sound to make when we use the item to build/destroy something
-#define RPD_USE_SOUND 'sound/items/deconstruct.ogg'
+#define RPD_USE_SOUND '../assets/sound/items/deconstruct.ogg'
 
 /obj/item/pipe_dispenser
 	name = "rapid pipe dispenser"
 	desc = "A device used to rapidly pipe things."
-	icon = 'icons/obj/tools.dmi'
+	icon = '../assets/icons/obj/tools.dmi'
 	icon_state = "rpd"
 	worn_icon_state = "RPD"
-	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/tools_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/tools_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/tools_righthand.dmi'
 	obj_flags = CONDUCTS_ELECTRICITY
 	force = 10
 	throwforce = 10
@@ -36,8 +36,8 @@
 	custom_materials = list(/datum/material/iron=SHEET_MATERIAL_AMOUNT*37.5, /datum/material/glass=SHEET_MATERIAL_AMOUNT*18.75)
 	armor_type = /datum/armor/item_pipe_dispenser
 	resistance_flags = FIRE_PROOF
-	drop_sound = 'sound/items/handling/tools/rpd_drop.ogg'
-	pickup_sound = 'sound/items/handling/tools/rpd_pickup.ogg'
+	drop_sound = '../assets/sound/items/handling/tools/rpd_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/tools/rpd_pickup.ogg'
 	sound_vary = TRUE
 	///Sparks system used when changing device in the UI
 	var/datum/effect_system/basic/spark_spread/spark_system
@@ -282,7 +282,7 @@
 			p_init_dir = ALL_CARDINALS
 
 	spark_system.start()
-	playsound(get_turf(src), 'sound/effects/pop.ogg', 50, FALSE)
+	playsound(get_turf(src), '../assets/sound/effects/pop.ogg', 50, FALSE)
 	return TRUE
 
 /obj/item/pipe_dispenser/interact_with_atom(atom/attack_target, mob/living/user, list/modifiers)
@@ -301,7 +301,7 @@
 
 		// Adds the upgrade from the disk and then deletes the disk
 		upgrade_flags |= rpd_disk.upgrade_flags
-		playsound(loc, 'sound/machines/click.ogg', 50, vary = TRUE)
+		playsound(loc, '../assets/sound/machines/click.ogg', 50, vary = TRUE)
 		balloon_alert(user, "upgrade installed")
 		qdel(rpd_disk)
 		return ITEM_INTERACT_SUCCESS
@@ -597,7 +597,7 @@
 /obj/item/rpd_upgrade
 	name = "RPD advanced design disk"
 	desc = "It seems to be empty."
-	icon = 'icons/obj/devices/floppy_disks.dmi'
+	icon = '../assets/icons/obj/devices/floppy_disks.dmi'
 	icon_state = "datadisk3"
 	/// Bitflags for upgrades
 	var/upgrade_flags

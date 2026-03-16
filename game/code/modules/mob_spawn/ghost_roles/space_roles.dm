@@ -4,7 +4,7 @@
 	name = "old cryogenics pod"
 	desc = "A humming cryo pod. You can barely recognise a uniform underneath the built up ice. The machine is attempting to wake up its occupant."
 	prompt_name = "an ancient crewman"
-	icon = 'icons/obj/machines/sleeper.dmi'
+	icon = '../assets/icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
 	mob_species = /datum/species/human
 	you_are_text = "You are a crewman working for Nanotrasen, stationed onboard a state of the art research station."
@@ -187,7 +187,7 @@
 	name = "cryogenics pod"
 	desc = "A humming cryo pod. You recognize the person inside as a local celebrity of sort."
 	prompt_name = "a actor"
-	icon = 'icons/obj/machines/sleeper.dmi'
+	icon = '../assets/icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
 	mob_species = /datum/species/human
 	you_are_text = "You are an actor/actress working for Sophronia Broadcasting Inc., stationed onboard the local TV studio."
@@ -212,7 +212,7 @@
 	name = "cryogenics pod"
 	desc = "A humming cryo pod. You recognize the person inside as a local celebrity of sort."
 	prompt_name = "a director"
-	icon = 'icons/obj/machines/sleeper.dmi'
+	icon = '../assets/icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
 	mob_species = /datum/species/human
 	you_are_text = "You are a director working for Sophronia Broadcasting Inc., stationed onboard the local TV studio."

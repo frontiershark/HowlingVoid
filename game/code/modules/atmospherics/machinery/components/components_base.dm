@@ -89,7 +89,7 @@
 			continue
 		var/obj/machinery/atmospherics/node = nodes[i]
 		var/node_dir = get_dir(src, node)
-		var/mutable_appearance/pipe_appearance = mutable_appearance('icons/obj/pipes_n_cables/pipe_underlays.dmi', "intact_[node_dir]_[underlay_pipe_layer]", appearance_flags = RESET_COLOR|KEEP_APART)
+		var/mutable_appearance/pipe_appearance = mutable_appearance('../assets/icons/obj/pipes_n_cables/pipe_underlays.dmi', "intact_[node_dir]_[underlay_pipe_layer]", appearance_flags = RESET_COLOR|KEEP_APART)
 		pipe_appearance.color = (node.pipe_color == ATMOS_COLOR_OMNI || istype(node, /obj/machinery/atmospherics/pipe/color_adapter)) ? pipe_color : node.pipe_color
 		if (underfloor_state == UNDERFLOOR_VISIBLE || uncovered_turf)
 			pipe_appearance.layer = BELOW_CATWALK_LAYER + get_pipe_layer_offset()
@@ -99,7 +99,7 @@
 
 	for(var/direction in GLOB.cardinals)
 		if((initialize_directions & direction) && !(connected & direction))
-			var/mutable_appearance/pipe_appearance = mutable_appearance('icons/obj/pipes_n_cables/pipe_underlays.dmi', "exposed_[direction]_[underlay_pipe_layer]", appearance_flags = RESET_COLOR|KEEP_APART)
+			var/mutable_appearance/pipe_appearance = mutable_appearance('../assets/icons/obj/pipes_n_cables/pipe_underlays.dmi', "exposed_[direction]_[underlay_pipe_layer]", appearance_flags = RESET_COLOR|KEEP_APART)
 			pipe_appearance.color = pipe_color
 			if (underfloor_state == UNDERFLOOR_VISIBLE || uncovered_turf)
 				pipe_appearance.layer = BELOW_CATWALK_LAYER + get_pipe_layer_offset()

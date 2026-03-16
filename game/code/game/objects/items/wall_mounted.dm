@@ -1,10 +1,10 @@
 /obj/item/wallframe
-	icon = 'icons/obj/machines/wallmounts.dmi'
+	icon = '../assets/icons/obj/machines/wallmounts.dmi'
 	custom_materials = list(/datum/material/iron= SHEET_MATERIAL_AMOUNT * 2)
 	obj_flags = CONDUCTS_ELECTRICITY
 	inhand_icon_state = "syringe_kit"
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/medical_righthand.dmi'
 	w_class = WEIGHT_CLASS_SMALL
 	///The final object to construct after mount
 	var/result_path
@@ -52,7 +52,7 @@
 	if(!try_build(support_structure, user))
 		return ITEM_INTERACT_FAILURE
 
-	playsound(loc, 'sound/machines/click.ogg', 75, TRUE)
+	playsound(loc, '../assets/sound/machines/click.ogg', 75, TRUE)
 	user.visible_message(span_notice("[user.name] attaches [src] to the wall."),
 		span_notice("You attach [src] to the wall."),
 		span_hear("You hear clicking."))
@@ -125,11 +125,11 @@
 
 /obj/item/electronics
 	desc = "Looks like a circuit. Probably is."
-	icon = 'icons/obj/devices/circuitry_n_data.dmi'
+	icon = '../assets/icons/obj/devices/circuitry_n_data.dmi'
 	icon_state = "door_electronics"
 	inhand_icon_state = "electronic"
-	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/devices_righthand.dmi'
 	obj_flags = CONDUCTS_ELECTRICITY
 	w_class = WEIGHT_CLASS_SMALL
 	custom_materials = list(/datum/material/iron= SMALL_MATERIAL_AMOUNT * 0.5, /datum/material/glass= SMALL_MATERIAL_AMOUNT * 0.5)

@@ -41,8 +41,8 @@
 	limb_id = SPECIES_MAMMAL
 	unarmed_attack_verbs = list("slash")
 	unarmed_attack_effect = ATTACK_EFFECT_CLAW
-	unarmed_attack_sound = 'sound/items/weapons/slash.ogg'
-	unarmed_miss_sound = 'sound/items/weapons/slashmiss.ogg'
+	unarmed_attack_sound = '../assets/sound/items/weapons/slash.ogg'
+	unarmed_miss_sound = '../assets/sound/items/weapons/slashmiss.ogg'
 
 
 /obj/item/bodypart/arm/right/mutant
@@ -50,8 +50,8 @@
 	limb_id = SPECIES_MAMMAL
 	unarmed_attack_verbs = list("slash")
 	unarmed_attack_effect = ATTACK_EFFECT_CLAW
-	unarmed_attack_sound = 'sound/items/weapons/slash.ogg'
-	unarmed_miss_sound = 'sound/items/weapons/slashmiss.ogg'
+	unarmed_attack_sound = '../assets/sound/items/weapons/slash.ogg'
+	unarmed_miss_sound = '../assets/sound/items/weapons/slashmiss.ogg'
 
 
 /obj/item/bodypart/leg/left/mutant

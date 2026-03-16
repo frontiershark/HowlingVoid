@@ -16,10 +16,10 @@
 	)
 	time = 6.4 SECONDS
 	preop_sound = list(
-		/obj/item/circular_saw = 'sound/items/handling/surgery/saw.ogg',
-		/obj/item = 'sound/items/handling/surgery/scalpel1.ogg',
+		/obj/item/circular_saw = '../assets/sound/items/handling/surgery/saw.ogg',
+		/obj/item = '../assets/sound/items/handling/surgery/scalpel1.ogg',
 	)
-	success_sound = 'sound/items/handling/surgery/organ2.ogg'
+	success_sound = '../assets/sound/items/handling/surgery/organ2.ogg'
 	all_surgery_states_required = SURGERY_SKIN_OPEN|SURGERY_BONE_SAWED
 	any_surgery_states_blocked = SURGERY_VESSELS_UNCLAMPED
 
@@ -74,8 +74,8 @@
 		TOOL_SAW = 2,
 	)
 	time = 2 SECONDS //WAIT I NEED THAT!!
-	preop_sound = 'sound/items/tools/ratchet.ogg'
-	preop_sound = 'sound/machines/airlock/doorclick.ogg'
+	preop_sound = '../assets/sound/items/tools/ratchet.ogg'
+	preop_sound = '../assets/sound/machines/airlock/doorclick.ogg'
 	all_surgery_states_required = SURGERY_SKIN_OPEN
 
 /datum/surgery_operation/limb/amputate/mechanic/state_check(obj/item/bodypart/limb)
@@ -105,10 +105,10 @@
 	)
 	time = 3 SECONDS
 	preop_sound = list(
-		/obj/item/circular_saw = 'sound/items/handling/surgery/saw.ogg',
-		/obj/item = 'sound/items/weapons/bladeslice.ogg',
+		/obj/item/circular_saw = '../assets/sound/items/handling/surgery/saw.ogg',
+		/obj/item = '../assets/sound/items/weapons/bladeslice.ogg',
 	)
-	success_sound = 'sound/items/handling/materials/wood_drop.ogg'
+	success_sound = '../assets/sound/items/handling/materials/wood_drop.ogg'
 	all_surgery_states_required = NONE
 
 /datum/surgery_operation/limb/amputate/pegleg/all_required_strings()

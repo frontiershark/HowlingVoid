@@ -4,11 +4,11 @@
 	density = FALSE
 	desc = "A generic pAI hard-light holographics emitter."
 	health = 500
-	held_lh = 'icons/mob/inhands/pai_item_lh.dmi'
-	held_rh = 'icons/mob/inhands/pai_item_rh.dmi'
-	head_icon = 'icons/mob/clothing/head/pai_head.dmi'
+	held_lh = '../assets/icons/mob/inhands/pai_item_lh.dmi'
+	held_rh = '../assets/icons/mob/inhands/pai_item_rh.dmi'
+	head_icon = '../assets/icons/mob/clothing/head/pai_head.dmi'
 	hud_type = /datum/hud/pai
-	icon = 'icons/mob/silicon/pai.dmi'
+	icon = '../assets/icons/mob/silicon/pai.dmi'
 	icon_state = "repairbot"
 	job = JOB_PERSONAL_AI
 	layer = LOW_MOB_LAYER
@@ -460,7 +460,7 @@
 	to_chat(src, span_userdanger("Your mental faculties leave you."))
 	to_chat(src, span_rose("oblivion... "))
 	balloon_alert(user, "personality wiped")
-	playsound(src, 'sound/machines/buzz/buzz-two.ogg', 30, TRUE)
+	playsound(src, '../assets/sound/machines/buzz/buzz-two.ogg', 30, TRUE)
 	qdel(src)
 	return TRUE
 

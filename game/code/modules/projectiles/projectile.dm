@@ -6,7 +6,7 @@
 
 /obj/projectile
 	name = "projectile"
-	icon = 'icons/obj/weapons/guns/projectiles.dmi'
+	icon = '../assets/icons/obj/weapons/guns/projectiles.dmi'
 	icon_state = "bullet"
 	abstract_type = /obj/projectile
 	density = FALSE
@@ -18,7 +18,7 @@
 	blocks_emissive = EMISSIVE_BLOCK_GENERIC
 	layer = MOB_LAYER
 	/// The sound this plays on impact.
-	var/hitsound = 'sound/items/weapons/pierce.ogg'
+	var/hitsound = '../assets/sound/items/weapons/pierce.ogg'
 	/// Sound played when the projectile hits a wall
 	var/hitsound_wall
 

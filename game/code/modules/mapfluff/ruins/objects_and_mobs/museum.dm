@@ -9,7 +9,7 @@
 /obj/effect/replica_spawner //description and name are intact, better to make a new fluff object for stuff that is not actually ingame as an object
 	name = "replica creator"
 	desc = "This creates a fluff object that looks exactly like the input, but like obviously a replica. Do not for the love of god use with stuff that has Initialize side effects."
-	icon = 'icons/hud/screen_gen.dmi'
+	icon = '../assets/icons/hud/screen_gen.dmi'
 	icon_state = "x2"
 	invisibility = INVISIBILITY_ABSTRACT //nope, can't see this
 	anchored = TRUE
@@ -44,14 +44,14 @@
 /obj/structure/fluff/dnamod
 	name = "DNA Modifier"
 	desc = "DNA Manipulator replica. Essentially just a box of cool lights."
-	icon = 'icons/obj/service/hydroponics/equipment.dmi'
+	icon = '../assets/icons/obj/service/hydroponics/equipment.dmi'
 	icon_state = "dnamod"
 	density = TRUE
 
 /obj/structure/fluff/preserved_borer
 	name = "preserved borer exhibit"
 	desc = "A preserved cortical borer. Probably been there long enough to not last long outside the exhibit."
-	icon = 'icons/obj/structures.dmi'
+	icon = '../assets/icons/obj/structures.dmi'
 	icon_state = "preservedborer"
 	density = TRUE
 
@@ -64,7 +64,7 @@
 	max_integrity = 5 //one tap
 
 /obj/structure/fluff/balloon_nuke/atom_destruction()
-	playsound(loc, 'sound/effects/cartoon_sfx/cartoon_pop.ogg', 75, vary = TRUE)
+	playsound(loc, '../assets/sound/effects/cartoon_sfx/cartoon_pop.ogg', 75, vary = TRUE)
 	..()
 
 /obj/structure/fluff/fake_camera
@@ -90,7 +90,7 @@
 	icon_state = "vent_out"
 
 /turf/open/mirage
-	icon = 'icons/turf/floors.dmi'
+	icon = '../assets/icons/turf/floors.dmi'
 	icon_state = "mirage"
 	invisibility = INVISIBILITY_ABSTRACT
 	/// target turf x and y are offsets from our location instead of a direct coordinate
@@ -116,7 +116,7 @@
 /obj/effect/smooths_with_walls
 	name = "effect that smooths with walls"
 	desc = "to supplement /turf/open/mirage."
-	icon = 'icons/hud/screen_gen.dmi'
+	icon = '../assets/icons/hud/screen_gen.dmi'
 	icon_state = "x2"
 	invisibility = INVISIBILITY_ABSTRACT
 	anchored = TRUE

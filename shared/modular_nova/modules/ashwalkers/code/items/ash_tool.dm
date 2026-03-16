@@ -105,11 +105,11 @@
 /obj/item/cursed_dagger
 	name = "cursed ash dagger"
 	desc = "A blunted dagger that seems to cause the shadows near it to tremble."
-	icon = 'icons/obj/weapons/sword.dmi'
+	icon = '../assets/icons/obj/weapons/sword.dmi'
 	icon_state = "crysknife"
 	inhand_icon_state = "crysknife"
-	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/swords_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/swords_righthand.dmi'
 
 /obj/item/cursed_dagger/examine(mob/user)
 	. = ..()
@@ -159,7 +159,7 @@
 	to_chat(living_user, span_warning("[src] leaps from you satisfied and begins to grossly assemble itself!"))
 	var/type = pick(spawn_list)
 	new type(user.loc)
-	playsound(get_turf(src), 'sound/effects/magic/demon_attack1.ogg', 50, TRUE)
+	playsound(get_turf(src), '../assets/sound/effects/magic/demon_attack1.ogg', 50, TRUE)
 	qdel(src)
 
 /obj/item/ash_seed/tendril

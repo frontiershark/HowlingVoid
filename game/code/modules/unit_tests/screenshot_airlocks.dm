@@ -5,7 +5,7 @@
 	var/obj/machinery/door/airlock/instant/door = allocate(__IMPLIED_TYPE__)
 	var/obj/machinery/door/airlock/instant/glass/glass_door = allocate(__IMPLIED_TYPE__)
 
-	var/icon/final_icon = icon('icons/effects/effects.dmi', "nothing")
+	var/icon/final_icon = icon('../assets/icons/effects/effects.dmi', "nothing")
 
 	final_icon.Insert(getFlatIcon(door, no_anim = TRUE), dir = NORTH, frame = 1)
 	final_icon.Insert(getFlatIcon(glass_door, no_anim = TRUE), dir = SOUTH, frame = 1)

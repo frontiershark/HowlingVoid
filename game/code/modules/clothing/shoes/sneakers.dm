@@ -1,11 +1,11 @@
 /obj/item/clothing/shoes/sneakers
 	dying_key = DYE_REGISTRY_SNEAKERS
-	icon = 'icons/map_icons/clothing/shoes.dmi'
+	icon = '../assets/icons/map_icons/clothing/shoes.dmi'
 	icon_state = "/obj/item/clothing/shoes/sneakers"
 	post_init_icon_state = "sneakers"
 	inhand_icon_state = "sneakers_back"
-	lefthand_file = 'icons/mob/inhands/clothing/shoes_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/clothing/shoes_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/clothing/shoes_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/clothing/shoes_righthand.dmi'
 	greyscale_config = /datum/greyscale_config/sneakers
 	greyscale_config_worn = /datum/greyscale_config/sneakers/worn
 	greyscale_config_inhand_left = /datum/greyscale_config/sneakers/inhand_left
@@ -89,7 +89,7 @@
 /obj/item/clothing/shoes/sneakers/rainbow
 	name = "rainbow shoes"
 	desc = "Very gay shoes."
-	icon = 'icons/obj/clothing/shoes.dmi'
+	icon = '../assets/icons/obj/clothing/shoes.dmi'
 	icon_state = "rain_bow"
 	post_init_icon_state = null
 	inhand_icon_state = "rainbow_sneakers"
@@ -103,7 +103,7 @@
 
 /obj/item/clothing/shoes/sneakers/orange
 	name = "orange shoes"
-	icon = 'icons/map_icons/clothing/shoes.dmi'
+	icon = '../assets/icons/map_icons/clothing/shoes.dmi'
 	icon_state = "/obj/item/clothing/shoes/sneakers/orange"
 	post_init_icon_state = "sneakers"
 	greyscale_config = /datum/greyscale_config/sneakers_orange
@@ -189,7 +189,7 @@
 /obj/item/clothing/shoes/sneakers/marisa
 	desc = "A pair of magic black shoes."
 	name = "magic shoes"
-	icon = 'icons/map_icons/clothing/shoes.dmi'
+	icon = '../assets/icons/map_icons/clothing/shoes.dmi'
 	icon_state = "/obj/item/clothing/shoes/sneakers/marisa"
 	post_init_icon_state = "sneakers"
 	greyscale_config = /datum/greyscale_config/sneakers_marisa

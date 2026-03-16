@@ -71,7 +71,7 @@
 /obj/item/adamantine_pedestal
 	name = "adamantine pedestal"
 	desc = "An adamantine pedestal. It looks like it should have something small but massive on top."
-	icon = 'icons/obj/machines/engine/supermatter.dmi'
+	icon = '../assets/icons/obj/machines/engine/supermatter.dmi'
 	icon_state = "pedestal"
 	w_class = WEIGHT_CLASS_HUGE
 	throw_speed = 1

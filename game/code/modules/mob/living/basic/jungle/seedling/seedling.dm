@@ -9,7 +9,7 @@
 /mob/living/basic/seedling
 	name = "seedling"
 	desc = "This oversized, predatory flower conceals what can only be described as an organic energy cannon."
-	icon = 'icons/mob/simple/jungle/seedling.dmi'
+	icon = '../assets/icons/mob/simple/jungle/seedling.dmi'
 	icon_state = "seedling"
 	icon_living = "seedling"
 	icon_dead = "seedling_dead"
@@ -31,7 +31,7 @@
 	lighting_cutoff_blue = 25
 	mob_size = MOB_SIZE_LARGE
 	faction = list(FACTION_PLANTS)
-	attack_sound = 'sound/items/weapons/bladeslice.ogg'
+	attack_sound = '../assets/sound/items/weapons/bladeslice.ogg'
 	attack_vis_effect = ATTACK_EFFECT_SLASH
 	ai_controller = /datum/ai_controller/basic_controller/seedling
 	///the state of combat we are in
@@ -222,7 +222,7 @@
 //abilities
 /datum/action/cooldown/mob_cooldown/projectile_attack/rapid_fire/seedling
 	name = "Solar Energy"
-	button_icon = 'icons/obj/weapons/guns/projectiles.dmi'
+	button_icon = '../assets/icons/obj/weapons/guns/projectiles.dmi'
 	button_icon_state = "seedling"
 	desc = "Fire small beams of solar energy."
 	cooldown_time = 10 SECONDS
@@ -274,7 +274,7 @@
 
 /datum/action/cooldown/mob_cooldown/solarbeam
 	name = "Solar Beam"
-	button_icon = 'icons/effects/beam.dmi'
+	button_icon = '../assets/icons/effects/beam.dmi'
 	button_icon_state = "solar_beam"
 	desc = "Concentrate the power of the sun onto your target!"
 	cooldown_time = 30 SECONDS
@@ -309,7 +309,7 @@
 		seed_owner.change_combatant_state(state = SEEDLING_STATE_WARMUP)
 
 	var/turf/target_turf = get_turf(target)
-	playsound(owner, 'sound/effects/seedling_chargeup.ogg', 100, FALSE)
+	playsound(owner, '../assets/sound/effects/seedling_chargeup.ogg', 100, FALSE)
 
 	var/obj/effect/temp_visual/solarbeam_killsat/owner_beam = new(get_turf(owner))
 	animate(owner_beam, transform = matrix().Scale(1, 32), alpha = 255, time = beam_charge_up)
@@ -338,7 +338,7 @@
 		living_target.ignite_mob()
 		living_target.adjust_fire_loss(30)
 
-	playsound(target_turf, 'sound/effects/magic/lightningbolt.ogg', 50, TRUE)
+	playsound(target_turf, '../assets/sound/effects/magic/lightningbolt.ogg', 50, TRUE)
 	if(!is_seedling)
 		return
 	var/mob/living/basic/seedling/seed_firer = firer

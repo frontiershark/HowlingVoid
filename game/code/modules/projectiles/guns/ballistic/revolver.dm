@@ -3,11 +3,11 @@
 	desc = "A suspicious revolver. Uses .357 ammo."
 	icon_state = "revolver"
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/cylinder
-	fire_sound = 'sound/items/weapons/gun/revolver/shot_alt.ogg'
-	load_sound = 'sound/items/weapons/gun/revolver/load_bullet.ogg'
-	eject_sound = 'sound/items/weapons/gun/revolver/empty.ogg'
+	fire_sound = '../assets/sound/items/weapons/gun/revolver/shot_alt.ogg'
+	load_sound = '../assets/sound/items/weapons/gun/revolver/load_bullet.ogg'
+	eject_sound = '../assets/sound/items/weapons/gun/revolver/empty.ogg'
 	fire_sound_volume = 90
-	dry_fire_sound = 'sound/items/weapons/gun/revolver/dry_fire.ogg'
+	dry_fire_sound = '../assets/sound/items/weapons/gun/revolver/dry_fire.ogg'
 	casing_ejector = FALSE
 	internal_magazine = TRUE
 	bolt_type = BOLT_TYPE_NO_BOLT
@@ -51,11 +51,11 @@
 	if(suppressed)
 		playsound(src, suppressed_sound, suppressed_volume, vary_fire_sound, ignore_walls = FALSE, extrarange = SILENCED_SOUND_EXTRARANGE, falloff_distance = 0)
 		if(play_click)
-			playsound(src, 'sound/items/weapons/gun/general/ballistic_click.ogg', suppressed_volume, vary_fire_sound, ignore_walls = FALSE, extrarange = SILENCED_SOUND_EXTRARANGE, falloff_distance = 0, frequency = click_frequency_to_use)
+			playsound(src, '../assets/sound/items/weapons/gun/general/ballistic_click.ogg', suppressed_volume, vary_fire_sound, ignore_walls = FALSE, extrarange = SILENCED_SOUND_EXTRARANGE, falloff_distance = 0, frequency = click_frequency_to_use)
 	else
 		playsound(src, fire_sound, fire_sound_volume, vary_fire_sound)
 		if(play_click)
-			playsound(src, 'sound/items/weapons/gun/general/ballistic_click.ogg', fire_sound_volume, vary_fire_sound, frequency = click_frequency_to_use)
+			playsound(src, '../assets/sound/items/weapons/gun/general/ballistic_click.ogg', fire_sound_volume, vary_fire_sound, frequency = click_frequency_to_use)
 
 /obj/item/gun/ballistic/revolver/verb/spin()
 	set name = "Spin Chamber"
@@ -109,7 +109,7 @@
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/cylinder/rev38
 	icon_state = "c38"
 	base_icon_state = "c38"
-	fire_sound = 'sound/items/weapons/gun/revolver/shot.ogg'
+	fire_sound = '../assets/sound/items/weapons/gun/revolver/shot.ogg'
 
 // 38 special skins
 /datum/atom_skin/det_revolver
@@ -158,9 +158,9 @@
 
 	can_modify_ammo = TRUE
 	initial_caliber = CALIBER_38
-	initial_fire_sound = 'sound/items/weapons/gun/revolver/shot.ogg'
+	initial_fire_sound = '../assets/sound/items/weapons/gun/revolver/shot.ogg'
 	alternative_caliber = CALIBER_357
-	alternative_fire_sound = 'sound/items/weapons/gun/revolver/shot_alt.ogg'
+	alternative_fire_sound = '../assets/sound/items/weapons/gun/revolver/shot_alt.ogg'
 	alternative_ammo_misfires = TRUE
 	misfire_probability = 0
 	misfire_percentage_increment = 25 //about 1 in 4 rounds, which increases rapidly every shot
@@ -195,7 +195,7 @@
 	name = "\improper Golden revolver"
 	desc = "This ain't no game, ain't never been no show, And I'll gladly gun down the oldest lady you know. Uses .357 ammo."
 	icon_state = "goldrevolver"
-	fire_sound = 'sound/items/weapons/resonator_blast.ogg'
+	fire_sound = '../assets/sound/items/weapons/resonator_blast.ogg'
 	recoil = 8
 	pin = /obj/item/firing_pin
 
@@ -425,5 +425,5 @@
 	name = "peashooter"
 	icon_state = "peashooter"
 	desc = "A wild plantlife mutation that shoots hardened peas. Incredible."
-	fire_sound = 'sound/items/weapons/peashoot.ogg'
+	fire_sound = '../assets/sound/items/weapons/peashoot.ogg'
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/cylinder/peashooter

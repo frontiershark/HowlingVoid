@@ -23,7 +23,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/cell_charger_multi/wall_mounted, 29)
 	user.balloon_alert(user, "deconstructing...")
 	tool.play_tool_sound(src)
 	if(tool.use_tool(src, user, 1 SECONDS))
-		playsound(loc, 'sound/items/deconstruct.ogg', 50, TRUE)
+		playsound(loc, '../assets/sound/items/deconstruct.ogg', 50, TRUE)
 		deconstruct(TRUE)
 		return
 

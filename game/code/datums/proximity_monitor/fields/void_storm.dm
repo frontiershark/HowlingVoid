@@ -7,7 +7,7 @@
 	edge_is_a_field = TRUE
 	// lazylist that keeps track of the overlays added
 	var/list/turf_effects
-	var/static/image/storm_overlay = image('icons/effects/weather_effects.dmi', "snow_storm")
+	var/static/image/storm_overlay = image('../assets/icons/effects/weather_effects.dmi', "snow_storm")
 
 /datum/proximity_monitor/advanced/void_storm/New(atom/_host, range, _ignore_if_not_on_turf)
 	. = ..()

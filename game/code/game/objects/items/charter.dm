@@ -1,6 +1,6 @@
 /obj/item/station_charter
 	name = "station charter"
-	icon = 'icons/obj/scrolls.dmi'
+	icon = '../assets/icons/obj/scrolls.dmi'
 	icon_state = "charter"
 	desc = "An official document entrusting the governance of the station \
 		and surrounding space to the Captain."
@@ -63,7 +63,7 @@
 	for(var/client/admin_client in GLOB.admins)
 		if(admin_client.prefs.toggles & SOUND_ADMINHELP)
 			window_flash(admin_client, ignorepref = TRUE)
-			SEND_SOUND(admin_client, sound('sound/effects/gong.ogg'))
+			SEND_SOUND(admin_client, sound('../assets/sound/effects/gong.ogg'))
 
 /obj/item/station_charter/proc/reject_proposed(user)
 	if(!user)
@@ -100,12 +100,12 @@
 
 /obj/item/station_charter/banner
 	name = "\improper Nanotrasen banner"
-	icon = 'icons/obj/banner.dmi'
+	icon = '../assets/icons/obj/banner.dmi'
 	name_type = "planet"
 	icon_state = "banner"
 	inhand_icon_state = "banner"
-	lefthand_file = 'icons/mob/inhands/equipment/banners_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/banners_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/banners_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/banners_righthand.dmi'
 	desc = "A cunning device used to claim ownership of celestial bodies."
 	w_class = WEIGHT_CLASS_HUGE
 	force = 15

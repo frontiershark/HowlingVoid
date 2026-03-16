@@ -15,7 +15,7 @@
 /mob/living/basic/fleshblob
 	name = "mass of flesh"
 	desc = "A moving slithering mass of flesh, seems to be very much in pain. Better avoid. It has no mouth and it must scream."
-	icon = 'icons/mob/simple/animal.dmi'
+	icon = '../assets/icons/mob/simple/animal.dmi'
 	icon_state = "fleshblob"
 	icon_living = "fleshblob"
 	mob_biotypes = MOB_ORGANIC|MOB_MINING
@@ -27,7 +27,7 @@
 	melee_damage_upper = 3
 	health = 160
 	maxHealth = 160
-	attack_sound = 'sound/items/weapons/bite.ogg'
+	attack_sound = '../assets/sound/items/weapons/bite.ogg'
 	attack_vis_effect = ATTACK_EFFECT_SMASH
 	attack_verb_continuous = "attempts to assimilate"
 	attack_verb_simple = "attempt to assimilate"

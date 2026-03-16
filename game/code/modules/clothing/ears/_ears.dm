@@ -2,8 +2,8 @@
 //Ears: currently only used for headsets and earmuffs
 /obj/item/clothing/ears
 	name = "ears"
-	lefthand_file = 'icons/mob/inhands/clothing/ears_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/clothing/ears_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/clothing/ears_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/clothing/ears_righthand.dmi'
 	abstract_type = /obj/item/clothing/ears
 	w_class = WEIGHT_CLASS_TINY
 	throwforce = 0
@@ -13,7 +13,7 @@
 /obj/item/clothing/ears/earmuffs
 	name = "earmuffs"
 	desc = "Protects your hearing from loud noises, and quiet ones as well."
-	icon = 'icons/obj/clothing/ears.dmi'
+	icon = '../assets/icons/obj/clothing/ears.dmi'
 	icon_state = "earmuffs"
 	inhand_icon_state = "earmuffs"
 	clothing_traits = list(TRAIT_DEAF)

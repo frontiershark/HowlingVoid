@@ -58,7 +58,7 @@
 			addtimer(CALLBACK(restraint, TYPE_PROC_REF(/atom, atom_destruction), ACID), 4 SECONDS)
 			for(var/beat in 1 to 3)
 				addtimer(CALLBACK(src, PROC_REF(make_puddle), restraint), beat SECONDS)
-				addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(playsound), restraint, 'sound/items/tools/welder.ogg', 50, TRUE), beat SECONDS)
+				addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(playsound), restraint, '../assets/sound/items/tools/welder.ogg', 50, TRUE), beat SECONDS)
 			log_combat(user = user, target = restraint, what_done = "melted restraining container", addition = "(biodegrade)")
 			return
 		//otherwise it's some kind of worn restraint
@@ -68,7 +68,7 @@
 			span_warning("[user] spews torrents of acid onto [restraint], melting them with horrifying ease."),
 			user.balloon_alert(user, "melting restraints..."),
 			span_danger("You hear retching, then the sizzling of powerful acid, closer to the sound of hissing steam."))
-		playsound(user, 'sound/items/tools/welder.ogg', 50, TRUE)
+		playsound(user, '../assets/sound/items/tools/welder.ogg', 50, TRUE)
 		. = TRUE
 
 	if(space_invader)
@@ -84,14 +84,14 @@
 /datum/action/changeling/biodegrade/proc/acid_blast(atom/movable/user, atom/movable/target)
 	var/datum/reagents/ephemeral_acid = new
 	ephemeral_acid.add_reagent(bio_acid_path, bio_acid_amount_per_spray)
-	var/mutable_appearance/splash_animation = mutable_appearance('icons/effects/effects.dmi', "splash")
+	var/mutable_appearance/splash_animation = mutable_appearance('../assets/icons/effects/effects.dmi', "splash")
 	splash_animation.color = bio_acid_color
 	target.flick_overlay_view(splash_animation, 3 SECONDS)
 	ephemeral_acid.expose(target, TOUCH)
 
 /datum/action/changeling/biodegrade/proc/punish_with_acid(mob/living/carbon/human/user, mob/living/hapless_manhandler)
 	acid_blast(user, hapless_manhandler)
-	playsound(user, 'sound/mobs/non-humanoids/bileworm/bileworm_spit.ogg', 50, TRUE)
+	playsound(user, '../assets/sound/mobs/non-humanoids/bileworm/bileworm_spit.ogg', 50, TRUE)
 	if(IS_CHANGELING(hapless_manhandler))
 		user.visible_message(
 			span_danger("[user] spews a mist of sizzling acid onto [hapless_manhandler]... but nothing happens!"),

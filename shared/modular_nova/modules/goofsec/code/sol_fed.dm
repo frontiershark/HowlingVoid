@@ -145,7 +145,7 @@ GLOBAL_LIST_INIT(call911_do_and_do_not, list(
 			poll_question = "The station has ordered $35,000 in pizza. Will you deliver?"
 			cell_phone_number = "Dogginos"
 			list_to_use = "dogginos"
-	priority_announce(announcement_message, announcer, 'sound/effects/families_police.ogg', has_important_message=TRUE, color_override = "yellow")
+	priority_announce(announcement_message, announcer, '../assets/sound/effects/families_police.ogg', has_important_message=TRUE, color_override = "yellow")
 	var/list/candidates = SSpolling.poll_ghost_candidates(
 		poll_question,
 		check_jobban = ROLE_DEATHSQUAD,
@@ -209,7 +209,7 @@ GLOBAL_LIST_INIT(call911_do_and_do_not, list(
 
 	if (GLOB.cops_arrived)
 		to_chat(user, span_warning("911 has already been called this shift!"))
-		playsound(src, 'sound/machines/terminal/terminal_prompt_deny.ogg', 50, FALSE)
+		playsound(src, '../assets/sound/machines/terminal/terminal_prompt_deny.ogg', 50, FALSE)
 		return FALSE
 
 	if (!issilicon(user))
@@ -217,11 +217,11 @@ GLOBAL_LIST_INIT(call911_do_and_do_not, list(
 		var/obj/item/card/id/id_card = held_item?.GetID()
 		if (!istype(id_card))
 			to_chat(user, span_warning("You need to swipe your ID!"))
-			playsound(src, 'sound/machines/terminal/terminal_prompt_deny.ogg', 50, FALSE)
+			playsound(src, '../assets/sound/machines/terminal/terminal_prompt_deny.ogg', 50, FALSE)
 			return FALSE
 		if (!(ACCESS_CAPTAIN in id_card.access))
 			to_chat(user, span_warning("You are not authorized to do this!"))
-			playsound(src, 'sound/machines/terminal/terminal_prompt_deny.ogg', 50, FALSE)
+			playsound(src, '../assets/sound/machines/terminal/terminal_prompt_deny.ogg', 50, FALSE)
 			return FALSE
 	else
 		to_chat(user, "The console refuses to let you dial 911 as an AI or Cyborg!")
@@ -238,11 +238,11 @@ GLOBAL_LIST_INIT(call911_do_and_do_not, list(
 		var/obj/item/card/id/id_card = held_item?.GetID()
 		if (!istype(id_card))
 			to_chat(user, span_warning("You need to swipe your ID!"))
-			playsound(src, 'sound/machines/terminal/terminal_prompt_deny.ogg', 50, FALSE)
+			playsound(src, '../assets/sound/machines/terminal/terminal_prompt_deny.ogg', 50, FALSE)
 			return FALSE
 		if (!(ACCESS_CAPTAIN in id_card.access))
 			to_chat(user, span_warning("You are not authorized to do this!"))
-			playsound(src, 'sound/machines/terminal/terminal_prompt_deny.ogg', 50, FALSE)
+			playsound(src, '../assets/sound/machines/terminal/terminal_prompt_deny.ogg', 50, FALSE)
 			return FALSE
 	else
 		to_chat(user, "The console refuses to let you to message the Federation as an AI or Cyborg!")
@@ -271,14 +271,14 @@ GLOBAL_LIST_INIT(call911_do_and_do_not, list(
 	reason_to_call_da_feds = span_adminnotice("<b><font color=yellow>SOLFED:</font>[ADMIN_FULLMONTY(user)] [ADMIN_CENTCOM_REPLY(user)]:</b> [reason_to_call_da_feds]")
 	for(var/client/staff as anything in GLOB.admins)
 		if(staff?.prefs.read_preference(/datum/preference/toggle/comms_notification))
-			SEND_SOUND(staff, sound('sound/misc/server-ready.ogg'))
+			SEND_SOUND(staff, sound('../assets/sound/misc/server-ready.ogg'))
 	to_chat(GLOB.admins, reason_to_call_da_feds, type = MESSAGE_TYPE_PRAYER, confidential = TRUE)
 
 	log_game("[key_name(user)] has called the Sol Federation for the following reason:\n[GLOB.fedmessage]")
 	deadchat_broadcast(" has called the Sol Federation for the following reason:\n[GLOB.fedmessage]", span_name("[user.real_name]"), user, message_type = DEADCHAT_ANNOUNCEMENT)
 
 	to_chat(user, span_notice("Authorization confirmed. SolFed Intervention request sent, standby for official instructions."))
-	playsound(src, 'sound/machines/terminal/terminal_prompt_confirm.ogg', 50, FALSE)
+	playsound(src, '../assets/sound/machines/terminal/terminal_prompt_confirm.ogg', 50, FALSE)
 
 /obj/machinery/computer/communications/proc/calling_911(mob/user, called_group_pretty = "EMTs", called_group = EMERGENCY_RESPONSE_EMT)
 	message_admins("[ADMIN_LOOKUPFLW(user)] is considering calling the Sol Federation [called_group_pretty].")
@@ -303,7 +303,7 @@ GLOBAL_LIST_INIT(call911_do_and_do_not, list(
 
 	call_911(called_group)
 	to_chat(user, span_notice("Authorization confirmed. 911 call dispatched to the Sol Federation [called_group_pretty]."))
-	playsound(src, 'sound/machines/terminal/terminal_prompt_confirm.ogg', 50, FALSE)
+	playsound(src, '../assets/sound/machines/terminal/terminal_prompt_confirm.ogg', 50, FALSE)
 
 /datum/antagonist/ert/request_911
 	name = "911 Responder"
@@ -346,7 +346,7 @@ GLOBAL_LIST_INIT(call911_do_and_do_not, list(
 		along with anyone you are pulling."
 	to_chat(owner, missiondesc)
 	var/mob/living/greeted_mob = owner.current
-	greeted_mob.playsound_local(greeted_mob, 'sound/effects/families_police.ogg', 100, FALSE, pressure_affected = FALSE, use_reverb = FALSE)
+	greeted_mob.playsound_local(greeted_mob, '../assets/sound/effects/families_police.ogg', 100, FALSE, pressure_affected = FALSE, use_reverb = FALSE)
 
 /datum/outfit/request_911
 	name = "911 Response: Base"
@@ -443,7 +443,7 @@ GLOBAL_LIST_INIT(call911_do_and_do_not, list(
 
 /obj/item/encryptionkey/headset_solfed/headset_solfed
 	flags_1 = parent_type::flags_1 | NO_NEW_GAGS_PREVIEW_1
-	icon = 'icons/map_icons/items/_item.dmi'
+	icon = '../assets/icons/map_icons/items/_item.dmi'
 
 /obj/item/encryptionkey/headset_solfed/atmos
 	name = "\improper SolFed adv. atmos encryption key"
@@ -542,7 +542,7 @@ GLOBAL_LIST_INIT(call911_do_and_do_not, list(
 		along with anyone you are pulling."
 	to_chat(owner, missiondesc)
 	var/mob/living/greeted_mob = owner.current
-	greeted_mob.playsound_local(greeted_mob, 'sound/effects/families_police.ogg', 100, FALSE, pressure_affected = FALSE, use_reverb = FALSE)
+	greeted_mob.playsound_local(greeted_mob, '../assets/sound/effects/families_police.ogg', 100, FALSE, pressure_affected = FALSE, use_reverb = FALSE)
 
 /datum/outfit/request_911/condom_destroyer
 	name = "911 Response: Armed S.W.A.T. Officer"
@@ -587,7 +587,7 @@ GLOBAL_LIST_INIT(call911_do_and_do_not, list(
 	missiondesc += "<BR> <B>4.</B> If you need to use lethal force, do so, but only if you must."
 	to_chat(owner, missiondesc)
 	var/mob/living/greeted_mob = owner.current
-	greeted_mob.playsound_local(greeted_mob, 'sound/effects/families_police.ogg', 100, FALSE, pressure_affected = FALSE, use_reverb = FALSE)
+	greeted_mob.playsound_local(greeted_mob, '../assets/sound/effects/families_police.ogg', 100, FALSE, pressure_affected = FALSE, use_reverb = FALSE)
 
 /datum/outfit/request_911/treason_destroyer
 	name = "911 Response: SolFed Military"
@@ -679,7 +679,7 @@ GLOBAL_LIST_INIT(call911_do_and_do_not, list(
 				var/datum/bank_account/station_balance = SSeconomy.get_dep_account(ACCOUNT_CAR)
 				station_balance?.adjust_money(SOLFED_FINE_AMOUNT) // paying for the gas to drive all the fuckin' way out to the frontier
 
-			priority_announce(announcement_message, announcement_source, 'sound/effects/families_police.ogg', has_important_message = TRUE, color_override = "yellow")
+			priority_announce(announcement_message, announcement_source, '../assets/sound/effects/families_police.ogg', has_important_message = TRUE, color_override = "yellow")
 			var/list/candidates = SSpolling.poll_ghost_candidates(
 				ghost_poll_msg,
 				jobban_to_check,
@@ -876,11 +876,11 @@ GLOBAL_LIST_INIT(call911_do_and_do_not, list(
 				else
 					message_admins("[ADMIN_LOOKUPFLW(user)] has beamed out [living_user.pulling] alongside them.")
 				var/turf/pulling_turf = get_turf(living_user.pulling)
-				playsound(pulling_turf, 'sound/effects/magic/Repulse.ogg', 100, 1)
+				playsound(pulling_turf, '../assets/sound/effects/magic/Repulse.ogg', 100, 1)
 				do_sparks(10, TRUE, pulling_turf, spark_type = /datum/effect_system/basic/spark_spread/quantum)
 				qdel(living_user.pulling)
 			var/turf/user_turf = get_turf(living_user)
-			playsound(user_turf, 'sound/effects/magic/Repulse.ogg', 100, 1)
+			playsound(user_turf, '../assets/sound/effects/magic/Repulse.ogg', 100, 1)
 			do_sparks(10, TRUE, user_turf, spark_type = /datum/effect_system/basic/spark_spread/quantum)
 			qdel(user)
 	else

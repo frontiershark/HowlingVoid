@@ -1,11 +1,11 @@
-#define KNIFE_HITSOUND 'sound/items/weapons/bladeslice.ogg'
-#define KNIFE_USESOUND 'sound/items/weapons/bladeslice.ogg'
+#define KNIFE_HITSOUND '../assets/sound/items/weapons/bladeslice.ogg'
+#define KNIFE_USESOUND '../assets/sound/items/weapons/bladeslice.ogg'
 #define KNIFE_ATTACK_VERB_CONTINUOUS list("slashes", "tears", "slices", "tears", "lacerates", "rips", "dices", "cuts", "rends")
 #define KNIFE_ATTACK_VERB_SIMPLE list("slash", "tear", "slice", "tear", "lacerate", "rip", "dice", "cut", "rend")
 #define KNIFE_SHARPNESS SHARP_EDGED
 #define KNIFE_EXPOSED_WOUND_BONUS 15
-#define CUTTER_HITSOUND 'sound/items/tools/wirecutter.ogg'
-#define CUTTER_USESOUND 'sound/items/tools/wirecutter.ogg'
+#define CUTTER_HITSOUND '../assets/sound/items/tools/wirecutter.ogg'
+#define CUTTER_USESOUND '../assets/sound/items/tools/wirecutter.ogg'
 #define CUTTER_ATTACK_VERB_CONTINUOUS list("bashes", "batters", "bludgeons", "thrashes", "whacks")
 #define CUTTER_ATTACK_VERB_SIMPLE list("bash", "batter", "bludgeon", "thrash", "whack")
 #define CUTTER_FORCE 6
@@ -63,7 +63,7 @@
 	icon_state = "energy_mantis_blade"
 	force = 20 // Two can attack at the same time, so read this as 40 force total.
 	armour_penetration = 25 //Energy isn't as good at going through armor as it is through flesh alone.
-	hitsound = 'sound/items/weapons/blade1.ogg'
+	hitsound = '../assets/sound/items/weapons/blade1.ogg'
 
 /obj/item/organ/cyberimp/arm/toolkit/armblade
 	name = "arm blade implant"
@@ -111,7 +111,7 @@
 	var/cutter_force = CUTTER_FORCE
 	var/cutter_wound_bonus = CUTTER_WOUND_BONUS
 	var/cutter_exposed_wound_bonus = CUTTER_WOUND_BONUS
-	var/toggle_sound = 'sound/items/tools/change_drill.ogg'
+	var/toggle_sound = '../assets/sound/items/tools/change_drill.ogg'
 	tool_behaviour = TOOL_KNIFE
 	toolspeed = 1
 
@@ -160,7 +160,7 @@
 	name = "enhanced razor claws"
 	desc += span_warning("\n\nThese have undergone a special honing process; they'll kill people even faster than they used to.")
 	user.visible_message(span_warning("[user] sharpens [src], [attacking_item] disintegrating!"), span_warning("You sharpen [src], making it much more deadly than before, but [attacking_item] disintegrates under the stress."))
-	playsound(src, 'sound/items/unsheath.ogg', 25, TRUE)
+	playsound(src, '../assets/sound/items/unsheath.ogg', 25, TRUE)
 	qdel(attacking_item)
 	return ..()
 
@@ -171,8 +171,8 @@
 	actions_types = list(/datum/action/item_action/organ_action/toggle/razor_claws)
 	icon = 'modular_nova/modules/implants/icons/razorclaws.dmi'
 	icon_state = "wolverine"
-	extend_sound = 'sound/items/unsheath.ogg'
-	retract_sound = 'sound/items/sheath.ogg'
+	extend_sound = '../assets/sound/items/unsheath.ogg'
+	retract_sound = '../assets/sound/items/sheath.ogg'
 
 /obj/item/organ/cyberimp/arm/toolkit/razor_claws/emp_act(severity)
 	. = ..()
@@ -192,9 +192,9 @@
 		if(active_item)
 			Retract()
 		do_sparks(2, TRUE, owner)
-		playsound(owner, 'sound/items/unsheath.ogg', 50, TRUE)
-		addtimer(CALLBACK(src, TYPE_PROC_REF(/atom, playsound), owner, 'sound/items/sheath.ogg', 50, TRUE), 0.3 SECONDS)
-		addtimer(CALLBACK(src, TYPE_PROC_REF(/atom, playsound), owner, 'sound/items/unsheath.ogg', 50, TRUE), 0.6 SECONDS)
+		playsound(owner, '../assets/sound/items/unsheath.ogg', 50, TRUE)
+		addtimer(CALLBACK(src, TYPE_PROC_REF(/atom, playsound), owner, '../assets/sound/items/sheath.ogg', 50, TRUE), 0.3 SECONDS)
+		addtimer(CALLBACK(src, TYPE_PROC_REF(/atom, playsound), owner, '../assets/sound/items/unsheath.ogg', 50, TRUE), 0.6 SECONDS)
 
 /// bespoke subtypes for augs menu since it's a bit wonky
 /obj/item/organ/cyberimp/arm/toolkit/razor_claws/right_arm
@@ -241,7 +241,7 @@
 			Retract()
 		owner.set_jitter_if_lower(severity == EMP_LIGHT ? 10 SECONDS : 20 SECONDS)
 		do_sparks(3, TRUE, owner)
-		playsound(owner, 'sound/items/weapons/drill.ogg', 50, TRUE)
+		playsound(owner, '../assets/sound/items/weapons/drill.ogg', 50, TRUE)
 
 /obj/item/organ/cyberimp/arm/toolkit/mining_drill/right_arm //You know the drill.
 	zone = BODY_ZONE_R_ARM
@@ -261,8 +261,8 @@
 	icon_state = "steel"
 	inhand_icon_state = "steel"
 	toolspeed = 0.6 //faster than a pickaxe
-	usesound = 'sound/items/weapons/drill.ogg'
-	hitsound = 'sound/items/weapons/drill.ogg'
+	usesound = '../assets/sound/items/weapons/drill.ogg'
+	hitsound = '../assets/sound/items/weapons/drill.ogg'
 	/// How recent the spin emote was
 	var/recent_spin = 0
 	/// The delay for how often you should be able to do it to prevent spam
@@ -304,13 +304,13 @@
 	toolspeed = 0.2
 	force = 15
 	demolition_mod = 1.15
-	usesound = 'sound/items/weapons/drill.ogg'
-	hitsound = 'sound/items/weapons/drill.ogg'
+	usesound = '../assets/sound/items/weapons/drill.ogg'
+	hitsound = '../assets/sound/items/weapons/drill.ogg'
 
 /obj/item/organ/cyberimp/arm/toolkit/hacker
 	name = "hacking arm implant"
 	desc = "An small arm implant containing an advanced screwdriver, wirecutters, and multitool designed for engineers and on-the-field machine modification. Actually legal, despite what the name may make you think."
-	icon = 'icons/obj/items_cyborg.dmi'
+	icon = '../assets/icons/obj/items_cyborg.dmi'
 	icon_state = "toolkit_engiborg_multitool"
 	items_to_create = list(/obj/item/screwdriver/cyborg, /obj/item/wirecutters/cyborg, /obj/item/multitool/abductor/implant)
 	aug_overlay = "toolkit"
@@ -324,11 +324,11 @@
 /obj/item/implant_mounted_chainsaw
 	name = "integrated chainsaw"
 	desc = "A chainsaw that conceals inside your arm."
-	icon = 'icons/obj/weapons/chainsaw.dmi'
+	icon = '../assets/icons/obj/weapons/chainsaw.dmi'
 	icon_state = "chainsaw_on"
 	inhand_icon_state = "mounted_chainsaw"
-	lefthand_file = 'icons/mob/inhands/weapons/chainsaw_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/chainsaw_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/chainsaw_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/chainsaw_righthand.dmi'
 	force = 24
 	throwforce = 0
 	throw_range = 0
@@ -336,7 +336,7 @@
 	sharpness = SHARP_EDGED
 	attack_verb_continuous = list("saws", "tears", "lacerates", "cuts", "chops", "dices")
 	attack_verb_simple = list("saw", "tear", "lacerate", "cut", "chop", "dice")
-	hitsound = 'sound/items/weapons/chainsawhit.ogg'
+	hitsound = '../assets/sound/items/weapons/chainsawhit.ogg'
 	tool_behaviour = TOOL_SAW
 	toolspeed = 1
 
@@ -351,7 +351,7 @@
 /obj/item/multitool/abductor/implant
 	name = "multitool"
 	desc = "An optimized, highly advanced stripped-down multitool able to interface with electronics far better than its standard counterpart."
-	icon = 'icons/obj/items_cyborg.dmi'
+	icon = '../assets/icons/obj/items_cyborg.dmi'
 	icon_state = "toolkit_engiborg_multitool"
 
 /obj/item/organ/cyberimp/arm/toolkit/janitor
@@ -426,7 +426,7 @@
 	exposed_wound_bonus = 20
 	weak_against_armour = TRUE
 	reach = 2
-	hitsound = 'sound/items/weapons/whip.ogg'
+	hitsound = '../assets/sound/items/weapons/whip.ogg'
 	attack_verb_continuous = list("slashes", "whips", "lashes", "lacerates")
 	attack_verb_simple = list("slash", "whip", "lash", "lacerate")
 	obj_flags = UNIQUE_RENAME
@@ -488,7 +488,7 @@
 	righthand_file = 'modular_nova/modules/implants/icons/inhands/righthand.dmi'
 	lefthand_file = 'modular_nova/modules/implants/icons/inhands/lefthand.dmi'
 	inhand_icon_state = "shell_cannon"
-	worn_icon = 'icons/mob/clothing/belt.dmi'
+	worn_icon = '../assets/icons/mob/clothing/belt.dmi'
 	worn_icon_state = "gun"
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_LIGHT

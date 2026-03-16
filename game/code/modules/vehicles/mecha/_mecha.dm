@@ -21,7 +21,7 @@
 /obj/vehicle/sealed/mecha
 	name = "exosuit"
 	desc = "Exosuit"
-	icon = 'icons/mob/rideables/mecha.dmi'
+	icon = '../assets/icons/mob/rideables/mecha.dmi'
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	max_integrity = 300
 	armor_type = /datum/armor/sealed_mecha
@@ -34,7 +34,7 @@
 	light_range = 6
 	generic_canpass = FALSE
 	hud_possible = list(DIAG_STAT_HUD, DIAG_BATT_HUD, DIAG_MECH_HUD, DIAG_TRACK_HUD, DIAG_CAMERA_HUD)
-	mouse_pointer = 'icons/effects/mouse_pointers/mecha_mouse.dmi'
+	mouse_pointer = '../assets/icons/effects/mouse_pointers/mecha_mouse.dmi'
 	/// Significantly heavier than humans
 	inertia_force_weight = 5
 	///How much energy the mech will consume each time it moves. this is the current active energy consumed
@@ -134,15 +134,15 @@
 	///Whether our steps are silent due to no gravity
 	var/step_silent = FALSE
 	///Sound played when the mech moves
-	var/stepsound = 'sound/vehicles/mecha/mechstep.ogg'
+	var/stepsound = '../assets/sound/vehicles/mecha/mechstep.ogg'
 	///Sound played when the mech walks
-	var/turnsound = 'sound/vehicles/mecha/mechturn.ogg'
+	var/turnsound = '../assets/sound/vehicles/mecha/mechturn.ogg'
 	///Sounds for types of melee attack
-	var/brute_attack_sound = 'sound/items/weapons/punch4.ogg'
-	var/burn_attack_sound = 'sound/items/tools/welder.ogg'
-	var/tox_attack_sound = 'sound/effects/spray2.ogg'
+	var/brute_attack_sound = '../assets/sound/items/weapons/punch4.ogg'
+	var/burn_attack_sound = '../assets/sound/items/tools/welder.ogg'
+	var/tox_attack_sound = '../assets/sound/effects/spray2.ogg'
 	///Sound on wall destroying
-	var/destroy_wall_sound = 'sound/effects/meteorimpact.ogg'
+	var/destroy_wall_sound = '../assets/sound/effects/meteorimpact.ogg'
 
 	///Melee attack verb
 	var/list/attack_verbs = list("hit", "hits", "hitting")
@@ -372,7 +372,7 @@
 /obj/vehicle/sealed/mecha/proc/set_safety(mob/user)
 	weapons_safety = !weapons_safety
 	if(!safety_sound_custom)
-		SEND_SOUND(user, sound('sound/machines/beep/beep.ogg', volume = 25))
+		SEND_SOUND(user, sound('../assets/sound/machines/beep/beep.ogg', volume = 25))
 	balloon_alert(user, "equipment [weapons_safety ? "safe" : "ready"]")
 	set_mouse_pointer()
 	SEND_SIGNAL(src, COMSIG_MECH_SAFETIES_TOGGLE, user, weapons_safety)
@@ -390,9 +390,9 @@
 		mouse_pointer = ""
 	else
 		if(equipment_disabled)
-			mouse_pointer = 'icons/effects/mouse_pointers/mecha_mouse-disable.dmi'
+			mouse_pointer = '../assets/icons/effects/mouse_pointers/mecha_mouse-disable.dmi'
 		else
-			mouse_pointer = 'icons/effects/mouse_pointers/mecha_mouse.dmi'
+			mouse_pointer = '../assets/icons/effects/mouse_pointers/mecha_mouse.dmi'
 
 	for(var/mob/mob_occupant as anything in occupants)
 		mob_occupant.update_mouse_pointer()
@@ -515,7 +515,7 @@
 	equipment_disabled = FALSE
 	for(var/occupant in occupants)
 		var/mob/mob_occupant = occupant
-		SEND_SOUND(mob_occupant, sound('sound/items/timer.ogg', volume=50))
+		SEND_SOUND(mob_occupant, sound('../assets/sound/items/timer.ogg', volume=50))
 		to_chat(mob_occupant, span_notice("Equipment control unit has been rebooted successfully."))
 	set_mouse_pointer()
 
@@ -737,7 +737,7 @@
 	if(mecha_flags & LIGHTS_ON && !use_energy(light_power_drain * seconds_per_tick))
 		mecha_flags &= ~LIGHTS_ON
 		set_light_on(mecha_flags & LIGHTS_ON)
-		playsound(src,'sound/machines/clockcult/brass_skewer.ogg', 40, TRUE)
+		playsound(src,'../assets/sound/machines/clockcult/brass_skewer.ogg', 40, TRUE)
 		log_message("Toggled lights off due to the lack of power.", LOG_MECHA)
 
 ///Called when a driver clicks somewhere. Handles everything like equipment, punches, etc.
@@ -849,7 +849,7 @@
 		if(listener.client)
 			speech_bubble_recipients += listener.client
 
-	var/image/mech_speech = image('icons/mob/effects/talk.dmi', src, "machine[say_test(speech_args[SPEECH_MESSAGE])]",MOB_LAYER+1)
+	var/image/mech_speech = image('../assets/icons/mob/effects/talk.dmi', src, "machine[say_test(speech_args[SPEECH_MESSAGE])]",MOB_LAYER+1)
 	INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(flick_overlay_global), mech_speech, speech_bubble_recipients, 3 SECONDS)
 
 /////////////////////////////////////
@@ -920,7 +920,7 @@
 
 		balloon_alert(occupant, "cabin [cabin_sealed ? "sealed" : "unsealed"]")
 	log_message("Cabin [cabin_sealed ? "sealed" : "unsealed"].", LOG_MECHA)
-	playsound(src, 'sound/machines/airlock/airlock.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/machines/airlock/airlock.ogg', 50, TRUE)
 
 /// Special light eater handling
 /obj/vehicle/sealed/mecha/proc/on_light_eater(obj/vehicle/sealed/source, datum/light_eater)
@@ -1007,7 +1007,7 @@
 		return
 	mecha_flags ^= LIGHTS_ON
 	set_light_on(mecha_flags & LIGHTS_ON)
-	playsound(src,'sound/machines/clockcult/brass_skewer.ogg', 40, TRUE)
+	playsound(src,'../assets/sound/machines/clockcult/brass_skewer.ogg', 40, TRUE)
 	log_message("Toggled lights [(mecha_flags & LIGHTS_ON)?"on":"off"].", LOG_MECHA)
 	for(var/mob/occupant as anything in occupants)
 		var/datum/action/act = locate(/datum/action/vehicle/sealed/mecha/mech_toggle_lights) in occupant.actions

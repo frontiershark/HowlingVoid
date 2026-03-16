@@ -22,7 +22,7 @@
 	)
 	result_atoms = list(/obj/item/codex_cicatrix/morbus)
 	cost = 2
-	research_tree_icon_path = 'icons/obj/antags/eldritch.dmi'
+	research_tree_icon_path = '../assets/icons/obj/antags/eldritch.dmi'
 	research_tree_icon_state = "book_morbus"
 	drafting_tier = 2
 
@@ -53,7 +53,7 @@
 	)
 	result_atoms = list(/obj/item/clothing/shoes/greaves_of_the_prophet)
 	cost = 2
-	research_tree_icon_path = 'icons/obj/clothing/shoes.dmi'
+	research_tree_icon_path = '../assets/icons/obj/clothing/shoes.dmi'
 	research_tree_icon_state = "hereticgreaves"
 	drafting_tier = 2
 
@@ -81,7 +81,7 @@
 	)
 	result_atoms = list(/obj/item/melee/rune_carver)
 	cost = 2
-	research_tree_icon_path = 'icons/obj/antags/eldritch.dmi'
+	research_tree_icon_path = '../assets/icons/obj/antags/eldritch.dmi'
 	research_tree_icon_state = "rune_carver"
 	drafting_tier = 2
 
@@ -98,7 +98,7 @@
 	)
 	result_atoms = list(/obj/item/ether)
 	cost = 2
-	research_tree_icon_path = 'icons/obj/antags/eldritch.dmi'
+	research_tree_icon_path = '../assets/icons/obj/antags/eldritch.dmi'
 	research_tree_icon_state = "poison_flask"
 	drafting_tier = 2
 
@@ -116,7 +116,7 @@
 	required_atoms = list(/obj/item/canvas = 1)
 	result_atoms = list(/obj/item/canvas)
 	cost = 2
-	research_tree_icon_path = 'icons/obj/signs.dmi'
+	research_tree_icon_path = '../assets/icons/obj/signs.dmi'
 	research_tree_icon_state = "eldritch_painting_weeping"
 	drafting_tier = 2
 

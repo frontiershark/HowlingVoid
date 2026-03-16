@@ -5,10 +5,10 @@
 			It also blinds, mutes and deafens your target, if their sanity is low enough, they will be knocked down as well."
 	background_icon_state = "bg_heretic"
 	overlay_icon_state = "bg_heretic_border"
-	button_icon = 'icons/mob/actions/actions_ecult.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_ecult.dmi'
 	button_icon_state = "mind_gate"
 
-	sound = 'sound/effects/magic/curse.ogg'
+	sound = '../assets/sound/effects/magic/curse.ogg'
 	school = SCHOOL_FORBIDDEN
 	cooldown_time = 20 SECONDS
 

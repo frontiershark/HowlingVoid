@@ -7,7 +7,7 @@
 /obj/item/clothing/accessory/chaps
 	name = "chaps"
 	desc = "Padding typically worn over one's trousers to better protect the outside of their legs from hazards."
-	icon = 'icons/map_icons/clothing/accessory.dmi'
+	icon = '../assets/icons/map_icons/clothing/accessory.dmi'
 	icon_state = "/obj/item/clothing/accessory/chaps"
 	post_init_icon_state = "chaps"
 	worn_icon = 'modular_nova/master_files/icons/mob/clothing/under/shorts_pants_shirts.dmi'

@@ -6,7 +6,7 @@
 /obj/item/food/cubancarp
 	name = "\improper Cuban carp"
 	desc = "A grifftastic sandwich that burns your tongue and then leaves it numb!"
-	icon = 'icons/obj/food/meat.dmi'
+	icon = '../assets/icons/obj/food/meat.dmi'
 	icon_state = "cubancarp"
 	bite_consumption = 3
 	food_reagents = list(
@@ -23,7 +23,7 @@
 /obj/item/food/fishmeat
 	name = "fish fillet"
 	desc = "A fillet of some fish meat."
-	icon = 'icons/obj/food/meat.dmi'
+	icon = '../assets/icons/obj/food/meat.dmi'
 	icon_state = "fishfillet"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment/protein = 4,
@@ -108,7 +108,7 @@
 /obj/item/food/fishmeat/moonfish
 	name = "moonfish fillet"
 	desc = "A fillet of moonfish."
-	icon = 'icons/obj/food/lizard.dmi'
+	icon = '../assets/icons/obj/food/lizard.dmi'
 	icon_state = "moonfish_fillet"
 
 /obj/item/food/fishmeat/moonfish/make_grillable()
@@ -117,7 +117,7 @@
 /obj/item/food/fishmeat/gunner_jellyfish
 	name = "gunner jellyfish fillet"
 	desc = "A gunner jellyfish with the stingers removed. Mildly hallucinogenic when raw."
-	icon = 'icons/obj/food/lizard.dmi'
+	icon = '../assets/icons/obj/food/lizard.dmi'
 	icon_state = "jellyfish_fillet"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment/protein = 4, //The halluginogen comes from the fish trait.
@@ -130,7 +130,7 @@
 /obj/item/food/fishmeat/armorfish
 	name = "cleaned armorfish"
 	desc = "An armorfish with its guts and shell removed, ready for use in cooking."
-	icon = 'icons/obj/food/lizard.dmi'
+	icon = '../assets/icons/obj/food/lizard.dmi'
 	icon_state = "armorfish_fillet"
 	food_reagents = list(/datum/reagent/consumable/nutriment/protein = 3)
 	fillet_name = "cleaned %NAME"
@@ -145,7 +145,7 @@
 /obj/item/food/fishmeat/octopus
 	name = "octopus tentacle"
 	desc = "A large tentacle from an octopus."
-	icon = 'icons/obj/food/martian.dmi'
+	icon = '../assets/icons/obj/food/martian.dmi'
 	icon_state = "octopus_fillet"
 	food_reagents = list(/datum/reagent/consumable/nutriment/protein = 3)
 	fillet_name = "%NAME tentacle"
@@ -172,7 +172,7 @@
 /obj/item/food/fishfingers
 	name = "fish fingers"
 	desc = "A finger of fish."
-	icon = 'icons/obj/food/meat.dmi'
+	icon = '../assets/icons/obj/food/meat.dmi'
 	icon_state = "fishfingers"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 2,
@@ -189,7 +189,7 @@
 /obj/item/food/fishandchips
 	name = "fish and chips"
 	desc = "I do say so myself chap."
-	icon = 'icons/obj/food/meat.dmi'
+	icon = '../assets/icons/obj/food/meat.dmi'
 	icon_state = "fishandchips"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 3,
@@ -204,7 +204,7 @@
 /obj/item/food/fishfry
 	name = "fish fry"
 	desc = "All that and no bag of chips..."
-	icon = 'icons/obj/food/meat.dmi'
+	icon = '../assets/icons/obj/food/meat.dmi'
 	icon_state = "fishfry"
 	food_reagents = list (
 		/datum/reagent/consumable/nutriment = 6,
@@ -300,7 +300,7 @@
 /obj/item/food/nigiri_sushi
 	name = "nigiri sushi"
 	desc = "A simple nigiri of fish atop a packed rice ball with a seaweed wrapping and a side of soy sauce."
-	icon = 'icons/obj/food/food.dmi'
+	icon = '../assets/icons/obj/food/food.dmi'
 	icon_state = "nigiri_sushi"
 	food_reagents = list(/datum/reagent/consumable/nutriment = 10, /datum/reagent/consumable/nutriment/vitamin = 6, /datum/reagent/consumable/nutriment/protein = 2)
 	tastes = list("boiled rice" = 4, "fish filet" = 2, "soy sauce" = 2)
@@ -311,7 +311,7 @@
 /obj/item/food/meat_poke
 	name = "meat poke"
 	desc = "Simple poke, rice on the bottom, vegetables and meat on top. Should be mixed before eating."
-	icon = 'icons/obj/food/soupsalad.dmi'
+	icon = '../assets/icons/obj/food/soupsalad.dmi'
 	icon_state = "pokemeat"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 11,
@@ -329,7 +329,7 @@
 /obj/item/food/fish_poke
 	name = "fish poke"
 	desc = "Simple poke, rice on the bottom, vegetables and fish on top. Should be mixed before eating."
-	icon = 'icons/obj/food/soupsalad.dmi'
+	icon = '../assets/icons/obj/food/soupsalad.dmi'
 	icon_state = "pokefish"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 5,
@@ -348,7 +348,7 @@
 /obj/item/food/tempeh
 	name = "raw tempeh block"
 	desc = "Fungus fermented soybean cake, warm to the touch."
-	icon = 'icons/obj/food/food.dmi'
+	icon = '../assets/icons/obj/food/food.dmi'
 	icon_state = "tempeh"
 	food_reagents = list(/datum/reagent/consumable/nutriment/protein = 8)
 	tastes = list("earthy" = 3, "nutty" = 2, "bland" = 1 )
@@ -365,7 +365,7 @@
 /obj/item/food/tempehslice
 	name = "tempeh slice"
 	desc = "A slice of tempeh, a slice of wkwkwk."
-	icon = 'icons/obj/food/food.dmi'
+	icon = '../assets/icons/obj/food/food.dmi'
 	icon_state = "tempehslice"
 	food_reagents = list(/datum/reagent/consumable/nutriment/protein = 2)
 	tastes = list("earthy" = 3, "nutty" = 2, "bland" = 1)
@@ -376,7 +376,7 @@
 /obj/item/food/tempehstarter
 	name = "tempeh starter"
 	desc = "A mix of soy and joy. It's warm... and moving?"
-	icon = 'icons/obj/food/food.dmi'
+	icon = '../assets/icons/obj/food/food.dmi'
 	icon_state = "tempehstarter"
 	food_reagents = list(/datum/reagent/consumable/nutriment/protein = 2)
 	tastes = list("nutty" = 2, "bland" = 2)
@@ -403,7 +403,7 @@
 /obj/item/food/spiderleg
 	name = "spider leg"
 	desc = "A still twitching leg of a giant spider... you don't really want to eat this, do you?"
-	icon = 'icons/obj/food/meat.dmi'
+	icon = '../assets/icons/obj/food/meat.dmi'
 	icon_state = "spiderleg"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment/protein = 3,
@@ -419,7 +419,7 @@
 /obj/item/food/cornedbeef
 	name = "corned beef and cabbage"
 	desc = "Now you can feel like a real tourist vacationing in Ireland."
-	icon = 'icons/obj/food/meat.dmi'
+	icon = '../assets/icons/obj/food/meat.dmi'
 	icon_state = "cornedbeef"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 2,
@@ -435,7 +435,7 @@
 /obj/item/food/bearsteak
 	name = "Filet migrawr"
 	desc = "Because eating bear wasn't manly enough."
-	icon = 'icons/obj/food/meat.dmi'
+	icon = '../assets/icons/obj/food/meat.dmi'
 	icon_state = "bearsteak"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 4,
@@ -452,7 +452,7 @@
 /obj/item/food/raw_meatball
 	name = "raw meatball"
 	desc = "A great meal all round. Not a cord of wood. Kinda raw"
-	icon = 'icons/obj/food/meat.dmi'
+	icon = '../assets/icons/obj/food/meat.dmi'
 	icon_state = "raw_meatball"
 	custom_materials = list(/datum/material/meat = MEATDISH_MATERIAL_AMOUNT)
 	food_reagents = list(/datum/reagent/consumable/nutriment/protein = 2)
@@ -496,7 +496,7 @@
 /obj/item/food/meatball
 	name = "meatball"
 	desc = "A great meal all round. Not a cord of wood."
-	icon = 'icons/obj/food/meat.dmi'
+	icon = '../assets/icons/obj/food/meat.dmi'
 	icon_state = "meatball"
 	inhand_icon_state = "meatball"
 	custom_materials = list(/datum/material/meat = MEATDISH_MATERIAL_AMOUNT)
@@ -530,7 +530,7 @@
 /obj/item/food/raw_patty
 	name = "raw patty"
 	desc = "I'm.....NOT REAAADDYY."
-	icon = 'icons/obj/food/meat.dmi'
+	icon = '../assets/icons/obj/food/meat.dmi'
 	icon_state = "raw_patty"
 	custom_materials = list(/datum/material/meat = MEATDISH_MATERIAL_AMOUNT)
 	food_reagents = list(/datum/reagent/consumable/nutriment/protein = 2)
@@ -568,7 +568,7 @@
 /obj/item/food/patty
 	name = "patty"
 	desc = "The Nanotrasen patty is the patty for you and me!"
-	icon = 'icons/obj/food/meat.dmi'
+	icon = '../assets/icons/obj/food/meat.dmi'
 	icon_state = "patty"
 	custom_materials = list(/datum/material/meat = MEATDISH_MATERIAL_AMOUNT)
 	food_reagents = list(/datum/reagent/consumable/nutriment/protein = 2)
@@ -602,7 +602,7 @@
 /obj/item/food/raw_sausage
 	name = "raw sausage"
 	desc = "A piece of mixed, long meat, but then raw."
-	icon = 'icons/obj/food/meat.dmi'
+	icon = '../assets/icons/obj/food/meat.dmi'
 	icon_state = "raw_sausage"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment/protein = 5,
@@ -621,7 +621,7 @@
 /obj/item/food/sausage
 	name = "sausage"
 	desc = "A piece of mixed, long meat."
-	icon = 'icons/obj/food/meat.dmi'
+	icon = '../assets/icons/obj/food/meat.dmi'
 	icon_state = "sausage"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment/protein = 5,
@@ -652,7 +652,7 @@
 /obj/item/food/salami
 	name = "salami"
 	desc = "A slice of cured salami."
-	icon = 'icons/obj/food/meat.dmi'
+	icon = '../assets/icons/obj/food/meat.dmi'
 	icon_state = "salami"
 	food_reagents = list(/datum/reagent/consumable/nutriment/protein = 1)
 	tastes = list("meat" = 1, "smoke" = 1)
@@ -665,7 +665,7 @@
 /obj/item/food/rawkhinkali
 	name = "raw khinkali"
 	desc = "One hundred khinkalis? Do I look like a pig?"
-	icon = 'icons/obj/food/meat.dmi'
+	icon = '../assets/icons/obj/food/meat.dmi'
 	icon_state = "khinkali"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 5,
@@ -685,7 +685,7 @@
 /obj/item/food/khinkali
 	name = "khinkali"
 	desc = "One hundred khinkalis? Do I look like a pig?"
-	icon = 'icons/obj/food/meat.dmi'
+	icon = '../assets/icons/obj/food/meat.dmi'
 	icon_state = "khinkali"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 5,
@@ -703,7 +703,7 @@
 /obj/item/food/meatbun
 	name = "meat bun"
 	desc = "Has the potential to not be human."
-	icon = 'icons/obj/food/meat.dmi'
+	icon = '../assets/icons/obj/food/meat.dmi'
 	icon_state = "meatbun"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 7,
@@ -734,7 +734,7 @@
 /obj/item/food/boiledspiderleg
 	name = "boiled spider leg"
 	desc = "A giant spider's leg that's still twitching after being cooked. Gross!"
-	icon = 'icons/obj/food/meat.dmi'
+	icon = '../assets/icons/obj/food/meat.dmi'
 	icon_state = "spiderlegcooked"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment/protein = 4,
@@ -749,7 +749,7 @@
 /obj/item/food/spidereggsham
 	name = "green eggs and ham"
 	desc = "Would you eat them on a train? Would you eat them on a plane? Would you eat them on a state of the art corporate deathtrap floating through space?"
-	icon = 'icons/obj/food/meat.dmi'
+	icon = '../assets/icons/obj/food/meat.dmi'
 	icon_state = "spidereggsham"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment/protein = 8,
@@ -765,7 +765,7 @@
 /obj/item/food/sashimi
 	name = "spider sashimi"
 	desc = "Celebrate surviving an attack from hostile alien lifeforms by hospitalising yourself. You sure hope whoever made this is skilled."
-	icon = 'icons/obj/food/meat.dmi'
+	icon = '../assets/icons/obj/food/meat.dmi'
 	icon_state = "sashimi"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment/protein = 10,
@@ -791,7 +791,7 @@
 		/datum/reagent/consumable/nutriment/protein = 2,
 		/datum/reagent/consumable/nutriment/vitamin = 1,
 	)
-	icon = 'icons/obj/food/meat.dmi'
+	icon = '../assets/icons/obj/food/meat.dmi'
 	/// Default nugget icon for recipes that need any nugget
 	icon_state = "nugget_lump"
 	tastes = list("\"chicken\"" = 1)
@@ -820,7 +820,7 @@
 /obj/item/food/pigblanket
 	name = "pig in a blanket"
 	desc = "A tiny sausage wrapped in a flakey, buttery roll. Free this pig from its blanket prison by eating it."
-	icon = 'icons/obj/food/meat.dmi'
+	icon = '../assets/icons/obj/food/meat.dmi'
 	icon_state = "pigblanket"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 5,
@@ -837,7 +837,7 @@
 /obj/item/food/bbqribs
 	name = "bbq ribs"
 	desc = "BBQ ribs, slathered in a healthy coating of BBQ sauce. The least vegan thing to ever exist."
-	icon = 'icons/obj/food/meat.dmi'
+	icon = '../assets/icons/obj/food/meat.dmi'
 	icon_state = "ribs"
 	w_class = WEIGHT_CLASS_NORMAL
 	food_reagents = list(
@@ -853,7 +853,7 @@
 /obj/item/food/meatclown
 	name = "meat clown"
 	desc = "A delicious, round piece of meat clown. How horrifying."
-	icon = 'icons/obj/food/meat.dmi'
+	icon = '../assets/icons/obj/food/meat.dmi'
 	icon_state = "meatclown"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 5,
@@ -889,7 +889,7 @@
 
 /obj/item/food/kebab
 	trash_type = /obj/item/stack/rods
-	icon = 'icons/obj/food/meat.dmi'
+	icon = '../assets/icons/obj/food/meat.dmi'
 	icon_state = "kebab"
 	abstract_type = /obj/item/food/kebab
 	w_class = WEIGHT_CLASS_NORMAL
@@ -981,7 +981,7 @@
 /obj/item/food/fried_chicken
 	name = "fried chicken"
 	desc = "A juicy hunk of chicken meat, fried to perfection."
-	icon = 'icons/obj/food/meat.dmi'
+	icon = '../assets/icons/obj/food/meat.dmi'
 	icon_state = "fried_chicken1"
 	food_reagents = list(/datum/reagent/consumable/nutriment/protein = 6, /datum/reagent/consumable/nutriment/vitamin = 2)
 	tastes = list("chicken" = 3, "fried batter" = 1)
@@ -999,7 +999,7 @@
 /obj/item/food/beef_stroganoff
 	name = "beef stroganoff"
 	desc = "A Russian dish that consists of beef and sauce. Really popular in Japan, or at least that's what my animes would allude to."
-	icon = 'icons/obj/food/meat.dmi'
+	icon = '../assets/icons/obj/food/meat.dmi'
 	icon_state = "beefstroganoff"
 	trash_type = /obj/item/reagent_containers/cup/bowl
 	food_reagents = list(
@@ -1018,7 +1018,7 @@
 /obj/item/food/beef_wellington
 	name = "beef wellington"
 	desc = "A luxurious log of beef, covered in a fine mushroom duxelle and pancetta ham, then bound in puff pastry."
-	icon = 'icons/obj/food/meat.dmi'
+	icon = '../assets/icons/obj/food/meat.dmi'
 	icon_state = "beef_wellington"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment/protein = 21,
@@ -1037,7 +1037,7 @@
 /obj/item/food/beef_wellington_slice
 	name = "beef wellington slice"
 	desc = "A slice of beef wellington, topped with a rich gravy. Simply delicious."
-	icon = 'icons/obj/food/meat.dmi'
+	icon = '../assets/icons/obj/food/meat.dmi'
 	icon_state = "beef_wellington_slice"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment/protein = 7,
@@ -1053,7 +1053,7 @@
 /obj/item/food/korta_wellington
 	name = "Korta wellington"
 	desc = "A luxurious log of beef, covered in a fine mushroom duxelle and pancetta ham, then bound in korta pastry."
-	icon = 'icons/obj/food/meat.dmi'
+	icon = '../assets/icons/obj/food/meat.dmi'
 	icon_state = "korta_wellington"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment/protein = 21,
@@ -1072,7 +1072,7 @@
 /obj/item/food/korta_wellington_slice
 	name = "korta wellington slice"
 	desc = "A slice of korta & beef wellington, topped with a rich gravy. Simply delicious."
-	icon = 'icons/obj/food/meat.dmi'
+	icon = '../assets/icons/obj/food/meat.dmi'
 	icon_state = "korta_wellington_slice"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment/protein = 7,
@@ -1088,7 +1088,7 @@
 /obj/item/food/roast_dinner
 	name = "roast dinner"
 	desc = "A luxuriously roasted chicken, accompanied by cabbage, parsnip, potatoes, peas, stuffing and a small boat of gravy."
-	icon = 'icons/obj/food/meat.dmi'
+	icon = '../assets/icons/obj/food/meat.dmi'
 	icon_state = "full_roast"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment/protein = 21,
@@ -1107,7 +1107,7 @@
 /obj/item/food/roast_slice
 	name = "plate of roast dinner"
 	desc = "A small plate of roast chicken, peas, cabbage, parsnips, potatoes, stuffing and... WAIT is this all the gravy I get?!"
-	icon = 'icons/obj/food/meat.dmi'
+	icon = '../assets/icons/obj/food/meat.dmi'
 	icon_state = "roast_slice"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment/protein = 7,
@@ -1123,7 +1123,7 @@
 /obj/item/food/roast_dinner_lizzy
 	name = "grain-free roast dinner"
 	desc = "A luxuriously roasted chicken, accompanied by cabbage, parsnip, potatoes, peas, korta stuffing and a small boat of korta-blood gravy."
-	icon = 'icons/obj/food/meat.dmi'
+	icon = '../assets/icons/obj/food/meat.dmi'
 	icon_state = "full_roast_lizzy"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment/protein = 21,
@@ -1142,7 +1142,7 @@
 /obj/item/food/roast_slice_lizzy
 	name = "plate of grain-free roast dinner"
 	desc = "A small plate of roast chicken, peas, cabbage, parsnips, potatoes, korta stuffing and... WAIT is this all the korta-blood gravy I get?!"
-	icon = 'icons/obj/food/meat.dmi'
+	icon = '../assets/icons/obj/food/meat.dmi'
 	icon_state = "roast_slice_lizzy"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment/protein = 7,
@@ -1158,7 +1158,7 @@
 /obj/item/food/roast_dinner_tofu
 	name = "tofu roast dinner"
 	desc = "A luxuriously roasted tofu-'chicken', accompanied by cabbage, parsnip, potatoes, peas, stuffing and a small boat of soy-based gravy."
-	icon = 'icons/obj/food/meat.dmi'
+	icon = '../assets/icons/obj/food/meat.dmi'
 	icon_state = "full_roast_tofu"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment/protein = 21,
@@ -1176,7 +1176,7 @@
 /obj/item/food/roast_slice_tofu
 	name = "plate of tofu roast dinner"
 	desc = "A small plate of roast tofu-'chicken', peas, cabbage, parsnips, potatoes, stuffing and... WAIT is this all the soy gravy I get?!"
-	icon = 'icons/obj/food/meat.dmi'
+	icon = '../assets/icons/obj/food/meat.dmi'
 	icon_state = "roast_slice_tofu"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment/protein = 7,
@@ -1191,7 +1191,7 @@
 /obj/item/food/full_english
 	name = "full English breakfast"
 	desc = "A hearty plate with all the trimmings, representing the pinnacle of the breakfast art."
-	icon = 'icons/obj/food/meat.dmi'
+	icon = '../assets/icons/obj/food/meat.dmi'
 	icon_state = "full_english"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment/protein = 8,
@@ -1207,7 +1207,7 @@
 /obj/item/food/raw_meatloaf
 	name = "raw meatloaf"
 	desc = "A heavy 'loaf' of minced meat, onions, and garlic. Bake it in an oven!"
-	icon = 'icons/obj/food/meat.dmi'
+	icon = '../assets/icons/obj/food/meat.dmi'
 	icon_state = "raw_meatloaf"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment/protein = 40,
@@ -1226,7 +1226,7 @@
 /obj/item/food/meatloaf
 	name = "meatloaf"
 	desc = "A mixture of meat, onions, and garlic formed into a loaf and baked in an oven. It's covered in a generous slathering of ketchup. Use a knife to cut it into slices!"
-	icon = 'icons/obj/food/meat.dmi'
+	icon = '../assets/icons/obj/food/meat.dmi'
 	icon_state = "meatloaf"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment/protein = 40,
@@ -1245,7 +1245,7 @@
 /obj/item/food/meatloaf_slice
 	name = "meatloaf slice"
 	desc = "A slice of delicious, juicy meatloaf with a ketchup topping."
-	icon = 'icons/obj/food/meat.dmi'
+	icon = '../assets/icons/obj/food/meat.dmi'
 	icon_state = "meatloaf_slice"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment/protein = 10,
@@ -1261,7 +1261,7 @@
 /obj/item/food/sweet_and_sour_meatballs
 	name = "sweet and sour meatballs"
 	desc = "Golden meatballs glazed in a sticky savory sauce, served with pineapple and pepper chunks."
-	icon = 'icons/obj/food/meat.dmi'
+	icon = '../assets/icons/obj/food/meat.dmi'
 	icon_state = "sweet_and_sour_meatballs"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment/protein = 10,
@@ -1276,7 +1276,7 @@
 /obj/item/food/kebab/pineapple_skewer
 	name = "pineapple skewer"
 	desc = "Chunks of glazed meat skewered on a rod with pineapple slices. Surprisingly not bad!"
-	icon = 'icons/obj/food/meat.dmi'
+	icon = '../assets/icons/obj/food/meat.dmi'
 	icon_state = "pineapple_skewer"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment/protein = 10,

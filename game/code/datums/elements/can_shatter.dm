@@ -16,7 +16,7 @@
 /datum/element/can_shatter/Attach(datum/target,
 	shard_type = /obj/item/plate_shard,
 	number_of_shards = 5,
-	shattering_sound = 'sound/items/ceramic_break.ogg',
+	shattering_sound = '../assets/sound/items/ceramic_break.ogg',
 	shatters_as_weapon = FALSE,
 	)
 	. = ..()

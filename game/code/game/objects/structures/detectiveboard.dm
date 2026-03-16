@@ -9,7 +9,7 @@
 /obj/structure/detectiveboard
 	name = "detective notice board"
 	desc = "A board for linking evidence to crimes."
-	icon = 'icons/obj/wallmounts.dmi'
+	icon = '../assets/icons/obj/wallmounts.dmi'
 	icon_state = "noticeboard"
 	density = FALSE
 	anchored = TRUE
@@ -74,7 +74,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/detectiveboard, 32)
 	balloon_alert(user, "[anchored ? "un" : ""]securing...")
 	tool.play_tool_sound(src)
 	if(tool.use_tool(src, user, 6 SECONDS))
-		playsound(loc, 'sound/items/deconstruct.ogg', 50, TRUE)
+		playsound(loc, '../assets/sound/items/deconstruct.ogg', 50, TRUE)
 		balloon_alert(user, "[anchored ? "un" : ""]secured")
 		deconstruct()
 		return TRUE
@@ -259,7 +259,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/detectiveboard, 32)
 /obj/item/wallframe/detectiveboard
 	name = "detective notice board"
 	desc = "A board for linking evidence to crimes."
-	icon = 'icons/obj/wallmounts.dmi'
+	icon = '../assets/icons/obj/wallmounts.dmi'
 	icon_state = "noticeboard"
 	custom_materials = list(
 		/datum/material/wood = SHEET_MATERIAL_AMOUNT,

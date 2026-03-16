@@ -33,7 +33,7 @@
 /datum/action/cancel_crucible_soul
 	name = "Recall"
 	desc = "Use to end the blessing early"
-	button_icon = 'icons/obj/antags/eldritch.dmi'
+	button_icon = '../assets/icons/obj/antags/eldritch.dmi'
 	button_icon_state = "crucible_soul"
 
 /datum/action/cancel_crucible_soul/Trigger(mob/clicker, trigger_flags)
@@ -93,7 +93,7 @@
 	if(length(drinker.get_missing_limbs()))
 		drinker.regenerate_limbs()
 		to_chat(drinker, span_hypnophrase("The mansus has given you new limbs."))
-	playsound(drinker, 'sound/effects/chemistry/ahaha.ogg', 50, TRUE, -1, extrarange = SILENCED_SOUND_EXTRARANGE, frequency = 0.5)
+	playsound(drinker, '../assets/sound/effects/chemistry/ahaha.ogg', 50, TRUE, -1, extrarange = SILENCED_SOUND_EXTRARANGE, frequency = 0.5)
 
 /datum/status_effect/marshal/tick(seconds_between_ticks)
 	if(!iscarbon(owner))
@@ -207,7 +207,7 @@
 	blades += blade
 	blade.orbit(owner, blade_orbit_radius)
 	RegisterSignal(blade, COMSIG_QDELETING, PROC_REF(remove_blade))
-	playsound(get_turf(owner), 'sound/items/unsheath.ogg', 33, TRUE)
+	playsound(get_turf(owner), '../assets/sound/items/unsheath.ogg', 33, TRUE)
 
 /// Signal proc for [COMSIG_LIVING_CHECK_BLOCK].
 /// If we have a blade in our list, consume it and block the incoming attack (shield it)
@@ -234,7 +234,7 @@
 
 	var/obj/effect/floating_blade/to_remove = blades[1]
 
-	playsound(get_turf(source), 'sound/items/weapons/parry.ogg', 100, TRUE)
+	playsound(get_turf(source), '../assets/sound/items/weapons/parry.ogg', 100, TRUE)
 	source.visible_message(
 		span_warning("[to_remove] orbiting [source] snaps in front of [attack_text], blocking it before vanishing!"),
 		span_warning("[to_remove] orbiting you snaps in front of [attack_text], blocking it before vanishing!"),
@@ -325,7 +325,7 @@
 
 /datum/status_effect/caretaker_refuge/proc/nullrod_handler(datum/source, obj/item/weapon)
 	SIGNAL_HANDLER
-	playsound(get_turf(owner), 'sound/effects/curse/curse1.ogg', 80, TRUE)
+	playsound(get_turf(owner), '../assets/sound/effects/curse/curse1.ogg', 80, TRUE)
 	owner.visible_message(span_warning("[weapon] repels the haze around [owner]!"))
 	owner.remove_status_effect(type)
 

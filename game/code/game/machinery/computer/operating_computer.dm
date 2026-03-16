@@ -79,7 +79,7 @@
 			return ITEM_INTERACT_BLOCKING
 		advanced_surgeries |= disky.surgeries
 		update_static_data_for_all_viewers()
-		playsound(src, 'sound/machines/compiler/compiler-stage2.ogg', 50, FALSE, SILENCED_SOUND_EXTRARANGE)
+		playsound(src, '../assets/sound/machines/compiler/compiler-stage2.ogg', 50, FALSE, SILENCED_SOUND_EXTRARANGE)
 		balloon_alert(user, "surgeries loaded")
 		return ITEM_INTERACT_SUCCESS
 

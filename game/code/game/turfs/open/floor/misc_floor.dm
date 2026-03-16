@@ -2,7 +2,7 @@
 #define CIRCUIT_FLOOR_POWERUSE 120
 //Circuit flooring, glows a little
 /turf/open/floor/circuit
-	icon = 'icons/turf/floors.dmi'
+	icon = '../assets/icons/turf/floors.dmi'
 	icon_state = "bcircuit"
 	base_icon_state = "bcircuit"
 	light_color = LIGHT_COLOR_BABY_BLUE
@@ -167,7 +167,7 @@
 		color = "#EFB341"
 
 /turf/open/floor/oldshuttle
-	icon = 'icons/turf/shuttleold.dmi'
+	icon = '../assets/icons/turf/shuttleold.dmi'
 	icon_state = "floor"
 	floor_tile = /obj/item/stack/tile/iron/base
 

@@ -15,7 +15,7 @@
 /obj/effect/portal
 	name = "portal"
 	desc = "Looks unstable. Best to test it with the clown."
-	icon = 'icons/obj/anomaly.dmi'
+	icon = '../assets/icons/obj/anomaly.dmi'
 	icon_state = "portal"
 	anchored = TRUE
 	density = TRUE // dense for receiving bumbs
@@ -50,7 +50,7 @@
 
 /obj/effect/portal/anom
 	name = "wormhole"
-	icon = 'icons/obj/anomaly.dmi'
+	icon = '../assets/icons/obj/anomaly.dmi'
 	icon_state = "anom"
 	layer = RIPPLE_LAYER
 	plane = ABOVE_GAME_PLANE

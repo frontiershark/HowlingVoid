@@ -5,7 +5,7 @@
 	name = "prisoner containment sleeper"
 	desc = "A sleeper designed to put its occupant into a deep coma, unbreakable until the sleeper turns off. This one's glass is cracked and you can see a pale, sleeping face staring out."
 	prompt_name = "an escaped prisoner"
-	icon = 'icons/obj/machines/sleeper.dmi'
+	icon = '../assets/icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper_s"
 	outfit = /datum/outfit/lavalandprisoner
 	you_are_text = "You're a prisoner, sentenced to hard work in one of Nanotrasen's labor camps, but it seems as \
@@ -44,7 +44,7 @@
 	name = "staff sleeper"
 	desc = "A sleeper designed for long-term stasis between guest visits."
 	prompt_name = "a hotel staff member"
-	icon = 'icons/obj/machines/sleeper.dmi'
+	icon = '../assets/icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper_s"
 	outfit = /datum/outfit/hotelstaff
 	you_are_text = "You are a staff member of a top-of-the-line space hotel!"
@@ -89,7 +89,7 @@
 
 /obj/effect/mob_spawn/ghost_role/human/syndicate
 	name = "Syndicate Operative"
-	icon = 'icons/obj/machines/sleeper.dmi'
+	icon = '../assets/icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper_s"
 	prompt_name = "a syndicate operative"
 	you_are_text = "You are a syndicate operative."
@@ -145,7 +145,7 @@
 	name = "timeless prison"
 	desc = "Although this stasis pod looks medicinal, it seems as though it's meant to preserve something for a very long time."
 	prompt_name = "a penitent exile"
-	icon = 'icons/obj/machines/sleeper.dmi'
+	icon = '../assets/icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
 	mob_species = /datum/species/shadow
 	you_are_text = "You are cursed."
@@ -175,7 +175,7 @@
 
 /obj/effect/mob_spawn/ghost_role/human/nanotrasensoldier
 	name = "sleeper"
-	icon = 'icons/obj/machines/sleeper.dmi'
+	icon = '../assets/icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
 	faction = list(FACTION_NANOTRASEN_PRIVATE)
 	prompt_name = "a private security officer"
@@ -186,7 +186,7 @@
 
 /obj/effect/mob_spawn/ghost_role/human/commander
 	name = "sleeper"
-	icon = 'icons/obj/machines/sleeper.dmi'
+	icon = '../assets/icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
 	prompt_name = "a nanotrasen commander"
 	you_are_text = "You are a Nanotrasen Commander!"
@@ -198,7 +198,7 @@
 
 /obj/effect/mob_spawn/ghost_role/human/doctor
 	name = "sleeper"
-	icon = 'icons/obj/machines/sleeper.dmi'
+	icon = '../assets/icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
 	prompt_name = "a space doctor"
 	you_are_text = "You are a space doctor!"
@@ -221,7 +221,7 @@
 	prompt_name = "a mouse"
 	you_are_text = "You're a mouse!"
 	flavour_text = "Uh... yep! Squeak squeak, motherfucker."
-	icon = 'icons/obj/machines/sleeper.dmi'
+	icon = '../assets/icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
 
 /obj/effect/mob_spawn/ghost_role/cow
@@ -231,7 +231,7 @@
 	prompt_name = "a cow"
 	you_are_text = "You're a cow!"
 	flavour_text = "Go graze some grass, stinky."
-	icon = 'icons/obj/machines/sleeper.dmi'
+	icon = '../assets/icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
 
 /obj/effect/mob_spawn/cow/special(mob/living/spawned_mob, mob/mob_possessor, apply_prefs)
@@ -243,7 +243,7 @@
 /obj/effect/mob_spawn/ghost_role/human/snow_operative
 	name = "sleeper"
 	prompt_name = "a snow operative"
-	icon = 'icons/obj/machines/sleeper.dmi'
+	icon = '../assets/icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
 	faction = list(ROLE_SYNDICATE)
 	outfit = /datum/outfit/snowsyndie
@@ -269,7 +269,7 @@
 /obj/effect/mob_spawn/ghost_role/human/syndicatespace
 	name = "Syndicate Ship Crew Member"
 	show_flavor = FALSE
-	icon = 'icons/obj/machines/sleeper.dmi'
+	icon = '../assets/icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper_s"
 	prompt_name = "cybersun crew"
 	you_are_text = "You are a syndicate operative on old ship, stuck in hostile space."

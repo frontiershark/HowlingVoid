@@ -4,9 +4,9 @@
 /obj/item/cain_and_abel
 	name = "Cain & Abel"
 	desc = "I cry I pray mon Dieu."
-	icon = 'icons/obj/mining_zones/artefacts.dmi'
-	lefthand_file = 'icons/mob/inhands/equipment/kitchen_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/kitchen_righthand.dmi'
+	icon = '../assets/icons/obj/mining_zones/artefacts.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/kitchen_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/kitchen_righthand.dmi'
 	icon_state = "cain_and_abel"
 	inhand_icon_state = "cain_and_abel"
 	attack_verb_continuous = list("attacks", "saws", "slices", "tears", "lacerates", "rips", "dices", "cuts")
@@ -15,14 +15,14 @@
 	attack_speed = 6
 	resistance_flags = FIRE_PROOF | LAVA_PROOF
 	actions_types = list(/datum/action/cooldown/dagger_swing)
-	hitsound = 'sound/items/weapons/bladeslice.ogg'
+	hitsound = '../assets/sound/items/weapons/bladeslice.ogg'
 	w_class = WEIGHT_CLASS_SMALL
 	sharpness = SHARP_EDGED
 	light_range = 3
 	light_power = 2
 	light_color = "#3db9db"
 	reach = 2
-	attack_icon = 'icons/effects/effects.dmi'
+	attack_icon = '../assets/icons/effects/effects.dmi'
 	attack_icon_state = "cain_abel_attack"
 	/// Our current combo count
 	var/combo_count = 0

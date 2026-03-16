@@ -93,7 +93,7 @@
 	else
 		target_human.set_hairstyle("Bald", update = TRUE)
 
-	playsound(loc, 'sound/items/unsheath.ogg', 20, TRUE)
+	playsound(loc, '../assets/sound/items/unsheath.ogg', 20, TRUE)
 
 
 /obj/item/razor/attack(mob/attacked_mob, mob/living/user)

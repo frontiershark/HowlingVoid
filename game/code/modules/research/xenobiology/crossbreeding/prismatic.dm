@@ -15,7 +15,7 @@ Prismatic extracts:
 		return NONE
 	user.do_attack_animation(interacting_with)
 	interacting_with.add_atom_colour(color_transition_filter(paintcolor, SATURATION_OVERRIDE), WASHABLE_COLOUR_PRIORITY)
-	playsound(interacting_with, 'sound/effects/slosh.ogg', 20, TRUE)
+	playsound(interacting_with, '../assets/sound/effects/slosh.ogg', 20, TRUE)
 	return ITEM_INTERACT_SUCCESS
 
 /obj/item/slimecross/prismatic/grey
@@ -26,7 +26,7 @@ Prismatic extracts:
 	if(isturf(interacting_with) && interacting_with.color != initial(interacting_with.color))
 		user.do_attack_animation(interacting_with)
 		interacting_with.remove_atom_colour(WASHABLE_COLOUR_PRIORITY)
-		playsound(interacting_with, 'sound/effects/slosh.ogg', 20, TRUE)
+		playsound(interacting_with, '../assets/sound/effects/slosh.ogg', 20, TRUE)
 		return ITEM_INTERACT_SUCCESS
 	return ..()
 

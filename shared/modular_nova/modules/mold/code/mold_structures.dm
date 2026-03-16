@@ -14,15 +14,15 @@
 		qdel(mold_type)
 	mold_controller = null
 	mold_type = null
-	playsound(src.loc, 'sound/effects/splat.ogg', 30, TRUE)
+	playsound(src.loc, '../assets/sound/effects/splat.ogg', 30, TRUE)
 	return ..()
 
 /obj/structure/mold/play_attack_sound(damage_amount, damage_type = BRUTE, damage_flag = 0)
 	switch(damage_type)
 		if(BRUTE)
-			playsound(loc, 'sound/effects/blob/attackblob.ogg', 100, TRUE)
+			playsound(loc, '../assets/sound/effects/blob/attackblob.ogg', 100, TRUE)
 		if(BURN)
-			playsound(loc, 'sound/items/tools/welder.ogg', 100, TRUE)
+			playsound(loc, '../assets/sound/items/tools/welder.ogg', 100, TRUE)
 
 /obj/structure/mold/Initialize(mapload, passed_type)
 	. = ..()
@@ -283,7 +283,7 @@
 
 	is_full = FALSE
 	icon_state = "blob_bulb_empty"
-	playsound(src, 'sound/effects/bamf.ogg', 100, TRUE)
+	playsound(src, '../assets/sound/effects/bamf.ogg', 100, TRUE)
 	set_light(0)
 	update_overlays()
 	density = FALSE
@@ -327,7 +327,7 @@
 /obj/structure/mold/structure/wall
 	name = "mold wall"
 	desc = "Looks like some kind of thick resin."
-	icon = 'icons/obj/smooth_structures/alien/resin_wall.dmi'
+	icon = '../assets/icons/obj/smooth_structures/alien/resin_wall.dmi'
 	icon_state = "resin_wall-0"
 	base_icon_state = "resin_wall"
 	opacity = TRUE

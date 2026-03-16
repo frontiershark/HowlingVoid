@@ -2,7 +2,7 @@
 /obj/effect/spresent
 	name = "strange present"
 	desc = "It's a ... present?"
-	icon = 'icons/obj/storage/wrapping.dmi'
+	icon = '../assets/icons/obj/storage/wrapping.dmi'
 	icon_state = "strangepresent"
 	density = TRUE
 	anchored = FALSE
@@ -66,7 +66,7 @@
 
 //Makes a tile fully lit no matter what
 /obj/effect/fullbright
-	icon = 'icons/effects/alphacolors.dmi'
+	icon = '../assets/icons/effects/alphacolors.dmi'
 	icon_state = "white"
 	plane = LIGHTING_PLANE
 	layer = LIGHTING_ABOVE_ALL
@@ -75,7 +75,7 @@
 
 /obj/effect/abstract/marker
 	name = "marker"
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	anchored = TRUE
 	icon_state = "wave3"
 	layer = RIPPLE_LAYER

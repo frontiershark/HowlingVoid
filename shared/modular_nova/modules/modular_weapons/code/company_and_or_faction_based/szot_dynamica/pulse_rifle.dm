@@ -125,6 +125,6 @@
 	var/obj/item/ammo_casing/pulse/casing = chambered
 	if(istype(casing) && casing.remaining_uses <= 0)
 		visible_message(span_warning("[src] emits a low power warning!"))
-		playsound(src, 'sound/items/weapons/gun/general/empty_alarm.ogg', 40, TRUE)
+		playsound(src, '../assets/sound/items/weapons/gun/general/empty_alarm.ogg', 40, TRUE)
 		return
 	..()

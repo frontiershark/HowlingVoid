@@ -6,13 +6,13 @@
 	burst_delay = 2
 	actions_types = list(/datum/action/item_action/toggle_firemode)
 	semi_auto = TRUE
-	fire_sound = 'sound/items/weapons/gun/smg/shot.ogg'
+	fire_sound = '../assets/sound/items/weapons/gun/smg/shot.ogg'
 	fire_sound_volume = 90
-	rack_sound = 'sound/items/weapons/gun/smg/smgrack.ogg'
-	suppressed_sound = 'sound/items/weapons/gun/smg/shot_suppressed.ogg'
+	rack_sound = '../assets/sound/items/weapons/gun/smg/smgrack.ogg'
+	suppressed_sound = '../assets/sound/items/weapons/gun/smg/shot_suppressed.ogg'
 	burst_fire_selection = TRUE
-	drop_sound = 'sound/items/handling/gun/ballistics/smg/smg_drop1.ogg'
-	pickup_sound = 'sound/items/handling/gun/ballistics/smg/smg_pickup1.ogg'
+	drop_sound = '../assets/sound/items/handling/gun/ballistics/smg/smg_drop1.ogg'
+	pickup_sound = '../assets/sound/items/handling/gun/ballistics/smg/smg_pickup1.ogg'
 
 /obj/item/gun/ballistic/automatic/proto
 	name = "\improper Nanotrasen Saber SMG"
@@ -108,9 +108,9 @@
 	click_on_low_ammo = FALSE
 	/// List of the possible firing sounds
 	var/list/firing_sound_list = list(
-		'sound/items/weapons/gun/smartgun/smartgun_shoot_1.ogg',
-		'sound/items/weapons/gun/smartgun/smartgun_shoot_2.ogg',
-		'sound/items/weapons/gun/smartgun/smartgun_shoot_3.ogg',
+		'../assets/sound/items/weapons/gun/smartgun/smartgun_shoot_1.ogg',
+		'../assets/sound/items/weapons/gun/smartgun/smartgun_shoot_2.ogg',
+		'../assets/sound/items/weapons/gun/smartgun/smartgun_shoot_3.ogg',
 	)
 
 /obj/item/gun/ballistic/automatic/smartgun/fire_sounds()
@@ -126,7 +126,7 @@
 	bolt_type = BOLT_TYPE_OPEN
 	show_bolt_icon = FALSE
 	mag_display = TRUE
-	rack_sound = 'sound/items/weapons/gun/pistol/slide_lock.ogg'
+	rack_sound = '../assets/sound/items/weapons/gun/pistol/slide_lock.ogg'
 
 /**
  * Weak uzi for syndicate chimps. It comes in a 4 TC kit.
@@ -155,7 +155,7 @@
 	pin = /obj/item/firing_pin/implant/pindicate
 	mag_display = TRUE
 	empty_indicator = TRUE
-	fire_sound = 'sound/items/weapons/gun/smg/shot_alt.ogg'
+	fire_sound = '../assets/sound/items/weapons/gun/smg/shot_alt.ogg'
 	/// Attached underbarrel grenade launcher
 	var/obj/item/gun/ballistic/revolver/grenadelauncher/underbarrel/underbarrel
 
@@ -257,9 +257,9 @@
 	mag_display = TRUE
 	mag_display_ammo = TRUE
 	tac_reloads = FALSE
-	fire_sound = 'sound/items/weapons/gun/l6/shot.ogg'
-	rack_sound = 'sound/items/weapons/gun/l6/l6_rack.ogg'
-	suppressed_sound = 'sound/items/weapons/gun/general/heavy_shot_suppressed.ogg'
+	fire_sound = '../assets/sound/items/weapons/gun/l6/shot.ogg'
+	rack_sound = '../assets/sound/items/weapons/gun/l6/l6_rack.ogg'
+	suppressed_sound = '../assets/sound/items/weapons/gun/general/heavy_shot_suppressed.ogg'
 	var/cover_open = FALSE
 
 /obj/item/gun/ballistic/automatic/l6_saw/unrestricted
@@ -280,7 +280,7 @@
 /obj/item/gun/ballistic/automatic/l6_saw/click_alt(mob/user)
 	cover_open = !cover_open
 	balloon_alert(user, "cover [cover_open ? "opened" : "closed"]")
-	playsound(src, 'sound/items/weapons/gun/l6/l6_door.ogg', 60, TRUE)
+	playsound(src, '../assets/sound/items/weapons/gun/l6/l6_door.ogg', 60, TRUE)
 	update_appearance()
 	return CLICK_ACTION_SUCCESS
 
@@ -334,7 +334,7 @@
 	can_suppress = FALSE
 	burst_size = 0
 	actions_types = list()
-	fire_sound = 'sound/items/weapons/laser.ogg'
+	fire_sound = '../assets/sound/items/weapons/laser.ogg'
 	casing_ejector = FALSE
 
 // NT Battle Rifle //
@@ -344,11 +344,11 @@
 	desc = "Nanotrasen's latest prototype .38 Special longarm, found exclusively in the hands of their private security teams. \
 		Technically a pistol-caliber carbine, despite the name and its use as a designated marksman rifle. Acceleration technology \
 		enables improved ballistic performance, but necessitates maintenance."
-	icon = 'icons/obj/weapons/guns/wide_guns.dmi'
+	icon = '../assets/icons/obj/weapons/guns/wide_guns.dmi'
 	icon_state = "battle_rifle"
 	inhand_icon_state = "battle_rifle"
 	base_icon_state = "battle_rifle"
-	worn_icon = 'icons/mob/clothing/back.dmi'
+	worn_icon = '../assets/icons/mob/clothing/back.dmi'
 	worn_icon_state = "battle_rifle"
 	slot_flags = ITEM_SLOT_BACK
 
@@ -362,7 +362,7 @@
 	fire_delay = 2 DECISECONDS
 	burst_size = 1
 	actions_types = list()
-	fire_sound = 'sound/items/weapons/thermalpistol.ogg'
+	fire_sound = '../assets/sound/items/weapons/thermalpistol.ogg'
 	suppressor_x_offset = 0
 
 	/// Determines how many shots we can make before the weapon needs to be maintained.
@@ -522,7 +522,7 @@
 /obj/item/gun/ballistic/automatic/battle_rifle/proc/perform_extreme_malfunction(mob/living/user)
 	balloon_alert(user, "gun is exploding, throw it!")
 	explosion_timer = addtimer(CALLBACK(src, PROC_REF(fucking_explodes_you)), 5 SECONDS, (TIMER_UNIQUE|TIMER_OVERRIDE))
-	playsound(src, 'sound/items/weapons/gun/general/empty_alarm.ogg', 50, FALSE)
+	playsound(src, '../assets/sound/items/weapons/gun/general/empty_alarm.ogg', 50, FALSE)
 
 /// proc to handle our detonation
 /obj/item/gun/ballistic/automatic/battle_rifle/proc/fucking_explodes_you()
@@ -531,7 +531,7 @@
 //component for seclight attachment
 /obj/item/gun/ballistic/automatic/battle_rifle/add_seclight_point()
 	AddComponent(/datum/component/seclite_attachable, \
-		light_overlay_icon = 'icons/obj/weapons/guns/flashlights.dmi', \
+		light_overlay_icon = '../assets/icons/obj/weapons/guns/flashlights.dmi', \
 		light_overlay = "flight", \
 		overlay_x = 28, \
 		overlay_y = 12)

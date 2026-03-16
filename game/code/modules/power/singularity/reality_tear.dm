@@ -7,7 +7,7 @@
 	anchored = TRUE
 	appearance_flags = LONG_GLIDE
 	density = TRUE
-	icon = 'icons/effects/96x96.dmi'
+	icon = '../assets/icons/effects/96x96.dmi'
 	icon_state = "boh_tear"
 	plane = MASSIVE_OBJ_PLANE
 	plane = ABOVE_LIGHTING_PLANE
@@ -27,7 +27,7 @@
 
 /obj/reality_tear/proc/start_disaster()
 	apply_wibbly_filters(src)
-	playsound(loc, 'sound/effects/clockcult_gateway_disrupted.ogg', vary = 200, extrarange = 3, falloff_exponent = 1, frequency = 0.33, pressure_affected = FALSE, ignore_walls = TRUE, falloff_distance = 7)
+	playsound(loc, '../assets/sound/effects/clockcult_gateway_disrupted.ogg', vary = 200, extrarange = 3, falloff_exponent = 1, frequency = 0.33, pressure_affected = FALSE, ignore_walls = TRUE, falloff_distance = 7)
 	// NOVA EDIT CHANGE START - Locks the singularity behind config options
 	if(!CONFIG_GET(flag/disable_stationary_boh_singularity))
 		AddComponent(
@@ -44,7 +44,7 @@
 	animate(time = 0.5 SECONDS, alpha = 0)
 
 /obj/reality_tear/proc/reality_collapse()
-	playsound(loc, 'sound/effects/supermatter.ogg', 200, vary = TRUE, extrarange = 3, falloff_exponent = 1, frequency = 0.5, pressure_affected = FALSE, ignore_walls = TRUE, falloff_distance = 7)
+	playsound(loc, '../assets/sound/effects/supermatter.ogg', 200, vary = TRUE, extrarange = 3, falloff_exponent = 1, frequency = 0.5, pressure_affected = FALSE, ignore_walls = TRUE, falloff_distance = 7)
 	// NOVA EDIT CHANGE START - Locks the singularity behind config options
 	if(!CONFIG_GET(flag/disable_roaming_boh_singularity))
 		var/obj/singularity/bagulo = new(loc)

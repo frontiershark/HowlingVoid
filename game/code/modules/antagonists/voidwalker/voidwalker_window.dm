@@ -15,7 +15,7 @@
 	QDEL_NULL(spooky_particles)
 
 /particles/void_window
-	icon = 'icons/effects/particles/goop.dmi'
+	icon = '../assets/icons/effects/particles/goop.dmi'
 	icon_state = list("goop_1" = 6, "goop_2" = 2, "goop_3" = 1)
 	width = 100
 	height = 100

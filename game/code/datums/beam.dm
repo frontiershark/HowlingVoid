@@ -46,7 +46,7 @@
 /datum/beam/New(
 	origin,
 	target,
-	icon = 'icons/effects/beam.dmi',
+	icon = '../assets/icons/effects/beam.dmi',
 	icon_state = "b_beam",
 	time = INFINITY,
 	max_distance = INFINITY,
@@ -199,7 +199,7 @@
 /datum/beam/varied/New(
 	origin,
 	target,
-	icon = 'icons/effects/beam.dmi',
+	icon = '../assets/icons/effects/beam.dmi',
 	icon_state = "b_beam",
 	time = INFINITY,
 	max_distance = INFINITY,
@@ -327,7 +327,7 @@
  */
 /atom/proc/Beam(atom/BeamTarget,
 	icon_state="b_beam",
-	icon='icons/effects/beam.dmi',
+	icon='../assets/icons/effects/beam.dmi',
 	time=INFINITY,maxdistance=INFINITY,
 	beam_type=/obj/effect/ebeam,
 	beam_color = null, emissive = TRUE,

@@ -2,7 +2,7 @@
 /obj/machinery/component_printer
 	name = "component printer"
 	desc = "Produces components for the creation of integrated circuits."
-	icon = 'icons/obj/machines/wiremod_fab.dmi'
+	icon = '../assets/icons/obj/machines/wiremod_fab.dmi'
 	icon_state = "fab-idle"
 	circuit = /obj/item/circuitboard/machine/component_printer
 
@@ -252,7 +252,7 @@
 /obj/machinery/debug_component_printer
 	name = "debug component printer"
 	desc = "Produces components for the creation of integrated circuits."
-	icon = 'icons/obj/machines/wiremod_fab.dmi'
+	icon = '../assets/icons/obj/machines/wiremod_fab.dmi'
 	icon_state = "fab-idle"
 
 	/// All of the possible circuit designs stored by this debug printer
@@ -336,7 +336,7 @@
 /obj/machinery/module_duplicator
 	name = "module duplicator"
 	desc = "Allows you to duplicate module components so that you don't have to recreate them. Scan a module component over this machine to add it as an entry."
-	icon = 'icons/obj/machines/wiremod_fab.dmi'
+	icon = '../assets/icons/obj/machines/wiremod_fab.dmi'
 	icon_state = "module-fab-idle"
 	circuit = /obj/item/circuitboard/machine/module_duplicator
 	density = TRUE
@@ -499,7 +499,7 @@
 	scanned_designs += list(data)
 
 	balloon_alert(user, "module has been saved.")
-	playsound(src, 'sound/machines/ping.ogg', 50)
+	playsound(src, '../assets/sound/machines/ping.ogg', 50)
 
 	update_static_data_for_all_viewers()
 

@@ -137,7 +137,7 @@
 				holding_mark.forceMove(caster.loc)
 				holding_mark.loc.visible_message(span_warning("[holding_mark] suddenly appears!"))
 				SEND_SIGNAL(holding_mark, COMSIG_MAGIC_RECALL, caster, item_to_retrieve)
-				playsound(holding_mark, 'sound/effects/magic/summonitems_generic.ogg', 50, TRUE)
+				playsound(holding_mark, '../assets/sound/effects/magic/summonitems_generic.ogg', 50, TRUE)
 				return
 
 			else if(isobj(item_to_retrieve.loc))
@@ -174,13 +174,13 @@
 		item_to_retrieve.forceMove(caster.drop_location())
 		item_to_retrieve.loc.visible_message(span_warning("[item_to_retrieve] suddenly appears!"))
 
-	playsound(get_turf(item_to_retrieve), 'sound/effects/magic/summonitems_generic.ogg', 50, TRUE)
+	playsound(get_turf(item_to_retrieve), '../assets/sound/effects/magic/summonitems_generic.ogg', 50, TRUE)
 
 /datum/action/cooldown/spell/summonitem/abductor
 	name =  "Baton Recall"
 	desc = "Activating this will trigger your baton's emergency translocation protocol, \
 		recalling it to your hand. Takes a long time for the translocation crystals to reset after use."
-	sound = 'sound/effects/phasein.ogg'
+	sound = '../assets/sound/effects/phasein.ogg'
 
 	school = SCHOOL_UNSET
 	cooldown_time = 3.5 MINUTES

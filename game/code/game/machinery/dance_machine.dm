@@ -1,7 +1,7 @@
 /obj/machinery/jukebox
 	name = "jukebox"
 	desc = "A classic music player."
-	icon = 'icons/obj/machines/music.dmi'
+	icon = '../assets/icons/obj/machines/music.dmi'
 	icon_state = "jukebox"
 	base_icon_state = "jukebox"
 	verb_say = "states"
@@ -68,11 +68,11 @@
 		return UI_CLOSE
 	if(!allowed(user))
 		balloon_alert(user, "access denied!")
-		user.playsound_local(src, 'sound/machines/compiler/compiler-failure.ogg', 20, TRUE)
+		user.playsound_local(src, '../assets/sound/machines/compiler/compiler-failure.ogg', 20, TRUE)
 		return UI_CLOSE
 	if(!length(music_player.songs))
 		to_chat(user,span_warning("Error: No music tracks have been authorized for your station. Petition Central Command to resolve this issue."))
-		user.playsound_local(src, 'sound/machines/compiler/compiler-failure.ogg', 25, TRUE)
+		user.playsound_local(src, '../assets/sound/machines/compiler/compiler-failure.ogg', 25, TRUE)
 		return UI_CLOSE
 	return ..()
 
@@ -132,7 +132,7 @@
 		return
 	balloon_alert(user, "on cooldown for [DisplayTimeText(COOLDOWN_TIMELEFT(src, jukebox_song_cd))]!")
 	if(COOLDOWN_FINISHED(src, jukebox_error_cd))
-		playsound(src, 'sound/machines/compiler/compiler-failure.ogg', 25, TRUE)
+		playsound(src, '../assets/sound/machines/compiler/compiler-failure.ogg', 25, TRUE)
 		COOLDOWN_START(src, jukebox_error_cd, 15 SECONDS)
 
 /obj/machinery/jukebox/proc/activate_music()
@@ -154,7 +154,7 @@
 
 	if(!QDELING(src))
 		COOLDOWN_START(src, jukebox_song_cd, 10 SECONDS)
-		playsound(src,'sound/machines/terminal/terminal_off.ogg', 50, TRUE)
+		playsound(src,'../assets/sound/machines/terminal/terminal_off.ogg', 50, TRUE)
 		update_use_power(IDLE_POWER_USE)
 		update_appearance(UPDATE_ICON_STATE)
 	return TRUE

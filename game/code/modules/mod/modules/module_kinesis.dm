@@ -161,9 +161,9 @@
 		RegisterSignal(grabbed_atom, COMSIG_MOB_STATCHANGE, PROC_REF(on_statchange))
 	ADD_TRAIT(grabbed_atom, TRAIT_NO_FLOATING_ANIM, REF(src))
 	RegisterSignal(grabbed_atom, COMSIG_MOVABLE_SET_ANCHORED, PROC_REF(on_setanchored))
-	playsound(grabbed_atom, 'sound/items/weapons/contractor_baton/contractorbatonhit.ogg', 75, TRUE)
-	kinesis_icon = mutable_appearance(icon = 'icons/effects/effects.dmi', icon_state = "kinesis", layer = grabbed_atom.layer - 0.1, appearance_flags = RESET_ALPHA|RESET_COLOR|RESET_TRANSFORM|KEEP_APART)
-	kinesis_icon.overlays += emissive_appearance(icon = 'icons/effects/effects.dmi', icon_state = "kinesis", offset_spokesman = grabbed_atom)
+	playsound(grabbed_atom, '../assets/sound/items/weapons/contractor_baton/contractorbatonhit.ogg', 75, TRUE)
+	kinesis_icon = mutable_appearance(icon = '../assets/icons/effects/effects.dmi', icon_state = "kinesis", layer = grabbed_atom.layer - 0.1, appearance_flags = RESET_ALPHA|RESET_COLOR|RESET_TRANSFORM|KEEP_APART)
+	kinesis_icon.overlays += emissive_appearance(icon = '../assets/icons/effects/effects.dmi', icon_state = "kinesis", offset_spokesman = grabbed_atom)
 	grabbed_atom.add_overlay(kinesis_icon)
 	kinesis_beam = mod.wearer.Beam(grabbed_atom, "kinesis")
 	kinesis_catcher = mod.wearer.overlay_fullscreen("kinesis", /atom/movable/screen/fullscreen/cursor_catcher/kinesis, 0)
@@ -177,7 +177,7 @@
 		return
 	. = grabbed_atom
 	if(playsound)
-		playsound(grabbed_atom, 'sound/effects/empulse.ogg', 75, TRUE)
+		playsound(grabbed_atom, '../assets/sound/effects/empulse.ogg', 75, TRUE)
 	STOP_PROCESSING(SSfastprocess, src)
 	UnregisterSignal(grabbed_atom, list(COMSIG_MOB_STATCHANGE, COMSIG_MOVABLE_SET_ANCHORED))
 	kinesis_catcher = null
@@ -222,7 +222,7 @@
 		clear_grab()
 
 /obj/item/mod/module/anomaly_locked/kinesis/proc/launch(atom/movable/launched_object)
-	playsound(launched_object, 'sound/effects/magic/repulse.ogg', 100, TRUE)
+	playsound(launched_object, '../assets/sound/effects/magic/repulse.ogg', 100, TRUE)
 	RegisterSignal(launched_object, COMSIG_MOVABLE_IMPACT, PROC_REF(launch_impact))
 	var/turf/target_turf = get_turf_in_angle(get_angle(mod.wearer, launched_object), get_turf(src), 10)
 	launched_object.throw_at(target_turf, range = grab_range, speed = launched_object.density ? 3 : 4, thrower = mod.wearer, spin = isitem(launched_object))

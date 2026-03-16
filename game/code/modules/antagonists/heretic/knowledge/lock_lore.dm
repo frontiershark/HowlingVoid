@@ -4,7 +4,7 @@
 	complexity = "Medium"
 	complexity_color = COLOR_YELLOW
 	icon = list(
-		"icon" = 'icons/obj/weapons/khopesh.dmi',
+		"icon" = '../assets/icons/obj/weapons/khopesh.dmi',
 		"state" = "key_blade",
 		"frame" = 1,
 		"dir" = SOUTH,
@@ -57,7 +57,7 @@
 	)
 	result_atoms = list(/obj/item/melee/sickly_blade/lock)
 	limit = 2
-	research_tree_icon_path = 'icons/obj/weapons/khopesh.dmi'
+	research_tree_icon_path = '../assets/icons/obj/weapons/khopesh.dmi'
 	research_tree_icon_state = "key_blade"
 	mark_type = /datum/status_effect/eldritch/lock
 	eldritch_passive = /datum/status_effect/heretic_passive/lock
@@ -105,7 +105,7 @@
 
 	var/turf/target_turf = get_turf(target)
 	SEND_SIGNAL(target_turf, COMSIG_ATOM_MAGICALLY_UNLOCKED, src, source)
-	SEND_SOUND(source, 'sound/effects/magic/hereticknock.ogg')
+	SEND_SOUND(source, '../assets/sound/effects/magic/hereticknock.ogg')
 
 	if(HAS_TRAIT(source, TRAIT_LOCK_GRASP_UPGRADED))
 		var/datum/action/cooldown/spell/touch/mansus_grasp/grasp = locate() in source.actions
@@ -132,7 +132,7 @@
 	)
 	result_atoms = list(/obj/item/card/id/advanced/heretic)
 	cost = 2
-	research_tree_icon_path = 'icons/obj/card.dmi'
+	research_tree_icon_path = '../assets/icons/obj/card.dmi'
 	research_tree_icon_state = "card_gold"
 
 /datum/heretic_knowledge/key_ring/on_finished_recipe(mob/living/user, list/selected_atoms, turf/loc)
@@ -159,7 +159,7 @@
 	)
 	result_atoms = list(/obj/item/heretic_labyrinth_handbook)
 	cost = 2
-	research_tree_icon_path = 'icons/obj/service/library.dmi'
+	research_tree_icon_path = '../assets/icons/obj/service/library.dmi'
 	research_tree_icon_state = "heretichandbook"
 	drafting_tier = 5
 
@@ -192,7 +192,7 @@
 	desc = "Your blade has a chance to cause a weeping avulsion on attack."
 	gain_text = "The Pilgrim-Surgeon was not an Steward. Nonetheless, its blades and sutures proved a match for their keys."
 	wound_type = /datum/wound/slash/flesh/critical
-	research_tree_icon_path = 'icons/ui_icons/antags/heretic/knowledge.dmi'
+	research_tree_icon_path = '../assets/icons/ui_icons/antags/heretic/knowledge.dmi'
 	research_tree_icon_state = "blade_upgrade_lock"
 	var/chance = 35
 
@@ -226,7 +226,7 @@
 	required_atoms = list(/mob/living/carbon/human = 3)
 	ascension_achievement = /datum/award/achievement/misc/lock_ascension
 	announcement_text = "Delta-class dimensional anomaly detec%SPOOKY% Reality rended, torn. Gates open, doors open, %NAME% has ascended! Fear the tide! %SPOOKY%"
-	announcement_sound = 'sound/music/antag/heretic/ascend_knock.ogg'
+	announcement_sound = '../assets/sound/music/antag/heretic/ascend_knock.ogg'
 
 /datum/heretic_knowledge/ultimate/lock_final/recipe_snowflake_check(mob/living/user, list/atoms, list/selected_atoms, turf/loc)
 	. = ..()

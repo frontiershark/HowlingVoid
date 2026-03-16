@@ -1,7 +1,7 @@
 #define PAI_MISSING_SOFTWARE_MESSAGE span_warning("You must download the required software to use this.")
 
 /atom/movable/screen/pai
-	icon = 'icons/hud/screen_pai.dmi'
+	icon = '../assets/icons/hud/screen_pai.dmi'
 	mouse_over_pointer = MOUSE_HAND_POINTER
 	var/required_software
 
@@ -168,7 +168,7 @@
 
 /atom/movable/screen/pai/radio
 	name = "radio"
-	icon = 'icons/hud/screen_cyborg.dmi'
+	icon = '../assets/icons/hud/screen_cyborg.dmi'
 	icon_state = "radio"
 
 /atom/movable/screen/pai/radio/Click()

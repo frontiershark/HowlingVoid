@@ -138,7 +138,7 @@
 	// Causes radioation and mutations
 	var/turf/below_where = get_turf(where)
 	do_chem_smoke(2, where, below_where, list(/datum/reagent/toxin/polonium = 10, /datum/reagent/toxin/mutagen = 10))
-	playsound(below_where, 'sound/effects/smoke.ogg', 50, vary = TRUE)
+	playsound(below_where, '../assets/sound/effects/smoke.ogg', 50, vary = TRUE)
 
 /**
  * Signal proc for [COMSIG_ATOM_TOOL_ACT], from a variety of signals, registered on the machine spitting radiation

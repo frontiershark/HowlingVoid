@@ -33,7 +33,7 @@ This is a Blueshield weapon. It's for the Blueshield. If this ends up in Cargo I
 
 /obj/item/gun/ballistic/automatic/nt20/add_seclight_point()
 	AddComponent(/datum/component/seclite_attachable, \
-		light_overlay_icon = 'icons/obj/weapons/guns/flashlights.dmi', \
+		light_overlay_icon = '../assets/icons/obj/weapons/guns/flashlights.dmi', \
 		light_overlay = "flight", \
 		overlay_x = 15, \
 		overlay_y = 12)

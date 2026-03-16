@@ -1,6 +1,6 @@
 // Food related particles.
 /particles/stink
-	icon = 'icons/effects/particles/stink.dmi'
+	icon = '../assets/icons/effects/particles/stink.dmi'
 	icon_state = list("stink_1" = 1, "stink_2" = 2, "stink_3" = 2)
 	color = "#0BDA51"
 	width = 100

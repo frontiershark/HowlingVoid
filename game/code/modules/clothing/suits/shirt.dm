@@ -2,7 +2,7 @@
 	name = "well-worn shirt"
 	desc = "A worn out, curiously comfortable t-shirt. You wouldn't go so far as to say it feels like being hugged when you wear it, but it's pretty close. Good for sleeping in."
 	inhand_icon_state = null
-	icon = 'icons/map_icons/clothing/suit/costume.dmi'
+	icon = '../assets/icons/map_icons/clothing/suit/costume.dmi'
 	icon_state = "/obj/item/clothing/suit/costume/wellworn_shirt"
 	post_init_icon_state = "wellworn_shirt"
 	greyscale_config = /datum/greyscale_config/wellworn_shirt

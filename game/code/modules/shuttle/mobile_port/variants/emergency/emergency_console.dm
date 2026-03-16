@@ -137,7 +137,7 @@
 			priority_announce(
 				"[remaining] authorization\s needed until shuttle is launched early.",
 				"Emergency Shuttle Status",
-				sound = 'sound/announcer/notice/notice1.ogg',
+				sound = '../assets/sound/announcer/notice/notice1.ogg',
 				type = ANNOUNCEMENT_TYPE_PRIORITY,
 				has_important_message = TRUE,
 				color_override = "red",
@@ -146,7 +146,7 @@
 			priority_announce(
 				"Early launch authorization revoked, [remaining] authorization\s needed.",
 				"Emergency Shuttle Status",
-				sound = 'sound/announcer/notice/notice2.ogg',
+				sound = '../assets/sound/announcer/notice/notice2.ogg',
 				type = ANNOUNCEMENT_TYPE_PRIORITY,
 				color_override = "blue",
 			)

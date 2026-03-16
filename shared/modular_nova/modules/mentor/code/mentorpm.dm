@@ -68,7 +68,7 @@
 	log_mentor("Mentor PM: [key_name(src)]->[key_name(target)]: [msg]")
 
 	msg = emoji_parse(msg)
-	SEND_SOUND(target, 'sound/items/bikehorn.ogg')
+	SEND_SOUND(target, '../assets/sound/items/bikehorn.ogg')
 	var/show_char = CONFIG_GET(flag/mentors_mobname_only)
 	if(target.is_mentor())
 		if(is_mentor())//both are mentors

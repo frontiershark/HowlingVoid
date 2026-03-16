@@ -1,6 +1,6 @@
 ///musical notes! Try to use these sparingly, gents.
 /particles/musical_notes
-	icon = 'icons/effects/particles/notes/note.dmi'
+	icon = '../assets/icons/effects/particles/notes/note.dmi'
 	icon_state = list(
 		"note_1" = 1,
 		"note_2" = 1,
@@ -24,7 +24,7 @@
 	gravity = list(0, 0.95)
 
 /particles/musical_notes/holy
-	icon = 'icons/effects/particles/notes/note_holy.dmi'
+	icon = '../assets/icons/effects/particles/notes/note_holy.dmi'
 	icon_state = list(
 		"holy_1" = 1,
 		"holy_2" = 1,
@@ -38,7 +38,7 @@
 	)
 
 /particles/musical_notes/nullwave
-	icon = 'icons/effects/particles/notes/note_null.dmi'
+	icon = '../assets/icons/effects/particles/notes/note_null.dmi'
 	icon_state = list(
 		"null_1" = 1,
 		"null_2" = 1,
@@ -53,7 +53,7 @@
 	)
 
 /particles/musical_notes/harm
-	icon = 'icons/effects/particles/notes/note_harm.dmi'
+	icon = '../assets/icons/effects/particles/notes/note_harm.dmi'
 	icon_state = list(
 		"harm_1" = 1,
 		"harm_2" = 1,
@@ -68,7 +68,7 @@
 	)
 
 /particles/musical_notes/sleepy
-	icon = 'icons/effects/particles/notes/note_sleepy.dmi'
+	icon = '../assets/icons/effects/particles/notes/note_sleepy.dmi'
 	icon_state = list(
 		"sleepy_1" = 1,
 		"sleepy_2" = 1,
@@ -83,7 +83,7 @@
 	)
 
 /particles/musical_notes/light
-	icon = 'icons/effects/particles/notes/note_light.dmi'
+	icon = '../assets/icons/effects/particles/notes/note_light.dmi'
 	icon_state = list(
 		"power_1" = 1,
 		"power_2" = 1,

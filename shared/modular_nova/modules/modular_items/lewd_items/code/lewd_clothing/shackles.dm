@@ -5,7 +5,7 @@
 	flags_inv = NONE
 	worn_icon = 'modular_nova/modules/modular_items/lewd_items/icons/mob/lewd_clothing/lewd_suit/lewd_suits.dmi'
 	greyscale_colors = "#dc7ef4#383840"
-	icon = 'icons/map_icons/clothing/suit/_suit.dmi'
+	icon = '../assets/icons/map_icons/clothing/suit/_suit.dmi'
 	icon_state = "/obj/item/clothing/suit/straight_jacket/shackles"
 	post_init_icon_state = "shackles"
 	greyscale_config = /datum/greyscale_config/dorms_shackles
@@ -21,8 +21,8 @@
 	strip_delay = 2 SECONDS
 	breakouttime = 1 SECONDS
 	slowdown = 1
-	pickup_sound = 'sound/items/handling/handcuffs/handcuffs_pick_up.ogg'
-	drop_sound = 'sound/items/handling/handcuffs/handcuffs_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/handcuffs/handcuffs_pick_up.ogg'
+	drop_sound = '../assets/sound/items/handling/handcuffs/handcuffs_drop.ogg'
 	sound_vary = TRUE
 	gender = PLURAL // "That's some shackles."
 
@@ -36,7 +36,7 @@
 	. = ..()
 	var/mob/living/carbon/human/affected_mob = user
 	if(src == affected_mob.wear_suit)
-		playsound_if_pref(src, 'sound/items/handcuff_finish.ogg', 70, TRUE)
+		playsound_if_pref(src, '../assets/sound/items/handcuff_finish.ogg', 70, TRUE)
 
 
 //reinforcing normal version by using handcuffs on it.

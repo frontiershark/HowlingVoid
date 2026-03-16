@@ -5,9 +5,9 @@
 	icon_living = "mothroach"
 	icon_dead = "mothroach_dead"
 	held_state = "mothroach"
-	held_lh = 'icons/mob/inhands/animal_item_lefthand.dmi'
-	held_rh = 'icons/mob/inhands/animal_item_righthand.dmi'
-	head_icon = 'icons/mob/clothing/head/pets_head.dmi'
+	held_lh = '../assets/icons/mob/inhands/animal_item_lefthand.dmi'
+	held_rh = '../assets/icons/mob/inhands/animal_item_righthand.dmi'
+	head_icon = '../assets/icons/mob/clothing/head/pets_head.dmi'
 	butcher_results = list(/obj/item/food/meat/slab/mothroach = 3, /obj/item/stack/sheet/animalhide/mothroach = 1)
 	mob_biotypes = MOB_ORGANIC|MOB_BUG
 	mob_size = MOB_SIZE_SMALL
@@ -83,14 +83,14 @@
 	if(src.stat == DEAD)
 		return
 	else
-		playsound(loc, 'sound/mobs/humanoids/moth/scream_moth.ogg', 50, TRUE)
+		playsound(loc, '../assets/sound/mobs/humanoids/moth/scream_moth.ogg', 50, TRUE)
 
 /mob/living/basic/mothroach/attackby(obj/item/attacking_item, mob/living/user, list/modifiers, list/attack_modifiers)
 	. = ..()
 	if(src.stat == DEAD)
 		return
 	else
-		playsound(loc, 'sound/mobs/humanoids/moth/scream_moth.ogg', 50, TRUE)
+		playsound(loc, '../assets/sound/mobs/humanoids/moth/scream_moth.ogg', 50, TRUE)
 
 /mob/living/basic/mothroach/bar
 	name = "mothroach bartender"

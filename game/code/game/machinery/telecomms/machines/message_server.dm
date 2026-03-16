@@ -1,7 +1,7 @@
 // A decorational representation of SSblackbox, usually placed alongside the message server. Also contains a traitor theft item.
 /obj/machinery/blackbox_recorder
 	name = "Blackbox Recorder"
-	icon = 'icons/obj/machines/telecomms.dmi'
+	icon = '../assets/icons/obj/machines/telecomms.dmi'
 	icon_state = "blackbox"
 	density = TRUE
 	armor_type = /datum/armor/machinery_blackbox_recorder
@@ -41,7 +41,7 @@
 			return
 		user.visible_message(span_notice("[user] clicks [attacking_item] into [src]!"), \
 		span_notice("You press the device into [src], and it clicks into place. The tapes begin spinning again."))
-		playsound(src, 'sound/machines/click.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/machines/click.ogg', 50, TRUE)
 		stored = attacking_item
 		update_appearance()
 		return
@@ -60,11 +60,11 @@
 /obj/item/blackbox
 	name = "\proper the blackbox"
 	desc = "A strange relic, capable of recording data on extradimensional vertices. It lives inside the blackbox recorder for safe keeping."
-	icon = 'icons/obj/machines/telecomms.dmi'
+	icon = '../assets/icons/obj/machines/telecomms.dmi'
 	icon_state = "blackcube"
 	inhand_icon_state = "blackcube"
-	lefthand_file = 'icons/mob/inhands/items_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items_righthand.dmi'
 	w_class = WEIGHT_CLASS_BULKY
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 

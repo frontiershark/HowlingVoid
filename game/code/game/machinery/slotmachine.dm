@@ -17,7 +17,7 @@
 /obj/machinery/computer/slot_machine
 	name = "slot machine"
 	desc = "Gambling for the antisocial."
-	icon = 'icons/obj/machines/computer.dmi'
+	icon = '../assets/icons/obj/machines/computer.dmi'
 	icon_state = "slots"
 	icon_keyboard = null
 	icon_screen = "slots_screen"
@@ -277,7 +277,7 @@
 /obj/machinery/computer/slot_machine/proc/toggle_reel_spin(value, delay = 0) //value is 1 or 0 aka on or off
 	for(var/list/reel in reels)
 		if(!value)
-			playsound(src, 'sound/machines/ding_short.ogg', 50, TRUE, SHORT_RANGE_SOUND_EXTRARANGE)
+			playsound(src, '../assets/sound/machines/ding_short.ogg', 50, TRUE, SHORT_RANGE_SOUND_EXTRARANGE)
 		reels[reel] = value
 		if(delay)
 			sleep(delay)
@@ -322,7 +322,7 @@
 				cointype = pick(subtypesof(/obj/item/coin))
 				var/obj/item/coin/payout_coin = new cointype(loc)
 				random_step(payout_coin, 2, 50)
-				playsound(src, pick(list('sound/machines/coindrop.ogg', 'sound/machines/coindrop2.ogg')), 50, TRUE)
+				playsound(src, pick(list('../assets/sound/machines/coindrop.ogg', '../assets/sound/machines/coindrop2.ogg')), 50, TRUE)
 				sleep(REEL_DEACTIVATE_DELAY)
 
 	else if(linelength == 5)
@@ -346,7 +346,7 @@
 
 	else
 		balloon_alert(user, "no luck!")
-		playsound(src, 'sound/machines/buzz/buzz-sigh.ogg', 50)
+		playsound(src, '../assets/sound/machines/buzz/buzz-sigh.ogg', 50)
 		did_player_win = FALSE
 		if(isliving(user) && (user in viewers(src)))
 			var/mob/living/living_user = user
@@ -356,7 +356,7 @@
 		add_filter("jackpot_rays", 3, ray_filter)
 		animate(get_filter("jackpot_rays"), offset = 10, time = 3 SECONDS, loop = -1)
 		addtimer(CALLBACK(src, TYPE_PROC_REF(/datum, remove_filter), "jackpot_rays"), 3 SECONDS)
-		playsound(src, 'sound/machines/roulette/roulettejackpot.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/machines/roulette/roulettejackpot.ogg', 50, TRUE)
 
 /// Checks for a jackpot (5 matching icons in the middle row) with the given icon name
 /obj/machinery/computer/slot_machine/proc/check_jackpot(name)
@@ -426,7 +426,7 @@
 			else
 				random_step(thrown_coin, 2, 40)
 
-	playsound(src, pick(list('sound/machines/coindrop.ogg', 'sound/machines/coindrop2.ogg')), 50, TRUE)
+	playsound(src, pick(list('../assets/sound/machines/coindrop.ogg', '../assets/sound/machines/coindrop2.ogg')), 50, TRUE)
 	return amount
 
 #undef BIG_PRIZE

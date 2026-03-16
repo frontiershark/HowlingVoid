@@ -26,7 +26,7 @@
 		The ritual process will take longer each time it is completed."
 	check_flags = AB_CHECK_CONSCIOUS | AB_CHECK_INCAPACITATED | AB_CHECK_HANDS_BLOCKED
 	background_icon_state = "bg_spell"
-	button_icon = 'icons/mob/actions/actions_cult.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_cult.dmi'
 	button_icon_state = "draw"
 	cooldown_rounding = 0
 	/// Path to area we want to draw in next
@@ -190,7 +190,7 @@
 		possible_obstacle.atom_destruction("magic")
 
 	if (evaporated_obstacles)
-		playsound(target_turf, 'sound/effects/magic/blind.ogg', 100, TRUE)
+		playsound(target_turf, '../assets/sound/effects/magic/blind.ogg', 100, TRUE)
 
 	target_turf.balloon_alert(owner, "rune created")
 	var/obj/effect/grand_rune/new_rune = new next_rune_typepath(target_turf, times_completed)
@@ -292,7 +292,7 @@
 
 /// Abstract holder for shared animation behaviour
 /obj/effect/temp_visual/wizard_rune
-	icon = 'icons/effects/96x96.dmi'
+	icon = '../assets/icons/effects/96x96.dmi'
 	icon_state = null
 	pixel_x = -33
 	pixel_y = 16
@@ -304,7 +304,7 @@
 
 /obj/effect/temp_visual/wizard_rune/Initialize(mapload)
 	. = ..()
-	var/image/silicon_image = image(icon = 'icons/effects/eldritch.dmi', icon_state = null, loc = src)
+	var/image/silicon_image = image(icon = '../assets/icons/effects/eldritch.dmi', icon_state = null, loc = src)
 	silicon_image.override = TRUE
 	add_alt_appearance(/datum/atom_hud/alternate_appearance/basic/silicons, "wizard_rune", silicon_image)
 

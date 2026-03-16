@@ -2,11 +2,11 @@
 
 /obj/item/resonator
 	name = "resonator"
-	icon = 'icons/obj/mining.dmi'
+	icon = '../assets/icons/obj/mining.dmi'
 	icon_state = "resonator"
 	inhand_icon_state = "resonator"
-	lefthand_file = 'icons/mob/inhands/equipment/mining_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/mining_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/mining_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/mining_righthand.dmi'
 	desc = "A handheld device that creates small fields of energy that resonate until they detonate, crushing rock. It does increased damage in low pressure. It has two modes: Automatic and manual detonation."
 	w_class = WEIGHT_CLASS_NORMAL
 	force = 15
@@ -88,7 +88,7 @@
 	if(parent_resonator)
 		parent_resonator.fields += src
 	adding_failure = set_failure
-	playsound(src,'sound/items/weapons/resonator_fire.ogg',50,TRUE)
+	playsound(src,'../assets/sound/items/weapons/resonator_fire.ogg',50,TRUE)
 	if(mode == RESONATOR_MODE_AUTO)
 		transform = matrix()*0.75
 		animate(src, transform = matrix()*1.5, time = duration)
@@ -124,7 +124,7 @@
 		var/turf/closed/mineral/mineral_turf = src_turf
 		mineral_turf.gets_drilled(creator)
 	check_pressure(src_turf)
-	playsound(src_turf, 'sound/items/weapons/resonator_blast.ogg', 50, TRUE)
+	playsound(src_turf, '../assets/sound/items/weapons/resonator_blast.ogg', 50, TRUE)
 	for(var/mob/living/attacked_living in src_turf)
 		if(creator)
 			log_combat(creator, attacked_living, "used a resonator field on", "resonator")

@@ -7,7 +7,7 @@
 	icon_state = "dshotgun_sawn"
 	inhand_icon_state = "gun"
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/grenadelauncher
-	fire_sound = 'sound/items/weapons/gun/general/grenade_launch.ogg'
+	fire_sound = '../assets/sound/items/weapons/gun/general/grenade_launch.ogg'
 	w_class = WEIGHT_CLASS_NORMAL
 	pin = /obj/item/firing_pin/implant/pindicate
 	bolt_type = BOLT_TYPE_NO_BOLT
@@ -46,7 +46,7 @@
 /obj/item/gun/ballistic/revolver/grenadelauncher/cyborg
 	desc = "A 6-shot grenade launcher."
 	name = "multi grenade launcher"
-	icon = 'icons/obj/devices/mecha_equipment.dmi'
+	icon = '../assets/icons/obj/devices/mecha_equipment.dmi'
 	icon_state = "mecha_grenadelnchr"
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/cylinder/grenademulti
 	pin = /obj/item/firing_pin
@@ -58,7 +58,7 @@
 	name = "gyrojet pistol"
 	desc = "A prototype pistol designed to fire self propelled rockets."
 	icon_state = "gyropistol"
-	fire_sound = 'sound/items/weapons/gun/general/grenade_launch.ogg'
+	fire_sound = '../assets/sound/items/weapons/gun/general/grenade_launch.ogg'
 	accepted_magazine_type = /obj/item/ammo_box/magazine/m75
 	burst_size = 1
 	fire_delay = 0 SECONDS
@@ -71,13 +71,13 @@
 		alongside the words \"Front Toward Enemy\" are printed on the tube. Someone seems to have crossed out \
 		that last word and written \"NT\" over it at some point. A sticker near the back of the launcher warn \
 		to \"CHECK BACKBLAST CLEAR BEFORE FIRING\", whatever that means."
-	icon = 'icons/obj/weapons/guns/wide_guns.dmi'
+	icon = '../assets/icons/obj/weapons/guns/wide_guns.dmi'
 	icon_state = "rocketlauncher"
 	inhand_icon_state = "rocketlauncher"
 	worn_icon_state = "rocketlauncher"
 	SET_BASE_PIXEL(-8, 0)
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/rocketlauncher
-	fire_sound = 'sound/items/weapons/gun/general/rocket_launch.ogg'
+	fire_sound = '../assets/sound/items/weapons/gun/general/rocket_launch.ogg'
 	slot_flags = ITEM_SLOT_BACK
 	w_class = WEIGHT_CLASS_BULKY
 	can_suppress = FALSE
@@ -132,7 +132,7 @@
 		span_userdanger("You aim [src] at the ground to perform a bisnasty rocket jump..."))
 	if(can_shoot())
 		ADD_TRAIT(user, TRAIT_NO_TRANSFORM, REF(src))
-		playsound(src, 'sound/vehicles/rocketlaunch.ogg', 80, TRUE, 5)
+		playsound(src, '../assets/sound/vehicles/rocketlaunch.ogg', 80, TRUE, 5)
 		animate(user, pixel_z = 300, time = 30, flags = ANIMATION_RELATIVE, easing = LINEAR_EASING)
 		sleep(7 SECONDS)
 		animate(user, pixel_z = -300, time = 5, flags = ANIMATION_RELATIVE, easing = LINEAR_EASING)

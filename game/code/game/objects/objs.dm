@@ -305,7 +305,7 @@ GLOBAL_LIST_EMPTY(objects_by_id_tag)
 	to_chat(user, span_notice("You [anchored ? "un" : ""]secure [src]."))
 	set_anchored(!anchored)
 	check_on_table()
-	playsound(src, 'sound/items/deconstruct.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/deconstruct.ogg', 50, TRUE)
 	return SUCCESSFUL_UNFASTEN
 
 /// For the do_after, this checks if unfastening conditions are still valid

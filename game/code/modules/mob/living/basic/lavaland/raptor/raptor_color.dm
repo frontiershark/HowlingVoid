@@ -314,7 +314,7 @@ GLOBAL_LIST_INIT(raptor_colors, init_raptor_colors())
 /datum/action/innate/raptor_wings
 	name = "Toggle Flight"
 	check_flags = AB_CHECK_CONSCIOUS | AB_CHECK_IMMOBILE | AB_CHECK_INCAPACITATED
-	button_icon = 'icons/mob/actions/actions_animal.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_animal.dmi'
 	button_icon_state = "raptor_wings"
 	background_icon_state = "bg_default"
 	overlay_icon_state = "bg_default_border"

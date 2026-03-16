@@ -2,7 +2,7 @@
 /obj/structure/steps
 	name = "steps"
 	desc = "A small set of steps you can use to reach high shelves or climb onto platforms, just watch your ankles."
-	icon = 'icons/obj/small_stairs.dmi'
+	icon = '../assets/icons/obj/small_stairs.dmi'
 	icon_state = "iron"
 	anchored = TRUE
 	move_resist = INFINITY

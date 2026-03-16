@@ -21,7 +21,7 @@
 
 /// The cinematic screen showed to everyone
 /atom/movable/screen/cinematic
-	icon = 'icons/effects/station_explosion.dmi'
+	icon = '../assets/icons/effects/station_explosion.dmi'
 	icon_state = "station_intact"
 	plane = SPLASHSCREEN_PLANE
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT

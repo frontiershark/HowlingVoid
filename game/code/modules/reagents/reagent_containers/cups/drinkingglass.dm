@@ -11,8 +11,8 @@
 	max_integrity = 20
 	resistance_flags = ACID_PROOF
 	obj_flags = UNIQUE_RENAME
-	drop_sound = 'sound/items/handling/drinkglass_drop.ogg'
-	pickup_sound = 'sound/items/handling/drinkglass_pickup.ogg'
+	drop_sound = '../assets/sound/items/handling/drinkglass_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/drinkglass_pickup.ogg'
 	sound_vary = TRUE
 	custom_price = PAYCHECK_LOWER
 	//the screwdriver cocktail can make a drinking glass into the world's worst screwdriver. beautiful.
@@ -75,7 +75,7 @@
 /obj/item/reagent_containers/cup/glass/drinkingglass/shotglass
 	name = "shot glass"
 	desc = "A shot glass - the universal symbol for bad decisions."
-	icon = 'icons/obj/drinks/shot_glasses.dmi'
+	icon = '../assets/icons/obj/drinks/shot_glasses.dmi'
 	icon_state = "shotglass"
 	base_icon_state = "shotglass"
 	gulp_size = 15

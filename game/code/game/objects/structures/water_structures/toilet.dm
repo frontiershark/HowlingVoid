@@ -1,7 +1,7 @@
 /obj/structure/toilet
 	name = "toilet"
 	desc = "The HT-451, a torque rotation-based, waste disposal unit for small matter. This one seems remarkably clean."
-	icon = 'icons/obj/watercloset.dmi'
+	icon = '../assets/icons/obj/watercloset.dmi'
 	icon_state = "toilet00" //The first number represents if the toilet lid is up, the second is if the cistern is open.
 	base_icon_state = "toilet"
 	density = FALSE
@@ -159,7 +159,7 @@
 				swirlie.client.give_award(/datum/award/achievement/misc/swirlie, swirlie) // just like space high school all over again!
 			swirlie = null
 		else
-			playsound(src.loc, 'sound/effects/bang.ogg', 25, TRUE)
+			playsound(src.loc, '../assets/sound/effects/bang.ogg', 25, TRUE)
 			grabbed_mob.visible_message(span_danger("[user] slams [grabbed_mob.name] into [src]!"), span_userdanger("[user] slams you into [src]!"))
 			log_combat(user, grabbed_mob, "toilet slammed")
 			grabbed_mob.adjust_brute_loss(5)
@@ -215,7 +215,7 @@
 		reagents.remove_all(50)
 
 	begin_reclamation()
-	playsound(src, 'sound/machines/toilet_flush.ogg', cover_open ? 40 : 20, TRUE)
+	playsound(src, '../assets/sound/machines/toilet_flush.ogg', cover_open ? 40 : 20, TRUE)
 	if(cover_open && (dir & SOUTH))
 		update_appearance(UPDATE_OVERLAYS)
 		flick_overlay_view(mutable_appearance(icon, "[base_icon_state]-water-flick"), 3 SECONDS)
@@ -267,7 +267,7 @@
 				to_chat(user, span_warning("[src] already has a water recycler installed."))
 				return ITEM_INTERACT_BLOCKING
 
-			playsound(src, 'sound/machines/click.ogg', 20, TRUE)
+			playsound(src, '../assets/sound/machines/click.ogg', 20, TRUE)
 			qdel(tool)
 			has_water_reclaimer = TRUE
 			begin_reclamation()
@@ -335,7 +335,7 @@
 
 /obj/structure/toilet/crowbar_act(mob/living/user, obj/item/tool)
 	to_chat(user, span_notice("You start to [cistern_open ? "replace the lid on" : "lift the lid off"] the cistern..."))
-	playsound(loc, 'sound/effects/stonedoor_openclose.ogg', 50, TRUE)
+	playsound(loc, '../assets/sound/effects/stonedoor_openclose.ogg', 50, TRUE)
 	if(tool.use_tool(src, user, 30))
 		user.visible_message(
 			span_notice("[user] [cistern_open ? "replaces the lid on" : "lifts the lid off"] the cistern!"),

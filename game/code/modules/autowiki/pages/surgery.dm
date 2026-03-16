@@ -43,7 +43,7 @@
 		var/filename = "surgery_[SANITIZE_FILENAME(escape_value(type_id))]"
 		operation_data["icon"] = filename
 
-		var/image/radial_base = image('icons/hud/screen_alert.dmi', "template")
+		var/image/radial_base = image('../assets/icons/hud/screen_alert.dmi', "template")
 		var/image/radial_overlay = operation.get_default_radial_image()
 		radial_overlay.plane = radial_base.plane
 		radial_overlay.layer = radial_base.layer + 1
@@ -113,13 +113,13 @@
 	if(tool == IMPLEMENT_HAND)
 		return image(/obj/item/hand_item)
 	if(istext(tool))
-		return GLOB.tool_to_image[tool] || image('icons/effects/random_spawners.dmi', "questionmark")
+		return GLOB.tool_to_image[tool] || image('../assets/icons/effects/random_spawners.dmi', "questionmark")
 	if(tool == /obj/item)
-		return image('icons/effects/random_spawners.dmi', "questionmark")
+		return image('../assets/icons/effects/random_spawners.dmi', "questionmark")
 	if(ispath(tool, /obj/item/melee/energy)) // snowflake for soul reasons
 		return image(tool::icon, "[tool::icon_state]_on")
 	if(ispath(tool, /obj/item/bodypart)) // snowflake for readability
-		return image('icons/obj/medical/surgery_ui.dmi', "surgery_limbs")
+		return image('../assets/icons/obj/medical/surgery_ui.dmi', "surgery_limbs")
 	if(ispath(tool, /obj/item/organ)) // snowflake for readability
-		return image('icons/obj/medical/surgery_ui.dmi', "surgery_chest")
+		return image('../assets/icons/obj/medical/surgery_ui.dmi', "surgery_chest")
 	return image(tool)

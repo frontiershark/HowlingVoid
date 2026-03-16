@@ -1,7 +1,7 @@
 /obj/item/paperplane
 	name = "paper plane"
 	desc = "Paper, folded in the shape of a plane."
-	icon = 'icons/obj/service/bureaucracy.dmi'
+	icon = '../assets/icons/obj/service/bureaucracy.dmi'
 	icon_state = "paperplane"
 	base_icon_state = "paperplane"
 	throw_range = 7
@@ -61,7 +61,7 @@
 
 /obj/item/paperplane/custom_fire_overlay()
 	if (!custom_fire_overlay)
-		custom_fire_overlay = mutable_appearance('icons/obj/service/bureaucracy.dmi', "paperplane_onfire", appearance_flags = RESET_COLOR|KEEP_APART)
+		custom_fire_overlay = mutable_appearance('../assets/icons/obj/service/bureaucracy.dmi', "paperplane_onfire", appearance_flags = RESET_COLOR|KEEP_APART)
 	return custom_fire_overlay
 
 /obj/item/paperplane/suicide_act(mob/living/user)

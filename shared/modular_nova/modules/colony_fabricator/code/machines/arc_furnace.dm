@@ -24,9 +24,9 @@
 	/// If the furnace is currently working on smelting something
 	var/operating = FALSE
 	/// Image for the radial eject button
-	var/static/radial_eject = image(icon = 'icons/hud/radial.dmi', icon_state = "radial_eject")
+	var/static/radial_eject = image(icon = '../assets/icons/hud/radial.dmi', icon_state = "radial_eject")
 	/// Image for the radial use button
-	var/static/radial_use = image(icon = 'icons/hud/radial.dmi', icon_state = "radial_use")
+	var/static/radial_use = image(icon = '../assets/icons/hud/radial.dmi', icon_state = "radial_use")
 	/// Radial options for using the arc furnace
 	var/static/list/radial_options = list(RADIAL_CHOICE_EJECT = radial_eject, RADIAL_CHOICE_USE = radial_use)
 	/// Soundloop for while we are smelting ores
@@ -118,7 +118,7 @@
 	if(operating)
 		return
 
-	playsound(loc, 'sound/machines/click.ogg', 15, TRUE, -3)
+	playsound(loc, '../assets/sound/machines/click.ogg', 15, TRUE, -3)
 
 	if(!length(contents))
 		return

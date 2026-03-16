@@ -4,7 +4,7 @@
 /obj/item/borg/upgrade
 	name = "borg upgrade module"
 	desc = "Protected by FRM."
-	icon = 'icons/mob/silicon/robot_items.dmi'
+	icon = '../assets/icons/mob/silicon/robot_items.dmi'
 	icon_state = "module_general"
 	w_class = WEIGHT_CLASS_SMALL
 	var/locked = FALSE
@@ -73,7 +73,7 @@
 /obj/item/borg/upgrade/rename
 	name = "cyborg reclassification board"
 	desc = "Used to rename a cyborg."
-	icon = 'icons/obj/devices/circuitry_n_data.dmi'
+	icon = '../assets/icons/obj/devices/circuitry_n_data.dmi'
 	icon_state = "cyborg_upgrade1"
 	var/heldname = ""
 	one_use = TRUE
@@ -566,7 +566,7 @@
 /obj/item/borg/upgrade/ai
 	name = "B.O.R.I.S. module"
 	desc = "Bluespace Optimized Remote Intelligence Synchronization. An uplink device which takes the place of an MMI in cyborg endoskeletons, creating a robotic shell controlled by an AI."
-	icon = 'icons/obj/devices/circuitry_n_data.dmi'
+	icon = '../assets/icons/obj/devices/circuitry_n_data.dmi'
 	icon_state = "boris"
 
 /obj/item/borg/upgrade/ai/action(mob/living/silicon/robot/borg, mob/living/user = usr)
@@ -616,11 +616,11 @@
 	sleep(0.2 SECONDS)
 	for(var/i in 1 to 4)
 		playsound(borg, pick(
-			'sound/items/tools/drill_use.ogg',
-			'sound/items/tools/jaws_cut.ogg',
-			'sound/items/tools/jaws_pry.ogg',
-			'sound/items/tools/welder.ogg',
-			'sound/items/tools/ratchet.ogg',
+			'../assets/sound/items/tools/drill_use.ogg',
+			'../assets/sound/items/tools/jaws_cut.ogg',
+			'../assets/sound/items/tools/jaws_pry.ogg',
+			'../assets/sound/items/tools/welder.ogg',
+			'../assets/sound/items/tools/ratchet.ogg',
 			), 80, TRUE, -1)
 		sleep(1.2 SECONDS)
 	if(!prev_lockcharge)
@@ -860,7 +860,7 @@
 	name = "cyborg emergency reboot module"
 	desc = "A reusable firmware reset tool that can force a reboot of a disabled-but-repaired cyborg, bringing it back online."
 	w_class = WEIGHT_CLASS_SMALL
-	icon = 'icons/obj/devices/circuitry_n_data.dmi'
+	icon = '../assets/icons/obj/devices/circuitry_n_data.dmi'
 	icon_state = "cyborg_upgrade1"
 
 /obj/item/borg_restart_board/pre_attack(mob/living/silicon/robot/borgo, mob/living/user, list/modifiers, list/attack_modifiers)
@@ -878,9 +878,9 @@
 
 	if(borgo.mind)
 		borgo.mind.grab_ghost()
-		playsound(loc, 'sound/mobs/non-humanoids/cyborg/liveagain.ogg', 75, TRUE)
+		playsound(loc, '../assets/sound/mobs/non-humanoids/cyborg/liveagain.ogg', 75, TRUE)
 	else
-		playsound(loc, 'sound/machines/ping.ogg', 75, TRUE)
+		playsound(loc, '../assets/sound/machines/ping.ogg', 75, TRUE)
 
 	borgo.revive()
 	borgo.logevent("WARN -- System recovered from unexpected shutdown.")

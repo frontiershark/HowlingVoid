@@ -31,7 +31,7 @@ Runes can either be invoked by one's self or with many different cultists. Each 
 	name = "rune"
 	desc = "An odd collection of symbols drawn in what seems to be blood."
 	anchored = TRUE
-	icon = 'icons/obj/antags/cult/rune.dmi'
+	icon = '../assets/icons/obj/antags/cult/rune.dmi'
 	icon_state = "1"
 	resistance_flags = FIRE_PROOF | UNACIDABLE | ACID_PROOF
 	plane = FLOOR_PLANE
@@ -79,7 +79,7 @@ Runes can either be invoked by one's self or with many different cultists. Each 
 	. = ..()
 	if(set_keyword)
 		keyword = set_keyword
-	var/image/I = image(icon = 'icons/effects/blood.dmi', icon_state = null, loc = src)
+	var/image/I = image(icon = '../assets/icons/effects/blood.dmi', icon_state = null, loc = src)
 	I.override = TRUE
 	add_alt_appearance(/datum/atom_hud/alternate_appearance/basic/silicons, "cult_runes", I)
 	ADD_TRAIT(src, TRAIT_MOPABLE, INNATE_TRAIT)
@@ -389,14 +389,14 @@ structure_check() searches for nearby cultist structures required for the invoca
 		qdel(sacrificial)
 		return TRUE
 	if(sacrificial && (signal_result & DUST_SACRIFICE)) // No soulstone when dusted
-		playsound(sacrificial, 'sound/effects/magic/teleport_diss.ogg', 100, TRUE)
+		playsound(sacrificial, '../assets/sound/effects/magic/teleport_diss.ogg', 100, TRUE)
 		sacrificial.investigate_log("has been sacrificially dusted by the cult.", INVESTIGATE_DEATHS)
 		sacrificial.dust(TRUE, FALSE, TRUE)
 	else if (sacrificial)
 		var/obj/item/soulstone/stone = new(loc)
 		if(sacrificial.mind && !HAS_TRAIT(sacrificial, TRAIT_SUICIDED))
 			stone.capture_soul(sacrificial,  invokers[1], forced = TRUE)
-		playsound(sacrificial, 'sound/effects/magic/disintegrate.ogg', 100, TRUE)
+		playsound(sacrificial, '../assets/sound/effects/magic/disintegrate.ogg', 100, TRUE)
 		sacrificial.investigate_log("has been sacrificially gibbed by the cult.", INVESTIGATE_DEATHS)
 		sacrificial.gib(DROP_ALL_REMAINS)
 
@@ -417,7 +417,7 @@ structure_check() searches for nearby cultist structures required for the invoca
 
 /// Does an animation of a sacrificable item transforming into something else
 /obj/effect/rune/convert/proc/animate_convert_item(obj/item/old_item, new_movable_typepath)
-	playsound(src, 'sound/effects/magic.ogg', 33, vary = TRUE, extrarange = SILENCED_SOUND_EXTRARANGE, frequency = 0.66)
+	playsound(src, '../assets/sound/effects/magic.ogg', 33, vary = TRUE, extrarange = SILENCED_SOUND_EXTRARANGE, frequency = 0.66)
 	old_item.anchored = TRUE
 	old_item.Shake()
 	animate(old_item, alpha = 0, transform = matrix(old_item.transform).Scale(0.01), time = 2 SECONDS, easing = BOUNCE_EASING, flags = ANIMATION_PARALLEL)
@@ -586,7 +586,7 @@ structure_check() searches for nearby cultist structures required for the invoca
 	cultist_desc = "tears apart dimensional barriers, calling forth the Geometer. Requires 9 invokers."
 	invocation = "TOK-LYR RQA-NAP G'OLT-ULOFT!!"
 	req_cultists = 9
-	icon = 'icons/effects/96x96.dmi'
+	icon = '../assets/icons/effects/96x96.dmi'
 	color = RUNE_COLOR_DARKRED
 	icon_state = "rune_large"
 	pixel_x = -32 //So the big ol' 96x96 sprite shows up right
@@ -687,7 +687,7 @@ GLOBAL_VAR_INIT(narsie_summon_count, 0)
 
 	cult_team.narsie_summoned = TRUE
 	..()
-	sound_to_playing_players('sound/effects/dimensional_rend.ogg')
+	sound_to_playing_players('../assets/sound/effects/dimensional_rend.ogg')
 	var/turf/rune_turf = get_turf(src)
 	for(var/datum/mind/cult_mind as anything in cult_team.members)
 		cult_team.true_cultists += cult_mind
@@ -762,7 +762,7 @@ GLOBAL_VAR_INIT(narsie_summon_count, 0)
 		else
 			fail_invoke()
 			return
-	SEND_SOUND(mob_to_revive, 'sound/music/antag/bloodcult/bloodcult_gain.ogg')
+	SEND_SOUND(mob_to_revive, '../assets/sound/music/antag/bloodcult/bloodcult_gain.ogg')
 	to_chat(mob_to_revive, span_cult_large("\"PASNAR SAVRAE YAM'TOTH. Arise.\""))
 	mob_to_revive.visible_message(span_warning("[mob_to_revive] draws in a huge breath, red light shining from [mob_to_revive.p_their()] eyes."), \
 		span_cult_large("You awaken suddenly from the void. You're alive!"))
@@ -985,7 +985,7 @@ GLOBAL_VAR_INIT(narsie_summon_count, 0)
 			"Manifest rune invoked in [get_area(src)].",
 			source = src,
 			header = "Manifest rune",
-			ghost_sound = 'sound/effects/ghost2.ogg',
+			ghost_sound = '../assets/sound/effects/ghost2.ogg',
 		)
 		var/list/ghosts_on_rune = list()
 		for(var/mob/dead/observer/O in T)
@@ -1008,7 +1008,7 @@ GLOBAL_VAR_INIT(narsie_summon_count, 0)
 		new_human.set_invis_see(SEE_INVISIBLE_OBSERVER)
 		new_human.add_traits(list(TRAIT_NOBREATH, TRAIT_SPAWNED_MOB, TRAIT_PERMANENTLY_MORTAL), INNATE_TRAIT) // permanently mortal can be removed once this is a bespoke kind of mob
 		ghosts++
-		playsound(src, 'sound/effects/magic/exit_blood.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/effects/magic/exit_blood.ogg', 50, TRUE)
 		visible_message(span_warning("A cloud of red mist forms above [src], and from within steps... a [new_human.gender == FEMALE ? "wo":""]man."))
 		to_chat(user, span_cult_italic("Your blood begins flowing into [src]. You must remain in place and conscious to maintain the forms of those summoned. This will hurt you slowly but surely..."))
 		var/obj/structure/emergency_shield/cult/weak/N = new(T)
@@ -1087,7 +1087,7 @@ GLOBAL_VAR_INIT(narsie_summon_count, 0)
 	cultist_name = "Apocalypse"
 	cultist_desc = "a harbinger of the end times. Grows in strength with the cult's desperation - but at the risk of... side effects."
 	invocation = "Ta'gh fara'qha fel d'amar det!"
-	icon = 'icons/effects/96x96.dmi'
+	icon = '../assets/icons/effects/96x96.dmi'
 	icon_state = "apoc"
 	pixel_x = -32
 	pixel_y = 16
@@ -1124,7 +1124,7 @@ GLOBAL_VAR_INIT(narsie_summon_count, 0)
 	intensity = max(60, 360 - (360*(intensity/length(GLOB.player_list) + 0.3)**2)) //significantly lower intensity for "winning" cults
 	var/duration = intensity*10
 
-	playsound(T, 'sound/effects/magic/enter_blood.ogg', 100, TRUE)
+	playsound(T, '../assets/sound/effects/magic/enter_blood.ogg', 100, TRUE)
 	visible_message(span_warning("A colossal shockwave of energy bursts from the rune, disintegrating it in the process!"))
 
 	for(var/mob/living/target in range(src, 3))
@@ -1139,28 +1139,28 @@ GLOBAL_VAR_INIT(narsie_summon_count, 0)
 			if(!IS_CULTIST(M))
 				ADD_TRAIT(M, TRAIT_BLOCK_SECHUD, CULT_TRAIT)
 				addtimer(TRAIT_CALLBACK_REMOVE(M, TRAIT_BLOCK_SECHUD, CULT_TRAIT), duration)
-			var/image/A = image('icons/mob/nonhuman-player/cult.dmi',M,"cultist", ABOVE_MOB_LAYER)
+			var/image/A = image('../assets/icons/mob/nonhuman-player/cult.dmi',M,"cultist", ABOVE_MOB_LAYER)
 			A.override = 1
 			add_alt_appearance(/datum/atom_hud/alternate_appearance/basic/noncult, "human_apoc", A, NONE)
 			addtimer(CALLBACK(M, TYPE_PROC_REF(/atom/, remove_alt_appearance),"human_apoc",TRUE), duration)
 			images += A
-			SEND_SOUND(M, pick(sound('sound/music/antag/bloodcult/bloodcult_gain.ogg'),sound('sound/music/antag/bloodcult/ghost_whisper.ogg'),sound('sound/music/antag/bloodcult/ghosty_wind.ogg')))
+			SEND_SOUND(M, pick(sound('../assets/sound/music/antag/bloodcult/bloodcult_gain.ogg'),sound('../assets/sound/music/antag/bloodcult/ghost_whisper.ogg'),sound('../assets/sound/music/antag/bloodcult/ghosty_wind.ogg')))
 		else
 			var/construct = pick("wraith","artificer","juggernaut")
-			var/image/B = image('icons/mob/nonhuman-player/cult.dmi',M,construct, ABOVE_MOB_LAYER)
+			var/image/B = image('../assets/icons/mob/nonhuman-player/cult.dmi',M,construct, ABOVE_MOB_LAYER)
 			B.override = 1
 			add_alt_appearance(/datum/atom_hud/alternate_appearance/basic/noncult, "mob_apoc", B, NONE)
 			addtimer(CALLBACK(M, TYPE_PROC_REF(/atom/, remove_alt_appearance),"mob_apoc",TRUE), duration)
 			images += B
 		if(!IS_CULTIST(M))
 			if(M.client)
-				var/image/C = image('icons/effects/cult.dmi', M, "bloodsparkles", ABOVE_MOB_LAYER)
+				var/image/C = image('../assets/icons/effects/cult.dmi', M, "bloodsparkles", ABOVE_MOB_LAYER)
 				add_alt_appearance(/datum/atom_hud/alternate_appearance/basic/has_antagonist/cult, "cult_apoc", C, NONE)
 				addtimer(CALLBACK(M, TYPE_PROC_REF(/atom/, remove_alt_appearance),"cult_apoc",TRUE), duration)
 				images += C
 		else
 			to_chat(M, span_cult_large("An Apocalypse Rune was invoked in \the [place], it is no longer available as a summoning site!"))
-			SEND_SOUND(M, 'sound/effects/pope_entry.ogg')
+			SEND_SOUND(M, '../assets/sound/effects/pope_entry.ogg')
 	image_handler(images, duration)
 	if(intensity >= 285) // Based on the prior formula, this means the cult makes up <15% of current players
 		var/outcome = rand(1,100)

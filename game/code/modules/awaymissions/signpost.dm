@@ -1,7 +1,7 @@
 /obj/structure/signpost
 	name = "signpost"
 	desc = "Won't somebody give me a sign?"
-	icon = 'icons/obj/fluff/general.dmi'
+	icon = '../assets/icons/obj/fluff/general.dmi'
 	icon_state = "signpost"
 	anchored = TRUE
 	density = TRUE

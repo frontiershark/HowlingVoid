@@ -3,7 +3,7 @@ GLOBAL_LIST_EMPTY(monkey_recyclers)
 /obj/machinery/monkey_recycler
 	name = "monkey recycler"
 	desc = "A machine used for recycling dead monkeys into monkey cubes."
-	icon = 'icons/obj/machines/kitchen.dmi'
+	icon = '../assets/icons/obj/machines/kitchen.dmi'
 	icon_state = "grinder"
 	layer = BELOW_OBJ_LAYER
 	interaction_flags_mouse_drop = NEED_DEXTERITY
@@ -74,7 +74,7 @@ GLOBAL_LIST_EMPTY(monkey_recyclers)
 		return
 	qdel(target)
 	to_chat(user, span_notice("You stuff the monkey into the machine."))
-	playsound(src.loc, 'sound/machines/juicer.ogg', 50, TRUE)
+	playsound(src.loc, '../assets/sound/machines/juicer.ogg', 50, TRUE)
 	var/offset = prob(50) ? -2 : 2
 	animate(src, pixel_x = pixel_x + offset, time = 0.2, loop = 200) //start shaking
 	use_energy(active_power_usage)
@@ -85,7 +85,7 @@ GLOBAL_LIST_EMPTY(monkey_recyclers)
 /obj/machinery/monkey_recycler/interact(mob/user)
 	if(stored_matter >= 1)
 		to_chat(user, span_notice("The machine hisses loudly as it condenses the ground monkey meat. After a moment, it dispenses a brand new monkey cube."))
-		playsound(src.loc, 'sound/machines/hiss.ogg', 50, TRUE)
+		playsound(src.loc, '../assets/sound/machines/hiss.ogg', 50, TRUE)
 		for(var/i in 1 to FLOOR(stored_matter, 1))
 			new /obj/item/food/monkeycube(src.loc)
 			stored_matter--

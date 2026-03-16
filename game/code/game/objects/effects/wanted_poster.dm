@@ -64,7 +64,7 @@
 
 	person_icon = icon(person_icon, dir = SOUTH)//copy the image so we don't mess with the one in the record.
 	original_icon = icon(person_icon) //cache this incase it gets torn down
-	var/icon/the_icon = icon("icon" = 'icons/obj/poster_wanted.dmi', "icon_state" = background)
+	var/icon/the_icon = icon("icon" = '../assets/icons/obj/poster_wanted.dmi', "icon_state" = background)
 	person_icon.Shift(SOUTH, 7)
 	person_icon.Crop(7,4,26,30)
 	person_icon.Crop(-5,-2,26,29)
@@ -74,8 +74,8 @@
 	print_across_top(the_icon, postHeaderText, postHeaderColor)
 
 	the_icon.Insert(the_icon, "wanted")
-	the_icon.Insert(icon('icons/obj/poster.dmi', "poster_being_set"), "poster_being_set")
-	the_icon.Insert(icon('icons/obj/poster.dmi', "poster_ripped"), "poster_ripped")
+	the_icon.Insert(icon('../assets/icons/obj/poster.dmi', "poster_being_set"), "poster_being_set")
+	the_icon.Insert(icon('../assets/icons/obj/poster.dmi', "poster_ripped"), "poster_ripped")
 
 	icon = the_icon
 
@@ -93,7 +93,7 @@
 	var/i
 	for(i=1; i <= textLen; i++)
 		var/letter = uppertext(text[i])
-		var/icon/letter_icon = icon("icon" = 'icons/testing/Font_Minimal.dmi', "icon_state" = letter)
+		var/icon/letter_icon = icon("icon" = '../assets/icons/testing/Font_Minimal.dmi', "icon_state" = letter)
 		letter_icon.Shift(EAST, startX) //16 - (2*n)
 		letter_icon.Shift(SOUTH, 2)
 		letter_icon.SwapColor(rgb(255,255,255), color)

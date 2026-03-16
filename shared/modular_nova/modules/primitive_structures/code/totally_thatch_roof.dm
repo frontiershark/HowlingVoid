@@ -14,7 +14,7 @@
 	icon_state = "grass-255"
 	base_icon_state = "grass"
 	icon = 'modular_nova/modules/primitive_structures/icons/thatch.dmi'
-	damaged_dmi = 'icons/turf/damaged.dmi'
+	damaged_dmi = '../assets/icons/turf/damaged.dmi'
 	floor_tile = /obj/item/stack/tile/grass/thatch
 	bullet_bounce_sound = null
 	smoothing_flags = SMOOTH_BITMASK

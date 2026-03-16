@@ -89,7 +89,7 @@
 ///Security belt
 /datum/storage/security_belt
 	max_slots = 5
-	open_sound = 'sound/items/handling/holster_open.ogg'
+	open_sound = '../assets/sound/items/handling/holster_open.ogg'
 	open_sound_vary = TRUE
 	rustle_sound = null
 

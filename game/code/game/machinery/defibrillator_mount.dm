@@ -4,7 +4,7 @@
 /obj/machinery/defibrillator_mount
 	name = "defibrillator mount"
 	desc = "Holds defibrillators. You can grab the paddles if one is mounted."
-	icon = 'icons/obj/machines/defib_mount.dmi'
+	icon = '../assets/icons/obj/machines/defib_mount.dmi'
 	icon_state = "defibrillator_mount"
 	density = FALSE
 	use_power = NO_POWER_USE
@@ -99,7 +99,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/defibrillator_mount, 28)
 			return
 		user.visible_message(span_notice("[user] hooks up [new_defib] to [src]!"), \
 		span_notice("You press [new_defib] into the mount, and it clicks into place."))
-		playsound(src, 'sound/machines/click.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/machines/click.ogg', 50, TRUE)
 		// Make sure the defib is set before processing begins.
 		defib = new_defib
 		begin_processing()
@@ -129,12 +129,12 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/defibrillator_mount, 28)
 		return TRUE
 	user.visible_message(span_notice("[user] presses [multitool] into [src]'s ID slot..."), \
 	span_notice("You begin overriding the clamps on [src]..."))
-	playsound(src, 'sound/machines/click.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/machines/click.ogg', 50, TRUE)
 	if(!do_after(user, 10 SECONDS, target = src) || !clamps_locked)
 		return
 	user.visible_message(span_notice("[user] pulses [multitool], and [src]'s clamps slide up."), \
 	span_notice("You override the locking clamps on [src]!"))
-	playsound(src, 'sound/machines/locktoggle.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/machines/locktoggle.ogg', 50, TRUE)
 	clamps_locked = FALSE
 	update_appearance()
 	return TRUE
@@ -168,7 +168,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/defibrillator_mount, 28)
 	else
 		user.visible_message(span_notice("[user] unhooks [defib] from [src]."), \
 		span_notice("You slide out [defib] from [src] and unhook the charging cables."))
-	playsound(src, 'sound/items/deconstruct.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/deconstruct.ogg', 50, TRUE)
 	return CLICK_ACTION_SUCCESS
 
 /obj/machinery/defibrillator_mount/charging
@@ -207,7 +207,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/defibrillator_mount, 28)
 /obj/item/wallframe/defib_mount
 	name = "unhooked defibrillator mount"
 	desc = "A frame for a defibrillator mount. Once placed, it can be removed with a wrench."
-	icon = 'icons/obj/machines/defib_mount.dmi'
+	icon = '../assets/icons/obj/machines/defib_mount.dmi'
 	icon_state = "defibrillator_mount"
 	custom_materials = list(/datum/material/iron = SMALL_MATERIAL_AMOUNT * 3, /datum/material/glass = SMALL_MATERIAL_AMOUNT)
 	w_class = WEIGHT_CLASS_BULKY
@@ -247,7 +247,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/defibrillator_mount, 28)
 	balloon_alert(user, "deconstructing...")
 	tool.play_tool_sound(src)
 	if(tool.use_tool(src, user, 5 SECONDS))
-		playsound(loc, 'sound/items/deconstruct.ogg', 50, vary = TRUE)
+		playsound(loc, '../assets/sound/items/deconstruct.ogg', 50, vary = TRUE)
 		deconstruct()
 	return TRUE
 

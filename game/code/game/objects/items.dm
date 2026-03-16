@@ -1,7 +1,7 @@
 /// Anything you can pick up and hold.
 /obj/item
 	name = "item"
-	icon = 'icons/obj/anomaly.dmi'
+	icon = '../assets/icons/obj/anomaly.dmi'
 	abstract_type = /obj/item
 	blocks_emissive = EMISSIVE_BLOCK_GENERIC
 	burning_particles = /particles/smoke/burning/small
@@ -20,9 +20,9 @@
 	///icon state for inhand overlays.
 	var/inhand_icon_state = null
 	///Icon file for left hand inhand overlays
-	var/lefthand_file = 'icons/mob/inhands/items_lefthand.dmi'
+	var/lefthand_file = '../assets/icons/mob/inhands/items_lefthand.dmi'
 	///Icon file for right inhand overlays
-	var/righthand_file = 'icons/mob/inhands/items_righthand.dmi'
+	var/righthand_file = '../assets/icons/mob/inhands/items_righthand.dmi'
 
 	/// Angle of the icon, used for piercing and slashing attack animations, clockwise from *east-facing* sprites
 	var/icon_angle = 0
@@ -265,7 +265,7 @@
 
 	if(!hitsound)
 		if(damtype == BURN)
-			hitsound = 'sound/items/tools/welder.ogg'
+			hitsound = '../assets/sound/items/tools/welder.ogg'
 		if(damtype == BRUTE)
 			hitsound = SFX_SWING_HIT
 
@@ -676,7 +676,7 @@
 		return TRUE
 	if(play_hit_sound(target, volume))
 		return TRUE
-	playsound(target, 'sound/items/weapons/throwtap.ogg', volume, TRUE, -1)
+	playsound(target, '../assets/sound/items/weapons/throwtap.ogg', volume, TRUE, -1)
 	return TRUE
 
 /// executed when this item is thrown and lands on a turf
@@ -908,7 +908,7 @@
 	if (throwforce > 0 || HAS_TRAIT(src, TRAIT_CUSTOM_TAP_SOUND))
 		mob_throw_hit_sound_chain(hit_atom, volume)
 	else
-		playsound(hit_atom, 'sound/items/weapons/throwtap.ogg', volume, TRUE, -1)
+		playsound(hit_atom, '../assets/sound/items/weapons/throwtap.ogg', volume, TRUE, -1)
 
 /obj/item/throw_at(atom/target, range, speed, mob/thrower, spin=1, diagonals_first = 0, datum/callback/callback, force, gentle = FALSE, quickstart = TRUE, throw_type_path = /datum/thrownthing)
 	if(HAS_TRAIT(src, TRAIT_NODROP))
@@ -945,7 +945,7 @@
 	var/icon_state_to_use = inside_belt_icon_state || icon_state
 	if(greyscale_config_belt && greyscale_colors)
 		return mutable_appearance(SSgreyscale.GetColoredIconByType(greyscale_config_belt, greyscale_colors), icon_state_to_use)
-	return mutable_appearance('icons/obj/clothing/belt_overlays.dmi', icon_state_to_use)
+	return mutable_appearance('../assets/icons/obj/clothing/belt_overlays.dmi', icon_state_to_use)
 
 /**
  * Extend this to give the item an appearance when placed in a surgical tray. Uses an icon state in `medicart.dmi`.
@@ -1617,7 +1617,7 @@
 			used_item.animate_attack(src, attacked_atom, animation_type)
 		return
 
-	var/image/attack_image = image(icon = 'icons/effects/effects.dmi', icon_state = visual_effect_icon)
+	var/image/attack_image = image(icon = '../assets/icons/effects/effects.dmi', icon_state = visual_effect_icon)
 	attack_image.plane = attacked_atom.plane + 1
 	// Scale the icon.
 	attack_image.transform *= 0.4

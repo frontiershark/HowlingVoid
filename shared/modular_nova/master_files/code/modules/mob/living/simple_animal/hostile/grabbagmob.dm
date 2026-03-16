@@ -78,7 +78,7 @@
 	melee_damage_upper = 20
 	attack_verb_continuous = "claws"
 	attack_verb_simple = "pinch"
-	attack_sound = 'sound/items/weapons/genhit2.ogg'
+	attack_sound = '../assets/sound/items/weapons/genhit2.ogg'
 	speak_emote = list("gnashes")
 	atmos_requirements = null
 	minbodytemp = 0
@@ -113,7 +113,7 @@
 	melee_damage_upper = 18
 	attack_verb_continuous = "bites"
 	attack_verb_simple = "bite"
-	attack_sound = 'sound/items/weapons/bite.ogg'
+	attack_sound = '../assets/sound/items/weapons/bite.ogg'
 	speak_emote = list("screeches")
 	atmos_requirements = null
 	minbodytemp = 0
@@ -151,7 +151,7 @@
 	melee_damage_upper = 18
 	attack_verb_continuous = "bites"
 	attack_verb_simple = "slash"
-	attack_sound = 'sound/items/weapons/bite.ogg'
+	attack_sound = '../assets/sound/items/weapons/bite.ogg'
 	speak_emote = list("gurlges")
 	atmos_requirements = list("min_oxy" = 10, "max_oxy" = 0, "min_plas" = 0, "max_plas" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
 	minbodytemp = 0
@@ -190,7 +190,7 @@
 	move_to_delay = 4
 	attack_verb_continuous = "stings"
 	attack_verb_simple = "sting"
-	attack_sound = 'sound/items/weapons/genhit2.ogg'
+	attack_sound = '../assets/sound/items/weapons/genhit2.ogg'
 	speak_emote = list("buzzes")
 	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_plas" = 0, "max_plas" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
 	minbodytemp = 0
@@ -229,7 +229,7 @@
 	melee_damage_upper = 20
 	attack_verb_continuous = "slashes"
 	attack_verb_simple = "slash"
-	attack_sound = 'sound/items/weapons/bladeslice.ogg'
+	attack_sound = '../assets/sound/items/weapons/bladeslice.ogg'
 	speak_emote = list("growls")
 	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_plas" = 0, "max_plas" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
 	minbodytemp = 0
@@ -261,7 +261,7 @@
 	melee_damage_upper = 15
 	attack_verb_continuous = "stings"
 	attack_verb_simple = "sting"
-	attack_sound = 'sound/items/weapons/genhit2.ogg'
+	attack_sound = '../assets/sound/items/weapons/genhit2.ogg'
 	speak_emote = list("chitters")
 	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_plas" = 0, "max_plas" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
 	minbodytemp = 0
@@ -295,7 +295,7 @@
 	melee_damage_upper = 15
 	attack_verb_continuous = "bosses"
 	attack_verb_simple = "boss"
-	attack_sound = 'sound/items/weapons/cqchit2.ogg'
+	attack_sound = '../assets/sound/items/weapons/cqchit2.ogg'
 	speak_emote = list("squeaks")
 	emote_see = list("squeaks.", "practices CQC.", "cocks the bolt of a tiny CR20.", "plots to steal DAT DISK!", "fiddles with a tiny radio.")
 	speak_chance = 1
@@ -332,7 +332,7 @@
 	melee_damage_upper = 10
 	attack_verb_continuous = "punches"
 	attack_verb_simple = "punch"
-	attack_sound = 'sound/items/weapons/cqchit1.ogg'
+	attack_sound = '../assets/sound/items/weapons/cqchit1.ogg'
 	speak_emote = list("clacks")
 	atmos_requirements = null
 	minbodytemp = 0

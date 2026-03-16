@@ -27,7 +27,7 @@
 	instability = 30
 	growthstages = 4
 	genes = list(/datum/plant_gene/trait/plant_type/fungal_metabolism)
-	growing_icon = 'icons/obj/service/hydroponics/growing_mushrooms.dmi'
+	growing_icon = '../assets/icons/obj/service/hydroponics/growing_mushrooms.dmi'
 	reagents_add = list(/datum/reagent/medicine/morphine = 0.35, /datum/reagent/medicine/c2/multiver = 0.35, /datum/reagent/consumable/nutriment = 0)
 	graft_gene = /datum/plant_gene/trait/plant_type/fungal_metabolism
 
@@ -53,7 +53,7 @@
 	instability = 30
 	growthstages = 3
 	genes = list(/datum/plant_gene/trait/plant_type/fungal_metabolism)
-	growing_icon = 'icons/obj/service/hydroponics/growing_mushrooms.dmi'
+	growing_icon = '../assets/icons/obj/service/hydroponics/growing_mushrooms.dmi'
 	mutatelist = list(/obj/item/seeds/angel)
 	reagents_add = list(/datum/reagent/drug/mushroomhallucinogen = 0.04, /datum/reagent/toxin/amatoxin = 0.35, /datum/reagent/consumable/nutriment = 0, /datum/reagent/growthserum = 0.1)
 	graft_gene = /datum/plant_gene/trait/plant_type/fungal_metabolism
@@ -80,7 +80,7 @@
 	potency = 35
 	growthstages = 3
 	genes = list(/datum/plant_gene/trait/plant_type/fungal_metabolism)
-	growing_icon = 'icons/obj/service/hydroponics/growing_mushrooms.dmi'
+	growing_icon = '../assets/icons/obj/service/hydroponics/growing_mushrooms.dmi'
 	reagents_add = list(/datum/reagent/drug/mushroomhallucinogen = 0.04, /datum/reagent/toxin/amatoxin = 0.1, /datum/reagent/consumable/nutriment = 0, /datum/reagent/toxin/amanitin = 0.2)
 	rarity = 30
 	graft_gene = /datum/plant_gene/trait/plant_type/fungal_metabolism
@@ -107,7 +107,7 @@
 	instability = 10
 	growthstages = 3
 	genes = list(/datum/plant_gene/trait/plant_type/fungal_metabolism)
-	growing_icon = 'icons/obj/service/hydroponics/growing_mushrooms.dmi'
+	growing_icon = '../assets/icons/obj/service/hydroponics/growing_mushrooms.dmi'
 	reagents_add = list(/datum/reagent/drug/mushroomhallucinogen = 0.25, /datum/reagent/consumable/nutriment = 0.02)
 	graft_gene = /datum/plant_gene/trait/plant_type/fungal_metabolism
 
@@ -132,7 +132,7 @@
 	potency = 15
 	growthstages = 3
 	genes = list(/datum/plant_gene/trait/plant_type/fungal_metabolism)
-	growing_icon = 'icons/obj/service/hydroponics/growing_mushrooms.dmi'
+	growing_icon = '../assets/icons/obj/service/hydroponics/growing_mushrooms.dmi'
 	mutatelist = list(/obj/item/seeds/plump/walkingmushroom)
 	reagents_add = list(/datum/reagent/consumable/nutriment/vitamin = 0.04, /datum/reagent/consumable/nutriment = 0.1)
 	graft_gene = /datum/plant_gene/trait/plant_type/fungal_metabolism
@@ -157,7 +157,7 @@
 	maturation = 5
 	yield = 1
 	genes = list(/datum/plant_gene/trait/plant_type/fungal_metabolism, /datum/plant_gene/trait/mob_transformation/shroom)
-	growing_icon = 'icons/obj/service/hydroponics/growing_mushrooms.dmi'
+	growing_icon = '../assets/icons/obj/service/hydroponics/growing_mushrooms.dmi'
 	mutatelist = null
 	reagents_add = list(/datum/reagent/consumable/nutriment/vitamin = 0.05, /datum/reagent/consumable/nutriment = 0.15)
 	rarity = 30
@@ -187,7 +187,7 @@
 	instability = 20
 	growthstages = 3
 	genes = list(/datum/plant_gene/trait/plant_type/fungal_metabolism)
-	growing_icon = 'icons/obj/service/hydroponics/growing_mushrooms.dmi'
+	growing_icon = '../assets/icons/obj/service/hydroponics/growing_mushrooms.dmi'
 	reagents_add = list(/datum/reagent/consumable/nutriment = 0.1)
 	mutatelist = list(/obj/item/seeds/chanter/jupitercup)
 	graft_gene = /datum/plant_gene/trait/plant_type/fungal_metabolism
@@ -226,7 +226,7 @@
 	yield = 4
 	growthstages = 2
 	genes = list(/datum/plant_gene/trait/plant_type/fungal_metabolism, /datum/plant_gene/reagent/preset/liquidelectricity, /datum/plant_gene/trait/carnivory/jupitercup)
-	growing_icon = 'icons/obj/service/hydroponics/growing_mushrooms.dmi'
+	growing_icon = '../assets/icons/obj/service/hydroponics/growing_mushrooms.dmi'
 	reagents_add = list(/datum/reagent/consumable/nutriment = 0.1)
 	mutatelist = null
 	graft_gene = /datum/plant_gene/trait/carnivory
@@ -255,7 +255,7 @@
 	growthstages = 4
 	rarity = PLANT_MODERATELY_RARE
 	genes = list(/datum/plant_gene/trait/glow, /datum/plant_gene/trait/plant_type/fungal_metabolism)
-	growing_icon = 'icons/obj/service/hydroponics/growing_mushrooms.dmi'
+	growing_icon = '../assets/icons/obj/service/hydroponics/growing_mushrooms.dmi'
 	mutatelist = list(/obj/item/seeds/glowshroom/glowcap, /obj/item/seeds/glowshroom/shadowshroom)
 	reagents_add = list(/datum/reagent/uranium/radium = 0.1, /datum/reagent/phosphorus = 0.1, /datum/reagent/consumable/nutriment = 0.04)
 	graft_gene = /datum/plant_gene/trait/glow
@@ -351,7 +351,7 @@
 	desc = "These spores reek! Disgusting."
 	icon_state = "seed-odiouspuffball"
 	species = "odiouspuffball"
-	growing_icon = 'icons/obj/service/hydroponics/growing_mushrooms.dmi'
+	growing_icon = '../assets/icons/obj/service/hydroponics/growing_mushrooms.dmi'
 	icon_grow = "odiouspuffball-grow"
 	icon_dead = "odiouspuffball-dead"
 	icon_harvest = "odiouspuffball-harvest"

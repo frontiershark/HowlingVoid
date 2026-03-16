@@ -93,8 +93,8 @@
 	desc = "Worn by snails as armor and storage compartment."
 	icon_state = "snailshell"
 	inhand_icon_state = null
-	lefthand_file = 'icons/mob/inhands/equipment/backpack_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/backpack_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/backpack_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/backpack_righthand.dmi'
 	armor_type = /datum/armor/backpack_snail
 	max_integrity = 200
 	resistance_flags = FIRE_PROOF | ACID_PROOF

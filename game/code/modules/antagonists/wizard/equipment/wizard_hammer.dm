@@ -2,12 +2,12 @@
 /obj/item/singularityhammer
 	name = "singularity hammer"
 	desc = "The pinnacle of close combat technology, the hammer harnesses the power of a miniaturized singularity to deal crushing blows."
-	icon = 'icons/obj/weapons/hammer.dmi'
+	icon = '../assets/icons/obj/weapons/hammer.dmi'
 	icon_state = "singularity_hammer0"
 	base_icon_state = "singularity_hammer"
 	icon_angle = -45
-	lefthand_file = 'icons/mob/inhands/weapons/hammers_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/hammers_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/hammers_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/hammers_righthand.dmi'
 	worn_icon_state = "singularity_hammer"
 	obj_flags = CONDUCTS_ELECTRICITY
 	slot_flags = ITEM_SLOT_BACK
@@ -68,7 +68,7 @@
 	if(isliving(target) && !QDELETED(target))
 		var/mob/living/smacked = target
 		smacked.take_bodypart_damage(20, 0)
-	playsound(user, 'sound/items/weapons/marauder.ogg', 50, TRUE)
+	playsound(user, '../assets/sound/items/weapons/marauder.ogg', 50, TRUE)
 	vortex(get_turf(target), user)
 	addtimer(VARSET_CALLBACK(src, charged, TRUE), 10 SECONDS)
 
@@ -76,13 +76,13 @@
 /obj/item/mjollnir
 	name = "Mjollnir"
 	desc = "A weapon worthy of a god, able to strike with the force of a lightning bolt. It crackles with barely contained energy."
-	icon = 'icons/obj/weapons/hammer.dmi'
+	icon = '../assets/icons/obj/weapons/hammer.dmi'
 	icon_state = "mjollnir0"
 	base_icon_state = "mjollnir"
 	worn_icon_state = "mjollnir"
 	icon_angle = -45
-	lefthand_file = 'icons/mob/inhands/weapons/hammers_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/hammers_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/hammers_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/hammers_righthand.dmi'
 	obj_flags = CONDUCTS_ELECTRICITY
 	slot_flags = ITEM_SLOT_BACK
 	force = 5

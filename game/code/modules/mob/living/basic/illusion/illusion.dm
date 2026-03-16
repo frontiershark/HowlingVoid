@@ -3,7 +3,7 @@
 /mob/living/basic/illusion
 	name = "illusion"
 	desc = "It's a fake!"
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	icon_state = "static"
 	icon_living = "static"
 	icon_dead = "null"

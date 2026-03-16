@@ -339,7 +339,7 @@
 		attacker = pick(diagonal_blobs)
 		if(attack_success)
 			attacker.blob_attack_animation(tile, src)
-			playsound(attacker, 'sound/effects/splat.ogg', 50, TRUE)
+			playsound(attacker, '../assets/sound/effects/splat.ogg', 50, TRUE)
 			add_points(BLOB_ATTACK_REFUND)
 		else
 			add_points(BLOB_EXPAND_COST) //if we're attacking diagonally and didn't hit anything, refund
@@ -374,7 +374,7 @@
 		for (var/unused in 1 to BLOB_POWER_REROLL_CHOICES)
 			var/datum/blobstrain/strain = pick_n_take(new_strains)
 
-			var/image/strain_icon = image('icons/mob/nonhuman-player/blob.dmi', "blob_core")
+			var/image/strain_icon = image('../assets/icons/mob/nonhuman-player/blob.dmi', "blob_core")
 			strain_icon.color = initial(strain.color)
 
 			var/info_text = span_boldnotice("[initial(strain.name)]")

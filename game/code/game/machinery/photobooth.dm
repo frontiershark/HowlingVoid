@@ -7,7 +7,7 @@
 /obj/machinery/photobooth
 	name = "photobooth"
 	desc = "A machine with some drapes and a camera, used to update security record photos. Requires Law Office access to use."
-	icon = 'icons/obj/machines/photobooth.dmi'
+	icon = '../assets/icons/obj/machines/photobooth.dmi'
 	icon_state = "booth_open"
 	base_icon_state = "booth"
 	state_open = TRUE
@@ -80,11 +80,11 @@
 	if(panel_open)
 		balloon_alert(user, "close panel first!")
 		return
-	playsound(src, 'sound/effects/curtain.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/effects/curtain.ogg', 50, TRUE)
 	return ..()
 
 /obj/machinery/photobooth/open_machine(drop = TRUE, density_to_set = FALSE)
-	playsound(src, 'sound/effects/curtain.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/effects/curtain.ogg', 50, TRUE)
 	return ..()
 
 /obj/machinery/photobooth/update_icon_state()
@@ -141,12 +141,12 @@
 	if(!do_after(occupant, 2 SECONDS, src, timed_action_flags = IGNORE_HELD_ITEM)) //gives them time to put their hand items away.
 		taking_pictures = FALSE
 		return
-	playsound(src, 'sound/items/polaroid/polaroid1.ogg', 75, TRUE)
+	playsound(src, '../assets/sound/items/polaroid/polaroid1.ogg', 75, TRUE)
 	flash()
 	if(!do_after(occupant, 3 SECONDS, src, timed_action_flags = IGNORE_HELD_ITEM))
 		taking_pictures = FALSE
 		return
-	playsound(src, 'sound/items/polaroid/polaroid2.ogg', 75, TRUE)
+	playsound(src, '../assets/sound/items/polaroid/polaroid2.ogg', 75, TRUE)
 	flash()
 	if(!do_after(occupant, 2 SECONDS, src, timed_action_flags = IGNORE_HELD_ITEM))
 		taking_pictures = FALSE

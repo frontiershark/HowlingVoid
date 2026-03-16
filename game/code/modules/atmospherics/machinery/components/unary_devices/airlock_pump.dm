@@ -21,7 +21,7 @@
 /obj/machinery/atmospherics/components/unary/airlock_pump
 	name = "external airlock pump"
 	desc = "A pump for cycling an external airlock controlled by the connected doors."
-	icon = 'icons/obj/machines/atmospherics/unary_devices.dmi'
+	icon = '../assets/icons/obj/machines/atmospherics/unary_devices.dmi'
 	icon_state = "airlock_pump"
 	pipe_state = "airlock_pump"
 	use_power = IDLE_POWER_USE

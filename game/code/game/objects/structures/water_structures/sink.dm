@@ -1,6 +1,6 @@
 /obj/structure/sink
 	name = "sink"
-	icon = 'icons/obj/watercloset.dmi'
+	icon = '../assets/icons/obj/watercloset.dmi'
 	icon_state = "sink"
 	desc = "A sink used for washing one's hands and face. Passively reclaims water over time."
 	anchored = TRUE
@@ -112,7 +112,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sink, (-14))
 	if(selected_area in list(BODY_ZONE_HEAD, BODY_ZONE_PRECISE_MOUTH, BODY_ZONE_PRECISE_EYES))
 		washing_face = TRUE
 
-	playsound(src, 'sound/machines/sink-faucet.ogg', 50)
+	playsound(src, '../assets/sound/machines/sink-faucet.ogg', 50)
 	user.visible_message(span_notice("[user] starts washing [user.p_their()] [washing_face ? "face" : "hands"]..."), \
 						span_notice("You start washing your [washing_face ? "face" : "hands"]..."))
 	busy = TRUE
@@ -165,7 +165,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sink, (-14))
 		reagents.trans_to(tool, 5, transferred_by = user)
 		START_PROCESSING(SSobj, src)
 		to_chat(user, span_notice("You wet [tool] in [src]."))
-		playsound(loc, 'sound/effects/slosh.ogg', 25, TRUE)
+		playsound(loc, '../assets/sound/effects/slosh.ogg', 25, TRUE)
 		return ITEM_INTERACT_SUCCESS
 
 	if(istype(tool, /obj/item/stock_parts/water_recycler))
@@ -173,7 +173,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sink, (-14))
 			to_chat(user, span_warning("There is already has a water recycler installed."))
 			return ITEM_INTERACT_FAILURE
 
-		playsound(src, 'sound/machines/click.ogg', 20, TRUE)
+		playsound(src, '../assets/sound/machines/click.ogg', 20, TRUE)
 		qdel(tool)
 		has_water_reclaimer = TRUE
 		START_PROCESSING(SSobj, src)
@@ -194,7 +194,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sink, (-14))
 			return ITEM_INTERACT_FAILURE
 
 		to_chat(user, span_notice("You start washing [tool]..."))
-		playsound(src, 'sound/machines/sink-faucet.ogg', 50)
+		playsound(src, '../assets/sound/machines/sink-faucet.ogg', 50)
 
 		var/obj/item/melee/baton/security/baton = tool
 		if(istype(baton) && baton.active && baton.cell?.use(baton.cell_hit_cost, force = TRUE))
@@ -272,7 +272,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sink/kitchen, (-16))
 
 /obj/item/wallframe/sinkframe
 	name = "sink frame"
-	icon = 'icons/obj/watercloset.dmi'
+	icon = '../assets/icons/obj/watercloset.dmi'
 	icon_state = "sink_frame"
 	desc = "A sink frame, that needs a water recycler to finish construction."
 	result_path = /obj/structure/sink/greyscale
@@ -299,7 +299,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sink/kitchen, (-16))
 	if(istype(tool, /obj/item/stock_parts/water_recycler))
 		qdel(tool)
 		result_path = /obj/structure/sink/greyscale/filled
-		playsound(src, 'sound/machines/click.ogg', 20, TRUE)
+		playsound(src, '../assets/sound/machines/click.ogg', 20, TRUE)
 		return ITEM_INTERACT_SUCCESS
 
 /obj/item/wallframe/sinkframe/after_attach(obj/structure/sink/greyscale/attached_to)

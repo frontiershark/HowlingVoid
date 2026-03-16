@@ -1,6 +1,6 @@
 /obj/effect/spawner/armory_spawn
 	icon_state = "loot"
-	icon = 'icons/effects/random_spawners.dmi'
+	icon = '../assets/icons/effects/random_spawners.dmi'
 
 	layer = OBJ_LAYER
 	/// A list of possible guns to spawn.

@@ -255,7 +255,7 @@
 	name = "nessie-fish"
 	fish_id = "nessie"
 	desc = "A <u>deliciously</u> extremophile alien fish. This one is so big, you could write legends about it."
-	icon = 'icons/obj/aquarium/wide.dmi'
+	icon = '../assets/icons/obj/aquarium/wide.dmi'
 	icon_state = "nessiefish"
 	base_pixel_w = -16
 	pixel_w = -16

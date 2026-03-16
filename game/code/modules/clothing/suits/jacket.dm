@@ -1,6 +1,6 @@
 /obj/item/clothing/suit/jacket
-	icon = 'icons/obj/clothing/suits/jacket.dmi'
-	worn_icon = 'icons/mob/clothing/suits/jacket.dmi'
+	icon = '../assets/icons/obj/clothing/suits/jacket.dmi'
+	worn_icon = '../assets/icons/mob/clothing/suits/jacket.dmi'
 	abstract_type = /obj/item/clothing/suit/jacket
 	allowed = list(
 		/obj/item/flashlight,
@@ -21,8 +21,8 @@
 	allowed += GLOB.personal_carry_allowed
 
 /obj/item/clothing/suit/toggle/jacket
-	icon = 'icons/obj/clothing/suits/jacket.dmi'
-	worn_icon = 'icons/mob/clothing/suits/jacket.dmi'
+	icon = '../assets/icons/obj/clothing/suits/jacket.dmi'
+	worn_icon = '../assets/icons/mob/clothing/suits/jacket.dmi'
 	abstract_type = /obj/item/clothing/suit/toggle/jacket
 	allowed = list(
 		/obj/item/flashlight,
@@ -46,7 +46,7 @@
 /obj/item/clothing/suit/toggle/jacket/sweater
 	name = "sweater jacket"
 	desc = "A sweater jacket."
-	icon = 'icons/map_icons/clothing/suit/_suit.dmi'
+	icon = '../assets/icons/map_icons/clothing/suit/_suit.dmi'
 	icon_state = "/obj/item/clothing/suit/toggle/jacket/sweater"
 	post_init_icon_state = "sweater"
 	greyscale_config = /datum/greyscale_config/sweater
@@ -57,7 +57,7 @@
 /obj/item/clothing/suit/toggle/jacket/trenchcoat
 	name = "trenchcoat"
 	desc = "A multi-purpose trenchcoat."
-	icon = 'icons/map_icons/clothing/suit/_suit.dmi'
+	icon = '../assets/icons/map_icons/clothing/suit/_suit.dmi'
 	icon_state = "/obj/item/clothing/suit/toggle/jacket/trenchcoat"
 	post_init_icon_state = "trenchcoat"
 	greyscale_config = /datum/greyscale_config/trenchcoat
@@ -75,7 +75,7 @@
 /obj/item/clothing/suit/jacket/blazer
 	name = "blazer jacket"
 	desc = "A blazer jacket."
-	icon = 'icons/map_icons/clothing/suit/_suit.dmi'
+	icon = '../assets/icons/map_icons/clothing/suit/_suit.dmi'
 	icon_state = "/obj/item/clothing/suit/jacket/blazer"
 	post_init_icon_state = "blazer"
 	greyscale_config = /datum/greyscale_config/blazer
@@ -87,7 +87,7 @@
 /obj/item/clothing/suit/jacket/oversized
 	name = "oversized jacket"
 	desc = "An oversized jacket."
-	icon = 'icons/map_icons/clothing/suit/_suit.dmi'
+	icon = '../assets/icons/map_icons/clothing/suit/_suit.dmi'
 	icon_state = "/obj/item/clothing/suit/jacket/oversized"
 	post_init_icon_state = "jacket_oversized"
 	greyscale_config = /datum/greyscale_config/jacket_oversized
@@ -98,7 +98,7 @@
 /obj/item/clothing/suit/jacket/fancy
 	name = "fancy fur coat"
 	desc = "Rated 10 out of 10 in Cosmo for best coat brand."
-	icon = 'icons/map_icons/clothing/suit/_suit.dmi'
+	icon = '../assets/icons/map_icons/clothing/suit/_suit.dmi'
 	icon_state = "/obj/item/clothing/suit/jacket/fancy"
 	post_init_icon_state = "fancy_coat"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS

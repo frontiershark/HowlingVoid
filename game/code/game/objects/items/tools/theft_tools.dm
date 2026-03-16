@@ -7,7 +7,7 @@
 /obj/item/nuke_core
 	name = "plutonium core"
 	desc = "Extremely radioactive. Wear goggles."
-	icon = 'icons/obj/antags/syndicate_tools.dmi'
+	icon = '../assets/icons/obj/antags/syndicate_tools.dmi'
 	icon_state = "plutonium_core"
 	inhand_icon_state = "plutoniumcore"
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | ACID_PROOF
@@ -43,11 +43,11 @@
 /obj/item/nuke_core_container
 	name = "nuke core container"
 	desc = "Solid container for radioactive objects."
-	icon = 'icons/obj/antags/syndicate_tools.dmi'
+	icon = '../assets/icons/obj/antags/syndicate_tools.dmi'
 	icon_state = "core_container_empty"
 	inhand_icon_state = "tile"
-	lefthand_file = 'icons/mob/inhands/items/tiles_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/tiles_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/tiles_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/tiles_righthand.dmi'
 	var/obj/item/nuke_core/core
 
 /obj/item/nuke_core_container/Destroy()
@@ -68,7 +68,7 @@
 	if(istype(core))
 		STOP_PROCESSING(SSobj, core)
 		icon_state = "core_container_sealed"
-		playsound(src, 'sound/items/deconstruct.ogg', 60, TRUE)
+		playsound(src, '../assets/sound/items/deconstruct.ogg', 60, TRUE)
 		if(ismob(loc))
 			to_chat(loc, span_warning("[src] is sealed, [core]'s radiation is contained."))
 
@@ -86,7 +86,7 @@
 /obj/item/screwdriver/nuke
 	name = "screwdriver"
 	desc = "A screwdriver with an ultra thin tip that's carefully designed to boost screwing speed."
-	icon = 'icons/obj/antags/syndicate_tools.dmi'
+	icon = '../assets/icons/obj/antags/syndicate_tools.dmi'
 	icon_state = "screwdriver_nuke"
 	post_init_icon_state = null
 	inhand_icon_state = "screwdriver_nuke"
@@ -97,7 +97,7 @@
 	greyscale_colors = null
 
 /obj/item/screwdriver/nuke/get_belt_overlay()
-	return mutable_appearance('icons/obj/clothing/belt_overlays.dmi', "screwdriver_nuke")
+	return mutable_appearance('../assets/icons/obj/clothing/belt_overlays.dmi', "screwdriver_nuke")
 
 /obj/item/paper/guides/antag/nuke_instructions
 	default_raw_text = "How to break into a Nanotrasen self-destruct terminal and remove its plutonium core:<br>\
@@ -192,7 +192,7 @@
 	else
 		to_chat(user, span_notice("As it touches \the [src], both \the [src] and \the [W] burst into dust!"))
 		radiation_pulse(user, max_range = 2, threshold = RAD_EXTREME_INSULATION, chance = 40)
-		playsound(src, 'sound/effects/supermatter.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/effects/supermatter.ogg', 50, TRUE)
 		qdel(W)
 		qdel(src)
 
@@ -216,7 +216,7 @@
 	victim.investigate_log("has been dusted by [src].", INVESTIGATE_DEATHS)
 	victim.dust()
 	radiation_pulse(src, max_range = 2, threshold = RAD_EXTREME_INSULATION, chance = 40)
-	playsound(src, 'sound/effects/supermatter.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/effects/supermatter.ogg', 50, TRUE)
 	qdel(src)
 
 /obj/item/nuke_core/supermatter_sliver/pickup(mob/living/user)
@@ -227,7 +227,7 @@
 			span_userdanger("You reach for [src] with your hands. That was dumb."),\
 			span_hear("Everything suddenly goes silent."))
 	radiation_pulse(user, max_range = 2, threshold = RAD_EXTREME_INSULATION, chance = 40)
-	playsound(src, 'sound/effects/supermatter.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/effects/supermatter.ogg', 50, TRUE)
 	user.investigate_log("has been dusted by [src].", INVESTIGATE_DEATHS)
 	user.dust()
 
@@ -256,18 +256,18 @@
 	if(istype(sliver))
 		STOP_PROCESSING(SSobj, sliver)
 		icon_state = "core_container_sealed"
-		playsound(src, 'sound/items/Deconstruct.ogg', 60, TRUE)
+		playsound(src, '../assets/sound/items/Deconstruct.ogg', 60, TRUE)
 		if(ismob(loc))
 			to_chat(loc, span_warning("[src] is permanently sealed, [sliver] is safely contained."))
 
 /obj/item/scalpel/supermatter
 	name = "supermatter scalpel"
 	desc = "A scalpel with a fragile tip of condensed hyper-noblium gas, searingly cold to the touch, that can safely shave a sliver off a supermatter crystal."
-	icon = 'icons/obj/antags/syndicate_tools.dmi'
+	icon = '../assets/icons/obj/antags/syndicate_tools.dmi'
 	icon_state = "supermatter_scalpel"
 	toolspeed = 0.5
 	damtype = BURN
-	usesound = 'sound/items/weapons/bladeslice.ogg'
+	usesound = '../assets/sound/items/weapons/bladeslice.ogg'
 	var/usesLeft
 
 /obj/item/scalpel/supermatter/Initialize(mapload)
@@ -277,10 +277,10 @@
 /obj/item/hemostat/supermatter
 	name = "supermatter extraction tongs"
 	desc = "A pair of tongs made from condensed hyper-noblium gas, searingly cold to the touch, that can safely grip a supermatter sliver."
-	icon = 'icons/obj/antags/syndicate_tools.dmi'
+	icon = '../assets/icons/obj/antags/syndicate_tools.dmi'
 	icon_state = "supermatter_tongs"
-	lefthand_file = 'icons/mob/inhands/items_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items_righthand.dmi'
 	inhand_icon_state = "supermatter_tongs"
 	toolspeed = 0.75
 	damtype = BURN
@@ -343,6 +343,6 @@
 		user.investigate_log("has been dusted by [src].", INVESTIGATE_DEATHS)
 		user.dust()
 	radiation_pulse(src, max_range = 2, threshold = RAD_EXTREME_INSULATION, chance = 40)
-	playsound(src, 'sound/effects/supermatter.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/effects/supermatter.ogg', 50, TRUE)
 	QDEL_NULL(sliver)
 	update_appearance()

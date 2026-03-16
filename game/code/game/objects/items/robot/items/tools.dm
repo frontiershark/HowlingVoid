@@ -9,14 +9,14 @@
 	resistance_flags = FIRE_PROOF //if it's channeling a cyborg's excess heat, it's probably fireproof
 	force = 5
 	damtype = BURN
-	usesound = list('sound/items/tools/welder.ogg', 'sound/items/tools/welder2.ogg') //the usesounds of a lit welder
-	hitsound = 'sound/items/tools/welder.ogg' //the hitsound of a lit welder
+	usesound = list('../assets/sound/items/tools/welder.ogg', '../assets/sound/items/tools/welder2.ogg') //the usesounds of a lit welder
+	hitsound = '../assets/sound/items/tools/welder.ogg' //the hitsound of a lit welder
 
 //Peacekeeper Cyborg Projectile Dampenening Field
 /obj/item/borg/projectile_dampen
 	name = "\improper Hyperkinetic Dampening projector"
 	desc = "A device that projects a dampening field that weakens kinetic energy above a certain threshold. <span class='boldnotice'>Projects a field that drains power per second while active, that will weaken and slow damaging projectiles inside its field.</span> Still being a prototype, it tends to induce a charge on ungrounded metallic surfaces."
-	icon = 'icons/obj/devices/syndie_gadget.dmi'
+	icon = '../assets/icons/obj/devices/syndie_gadget.dmi'
 	icon_state = "shield0"
 	base_icon_state = "shield"
 	/// Max energy this dampener can hold
@@ -161,7 +161,7 @@
 /obj/item/borg/cyborg_omnitool
 	name = "cyborg omni-toolset"
 	desc = "You shouldn't see this in-game normally."
-	icon = 'icons/mob/silicon/robot_items.dmi'
+	icon = '../assets/icons/mob/silicon/robot_items.dmi'
 	icon_state = "toolkit_medborg"
 
 	///our tools (list of item typepaths)
@@ -260,7 +260,7 @@
 	//set the reference & update icons
 	set_internal_tool(tool_map[internal_tool_name])
 	update_appearance(UPDATE_ICON_STATE)
-	playsound(src, 'sound/items/tools/change_jaws.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/tools/change_jaws.ogg', 50, TRUE)
 
 /obj/item/borg/cyborg_omnitool/Click(location, control, params)
 	var/list/modifiers = params2list(params)
@@ -285,7 +285,7 @@
 /obj/item/borg/cyborg_omnitool/proc/set_upgraded(upgrade)
 	upgraded = upgraded
 
-	playsound(src, 'sound/items/tools/change_jaws.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/tools/change_jaws.ogg', 50, TRUE)
 
 /obj/item/borg/cyborg_omnitool/medical
 	name = "surgical omni-toolset"
@@ -306,7 +306,7 @@
 /obj/item/borg/cyborg_omnitool/engineering
 	name = "engineering omni-toolset"
 	desc = "A set of engineering tools used by cyborgs to conduct various engineering tasks."
-	icon = 'icons/obj/items_cyborg.dmi'
+	icon = '../assets/icons/obj/items_cyborg.dmi'
 	icon_state = "toolkit_engiborg"
 
 	omni_toolkit = list(
@@ -328,7 +328,7 @@
 /obj/item/borg/cyborg_omnitool/botany
 	name = "botanical omni-toolset"
 	desc = "A set of botanical tools used by cyborgs to do gardening."
-	icon = 'icons/obj/items_cyborg.dmi'
+	icon = '../assets/icons/obj/items_cyborg.dmi'
 	icon_state = "sili"
 
 	omni_toolkit = list(

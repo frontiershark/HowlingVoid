@@ -90,7 +90,7 @@
 /turf/open/genturf
 	name = "green ungenerated turf"
 	desc = "If you see this, and you're not a ghost, yell at coders"
-	icon = 'icons/turf/debug.dmi'
+	icon = '../assets/icons/turf/debug.dmi'
 	icon_state = "genturf_green"
 
 // following two are currently used for edge cases in which you want a certain type of map generation intermingled with other genturfs

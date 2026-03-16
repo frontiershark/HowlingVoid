@@ -2,7 +2,7 @@
 	name = "reactive armor shell"
 	desc = "An experimental suit of armor, awaiting installation of an anomaly core."
 	icon_state = "reactiveoff"
-	icon = 'icons/obj/clothing/suits/armor.dmi'
+	icon = '../assets/icons/obj/clothing/suits/armor.dmi'
 	w_class = WEIGHT_CLASS_BULKY
 
 /obj/item/reactive_armor_shell/item_interaction(mob/living/user, obj/item/tool, list/modifiers)
@@ -127,7 +127,7 @@
 
 /obj/item/clothing/suit/armor/reactive/teleport/reactive_activation(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
 	owner.visible_message(span_danger("The reactive teleport system flings [owner] clear of [attack_text]!"))
-	playsound(get_turf(owner),'sound/effects/magic/blink.ogg', 100, TRUE)
+	playsound(get_turf(owner),'../assets/sound/effects/magic/blink.ogg', 100, TRUE)
 	do_teleport(owner, get_turf(owner), tele_range, no_effects = TRUE, channel = TELEPORT_CHANNEL_BLUESPACE)
 	reactivearmor_cooldown = world.time + reactivearmor_cooldown_duration
 	return TRUE
@@ -135,8 +135,8 @@
 /obj/item/clothing/suit/armor/reactive/teleport/emp_activation(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
 	owner.visible_message(span_danger("The reactive teleport system flings itself clear of [attack_text], leaving someone behind in the process!"))
 	owner.dropItemToGround(src, TRUE, TRUE)
-	playsound(get_turf(owner),'sound/machines/buzz/buzz-sigh.ogg', 50, TRUE)
-	playsound(get_turf(owner),'sound/effects/magic/blink.ogg', 100, TRUE)
+	playsound(get_turf(owner),'../assets/sound/machines/buzz/buzz-sigh.ogg', 50, TRUE)
+	playsound(get_turf(owner),'../assets/sound/effects/magic/blink.ogg', 100, TRUE)
 	do_teleport(src, get_turf(owner), tele_range, no_effects = TRUE, channel = TELEPORT_CHANNEL_BLUESPACE)
 	reactivearmor_cooldown = world.time + reactivearmor_cooldown_duration
 	return FALSE //you didn't actually evade the attack now did you
@@ -151,7 +151,7 @@
 
 /obj/item/clothing/suit/armor/reactive/fire/reactive_activation(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
 	owner.visible_message(span_danger("[src] blocks [attack_text], sending out jets of flame!"))
-	playsound(get_turf(owner),'sound/effects/magic/fireball.ogg', 100, TRUE)
+	playsound(get_turf(owner),'../assets/sound/effects/magic/fireball.ogg', 100, TRUE)
 	for(var/mob/living/carbon/carbon_victim in range(6, get_turf(src)))
 		if(carbon_victim != owner)
 			carbon_victim.adjust_fire_stacks(8)
@@ -162,7 +162,7 @@
 
 /obj/item/clothing/suit/armor/reactive/fire/emp_activation(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
 	owner.visible_message(span_danger("[src] just makes [attack_text] worse by spewing molten death on [owner]!"))
-	playsound(get_turf(owner),'sound/effects/magic/fireball.ogg', 100, TRUE)
+	playsound(get_turf(owner),'../assets/sound/effects/magic/fireball.ogg', 100, TRUE)
 	owner.adjust_fire_stacks(12)
 	owner.ignite_mob()
 	reactivearmor_cooldown = world.time + reactivearmor_cooldown_duration
@@ -267,7 +267,7 @@
 	var/repulse_force = MOVE_FORCE_EXTREMELY_STRONG
 
 /obj/item/clothing/suit/armor/reactive/repulse/reactive_activation(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
-	playsound(get_turf(owner),'sound/effects/magic/repulse.ogg', 100, TRUE)
+	playsound(get_turf(owner),'../assets/sound/effects/magic/repulse.ogg', 100, TRUE)
 	owner.visible_message(span_danger("[src] blocks [attack_text], converting the attack into a wave of force!"))
 	var/turf/owner_turf = get_turf(owner)
 	var/list/thrown_items = list()
@@ -282,7 +282,7 @@
 	return TRUE
 
 /obj/item/clothing/suit/armor/reactive/repulse/emp_activation(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
-	playsound(get_turf(owner),'sound/effects/magic/repulse.ogg', 100, TRUE)
+	playsound(get_turf(owner),'../assets/sound/effects/magic/repulse.ogg', 100, TRUE)
 	owner.visible_message(span_danger("[src] does not block [attack_text], and instead generates an attracting force!"))
 	var/turf/owner_turf = get_turf(owner)
 	var/list/thrown_items = list()
@@ -308,7 +308,7 @@
 	owner.Knockdown(30)
 	owner.apply_damage(10, BRUTE)
 	owner.apply_damage(40, STAMINA)
-	playsound(owner, 'sound/effects/tableslam.ogg', 90, TRUE)
+	playsound(owner, '../assets/sound/effects/tableslam.ogg', 90, TRUE)
 	owner.add_mood_event("table", /datum/mood_event/table)
 	do_teleport(owner, get_turf(owner), tele_range, no_effects = TRUE, channel = TELEPORT_CHANNEL_BLUESPACE)
 	new /obj/structure/table(get_turf(owner))
@@ -418,7 +418,7 @@
 	reactivearmor_cooldown_duration = 10 SECONDS
 
 /obj/item/clothing/suit/armor/reactive/barricade/reactive_activation(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
-	playsound(get_turf(owner),'sound/effects/magic/repulse.ogg', 100, TRUE)
+	playsound(get_turf(owner),'../assets/sound/effects/magic/repulse.ogg', 100, TRUE)
 	owner.visible_message(span_danger("The reactive armor interposes matter from another world between [src] and [attack_text]!"))
 	for (var/atom/movable/target in repulse_targets(owner))
 		repulse(target, owner)
@@ -480,7 +480,7 @@
 	reactivearmor_cooldown_duration = 40 SECONDS
 
 /obj/item/clothing/suit/armor/reactive/ectoplasm/reactive_activation(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
-	playsound(get_turf(owner),'sound/effects/hallucinations/veryfar_noise.ogg', 100, TRUE)
+	playsound(get_turf(owner),'../assets/sound/effects/hallucinations/veryfar_noise.ogg', 100, TRUE)
 	owner.visible_message(span_danger("The [src] lets loose a burst of otherworldly energy!"))
 
 	haunt_outburst(epicenter = get_turf(owner), range = 5, haunt_chance = 85, duration = 30 SECONDS)
@@ -500,7 +500,7 @@
 
 /obj/item/clothing/suit/armor/reactive/weather/reactive_activation(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
 	owner.visible_message(span_danger("The reactive armor alters the weather around [owner], shielding [owner.p_them()] from [attack_text]!"))
-	playsound(src, 'sound/effects/magic/lightningshock.ogg', 33, TRUE, extrarange = SHORT_RANGE_SOUND_EXTRARANGE)
+	playsound(src, '../assets/sound/effects/magic/lightningshock.ogg', 33, TRUE, extrarange = SHORT_RANGE_SOUND_EXTRARANGE)
 
 	var/datum/effect_system/basic/steam_spread/steam = new(owner.loc, 10, FALSE)
 	steam.start()
@@ -522,7 +522,7 @@
 
 /obj/item/clothing/suit/armor/reactive/weather/emp_activation(mob/living/carbon/human/owner, atom/movable/hitby, attack_text, final_block_chance, damage, attack_type)
 	owner.visible_message(span_danger("The reactive armor malfunctions, calling down a storm upon [owner.p_them()]!"))
-	playsound(src, 'sound/effects/magic/lightningshock.ogg', 33, TRUE, extrarange = SHORT_RANGE_SOUND_EXTRARANGE)
+	playsound(src, '../assets/sound/effects/magic/lightningshock.ogg', 33, TRUE, extrarange = SHORT_RANGE_SOUND_EXTRARANGE)
 
 	var/datum/effect_system/basic/steam_spread/steam = new(owner.loc, 2, FALSE)
 	steam.start()
@@ -538,7 +538,7 @@
 	addtimer(CALLBACK(src, PROC_REF(shock_turf), target), 1 SECONDS)
 
 /obj/item/clothing/suit/armor/reactive/weather/proc/shock_turf(turf/target)
-	playsound(target, 'sound/effects/magic/lightningbolt.ogg', 66, TRUE)
+	playsound(target, '../assets/sound/effects/magic/lightningbolt.ogg', 66, TRUE)
 	new /obj/effect/temp_visual/thunderbolt(target)
 	for(var/turf/open/adjacent_turf in oview(1, target))
 		new /obj/effect/temp_visual/electricity(adjacent_turf)

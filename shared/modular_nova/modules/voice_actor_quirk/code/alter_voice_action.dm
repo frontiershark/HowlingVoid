@@ -1,7 +1,7 @@
 ///Action for voice_actor quirk
 /datum/action/innate/alter_voice
 	name = "Swap Voice"
-	button_icon = 'icons/mob/actions/actions_spells.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_spells.dmi'
 	button_icon_state = "swap"
 	check_flags = AB_CHECK_CONSCIOUS
 	/// The chat color of the primary voice

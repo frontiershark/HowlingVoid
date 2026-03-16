@@ -80,15 +80,15 @@ Can accept both a type path, and an instance of a datum. Type path has priority.
 	src.trader_data = trader_data
 
 	radial_icons_cache = list(
-		TRADER_RADIAL_BUY = image(icon = 'icons/hud/radial.dmi', icon_state = "radial_buy"),
-		TRADER_RADIAL_SELL = image(icon = 'icons/hud/radial.dmi', icon_state = "radial_sell"),
-		TRADER_RADIAL_TALK = image(icon = 'icons/hud/radial.dmi', icon_state = "radial_talk"),
-		TRADER_RADIAL_LORE = image(icon = 'icons/hud/radial.dmi', icon_state = "radial_lore"),
-		TRADER_RADIAL_DISCUSS_BUY = image(icon = 'icons/hud/radial.dmi', icon_state = "radial_buying"),
-		TRADER_RADIAL_DISCUSS_SELL = image(icon = 'icons/hud/radial.dmi', icon_state = "radial_selling"),
-		TRADER_RADIAL_YES = image(icon = 'icons/hud/radial.dmi', icon_state = "radial_yes"),
-		TRADER_RADIAL_NO = image(icon = 'icons/hud/radial.dmi', icon_state = "radial_no"),
-		TRADER_RADIAL_OUT_OF_STOCK = image(icon = 'icons/hud/radial.dmi', icon_state = "radial_center"),
+		TRADER_RADIAL_BUY = image(icon = '../assets/icons/hud/radial.dmi', icon_state = "radial_buy"),
+		TRADER_RADIAL_SELL = image(icon = '../assets/icons/hud/radial.dmi', icon_state = "radial_sell"),
+		TRADER_RADIAL_TALK = image(icon = '../assets/icons/hud/radial.dmi', icon_state = "radial_talk"),
+		TRADER_RADIAL_LORE = image(icon = '../assets/icons/hud/radial.dmi', icon_state = "radial_lore"),
+		TRADER_RADIAL_DISCUSS_BUY = image(icon = '../assets/icons/hud/radial.dmi', icon_state = "radial_buying"),
+		TRADER_RADIAL_DISCUSS_SELL = image(icon = '../assets/icons/hud/radial.dmi', icon_state = "radial_selling"),
+		TRADER_RADIAL_YES = image(icon = '../assets/icons/hud/radial.dmi', icon_state = "radial_yes"),
+		TRADER_RADIAL_NO = image(icon = '../assets/icons/hud/radial.dmi', icon_state = "radial_no"),
+		TRADER_RADIAL_OUT_OF_STOCK = image(icon = '../assets/icons/hud/radial.dmi', icon_state = "radial_center"),
 	)
 
 	restock_products()

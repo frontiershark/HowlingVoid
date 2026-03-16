@@ -4,7 +4,7 @@
  */
 /obj/item/mecha_parts/mecha_equipment
 	name = "mecha equipment"
-	icon = 'icons/obj/devices/mecha_equipment.dmi'
+	icon = '../assets/icons/obj/devices/mecha_equipment.dmi'
 	abstract_type = /obj/item/mecha_parts/mecha_equipment
 	icon_state = "mecha_equip"
 	force = 5
@@ -36,7 +36,7 @@
 	///Boolean: whether a pacifist can use this equipment
 	var/harmful = FALSE
 	///Sound file: Sound to play when this equipment is destroyed while still attached to the mech
-	var/destroy_sound = 'sound/vehicles/mecha/critdestr.ogg'
+	var/destroy_sound = '../assets/sound/vehicles/mecha/critdestr.ogg'
 	///The action type to use for this equipment. Override for custom action buttons.
 	var/action_type = /datum/action/vehicle/sealed/mecha/equipment
 
@@ -227,7 +227,7 @@
 	chassis.on_equipment_detach(src)
 	moveto = moveto || get_turf(chassis)
 	forceMove(moveto)
-	playsound(chassis, 'sound/items/weapons/tap.ogg', 50, TRUE)
+	playsound(chassis, '../assets/sound/items/weapons/tap.ogg', 50, TRUE)
 	LAZYREMOVE(chassis.flat_equipment, src)
 	var/to_unequip_slot = equipment_slot
 	if(equipment_slot == MECHA_WEAPON)

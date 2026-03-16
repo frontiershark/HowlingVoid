@@ -2,7 +2,7 @@
 /mob/living/basic/mining/legion_brood
 	name = "legion"
 	desc = "One of many."
-	icon = 'icons/mob/simple/lavaland/lavaland_monsters.dmi'
+	icon = '../assets/icons/mob/simple/lavaland/lavaland_monsters.dmi'
 	icon_state = "legion_head"
 	icon_living = "legion_head"
 	icon_dead = "legion_head"
@@ -27,7 +27,7 @@
 	attack_verb_simple = "bite"
 	attack_vis_effect = ATTACK_EFFECT_BITE
 	speak_emote = list("echoes") // who the fuck speaking as this mob it dies 10 seconds after it spawns
-	attack_sound = 'sound/items/weapons/pierce.ogg'
+	attack_sound = '../assets/sound/items/weapons/pierce.ogg'
 	density = FALSE
 	ai_controller = /datum/ai_controller/basic_controller/legion_brood
 	kill_count = FALSE
@@ -119,7 +119,7 @@
 /// Like the Legion's summoned skull but funnier (it's snow now)
 /mob/living/basic/mining/legion_brood/snow
 	name = "snow legion"
-	icon = 'icons/mob/simple/icemoon/icemoon_monsters.dmi'
+	icon = '../assets/icons/mob/simple/icemoon/icemoon_monsters.dmi'
 	icon_state = "snowlegion_head"
 	icon_living = "snowlegion_head"
 	icon_dead = "snowlegion_head"

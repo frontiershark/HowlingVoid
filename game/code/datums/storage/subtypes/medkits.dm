@@ -1,8 +1,8 @@
 ///Regular medkit
 /datum/storage/medkit
-	open_sound = 'sound/items/handling/medkit/medkit_open.ogg'
+	open_sound = '../assets/sound/items/handling/medkit/medkit_open.ogg'
 	open_sound_vary = TRUE
-	rustle_sound = 'sound/items/handling/medkit/medkit_rustle.ogg'
+	rustle_sound = '../assets/sound/items/handling/medkit/medkit_rustle.ogg'
 	max_specific_storage = WEIGHT_CLASS_SMALL
 
 	///List of everything a medkit can hold

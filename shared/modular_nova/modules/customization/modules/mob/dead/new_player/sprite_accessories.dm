@@ -159,7 +159,7 @@
 
 /datum/sprite_accessory/caps
 	key = FEATURE_MUSH_CAP
-	icon = 'icons/mob/human/species/mush_cap.dmi'
+	icon = '../assets/icons/mob/human/species/mush_cap.dmi'
 	relevent_layers = list(BODY_ADJ_LAYER)
 	color_src = USE_ONE_COLOR
 	organ_type = /obj/item/organ/mushroom_cap

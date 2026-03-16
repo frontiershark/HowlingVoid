@@ -3,7 +3,7 @@
 	desc = "Retreat to your shell!"
 	cooldown_time = 5 SECONDS
 	click_to_activate = FALSE
-	button_icon = 'icons/mob/simple/pets.dmi'
+	button_icon = '../assets/icons/mob/simple/pets.dmi'
 	button_icon_state = "snail_shell"
 
 /datum/action/cooldown/mob_cooldown/shell_retreat/Activate(atom/target)

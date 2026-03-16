@@ -5,11 +5,11 @@
 	name = "broadcast camera"
 	desc = "A large camera that streams its live feed and audio to entertainment monitors across the station, allowing everyone to watch the broadcast."
 	desc_controls = "Right-click to change the broadcast name. Alt-click to toggle microphone."
-	icon = 'icons/obj/service/broadcast.dmi'
+	icon = '../assets/icons/obj/service/broadcast.dmi'
 	icon_state = "broadcast_cam0"
 	base_icon_state = "broadcast_cam"
-	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/devices_righthand.dmi'
 	force = 8
 	throwforce = 12
 	w_class = WEIGHT_CLASS_NORMAL
@@ -96,7 +96,7 @@
 	set_microphone_state()
 
 	set_light_on(TRUE)
-	playsound(source = src, soundin = 'sound/machines/terminal/terminal_processing.ogg', vol = 20, vary = FALSE, ignore_walls = FALSE)
+	playsound(source = src, soundin = '../assets/sound/machines/terminal/terminal_processing.ogg', vol = 20, vary = FALSE, ignore_walls = FALSE)
 	balloon_alert_to_viewers("live!")
 
 /// When deactivating the camera
@@ -109,7 +109,7 @@
 	stop_broadcasting_network(camera_networks)
 
 	set_light_on(FALSE)
-	playsound(source = src, soundin = 'sound/machines/terminal/terminal_prompt_deny.ogg', vol = 20, vary = FALSE, ignore_walls = FALSE)
+	playsound(source = src, soundin = '../assets/sound/machines/terminal/terminal_prompt_deny.ogg', vol = 20, vary = FALSE, ignore_walls = FALSE)
 	balloon_alert_to_viewers("offline")
 
 /obj/item/broadcast_camera/click_alt(mob/user)

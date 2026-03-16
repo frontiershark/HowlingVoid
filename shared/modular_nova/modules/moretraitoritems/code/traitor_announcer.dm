@@ -5,9 +5,9 @@
 	desc = "Hmm... what is this for?"
 	special_desc_requirement = EXAMINE_CHECK_SYNDICATE
 	special_desc = "A remote that can be used to transmit a fake announcement of your own design."
-	icon = 'icons/obj/devices/scanner.dmi'
-	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	icon = '../assets/icons/obj/devices/scanner.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/devices_righthand.dmi'
 	icon_state = "inspector"
 	worn_icon_state = "salestagger"
 	inhand_icon_state = "electronic"

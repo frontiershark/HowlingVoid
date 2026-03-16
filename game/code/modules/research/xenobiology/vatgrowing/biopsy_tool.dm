@@ -2,7 +2,7 @@
 /obj/item/biopsy_tool
 	name = "biopsy tool"
 	desc = "Used to retrieve cell lines from organisms. Don't worry, it won't sting."
-	icon = 'icons/obj/science/vatgrowing.dmi'
+	icon = '../assets/icons/obj/science/vatgrowing.dmi'
 	icon_state = "biopsy"
 	worn_icon_state = "biopsy"
 	base_icon_state = "biopsy"

@@ -20,7 +20,7 @@
  */
 /obj/item/clipboard
 	name = "clipboard"
-	icon = 'icons/obj/service/bureaucracy.dmi'
+	icon = '../assets/icons/obj/service/bureaucracy.dmi'
 	icon_state = "clipboard"
 	inhand_icon_state = "clipboard"
 	worn_icon_state = "clipboard"

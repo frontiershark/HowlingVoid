@@ -34,12 +34,12 @@
 /obj/item/lightreplacer
 	name = "light replacer"
 	desc = "A device to automatically replace lights. Refill with broken or working light bulbs, or sheets of glass."
-	icon = 'icons/obj/service/janitor.dmi'
+	icon = '../assets/icons/obj/service/janitor.dmi'
 	icon_state = "lightreplacer"
 	inhand_icon_state = "electronic"
 	worn_icon_state = "light_replacer"
-	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/devices_righthand.dmi'
 	w_class = WEIGHT_CLASS_SMALL
 	obj_flags = CONDUCTS_ELECTRICITY
 	slot_flags = ITEM_SLOT_BELT
@@ -219,7 +219,7 @@
 	if(istype(target, /obj/machinery/light))
 		if(replace_light(target, user) && bluespace_toggle)
 			user.Beam(target, icon_state = "rped_upgrade", time = 0.5 SECONDS)
-			playsound(src, 'sound/items/pshoom/pshoom.ogg', 40, 1)
+			playsound(src, '../assets/sound/items/pshoom/pshoom.ogg', 40, 1)
 		return TRUE
 
 	// if we are attacking a floodlight frame finish it
@@ -229,7 +229,7 @@
 			new /obj/machinery/power/floodlight(frame.loc)
 			if(bluespace_toggle)
 				user.Beam(target, icon_state = "rped_upgrade", time = 0.5 SECONDS)
-				playsound(src, 'sound/items/pshoom/pshoom.ogg', 40, 1)
+				playsound(src, '../assets/sound/items/pshoom/pshoom.ogg', 40, 1)
 			to_chat(user, span_notice("You finish \the [frame] with a light tube."))
 			qdel(frame)
 		return TRUE
@@ -242,7 +242,7 @@
 				light_replaced = TRUE
 		if(light_replaced && bluespace_toggle)
 			user.Beam(target, icon_state = "rped_upgrade", time = 0.5 SECONDS)
-			playsound(src, 'sound/items/pshoom/pshoom.ogg', 40, 1)
+			playsound(src, '../assets/sound/items/pshoom/pshoom.ogg', 40, 1)
 		return TRUE
 
 	return FALSE
@@ -254,7 +254,7 @@
 	if(uses <= 0)
 		return FALSE
 
-	playsound(src.loc, 'sound/machines/click.ogg', 50, TRUE)
+	playsound(src.loc, '../assets/sound/machines/click.ogg', 50, TRUE)
 	src.add_fingerprint(user)
 	add_uses(-1)
 
@@ -270,7 +270,7 @@
 		bulb_shards = 0
 		add_uses(1)
 		to_chat(user, span_notice("\The [src] fabricates a new bulb from the broken glass it has stored. [status_string()]"))
-		playsound(src.loc, 'sound/machines/ding.ogg', 50, TRUE)
+		playsound(src.loc, '../assets/sound/machines/ding.ogg', 50, TRUE)
 		return TRUE
 	return FALSE
 
@@ -361,7 +361,7 @@
 
 /obj/effect/temp_visual/blue_firefly
 	name = "bluespace firefly"
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	icon_state = "bluespace_firefly"
 	light_power = 1
 	light_range = 2

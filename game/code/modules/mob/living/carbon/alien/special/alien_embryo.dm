@@ -2,7 +2,7 @@
 // It functions almost identically (see code/datums/diseases/alien_embryo.dm)
 /obj/item/organ/body_egg/alien_embryo
 	name = "alien embryo"
-	icon = 'icons/mob/nonhuman-player/alien.dmi'
+	icon = '../assets/icons/mob/nonhuman-player/alien.dmi'
 	icon_state = "larva0_dead"
 	food_reagents = list(/datum/reagent/consumable/nutriment/organ_tissue = 5, /datum/reagent/toxin/acid = 10)
 	///What stage of growth the embryo is at. Developed embryos give the host symptoms suggesting that an embryo is inside them.
@@ -110,13 +110,13 @@
 		addtimer(CALLBACK(src, PROC_REF(advance_embryo_stage)), growth_time)
 		return
 
-	var/mutable_appearance/overlay = mutable_appearance('icons/mob/nonhuman-player/alien.dmi', "burst_lie")
+	var/mutable_appearance/overlay = mutable_appearance('../assets/icons/mob/nonhuman-player/alien.dmi', "burst_lie")
 	owner.add_overlay(overlay)
 
 	var/atom/xeno_loc = get_turf(owner)
 	var/mob/living/carbon/alien/larva/new_xeno = new(xeno_loc)
 	new_xeno.PossessByPlayer(ghost.key)
-	SEND_SOUND(new_xeno, sound('sound/mobs/non-humanoids/hiss/hiss5.ogg',0,0,0,100)) //To get the player's attention
+	SEND_SOUND(new_xeno, sound('../assets/sound/mobs/non-humanoids/hiss/hiss5.ogg',0,0,0,100)) //To get the player's attention
 	new_xeno.add_traits(list(TRAIT_HANDS_BLOCKED, TRAIT_IMMOBILIZED, TRAIT_NO_TRANSFORM), type) //so we don't move during the bursting animation
 	new_xeno.SetInvisibility(INVISIBILITY_MAXIMUM, id=type)
 
@@ -155,7 +155,7 @@ Des: Adds the infection image to all aliens for this embryo
 ----------------------------------------*/
 /obj/item/organ/body_egg/alien_embryo/AddInfectionImages()
 	for(var/mob/living/carbon/alien/alien in GLOB.player_list)
-		var/I = image('icons/mob/nonhuman-player/alien.dmi', loc = owner, icon_state = "infected[stage]")
+		var/I = image('../assets/icons/mob/nonhuman-player/alien.dmi', loc = owner, icon_state = "infected[stage]")
 		alien.client?.images += I
 
 /*----------------------------------------

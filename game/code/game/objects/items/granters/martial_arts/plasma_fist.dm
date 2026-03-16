@@ -5,7 +5,7 @@
 	desc = "An aged and frayed scrap of paper written in shifting runes. There are hand-drawn illustrations of pugilism."
 	greet = span_bolddanger("You have learned the ancient martial art of Plasma Fist. Your combos are extremely hard to pull off, but include some of the most deadly moves ever seen including \
 		the plasma fist, which when pulled off will make someone violently explode.")
-	icon = 'icons/obj/scrolls.dmi'
+	icon = '../assets/icons/obj/scrolls.dmi'
 	icon_state ="plasmafist"
 	remarks = list(
 		"Balance...",

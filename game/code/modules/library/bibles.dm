@@ -67,12 +67,12 @@ GLOBAL_LIST_INIT(bibleitemstates, list(
 /obj/item/book/bible
 	name = "bible"
 	desc = "Apply to head repeatedly."
-	icon = 'icons/obj/storage/book.dmi'
+	icon = '../assets/icons/obj/storage/book.dmi'
 	icon_state = "bible"
 	worn_icon_state = "bible"
 	inhand_icon_state = "bible"
-	lefthand_file = 'icons/mob/inhands/items/books_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/books_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/books_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/books_righthand.dmi'
 	force_string = "holy"
 	unique = TRUE
 	carved_storage_type = /datum/storage/carved_book/bible
@@ -94,7 +94,7 @@ GLOBAL_LIST_INIT(bibleitemstates, list(
 /// Destroy the bible when it's shot by a bullet
 /obj/item/book/bible/proc/on_intercepted_bullet(mob/living/victim, obj/projectile/bullet)
 	victim.add_mood_event("blessing", /datum/mood_event/blessing)
-	playsound(victim, 'sound/effects/magic/magic_block_holy.ogg', 50, TRUE)
+	playsound(victim, '../assets/sound/effects/magic/magic_block_holy.ogg', 50, TRUE)
 	victim.visible_message(span_warning("[src] takes [bullet] in [victim]'s place!"))
 	var/obj/structure/fluff/paper/stack/pages = new(get_turf(src))
 	pages.setDir(pick(GLOB.alldirs))
@@ -154,7 +154,7 @@ GLOBAL_LIST_INIT(bibleitemstates, list(
 
 	var/list/skins = list()
 	for(var/i in 1 to GLOB.biblestates.len)
-		var/image/bible_image = image(icon = 'icons/obj/storage/book.dmi', icon_state = GLOB.biblestates[i])
+		var/image/bible_image = image(icon = '../assets/icons/obj/storage/book.dmi', icon_state = GLOB.biblestates[i])
 		skins += list("[GLOB.biblenames[i]]" = bible_image)
 
 	var/choice = show_radial_menu(user, src, skins, custom_check = CALLBACK(src, PROC_REF(check_menu), user), radius = 40, require_near = TRUE)
@@ -327,9 +327,9 @@ GLOBAL_LIST_INIT(bibleitemstates, list(
 			return ITEM_INTERACT_BLOCKING
 		var/obj/item/melee/cultblade/haunted/sword = bible_smacked
 		sword.balloon_alert(user, "exorcising...")
-		playsound(src,'sound/effects/hallucinations/veryfar_noise.ogg',40,TRUE)
+		playsound(src,'../assets/sound/effects/hallucinations/veryfar_noise.ogg',40,TRUE)
 		if(do_after(user, 12 SECONDS, target = sword))
-			playsound(src,'sound/effects/pray_chaplain.ogg',60,TRUE)
+			playsound(src,'../assets/sound/effects/pray_chaplain.ogg',60,TRUE)
 			new /obj/item/nullrod/nullblade(get_turf(sword))
 			user.visible_message(span_notice("[user] exorcises [sword]!"))
 			qdel(sword)
@@ -354,7 +354,7 @@ GLOBAL_LIST_INIT(bibleitemstates, list(
 	throw_range = 7
 	throwforce = 18
 	force = 18
-	hitsound = 'sound/items/weapons/sear.ogg'
+	hitsound = '../assets/sound/items/weapons/sear.ogg'
 	damtype = BURN
 	attack_verb_continuous = list("attacks", "burns", "blesses", "damns", "scorches", "curses", "smites")
 	attack_verb_simple = list("attack", "burn", "bless", "damn", "scorch", "curse", "smite")
@@ -379,7 +379,7 @@ GLOBAL_LIST_INIT(bibleitemstates, list(
 	user.mind.set_holy_role(HOLY_ROLE_PRIEST)
 	uses -= 1
 	to_chat(user, span_userdanger("You try to open the book AND IT BITES YOU!"))
-	playsound(src.loc, 'sound/effects/snap.ogg', 50, TRUE)
+	playsound(src.loc, '../assets/sound/effects/snap.ogg', 50, TRUE)
 	user.apply_damage(5, BRUTE, user.get_active_hand(), attacking_item = src)
 	to_chat(user, span_notice("Your name appears on the inside cover, in blood."))
 	owner_name = user.real_name

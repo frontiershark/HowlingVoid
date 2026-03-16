@@ -160,7 +160,7 @@
 /datum/voucher_set/traitor/secondary_weapon/esword
 	name = /obj/item/melee/energy/sword/saber/red::name
 	description = /obj/item/melee/energy/sword/saber/red::desc
-	icon = 'icons/obj/weapons/transforming_energy.dmi'
+	icon = '../assets/icons/obj/weapons/transforming_energy.dmi'
 	icon_state = "e_sword_on"
 	set_items = list(
 		/obj/item/melee/energy/sword/saber/red,

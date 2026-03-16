@@ -29,8 +29,8 @@
 	holy_bible.deity_name = "Narsie"
 	holy_bible.icon_state = "melted"
 	holy_bible.inhand_icon_state = "melted"
-	holy_bible.lefthand_file = 'icons/mob/inhands/items/books_lefthand.dmi'
-	holy_bible.righthand_file = 'icons/mob/inhands/items/books_righthand.dmi'
+	holy_bible.lefthand_file = '../assets/icons/mob/inhands/items/books_lefthand.dmi'
+	holy_bible.righthand_file = '../assets/icons/mob/inhands/items/books_righthand.dmi'
 	new /obj/item/paper/fluff/awaymissions/stationcollision/safehint_paper_bible(holy_bible)
 	new /obj/item/pen(holy_bible)
 	return INITIALIZE_HINT_QDEL

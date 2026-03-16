@@ -30,7 +30,7 @@
 
 	var/image/food_image = new
 	food_image.appearance = appearance
-	food_image.underlays += mutable_appearance(icon = 'icons/effects/effects.dmi' , icon_state = "thought_bubble")
+	food_image.underlays += mutable_appearance(icon = '../assets/icons/effects/effects.dmi' , icon_state = "thought_bubble")
 
 	return food_image
 
@@ -51,7 +51,7 @@
 		span_danger("[customer_pawn] pushes [order_item] into their mouth-shaped hole!"),
 		span_danger("You push [order_item] into your mouth-shaped hole."),
 	)
-	playsound(customer_pawn, 'sound/items/eatfood.ogg', rand(10,50), TRUE)
+	playsound(customer_pawn, '../assets/sound/items/eatfood.ogg', rand(10,50), TRUE)
 	qdel(order_item)
 
 /obj/machinery/restaurant_portal/restaurant

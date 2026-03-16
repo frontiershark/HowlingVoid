@@ -5,7 +5,7 @@
 /obj/item/electroadaptive_pseudocircuit
 	name = "electroadaptive pseudocircuit"
 	desc = "An all-in-one circuit imprinter, designer, synthesizer, outfitter, creator, and chef. It can be used in place of any generic circuit board during construction."
-	icon = 'icons/obj/devices/circuitry_n_data.dmi'
+	icon = '../assets/icons/obj/devices/circuitry_n_data.dmi'
 	icon_state = "boris"
 	w_class = WEIGHT_CLASS_TINY
 	custom_materials = list(/datum/material/iron = SMALL_MATERIAL_AMOUNT * 0.5, /datum/material/glass = SMALL_MATERIAL_AMOUNT * 3)
@@ -44,7 +44,7 @@
 	if(!circuits)
 		to_chat(R, span_warning("You need more material. Use [src] on existing simple circuits to break them down."))
 		return
-	playsound(R, 'sound/items/tools/rped.ogg', 50, TRUE)
+	playsound(R, '../assets/sound/items/tools/rped.ogg', 50, TRUE)
 	recharging = TRUE
 	circuits--
 	maptext = MAPTEXT(circuits)
@@ -64,12 +64,12 @@
 		span_notice("User breaks down [interacting_with] with [src]."),
 		span_notice("You recycle [interacting_with] into [src]. It now has material for <b>[circuits]</b> circuits.")
 	)
-	playsound(user, 'sound/items/deconstruct.ogg', 50, TRUE)
+	playsound(user, '../assets/sound/items/deconstruct.ogg', 50, TRUE)
 	qdel(interacting_with)
 	return ITEM_INTERACT_SUCCESS
 
 /obj/item/electroadaptive_pseudocircuit/proc/recharge()
-	playsound(src, 'sound/machines/chime.ogg', 25, TRUE)
+	playsound(src, '../assets/sound/machines/chime.ogg', 25, TRUE)
 	recharging = FALSE
 	icon_state = initial(icon_state)
 

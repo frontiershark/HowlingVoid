@@ -4,7 +4,7 @@
 /obj/structure/outfit_wardrobe
 	name = "outfit wardrobe"
 	desc = "Peek in and select one of several snazzy outfits. Narnia not included."
-	icon = 'icons/obj/storage/closet.dmi'
+	icon = '../assets/icons/obj/storage/closet.dmi'
 	icon_state = "fullcabinet"
 	base_icon_state = "fullcabinet"
 	obj_flags = INDESTRUCTIBLE
@@ -68,17 +68,17 @@
 	chosen_class = choice
 
 	human_user.balloon_alert(human_user, LOWER_TEXT(chosen_class.name))
-	playsound(human_user, 'sound/items/zip/un_zip.ogg', 33)
-	playsound(src, 'sound/machines/closet/wooden_closet_open.ogg', 25)
+	playsound(human_user, '../assets/sound/items/zip/un_zip.ogg', 33)
+	playsound(src, '../assets/sound/machines/closet/wooden_closet_open.ogg', 25)
 	icon_state = "fullcabinet_open"
 	if(!do_after(human_user, 3 SECONDS) || selectable_outfits_to_amount[choice] == 0)
-		playsound(src, 'sound/machines/closet/wooden_closet_close.ogg', 50)
+		playsound(src, '../assets/sound/machines/closet/wooden_closet_close.ogg', 50)
 		icon_state = base_icon_state
 		return
 	selectable_outfits_to_amount[choice]--
-	playsound(src, 'sound/machines/closet/wooden_closet_close.ogg', 50)
+	playsound(src, '../assets/sound/machines/closet/wooden_closet_close.ogg', 50)
 	icon_state = base_icon_state
-	playsound(human_user, 'sound/items/zip/zip_up.ogg', 33)
+	playsound(human_user, '../assets/sound/items/zip/zip_up.ogg', 33)
 
 	human_user.drop_everything()
 	human_user.equipOutfit(chosen_class)

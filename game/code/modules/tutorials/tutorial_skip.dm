@@ -1,5 +1,5 @@
 /atom/movable/screen/tutorial_skip
-	icon = 'icons/effects/alphacolors.dmi'
+	icon = '../assets/icons/effects/alphacolors.dmi'
 	icon_state = "white"
 	screen_loc = "TOP,LEFT"
 	color = COLOR_NEARLY_ALL_BLACK

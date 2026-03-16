@@ -213,7 +213,7 @@
 /obj/item/organ/tail/fish
 	name = "fish tail"
 	desc = "A severed tail from some sort of marine creature... or a fish-infused spaceman. It's smooth, faintly wet and definitely not flopping."
-	icon = 'icons/map_icons/items/_item.dmi'
+	icon = '../assets/icons/map_icons/items/_item.dmi'
 	icon_state = "/obj/item/organ/tail/fish"
 	post_init_icon_state = "fish_tail"
 	greyscale_config = /datum/greyscale_config/fish_tail
@@ -314,7 +314,7 @@
 /obj/item/organ/lungs/fish
 	name = "mutated gills"
 	desc = "Fish DNA infused on what once was a normal pair of lungs that now require spacemen to breathe water vapor, or keep themselves covered in water."
-	icon = 'icons/obj/medical/organs/infuser_organs.dmi'
+	icon = '../assets/icons/obj/medical/organs/infuser_organs.dmi'
 	icon_state = "gills"
 	breath_noise = "the dribbling of water"
 	organ_traits = list(TRAIT_NODROWN)
@@ -385,7 +385,7 @@
 
 // Simple overlay so we can add gills to those with fish lungs
 /datum/bodypart_overlay/simple/gills
-	icon = 'icons/mob/human/fish_features.dmi'
+	icon = '../assets/icons/mob/human/fish_features.dmi'
 	icon_state = "gills"
 	layers = EXTERNAL_ADJACENT
 
@@ -438,7 +438,7 @@
 /obj/item/organ/stomach/fish
 	name = "mutated fish-stomach"
 	desc = "Fish DNA infused into a stomach now permeated by the faint smell of salt and slightly putrefied fish."
-	icon = 'icons/map_icons/items/_item.dmi'
+	icon = '../assets/icons/map_icons/items/_item.dmi'
 	icon_state = "/obj/item/organ/stomach/fish"
 	post_init_icon_state = "stomach"
 	greyscale_config = /datum/greyscale_config/mutant_organ
@@ -464,7 +464,7 @@
 /obj/item/organ/tongue/inky
 	name = "ink-secreting tongue"
 	desc = "A black tongue linked to two swollen black sacs underneath the palate."
-	icon = 'icons/obj/medical/organs/infuser_organs.dmi'
+	icon = '../assets/icons/obj/medical/organs/infuser_organs.dmi'
 	icon_state = "inky_tongue"
 	actions_types = list(/datum/action/cooldown/ink_spit)
 	/**
@@ -519,7 +519,7 @@
 /obj/item/organ/liver/fish
 	name = "mutated fish-liver"
 	desc = "Fish DNA infused into a stomach that now uses tetrodotoxin as regenerative material. It also processes alcohol quite well."
-	icon = 'icons/map_icons/items/_item.dmi'
+	icon = '../assets/icons/map_icons/items/_item.dmi'
 	icon_state = "/obj/item/organ/liver/fish"
 	post_init_icon_state = "liver"
 	greyscale_config = /datum/greyscale_config/mutant_organ

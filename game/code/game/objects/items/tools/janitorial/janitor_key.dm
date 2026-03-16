@@ -6,10 +6,10 @@
 	desc = "A key ring with a beeper, allowing the keys to change shape depending on which department it has access to."
 	icon_state = "access_key"
 	inhand_icon_state = "access_key"
-	icon = 'icons/obj/service/janitor.dmi'
-	lefthand_file = 'icons/mob/inhands/items/keys_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/keys_righthand.dmi'
-	hitsound = 'sound/items/rattling_keys_attack.ogg'
+	icon = '../assets/icons/obj/service/janitor.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/keys_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/keys_righthand.dmi'
+	hitsound = '../assets/sound/items/rattling_keys_attack.ogg'
 	force = 2
 	verb_say = "beeps" //it has a beeper
 	verb_ask = "questionably beeps"
@@ -49,7 +49,7 @@
 	if(DOING_INTERACTION_WITH_TARGET(user, airlock))
 		return
 	user.balloon_alert_to_viewers("fumbles with keys...", "finding key...")
-	user.playsound_local(src, 'sound/items/rattling_keys.ogg', 25, TRUE)
+	user.playsound_local(src, '../assets/sound/items/rattling_keys.ogg', 25, TRUE)
 	if(!do_after(user, 3 SECONDS, airlock))
 		return FALSE
 	if(!department_access || !airlock.check_access_list(SSid_access.accesses_by_region[department_access]))
@@ -68,7 +68,7 @@
 	SIGNAL_HANDLER
 	department_access = region_access[1]
 	say("Access granted to [department_access] area.")
-	playsound(src, 'sound/machines/ding.ogg', 25, TRUE)
+	playsound(src, '../assets/sound/machines/ding.ogg', 25, TRUE)
 	addtimer(CALLBACK(src, PROC_REF(clear_access)), ACCESS_TIMER_LIMIT, TIMER_UNIQUE|TIMER_OVERRIDE)
 	log_game("Access to the [department_access] department was given to [src] [(ismob(loc)) ? "held by [loc]" : "which is not being held"]")
 	investigate_log("Access to the [department_access] department was given to [src] [(ismob(loc)) ? "held by [loc]" : "which is not being held"]", INVESTIGATE_ACCESSCHANGES)
@@ -82,6 +82,6 @@
 	investigate_log("Access to the [department_access] department on [src] has expired.]", INVESTIGATE_ACCESSCHANGES)
 	department_access = null
 	say("Access revoked, time ran out.")
-	playsound(src, 'sound/machines/scanner/scanbuzz.ogg', 25, TRUE)
+	playsound(src, '../assets/sound/machines/scanner/scanbuzz.ogg', 25, TRUE)
 
 #undef ACCESS_TIMER_LIMIT

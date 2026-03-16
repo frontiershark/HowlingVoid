@@ -11,7 +11,7 @@
 /obj/projectile/energy/bolt/halloween
 	name = "candy corn"
 	icon_state = "candy_corn"
-	icon = 'icons/obj/food/food.dmi'
+	icon = '../assets/icons/obj/food/food.dmi'
 
 /obj/projectile/energy/bolt/large
 	damage = 20

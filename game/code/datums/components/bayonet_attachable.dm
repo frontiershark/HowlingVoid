@@ -32,7 +32,7 @@
 	removable = TRUE,
 	bayonet_icon_state = null,
 	bayonet_overlay = "bayonet",
-	bayonet_overlay_icon = 'icons/obj/weapons/guns/bayonets.dmi',
+	bayonet_overlay_icon = '../assets/icons/obj/weapons/guns/bayonets.dmi',
 	allow_sawnoff = FALSE
 )
 

@@ -149,7 +149,7 @@
 	///how many hearts should we display
 	VAR_PRIVATE/hearts_percentage
 	///icon of our heart
-	var/heart_icon = 'icons/effects/effects.dmi'
+	var/heart_icon = '../assets/icons/effects/effects.dmi'
 
 /obj/effect/overlay/happiness_overlay/Initialize(mapload)
 	. = ..()

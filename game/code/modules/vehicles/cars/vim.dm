@@ -17,7 +17,7 @@
 	light_range = 4
 	light_power = 1.5
 	light_on = FALSE
-	engine_sound = 'sound/effects/servostep.ogg'
+	engine_sound = '../assets/sound/effects/servostep.ogg'
 	interaction_flags_mouse_drop = NONE
 	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 0.55, /datum/material/glass = SMALL_MATERIAL_AMOUNT * 0.7)
 	///Maximum size of a mob trying to enter the mech
@@ -89,9 +89,9 @@
 /obj/vehicle/sealed/car/vim/mob_enter(mob/newoccupant, silent = FALSE)
 	. = ..()
 	update_appearance()
-	playsound(src, 'sound/machines/windowdoor.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/machines/windowdoor.ogg', 50, TRUE)
 	if(atom_integrity == max_integrity)
-		SEND_SOUND(newoccupant, sound('sound/vehicles/mecha/nominal.ogg',volume=50))
+		SEND_SOUND(newoccupant, sound('../assets/sound/vehicles/mecha/nominal.ogg',volume=50))
 
 /obj/vehicle/sealed/car/vim/mob_try_exit(mob/pilot, mob/user, silent = FALSE, randomstep = FALSE)
 	. = ..()

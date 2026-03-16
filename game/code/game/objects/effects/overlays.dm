@@ -9,7 +9,7 @@
 
 /obj/effect/overlay/beam//Not actually a projectile, just an effect.
 	name = "beam"
-	icon = 'icons/effects/beam.dmi'
+	icon = '../assets/icons/effects/beam.dmi'
 	icon_state = "b_beam"
 	var/atom/BeamSource
 
@@ -20,14 +20,14 @@
 /obj/effect/overlay/sparkles
 	gender = PLURAL
 	name = "sparkles"
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	icon_state = "shieldsparkles"
 	anchored = TRUE
 
 /obj/effect/overlay/thermite
 	name = "thermite"
 	desc = "Looks hot."
-	icon = 'icons/effects/fire.dmi'
+	icon = '../assets/icons/effects/fire.dmi'
 	icon_state = "medium" //what?
 	anchored = TRUE
 	plane = ABOVE_GAME_PLANE
@@ -63,7 +63,7 @@
 	appearance_flags = KEEP_TOGETHER | LONG_GLIDE | PIXEL_SCALE
 
 /obj/effect/overlay/spotlight
-	icon = 'icons/effects/light_overlays/light_64.dmi'
+	icon = '../assets/icons/effects/light_overlays/light_64.dmi'
 	icon_state = "spotlight"
 	pixel_x = -16
 	plane = ABOVE_GAME_PLANE

@@ -104,10 +104,10 @@
 /obj/item/reagent_containers/borghypo
 	name = "cyborg hypospray"
 	desc = "An advanced chemical synthesizer and injection system, designed for heavy-duty medical equipment."
-	icon = 'icons/obj/medical/syringe.dmi'
+	icon = '../assets/icons/obj/medical/syringe.dmi'
 	inhand_icon_state = "hypo"
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/medical_righthand.dmi'
 	icon_state = "borghypo"
 	amount_per_transfer_from_this = 5
 	possible_transfer_amounts = list(2,5)
@@ -248,7 +248,7 @@
 			if(istype(loc, /obj/item/robot_model))
 				var/obj/item/robot_model/container_model = loc
 				cyborg = container_model.robot
-			playsound(cyborg, 'sound/effects/pop.ogg', 50, FALSE)
+			playsound(cyborg, '../assets/sound/effects/pop.ogg', 50, FALSE)
 			balloon_alert(cyborg, "dispensing [selected_reagent.name]")
 			break
 
@@ -332,7 +332,7 @@ NOVA EDIT REMOVAL END */
 /obj/item/reagent_containers/borghypo/borgshaker
 	name = "cyborg shaker"
 	desc = "An advanced drink synthesizer and mixer."
-	icon = 'icons/obj/drinks/bottles.dmi'
+	icon = '../assets/icons/obj/drinks/bottles.dmi'
 	icon_state = "shaker"
 	possible_transfer_amounts = list(5,10,20,1)
 	// Lots of reagents all regenerating at once, so the charge cost is lower. They also regenerate faster.
@@ -433,7 +433,7 @@ NOVA EDIT REMOVAL END */
 /obj/item/reagent_containers/borghypo/condiment_synthesizer // Solids! Condiments! The borger uprising!
 	name = "Condiment Synthesizer"
 	desc = "An advanced condiment synthesizer"
-	icon = 'icons/obj/food/containers.dmi'
+	icon = '../assets/icons/obj/food/containers.dmi'
 	icon_state = "flour"
 	possible_transfer_amounts = list(5,10,20,1)
 	// Lots of reagents all regenerating at once, so the charge cost is lower. They also regenerate faster.
@@ -490,7 +490,7 @@ NOVA EDIT REMOVAL END */
 /obj/item/reagent_containers/borghypo/borgshaker/hacked
 	name = "cyborg shaker"
 	desc = "Will mix drinks that knock them dead."
-	icon = 'icons/obj/drinks/mixed_drinks.dmi'
+	icon = '../assets/icons/obj/drinks/mixed_drinks.dmi'
 	icon_state = "threemileislandglass"
 	tgui_theme = "syndicate"
 	dispensed_temperature = WATER_MATTERSTATE_CHANGE_TEMP

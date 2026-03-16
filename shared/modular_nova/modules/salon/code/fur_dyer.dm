@@ -73,7 +73,7 @@
 
 		visible_message(span_notice("[user] finishes painting [target_human]!"))
 
-		playsound(src.loc, 'sound/effects/spray2.ogg', 50, TRUE)
+		playsound(src.loc, '../assets/sound/effects/spray2.ogg', 50, TRUE)
 
 
 /obj/item/fur_dyer/proc/dye_marking(mob/living/carbon/human/target_human, mob/living/user)
@@ -124,5 +124,5 @@
 
 		visible_message(span_notice("[user] finishes painting [target_human]!"))
 
-		playsound(src.loc, 'sound/effects/spray2.ogg', 50, TRUE)
+		playsound(src.loc, '../assets/sound/effects/spray2.ogg', 50, TRUE)
 

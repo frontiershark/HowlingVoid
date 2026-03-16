@@ -16,7 +16,7 @@
 /obj/structure/disposaloutlet
 	name = "disposal outlet"
 	desc = "An outlet for the pneumatic disposal system."
-	icon = 'icons/obj/pipes_n_cables/disposal.dmi'
+	icon = '../assets/icons/obj/pipes_n_cables/disposal.dmi'
 	icon_state = "outlet"
 	density = TRUE
 	anchored = TRUE
@@ -64,14 +64,14 @@
 	flick("outlet-open", src)
 	if((start_eject + 30) < world.time)
 		start_eject = world.time
-		playsound(src, 'sound/machines/warning-buzzer.ogg', 50, FALSE, FALSE)
+		playsound(src, '../assets/sound/machines/warning-buzzer.ogg', 50, FALSE, FALSE)
 		addtimer(CALLBACK(src, PROC_REF(expel_holder), H, TRUE), 2 SECONDS)
 	else
 		addtimer(CALLBACK(src, PROC_REF(expel_holder), H), 2 SECONDS)
 
 /obj/structure/disposaloutlet/proc/expel_holder(obj/structure/disposalholder/H, playsound=FALSE)
 	if(playsound)
-		playsound(src, 'sound/machines/hiss.ogg', 50, FALSE, FALSE)
+		playsound(src, '../assets/sound/machines/hiss.ogg', 50, FALSE, FALSE)
 
 	if(QDELETED(H))
 		return
@@ -86,7 +86,7 @@
 	if(!I.tool_start_check(user, amount=1, heat_required = HIGH_TEMPERATURE_REQUIRED))
 		return TRUE
 
-	playsound(src, 'sound/items/tools/welder2.ogg', 100, TRUE)
+	playsound(src, '../assets/sound/items/tools/welder2.ogg', 100, TRUE)
 	to_chat(user, span_notice("You start slicing the floorweld off [src]..."))
 	if(I.use_tool(src, user, 20))
 		to_chat(user, span_notice("You slice the floorweld off [src]."))

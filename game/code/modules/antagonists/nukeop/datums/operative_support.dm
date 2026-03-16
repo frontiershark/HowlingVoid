@@ -5,7 +5,7 @@
 	nukeop_outfit = /datum/outfit/syndicate/support
 
 /datum/antagonist/nukeop/support/greet()
-	owner.current.playsound_local(get_turf(owner.current), 'sound/machines/printer.ogg', 100, 0, use_reverb = FALSE)
+	owner.current.playsound_local(get_turf(owner.current), '../assets/sound/machines/printer.ogg', 100, 0, use_reverb = FALSE)
 	to_chat(owner, span_big("You are a [name]! You've been temporarily assigned to provide camera overwatch and manage communications for a nuclear operative team!"))
 	to_chat(owner, span_red("Use your tools to set up your equipment however you like, but do NOT attempt to leave your outpost."))
 	owner.announce_objectives()
@@ -24,7 +24,7 @@
 			network = OPERATIVE_CAMERA_NET, \
 			emp_proof = FALSE, \
 		)
-		our_teammate.playsound_local(get_turf(owner.current), 'sound/items/weapons/egloves.ogg', 100, 0)
+		our_teammate.playsound_local(get_turf(owner.current), '../assets/sound/items/weapons/egloves.ogg', 100, 0)
 		to_chat(our_teammate, span_notice("A Syndicate Overwatch Intelligence Agent has been assigned to your team. Smile, you're on camera!"))
 
 	RegisterSignal(nuke_team, COMSIG_NUKE_TEAM_ADDITION, PROC_REF(late_bodycam))

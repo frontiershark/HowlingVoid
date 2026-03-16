@@ -4,7 +4,7 @@
 #define MANUFACTURING_TURF_LAG_LIMIT 10 // max items on a turf before we consider it full
 
 /obj/machinery/power/manufacturing
-	icon = 'icons/obj/machines/manufactorio.dmi'
+	icon = '../assets/icons/obj/machines/manufactorio.dmi'
 	name = "base manufacture receiving type"
 	desc = "this shouldnt exist"
 	density = TRUE
@@ -75,7 +75,7 @@
 		dir_offset = dir2offset(direction)
 		dir_offset[1] *= 32
 		dir_offset[2] *= 32
-	var/image/nonemissive = image(icon='icons/obj/doors/airlocks/station/overlays.dmi', icon_state="unres_[direction]")
+	var/image/nonemissive = image(icon='../assets/icons/obj/doors/airlocks/station/overlays.dmi', icon_state="unres_[direction]")
 	nonemissive.pixel_w = dir_offset[1]
 	nonemissive.pixel_z = dir_offset[2]
 	nonemissive.color = color

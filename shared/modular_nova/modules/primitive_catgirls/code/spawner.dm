@@ -2,7 +2,7 @@
 	name = "hole in the ground"
 	desc = "A clearly hand dug hole in the ground that appears to lead into a small cave of some kind? It's pretty dark in there."
 	prompt_name = "icemoon dweller"
-	icon = 'icons/mob/simple/lavaland/nest.dmi'
+	icon = '../assets/icons/mob/simple/lavaland/nest.dmi'
 	icon_state = "hole"
 	mob_species = /datum/species/human/felinid/primitive
 	outfit = /datum/outfit/primitive_catgirl

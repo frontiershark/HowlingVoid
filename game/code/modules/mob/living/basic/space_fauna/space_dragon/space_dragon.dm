@@ -11,7 +11,7 @@
 /mob/living/basic/space_dragon
 	name = "Space Dragon"
 	desc = "A serpentine leviathan whose flight defies all modern understanding of physics. Said to be the ultimate stage in the life cycle of the Space Carp."
-	icon = 'icons/mob/nonhuman-player/spacedragon.dmi'
+	icon = '../assets/icons/mob/nonhuman-player/spacedragon.dmi'
 	icon_state = "spacedragon"
 	icon_living = "spacedragon"
 	icon_dead = "spacedragon_dead"
@@ -31,7 +31,7 @@
 	speed = 0
 	attack_verb_continuous = "chomps"
 	attack_verb_simple = "chomp"
-	attack_sound = 'sound/effects/magic/demon_attack1.ogg'
+	attack_sound = '../assets/sound/effects/magic/demon_attack1.ogg'
 	attack_vis_effect = ATTACK_EFFECT_BITE
 	obj_damage = 50
 	melee_damage_upper = 35
@@ -44,7 +44,7 @@
 	maptext_height = 64
 	maptext_width = 64
 	mouse_opacity = MOUSE_OPACITY_ICON
-	death_sound = 'sound/mobs/non-humanoids/space_dragon/space_dragon_roar.ogg'
+	death_sound = '../assets/sound/mobs/non-humanoids/space_dragon/space_dragon_roar.ogg'
 	death_message = "screeches in agony as it collapses to the floor, its life extinguished."
 	butcher_results = list(/obj/item/stack/ore/diamond = 5, /obj/item/stack/sheet/sinew = 5, /obj/item/stack/sheet/bone = 30)
 	initial_language_holder = /datum/language_holder/carp/dragon
@@ -222,7 +222,7 @@
 	adjust_health(round(-health_recovered, 1))
 	if (QDELETED(food) || food.loc == src)
 		return FALSE
-	playsound(src, 'sound/effects/magic/demon_attack1.ogg', 60, TRUE)
+	playsound(src, '../assets/sound/effects/magic/demon_attack1.ogg', 60, TRUE)
 	visible_message(span_boldwarning("[src] swallows [food] whole!"))
 	food.extinguish_mob() // It's wet in there, and our food is likely to be on fire. Let's be decent and not husk them.
 	food.forceMove(src)
@@ -239,7 +239,7 @@
 			addtimer(CALLBACK(src, PROC_REF(begin_sharkify)), 2 SECONDS)
 			fish_left = initial(fish_left) //prevent begin_sharkify from being called again by eating another fish.
 	adjust_health(round(-health_recovered, 1))
-	playsound(src, 'sound/effects/magic/demon_attack1.ogg', 40, TRUE)
+	playsound(src, '../assets/sound/effects/magic/demon_attack1.ogg', 40, TRUE)
 	visible_message(span_boldwarning("[src] swallows [fish] whole!"))
 	if(HAS_TRAIT(fish, TRAIT_YUCKY_FISH))
 		balloon_alert(src, "disgusting!")
@@ -256,7 +256,7 @@
 	if(stat == DEAD)
 		return
 	new /obj/effect/decal/cleanable/vomit(loc)
-	playsound(src, 'sound/effects/splat.ogg', vol = 50, vary = TRUE)
+	playsound(src, '../assets/sound/effects/splat.ogg', vol = 50, vary = TRUE)
 	visible_message(span_danger("[src] vomits up everything it ate so far!"))
 	for(var/atom/movable/eaten in src)
 		if(HAS_TRAIT(eaten, TRAIT_NOT_BARFABLE))
@@ -281,7 +281,7 @@
 	if (eaten.stat == DEAD)
 		return
 	new /obj/effect/decal/cleanable/vomit(loc)
-	playsound(src, 'sound/effects/splat.ogg', vol = 50, vary = TRUE)
+	playsound(src, '../assets/sound/effects/splat.ogg', vol = 50, vary = TRUE)
 	visible_message(span_danger("[src] vomits up [eaten]!"))
 	eaten.forceMove(loc)
 	eaten.Paralyze(5 SECONDS)

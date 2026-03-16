@@ -36,7 +36,7 @@ Possible to do for anyone motivated enough:
 /obj/machinery/holopad
 	name = "holopad"
 	desc = "It's a floor-mounted device for projecting holographic images."
-	icon = 'icons/obj/machines/floor.dmi'
+	icon = '../assets/icons/obj/machines/floor.dmi'
 	icon_state = "holopad0"
 	base_icon_state = "holopad"
 	/// The plane is set such that it shows up without being covered by pipes/wires in a map editor, we change this on initialize.
@@ -529,7 +529,7 @@ Possible to do for anyone motivated enough:
 		if(outgoing_call)
 			holocall.Disconnect(src)//can't answer calls while calling
 		else
-			playsound(src, 'sound/machines/beep/twobeep.ogg', 100) //bring, bring!
+			playsound(src, '../assets/sound/machines/beep/twobeep.ogg', 100) //bring, bring!
 			are_ringing = TRUE
 
 	if(ringing != are_ringing)
@@ -893,7 +893,7 @@ For the other part of the code, check silicon say.dm. Particularly robot talk.*/
 
 /obj/effect/overlay/holoray
 	name = "holoray"
-	icon = 'icons/effects/96x96.dmi'
+	icon = '../assets/icons/effects/96x96.dmi'
 	icon_state = "holoray"
 	layer = FLY_LAYER
 	plane = ABOVE_GAME_PLANE

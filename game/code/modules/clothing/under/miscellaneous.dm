@@ -1,6 +1,6 @@
 /obj/item/clothing/under/misc
-	icon = 'icons/obj/clothing/under/misc.dmi'
-	worn_icon = 'icons/mob/clothing/under/misc.dmi'
+	icon = '../assets/icons/obj/clothing/under/misc.dmi'
+	worn_icon = '../assets/icons/mob/clothing/under/misc.dmi'
 	abstract_type = /obj/item/clothing/under/misc
 
 /obj/item/clothing/under/misc/pj
@@ -48,10 +48,10 @@
 
 /obj/item/clothing/under/misc/adminsuit
 	name = "administrative cybernetic jumpsuit"
-	icon = 'icons/obj/clothing/under/syndicate.dmi'
+	icon = '../assets/icons/obj/clothing/under/syndicate.dmi'
 	icon_state = "syndicate"
 	inhand_icon_state = "bl_suit"
-	worn_icon = 'icons/mob/clothing/under/syndicate.dmi'
+	worn_icon = '../assets/icons/mob/clothing/under/syndicate.dmi'
 	desc = "A cybernetically enhanced jumpsuit used for administrative duties."
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	armor_type = /datum/armor/clothing_under/adminsuit
@@ -132,8 +132,8 @@
 /obj/item/clothing/under/misc/coordinator
 	name = "coordinator jumpsuit"
 	desc = "A jumpsuit made by party people, from party people, for party people."
-	icon = 'icons/obj/clothing/under/captain.dmi'
-	worn_icon = 'icons/mob/clothing/under/captain.dmi'
+	icon = '../assets/icons/obj/clothing/under/captain.dmi'
+	worn_icon = '../assets/icons/mob/clothing/under/captain.dmi'
 	icon_state = "captain_parade"
 	inhand_icon_state = null
 	can_adjust = FALSE
@@ -141,8 +141,8 @@
 /obj/item/clothing/under/misc/syndicate_souvenir
 	name = "syndicate souvenir tee"
 	desc = "I got kidnapped by a Syndicate operative and all I got was this lousy t-shirt!"
-	icon = 'icons/obj/clothing/under/syndicate_souvenir.dmi'
-	worn_icon = 'icons/mob/clothing/under/syndicate_souvenir.dmi'
+	icon = '../assets/icons/obj/clothing/under/syndicate_souvenir.dmi'
+	worn_icon = '../assets/icons/mob/clothing/under/syndicate_souvenir.dmi'
 	icon_state = "syndicate_souvenir"
 	inhand_icon_state = "syndicate_souvenir"
 	random_sensor = FALSE

@@ -8,11 +8,11 @@
 /obj/item/reagent_containers/condiment
 	name = "condiment bottle"
 	desc = "Just your average condiment bottle."
-	icon = 'icons/obj/food/containers.dmi'
+	icon = '../assets/icons/obj/food/containers.dmi'
 	icon_state = "bottle"
 	inhand_icon_state = "beer" //Generic held-item sprite until unique ones are made.
-	lefthand_file = 'icons/mob/inhands/items/drinks_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/drinks_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/drinks_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/drinks_righthand.dmi'
 	initial_reagent_flags = OPENCONTAINER
 	obj_flags = UNIQUE_RENAME
 	possible_transfer_amounts = list(1, 5, 10, 15, 20, 25, 30, 50)
@@ -67,7 +67,7 @@
 
 	SEND_SIGNAL(target, COMSIG_GLASS_DRANK, src, user) // NOVA EDIT ADDITION - Hemophages can't casually drink what's not going to regenerate their blood
 	reagents.trans_to(target, 10, transferred_by = user, methods = INGEST)
-	playsound(target, 'sound/items/drink.ogg', rand(10, 50), TRUE)
+	playsound(target, '../assets/sound/items/drink.ogg', rand(10, 50), TRUE)
 	return ITEM_INTERACT_SUCCESS
 
 /obj/item/reagent_containers/condiment/interact_with_atom(atom/target, mob/living/user, list/modifiers)
@@ -119,8 +119,8 @@
 	desc = "Tasty spacey sugar!"
 	icon_state = "sugar"
 	inhand_icon_state = "carton"
-	lefthand_file = 'icons/mob/inhands/items/drinks_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/drinks_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/drinks_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/drinks_righthand.dmi'
 	list_reagents = list(/datum/reagent/consumable/sugar = 50)
 	fill_icon_thresholds = null
 
@@ -187,8 +187,8 @@
 	desc = "It's milk. White and nutritious goodness!"
 	icon_state = "milk"
 	inhand_icon_state = "carton"
-	lefthand_file = 'icons/mob/inhands/items/drinks_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/drinks_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/drinks_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/drinks_righthand.dmi'
 	list_reagents = list(/datum/reagent/consumable/milk = 50)
 	fill_icon_thresholds = null
 
@@ -205,8 +205,8 @@
 	desc = "A big bag of flour. Good for baking!"
 	icon_state = "flour"
 	inhand_icon_state = "carton"
-	lefthand_file = 'icons/mob/inhands/items/drinks_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/drinks_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/drinks_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/drinks_righthand.dmi'
 	list_reagents = list(/datum/reagent/consumable/flour = 30)
 	fill_icon_thresholds = null
 
@@ -228,8 +228,8 @@
 	desc = "It's soy milk. White and nutritious goodness!"
 	icon_state = "soymilk"
 	inhand_icon_state = "carton"
-	lefthand_file = 'icons/mob/inhands/items/drinks_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/drinks_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/drinks_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/drinks_righthand.dmi'
 	list_reagents = list(/datum/reagent/consumable/soymilk = 50)
 	fill_icon_thresholds = null
 
@@ -238,8 +238,8 @@
 	desc = "A big bag of rice. Good for cooking!"
 	icon_state = "rice"
 	inhand_icon_state = "carton"
-	lefthand_file = 'icons/mob/inhands/items/drinks_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/drinks_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/drinks_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/drinks_righthand.dmi'
 	list_reagents = list(/datum/reagent/consumable/rice = 30)
 	fill_icon_thresholds = null
 
@@ -248,8 +248,8 @@
 	desc = "A big box of cornmeal. Great for southern style cooking."
 	icon_state = "cornmeal"
 	inhand_icon_state = "carton"
-	lefthand_file = 'icons/mob/inhands/items/drinks_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/drinks_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/drinks_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/drinks_righthand.dmi'
 	list_reagents = list(/datum/reagent/consumable/cornmeal = 30)
 	fill_icon_thresholds = null
 
@@ -371,8 +371,8 @@
 	desc = "It's coconut milk. Toasty!"
 	icon_state = "coconut_milk"
 	inhand_icon_state = "carton"
-	lefthand_file = 'icons/mob/inhands/items/drinks_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/drinks_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/drinks_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/drinks_righthand.dmi'
 	list_reagents = list(/datum/reagent/consumable/coconut_milk = 50)
 	fill_icon_thresholds = null
 

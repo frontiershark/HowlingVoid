@@ -7,8 +7,8 @@
 	icon_state = "circuit"
 	base_icon_state = "circuit"
 	inhand_icon_state = "electronic"
-	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/devices_righthand.dmi'
 
 	// It pains me to copy-paste so much, but I can't do it any other way
 	begin_activation_message = span_notice("You carefully locate the manual activation switch and start the compact AI circuit's boot process.")

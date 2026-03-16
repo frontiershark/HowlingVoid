@@ -1,7 +1,7 @@
 /obj/machinery/botpad
 	name = "Bot pad"
 	desc = "A lighter version of the orbital mech pad modified to launch bots. Requires linking to a remote to function."
-	icon = 'icons/obj/machines/telepad.dmi'
+	icon = '../assets/icons/obj/machines/telepad.dmi'
 	icon_state = "botpad"
 	circuit = /obj/item/circuitboard/machine/botpad
 	// ID of the console, used for linking up
@@ -68,4 +68,4 @@
 
 /obj/structure/closet/supplypod/transport/botpod
 	reverse_option_list = list("Mobs"=TRUE,"Objects"=FALSE,"Anchored"=FALSE,"Underfloor"=FALSE,"Wallmounted"=FALSE,"Floors"=FALSE,"Walls"=FALSE,"Mecha"=FALSE)
-	leavingSound = 'sound/vehicles/rocketlaunch.ogg'
+	leavingSound = '../assets/sound/vehicles/rocketlaunch.ogg'

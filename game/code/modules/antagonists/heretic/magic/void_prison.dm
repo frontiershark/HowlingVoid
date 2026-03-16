@@ -5,10 +5,10 @@
 		Afterwards, they will be chilled and returned to the mortal plane."
 	background_icon_state = "bg_heretic"
 	overlay_icon_state = "bg_heretic_border"
-	button_icon = 'icons/mob/actions/actions_ecult.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_ecult.dmi'
 	button_icon_state = "voidball"
-	ranged_mousepointer = 'icons/effects/mouse_pointers/throw_target.dmi'
-	sound = 'sound/effects/magic/voidblink.ogg'
+	ranged_mousepointer = '../assets/icons/effects/mouse_pointers/throw_target.dmi'
+	sound = '../assets/sound/effects/magic/voidblink.ogg'
 
 	cooldown_time = 1 MINUTES
 	cast_range = 3
@@ -80,7 +80,7 @@
 
 //----Voidball effect
 /obj/effect/abstract/voidball
-	icon = 'icons/mob/actions/actions_ecult.dmi'
+	icon = '../assets/icons/mob/actions/actions_ecult.dmi'
 	icon_state = "voidball_effect"
 	layer = ABOVE_ALL_MOB_LAYER
 	vis_flags = VIS_INHERIT_ID
@@ -99,5 +99,5 @@
 	desc = "A Yawning void encases your mortal coil." //Go straight to jail, do not pass GO, do not collect 200$
 	use_user_hud_icon = TRUE
 	icon_state = "heretic_template"
-	overlay_icon = 'icons/mob/actions/actions_ecult.dmi'
+	overlay_icon = '../assets/icons/mob/actions/actions_ecult.dmi'
 	overlay_state = "voidball_effect"

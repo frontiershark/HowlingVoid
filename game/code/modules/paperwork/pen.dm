@@ -13,7 +13,7 @@
 /obj/item/pen
 	name = "pen"
 	desc = "It's a normal black ink pen."
-	icon = 'icons/obj/service/bureaucracy.dmi'
+	icon = '../assets/icons/obj/service/bureaucracy.dmi'
 	icon_state = "pen"
 	inhand_icon_state = "pen"
 	worn_icon_state = "pen"
@@ -31,7 +31,7 @@
 	var/requires_gravity = TRUE // can you use this to write in zero-g
 	embed_type = /datum/embedding/pen
 	sharpness = SHARP_POINTY
-	var/dart_insert_icon = 'icons/obj/weapons/guns/toy.dmi'
+	var/dart_insert_icon = '../assets/icons/obj/weapons/guns/toy.dmi'
 	var/dart_insert_casing_icon_state = "overlay_pen"
 	var/dart_insert_projectile_icon_state = "overlay_pen_proj"
 	/// If this pen can be clicked in order to retract it
@@ -79,7 +79,7 @@
 
 	if(user)
 		balloon_alert(user, "clicked")
-	playsound(src, 'sound/items/pen_click.ogg', 30, TRUE, -3)
+	playsound(src, '../assets/sound/items/pen_click.ogg', 30, TRUE, -3)
 	icon_state = initial(icon_state) + (active ? "_retracted" : "")
 	update_appearance(UPDATE_ICON)
 
@@ -149,7 +149,7 @@
 	to_chat(user, span_notice("\The [src] will now write in [chosen_color]."))
 	desc = "It's a fancy four-color ink pen, set to [chosen_color]."
 	balloon_alert(user, "clicked")
-	playsound(src, 'sound/machines/click.ogg', 30, TRUE, -3)
+	playsound(src, '../assets/sound/machines/click.ogg', 30, TRUE, -3)
 
 /obj/item/pen/fountain
 	name = "fountain pen"
@@ -361,7 +361,7 @@
 	AddComponent(/datum/component/alternative_sharpness, SHARP_POINTY, alt_continuous, alt_simple, -5, TRAIT_TRANSFORM_ACTIVE)
 	AddComponent(/datum/component/butchering, \
 	speed = 6 SECONDS, \
-	butcher_sound = 'sound/items/weapons/blade1.ogg', \
+	butcher_sound = '../assets/sound/items/weapons/blade1.ogg', \
 	)
 	RegisterSignal(src, COMSIG_DETECTIVE_SCANNED, PROC_REF(on_scan))
 
@@ -402,14 +402,14 @@
 
 /obj/item/pen/edagger/proc/on_containing_dart_fired(obj/projectile/source)
 	SIGNAL_HANDLER
-	playsound(source, 'sound/items/weapons/saberon.ogg', 5, TRUE)
+	playsound(source, '../assets/sound/items/weapons/saberon.ogg', 5, TRUE)
 	var/datum/component/transforming/transform_comp = GetComponent(/datum/component/transforming)
 	source.hitsound = transform_comp.hitsound_on
 	source.set_light(light_range, light_power, light_color, l_on = TRUE)
 
 /obj/item/pen/edagger/proc/on_containing_dart_drop(datum/source, obj/item/ammo_casing/new_casing)
 	SIGNAL_HANDLER
-	playsound(new_casing, 'sound/items/weapons/saberoff.ogg', 5, TRUE)
+	playsound(new_casing, '../assets/sound/items/weapons/saberoff.ogg', 5, TRUE)
 
 /obj/item/pen/edagger/proc/on_containing_dart_embedded(datum/source, obj/item/ammo_casing/new_casing)
 	SIGNAL_HANDLER
@@ -418,12 +418,12 @@
 
 /obj/item/pen/edagger/proc/on_containing_dart_failed_embed(obj/item/ammo_casing/source)
 	SIGNAL_HANDLER
-	playsound(source, 'sound/items/weapons/saberoff.ogg', 5, TRUE)
+	playsound(source, '../assets/sound/items/weapons/saberoff.ogg', 5, TRUE)
 	UnregisterSignal(source, list(COMSIG_ITEM_UNEMBEDDED, COMSIG_ITEM_FAILED_EMBED))
 
 /obj/item/pen/edagger/proc/on_embedded_removed(obj/item/ammo_casing/source, mob/living/carbon/victim)
 	SIGNAL_HANDLER
-	playsound(source, 'sound/items/weapons/saberoff.ogg', 5, TRUE)
+	playsound(source, '../assets/sound/items/weapons/saberoff.ogg', 5, TRUE)
 	UnregisterSignal(source, list(COMSIG_ITEM_UNEMBEDDED, COMSIG_ITEM_FAILED_EMBED))
 	victim.visible_message(
 		message = span_warning("The blade of the [hidden_name] retracts as \the [source] is removed from [victim]!"),
@@ -452,8 +452,8 @@
 		desc = hidden_desc
 		icon_state = hidden_icon
 		inhand_icon_state = hidden_icon
-		lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
-		righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
+		lefthand_file = '../assets/icons/mob/inhands/weapons/swords_lefthand.dmi'
+		righthand_file = '../assets/icons/mob/inhands/weapons/swords_righthand.dmi'
 		set_embed(/datum/embedding/edagger_active)
 	else
 		name = initial(name)
@@ -466,7 +466,7 @@
 
 	if(user)
 		balloon_alert(user, "[hidden_name] [active ? "active" : "concealed"]")
-	playsound(src, active ? 'sound/items/weapons/saberon.ogg' : 'sound/items/weapons/saberoff.ogg', 5, TRUE)
+	playsound(src, active ? '../assets/sound/items/weapons/saberon.ogg' : '../assets/sound/items/weapons/saberoff.ogg', 5, TRUE)
 	set_light_on(active)
 	return COMPONENT_NO_DEFAULT_MESSAGE
 
@@ -481,7 +481,7 @@
 /obj/item/pen/survival
 	name = "survival pen"
 	desc = "The latest in portable survival technology, this pen was designed as a miniature diamond pickaxe. Watchers find them very desirable for their diamond exterior."
-	icon = 'icons/obj/service/bureaucracy.dmi'
+	icon = '../assets/icons/obj/service/bureaucracy.dmi'
 	icon_state = "digging_pen"
 	inhand_icon_state = "pen"
 	worn_icon_state = "pen"
@@ -551,7 +551,7 @@
 /obj/item/pen/screwdriver/on_transform(obj/item/source, mob/user, active)
 	if(user)
 		balloon_alert(user, active ? "extended" : "retracted")
-	playsound(src, 'sound/items/weapons/batonextend.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/weapons/batonextend.ogg', 50, TRUE)
 
 	if(!active)
 		tool_behaviour = initial(tool_behaviour)
@@ -605,6 +605,6 @@
 
 /obj/effect/temp_visual/security_holosign/Initialize(mapload, creator)
 	. = ..()
-	playsound(loc, 'sound/machines/chime.ogg', 50, FALSE) //make some noise!
+	playsound(loc, '../assets/sound/machines/chime.ogg', 50, FALSE) //make some noise!
 	if(creator)
 		visible_message(span_danger("[creator] created a security hologram!"))

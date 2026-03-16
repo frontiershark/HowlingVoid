@@ -23,7 +23,7 @@
 	name = "pod control computer"
 	locked = TRUE
 	possible_destinations = "pod_asteroid"
-	icon = 'icons/obj/machines/wallmounts.dmi'
+	icon = '../assets/icons/obj/machines/wallmounts.dmi'
 	icon_state = "pod_off"
 	circuit = /obj/item/circuitboard/computer/emergency_pod
 	light_color = LIGHT_COLOR_BLUE
@@ -132,7 +132,7 @@
 	desc = "A wall mounted safe containing space suits. Will only open in emergencies."
 	anchored = TRUE
 	density = FALSE
-	icon = 'icons/obj/storage/storage.dmi'
+	icon = '../assets/icons/obj/storage/storage.dmi'
 	icon_state = "wall_safe_locked"
 	storage_type = /datum/storage/pod
 

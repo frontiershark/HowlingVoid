@@ -1,11 +1,11 @@
 /obj/item/climbing_hook
 	name = "climbing hook"
 	desc = "Standard hook with rope to scale up holes. The rope is of average quality, but due to your weight amongst other factors, may not withstand extreme use."
-	icon = 'icons/obj/mining.dmi'
+	icon = '../assets/icons/obj/mining.dmi'
 	icon_state = "climbingrope"
 	inhand_icon_state = "crowbar_brass"
-	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/tools_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/tools_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/tools_righthand.dmi'
 	force = 5
 	throwforce = 10
 	reach = 2
@@ -47,8 +47,8 @@
 
 	var/away_dir = get_dir(trans_vertical, interacting_with)
 	user.visible_message(span_notice("[user] begins climbing [interacting_with.z > user.z ? "up" : "down"] with [src]."), span_notice("You get to work on properly hooking [src] and going [interacting_with.z > user.z ? "up" : "down"]."))
-	playsound(interacting_with, 'sound/effects/pickaxe/picaxe1.ogg', 50) //plays twice so people above and below can hear
-	playsound(user_turf, 'sound/effects/pickaxe/picaxe1.ogg', 50)
+	playsound(interacting_with, '../assets/sound/effects/pickaxe/picaxe1.ogg', 50) //plays twice so people above and below can hear
+	playsound(user_turf, '../assets/sound/effects/pickaxe/picaxe1.ogg', 50)
 	var/list/effects = list(new /obj/effect/temp_visual/climbing_hook(interacting_with, away_dir), new /obj/effect/temp_visual/climbing_hook(user_turf, away_dir))
 
 	// Our climbers athletics ability
@@ -104,7 +104,7 @@
 	climb_time = 0.1 SECONDS
 
 /obj/effect/temp_visual/climbing_hook
-	icon = 'icons/mob/silicon/aibots.dmi'
+	icon = '../assets/icons/mob/silicon/aibots.dmi'
 	icon_state = "path_indicator"
 	layer = BELOW_MOB_LAYER
 	plane = GAME_PLANE

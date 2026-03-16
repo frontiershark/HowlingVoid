@@ -5,12 +5,12 @@
 
 /obj/item/healthanalyzer
 	name = "health analyzer"
-	icon = 'icons/obj/devices/scanner.dmi'
+	icon = '../assets/icons/obj/devices/scanner.dmi'
 	icon_state = "health"
 	inhand_icon_state = "healthanalyzer"
 	worn_icon_state = "healthanalyzer"
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/medical_righthand.dmi'
 	desc = "A hand-held body scanner capable of distinguishing vital signs of the subject. Has a side button to scan for chemicals, and can be toggled to scan wounds."
 	obj_flags = CONDUCTS_ELECTRICITY
 	item_flags = NOBLUDGEON
@@ -96,7 +96,7 @@
 
 	user.visible_message(span_notice("[user] analyzes [M]'s vitals."))
 	balloon_alert(user, "analyzing vitals")
-	playsound(user.loc, 'sound/items/healthanalyzer.ogg', 50)
+	playsound(user.loc, '../assets/sound/items/healthanalyzer.ogg', 50)
 
 	var/readability_check = user.can_read(src) // NOVA EDIT CHANGE - Blind people can analyze again - ORIGINAL: var/readability_check = user.can_read(src) && !user.is_blind()
 	switch (scanmode)
@@ -694,7 +694,7 @@
 		if(simple_scan)
 			var/obj/item/healthanalyzer/simple/simple_scanner = scanner
 			// Only emit the cheerful scanner message if this scan came from a scanner
-			playsound(simple_scanner, 'sound/machines/ping.ogg', 50, FALSE)
+			playsound(simple_scanner, '../assets/sound/machines/ping.ogg', 50, FALSE)
 			to_chat(user, span_notice("\The [simple_scanner] makes a happy ping and briefly displays a smiley face with several exclamation points! It's really excited to report that [patient] has no wounds!"))
 			simple_scanner.show_emotion(AID_EMOTION_HAPPY)
 		to_chat(user, "<span class='notice ml-1'>No wounds detected in subject.</span>")
@@ -703,7 +703,7 @@
 		if(simple_scan)
 			var/obj/item/healthanalyzer/simple/simple_scanner = scanner
 			simple_scanner.show_emotion(AID_EMOTION_WARN)
-			playsound(simple_scanner, 'sound/machines/beep/twobeep.ogg', 50, FALSE)
+			playsound(simple_scanner, '../assets/sound/machines/beep/twobeep.ogg', 50, FALSE)
 
 
 /obj/item/healthanalyzer/simple
@@ -727,7 +727,7 @@
 
 /obj/item/healthanalyzer/simple/attack_self(mob/user)
 	if(next_encouragement < world.time)
-		playsound(src, 'sound/machines/ping.ogg', 50, FALSE)
+		playsound(src, '../assets/sound/machines/ping.ogg', 50, FALSE)
 		to_chat(user, span_notice("[src] makes a happy ping and [pick(encouragements)]!"))
 		next_encouragement = world.time + 10 SECONDS
 		show_emotion(AID_EMOTION_HAPPY)
@@ -741,7 +741,7 @@
 	show_emotion(AID_EMOTION_ANGRY)
 
 /obj/item/healthanalyzer/simple/proc/violence(mob/user)
-	playsound(src, 'sound/machines/buzz/buzz-sigh.ogg', 50, FALSE)
+	playsound(src, '../assets/sound/machines/buzz/buzz-sigh.ogg', 50, FALSE)
 	if(isliving(user))
 		var/mob/living/L = user
 		to_chat(L, span_warning("[src] makes a disappointed buzz and pricks your finger for being greedy. Ow!"))
@@ -766,7 +766,7 @@
 	)
 
 	if(!iscarbon(interacting_with))
-		playsound(src, 'sound/machines/buzz/buzz-sigh.ogg', 30, TRUE)
+		playsound(src, '../assets/sound/machines/buzz/buzz-sigh.ogg', 30, TRUE)
 		to_chat(user, span_notice("[src] makes a sad buzz and briefly displays an unhappy face, indicating it can't scan [interacting_with]."))
 		show_emotion(AI_EMOTION_SAD)
 		return ITEM_INTERACT_BLOCKING
@@ -860,13 +860,13 @@
 			</span>"
 
 	if(!length(render))
-		playsound(scanner, 'sound/machines/ping.ogg', 50, FALSE)
+		playsound(scanner, '../assets/sound/machines/ping.ogg', 50, FALSE)
 		to_chat(user, span_notice("\The [scanner] makes a happy ping and briefly displays a smiley face with several exclamation points! It's really excited to report that [patient] has no diseases!"))
 		scanner.emotion = AID_EMOTION_HAPPY
 	else
 		to_chat(user, span_notice(render.Join("")))
 		scanner.emotion = AID_EMOTION_WARN
-		playsound(scanner, 'sound/machines/beep/twobeep.ogg', 50, FALSE)
+		playsound(scanner, '../assets/sound/machines/beep/twobeep.ogg', 50, FALSE)
 
 /obj/item/paper/medical_report
 	color = "#99ccff"

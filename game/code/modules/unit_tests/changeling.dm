@@ -55,7 +55,7 @@
 /// Adds both mobs to the screenshot test, if both_species is TRUE, it also adds the victim in lizard form
 /datum/unit_test/transformation_sting/proc/add_to_screenshot(mob/living/carbon/human/ling, mob/living/carbon/human/victim, both_species = FALSE)
 	if(isnull(final_icon))
-		final_icon = icon('icons/effects/effects.dmi', "nothing")
+		final_icon = icon('../assets/icons/effects/effects.dmi', "nothing")
 
 	// If we have a lot of dna features with a lot of parts (icons)
 	// This'll eventually runtime into a bad icon operation

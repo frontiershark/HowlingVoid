@@ -209,7 +209,7 @@ GLOBAL_LIST_EMPTY(objectives) //NOVA EDIT ADDITION
 /datum/action/special_equipment_fallback
 	name = "Request Objective-specific Equipment"
 	desc = "Call down a supply pod containing the equipment required for specific objectives."
-	button_icon = 'icons/obj/devices/tracker.dmi'
+	button_icon = '../assets/icons/obj/devices/tracker.dmi'
 	button_icon_state = "beacon"
 
 /datum/action/special_equipment_fallback/Trigger(mob/clicker, trigger_flags)

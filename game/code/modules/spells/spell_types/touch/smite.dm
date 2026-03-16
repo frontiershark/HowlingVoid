@@ -3,7 +3,7 @@
 	desc = "This spell charges your hand with an unholy energy \
 		that can be used to cause a touched victim to violently explode."
 	button_icon_state = "gib"
-	sound = 'sound/effects/magic/disintegrate.ogg'
+	sound = '../assets/sound/effects/magic/disintegrate.ogg'
 
 	school = SCHOOL_EVOCATION
 	cooldown_time = 1 MINUTES
@@ -54,7 +54,7 @@
 /obj/item/melee/touch_attack/smite
 	name = "\improper smiting touch"
 	desc = "This hand of mine glows with an awesome power!"
-	icon = 'icons/obj/weapons/hand.dmi'
+	icon = '../assets/icons/obj/weapons/hand.dmi'
 	icon_state = "disintegrate"
 	inhand_icon_state = "disintegrate"
 

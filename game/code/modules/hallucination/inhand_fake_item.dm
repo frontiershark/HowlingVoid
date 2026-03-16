@@ -76,7 +76,7 @@
 		var/obj/item/melee/energy/sword/saber/sabre_color = pick(subtypesof(/obj/item/melee/energy/sword/saber))
 		// Yes this can break if someone changes esword icon stuff
 		hallucinated_item.icon_state = "[hallucinated_item.icon_state]_on_[initial(sabre_color.sword_color_icon)]"
-		hallucinator.playsound_local(get_turf(hallucinator), 'sound/items/weapons/saberon.ogg', 35, TRUE)
+		hallucinator.playsound_local(get_turf(hallucinator), '../assets/sound/items/weapons/saberon.ogg', 35, TRUE)
 
 	return hallucinated_item
 
@@ -113,7 +113,7 @@
 	if(prob(15))
 		// Yes this can break if someone changse grenade icon stuff
 		hallucinated_item.icon_state = "[hallucinated_item.icon_state]_active"
-		hallucinator.playsound_local(get_turf(hallucinator), 'sound/items/weapons/armbomb.ogg', 60, TRUE)
+		hallucinator.playsound_local(get_turf(hallucinator), '../assets/sound/items/weapons/armbomb.ogg', 60, TRUE)
 		to_chat(hallucinator, span_warning("You prime [hallucinated_item]! 5 seconds!"))
 
 	return hallucinated_item
@@ -125,7 +125,7 @@
 /datum/hallucination/fake_item/summon_guns/make_fake_item(where_to_put_it, equip_flags)
 	template_item_type = pick(GLOB.summoned_guns)
 	. = ..()
-	hallucinator.playsound_local(get_turf(hallucinator), 'sound/effects/magic/summon_guns.ogg', 50, TRUE)
+	hallucinator.playsound_local(get_turf(hallucinator), '../assets/sound/effects/magic/summon_guns.ogg', 50, TRUE)
 
 /datum/hallucination/fake_item/summon_magic
 	hallucination_tier = HALLUCINATION_TIER_RARE
@@ -134,7 +134,7 @@
 /datum/hallucination/fake_item/summon_magic/make_fake_item(where_to_put_it, equip_flags)
 	template_item_type = pick(GLOB.summoned_magic + GLOB.summoned_special_magic)
 	. = ..()
-	hallucinator.playsound_local(get_turf(hallucinator), 'sound/effects/magic/summon_magic.ogg', 50, TRUE)
+	hallucinator.playsound_local(get_turf(hallucinator), '../assets/sound/effects/magic/summon_magic.ogg', 50, TRUE)
 
 /obj/item/hallucinated
 	name = "mirage"

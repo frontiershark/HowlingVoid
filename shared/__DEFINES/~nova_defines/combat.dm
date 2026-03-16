@@ -165,7 +165,7 @@
 	if(head_knock)
 		target.adjust_organ_loss(ORGAN_SLOT_BRAIN, 15)
 	target.apply_damage(15, BRUTE, affecting, armor_block, wound_bonus = fun_times_at_the_headbash_factory, exposed_wound_bonus = fun_times_at_the_headbash_factory)
-	playsound(target, 'sound/effects/hit_kick.ogg', 70)
+	playsound(target, '../assets/sound/effects/hit_kick.ogg', 70)
 	log_combat(user, target, "headsmashes", "against the floor")
 
 /// Attempts to perform a limb dislocation, with the user violently twisting one of target's limbs (as passed in). Only useful for extremities, because only extremities can eat dislocations.

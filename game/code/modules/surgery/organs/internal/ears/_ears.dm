@@ -42,7 +42,7 @@
 	adjust_temporary_deafness(-seconds_per_tick SECONDS)
 	if((damage > low_threshold) && SPT_PROB(damage / 60, seconds_per_tick))
 		adjust_temporary_deafness(4 SECONDS)
-		SEND_SOUND(owner, sound('sound/items/weapons/flash_ring.ogg'))
+		SEND_SOUND(owner, sound('../assets/sound/items/weapons/flash_ring.ogg'))
 
 /obj/item/organ/ears/on_mob_insert(mob/living/carbon/organ_owner, special, movement_flags)
 	. = ..()
@@ -144,8 +144,8 @@
 
 /obj/item/organ/ears/cat
 	name = "cat ears"
-	icon = 'icons/obj/clothing/head/costume.dmi'
-	worn_icon = 'icons/mob/clothing/head/costume.dmi'
+	icon = '../assets/icons/obj/clothing/head/costume.dmi'
+	worn_icon = '../assets/icons/mob/clothing/head/costume.dmi'
 	icon_state = "kitty"
 	visual = TRUE
 	damage_multiplier = 2
@@ -191,7 +191,7 @@
 
 /obj/item/organ/ears/cat/cybernetic
 	name = "basic cybernetic cat ears"
-	icon = 'icons/obj/medical/organs/organs.dmi'
+	icon = '../assets/icons/obj/medical/organs/organs.dmi'
 	icon_state = "ears-c-cat"
 	desc = "A basic cybernetic organ designed to mimic the operation of ears."
 	damage_multiplier = 2.4

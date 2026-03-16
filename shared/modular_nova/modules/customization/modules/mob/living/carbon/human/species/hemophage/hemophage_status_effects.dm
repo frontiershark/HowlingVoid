@@ -59,7 +59,7 @@
 /atom/movable/screen/alert/status_effect/blood_thirst_satiated
 	name = "Thirst Satiated"
 	desc = "Substitutes and taste-thin imitations keep your pale body standing, but nothing abates eternal thirst and slakes the infection quite like the real thing: Hot blood from a real sentient being."
-	icon = 'icons/effects/bleed.dmi'
+	icon = '../assets/icons/effects/bleed.dmi'
 	icon_state = "bleed10"
 
 

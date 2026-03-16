@@ -86,7 +86,7 @@
 	hearts = WEAKREF(date.add_alt_appearance(
 		/datum/atom_hud/alternate_appearance/basic/one_person,
 		"in_love",
-		image(icon = 'icons/effects/effects.dmi', icon_state = "love_hearts", loc = date),
+		image(icon = '../assets/icons/effects/effects.dmi', icon_state = "love_hearts", loc = date),
 		null,
 		new_owner,
 	))
@@ -135,7 +135,7 @@
 
 /datum/status_effect/bounty/on_apply()
 	to_chat(owner, span_boldnotice("You hear something behind you talking... \"You have been marked for death by [rewarded]. If you die, they will be rewarded.\""))
-	playsound(owner, 'sound/items/weapons/gun/shotgun/rack.ogg', 75, FALSE)
+	playsound(owner, '../assets/sound/items/weapons/gun/shotgun/rack.ogg', 75, FALSE)
 	return ..()
 
 /datum/status_effect/bounty/tick(seconds_between_ticks)
@@ -146,7 +146,7 @@
 /datum/status_effect/bounty/proc/rewards()
 	if(rewarded && rewarded.mind && rewarded.stat != DEAD)
 		to_chat(owner, span_boldnotice("You hear something behind you talking... \"Bounty claimed.\""))
-		playsound(owner, 'sound/items/weapons/gun/shotgun/shot.ogg', 75, FALSE)
+		playsound(owner, '../assets/sound/items/weapons/gun/shotgun/shot.ogg', 75, FALSE)
 		to_chat(rewarded, span_greentext("You feel a surge of mana flow into you!"))
 		for(var/datum/action/cooldown/spell/spell in rewarded.actions)
 			spell.reset_spell_cooldown()

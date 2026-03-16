@@ -2,7 +2,7 @@
 	name = "reanimated skeleton"
 	desc = "A real bonefied skeleton, doesn't seem like it wants to socialize."
 	gender = NEUTER
-	icon = 'icons/mob/simple/simple_human.dmi'
+	icon = '../assets/icons/mob/simple/simple_human.dmi'
 	mob_biotypes = MOB_UNDEAD|MOB_HUMANOID|MOB_SKELETAL
 	speak_emote = list("rattles")
 	maxHealth = 40
@@ -15,7 +15,7 @@
 	unsuitable_heat_damage = 0
 	attack_verb_continuous = "slashes"
 	attack_verb_simple = "slash"
-	attack_sound = 'sound/items/weapons/slash.ogg'
+	attack_sound = '../assets/sound/items/weapons/slash.ogg'
 	attack_vis_effect = ATTACK_EFFECT_CLAW
 	faction = list(FACTION_SKELETON)
 	// Going for a sort of pale bluegreen here, shooting for boneish
@@ -63,7 +63,7 @@
 	melee_damage_upper = 20
 	attack_verb_continuous = "jabs"
 	attack_verb_simple = "jab"
-	attack_sound = 'sound/items/weapons/bladeslice.ogg'
+	attack_sound = '../assets/sound/items/weapons/bladeslice.ogg'
 	attack_vis_effect = ATTACK_EFFECT_SLASH
 	death_message = "collapses into a pile of bones, its gear falling to the floor!"
 	loot = list(
@@ -92,7 +92,7 @@
 	melee_damage_upper = 30
 	attack_verb_continuous = "slices"
 	attack_verb_simple = "slice"
-	attack_sound = 'sound/items/weapons/bladeslice.ogg'
+	attack_sound = '../assets/sound/items/weapons/bladeslice.ogg'
 	attack_vis_effect = ATTACK_EFFECT_SLASH
 	death_message = "collapses into a pile of bones, its gear clanging as it hits the ground!"
 	loot = list(
@@ -146,7 +146,7 @@
 	melee_damage_upper = 25
 	attack_verb_continuous = "blasts"
 	attack_verb_simple = "blast"
-	attack_sound = 'sound/items/weapons/sonic_jackhammer.ogg'
+	attack_sound = '../assets/sound/items/weapons/sonic_jackhammer.ogg'
 	attack_vis_effect = null
 	loot = list(/obj/effect/decal/remains/plasma, /obj/item/pickaxe/drill/jackhammer)
 	held_item = /obj/item/pickaxe/drill/jackhammer

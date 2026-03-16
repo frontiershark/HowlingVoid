@@ -173,7 +173,7 @@
 		victim_message = self_message
 	to_chat(victim, victim_message)
 
-	playsound(get_turf(crowbarring_item), 'sound/machines/airlock/airlock_alien_prying.ogg', 30, TRUE)
+	playsound(get_turf(crowbarring_item), '../assets/sound/machines/airlock/airlock_alien_prying.ogg', 30, TRUE)
 	if (!crowbarring_item.use_tool(target = victim, user = user, delay = (7 SECONDS * delay_mult), volume = 50, extra_checks = CALLBACK(src, PROC_REF(still_exists))))
 		return TRUE
 
@@ -225,7 +225,7 @@
 		if (user != victim)
 			victim_message = span_userdanger("Your [limb.plaintext_zone] fragments and splinters as [user] tears it open with [user.p_their()] crowbar!")
 
-		playsound(get_turf(crowbarring_item), 'sound/effects/bang.ogg', 35, TRUE) // we did it!
+		playsound(get_turf(crowbarring_item), '../assets/sound/effects/bang.ogg', 35, TRUE) // we did it!
 		to_chat(user, span_green("You've torn [your_or_other] [limb.plaintext_zone] open, heavily damaging it but making it a lot easier to screwdriver the internals!"))
 		var/damage = CROWBAR_OPEN_BRUTE_DAMAGE
 		if (limb_essential()) // can't be disabled

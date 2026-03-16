@@ -5,13 +5,13 @@
 /obj/item/pet_carrier
 	name = "pet carrier"
 	desc = "A big white-and-blue pet carrier. Good for carrying <s>meat to the chef</s> cute animals around."
-	icon = 'icons/map_icons/items/_item.dmi'
+	icon = '../assets/icons/map_icons/items/_item.dmi'
 	icon_state = "/obj/item/pet_carrier"
 	post_init_icon_state = "pet_carrier_open"
 	base_icon_state = "pet_carrier"
 	inhand_icon_state = "pet_carrier"
-	lefthand_file = 'icons/mob/inhands/items_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items_righthand.dmi'
 	greyscale_config = /datum/greyscale_config/pet_carrier
 	greyscale_config_inhand_left = /datum/greyscale_config/pet_carrier_inhands_left
 	greyscale_config_inhand_right = /datum/greyscale_config/pet_carrier_inhands_right
@@ -40,9 +40,9 @@
 	var/max_occupant_weight = MOB_SIZE_SMALL
 
 	/// Sound played when the mob carrier is opened.
-	var/open_sound = 'sound/items/handling/cardboard_box/cardboard_box_rustle.ogg'
+	var/open_sound = '../assets/sound/items/handling/cardboard_box/cardboard_box_rustle.ogg'
 	/// Sound played when the mob carrier is closed.
-	var/close_sound = 'sound/items/handling/cardboard_box/cardboardbox_drop.ogg'
+	var/close_sound = '../assets/sound/items/handling/cardboard_box/cardboardbox_drop.ogg'
 
 /obj/item/pet_carrier/Initialize(mapload)
 	. = ..()
@@ -96,9 +96,9 @@
 	locked = !locked
 	to_chat(user, span_notice("You flip the lock switch [locked ? "down" : "up"]."))
 	if(locked)
-		playsound(user, 'sound/machines/airlock/boltsdown.ogg', 30, TRUE)
+		playsound(user, '../assets/sound/machines/airlock/boltsdown.ogg', 30, TRUE)
 	else
-		playsound(user, 'sound/machines/airlock/boltsup.ogg', 30, TRUE)
+		playsound(user, '../assets/sound/machines/airlock/boltsup.ogg', 30, TRUE)
 	update_appearance()
 	return CLICK_ACTION_SUCCESS
 
@@ -151,7 +151,7 @@
 		loc.visible_message(span_warning("[user] flips the lock switch on [src] by reaching through!"), null, null, null, user)
 		to_chat(user, span_bolddanger("Bingo! The lock pops open!"))
 		locked = FALSE
-		playsound(src, 'sound/machines/airlock/boltsup.ogg', 30, TRUE)
+		playsound(src, '../assets/sound/machines/airlock/boltsup.ogg', 30, TRUE)
 		update_appearance()
 	else
 		loc.visible_message(span_warning("[src] starts rattling as something pushes against the door!"), null, null, null, user)
@@ -226,7 +226,7 @@
 /obj/item/pet_carrier/biopod
 	name = "biopod"
 	desc = "Alien device used for undescribable purpose. Or carrying pets."
-	icon = 'icons/obj/pet_carrier.dmi'
+	icon = '../assets/icons/obj/pet_carrier.dmi'
 	icon_state = "biopod_open"
 	post_init_icon_state = null
 	base_icon_state = "biopod"
@@ -239,14 +239,14 @@
 /obj/item/pet_carrier/small
 	name = "small pet carrier"
 	desc = "A small pet carrier for miniature sized animals."
-	icon = 'icons/obj/pet_carrier.dmi'
+	icon = '../assets/icons/obj/pet_carrier.dmi'
 	icon_state = "small_carrier_open"
 	post_init_icon_state = null
 	w_class = WEIGHT_CLASS_NORMAL
 	base_icon_state = "small_carrier"
 	inhand_icon_state = "syringe_kit"
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/medical_righthand.dmi'
 	greyscale_config = null
 	greyscale_config_inhand_left = null
 	greyscale_config_inhand_right = null

@@ -13,13 +13,13 @@
 	bot_type = ADVANCED_SEC_BOT
 	hackables = "combat inhibitors"
 
-	automated_announcements = list(ED209_VOICED_DOWN_WEAPONS = 'sound/mobs/non-humanoids/ed209/ed209_20sec.ogg')
+	automated_announcements = list(ED209_VOICED_DOWN_WEAPONS = '../assets/sound/mobs/non-humanoids/ed209/ed209_20sec.ogg')
 
 	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 2.8, /datum/material/glass = SMALL_MATERIAL_AMOUNT * 2.1)
 
 	var/lastfired = 0
 	var/shot_delay = 1.5 SECONDS
-	var/shoot_sound = 'sound/items/weapons/laser.ogg'
+	var/shoot_sound = '../assets/sound/items/weapons/laser.ogg'
 	var/projectile = /obj/projectile/beam/disabler
 	var/fair_market_projectile = /obj/projectile/bullet/c38 // For shooting the worst scumbags of all: the poor
 
@@ -62,12 +62,12 @@
 /mob/living/simple_animal/bot/secbot/ed209/threat_react(threatlevel)
 	speak("Level [threatlevel] infraction alert!")
 	playsound(src, pick(
-		'sound/mobs/non-humanoids/ed209/ed209_20sec.ogg',
-		'sound/mobs/non-humanoids/ed209/edplaceholder.ogg',
+		'../assets/sound/mobs/non-humanoids/ed209/ed209_20sec.ogg',
+		'../assets/sound/mobs/non-humanoids/ed209/edplaceholder.ogg',
 		), 50, FALSE)
 
 /mob/living/simple_animal/bot/secbot/ed209/proc/set_weapon()  //used to update the projectile type and firing sound
-	shoot_sound = 'sound/items/weapons/laser.ogg'
+	shoot_sound = '../assets/sound/items/weapons/laser.ogg'
 	if(bot_cover_flags & BOT_COVER_EMAGGED)
 		projectile = /obj/projectile/beam
 	else

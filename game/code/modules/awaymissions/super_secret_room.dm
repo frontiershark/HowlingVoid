@@ -2,7 +2,7 @@
 	name = "strange tile"
 	desc = "A weird tile that beckons you towards it. Maybe it can help you get out of this mess..."
 	verb_say = "intones"
-	icon = 'icons/obj/structures.dmi'
+	icon = '../assets/icons/obj/structures.dmi'
 	icon_state = "speaking_tile"
 	layer = FLY_LAYER
 	plane = ABOVE_GAME_PLANE
@@ -116,7 +116,7 @@
 /obj/item/rupee
 	name = "weird crystal"
 	desc = "Your excitement boils away as you realize it's just colored glass. Why would someone hoard these things?"
-	icon = 'icons/obj/economy.dmi'
+	icon = '../assets/icons/obj/economy.dmi'
 	icon_state = "rupee"
 	w_class = WEIGHT_CLASS_SMALL
 	custom_materials = list(/datum/material/glass = SMALL_MATERIAL_AMOUNT*5)
@@ -143,7 +143,7 @@
 		equip_to_best_slot(crosser)
 
 /obj/item/rupee/equipped(mob/user, slot)
-	playsound(get_turf(loc), 'sound/misc/server-ready.ogg', 50, TRUE, -1)
+	playsound(get_turf(loc), '../assets/sound/misc/server-ready.ogg', 50, TRUE, -1)
 	..()
 
 /obj/effect/landmark/error

@@ -90,7 +90,7 @@
 	sord_beam.aim_projectile(target, user, modifiers)
 	sord_beam.firer = user
 	sord_beam.fired_from = src
-	playsound(user, 'sound/items/weapons/resonator_blast.ogg', 90, TRUE)
+	playsound(user, '../assets/sound/items/weapons/resonator_blast.ogg', 90, TRUE)
 	sord_beam.fire()
 	user.apply_damage(25, STAMINA, BODY_ZONE_CHEST) // Spam these and pay the price of self-ownage
 	user.adjust_blood_volume(-10) // 560 is normal blood volume
@@ -106,7 +106,7 @@
 	/// Has this fragment done it's introductory hallucination?
 	var/has_spoken = FALSE
 	/// What sound effect do we play for the introductory halluciantion?
-	var/hallucination_sound = 'sound/effects/hallucinations/im_here1.ogg'
+	var/hallucination_sound = '../assets/sound/effects/hallucinations/im_here1.ogg'
 	/// What do we send to chat for the introductory hallucination?
 	var/hallucination_text = "Why.. do those stupid smelly nerds... not put an EXE file.. on the github..."
 
@@ -167,7 +167,7 @@
 	icon_state = "energy_retrofit"
 	effect_desc = "use a hardlight blade as a coating over it's own; trading its strengths and weaknesses for that of an energy sword. As Luna is a rapier, however, its reliance on precision strikes and \
 	thin blade prevent it from properly parrying; and weaken its effectiveness against unarmored targets."
-	hallucination_sound = 'sound/effects/hallucinations/im_here2.ogg'
+	hallucination_sound = '../assets/sound/effects/hallucinations/im_here2.ogg'
 	hallucination_text = "The lightest, most beautiful snowflakes I'd ever seen raining down upon me. I wasn't cold. I couldn't be. It couldn't overcome the warmth of my beating heart."
 
 /obj/item/luna_fragment/energy_retrofit/apply_upgrade(our_sord, mob/living/user)
@@ -176,7 +176,7 @@
 	upgrade_appliable.inhand_icon_state = "luna_energy"
 	update_inhand_icon(user)
 	upgrade_appliable.set_light_on(TRUE)
-	playsound(upgrade_appliable, 'sound/items/weapons/saberon.ogg', 35, TRUE)
+	playsound(upgrade_appliable, '../assets/sound/items/weapons/saberon.ogg', 35, TRUE)
 	upgrade_appliable.force = /obj/item/melee/energy/sword::active_force
 	upgrade_appliable.throwforce = /obj/item/melee/energy/sword::active_throwforce
 	upgrade_appliable.exposed_wound_bonus = /obj/item/melee/energy/sword::exposed_wound_bonus
@@ -190,7 +190,7 @@
 	upgrade_appliable.inhand_icon_state = "luna"
 	update_inhand_icon(user)
 	upgrade_appliable.set_light_on(FALSE)
-	playsound(upgrade_appliable, 'sound/items/weapons/saberoff.ogg', 35, TRUE)
+	playsound(upgrade_appliable, '../assets/sound/items/weapons/saberoff.ogg', 35, TRUE)
 	upgrade_appliable.force = initial(upgrade_appliable.force)
 	upgrade_appliable.throwforce = initial(upgrade_appliable.throwforce)
 	upgrade_appliable.exposed_wound_bonus = initial(upgrade_appliable.exposed_wound_bonus)

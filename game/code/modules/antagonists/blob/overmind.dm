@@ -17,7 +17,7 @@ GLOBAL_LIST_EMPTY(blob_nodes)
 	name = "Blob Overmind"
 	real_name = "Blob Overmind"
 	desc = "The overmind. It controls the blob."
-	icon = 'icons/mob/eyemob.dmi'
+	icon = '../assets/icons/mob/eyemob.dmi'
 	icon_state = "marker"
 	mouse_opacity = MOUSE_OPACITY_ICON
 	move_on_shuttle = TRUE
@@ -226,7 +226,7 @@ GLOBAL_LIST_EMPTY(blob_nodes)
 	INVOKE_ASYNC(src, PROC_REF(victory_sequence))
 
 /mob/eye/blob/proc/victory_sequence()
-	sound_to_playing_players('sound/announcer/alarm/nuke_alarm.ogg', 70)
+	sound_to_playing_players('../assets/sound/announcer/alarm/nuke_alarm.ogg', 70)
 	sleep(10 SECONDS)
 	for(var/mob/living/live_guy as anything in GLOB.mob_living_list)
 		var/turf/guy_turf = get_turf(live_guy)
@@ -241,7 +241,7 @@ GLOBAL_LIST_EMPTY(blob_nodes)
 			continue
 
 		if(!live_guy.has_faction(ROLE_BLOB))
-			playsound(live_guy, 'sound/effects/splat.ogg', 50, TRUE)
+			playsound(live_guy, '../assets/sound/effects/splat.ogg', 50, TRUE)
 			if(live_guy.stat != DEAD)
 				live_guy.investigate_log("has died from blob takeover.", INVESTIGATE_DEATHS)
 			live_guy.death()
@@ -255,7 +255,7 @@ GLOBAL_LIST_EMPTY(blob_nodes)
 			continue
 		check_area.color = blobstrain.color
 		check_area.name = "blob"
-		check_area.icon = 'icons/mob/nonhuman-player/blob.dmi'
+		check_area.icon = '../assets/icons/mob/nonhuman-player/blob.dmi'
 		check_area.icon_state = "blob_shield"
 		check_area.layer = BELOW_MOB_LAYER
 		check_area.SetInvisibility(INVISIBILITY_NONE)

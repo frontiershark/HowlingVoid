@@ -200,12 +200,12 @@
 /atom/movable/screen/alert/status_effect/blood_worm_transfuse
 	name = "Blood Injection"
 	desc = "The injected blood is rapidly healing your host."
-	icon = 'icons/mob/actions/actions_blood_worm.dmi'
+	icon = '../assets/icons/mob/actions/actions_blood_worm.dmi'
 	icon_state = "inject_blood"
 
 /atom/movable/screen/alert/status_effect/blood_worm_transfuse/Initialize(mapload, datum/hud/hud_owner)
 	. = ..()
-	underlays += mutable_appearance('icons/mob/actions/backgrounds.dmi', "bg_demon", layer = layer, offset_spokesman = src, plane = plane)
+	underlays += mutable_appearance('../assets/icons/mob/actions/backgrounds.dmi', "bg_demon", layer = layer, offset_spokesman = src, plane = plane)
 
 /datum/action/cooldown/mob_cooldown/blood_worm/inject/hatchling
 	health_cost = 20

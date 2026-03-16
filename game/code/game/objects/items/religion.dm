@@ -1,14 +1,14 @@
 /obj/item/banner
 	name = "banner"
 	desc = "A banner with Nanotrasen's logo on it."
-	icon = 'icons/obj/banner.dmi'
+	icon = '../assets/icons/obj/banner.dmi'
 	icon_state = "banner"
 	inhand_icon_state = "banner"
 	force = 8
 	attack_verb_continuous = list("forcefully inspires", "violently encourages", "relentlessly galvanizes")
 	attack_verb_simple = list("forcefully inspire", "violently encourage", "relentlessly galvanize")
-	lefthand_file = 'icons/mob/inhands/equipment/banners_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/banners_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/banners_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/banners_righthand.dmi'
 	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT)
 	item_flags = NO_PIXEL_RANDOM_DROP
 	var/inspiration_available = TRUE //If this banner can be used to inspire crew
@@ -77,7 +77,7 @@
 	inspired_human.AdjustImmobilized(-4 SECONDS)
 	inspired_human.AdjustParalyzed(-4 SECONDS)
 	inspired_human.AdjustUnconscious(-4 SECONDS)
-	playsound(inspired_human, 'sound/effects/magic/staff_healing.ogg', 25, FALSE)
+	playsound(inspired_human, '../assets/sound/effects/magic/staff_healing.ogg', 25, FALSE)
 
 /obj/item/banner/proc/special_inspiration(mob/living/carbon/human/H) //Any banner-specific inspiration effects go here
 	return
@@ -269,8 +269,8 @@
 /obj/item/clothing/head/helmet/plate/crusader
 	name = "Crusader's Hood"
 	desc = "A brownish hood."
-	icon = 'icons/obj/clothing/head/chaplain.dmi'
-	worn_icon = 'icons/mob/clothing/head/chaplain.dmi'
+	icon = '../assets/icons/obj/clothing/head/chaplain.dmi'
+	worn_icon = '../assets/icons/mob/clothing/head/chaplain.dmi'
 	icon_state = "crusader"
 	inhand_icon_state = null
 	w_class = WEIGHT_CLASS_NORMAL
@@ -299,7 +299,7 @@
 	name = "Prophet's Hat"
 	desc = "A religious-looking hat."
 	icon_state = null
-	worn_icon = 'icons/mob/clothing/head/helmet.dmi'
+	worn_icon = '../assets/icons/mob/clothing/head/helmet.dmi'
 	inhand_icon_state = null
 	abstract_type = /obj/item/clothing/head/helmet/plate/crusader/prophet
 	flags_1 = 0
@@ -328,11 +328,11 @@
 /obj/item/godstaff
 	name = "godstaff"
 	desc = "It's a stick..?"
-	icon = 'icons/obj/weapons/staff.dmi'
+	icon = '../assets/icons/obj/weapons/staff.dmi'
 	icon_state = "godstaff-red"
 	icon_angle = -45
-	lefthand_file = 'icons/mob/inhands/weapons/staves_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/staves_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/staves_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/staves_righthand.dmi'
 	var/conversion_color = "#ffffff"
 	var/staffcooldown = 0
 	var/staffwait = 30
@@ -406,9 +406,9 @@
 
 /obj/item/claymore/weak
 	desc = "This one is rusted."
-	icon = 'icons/obj/weapons/sword.dmi'
+	icon = '../assets/icons/obj/weapons/sword.dmi'
 	icon_state = "claymore_old"
-	worn_icon = 'icons/mob/clothing/back.dmi'
+	worn_icon = '../assets/icons/mob/clothing/back.dmi'
 	force = 30
 	armour_penetration = 15
 

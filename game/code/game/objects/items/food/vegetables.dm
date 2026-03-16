@@ -59,7 +59,7 @@
 /obj/item/food/mashed_potatoes
 	name = "mashed potatoes"
 	desc = "A creamy serving of mashed potatoes, a staple of many Thanksgiving dinners."
-	icon = 'icons/obj/food/food.dmi'
+	icon = '../assets/icons/obj/food/food.dmi'
 	icon_state = "mashed_potatoes"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 10,

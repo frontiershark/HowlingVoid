@@ -9,7 +9,7 @@
 /obj/effect/sound_emitter
 	name = "sound emitter"
 	desc = "Emits sounds, presumably."
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	icon_state = "shield2"
 	invisibility = INVISIBILITY_OBSERVER
 	anchored = TRUE

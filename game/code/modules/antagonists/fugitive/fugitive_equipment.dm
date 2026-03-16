@@ -14,7 +14,7 @@
 /datum/action/item_action/camouflage
 	name = "Activate Camouflage"
 	desc = "Activate your camouflage implant, and blend into your surroundings..."
-	button_icon = 'icons/mob/actions/actions_items.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_items.dmi'
 	button_icon_state = "deploy_box"
 	/// The alpha we move to when activating this action.
 	var/camouflage_alpha = 35

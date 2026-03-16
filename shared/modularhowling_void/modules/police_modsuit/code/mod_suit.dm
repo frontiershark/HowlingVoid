@@ -167,7 +167,7 @@
 	var/new_fireloss = mod.wearer.get_fire_loss()
 	var/new_toxloss = mod.wearer.get_tox_loss()
 	var/new_stamloss = mod.wearer.get_stamina_loss()
-	playsound(mod.wearer, 'sound/items/hypospray.ogg', 60, TRUE)
+	playsound(mod.wearer, '../assets/sound/items/hypospray.ogg', 60, TRUE)
 
 	if(new_bruteloss)
 		mod.wearer.reagents.add_reagent(/datum/reagent/medicine/mine_salve, 10)

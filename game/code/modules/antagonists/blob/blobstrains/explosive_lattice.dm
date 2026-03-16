@@ -28,7 +28,7 @@
 		var/damage_total = (10 + 10 * death_cloud_size) / max(1, get_dist(get_turf(dead_spore), get_turf(actor)))
 		//split damage between brute and burn
 		actor.take_overall_damage(damage_total / 2, damage_total / 2)
-		playsound(dead_spore , 'sound/effects/explosion/explosion2.ogg', 20 + 20 * death_cloud_size, TRUE)
+		playsound(dead_spore , '../assets/sound/effects/explosion/explosion2.ogg', 20 + 20 * death_cloud_size, TRUE)
 
 /datum/reagent/blob/explosive_lattice
 	name = "Explosive Lattice"

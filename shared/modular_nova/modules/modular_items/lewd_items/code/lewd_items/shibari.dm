@@ -9,7 +9,7 @@
 	flags_1 = IS_PLAYER_COLORABLE_1
 	obj_flags_nova = ERP_ITEM
 
-	icon = 'icons/map_icons/items/_item.dmi'
+	icon = '../assets/icons/map_icons/items/_item.dmi'
 	icon_state = "/obj/item/stack/shibari_rope"
 	post_init_icon_state = "shibari_rope"
 	greyscale_config = /datum/greyscale_config/shibari_rope

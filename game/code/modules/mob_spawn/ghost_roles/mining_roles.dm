@@ -6,7 +6,7 @@
 	name = "malfunctioning cryostasis sleeper"
 	desc = "A humming sleeper with a silhouetted occupant inside. Its stasis function is broken and it's likely being used as a bed."
 	prompt_name = "a stranded hermit"
-	icon = 'icons/obj/mining_zones/spawners.dmi'
+	icon = '../assets/icons/obj/mining_zones/spawners.dmi'
 	icon_state = "cryostasis_sleeper"
 	outfit = /datum/outfit/hermit
 	you_are_text = "You've been stranded in this godless prison of a planet for longer than you can remember."
@@ -61,7 +61,7 @@
 	name = "cryostasis bed"
 	desc = "A humming sleeper with a silhouetted occupant inside. Its stasis function is broken and it's likely being used as a bed."
 	prompt_name = "a grumpy old man"
-	icon = 'icons/obj/mining_zones/spawners.dmi'
+	icon = '../assets/icons/obj/mining_zones/spawners.dmi'
 	icon_state = "cryostasis_sleeper"
 	outfit = /datum/outfit/hermit
 	you_are_text = "You've been hunting polar bears for 40 years now! What do these 'NaniteTrans' newcomers want?"
@@ -74,7 +74,7 @@
 /obj/effect/mob_spawn/ghost_role/human/beach
 	prompt_name = "a beach bum"
 	name = "beach bum sleeper"
-	icon = 'icons/obj/machines/sleeper.dmi'
+	icon = '../assets/icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
 	you_are_text = "You're, like, totally a dudebro, bruh."
 	flavour_text = "Ch'yea. You came here, like, on spring break, hopin' to pick up some bangin' hot chicks, y'knaw?"
@@ -115,7 +115,7 @@
 
 /obj/effect/mob_spawn/ghost_role/human/bartender
 	name = "bartender sleeper"
-	icon = 'icons/obj/machines/sleeper.dmi'
+	icon = '../assets/icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
 	prompt_name = "a space bartender"
 	you_are_text = "You are a space bartender!"
@@ -147,7 +147,7 @@
 	name = "preserved terrarium"
 	desc = "An ancient machine that seems to be used for storing plant matter. The glass is obstructed by a mat of vines."
 	prompt_name = "lifebringer"
-	icon = 'icons/obj/mining_zones/spawners.dmi'
+	icon = '../assets/icons/obj/mining_zones/spawners.dmi'
 	icon_state = "terrarium"
 	density = TRUE
 	mob_species = /datum/species/pod
@@ -173,7 +173,7 @@
 /obj/structure/ash_walker_eggshell
 	name = "ash walker egg"
 	desc = "A man-sized yellow egg, spawned from some unfathomable creature. A humanoid silhouette lurks within. The egg shell looks resistant to temperature but otherwise rather brittle."
-	icon = 'icons/mob/simple/lavaland/lavaland_monsters.dmi'
+	icon = '../assets/icons/mob/simple/lavaland/lavaland_monsters.dmi'
 	icon_state = "large_egg"
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | FREEZE_PROOF
 	max_integrity = 80
@@ -183,12 +183,12 @@
 	switch(damage_type)
 		if(BRUTE)
 			if(damage_amount)
-				playsound(loc, 'sound/effects/blob/attackblob.ogg', 100, TRUE)
+				playsound(loc, '../assets/sound/effects/blob/attackblob.ogg', 100, TRUE)
 			else
-				playsound(src, 'sound/items/weapons/tap.ogg', 50, TRUE)
+				playsound(src, '../assets/sound/items/weapons/tap.ogg', 50, TRUE)
 		if(BURN)
 			if(damage_amount)
-				playsound(loc, 'sound/items/tools/welder.ogg', 100, TRUE)
+				playsound(loc, '../assets/sound/items/tools/welder.ogg', 100, TRUE)
 
 /obj/structure/ash_walker_eggshell/attack_ghost(mob/user) //Pass on ghost clicks to the mob spawner
 	if(egg)
@@ -212,7 +212,7 @@
 	name = "ash walker egg"
 	desc = "A man-sized yellow egg, spawned from some unfathomable creature. A humanoid silhouette lurks within."
 	prompt_name = "necropolis ash walker"
-	icon = 'icons/mob/simple/lavaland/lavaland_monsters.dmi'
+	icon = '../assets/icons/mob/simple/lavaland/lavaland_monsters.dmi'
 	icon_state = "large_egg"
 	mob_species = /datum/species/lizard/ashwalker
 	outfit = /datum/outfit/ashwalker
@@ -281,7 +281,7 @@
 
 /obj/effect/mob_spawn/ghost_role/human/lavaland_syndicate
 	name = "Syndicate Bioweapon Scientist"
-	icon = 'icons/obj/machines/sleeper.dmi'
+	icon = '../assets/icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper_s"
 	prompt_name = "a syndicate science technician"
 	you_are_text = "You are a syndicate science technician, employed in a top secret research facility developing biological weapons."

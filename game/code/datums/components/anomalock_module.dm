@@ -74,7 +74,7 @@
 		return ITEM_INTERACT_FAILURE
 	core = tool
 	source.balloon_alert(user, "core inserted")
-	playsound(source, 'sound/machines/click.ogg', 30, TRUE)
+	playsound(source, '../assets/sound/machines/click.ogg', 30, TRUE)
 	source.update_appearance(UPDATE_ICON_STATE)
 	if(core_insert_callback)
 		if(istype(core_insert_callback, /datum/callback))

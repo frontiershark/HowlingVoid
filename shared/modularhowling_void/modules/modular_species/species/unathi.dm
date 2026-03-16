@@ -51,16 +51,16 @@
 	if(left_arm)
 		left_arm.unarmed_attack_verbs = list("slash")
 		left_arm.unarmed_attack_effect = ATTACK_EFFECT_CLAW
-		left_arm.unarmed_attack_sound = 'sound/items/weapons/slash.ogg'
-		left_arm.unarmed_miss_sound = 'sound/items/weapons/slashmiss.ogg'
+		left_arm.unarmed_attack_sound = '../assets/sound/items/weapons/slash.ogg'
+		left_arm.unarmed_miss_sound = '../assets/sound/items/weapons/slashmiss.ogg'
 		left_arm.unarmed_sharpness = SHARP_EDGED
 
 	var/obj/item/bodypart/arm/right/right_arm = human_who_gained_species.get_bodypart(BODY_ZONE_R_ARM)
 	if(right_arm)
 		right_arm.unarmed_attack_verbs = list("slash")
 		right_arm.unarmed_attack_effect = ATTACK_EFFECT_CLAW
-		right_arm.unarmed_attack_sound = 'sound/items/weapons/slash.ogg'
-		right_arm.unarmed_miss_sound = 'sound/items/weapons/slashmiss.ogg'
+		right_arm.unarmed_attack_sound = '../assets/sound/items/weapons/slash.ogg'
+		right_arm.unarmed_miss_sound = '../assets/sound/items/weapons/slashmiss.ogg'
 		right_arm.unarmed_sharpness = SHARP_EDGED
 
 	RegisterSignal(human_who_gained_species, COMSIG_MOVABLE_SET_GRAB_STATE, PROC_REF(on_grab))

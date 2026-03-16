@@ -84,7 +84,7 @@
 	return TRUE
 
 /datum/action/cooldown/mob_cooldown/spider_leap/proc/flop_on_turf(turf/target, original_pixel_y)
-	playsound(get_turf(owner), 'sound/effects/meteorimpact.ogg', 150, TRUE)
+	playsound(get_turf(owner), '../assets/sound/effects/meteorimpact.ogg', 150, TRUE)
 	for(var/mob/living/victim in oview(1, owner))
 		if(victim in owner.buckled_mobs)
 			continue
@@ -218,7 +218,7 @@
 
 // apply trauma to those within a few blocks who break the effigy.
 /obj/structure/spider/stickyweb/alive/spider_effigy/Destroy()
-	playsound(loc,'sound/effects/tendril_destroyed.ogg', 200, FALSE, 50, TRUE, TRUE)
+	playsound(loc,'../assets/sound/effects/tendril_destroyed.ogg', 200, FALSE, 50, TRUE, TRUE)
 	for(var/mob/living/carbon/carbon_target in view(2,src))
 		if(carbon_target.soundbang_act(intensity = 1, stun_pwr = 0, damage_pwr = 5, deafen_pwr = 5)) // if you don't have earpro you get brain damage
 			carbon_target.gain_trauma(/datum/brain_trauma/magic/spider)

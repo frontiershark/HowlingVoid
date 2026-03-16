@@ -52,7 +52,7 @@
 	unlock_contents = list()
 	qdel(item)
 	to_chat(user, span_notice("You twist the key into both locks at once, opening the crate."))
-	playsound(src, 'sound/machines/airlock/boltsup.ogg', 50, vary = FALSE)
+	playsound(src, '../assets/sound/machines/airlock/boltsup.ogg', 50, vary = FALSE)
 	togglelock(user)
 
 /obj/structure/closet/crate/secure/syndicrate/togglelock(mob/living/user, silent)
@@ -73,7 +73,7 @@
 /obj/item/syndicrate_key
 	name = "syndicrate key"
 	desc = "A device bearing a serpentine emblem, capable of splitting itself into two keys. Can be used to open one syndicrate."
-	icon = 'icons/obj/storage/crates.dmi'
+	icon = '../assets/icons/obj/storage/crates.dmi'
 	icon_state = "syndicrate_key"
 	w_class = WEIGHT_CLASS_TINY
 

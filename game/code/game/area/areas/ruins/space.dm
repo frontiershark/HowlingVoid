@@ -55,7 +55,7 @@
 
 /area/ruin/space/has_grav/powered/aesthetic
 	name = "Aesthetic"
-	ambientsounds = list('sound/ambience/misc/ambivapor1.ogg')
+	ambientsounds = list('../assets/sound/ambience/misc/ambivapor1.ogg')
 
 
 //Ruin of Hotel
@@ -308,7 +308,7 @@
 
 /area/ruin/space/solars/ancientstation/charlie/solars
 	name = "\improper Charlie Station Solar Array"
-	icon = 'icons/area/areas_ruins.dmi' // Solars inheriet areas_misc.dmi, not areas_ruin.dmi
+	icon = '../assets/icons/area/areas_ruins.dmi' // Solars inheriet areas_misc.dmi, not areas_ruin.dmi
 	icon_state = "os_charlie_solars"
 	requires_power = FALSE
 	area_flags = NONE
@@ -336,7 +336,7 @@
 /area/ruin/space/ancientstation/delta/ai
 	name = "\improper Delta Station AI Core"
 	icon_state = "os_delta_ai"
-	ambientsounds = list('sound/ambience/misc/ambimalf.ogg', 'sound/ambience/engineering/ambitech.ogg', 'sound/ambience/engineering/ambitech2.ogg', 'sound/ambience/engineering/ambiatmos.ogg', 'sound/ambience/engineering/ambiatmos2.ogg')
+	ambientsounds = list('../assets/sound/ambience/misc/ambimalf.ogg', '../assets/sound/ambience/engineering/ambitech.ogg', '../assets/sound/ambience/engineering/ambitech2.ogg', '../assets/sound/ambience/engineering/ambiatmos.ogg', '../assets/sound/ambience/engineering/ambiatmos2.ogg')
 
 /area/ruin/space/ancientstation/delta/storage
 	name = "\improper Delta Station Storage"
@@ -547,14 +547,14 @@
 
 /area/ruin/space/abandoned_tele
 	name = "\improper Abandoned Teleporter"
-	ambientsounds = list('sound/ambience/misc/ambimalf.ogg', 'sound/ambience/misc/signal.ogg')
+	ambientsounds = list('../assets/sound/ambience/misc/ambimalf.ogg', '../assets/sound/ambience/misc/signal.ogg')
 
 //OLD AI SAT
 
 /area/ruin/space/tcommsat_oldaisat // Since tcommsat was moved to /area/station/, this turf doesn't inhereit its properties anymore
 	name = "\improper Abandoned Satellite"
-	ambientsounds = list('sound/ambience/engineering/ambisin2.ogg', 'sound/ambience/misc/signal.ogg', 'sound/ambience/misc/signal.ogg', 'sound/ambience/general/ambigen9.ogg', 'sound/ambience/engineering/ambitech.ogg',\
-											'sound/ambience/engineering/ambitech2.ogg', 'sound/ambience/engineering/ambitech3.ogg', 'sound/ambience/misc/ambimystery.ogg')
+	ambientsounds = list('../assets/sound/ambience/engineering/ambisin2.ogg', '../assets/sound/ambience/misc/signal.ogg', '../assets/sound/ambience/misc/signal.ogg', '../assets/sound/ambience/general/ambigen9.ogg', '../assets/sound/ambience/engineering/ambitech.ogg',\
+											'../assets/sound/ambience/engineering/ambitech2.ogg', '../assets/sound/ambience/engineering/ambitech3.ogg', '../assets/sound/ambience/misc/ambimystery.ogg')
 	airlock_wires = /datum/wires/airlock/engineering
 
 // CRASHED PRISON SHUTTLE
@@ -593,7 +593,7 @@
 // The planet of the clowns
 /area/ruin/space/has_grav/powered/clownplanet
 	name = "\improper Clown Planet"
-	ambientsounds = list('sound/music/lobby_music/clown.ogg')
+	ambientsounds = list('../assets/sound/music/lobby_music/clown.ogg')
 
 //DERELICT SULACO
 /area/ruin/space/has_grav/derelictsulaco
@@ -669,10 +669,10 @@
 // Transit Booth
 /area/ruin/space/has_grav/transit_booth
 	name = "transit_booth"
-	icon = 'icons/area/areas_ruins.dmi'
+	icon = '../assets/icons/area/areas_ruins.dmi'
 	icon_state = "ruins"
 	requires_power = FALSE
-	ambientsounds = list('sound/ambience/general/ambigen12.ogg','sound/ambience/general/ambigen13.ogg','sound/ambience/medical/ambinice.ogg')
+	ambientsounds = list('../assets/sound/ambience/general/ambigen12.ogg','../assets/sound/ambience/general/ambigen13.ogg','../assets/sound/ambience/medical/ambinice.ogg')
 
 // the outlet
 /area/ruin/space/has_grav/the_outlet/storefront

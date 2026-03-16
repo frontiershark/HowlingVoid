@@ -8,8 +8,8 @@
 	worn_icon = 'modular_nova/modules/deforest_medical_items/icons/worn/worn.dmi'
 	worn_icon_teshari = 'modular_nova/modules/deforest_medical_items/icons/worn/worn_teshari.dmi'
 	worn_icon_state = "frontier"
-	drop_sound = 'sound/items/handling/ammobox_drop.ogg'
-	pickup_sound = 'sound/items/handling/ammobox_pickup.ogg'
+	drop_sound = '../assets/sound/items/handling/ammobox_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/ammobox_pickup.ogg'
 	storage_type = /datum/storage/medkit/robotic_repair
 
 /datum/storage/medkit/robotic_repair/New(atom/parent, max_slots, max_specific_storage, max_total_storage, list/holdables)

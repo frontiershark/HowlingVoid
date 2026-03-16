@@ -595,7 +595,7 @@ GLOBAL_LIST_INIT(mafia_role_by_alignment, setup_mafia_role_by_alignment())
 	if(phase != MAFIA_PHASE_VOTING)
 		return
 	var/v = get_vote_count(get_role_player(source), "Day")
-	var/mutable_appearance/MA = mutable_appearance('icons/obj/mafia.dmi',"vote_[v > 12 ? "over_12" : v]")
+	var/mutable_appearance/MA = mutable_appearance('../assets/icons/obj/mafia.dmi',"vote_[v > 12 ? "over_12" : v]")
 	overlay_list += MA
 
 /**
@@ -856,7 +856,7 @@ GLOBAL_LIST_INIT(mafia_role_by_alignment, setup_mafia_role_by_alignment())
 /datum/action/innate/mafia_panel
 	name = "Mafia Panel"
 	desc = "Use this to play."
-	button_icon = 'icons/obj/mafia.dmi'
+	button_icon = '../assets/icons/obj/mafia.dmi'
 	button_icon_state = "board"
 	///The mafia controller that the button will use the UI of.
 	var/datum/mafia_controller/controller_panel

@@ -16,7 +16,7 @@
 	response_harm_simple = "kick"
 	attack_verb_continuous = "bucks"
 	attack_verb_simple = "buck"
-	attack_sound = 'sound/items/weapons/punch1.ogg'
+	attack_sound = '../assets/sound/items/weapons/punch1.ogg'
 	health = 75
 	maxHealth = 75
 	default_blood_volume = BLOOD_VOLUME_NORMAL

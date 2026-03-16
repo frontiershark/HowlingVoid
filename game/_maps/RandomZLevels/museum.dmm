@@ -1180,7 +1180,7 @@
 /area/awaymission/museum)
 "jC" = (
 /obj/effect/puzzle_poddoor_open{
-	icon = 'icons/effects/mapping_helpers.dmi';
+	icon = '../assets/icons/effects/mapping_helpers.dmi';
 	id = "museum_right_wing";
 	queue_id = "museum_right_wing"
 	},
@@ -1662,7 +1662,7 @@
 /obj/structure/lattice/catwalk/mining,
 /obj/structure/fluff{
 	name = "old plasma extractor";
-	icon = 'icons/mob/simple/hivebot.dmi';
+	icon = '../assets/icons/mob/simple/hivebot.dmi';
 	icon_state = "fab_robot"
 	},
 /turf/open/lava/plasma/mafia,
@@ -1764,7 +1764,7 @@
 /area/awaymission/museum)
 "of" = (
 /obj/effect/puzzle_poddoor_open{
-	icon = 'icons/effects/mapping_helpers.dmi';
+	icon = '../assets/icons/effects/mapping_helpers.dmi';
 	id = "museum_secret";
 	queue_id = "museum_secret"
 	},
@@ -5214,7 +5214,7 @@
 /obj/structure/fluff{
 	name = "replica prototype autolathe";
 	desc = "A non-functional replica of a prototype Autolathe.";
-	icon = 'icons/obj/machines/lathes.dmi';
+	icon = '../assets/icons/obj/machines/lathes.dmi';
 	icon_state = "autolathe"
 	},
 /turf/open/floor/iron/smooth_corner{

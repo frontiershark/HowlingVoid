@@ -30,11 +30,11 @@ GLOBAL_LIST_INIT(nullrod_variants, init_nullrod_variants())
 /obj/item/nullrod
 	name = "null rod"
 	desc = "A rod of pure obsidian; its very presence disrupts and dampens 'magical forces'. That's what the guidebook says, anyway."
-	icon = 'icons/obj/weapons/staff.dmi'
+	icon = '../assets/icons/obj/weapons/staff.dmi'
 	icon_state = "nullrod"
 	inhand_icon_state = "nullrod"
-	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/melee_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/melee_righthand.dmi'
 	force = 18
 	throw_speed = 3
 	throw_range = 4
@@ -81,19 +81,19 @@ GLOBAL_LIST_INIT(nullrod_variants, init_nullrod_variants())
 /obj/item/nullrod/claymore
 	name = "holy claymore"
 	desc = "A weapon fit for a crusade!"
-	icon = 'icons/obj/weapons/sword.dmi'
+	icon = '../assets/icons/obj/weapons/sword.dmi'
 	icon_state = "claymore_gold"
 	inhand_icon_state = "claymore_gold"
 	worn_icon_state = "claymore_gold"
 	icon_angle = -45
-	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/swords_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/swords_righthand.dmi'
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BACK|ITEM_SLOT_BELT
 	block_chance = 30
-	block_sound = 'sound/items/weapons/parry.ogg'
+	block_sound = '../assets/sound/items/weapons/parry.ogg'
 	sharpness = SHARP_EDGED
-	hitsound = 'sound/items/weapons/bladeslice.ogg'
+	hitsound = '../assets/sound/items/weapons/bladeslice.ogg'
 	attack_verb_continuous = list("attacks", "slashes", "slices", "tears", "lacerates", "rips", "dices", "cuts")
 	attack_verb_simple = list("attack", "slash", "slice", "tear", "lacerate", "rip", "dice", "cut")
 	menu_description = "A sharp claymore which provides a low chance of blocking incoming melee attacks. Can be worn on the back or belt."
@@ -114,16 +114,16 @@ GLOBAL_LIST_INIT(nullrod_variants, init_nullrod_variants())
 /obj/item/nullrod/claymore/darkblade
 	name = "dark blade"
 	desc = "Spread the glory of the dark gods!"
-	icon = 'icons/obj/weapons/sword.dmi'
+	icon = '../assets/icons/obj/weapons/sword.dmi'
 	icon_state = "cultblade"
 	inhand_icon_state = "cultblade"
 	worn_icon_state = "cultblade"
 	icon_angle = -45
-	lefthand_file = 'icons/mob/inhands/64x64_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/64x64_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/64x64_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/64x64_righthand.dmi'
 	inhand_x_dimension = 64
 	inhand_y_dimension = 64
-	hitsound = 'sound/effects/hallucinations/growl1.ogg'
+	hitsound = '../assets/sound/effects/hallucinations/growl1.ogg'
 	menu_description = "A sharp blade which provides a low chance of blocking incoming melee attacks. Can be worn on the back or belt."
 
 /obj/item/nullrod/claymore/chainsaw_sword
@@ -135,7 +135,7 @@ GLOBAL_LIST_INIT(nullrod_variants, init_nullrod_variants())
 	slot_flags = ITEM_SLOT_BELT
 	attack_verb_continuous = list("saws", "tears", "lacerates", "cuts", "chops", "dices")
 	attack_verb_simple = list("saw", "tear", "lacerate", "cut", "chop", "dice")
-	hitsound = 'sound/items/weapons/chainsawhit.ogg'
+	hitsound = '../assets/sound/items/weapons/chainsawhit.ogg'
 	tool_behaviour = TOOL_SAW
 	toolspeed = 1.5 //slower than a real saw
 	menu_description = "A sharp chainsaw sword which provides a low chance of blocking incoming melee attacks. Can be used as a slower saw tool. Can be worn on the belt."
@@ -153,7 +153,7 @@ GLOBAL_LIST_INIT(nullrod_variants, init_nullrod_variants())
 	desc = "Capable of cutting clean through a holy claymore."
 	icon_state = "katana"
 	inhand_icon_state = "katana"
-	pickup_sound = 'sound/items/unsheath.ogg'
+	pickup_sound = '../assets/sound/items/unsheath.ogg'
 	slot_flags = NONE
 	chaplain_spawnable = FALSE
 
@@ -174,30 +174,30 @@ GLOBAL_LIST_INIT(nullrod_variants, init_nullrod_variants())
 /obj/item/nullrod/claymore/spellblade
 	name = "dormant spellblade"
 	desc = "The blade grants the wielder nearly limitless power...if they can figure out how to turn it on, that is."
-	icon = 'icons/obj/weapons/guns/magic.dmi'
+	icon = '../assets/icons/obj/weapons/guns/magic.dmi'
 	icon_state = "spellblade"
 	inhand_icon_state = "spellblade"
 	slot_flags = ITEM_SLOT_BACK
-	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/swords_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/swords_righthand.dmi'
 	worn_icon_state = "spellblade"
-	hitsound = 'sound/items/weapons/rapierhit.ogg'
+	hitsound = '../assets/sound/items/weapons/rapierhit.ogg'
 	menu_description = "A sharp blade which provides a low chance of blocking incoming melee attacks. Can be worn on the back."
 
 /obj/item/nullrod/claymore/talking
 	name = "possessed blade"
 	desc = "When the station falls into chaos, it's nice to have a friend by your side."
-	icon = 'icons/obj/weapons/sword.dmi'
+	icon = '../assets/icons/obj/weapons/sword.dmi'
 	icon_state = "talking_sword"
 	inhand_icon_state = "talking_sword"
 	slot_flags = ITEM_SLOT_BACK
 	icon_angle = 45
-	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/swords_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/swords_righthand.dmi'
 	worn_icon_state = "talking_sword"
 	attack_verb_continuous = list("chops", "slices", "cuts")
 	attack_verb_simple= list("chop", "slice", "cut")
-	hitsound = 'sound/items/weapons/rapierhit.ogg'
+	hitsound = '../assets/sound/items/weapons/rapierhit.ogg'
 	menu_description = "A sharp blade which provides a low chance of blocking incoming melee attacks. Able to awaken a friendly spirit to provide guidance. Can be worn on the back."
 
 /obj/item/nullrod/claymore/talking/Initialize(mapload)
@@ -214,7 +214,7 @@ GLOBAL_LIST_INIT(nullrod_variants, init_nullrod_variants())
 	slot_flags = ITEM_SLOT_BELT
 	attack_verb_continuous = list("saws", "tears", "lacerates", "cuts", "chops", "dices")
 	attack_verb_simple = list("saw", "tear", "lacerate", "cut", "chop", "dice")
-	hitsound = 'sound/items/weapons/chainsawhit.ogg'
+	hitsound = '../assets/sound/items/weapons/chainsawhit.ogg'
 	tool_behaviour = TOOL_SAW
 	toolspeed = 0.5 //same speed as an active chainsaw
 	chaplain_spawnable = FALSE //prevents being pickable as a chaplain weapon (it has 30 force)
@@ -231,10 +231,10 @@ GLOBAL_LIST_INIT(nullrod_variants, init_nullrod_variants())
 /obj/item/nullrod/claymore/heretic
 	name = "occultist's khopesh"
 	desc = "Steels your hand to slay foes beyond comprehension."
-	icon = 'icons/obj/weapons/khopesh.dmi'
+	icon = '../assets/icons/obj/weapons/khopesh.dmi'
 	icon_state = "eldritch_blade"
-	lefthand_file = 'icons/mob/inhands/64x64_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/64x64_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/64x64_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/64x64_righthand.dmi'
 	inhand_x_dimension = 64
 	inhand_y_dimension = 64
 	inhand_icon_state = "eldritch_blade"
@@ -249,14 +249,14 @@ GLOBAL_LIST_INIT(nullrod_variants, init_nullrod_variants())
 /obj/item/nullrod/vibro
 	name = "high frequency blade"
 	desc = "Bad references are the DNA of the soul."
-	icon = 'icons/obj/weapons/sword.dmi'
+	icon = '../assets/icons/obj/weapons/sword.dmi'
 	icon_state = "hfrequency0"
 	inhand_icon_state = "hfrequency0"
 	base_icon_state = "hfrequency"
 	worn_icon_state = "hfrequency0"
 	icon_angle = -45
-	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/swords_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/swords_righthand.dmi'
 	w_class = WEIGHT_CLASS_BULKY
 	force = 10
 	armour_penetration = 35
@@ -265,8 +265,8 @@ GLOBAL_LIST_INIT(nullrod_variants, init_nullrod_variants())
 	sharpness = SHARP_EDGED
 	attack_verb_continuous = list("chops", "slices", "cuts", "zandatsu's")
 	attack_verb_simple = list("chop", "slice", "cut", "zandatsu")
-	hitsound = 'sound/items/weapons/rapierhit.ogg'
-	block_sound = 'sound/items/weapons/parry.ogg'
+	hitsound = '../assets/sound/items/weapons/rapierhit.ogg'
+	block_sound = '../assets/sound/items/weapons/parry.ogg'
 	menu_description = "A sharp blade which partially penetrates armor. Unusualy adept at blocking melee attacks from exosuits. Very effective at butchering bodies. Can be worn on the back."
 	var/list/alt_continuous = list("stabs", "pierces", "impales")
 	var/list/alt_simple = list("stab", "pierce", "impale")
@@ -301,16 +301,16 @@ GLOBAL_LIST_INIT(nullrod_variants, init_nullrod_variants())
 /obj/item/nullrod/godhand
 	name = "god hand"
 	desc = "This hand of yours glows with an awesome power!"
-	icon = 'icons/obj/weapons/hand.dmi'
+	icon = '../assets/icons/obj/weapons/hand.dmi'
 	icon_state = "disintegrate"
 	inhand_icon_state = "disintegrate"
-	lefthand_file = 'icons/mob/inhands/items/touchspell_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/touchspell_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/touchspell_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/touchspell_righthand.dmi'
 	slot_flags = null
 	item_flags = ABSTRACT | DROPDEL
 	resistance_flags = FIRE_PROOF|ACID_PROOF
 	w_class = WEIGHT_CLASS_HUGE
-	hitsound = 'sound/items/weapons/sear.ogg'
+	hitsound = '../assets/sound/items/weapons/sear.ogg'
 	damtype = BURN
 	attack_verb_continuous = list("punches", "cross counters", "pummels")
 	attack_verb_simple = list(SFX_PUNCH, "cross counter", "pummel")
@@ -325,17 +325,17 @@ GLOBAL_LIST_INIT(nullrod_variants, init_nullrod_variants())
 /obj/item/nullrod/staff
 	name = "red holy staff"
 	desc = "It has a mysterious, protective aura."
-	icon = 'icons/obj/weapons/staff.dmi'
+	icon = '../assets/icons/obj/weapons/staff.dmi'
 	icon_state = "godstaff-red"
 	inhand_icon_state = "godstaff-red"
 	icon_angle = -45
-	lefthand_file = 'icons/mob/inhands/weapons/staves_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/staves_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/staves_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/staves_righthand.dmi'
 	w_class = WEIGHT_CLASS_HUGE
 	force = 5
 	slot_flags = ITEM_SLOT_BACK
 	block_chance = 50
-	block_sound = 'sound/items/weapons/genhit.ogg'
+	block_sound = '../assets/sound/items/weapons/genhit.ogg'
 	menu_description = "A red staff which provides a medium chance of blocking incoming attacks via a protective red aura around its user, but deals very low amount of damage. Can be worn only on the back."
 	/// The icon which appears over the mob holding the item
 	var/shield_icon = "shield-red"
@@ -343,7 +343,7 @@ GLOBAL_LIST_INIT(nullrod_variants, init_nullrod_variants())
 /obj/item/nullrod/staff/worn_overlays(mutable_appearance/standing, isinhands)
 	. = ..()
 	if(isinhands)
-		. += mutable_appearance('icons/effects/effects.dmi', shield_icon, MOB_SHIELD_LAYER)
+		. += mutable_appearance('../assets/icons/effects/effects.dmi', shield_icon, MOB_SHIELD_LAYER)
 
 /obj/item/nullrod/staff/blue
 	name = "blue holy staff"
@@ -357,17 +357,17 @@ GLOBAL_LIST_INIT(nullrod_variants, init_nullrod_variants())
 /obj/item/nullrod/sord
 	name = "\improper UNREAL SORD"
 	desc = "This thing is so unspeakably HOLY you are having a hard time even holding it."
-	icon = 'icons/obj/weapons/sword.dmi'
+	icon = '../assets/icons/obj/weapons/sword.dmi'
 	icon_state = "sord"
 	inhand_icon_state = "sord"
 	worn_icon_state = "sord"
 	icon_angle = -35
-	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/swords_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/swords_righthand.dmi'
 	force = 4.13
 	throwforce = 1
 	slot_flags = ITEM_SLOT_BELT
-	hitsound = 'sound/items/weapons/bladeslice.ogg'
+	hitsound = '../assets/sound/items/weapons/bladeslice.ogg'
 	attack_verb_continuous = list("attacks", "slashes", "stabs", "slices", "tears", "lacerates", "rips", "dices", "cuts")
 	attack_verb_simple = list("attack", "slash", "stab", "slice", "tear", "lacerate", "rip", "dice", "cut")
 	menu_description = "An odd s(w)ord dealing a laughable amount of damage. Fits in pockets. Can be worn on the belt."
@@ -382,13 +382,13 @@ GLOBAL_LIST_INIT(nullrod_variants, init_nullrod_variants())
 /obj/item/nullrod/hammer
 	name = "relic war hammer"
 	desc = "This war hammer cost the chaplain forty thousand space dollars."
-	icon = 'icons/obj/weapons/hammer.dmi'
+	icon = '../assets/icons/obj/weapons/hammer.dmi'
 	icon_state = "hammeron"
 	inhand_icon_state = "hammeron"
 	worn_icon_state = "hammeron"
 	icon_angle = -45
-	lefthand_file = 'icons/mob/inhands/weapons/hammers_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/hammers_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/hammers_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/hammers_righthand.dmi'
 	w_class = WEIGHT_CLASS_BULKY
 	attack_verb_continuous = list("smashes", "bashes", "hammers", "crunches")
 	attack_verb_simple = list("smash", "bash", "hammer", "crunch")
@@ -403,11 +403,11 @@ GLOBAL_LIST_INIT(nullrod_variants, init_nullrod_variants())
 /obj/item/nullrod/chainsaw
 	name = "chainsaw hand"
 	desc = "Good? Bad? You're the guy with the chainsaw hand."
-	icon = 'icons/obj/weapons/chainsaw.dmi'
+	icon = '../assets/icons/obj/weapons/chainsaw.dmi'
 	icon_state = "chainsaw_on"
 	base_icon_state = "chainsaw_on"
-	lefthand_file = 'icons/mob/inhands/weapons/chainsaw_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/chainsaw_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/chainsaw_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/chainsaw_righthand.dmi'
 	w_class = WEIGHT_CLASS_HUGE
 	slot_flags = null
 	item_flags = ABSTRACT
@@ -415,7 +415,7 @@ GLOBAL_LIST_INIT(nullrod_variants, init_nullrod_variants())
 	sharpness = SHARP_EDGED
 	attack_verb_continuous = list("saws", "tears", "lacerates", "cuts", "chops", "dices")
 	attack_verb_simple = list("saw", "tear", "lacerate", "cut", "chop", "dice")
-	hitsound = 'sound/items/weapons/chainsawhit.ogg'
+	hitsound = '../assets/sound/items/weapons/chainsawhit.ogg'
 	tool_behaviour = TOOL_SAW
 	toolspeed = 2 //slower than a real saw
 	menu_description = "An undroppable sharp chainsaw hand. Can be used as a very slow saw tool. Capable of slowly butchering bodies. Disappears if the arm holding it is cut off."
@@ -455,14 +455,14 @@ GLOBAL_LIST_INIT(nullrod_variants, init_nullrod_variants())
 /obj/item/nullrod/clown
 	name = "clown dagger"
 	desc = "Used for absolutely hilarious sacrifices."
-	icon = 'icons/obj/weapons/khopesh.dmi'
+	icon = '../assets/icons/obj/weapons/khopesh.dmi'
 	icon_state = "clownrender"
 	inhand_icon_state = "cultdagger"
 	icon_angle = -45
-	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/swords_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/swords_righthand.dmi'
 	worn_icon_state = "render"
-	hitsound = 'sound/items/bikehorn.ogg'
+	hitsound = '../assets/sound/items/bikehorn.ogg'
 	sharpness = SHARP_EDGED
 	attack_verb_continuous = list("attacks", "slashes", "slices", "tears", "lacerates", "rips", "dices", "cuts")
 	attack_verb_simple = list("attack", "slash", "slice", "tear", "lacerate", "rip", "dice", "cut")
@@ -475,20 +475,20 @@ GLOBAL_LIST_INIT(nullrod_variants, init_nullrod_variants())
 /obj/item/nullrod/pride_hammer
 	name = "Pride-struck Hammer"
 	desc = "It resonates an aura of Pride."
-	icon = 'icons/obj/weapons/hammer.dmi'
+	icon = '../assets/icons/obj/weapons/hammer.dmi'
 	icon_state = "pride"
 	inhand_icon_state = "pride"
 	worn_icon_state = "pride"
 	icon_angle = -45
-	lefthand_file = 'icons/mob/inhands/weapons/hammers_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/hammers_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/hammers_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/hammers_righthand.dmi'
 	force = 16
 	throwforce = 15
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BACK
 	attack_verb_continuous = list("attacks", "smashes", "crushes", "splatters", "cracks")
 	attack_verb_simple = list("attack", "smash", "crush", "splatter", "crack")
-	hitsound = 'sound/items/weapons/blade1.ogg'
+	hitsound = '../assets/sound/items/weapons/blade1.ogg'
 	menu_description = "A hammer dealing a little less damage due to its user's pride. Has a low chance of transferring some of the user's reagents to the target. Capable of tapping knees to measure brain health. Can be worn on the back."
 
 /obj/item/nullrod/pride_hammer/Initialize(mapload)
@@ -508,17 +508,17 @@ GLOBAL_LIST_INIT(nullrod_variants, init_nullrod_variants())
 /obj/item/nullrod/whip
 	name = "holy whip"
 	desc = "What a terrible night to be on Space Station 13."
-	icon = 'icons/obj/weapons/whip.dmi'
+	icon = '../assets/icons/obj/weapons/whip.dmi'
 	icon_state = "chain"
 	inhand_icon_state = "chain"
 	worn_icon_state = "whip"
 	icon_angle = -90
-	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/melee_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/melee_righthand.dmi'
 	slot_flags = ITEM_SLOT_BELT
 	attack_verb_continuous = list("whips", "lashes")
 	attack_verb_simple = list("whip", "lash")
-	hitsound = 'sound/items/weapons/chainhit.ogg'
+	hitsound = '../assets/sound/items/weapons/chainhit.ogg'
 	menu_description = "A whip. Deals extra damage to vampires. Fits in pockets. Can be worn on the belt."
 
 // Atheist's Fedora - Wear it on your head. No melee damage, massive throw force.
@@ -529,10 +529,10 @@ GLOBAL_LIST_INIT(nullrod_variants, init_nullrod_variants())
 	icon_state = "fedora"
 	inhand_icon_state = "fedora"
 	slot_flags = ITEM_SLOT_HEAD
-	icon = 'icons/obj/clothing/head/hats.dmi'
-	worn_icon = 'icons/mob/clothing/head/hats.dmi'
-	lefthand_file = 'icons/mob/inhands/clothing/hats_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/clothing/hats_righthand.dmi'
+	icon = '../assets/icons/obj/clothing/head/hats.dmi'
+	worn_icon = '../assets/icons/mob/clothing/head/hats.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/clothing/hats_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/clothing/hats_righthand.dmi'
 	force = 0
 	throw_speed = 4
 	throw_range = 7
@@ -551,12 +551,12 @@ GLOBAL_LIST_INIT(nullrod_variants, init_nullrod_variants())
 /obj/item/nullrod/armblade
 	name = "dark blessing"
 	desc = "Particularly twisted deities grant gifts of dubious value."
-	icon = 'icons/obj/weapons/changeling_items.dmi'
+	icon = '../assets/icons/obj/weapons/changeling_items.dmi'
 	icon_state = "arm_blade"
 	inhand_icon_state = "arm_blade"
 	icon_angle = 180
-	lefthand_file = 'icons/mob/inhands/antag/changeling_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/antag/changeling_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/antag/changeling_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/antag/changeling_righthand.dmi'
 	slot_flags = null
 	item_flags = ABSTRACT
 	resistance_flags = FIRE_PROOF|ACID_PROOF
@@ -588,8 +588,8 @@ GLOBAL_LIST_INIT(nullrod_variants, init_nullrod_variants())
 	name = "carp-sie plushie"
 	desc = "An adorable stuffed toy that resembles the god of all carp. The teeth look pretty sharp. Activate it to receive the blessing of Carp-Sie."
 	worn_icon_state = "nullrod"
-	lefthand_file = 'icons/mob/inhands/items_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items_righthand.dmi'
 	force = 15
 	obj_flags = parent_type::obj_flags | UNIQUE_RENAME
 	offspring_type = /obj/item/toy/plush/carpplushie
@@ -607,20 +607,20 @@ GLOBAL_LIST_INIT(nullrod_variants, init_nullrod_variants())
 	desc = "A long, tall staff made of polished wood. Traditionally used in ancient old-Earth martial arts, it is now used to harass the clown."
 	force = 10
 	block_chance = 40
-	block_sound = 'sound/items/weapons/genhit.ogg'
+	block_sound = '../assets/sound/items/weapons/genhit.ogg'
 	slot_flags = ITEM_SLOT_BACK
 	w_class = WEIGHT_CLASS_BULKY
 	hitsound = SFX_SWING_HIT
 	attack_verb_continuous = list("smashes", "slams", "whacks", "thwacks")
 	attack_verb_simple = list("smash", "slam", "whack", "thwack")
-	icon = 'icons/obj/weapons/staff.dmi'
+	icon = '../assets/icons/obj/weapons/staff.dmi'
 	icon_state = "bostaff0"
 	base_icon_state = "bostaff"
 	inhand_icon_state = "bostaff0"
 	worn_icon_state = "bostaff0"
 	icon_angle = -135
-	lefthand_file = 'icons/mob/inhands/weapons/staves_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/staves_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/staves_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/staves_righthand.dmi'
 	menu_description = "A staff which provides a medium-low chance of blocking incoming melee attacks and deals less damage, unless dual-wielded. Can be worn on the back."
 
 /obj/item/nullrod/bostaff/Initialize(mapload)
@@ -644,16 +644,16 @@ GLOBAL_LIST_INIT(nullrod_variants, init_nullrod_variants())
 /obj/item/nullrod/tribal_knife
 	name = "arrhythmic knife"
 	desc = "They say fear is the true mind killer, but stabbing them in the head works too. Honour compels you to not sheathe it once drawn."
-	icon = 'icons/obj/weapons/sword.dmi'
+	icon = '../assets/icons/obj/weapons/sword.dmi'
 	icon_state = "crysknife"
 	inhand_icon_state = "crysknife"
 	icon_angle = -45
-	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/swords_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/swords_righthand.dmi'
 	w_class = WEIGHT_CLASS_HUGE
 	sharpness = SHARP_EDGED
 	slot_flags = null
-	hitsound = 'sound/items/weapons/bladeslice.ogg'
+	hitsound = '../assets/sound/items/weapons/bladeslice.ogg'
 	attack_verb_continuous = list("attacks", "slashes", "slices", "tears", "lacerates", "rips", "dices", "cuts")
 	attack_verb_simple = list("attack", "slash", "slice", "tear", "lacerate", "rip", "dice", "cut")
 	item_flags = SLOWS_WHILE_IN_HAND
@@ -688,18 +688,18 @@ GLOBAL_LIST_INIT(nullrod_variants, init_nullrod_variants())
 /obj/item/nullrod/pitchfork
 	name = "unholy pitchfork"
 	desc = "Holding this makes you look absolutely devilish."
-	icon = 'icons/obj/weapons/spear.dmi'
+	icon = '../assets/icons/obj/weapons/spear.dmi'
 	icon_state = "pitchfork0"
 	inhand_icon_state = "pitchfork0"
 	icon_angle = -45
-	lefthand_file = 'icons/mob/inhands/weapons/polearms_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/polearms_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/polearms_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/polearms_righthand.dmi'
 	worn_icon_state = "pitchfork0"
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BACK
 	attack_verb_continuous = list("pokes", "impales", "pierces", "jabs")
 	attack_verb_simple = list("poke", "impale", "pierce", "jab")
-	hitsound = 'sound/items/weapons/bladeslice.ogg'
+	hitsound = '../assets/sound/items/weapons/bladeslice.ogg'
 	sharpness = SHARP_EDGED
 	menu_description = "A sharp pitchfork. Can be worn on the back."
 
@@ -708,11 +708,11 @@ GLOBAL_LIST_INIT(nullrod_variants, init_nullrod_variants())
 /obj/item/nullrod/egyptian
 	name = "egyptian staff"
 	desc = "A tutorial in mummification is carved into the staff. You could probably craft the wraps if you had some cloth."
-	icon = 'icons/obj/weapons/guns/magic.dmi'
+	icon = '../assets/icons/obj/weapons/guns/magic.dmi'
 	icon_state = "pharoah_sceptre"
 	inhand_icon_state = "pharoah_sceptre"
-	lefthand_file = 'icons/mob/inhands/weapons/staves_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/staves_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/staves_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/staves_righthand.dmi'
 	worn_icon_state = "pharoah_sceptre"
 	w_class = WEIGHT_CLASS_NORMAL
 	slot_flags = ITEM_SLOT_BACK
@@ -725,19 +725,19 @@ GLOBAL_LIST_INIT(nullrod_variants, init_nullrod_variants())
 /obj/item/nullrod/hypertool
 	name = "hypertool"
 	desc = "A tool so powerful even you cannot perfectly use it."
-	icon = 'icons/obj/weapons/club.dmi'
+	icon = '../assets/icons/obj/weapons/club.dmi'
 	icon_state = "hypertool"
 	inhand_icon_state = "hypertool"
 	worn_icon_state = "hypertool"
 	icon_angle = -45
-	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/tools_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/tools_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/tools_righthand.dmi'
 	slot_flags = ITEM_SLOT_BELT
 	damtype = BRAIN
 	armour_penetration = 35
 	attack_verb_continuous = list("pulses", "mends", "cuts")
 	attack_verb_simple = list("pulse", "mend", "cut")
-	hitsound = 'sound/effects/sparks/sparks4.ogg'
+	hitsound = '../assets/sound/effects/sparks/sparks4.ogg'
 	menu_description = "A tool dealing brain damage which partially penetrates armor. Fits in pockets. Can be worn on the belt."
 
 // Ancient Spear - Slight armor penetration, based on the Brass Spear from the Clockcult game mode.
@@ -745,19 +745,19 @@ GLOBAL_LIST_INIT(nullrod_variants, init_nullrod_variants())
 /obj/item/nullrod/spear
 	name = "ancient spear"
 	desc = "An ancient spear made of brass, I mean gold, I mean bronze. It looks highly mechanical."
-	icon = 'icons/obj/weapons/spear.dmi'
+	icon = '../assets/icons/obj/weapons/spear.dmi'
 	icon_state = "ratvarian_spear"
 	inhand_icon_state = "ratvarian_spear"
 	icon_angle = -45
-	lefthand_file = 'icons/mob/inhands/antag/clockwork_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/antag/clockwork_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/antag/clockwork_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/antag/clockwork_righthand.dmi'
 	slot_flags = ITEM_SLOT_BELT
 	armour_penetration = 10
 	sharpness = SHARP_POINTY
 	w_class = WEIGHT_CLASS_HUGE
 	attack_verb_continuous = list("stabs", "pokes", "slashes", "clocks")
 	attack_verb_simple = list("stab", "poke", "slash", "clock")
-	hitsound = 'sound/items/weapons/bladeslice.ogg'
+	hitsound = '../assets/sound/items/weapons/bladeslice.ogg'
 	menu_description = "A pointy spear which penetrates armor a little. Can be worn only on the belt."
 
 // Unholy version of above, since the gamemode is dead in the water
@@ -765,12 +765,12 @@ GLOBAL_LIST_INIT(nullrod_variants, init_nullrod_variants())
 /obj/item/brass_spear
 	name = "dull brass spear"
 	desc = "An ancient spear made of brass. The point seems sharp, but it feels so dull.. you get a feeling brass isn't good nonmagical material for a weapon."
-	icon = 'icons/obj/weapons/spear.dmi'
+	icon = '../assets/icons/obj/weapons/spear.dmi'
 	icon_state = "ratvarian_spear"
 	inhand_icon_state = "ratvarian_spear"
 	icon_angle = -45
-	lefthand_file = 'icons/mob/inhands/antag/clockwork_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/antag/clockwork_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/antag/clockwork_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/antag/clockwork_righthand.dmi'
 	slot_flags = ITEM_SLOT_BELT
 	force = 15
 	throw_speed = 3
@@ -781,28 +781,28 @@ GLOBAL_LIST_INIT(nullrod_variants, init_nullrod_variants())
 	w_class = WEIGHT_CLASS_HUGE
 	attack_verb_continuous = list("stabs", "pokes", "slashes", "clocks")
 	attack_verb_simple = list("stab", "poke", "slash", "clock")
-	hitsound = 'sound/items/weapons/bladeslice.ogg'
+	hitsound = '../assets/sound/items/weapons/bladeslice.ogg'
 
 // Nullblade - For when you really want to feel like rolling dice during combat
 
 /obj/item/nullrod/nullblade
 	name = "nullblade"
 	desc = "Clerical assassins are not officially recognized by the collective faiths of Nanotrasen. And yet, here you are."
-	icon = 'icons/obj/weapons/sword.dmi'
+	icon = '../assets/icons/obj/weapons/sword.dmi'
 	icon_state = "nullsword"
 	inhand_icon_state = "nullsword"
 	worn_icon_state = "nullsword"
 	icon_angle = -45
-	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/swords_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/swords_righthand.dmi'
 	w_class = WEIGHT_CLASS_BULKY
 	force = 12
 	wound_bonus = 10
 	exposed_wound_bonus = 30
 	slot_flags = ITEM_SLOT_BELT
-	block_sound = 'sound/items/weapons/parry.ogg'
+	block_sound = '../assets/sound/items/weapons/parry.ogg'
 	sharpness = SHARP_EDGED
-	hitsound = 'sound/items/weapons/bladeslice.ogg'
+	hitsound = '../assets/sound/items/weapons/bladeslice.ogg'
 	attack_verb_continuous = list("attacks", "slashes", "slices", "tears", "lacerates", "rips", "dices", "cuts")
 	attack_verb_simple = list("attack", "slashes", "slice", "tear", "lacerate", "rip", "dice", "cut")
 	menu_description = "A blade that deals variable, low amounts of damage, but does easily inflict wounds. \
@@ -939,4 +939,4 @@ GLOBAL_LIST_INIT(nullrod_variants, init_nullrod_variants())
 	// We got a sneak attack!
 	living_target.apply_damage(round(sneak_attack_dice, DAMAGE_PRECISION), BRUTE, def_zone = affecting, blocked = armor_block, wound_bonus = exposed_wound_bonus, sharpness = SHARP_EDGED)
 	living_target.balloon_alert(user, "sneak attack!")
-	playsound(living_target, 'sound/items/weapons/guillotine.ogg', 50, TRUE)
+	playsound(living_target, '../assets/sound/items/weapons/guillotine.ogg', 50, TRUE)

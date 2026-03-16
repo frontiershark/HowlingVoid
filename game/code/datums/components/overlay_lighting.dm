@@ -37,17 +37,17 @@
 
 	///Cache of the possible light overlays, according to size.
 	var/static/list/light_overlays = list(
-		"32" = 'icons/effects/light_overlays/light_32.dmi',
-		"64" = 'icons/effects/light_overlays/light_64.dmi',
-		"96" = 'icons/effects/light_overlays/light_96.dmi',
-		"128" = 'icons/effects/light_overlays/light_128.dmi',
-		"160" = 'icons/effects/light_overlays/light_160.dmi',
-		"192" = 'icons/effects/light_overlays/light_192.dmi',
-		"224" = 'icons/effects/light_overlays/light_224.dmi',
-		"256" = 'icons/effects/light_overlays/light_256.dmi',
-		"288" = 'icons/effects/light_overlays/light_288.dmi',
-		"320" = 'icons/effects/light_overlays/light_320.dmi',
-		"352" = 'icons/effects/light_overlays/light_352.dmi',
+		"32" = '../assets/icons/effects/light_overlays/light_32.dmi',
+		"64" = '../assets/icons/effects/light_overlays/light_64.dmi',
+		"96" = '../assets/icons/effects/light_overlays/light_96.dmi',
+		"128" = '../assets/icons/effects/light_overlays/light_128.dmi',
+		"160" = '../assets/icons/effects/light_overlays/light_160.dmi',
+		"192" = '../assets/icons/effects/light_overlays/light_192.dmi',
+		"224" = '../assets/icons/effects/light_overlays/light_224.dmi',
+		"256" = '../assets/icons/effects/light_overlays/light_256.dmi',
+		"288" = '../assets/icons/effects/light_overlays/light_288.dmi',
+		"320" = '../assets/icons/effects/light_overlays/light_320.dmi',
+		"352" = '../assets/icons/effects/light_overlays/light_352.dmi',
 		)
 
 	///Overlay effect to cut into the darkness and provide light.
@@ -84,14 +84,14 @@
 
 	. = ..()
 
-	visible_mask = image('icons/effects/light_overlays/light_32.dmi', icon_state = "light")
+	visible_mask = image('../assets/icons/effects/light_overlays/light_32.dmi', icon_state = "light")
 	SET_PLANE_EXPLICIT(visible_mask, O_LIGHTING_VISUAL_PLANE, movable_parent)
 	visible_mask.appearance_flags = RESET_COLOR | RESET_ALPHA | RESET_TRANSFORM
 	visible_mask.alpha = 0
 	visible_mask.blend_mode = BLEND_ADD
 	if(is_directional)
 		directional = TRUE
-		cone = image('icons/effects/light_overlays/light_cone.dmi', icon_state = "light")
+		cone = image('../assets/icons/effects/light_overlays/light_cone.dmi', icon_state = "light")
 		SET_PLANE_EXPLICIT(cone, O_LIGHTING_VISUAL_PLANE, movable_parent)
 		cone.appearance_flags = RESET_COLOR | RESET_ALPHA | RESET_TRANSFORM
 		cone.alpha = 110

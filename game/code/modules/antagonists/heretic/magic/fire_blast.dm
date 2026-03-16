@@ -5,9 +5,9 @@
 		extinguishes themselves before it bounces, the chain will stop."
 	background_icon_state = "bg_heretic"
 	overlay_icon_state = "bg_heretic_border"
-	button_icon = 'icons/mob/actions/actions_ecult.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_ecult.dmi'
 	button_icon_state = "flames"
-	sound = 'sound/effects/magic/fireball.ogg'
+	sound = '../assets/sound/effects/magic/fireball.ogg'
 
 	school = SCHOOL_FORBIDDEN
 	cooldown_time = 45 SECONDS
@@ -170,7 +170,7 @@
 
 /datum/status_effect/fire_blasted/on_apply()
 	if(owner.on_fire && animate_duration > 0 SECONDS)
-		var/mutable_appearance/warning_sign = mutable_appearance('icons/effects/effects.dmi', "blessed", BELOW_MOB_LAYER)
+		var/mutable_appearance/warning_sign = mutable_appearance('../assets/icons/effects/effects.dmi', "blessed", BELOW_MOB_LAYER)
 		var/atom/movable/flick_visual/warning = owner.flick_overlay_view(warning_sign, initial(duration))
 		warning.alpha = 50
 		animate(warning, alpha = 255, time = animate_duration)
@@ -201,6 +201,6 @@
 // Visual effect played when we hit the max bounces
 /obj/effect/temp_visual/fire_blast_bonus
 	name = "fire blast"
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	icon_state = "explosion"
 	duration = 1 SECONDS

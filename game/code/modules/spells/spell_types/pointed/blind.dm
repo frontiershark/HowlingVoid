@@ -2,9 +2,9 @@
 	name = "Blind"
 	desc = "This spell temporarily blinds a single target."
 	button_icon_state = "blind"
-	ranged_mousepointer = 'icons/effects/mouse_pointers/blind_target.dmi'
+	ranged_mousepointer = '../assets/icons/effects/mouse_pointers/blind_target.dmi'
 
-	sound = 'sound/effects/magic/blind.ogg'
+	sound = '../assets/sound/effects/magic/blind.ogg'
 	school = SCHOOL_TRANSMUTATION
 	cooldown_time = 30 SECONDS
 	cooldown_reduction_per_rank = 6.25 SECONDS

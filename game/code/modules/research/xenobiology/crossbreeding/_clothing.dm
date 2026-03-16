@@ -35,7 +35,7 @@ Slimecrossing Armor
 /obj/item/clothing/glasses/prism_glasses
 	name = "prism glasses"
 	desc = "The lenses seem to glow slightly, and reflect light into dazzling colors."
-	icon = 'icons/obj/science/slimecrossing.dmi'
+	icon = '../assets/icons/obj/science/slimecrossing.dmi'
 	icon_state = "prismglasses"
 	actions_types = list(/datum/action/item_action/change_prism_colour, /datum/action/item_action/place_light_prism)
 
@@ -49,7 +49,7 @@ Slimecrossing Armor
 /obj/structure/light_prism
 	name = "light prism"
 	desc = "A shining crystal of semi-solid light. Looks fragile."
-	icon = 'icons/obj/science/slimecrossing.dmi'
+	icon = '../assets/icons/obj/science/slimecrossing.dmi'
 	icon_state = "lightprism"
 	density = FALSE
 	anchored = TRUE
@@ -68,7 +68,7 @@ Slimecrossing Armor
 
 /datum/action/item_action/change_prism_colour
 	name = "Adjust Prismatic Lens"
-	button_icon = 'icons/obj/science/slimecrossing.dmi'
+	button_icon = '../assets/icons/obj/science/slimecrossing.dmi'
 	button_icon_state = "prismcolor"
 
 /datum/action/item_action/change_prism_colour/do_effect(trigger_flags)
@@ -82,7 +82,7 @@ Slimecrossing Armor
 
 /datum/action/item_action/place_light_prism
 	name = "Fabricate Light Prism"
-	button_icon = 'icons/obj/science/slimecrossing.dmi'
+	button_icon = '../assets/icons/obj/science/slimecrossing.dmi'
 	button_icon_state = "lightprism"
 
 /datum/action/item_action/place_light_prism/do_effect(trigger_flags)
@@ -100,8 +100,8 @@ Slimecrossing Armor
 /obj/item/clothing/head/peaceflower
 	name = "heroine bud"
 	desc = "An extremely addictive flower, full of peace magic."
-	icon = 'icons/obj/science/slimecrossing.dmi'
-	worn_icon = 'icons/mob/clothing/head/costume.dmi'
+	icon = '../assets/icons/obj/science/slimecrossing.dmi'
+	worn_icon = '../assets/icons/mob/clothing/head/costume.dmi'
 	icon_state = "peaceflower"
 	inhand_icon_state = null
 	slot_flags = ITEM_SLOT_HEAD
@@ -123,8 +123,8 @@ Slimecrossing Armor
 	name = "adamantine armor"
 	desc = "A full suit of adamantine plate armor. Impressively resistant to damage, but weighs about as much as you do."
 	icon_state = "adamsuit"
-	icon = 'icons/obj/clothing/suits/armor.dmi'
-	worn_icon = 'icons/mob/clothing/suits/armor.dmi'
+	icon = '../assets/icons/obj/clothing/suits/armor.dmi'
+	worn_icon = '../assets/icons/mob/clothing/suits/armor.dmi'
 	inhand_icon_state = null
 	flags_inv = NONE
 	item_flags = IMMUTABLE_SLOW

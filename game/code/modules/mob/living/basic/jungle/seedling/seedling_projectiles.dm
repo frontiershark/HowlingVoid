@@ -7,8 +7,8 @@
 	armor_flag = ENERGY
 	light_color = LIGHT_COLOR_DIM_YELLOW
 	speed = 0.66
-	hitsound = 'sound/items/weapons/sear.ogg'
-	hitsound_wall = 'sound/items/weapons/effects/searwall.ogg'
+	hitsound = '../assets/sound/items/weapons/sear.ogg'
+	hitsound_wall = '../assets/sound/items/weapons/effects/searwall.ogg'
 	nondirectional_sprite = TRUE
 
 /obj/projectile/seedling/on_hit(atom/target, blocked = 0, pierce_hit)
@@ -24,7 +24,7 @@
 /obj/effect/temp_visual/solarbeam_killsat
 	name = "beam of solar energy"
 	icon_state = "solar_beam"
-	icon = 'icons/effects/beam.dmi'
+	icon = '../assets/icons/effects/beam.dmi'
 	plane = LIGHTING_PLANE
 	layer = LIGHTING_PRIMARY_LAYER
 	duration = 3 SECONDS

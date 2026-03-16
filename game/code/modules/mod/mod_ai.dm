@@ -154,7 +154,7 @@
 		return FALSE
 	COOLDOWN_START(src, cooldown_mod_move, movedelay * timemodifier + slowdown_deployed)
 	subtract_charge(CHARGE_PER_STEP)
-	playsound(src, 'sound/vehicles/mecha/mechmove01.ogg', 25, TRUE)
+	playsound(src, '../assets/sound/vehicles/mecha/mechmove01.ogg', 25, TRUE)
 	if(ismovable(wearer?.loc))
 		return wearer.loc.relaymove(wearer, direction)
 	else if(wearer)
@@ -176,7 +176,7 @@
 /obj/item/mod/ai_minicard
 	name = "AI mini-card"
 	desc = "A small card designed to eject dead AIs. You could use an intellicard to recover it."
-	icon = 'icons/obj/aicards.dmi'
+	icon = '../assets/icons/obj/aicards.dmi'
 	icon_state = "minicard"
 	var/datum/weakref/stored_ai
 

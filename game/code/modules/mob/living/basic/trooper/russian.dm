@@ -10,7 +10,7 @@
 	faction = list(FACTION_RUSSIAN)
 	attack_verb_continuous = "slashes"
 	attack_verb_simple = "slash"
-	attack_sound = 'sound/items/weapons/bladeslice.ogg'
+	attack_sound = '../assets/sound/items/weapons/bladeslice.ogg'
 	attack_vis_effect = ATTACK_EFFECT_SLASH
 	initial_language_holder = /datum/language_holder/spinwarder_exclusive
 
@@ -26,7 +26,7 @@
 	corpse = /obj/effect/mob_spawn/corpse/human/russian/ranged
 	loot = list(/obj/item/gun/ballistic/revolver/nagant)
 	var/casingtype = /obj/item/ammo_casing/n762
-	var/projectilesound = 'sound/items/weapons/gun/revolver/shot.ogg'
+	var/projectilesound = '../assets/sound/items/weapons/gun/revolver/shot.ogg'
 
 /mob/living/basic/trooper/russian/ranged/Initialize(mapload)
 	. = ..()

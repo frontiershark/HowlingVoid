@@ -4,7 +4,7 @@
 /obj/item/modular_computer
 	name = "modular microcomputer"
 	desc = "A small portable microcomputer."
-	icon = 'icons/obj/machines/computer.dmi'
+	icon = '../assets/icons/obj/machines/computer.dmi'
 	icon_state = "laptop"
 	light_on = FALSE
 	light_power = 1.2
@@ -124,7 +124,7 @@
 	var/datum/component/shell/shell
 
 	/// This is where our overlays reside
-	var/overlays_icon = 'icons/obj/machines/computer.dmi'
+	var/overlays_icon = '../assets/icons/obj/machines/computer.dmi'
 
 /datum/armor/item_modular_computer
 	bullet = 20
@@ -203,7 +203,7 @@
 /obj/item/modular_computer/interact_with_atom_secondary(atom/interacting_with, mob/living/user, list/modifiers)
 	if(active_program?.tap(interacting_with, user, modifiers))
 		user.do_attack_animation(interacting_with) //Emulate this animation since we kill the attack in three lines
-		playsound(loc, 'sound/items/weapons/tap.ogg', get_clamped_volume(), TRUE, -1) //Likewise for the tap sound
+		playsound(loc, '../assets/sound/items/weapons/tap.ogg', get_clamped_volume(), TRUE, -1) //Likewise for the tap sound
 		addtimer(CALLBACK(src, PROC_REF(play_ping)), 0.5 SECONDS, TIMER_UNIQUE) //Slightly delayed ping to indicate success
 		return ITEM_INTERACT_SUCCESS
 	return ..()
@@ -225,7 +225,7 @@
  * Timers runtime if you try to make them call playsound. Yep.
  */
 /obj/item/modular_computer/proc/play_ping()
-	playsound(loc, 'sound/machines/ping.ogg', get_clamped_volume(), FALSE, -1)
+	playsound(loc, '../assets/sound/machines/ping.ogg', get_clamped_volume(), FALSE, -1)
 
 /obj/item/modular_computer/get_cell()
 	return internal_cell
@@ -304,7 +304,7 @@
 		to_chat(user, span_notice("You insert \the [inserting_id] into the card slot."))
 		balloon_alert(user, "inserted ID")
 
-	playsound(src, 'sound/machines/terminal/terminal_insert_disc.ogg', 50, FALSE)
+	playsound(src, '../assets/sound/machines/terminal/terminal_insert_disc.ogg', 50, FALSE)
 
 	if(ishuman(loc))
 		var/mob/living/carbon/human/human_wearer = loc
@@ -334,7 +334,7 @@
 	if(!isnull(user))
 		to_chat(user, span_notice("You insert \the [secondary_id] into the secondary card slot."))
 		balloon_alert(user, "inserted secondary ID")
-	playsound(src, 'sound/machines/terminal/terminal_insert_disc.ogg', 50, FALSE)
+	playsound(src, '../assets/sound/machines/terminal/terminal_insert_disc.ogg', 50, FALSE)
 
 	return TRUE
 
@@ -360,7 +360,7 @@
 	if(!silent && !isnull(user))
 		to_chat(user, span_notice("You remove \the [lost_id] from the secondary card slot."))
 		balloon_alert(user, "removed secondary ID")
-	playsound(src, 'sound/machines/terminal/terminal_insert_disc.ogg', 50, FALSE)
+	playsound(src, '../assets/sound/machines/terminal/terminal_insert_disc.ogg', 50, FALSE)
 
 	return TRUE
 
@@ -389,7 +389,7 @@
 	if(!silent && !isnull(user))
 		to_chat(user, span_notice("You remove \the [lost_id] from the card slot."))
 		balloon_alert(user, "removed ID")
-	playsound(src, 'sound/machines/terminal/terminal_insert_disc.ogg', 50, FALSE)
+	playsound(src, '../assets/sound/machines/terminal/terminal_insert_disc.ogg', 50, FALSE)
 
 	if(ishuman(loc))
 		var/mob/living/carbon/human/human_wearer = loc
@@ -546,7 +546,7 @@
 		return
 	user.put_in_hands(inserted_disk)
 	inserted_disk = null
-	playsound(src, 'sound/machines/card_slide.ogg', 50)
+	playsound(src, '../assets/sound/machines/card_slide.ogg', 50)
 
 /obj/item/modular_computer/proc/turn_on(mob/user, open_ui = TRUE)
 	var/issynth = FALSE // Robots and AIs get different activation messages.
@@ -619,7 +619,7 @@
  * The program calling this proc.
  * The message that the program wishes to display.
  */
-/obj/item/modular_computer/proc/alert_call(datum/computer_file/program/call_source, alerttext, sound = 'sound/machines/beep/twobeep_high.ogg')
+/obj/item/modular_computer/proc/alert_call(datum/computer_file/program/call_source, alerttext, sound = '../assets/sound/machines/beep/twobeep_high.ogg')
 	if(!call_source || !call_source.alert_able || call_source.alert_silenced || !alerttext) //Yeah, we're checking alert_able. No, you don't get to make alerts that the user can't silence.
 		return FALSE
 	playsound(src, sound, 50, TRUE)
@@ -630,18 +630,18 @@
 		return
 	if(HAS_TRAIT(SSstation, STATION_TRAIT_PDA_GLITCHED))
 		playsound(src, pick(
-			'sound/machines/beep/twobeep_voice1.ogg',
-			'sound/machines/beep/twobeep_voice2.ogg',
+			'../assets/sound/machines/beep/twobeep_voice1.ogg',
+			'../assets/sound/machines/beep/twobeep_voice2.ogg',
 			), 50, TRUE)
 	else
-		playsound(src, 'sound/machines/beep/twobeep_high.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/machines/beep/twobeep_high.ogg', 50, TRUE)
 	ringtone = "*[ringtone]*"
 	audible_message(ringtone)
 	for(var/mob/living/alertee in balloon_alertees)
 		alertee.balloon_alert(alertee, ringtone)
 
 /obj/item/modular_computer/proc/send_sound()
-	playsound(src, 'sound/machines/terminal/terminal_success.ogg', 15, TRUE)
+	playsound(src, '../assets/sound/machines/terminal/terminal_success.ogg', 15, TRUE)
 
 // Function used by NanoUI's to obtain data for header. All relevant entries begin with "PC_"
 /obj/item/modular_computer/proc/get_header_data()
@@ -981,7 +981,7 @@
 		return ITEM_INTERACT_BLOCKING
 	balloon_alert(user, "inserted paper")
 	qdel(new_paper)
-	playsound(src, 'sound/machines/computer/paper_insert.ogg', 40, vary = TRUE)
+	playsound(src, '../assets/sound/machines/computer/paper_insert.ogg', 40, vary = TRUE)
 	stored_paper++
 	return ITEM_INTERACT_SUCCESS
 
@@ -998,7 +998,7 @@
 		return ITEM_INTERACT_BLOCKING
 	balloon_alert(user, "inserted paper")
 	to_chat(user, span_notice("Added in [papers_added] new sheets. You now have [stored_paper] / [max_paper] printing paper stored."))
-	playsound(src, 'sound/machines/computer/paper_insert.ogg', 40, vary = TRUE)
+	playsound(src, '../assets/sound/machines/computer/paper_insert.ogg', 40, vary = TRUE)
 	bin.update_appearance()
 	return ITEM_INTERACT_SUCCESS
 
@@ -1011,7 +1011,7 @@
 	else
 		balloon_alert(user, "disk inserted")
 	inserted_disk = disk
-	playsound(src, 'sound/machines/card_slide.ogg', 50)
+	playsound(src, '../assets/sound/machines/card_slide.ogg', 50)
 	return ITEM_INTERACT_SUCCESS
 
 /obj/item/modular_computer/atom_deconstruct(disassembled = TRUE)

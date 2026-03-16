@@ -3,7 +3,7 @@
 	name = "necropolis tendril"
 	desc = "A vile tendril of corruption, originating deep underground. Terrible monsters are pouring out of it."
 
-	icon = 'icons/mob/simple/lavaland/nest.dmi'
+	icon = '../assets/icons/mob/simple/lavaland/nest.dmi'
 	icon_state = "tendril"
 
 	faction = list(FACTION_MINING, FACTION_MINING_FAUNA) // NOVA EDIT CHANGE - ORIGINAL: faction = list(FACTION_MINING, FACTION_ASHWALKER)
@@ -76,7 +76,7 @@ GLOBAL_LIST_INIT(tendrils, list())
 	name = "collapsing necropolis tendril"
 	desc = "Get your loot and get clear!"
 	layer = TABLE_LAYER
-	icon = 'icons/mob/simple/lavaland/nest.dmi'
+	icon = '../assets/icons/mob/simple/lavaland/nest.dmi'
 	icon_state = "tendril"
 	anchored = TRUE
 	density = TRUE
@@ -90,7 +90,7 @@ GLOBAL_LIST_INIT(tendrils, list())
 	emitted_light = new(loc)
 	visible_message(span_bolddanger("The tendril writhes in fury as the earth around it begins to crack and break apart! Get back!"))
 	balloon_alert_to_viewers("interact to grab loot before collapse!", vision_distance = 7)
-	playsound(loc,'sound/effects/tendril_destroyed.ogg', 200, FALSE, 50, TRUE, TRUE)
+	playsound(loc,'../assets/sound/effects/tendril_destroyed.ogg', 200, FALSE, 50, TRUE, TRUE)
 	addtimer(CALLBACK(src, PROC_REF(collapse)), 5 SECONDS)
 
 /obj/effect/collapse/examine(mob/user)
@@ -131,7 +131,7 @@ GLOBAL_LIST_INIT(tendrils, list())
 /obj/effect/collapse/proc/collapse()
 	for(var/mob/M in range(7,src))
 		shake_camera(M, 15, 1)
-	playsound(get_turf(src),'sound/effects/explosion/explosionfar.ogg', 200, TRUE)
+	playsound(get_turf(src),'../assets/sound/effects/explosion/explosionfar.ogg', 200, TRUE)
 	visible_message(span_bolddanger("The tendril falls inward, the ground around it widening into a yawning chasm!"))
 	for(var/turf/T in RANGE_TURFS(2,src))
 		if(HAS_TRAIT(T, TRAIT_NO_TERRAFORM))

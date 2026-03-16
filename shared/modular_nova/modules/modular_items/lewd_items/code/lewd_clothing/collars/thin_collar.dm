@@ -2,7 +2,7 @@
 	name = "bell collar"
 	desc = "A collar, fit with a locking buckle - affixed with a tiny, ringing bell on the front."
 	greyscale_colors = "#2d2d33#dead39"
-	icon = 'icons/map_icons/clothing/neck.dmi'
+	icon = '../assets/icons/map_icons/clothing/neck.dmi'
 	icon_state = "/obj/item/clothing/neck/collar/bell"
 	post_init_icon_state = "bell_collar"
 	greyscale_config = /datum/greyscale_config/thin_collar/bell
@@ -11,7 +11,7 @@
 
 /obj/item/clothing/neck/collar/bell/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/squeak, list('sound/effects/jingle.ogg'=1), 25, 50, 16)
+	AddComponent(/datum/component/squeak, list('../assets/sound/effects/jingle.ogg'=1), 25, 50, 16)
 
 
 /obj/item/clothing/neck/collar/cowbell // I'd give this jingling too but it's harder to source a good sample
@@ -28,7 +28,7 @@
 	name = "cross collar"
 	desc = "A collar, fit with a locking buckle. This one's tag is a little cross."
 	greyscale_colors = "#2d2d33#dead39"
-	icon = 'icons/map_icons/clothing/neck.dmi'
+	icon = '../assets/icons/map_icons/clothing/neck.dmi'
 	icon_state = "/obj/item/clothing/neck/collar/cross"
 	post_init_icon_state = "cross_collar"
 	greyscale_config = /datum/greyscale_config/thin_collar/cross
@@ -39,7 +39,7 @@
 	name = "tagged collar"
 	desc = "A collar, fit with a locking buckle. This one's got a blank tag on the front, ready for engraving."
 	greyscale_colors = "#2d2d33#dead39"
-	icon = 'icons/map_icons/clothing/neck.dmi'
+	icon = '../assets/icons/map_icons/clothing/neck.dmi'
 	icon_state = "/obj/item/clothing/neck/collar/tagged"
 	post_init_icon_state = "tagged_collar"
 	greyscale_config = /datum/greyscale_config/thin_collar/tagged
@@ -50,7 +50,7 @@
 	name = "holocollar"
 	desc = "A collar, fit with a locking buckle. This one's got a fancy holographic tag on the front."
 	greyscale_colors = "#2d2d33#dead39"
-	icon = 'icons/map_icons/clothing/neck.dmi'
+	icon = '../assets/icons/map_icons/clothing/neck.dmi'
 	icon_state = "/obj/item/clothing/neck/collar/holocollar"
 	post_init_icon_state = "holocollar"
 	greyscale_config = /datum/greyscale_config/thin_collar/holo

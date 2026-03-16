@@ -1,6 +1,6 @@
 /// For all of the items that are really just the user's hand used in different ways, mostly (all, really) from emotes
 /obj/item/hand_item
-	icon = 'icons/obj/weapons/hand.dmi'
+	icon = '../assets/icons/obj/weapons/hand.dmi'
 	icon_state = "latexballoon"
 	force = 0
 	throwforce = 0
@@ -64,7 +64,7 @@
 	if(QDELETED(src) || QDELETED(owner))
 		return
 
-	playsound(get_turf(owner), 'sound/effects/hit_punch.ogg', 50, TRUE, -1)
+	playsound(get_turf(owner), '../assets/sound/effects/hit_punch.ogg', 50, TRUE, -1)
 	owner.visible_message(span_danger("[owner] shamefully bops [owner.p_them()]self with [owner.p_their()] [src.name]."), span_userdanger("You shamefully bop yourself with your [src.name]."), \
 		span_hear("You hear a dull thud!"))
 	log_combat(owner, owner, "bopped", src.name, "(self)")
@@ -93,7 +93,7 @@
 	if(owner.client)
 		owner.client.give_award(/datum/award/achievement/misc/gottem, owner) // then everybody clapped
 
-	playsound(get_turf(owner), 'sound/effects/hit_punch.ogg', 50, TRUE, -1)
+	playsound(get_turf(owner), '../assets/sound/effects/hit_punch.ogg', 50, TRUE, -1)
 	owner.do_attack_animation(sucker)
 
 	if(HAS_TRAIT(owner, TRAIT_HULK))
@@ -212,7 +212,7 @@
 	inhand_icon_state = "nothing"
 	attack_verb_continuous = list("slaps")
 	attack_verb_simple = list("slap")
-	hitsound = 'sound/effects/snap.ogg'
+	hitsound = '../assets/sound/effects/snap.ogg'
 	/// How many smaller table smacks we can do before we're out
 	var/table_smacks_left = 3
 
@@ -241,7 +241,7 @@
 		)
 		to_chat(slapped, span_userdanger("You see [user] scoff and pull back [user.p_their()] arm, then suddenly you're on the ground with an ungodly ringing in your ears!"))
 		slap_volume = 120
-		SEND_SOUND(slapped, sound('sound/items/weapons/flash_ring.ogg'))
+		SEND_SOUND(slapped, sound('../assets/sound/items/weapons/flash_ring.ogg'))
 		shake_camera(slapped, 2, 2)
 		slapped.Paralyze(2.5 SECONDS)
 		slapped.adjust_confusion(7 SECONDS)
@@ -284,7 +284,7 @@
 			span_notice("You slap [slapped]!"),
 			span_hear("You hear a slap."),
 		)
-	playsound(slapped, 'sound/items/weapons/slap.ogg', slap_volume, TRUE, -1)
+	playsound(slapped, '../assets/sound/items/weapons/slap.ogg', slap_volume, TRUE, -1)
 	return
 
 /obj/item/hand_item/slapper/pre_attack_secondary(atom/target, mob/living/user, list/modifiers, list/attack_modifiers)
@@ -304,7 +304,7 @@
 /// Slap the table, get some attention
 /obj/item/hand_item/slapper/proc/slap_table(obj/structure/table/table, mob/living/user)
 	user.do_attack_animation(table)
-	playsound(get_turf(table), 'sound/effects/tableslam.ogg', 40, TRUE)
+	playsound(get_turf(table), '../assets/sound/effects/tableslam.ogg', 40, TRUE)
 	user.visible_message(span_notice("[user] slaps [user.p_their()] hand on [table]."), span_notice("You slap your hand on [table]."), vision_distance=COMBAT_MESSAGE_RANGE)
 
 	table_smacks_left--
@@ -325,7 +325,7 @@
 	SEND_SIGNAL(user, COMSIG_LIVING_SLAM_TABLE, table)
 	SEND_SIGNAL(table, COMSIG_TABLE_SLAMMED, user)
 
-	playsound(get_turf(table), 'sound/effects/tableslam.ogg', 110, TRUE)
+	playsound(get_turf(table), '../assets/sound/effects/tableslam.ogg', 110, TRUE)
 	user.visible_message("<b>[span_danger("[user] slams [user.p_their()] fist down on [table]!")]</b>", "<b>[span_danger("You slam your fist down on [table]!")]</b>")
 	qdel(src)
 
@@ -477,7 +477,7 @@
 /obj/item/hand_item/kisser
 	name = "kiss"
 	desc = "I want you all to know, everyone and anyone, to seal it with a kiss."
-	icon = 'icons/mob/simple/animal.dmi'
+	icon = '../assets/icons/mob/simple/animal.dmi'
 	icon_state = "heart"
 	inhand_icon_state = "nothing"
 	/// The kind of projectile this version of the kiss blower fires
@@ -566,10 +566,10 @@
 
 /obj/projectile/kiss
 	name = "kiss"
-	icon = 'icons/mob/simple/animal.dmi'
+	icon = '../assets/icons/mob/simple/animal.dmi'
 	icon_state = "heart"
-	hitsound = 'sound/effects/emotes/kiss.ogg'
-	hitsound_wall = 'sound/effects/emotes/kiss.ogg'
+	hitsound = '../assets/sound/effects/emotes/kiss.ogg'
+	hitsound_wall = '../assets/sound/effects/emotes/kiss.ogg'
 	pass_flags = PASSTABLE | PASSGLASS | PASSGRILLE
 	speed = 0.66
 	damage_type = BRUTE

@@ -71,7 +71,7 @@
 /datum/action/cooldown/spell/thermal_vision
 	name = "Activate Thermal Vision"
 	desc = "You can see thermal signatures, at the cost of your eyesight."
-	button_icon = 'icons/mob/actions/actions_changeling.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_changeling.dmi'
 	button_icon_state = "augmented_eyesight"
 
 	cooldown_time = 60 SECONDS
@@ -145,7 +145,7 @@
 /datum/mutation/laser_eyes/New(datum/mutation/copymut)
 	..()
 	if(!(type in visual_indicators))
-		visual_indicators[type] = list(mutable_appearance('icons/mob/effects/genetics.dmi', "lasereyes", -FRONT_MUTATIONS_LAYER))
+		visual_indicators[type] = list(mutable_appearance('../assets/icons/mob/effects/genetics.dmi', "lasereyes", -FRONT_MUTATIONS_LAYER))
 
 /datum/mutation/laser_eyes/on_acquiring(mob/living/carbon/human/H)
 	. = ..()
@@ -176,12 +176,12 @@
 	LE.def_zone = ran_zone(source.zone_selected)
 	LE.aim_projectile(target, source, modifiers)
 	INVOKE_ASYNC(LE, TYPE_PROC_REF(/obj/projectile, fire))
-	playsound(source, 'sound/items/weapons/taser2.ogg', 75, TRUE)
+	playsound(source, '../assets/sound/items/weapons/taser2.ogg', 75, TRUE)
 
 ///Projectile type used by laser eyes
 /obj/projectile/beam/laser/laser_eyes
 	name = "beam"
-	icon = 'icons/mob/effects/genetics.dmi'
+	icon = '../assets/icons/mob/effects/genetics.dmi'
 	icon_state = "eyelasers"
 
 /datum/mutation/illiterate

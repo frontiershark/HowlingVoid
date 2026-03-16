@@ -422,7 +422,7 @@ world
 			layers[current] = current_layer; \
 		}
 
-	var/static/icon/flat_template = icon('icons/blanks/32x32.dmi', "nothing")
+	var/static/icon/flat_template = icon('../assets/icons/blanks/32x32.dmi', "nothing")
 	var/icon/flat = icon(flat_template)
 
 	if(!appearance || appearance.alpha <= 0)
@@ -652,7 +652,7 @@ world
 	var/icon/flat_icon = safety ? A : new(A)//Has to be a new icon to not constantly change the same icon.
 	flat_icon.ColorTone(rgb(125,180,225))//Let's make it bluish.
 	flat_icon.ChangeOpacity(opacity)
-	var/icon/alpha_mask = new('icons/effects/effects.dmi', "scanline")//Scanline effect.
+	var/icon/alpha_mask = new('../assets/icons/effects/effects.dmi', "scanline")//Scanline effect.
 	flat_icon.AddAlphaMask(alpha_mask)//Finally, let's mix in a distortion effect.
 	return flat_icon
 
@@ -662,7 +662,7 @@ world
 	var/icon/flat_icon = safety ? A : new(A)
 	flat_icon.Blend(rgb(255,255,255))
 	flat_icon.BecomeAlphaMask()
-	var/icon/static_icon = icon('icons/effects/effects.dmi', "static_base")
+	var/icon/static_icon = icon('../assets/icons/effects/effects.dmi', "static_base")
 	static_icon.AddAlphaMask(flat_icon)
 	return static_icon
 
@@ -672,7 +672,7 @@ world
 	var/icon/flat_icon = safety ? A : new(A)
 	flat_icon.Blend(rgb(255,255,255))
 	flat_icon.BecomeAlphaMask()
-	var/icon/blank_icon = new/icon('icons/effects/effects.dmi', "blank_base")
+	var/icon/blank_icon = new/icon('../assets/icons/effects/effects.dmi', "blank_base")
 	blank_icon.AddAlphaMask(flat_icon)
 	return blank_icon
 
@@ -769,7 +769,7 @@ GLOBAL_LIST_EMPTY(friendly_animal_types)
 	if(outfit)
 		body.equip_outfit_and_loadout(outfit, prefs, TRUE) // NOVA EDIT CHANGE - ORIGINAL: body.equipOutfit(outfit, TRUE)
 
-	var/icon/out_icon = icon('icons/effects/effects.dmi', "nothing")
+	var/icon/out_icon = icon('../assets/icons/effects/effects.dmi', "nothing")
 	for(var/direction in showDirs)
 		var/icon/partial = getFlatIcon(body, defdir = direction, no_anim = no_anim)
 		out_icon.Insert(partial, dir = direction)
@@ -798,7 +798,7 @@ GLOBAL_LIST_EMPTY(friendly_animal_types)
 	// We need to force the dir of the human so we can take those pictures, we'll set it back afterwards.
 	var/initial_human_dir = existing_human.dir
 	existing_human.dir = SOUTH
-	var/icon/out_icon = icon('icons/effects/effects.dmi', "nothing")
+	var/icon/out_icon = icon('../assets/icons/effects/effects.dmi', "nothing")
 	for(var/direction in directions_to_output)
 		var/icon/partial = getFlatIcon(existing_human, defdir = direction)
 		out_icon.Insert(partial, dir = direction)
@@ -890,11 +890,11 @@ GLOBAL_LIST_EMPTY(friendly_animal_types)
 	if(isatom(icon) || istype(icon, /image) || istype(icon, /mutable_appearance))
 		var/atom/atom_icon = icon
 		icon = atom_icon.icon
-		//atom icons compiled in from 'icons/path/to/dmi_file.dmi' are weird and not really icon objects that you generate with icon().
+		//atom icons compiled in from '../assets/icons/path/to/dmi_file.dmi' are weird and not really icon objects that you generate with icon().
 		//if they're unchanged dmi's then they're stringifiable to "icons/path/to/dmi_file.dmi"
 
 	if(isicon(icon) && isfile(icon))
-		//icons compiled in from 'icons/path/to/dmi_file.dmi' at compile time are weird and aren't really /icon objects,
+		//icons compiled in from '../assets/icons/path/to/dmi_file.dmi' at compile time are weird and aren't really /icon objects,
 		///but they pass both isicon() and isfile() checks. they're the easiest case since stringifying them gives us the path we want
 		var/icon_ref = text_ref(icon)
 		var/locate_icon_string = "[locate(icon_ref)]"
@@ -1076,7 +1076,7 @@ GLOBAL_LIST_EMPTY(transformation_animation_objects)
 /atom/movable/proc/transformation_animation(result_appearance, time = 3 SECONDS, transform_appearance)
 	var/list/transformation_objects = GLOB.transformation_animation_objects[src] || list()
 	//Disappearing part
-	var/top_part_filter = filter(type="alpha",icon=icon('icons/effects/alphacolors.dmi',"white"),y=0)
+	var/top_part_filter = filter(type="alpha",icon=icon('../assets/icons/effects/alphacolors.dmi',"white"),y=0)
 	filters += top_part_filter
 	var/filter_index = length(filters)
 	animate(filters[filter_index],y=-ICON_SIZE_Y,time=time)
@@ -1085,7 +1085,7 @@ GLOBAL_LIST_EMPTY(transformation_animation_objects)
 	appearing_part.appearance = result_appearance
 	appearing_part.appearance_flags |= KEEP_TOGETHER | KEEP_APART
 	appearing_part.vis_flags = VIS_INHERIT_ID
-	appearing_part.filters = filter(type="alpha",icon=icon('icons/effects/alphacolors.dmi',"white"),y=0,flags=MASK_INVERSE)
+	appearing_part.filters = filter(type="alpha",icon=icon('../assets/icons/effects/alphacolors.dmi',"white"),y=0,flags=MASK_INVERSE)
 	animate(appearing_part.filters[1],y=-ICON_SIZE_Y,time=time)
 	transformation_objects += appearing_part
 	//Transform effect thing

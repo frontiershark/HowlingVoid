@@ -1,7 +1,7 @@
 /obj/item/holocigarette
 	name = "Holocigarette"
 	desc = "A cigarette created using holodeck technology. Want to smoke without all the downsides? Try Holocigarettes!"
-	icon = 'icons/obj/cigarettes.dmi'
+	icon = '../assets/icons/obj/cigarettes.dmi'
 	icon_state = "cigoff"
 	throw_speed = 0.5
 	inhand_icon_state = "cigoff"

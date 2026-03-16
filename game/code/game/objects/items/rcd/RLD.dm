@@ -18,11 +18,11 @@
 /obj/item/construction/rld
 	name = "Rapid Lighting Device"
 	desc = "A device used to rapidly provide lighting sources to an area. Reload with iron, plasteel, glass or compressed matter cartridges."
-	icon = 'icons/obj/tools.dmi'
+	icon = '../assets/icons/obj/tools.dmi'
 	icon_state = "rld"
 	worn_icon_state = "RPD"
-	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/tools_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/tools_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/tools_righthand.dmi'
 	matter = 200
 	max_matter = 200
 	slot_flags = ITEM_SLOT_BELT
@@ -34,10 +34,10 @@
 	var/mode = LIGHT_MODE
 	///reference to thr original icons
 	var/static/list/original_options = list(
-		"Color Pick" = icon(icon = 'icons/hud/radial.dmi', icon_state = "omni"),
-		"Glow Stick" = icon(icon = 'icons/obj/lighting.dmi', icon_state = "glowstick"),
-		"Deconstruct" = icon(icon = 'icons/obj/tools.dmi', icon_state = "wrench"),
-		"Light Fixture" = icon(icon = 'icons/obj/lighting.dmi', icon_state = "ltube"),
+		"Color Pick" = icon(icon = '../assets/icons/hud/radial.dmi', icon_state = "omni"),
+		"Glow Stick" = icon(icon = '../assets/icons/obj/lighting.dmi', icon_state = "glowstick"),
+		"Deconstruct" = icon(icon = '../assets/icons/obj/tools.dmi', icon_state = "wrench"),
+		"Light Fixture" = icon(icon = '../assets/icons/obj/lighting.dmi', icon_state = "ltube"),
 	)
 	///will contain the original icons modified with the color choice
 	var/list/display_options = list()
@@ -53,7 +53,7 @@
 	. = ..()
 
 	if((construction_upgrades & RCD_UPGRADE_SILO_LINK) && display_options["Silo Link"] == null) //silo upgrade instaled but option was not updated then update it just one
-		display_options["Silo Link"] = icon(icon = 'icons/obj/machines/ore_silo.dmi', icon_state = "silo")
+		display_options["Silo Link"] = icon(icon = '../assets/icons/obj/machines/ore_silo.dmi', icon_state = "silo")
 
 	var/choice = show_radial_menu(user, src, display_options, custom_check = CALLBACK(src, PROC_REF(check_menu), user), require_near = TRUE, tooltips = TRUE)
 	if(!check_menu(user))
@@ -122,7 +122,7 @@
 			if(!useResource(DECONSTRUCT_COST, user, TRUE))
 				return ITEM_INTERACT_BLOCKING
 			var/beam = user.Beam(interacting_with, icon_state="light_beam", time = 15)
-			playsound(src, 'sound/machines/click.ogg', 50, TRUE)
+			playsound(src, '../assets/sound/machines/click.ogg', 50, TRUE)
 			if(!do_after(user, REMOVE_DELAY, target = interacting_with))
 				qdel(beam)
 				return ITEM_INTERACT_BLOCKING
@@ -139,8 +139,8 @@
 			if(!useResource(cost, user, TRUE))
 				return ITEM_INTERACT_BLOCKING
 			var/beam = user.Beam(interacting_with, icon_state="light_beam", time = BUILD_DELAY)
-			playsound(loc, 'sound/machines/click.ogg', 50, TRUE)
-			playsound(loc, 'sound/effects/light_flicker.ogg', 50, FALSE)
+			playsound(loc, '../assets/sound/machines/click.ogg', 50, TRUE)
+			playsound(loc, '../assets/sound/effects/light_flicker.ogg', 50, FALSE)
 			if(!do_after(user, BUILD_DELAY, target = interacting_with))
 				qdel(beam)
 				return ITEM_INTERACT_BLOCKING
@@ -219,10 +219,10 @@
 /obj/item/construction/rld/mini
 	name = "mini-rapid-light-device"
 	desc = "A device used to rapidly provide lighting sources to an area. Reload with iron, plasteel, glass or compressed matter cartridges."
-	icon = 'icons/obj/tools.dmi'
+	icon = '../assets/icons/obj/tools.dmi'
 	icon_state = "rld"
-	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/tools_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/tools_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/tools_righthand.dmi'
 	matter = 100
 	max_matter = 100
 

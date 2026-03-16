@@ -53,7 +53,7 @@
 /// Changes which overlay state we're using depending on combat mode status.
 /obj/item/mod/module/welding/syndicate/proc/on_combat_mode_toggle(mob/living/carbon/human/toggler)
 	SIGNAL_HANDLER
-	playsound(src, 'sound/vehicles/mecha/mechmove03.ogg', 25, TRUE, SHORT_RANGE_SOUND_EXTRARANGE)
+	playsound(src, '../assets/sound/vehicles/mecha/mechmove03.ogg', 25, TRUE, SHORT_RANGE_SOUND_EXTRARANGE)
 	update_clothing_slots()
 
 ///T-Ray Scan - Scans the terrain for undertile objects.
@@ -136,7 +136,7 @@
 /obj/item/mod/module/tether/used()
 	if(HAS_TRAIT_FROM(mod.wearer, TRAIT_TETHER_ATTACHED, REF(src)))
 		balloon_alert(mod.wearer, "already tethered!")
-		playsound(src, 'sound/items/weapons/gun/general/dry_fire.ogg', 25, TRUE)
+		playsound(src, '../assets/sound/items/weapons/gun/general/dry_fire.ogg', 25, TRUE)
 		return FALSE
 	return ..()
 
@@ -147,7 +147,7 @@
 	var/obj/projectile/tether = new tether_type(mod.wearer.loc, src) // NOVA EDIT CHANGE - editable projectile - ORIGINAL var/obj/projectile/tether = new /obj/projectile/tether(mod.wearer.loc, src)
 	tether.aim_projectile(target, mod.wearer)
 	tether.firer = mod.wearer
-	playsound(src, 'sound/items/weapons/batonextend.ogg', 25, TRUE)
+	playsound(src, '../assets/sound/items/weapons/batonextend.ogg', 25, TRUE)
 	INVOKE_ASYNC(tether, TYPE_PROC_REF(/obj/projectile, fire))
 	drain_power(use_energy_cost)
 
@@ -165,11 +165,11 @@
 /obj/projectile/tether
 	name = "tether"
 	icon_state = "tether_projectile"
-	icon = 'icons/obj/clothing/modsuit/mod_modules.dmi'
+	icon = '../assets/icons/obj/clothing/modsuit/mod_modules.dmi'
 	damage = 0
 	range = 10
-	hitsound = 'sound/items/weapons/batonextend.ogg'
-	hitsound_wall = 'sound/items/weapons/batonextend.ogg'
+	hitsound = '../assets/sound/items/weapons/batonextend.ogg'
+	hitsound_wall = '../assets/sound/items/weapons/batonextend.ogg'
 	suppressed = SUPPRESSED_VERY
 	hit_threshhold = ABOVE_NORMAL_TURF_LAYER
 	embed_type = /datum/embedding/tether_projectile
@@ -202,7 +202,7 @@
 
 /obj/projectile/tether/fire(setAngle)
 	if(firer)
-		line = firer.Beam(src, "line", 'icons/obj/clothing/modsuit/mod_modules.dmi', emissive = FALSE)
+		line = firer.Beam(src, "line", '../assets/icons/obj/clothing/modsuit/mod_modules.dmi', emissive = FALSE)
 	return ..()
 
 /obj/projectile/tether/on_hit(atom/target, blocked = 0, pierce_hit)
@@ -253,7 +253,7 @@
 	name = "tether anchor"
 	desc = "A reinforced anchor with a tether attachment point. A centuries old EVA tool which saved countless engineers' lives."
 	icon_state = "tether_latched"
-	icon = 'icons/obj/clothing/modsuit/mod_modules.dmi'
+	icon = '../assets/icons/obj/clothing/modsuit/mod_modules.dmi'
 	max_integrity = 60
 	interaction_flags_atom = INTERACT_ATOM_ATTACK_HAND | INTERACT_ATOM_UI_INTERACT
 	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 6.15, /datum/material/glass = SMALL_MATERIAL_AMOUNT * 1.5)

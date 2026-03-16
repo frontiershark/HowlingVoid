@@ -2,7 +2,7 @@
 	name = "minebot melee upgrade"
 	desc = "A minebot upgrade."
 	icon_state = "door_electronics"
-	icon = 'icons/obj/devices/circuitry_n_data.dmi'
+	icon = '../assets/icons/obj/devices/circuitry_n_data.dmi'
 	item_flags = NOBLUDGEON
 
 /obj/item/mine_bot_upgrade/interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)
@@ -40,7 +40,7 @@
 	name = "minebot AI upgrade"
 	desc = "Can be used to grant sentience to minebots. It's incompatible with minebot armor and melee upgrades, and will override them."
 	icon_state = "door_electronics"
-	icon = 'icons/obj/devices/circuitry_n_data.dmi'
+	icon = '../assets/icons/obj/devices/circuitry_n_data.dmi'
 	sentience_type = SENTIENCE_MINEBOT
 	///health boost to add
 	var/base_health_add = 5
@@ -79,7 +79,7 @@
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	anchored = TRUE
 	vis_flags = VIS_INHERIT_DIR | VIS_INHERIT_PLANE
-	icon = 'icons/mob/silicon/aibots.dmi'
+	icon = '../assets/icons/mob/silicon/aibots.dmi'
 	icon_state = "minebot_shield_top_layer"
 	layer = ABOVE_ALL_MOB_LAYER
 
@@ -87,6 +87,6 @@
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	anchored = TRUE
 	vis_flags = VIS_INHERIT_DIR | VIS_INHERIT_PLANE
-	icon = 'icons/mob/silicon/aibots.dmi'
+	icon = '../assets/icons/mob/silicon/aibots.dmi'
 	icon_state = "minebot_shield_bottom_layer"
 	layer = BELOW_MOB_LAYER

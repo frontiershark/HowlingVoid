@@ -173,7 +173,7 @@
 
 /obj/effect/wizard_magnetism
 	name = "magnetic anomaly"
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	icon_state = "shield2"
 	/// We need to orbit around someone.
 	var/datum/weakref/owner

@@ -1,7 +1,7 @@
 /datum/action/setup_shop
 	name = "Setup shop"
 	desc = "Summons a wacky sales sign, and a comfy sitting spot to conduct your business from."
-	button_icon = 'icons/mob/actions/actions_trader.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_trader.dmi'
 	button_icon_state = "setup_shop"
 	/// The shop spot
 	var/datum/weakref/shop_spot_ref
@@ -26,7 +26,7 @@
 		return FALSE
 	return TRUE
 
-/datum/action/setup_shop/New(Target, shop_spot_type = /obj/structure/chair/plastic, sign_type = /obj/structure/trader_sign, sell_sound = 'sound/effects/cashregister.ogg', opening_lines = list("Welcome to my shop, friend!"))
+/datum/action/setup_shop/New(Target, shop_spot_type = /obj/structure/chair/plastic, sign_type = /obj/structure/trader_sign, sell_sound = '../assets/sound/effects/cashregister.ogg', opening_lines = list("Welcome to my shop, friend!"))
 	. = ..()
 
 	src.shop_spot_type = shop_spot_type

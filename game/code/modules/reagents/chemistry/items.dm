@@ -10,7 +10,7 @@
 	name = "pH indicator booklet"
 	desc = "A booklet containing paper soaked in universal indicator."
 	icon_state = "pHbooklet"
-	icon = 'icons/obj/medical/chemical.dmi'
+	icon = '../assets/icons/obj/medical/chemical.dmi'
 	item_flags = NOBLUDGEON
 	resistance_flags = FLAMMABLE
 	w_class = WEIGHT_CLASS_TINY
@@ -34,7 +34,7 @@
 		user.put_in_active_hand(page)
 		to_chat(user, span_notice("You take [page] out of \the [src]."))
 		number_of_pages--
-		playsound(user.loc, 'sound/items/poster/poster_ripped.ogg', 50, TRUE)
+		playsound(user.loc, '../assets/sound/items/poster/poster_ripped.ogg', 50, TRUE)
 		add_fingerprint(user)
 		if(!number_of_pages)
 			icon_state = "pHbooklet_empty"
@@ -58,7 +58,7 @@
 	user.put_in_active_hand(P)
 	to_chat(user, span_notice("You take [P] out of \the [src]."))
 	number_of_pages--
-	playsound(user.loc, 'sound/items/poster/poster_ripped.ogg', 50, TRUE)
+	playsound(user.loc, '../assets/sound/items/poster/poster_ripped.ogg', 50, TRUE)
 	add_fingerprint(user)
 	if(!number_of_pages)
 		icon_state = "pHbookletEmpty"
@@ -70,7 +70,7 @@
 	name = "pH indicator strip"
 	desc = "A piece of paper that will change colour depending on the pH of a solution."
 	icon_state = "pHpaper"
-	icon = 'icons/obj/medical/chemical.dmi'
+	icon = '../assets/icons/obj/medical/chemical.dmi'
 	item_flags = NOBLUDGEON
 	color = "#f5c352"
 	resistance_flags = FLAMMABLE
@@ -100,7 +100,7 @@
 	name = "Chemical Analyzer"
 	desc = "An electrode attached to a small circuit box that will display details of a solution. Can be toggled to provide a description of each of the reagents. The screen currently displays nothing."
 	icon_state = "pHmeter"
-	icon = 'icons/obj/medical/chemical.dmi'
+	icon = '../assets/icons/obj/medical/chemical.dmi'
 	w_class = WEIGHT_CLASS_TINY
 	///level of detail for output for the meter
 	var/scanmode = DETAILED_CHEM_OUTPUT
@@ -149,7 +149,7 @@
 /obj/item/burner
 	name = "burner"
 	desc = "A small table size burner used for heating up beakers."
-	icon = 'icons/obj/medical/chemical.dmi'
+	icon = '../assets/icons/obj/medical/chemical.dmi'
 	icon_state = "burner"
 	custom_materials = list(/datum/material/paper = HALF_SHEET_MATERIAL_AMOUNT / 2)
 	item_flags = NOBLUDGEON
@@ -179,7 +179,7 @@
 			var/obj/item/reagent_containers/container = I
 			container.reagents.expose_temperature(get_temperature())
 			to_chat(user, span_notice("You heat up the [I] with the [src]."))
-			playsound(user.loc, 'sound/effects/chemistry/heatdam.ogg', 50, TRUE)
+			playsound(user.loc, '../assets/sound/effects/chemistry/heatdam.ogg', 50, TRUE)
 			return
 		else if(I.is_drainable()) //Transfer FROM it TO us. Special code so it only happens when flame is off.
 			var/obj/item/reagent_containers/container = I
@@ -206,7 +206,7 @@
 		var/obj/item/reagent_containers/container = interacting_with
 		container.reagents.expose_temperature(get_temperature())
 		user.visible_message(span_notice("[user] heats up [src]."), span_notice("You heat up [src]."))
-		playsound(user, 'sound/effects/chemistry/heatdam.ogg', 50, TRUE)
+		playsound(user, '../assets/sound/effects/chemistry/heatdam.ogg', 50, TRUE)
 		return ITEM_INTERACT_SUCCESS
 
 	else if(isitem(interacting_with))
@@ -229,7 +229,7 @@
 	if(lit)
 		force = 5
 		damtype = BURN
-		hitsound = 'sound/items/tools/welder.ogg'
+		hitsound = '../assets/sound/items/tools/welder.ogg'
 		attack_verb_continuous = string_list(list("burns", "singes"))
 		attack_verb_simple = string_list(list("burn", "singe"))
 		START_PROCESSING(SSobj, src)
@@ -299,7 +299,7 @@
 	name = "thermometer"
 	desc = "A thermometer for checking a something's temperature."
 	icon_state = "thermometer"
-	icon = 'icons/obj/medical/chemical.dmi'
+	icon = '../assets/icons/obj/medical/chemical.dmi'
 	item_flags = NOBLUDGEON
 	w_class = WEIGHT_CLASS_TINY
 	custom_materials = list(/datum/material/glass = SHEET_MATERIAL_AMOUNT)

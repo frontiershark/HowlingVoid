@@ -3,7 +3,7 @@
 // Reskinned soil to make it look like it's turf, but it's not!
 /obj/machinery/hydroponics/soil/fake_turf
 	desc = "A patch of fertile soil that you can plant stuff in."
-	icon = 'icons/turf/floors.dmi' // This makes it look like the dirt floor
+	icon = '../assets/icons/turf/floors.dmi' // This makes it look like the dirt floor
 	icon_state = "dirt"
 	layer = LOW_FLOOR_LAYER
 	plane = FLOOR_PLANE

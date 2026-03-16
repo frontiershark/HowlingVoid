@@ -75,14 +75,14 @@
 	user.visible_message(span_suicide("[user] hooks both ends of [src] to their chest! It looks like [user.p_theyre()] trying to commit suicide!"))
 	electrocute_mob(user, power_source = get_area(src), source = src, siemens_coeff = 1, dist_check = FALSE)
 	tesla_zap(source = user, zap_range = 4, power = electrogenesis_power, cutoff = 1e3, zap_flags = ZAP_LOW_POWER_GEN|ZAP_MOB_DAMAGE)
-	playsound(user, 'sound/items/weapons/zapbang.ogg', 75)
+	playsound(user, '../assets/sound/items/weapons/zapbang.ogg', 75)
 	return OXYLOSS
 
 /obj/item/fish/chainsawfish
 	name = "chainsawfish"
 	fish_id = "chainsawfish"
 	desc = "A very, very angry bioweapon, whose sole purpose is to rip and tear."
-	icon = 'icons/obj/aquarium/wide.dmi'
+	icon = '../assets/icons/obj/aquarium/wide.dmi'
 	icon_state = "chainsawfish"
 	inhand_icon_state = "chainsawfish"
 	icon_state_dead = "chainsawfish_dead"
@@ -91,7 +91,7 @@
 	block_chance = 15
 	attack_verb_continuous = list("saws", "tears", "lacerates", "cuts", "chops", "dices")
 	attack_verb_simple = list("saw", "tear", "lacerate", "cut", "chop", "dice")
-	hitsound = 'sound/items/weapons/chainsawhit.ogg'
+	hitsound = '../assets/sound/items/weapons/chainsawhit.ogg'
 	sharpness = SHARP_EDGED
 	tool_behaviour = TOOL_SAW
 	toolspeed = 0.5
@@ -204,11 +204,11 @@
 /obj/item/fish/chainsawfish/suicide_act(mob/living/carbon/user)
 	if(status == FISH_DEAD)
 		user.visible_message(span_suicide("[user] smashes [src] into [user.p_their()] neck, destroying [user.p_their()] esophagus! It looks like [user.p_theyre()] trying to commit suicide!"))
-		playsound(src, 'sound/items/weapons/genhit1.ogg', 100, TRUE)
+		playsound(src, '../assets/sound/items/weapons/genhit1.ogg', 100, TRUE)
 		return BRUTELOSS
 
 	user.visible_message(span_suicide("[user] begins to tear [user.p_their()] head off with [src]! It looks like [user.p_theyre()] trying to commit suicide!"))
-	playsound(src, 'sound/items/weapons/chainsawhit.ogg', 100, TRUE)
+	playsound(src, '../assets/sound/items/weapons/chainsawhit.ogg', 100, TRUE)
 	var/obj/item/bodypart/head/myhead = user.get_bodypart(BODY_ZONE_HEAD)
 	if(myhead)
 		myhead.dismember()
@@ -222,8 +222,8 @@
 	inhand_icon_state = "armored_pike"
 	attack_verb_continuous = list("attacks", "pokes", "jabs", "tears", "lacerates", "gores")
 	attack_verb_simple = list("attack", "poke", "jab", "tear", "lacerate", "gore")
-	hitsound = 'sound/items/weapons/bladeslice.ogg'
-	block_sound = 'sound/items/weapons/parry.ogg'
+	hitsound = '../assets/sound/items/weapons/bladeslice.ogg'
+	block_sound = '../assets/sound/items/weapons/parry.ogg'
 	force = 20
 	sharpness = SHARP_EDGED
 	wound_bonus = -15

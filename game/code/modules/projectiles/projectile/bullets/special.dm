@@ -5,8 +5,8 @@
 	damage = 0
 	movement_type = FLYING
 	projectile_piercing = ALL
-	hitsound = 'sound/items/bikehorn.ogg'
-	icon = 'icons/obj/service/hydroponics/harvest.dmi'
+	hitsound = '../assets/sound/items/bikehorn.ogg'
+	icon = '../assets/icons/obj/service/hydroponics/harvest.dmi'
 	icon_state = "banana"
 	range = 200
 	embed_type = null
@@ -108,7 +108,7 @@
 		return
 
 	var/client/firing_client = original_firer.client
-	crosshair_indicator = image('icons/obj/supplypods_32x32.dmi', target_turf, "LZ")
+	crosshair_indicator = image('../assets/icons/obj/supplypods_32x32.dmi', target_turf, "LZ")
 	firing_client.images += crosshair_indicator
 
 /obj/projectile/bullet/coin/Destroy()
@@ -119,7 +119,7 @@
 /obj/projectile/bullet/coin/Moved(atom/old_loc, movement_dir, forced, list/old_locs, momentum_change)
 	. = ..()
 	if(!valid && get_dist(loc, target_turf) < 1)
-		original_firer?.playsound_local(src, 'sound/machines/ping.ogg', 30)
+		original_firer?.playsound_local(src, '../assets/sound/machines/ping.ogg', 30)
 		valid = TRUE
 	else if(valid && get_dist(loc, target_turf) > 1)
 		valid = FALSE

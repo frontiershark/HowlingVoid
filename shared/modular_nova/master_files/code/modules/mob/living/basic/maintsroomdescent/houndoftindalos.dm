@@ -2,7 +2,7 @@
 /mob/living/basic/mining/legion/houndoftindalos
 	name = "Hound of Tindalos"
 	desc = "It looks vaguely like a dog- if said was put through a wood chipper then what was left was made into fine strands and then re-assembled in the vague shape of the dog while having the color of a rainbow."
-	icon = 'icons/mob/simple/lavaland/lavaland_monsters.dmi'
+	icon = '../assets/icons/mob/simple/lavaland/lavaland_monsters.dmi'
 	icon_state = "legion" ///these are just placeholder sprites until i can get a real sprite made or ported from CDDA
 	icon_living = "legion"
 	icon_dead = "legion"

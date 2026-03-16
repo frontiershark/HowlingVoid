@@ -23,11 +23,11 @@
 	desc = "A metal canister designed to hold ammunition"
 	icon_state = "ammobox"
 	inhand_icon_state = "ammobox"
-	lefthand_file = 'icons/mob/inhands/equipment/toolbox_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/toolbox_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/toolbox_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/toolbox_righthand.dmi'
 	has_latches = FALSE
-	drop_sound = 'sound/items/handling/ammobox_drop.ogg'
-	pickup_sound = 'sound/items/handling/ammobox_pickup.ogg'
+	drop_sound = '../assets/sound/items/handling/ammobox_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/ammobox_pickup.ogg'
 	var/ammo_to_spawn
 
 /obj/item/storage/toolbox/ammobox/PopulateContents()
@@ -56,10 +56,10 @@
 /obj/item/storage/toolbox/guncase
 	name = "gun case"
 	desc = "A weapon's case. Has a blood-red 'S' stamped on the cover."
-	icon = 'icons/obj/storage/case.dmi'
+	icon = '../assets/icons/obj/storage/case.dmi'
 	icon_state = "infiltrator_case"
-	lefthand_file = 'icons/mob/inhands/equipment/toolbox_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/toolbox_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/toolbox_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/toolbox_righthand.dmi'
 	inhand_icon_state = "infiltrator_case"
 	has_latches = FALSE
 	storage_type = /datum/storage/toolbox/guncase
@@ -128,7 +128,7 @@
 	explosion_timer = addtimer(CALLBACK(src, PROC_REF(think_fast_chucklenuts)), 5 SECONDS, (TIMER_UNIQUE|TIMER_OVERRIDE))
 	to_chat(user, span_warning("You prime [src]'s evidence disposal bomb!"))
 	log_bomber(user, "has activated a", src, "for detonation")
-	playsound(src, 'sound/items/weapons/armbomb.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/weapons/armbomb.ogg', 50, TRUE)
 	currently_exploding = TRUE
 	update_appearance()
 
@@ -266,7 +266,7 @@
 	if(is_simian(user))
 		atom_storage.locked = STORAGE_NOT_LOCKED
 		to_chat(user, span_notice("You place your paw on the paw scanner, and hear a soft click as [src] unlocks!"))
-		playsound(src, 'sound/items/click.ogg', 25, TRUE)
+		playsound(src, '../assets/sound/items/click.ogg', 25, TRUE)
 		return TRUE
 	to_chat(user, span_warning("You put your hand on the hand scanner, and it rejects it with an angry chimpanzee screech!"))
 	playsound(src, SFX_SCREECH, 75, TRUE)
@@ -329,7 +329,7 @@
 		COMBAT_MESSAGE_RANGE,
 	)
 
-	playsound(src, 'sound/items/tools/drill_use.ogg', 80, TRUE, -1)
+	playsound(src, '../assets/sound/items/tools/drill_use.ogg', 80, TRUE, -1)
 	var/obj/machinery/porta_turret/syndicate/toolbox/turret = new(get_turf(loc))
 	set_toolbox_faction(turret, user)
 	turret.toolbox = src

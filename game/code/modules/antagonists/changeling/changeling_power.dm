@@ -7,7 +7,7 @@
 	name = "Prototype Sting - Debug button, ahelp this"
 	background_icon_state = "bg_changeling"
 	overlay_icon_state = "bg_changeling_border"
-	button_icon = 'icons/mob/actions/actions_changeling.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_changeling.dmi'
 	/// Details displayed in fine print within the changling emporium
 	var/helptext = ""
 	/// How many changeling chems it costs to use

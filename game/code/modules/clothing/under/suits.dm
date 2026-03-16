@@ -1,6 +1,6 @@
 /obj/item/clothing/under/suit
-	icon = 'icons/obj/clothing/under/suits.dmi'
-	worn_icon = 'icons/mob/clothing/under/suits.dmi'
+	icon = '../assets/icons/obj/clothing/under/suits.dmi'
+	worn_icon = '../assets/icons/mob/clothing/under/suits.dmi'
 	can_adjust = FALSE
 	female_sprite_flags = FEMALE_UNIFORM_NO_BREASTS
 	inhand_icon_state = null

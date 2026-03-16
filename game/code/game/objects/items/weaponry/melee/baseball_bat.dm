@@ -1,12 +1,12 @@
 /obj/item/melee/baseball_bat
 	name = "baseball bat"
 	desc = "There ain't a skull in the league that can withstand a swatter."
-	icon = 'icons/obj/weapons/bat.dmi'
+	icon = '../assets/icons/obj/weapons/bat.dmi'
 	icon_state = "baseball_bat"
 	inhand_icon_state = "baseball_bat"
 	icon_angle = -45
-	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/melee_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/melee_righthand.dmi'
 	force = 12
 	wound_bonus = -10
 	throwforce = 12
@@ -41,7 +41,7 @@
 		to_chat(user, span_warning("You're already ready to do a home run!"))
 		return ..()
 	to_chat(user, span_warning("You begin gathering strength..."))
-	playsound(get_turf(src), 'sound/effects/magic/lightning_chargeup.ogg', 65, TRUE)
+	playsound(get_turf(src), '../assets/sound/effects/magic/lightning_chargeup.ogg', 65, TRUE)
 	if(do_after(user, 9 SECONDS, target = src))
 		to_chat(user, span_userdanger("You gather power! Time for a home run!"))
 		homerun_ready = TRUE
@@ -59,7 +59,7 @@
 		if(!QDELETED(target))
 			target.throw_at(throw_target, rand(8,10), 14, user)
 		SSexplosions.medturf += throw_target
-		playsound(get_turf(src), 'sound/items/weapons/homerun.ogg', 100, TRUE)
+		playsound(get_turf(src), '../assets/sound/items/weapons/homerun.ogg', 100, TRUE)
 		homerun_ready = FALSE
 		return
 	else if(!QDELETED(target) && !target.anchored)
@@ -105,14 +105,14 @@
 	animate(target, 0.5 SECONDS, color = null, flags = ANIMATION_PARALLEL)
 	user.color = list(1,0,0,0, 0,1,0,0, 0,0,1,0, 0,0,0,3)
 	animate(user, 0.5 SECONDS, color = null, flags = ANIMATION_PARALLEL)
-	playsound(src, 'sound/items/baseballhit.ogg', 100, TRUE)
+	playsound(src, '../assets/sound/items/baseballhit.ogg', 100, TRUE)
 	user.do_attack_animation(target, used_item = src)
 	ADD_TRAIT(user, TRAIT_IMMOBILIZED, type)
 	addtimer(CALLBACK(src, PROC_REF(launch_back), target, user, return_to_sender, datum_throw_speed), 0.5 SECONDS)
 	return TRUE
 
 /obj/item/melee/baseball_bat/proc/launch_back(atom/movable/target, mob/living/user, turf/target_turf, datum_throw_speed)
-	playsound(target, 'sound/effects/magic/tail_swing.ogg', 50, TRUE)
+	playsound(target, '../assets/sound/effects/magic/tail_swing.ogg', 50, TRUE)
 	REMOVE_TRAIT(user, TRAIT_IMMOBILIZED, type)
 	target.mouse_opacity = initial(target.mouse_opacity)
 	target.add_filter("baseball_launch", 3, motion_blur_filter(1, 3))
@@ -149,7 +149,7 @@
 	force = 20
 	throwforce = 20
 	mob_thrower = TRUE
-	block_sound = 'sound/items/weapons/effects/batreflect.ogg'
+	block_sound = '../assets/sound/items/weapons/effects/batreflect.ogg'
 
 /obj/item/melee/baseball_bat/ablative/IsReflect()//some day this will reflect thrown items instead of lasers
 	return TRUE

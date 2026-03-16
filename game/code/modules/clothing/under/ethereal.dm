@@ -1,8 +1,8 @@
 /obj/item/clothing/under/ethereal_tunic
 	name = "ethereal tunic"
 	desc = "A simple sleeveless tunic worn over an undersuit, it glows in the dark!"
-	icon = 'icons/map_icons/clothing/under/_under.dmi'
-	worn_icon = 'icons/mob/clothing/under/ethereal.dmi'
+	icon = '../assets/icons/map_icons/clothing/under/_under.dmi'
+	worn_icon = '../assets/icons/mob/clothing/under/ethereal.dmi'
 	icon_state = "/obj/item/clothing/under/ethereal_tunic"
 	post_init_icon_state = "eth_tunic"
 	greyscale_colors = "#4e7cc7"
@@ -18,11 +18,11 @@
 /obj/item/clothing/under/ethereal_tunic/worn_overlays(mutable_appearance/standing, isinhands, icon_file)
 	. = ..()
 	if(!isinhands)
-		. += emissive_appearance('icons/mob/clothing/under/ethereal.dmi', "eth_tunic_emissive", offset_spokesman = src, alpha = src.alpha)
+		. += emissive_appearance('../assets/icons/mob/clothing/under/ethereal.dmi', "eth_tunic_emissive", offset_spokesman = src, alpha = src.alpha)
 
 /obj/item/clothing/under/ethereal_tunic/update_overlays()
 	. = ..()
-	. += emissive_appearance('icons/obj/clothing/under/ethereal.dmi', "eth_tunic_emissive", offset_spokesman = src, alpha = src.alpha)
+	. += emissive_appearance('../assets/icons/obj/clothing/under/ethereal.dmi', "eth_tunic_emissive", offset_spokesman = src, alpha = src.alpha)
 
 /obj/item/clothing/under/ethereal_tunic/trailwarden
 	name = "trailwarden tunic"

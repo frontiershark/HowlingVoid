@@ -73,7 +73,7 @@
 	gender = PLURAL
 	name = "sand"
 	desc = "This is better than a vacation, since you're still getting paid."
-	icon = 'icons/turf/sand.dmi'
+	icon = '../assets/icons/turf/sand.dmi'
 	icon_state = "sand"
 	bullet_bounce_sound = null
 	tiled_turf = FALSE
@@ -81,7 +81,7 @@
 /turf/open/floor/holofloor/beach/coast
 	gender = NEUTER
 	name = "coastline"
-	icon = 'icons/turf/beach.dmi'
+	icon = '../assets/icons/turf/beach.dmi'
 	icon_state = "beach"
 
 /turf/open/floor/holofloor/beach/coast/corner
@@ -90,7 +90,7 @@
 /turf/open/floor/holofloor/beach/water
 	name = "water"
 	desc = "Gives the impression you can walk on water. Chaplains love it."
-	icon = 'icons/turf/beach.dmi'
+	icon = '../assets/icons/turf/beach.dmi'
 	icon_state = "water"
 	bullet_sizzle = TRUE
 
@@ -129,7 +129,7 @@
 /turf/open/floor/holofloor/space
 	name = "\proper space"
 	desc = "Space-looking floor. Thankfully, the deadly aspects of space are not emulated here."
-	icon = 'icons/turf/space.dmi'
+	icon = '../assets/icons/turf/space.dmi'
 	icon_state = "space"
 	layer = SPACE_LAYER
 	plane = PLANE_SPACE
@@ -137,7 +137,7 @@
 /turf/open/floor/holofloor/hyperspace
 	name = "\proper hyperspace"
 	desc = "Gives the impression of moving at hyper-speed, without moving. May induce motion sickness."
-	icon = 'icons/turf/space.dmi'
+	icon = '../assets/icons/turf/space.dmi'
 	icon_state = "speedspace_ns_1"
 	bullet_bounce_sound = null
 	tiled_turf = FALSE
@@ -153,7 +153,7 @@
 /turf/open/floor/holofloor/carpet
 	name = "carpet"
 	desc = "Electrically inviting."
-	icon = 'icons/turf/floors/carpet.dmi'
+	icon = '../assets/icons/turf/floors/carpet.dmi'
 	icon_state = "carpet-255"
 	base_icon_state = "carpet"
 	floor_tile = /obj/item/stack/tile/carpet
@@ -181,7 +181,7 @@
 	gender = PLURAL
 	name = "snow"
 	desc = "The puffy snow clumps together to make a solid-looking floor, though it sinks beneath your feet."
-	icon = 'icons/turf/snow.dmi'
+	icon = '../assets/icons/turf/snow.dmi'
 	icon_state = "snow"
 	slowdown = 2
 	bullet_sizzle = TRUE

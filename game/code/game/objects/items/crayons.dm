@@ -10,7 +10,7 @@
 
 #define PAINT_NORMAL 1
 #define PAINT_LARGE_HORIZONTAL 2
-#define PAINT_LARGE_HORIZONTAL_ICON 'icons/effects/96x32.dmi'
+#define PAINT_LARGE_HORIZONTAL_ICON '../assets/icons/effects/96x32.dmi'
 
 #define AVAILABLE_SPRAYCAN_SPACE 8 // enough to fill one radial menu page
 
@@ -24,7 +24,7 @@
 /obj/item/toy/crayon
 	name = "crayon"
 	desc = "A colourful crayon. Looks tasty. Mmmm..."
-	icon = 'icons/obj/art/crayons.dmi'
+	icon = '../assets/icons/obj/art/crayons.dmi'
 	icon_state = "crayonred"
 	worn_icon_state = "crayon"
 	w_class = WEIGHT_CLASS_TINY
@@ -526,7 +526,7 @@
 
 	if(pre_noise)
 		audible_message(span_notice("You hear spraying."))
-		playsound(user.loc, 'sound/effects/spray.ogg', 5, TRUE, 5)
+		playsound(user.loc, '../assets/sound/effects/spray.ogg', 5, TRUE, 5)
 
 	var/wait_time = DRAW_TIME
 	if(paint_mode == PAINT_LARGE_HORIZONTAL)
@@ -580,7 +580,7 @@
 
 	if(post_noise)
 		audible_message(span_hear("You hear spraying."))
-		playsound(user.loc, 'sound/effects/spray.ogg', 5, TRUE, 5)
+		playsound(user.loc, '../assets/sound/effects/spray.ogg', 5, TRUE, 5)
 
 	var/fraction = min(1, . / reagents.maximum_volume)
 	if(affected_turfs.len)
@@ -730,7 +730,7 @@
 /obj/item/storage/crayons
 	name = "box of crayons"
 	desc = "A box of crayons for all your rune drawing needs."
-	icon = 'icons/obj/art/crayons.dmi'
+	icon = '../assets/icons/obj/art/crayons.dmi'
 	icon_state = "crayonbox"
 	w_class = WEIGHT_CLASS_SMALL
 	custom_materials = list(/datum/material/cardboard = SHEET_MATERIAL_AMOUNT)
@@ -749,7 +749,7 @@
 /obj/item/storage/crayons/update_overlays()
 	. = ..()
 	for(var/obj/item/toy/crayon/crayon in contents)
-		. += mutable_appearance('icons/obj/art/crayons.dmi', crayon.crayon_color)
+		. += mutable_appearance('../assets/icons/obj/art/crayons.dmi', crayon.crayon_color)
 
 /obj/item/storage/crayons/attack_self(mob/user)
 	. = ..()
@@ -777,8 +777,8 @@
 	paint_color = null
 
 	inhand_icon_state = "spraycan"
-	lefthand_file = 'icons/mob/inhands/equipment/hydroponics_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/hydroponics_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/hydroponics_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/hydroponics_righthand.dmi'
 	desc = "A metallic container containing tasty paint."
 	w_class = WEIGHT_CLASS_SMALL
 	custom_price = PAYCHECK_CREW * 2.5
@@ -858,7 +858,7 @@
 	user.visible_message(span_suicide("[user] shakes up [src] with a rattle and lifts it to [user.p_their()] mouth, spraying paint across [user.p_their()] teeth!"))
 	user.say("WITNESS ME!!", forced = "spraycan suicide")
 	if(pre_noise || post_noise)
-		playsound(src, 'sound/effects/spray.ogg', 5, TRUE, 5)
+		playsound(src, '../assets/sound/effects/spray.ogg', 5, TRUE, 5)
 	if(can_change_colour)
 		set_painting_tool_color(COLOR_SILVER)
 	update_appearance()
@@ -903,7 +903,7 @@
 
 	if(iscarbon(target))
 		if(pre_noise || post_noise)
-			playsound(user.loc, 'sound/effects/spray.ogg', 25, TRUE, 5)
+			playsound(user.loc, '../assets/sound/effects/spray.ogg', 25, TRUE, 5)
 
 		if(SEND_SIGNAL(target, COMSIG_CARBON_SPRAYPAINTED, user, src))
 			return ITEM_INTERACT_BLOCKING
@@ -942,7 +942,7 @@
 		reagents.trans_to(target, ., volume_multiplier, transferred_by = user, methods = VAPOR)
 
 		if(pre_noise || post_noise)
-			playsound(user.loc, 'sound/effects/spray.ogg', 5, TRUE, 5)
+			playsound(user.loc, '../assets/sound/effects/spray.ogg', 5, TRUE, 5)
 		user.visible_message(span_notice("[user] coats [target] with spray paint!"), span_notice("You coat [target] with spray paint."))
 		return ITEM_INTERACT_SUCCESS
 
@@ -956,7 +956,7 @@
 		reagents.trans_to(target, ., volume_multiplier, transferred_by = user, methods = VAPOR)
 
 		if(pre_noise || post_noise)
-			playsound(user.loc, 'sound/effects/spray.ogg', 5, TRUE, 5)
+			playsound(user.loc, '../assets/sound/effects/spray.ogg', 5, TRUE, 5)
 		user.visible_message(span_notice("[user] coats [target] with spray paint!"), span_notice("You coat [target] with spray paint."))
 		return ITEM_INTERACT_SUCCESS
 
@@ -997,7 +997,7 @@
 	reagents.trans_to(target, ., volume_multiplier, transferred_by = user, methods = VAPOR)
 
 	if(pre_noise || post_noise)
-		playsound(user.loc, 'sound/effects/spray.ogg', 5, TRUE, 5)
+		playsound(user.loc, '../assets/sound/effects/spray.ogg', 5, TRUE, 5)
 	user.visible_message(span_notice("[user] coats [target] with spray paint!"), span_notice("You coat [target] with spray paint."))
 	return ITEM_INTERACT_SUCCESS
 
@@ -1007,10 +1007,10 @@
 
 	var/list/skins = list()
 	/* var/static/list/style_list_icons = list( // NOVA EDIT REMOVAL START
-		"standard" = 'icons/mob/augmentation/augments.dmi',
-		"engineer" = 'icons/mob/augmentation/augments_engineer.dmi',
-		"security" = 'icons/mob/augmentation/augments_security.dmi',
-		"mining" = 'icons/mob/augmentation/augments_mining.dmi',
+		"standard" = '../assets/icons/mob/augmentation/augments.dmi',
+		"engineer" = '../assets/icons/mob/augmentation/augments_engineer.dmi',
+		"security" = '../assets/icons/mob/augmentation/augments_security.dmi',
+		"mining" = '../assets/icons/mob/augmentation/augments_mining.dmi',
 		)
 	*/ // NOVA EDIT REMOVAL END
 	var/static/list/style_list_icons = GLOB.robotic_styles_list //NOVA EDIT ADDITION
@@ -1022,7 +1022,7 @@
 		skins += list("[skin_option]" = part_image)
 	var/choice = show_radial_menu(user, src, skins, require_near = TRUE)
 	if(choice && (use_charges(user, 5, requires_full = FALSE)))
-		playsound(user.loc, 'sound/effects/spray.ogg', 5, TRUE, 5)
+		playsound(user.loc, '../assets/sound/effects/spray.ogg', 5, TRUE, 5)
 		limb.change_appearance(style_list_icons[choice], greyscale = FALSE)
 	return TRUE
 
@@ -1041,7 +1041,7 @@
 /obj/item/toy/crayon/spraycan/update_overlays()
 	. = ..()
 	if(overlay_paint_colour)
-		var/mutable_appearance/spray_overlay = mutable_appearance('icons/obj/art/crayons.dmi', "[is_capped ? "spraycan_cap_colors" : "spraycan_colors"]")
+		var/mutable_appearance/spray_overlay = mutable_appearance('../assets/icons/obj/art/crayons.dmi', "[is_capped ? "spraycan_cap_colors" : "spraycan_colors"]")
 		spray_overlay.color = paint_color
 		. += spray_overlay
 

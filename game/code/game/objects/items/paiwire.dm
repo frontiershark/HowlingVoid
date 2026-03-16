@@ -1,7 +1,7 @@
 /obj/item/pai_cable
 	desc = "A flexible coated cable with a universal jack on one end."
 	name = "data cable"
-	icon = 'icons/obj/stack_objects.dmi'
+	icon = '../assets/icons/obj/stack_objects.dmi'
 	icon_state = "wire1"
 	item_flags = NOBLUDGEON
 	///The current machine being hacked by the pAI cable.

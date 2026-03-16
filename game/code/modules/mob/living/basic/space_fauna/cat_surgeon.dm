@@ -7,7 +7,7 @@
 /mob/living/basic/cat_butcherer
 	name = "Cat Surgeon"
 	desc = "A man with the quest of chasing endless feline tail."
-	icon = 'icons/mob/simple/simple_human.dmi'
+	icon = '../assets/icons/mob/simple/simple_human.dmi'
 	icon_state = "cat_butcher"
 	icon_living = "cat_butcher"
 	icon_dead = "syndicate_dead"
@@ -19,7 +19,7 @@
 	melee_damage_upper = 15
 	attack_verb_continuous = "slashes at"
 	attack_verb_simple = "slash at"
-	attack_sound = 'sound/items/weapons/circsawhit.ogg'
+	attack_sound = '../assets/sound/items/weapons/circsawhit.ogg'
 	combat_mode = TRUE
 	mob_biotypes = MOB_ORGANIC|MOB_HUMANOID
 	sentience_type = SENTIENCE_HUMANOID

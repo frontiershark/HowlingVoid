@@ -1,6 +1,6 @@
 /// Inert structures, such as girders, machine frames, and crates/lockers.
 /obj/structure
-	icon = 'icons/obj/structures.dmi'
+	icon = '../assets/icons/obj/structures.dmi'
 	abstract_type = /obj/structure
 	pressure_resistance = 8
 	max_integrity = 300

@@ -1,5 +1,5 @@
 /obj/effect/decal/cleanable/food
-	icon = 'icons/effects/tomatodecal.dmi'
+	icon = '../assets/icons/effects/tomatodecal.dmi'
 	gender = NEUTER
 	beauty = -100
 
@@ -74,7 +74,7 @@
 /obj/effect/decal/cleanable/food/squid_ink
 	name = "ink smear"
 	desc = "a smear from some inky substance..."
-	icon = 'icons/effects/blood.dmi'
+	icon = '../assets/icons/effects/blood.dmi'
 	icon_state = "floor1"
 	color = COLOR_DARK
 

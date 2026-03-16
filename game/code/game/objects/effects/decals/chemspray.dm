@@ -1,7 +1,7 @@
 //Used by spraybottles.
 /obj/effect/decal/chempuff
 	name = "chemicals"
-	icon = 'icons/obj/medical/chempuff.dmi'
+	icon = '../assets/icons/obj/medical/chempuff.dmi'
 	pass_flags = PASSTABLE | PASSGRILLE
 	layer = FLY_LAYER
 	plane = ABOVE_GAME_PLANE

@@ -12,12 +12,12 @@
 /obj/item/gun/ballistic/automatic/napad
 	name = "\improper 'Napad' Submachine Gun"
 	desc = "A 9mm submachine gun with a sizeable magazine, there are no other markings on it, why is it so big?"
-	icon = 'icons/obj/weapons/guns/ninemmsmg/napad_item.dmi'
+	icon = '../assets/icons/obj/weapons/guns/ninemmsmg/napad_item.dmi'
 	icon_state = "napad"
-	worn_icon = 'icons/obj/weapons/guns/ninemmsmg/napad_worn.dmi'
+	worn_icon = '../assets/icons/obj/weapons/guns/ninemmsmg/napad_worn.dmi'
 	worn_icon_state = "napad"
-	lefthand_file = 'icons/obj/weapons/guns/ninemmsmg/napad_lefthand.dmi'
-	righthand_file = 'icons/obj/weapons/guns/ninemmsmg/napad_righthand.dmi'
+	lefthand_file = '../assets/icons/obj/weapons/guns/ninemmsmg/napad_lefthand.dmi'
+	righthand_file = '../assets/icons/obj/weapons/guns/ninemmsmg/napad_righthand.dmi'
 	inhand_icon_state = "napad"
 	special_mags = FALSE
 	bolt_type = BOLT_TYPE_LOCKING
@@ -25,7 +25,7 @@
 	weapon_weight = WEAPON_HEAVY
 	slot_flags = ITEM_SLOT_BACK
 	accepted_magazine_type = /obj/item/ammo_box/magazine/napad
-	fire_sound = 'sound/items/weapons/gun/rifle/smg_heavy.ogg'
+	fire_sound = '../assets/sound/items/weapons/gun/rifle/smg_heavy.ogg'
 	fire_sound_volume = 80
 	can_suppress = FALSE
 	burst_size = 1
@@ -40,7 +40,7 @@
 /obj/item/ammo_box/magazine/napad
 	name = "\improper Napad submachinegun magazine"
 	desc = "A magazine for a submachine gun. Holds twenty five rounds of 9mm ammunition."
-	icon = 'icons/obj/weapons/guns/ammo.dmi'
+	icon = '../assets/icons/obj/weapons/guns/ammo.dmi'
 	icon_state = "napad_mag"
 	w_class = WEIGHT_CLASS_NORMAL
 	multiple_sprites = AMMO_BOX_FULL_EMPTY

@@ -29,10 +29,10 @@
 	icon_living = "mega_legion"
 	health_doll_icon = "mega_legion"
 	desc = "One of many."
-	icon = 'icons/mob/simple/lavaland/96x96megafauna.dmi'
+	icon = '../assets/icons/mob/simple/lavaland/96x96megafauna.dmi'
 	attack_verb_continuous = "chomps"
 	attack_verb_simple = "chomp"
-	attack_sound = 'sound/effects/magic/demon_attack1.ogg'
+	attack_sound = '../assets/sound/effects/magic/demon_attack1.ogg'
 	attack_vis_effect = ATTACK_EFFECT_BITE
 	speak_emote = list("echoes")
 	armour_penetration = 50
@@ -83,7 +83,7 @@
 	return ..()
 
 /mob/living/simple_animal/hostile/megafauna/legion/medium
-	icon = 'icons/mob/simple/lavaland/64x64megafauna.dmi'
+	icon = '../assets/icons/mob/simple/lavaland/64x64megafauna.dmi'
 	pixel_x = -16
 	pixel_y = -8
 	maxHealth = 350
@@ -99,7 +99,7 @@
 	icon_state = "mega_legion_right"
 
 /mob/living/simple_animal/hostile/megafauna/legion/small
-	icon = 'icons/mob/simple/lavaland/lavaland_monsters.dmi'
+	icon = '../assets/icons/mob/simple/lavaland/lavaland_monsters.dmi'
 	icon_state = "mega_legion"
 	pixel_x = 0
 	pixel_y = 0

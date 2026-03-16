@@ -6,7 +6,7 @@
 /obj/item/turbine_parts
 	name = "turbine parts"
 	desc = "you really should call an admin"
-	icon = 'icons/obj/machines/engine/turbine.dmi'
+	icon = '../assets/icons/obj/machines/engine/turbine.dmi'
 	icon_state = "inlet_compressor"
 
 	///Current part tier

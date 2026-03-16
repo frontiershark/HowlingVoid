@@ -2,14 +2,14 @@
 /datum/grand_finale/usurp
 	name = "Usurpation"
 	desc = "The ultimate use of your gathered power! Rewrite time such that you have been Captain of this station the whole time."
-	icon = 'icons/obj/card.dmi'
+	icon = '../assets/icons/obj/card.dmi'
 	icon_state = "card_gold"
 
 /datum/grand_finale/usurp/trigger(mob/living/carbon/human/invoker)
 	message_admins("[key_name(invoker)] has replaced the Captain")
 	var/list/former_captains = list()
 	var/list/other_crew = list()
-	SEND_SOUND(world, sound('sound/effects/magic/timeparadox2.ogg'))
+	SEND_SOUND(world, sound('../assets/sound/effects/magic/timeparadox2.ogg'))
 
 	for (var/mob/living/carbon/human/crewmate as anything in GLOB.human_list)
 		if (!crewmate.mind)

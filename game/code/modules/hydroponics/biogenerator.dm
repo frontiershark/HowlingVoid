@@ -6,7 +6,7 @@
 /obj/machinery/biogenerator
 	name = "biogenerator"
 	desc = "Converts plants into biomass, which can be used to construct useful items."
-	icon = 'icons/obj/machines/biogenerator.dmi'
+	icon = '../assets/icons/obj/machines/biogenerator.dmi'
 	icon_state = "biogenerator"
 	density = TRUE
 	circuit = /obj/item/circuitboard/machine/biogenerator
@@ -222,7 +222,7 @@
 	var/turf/drop_location = drop_location()
 	if(biomass > 0)
 		drop_location.visible_message(span_warning("Biomass spills from \the [src]'s biomass tank!"))
-		playsound(drop_location, 'sound/effects/slosh.ogg', 25, vary = TRUE)
+		playsound(drop_location, '../assets/sound/effects/slosh.ogg', 25, vary = TRUE)
 		new /obj/effect/decal/cleanable/greenglow(drop_location)
 	return ITEM_INTERACT_SUCCESS
 

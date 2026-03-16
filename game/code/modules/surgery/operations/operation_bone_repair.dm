@@ -234,7 +234,7 @@
 		TOOL_SCREWDRIVER = 2.5,
 	)
 	time = 2.4 SECONDS
-	preop_sound = 'sound/items/handling/surgery/hemostat1.ogg'
+	preop_sound = '../assets/sound/items/handling/surgery/hemostat1.ogg'
 
 /datum/surgery_operation/limb/prepare_cranium_repair/get_time_modifiers(obj/item/bodypart/limb, mob/living/surgeon, tool)
 	. = ..()

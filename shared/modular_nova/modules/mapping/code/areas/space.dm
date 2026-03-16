@@ -49,7 +49,7 @@
 
 /area/ruin/space/has_grav/powered/turretfactory //give it vague mechanical sounds
 	name = "Turret Factory"
-	ambientsounds = list('sound/ambience/maintenance/ambimaint.ogg','sound/ambience/maintenance/ambimaint1.ogg','sound/ambience/maintenance/ambimaint3.ogg', 'sound/ambience/maintenance/ambimaint5.ogg', 'sound/ambience/maintenance/ambimaint6.ogg')
+	ambientsounds = list('../assets/sound/ambience/maintenance/ambimaint.ogg','../assets/sound/ambience/maintenance/ambimaint1.ogg','../assets/sound/ambience/maintenance/ambimaint3.ogg', '../assets/sound/ambience/maintenance/ambimaint5.ogg', '../assets/sound/ambience/maintenance/ambimaint6.ogg')
 
 //// Port Tarkon
 // outside
@@ -66,7 +66,7 @@
 
 /area/ruin/space/has_grav/port_tarkon
 	name = "P-T Cryo-Storage"
-	icon = 'icons/area/areas_station.dmi'
+	icon = '../assets/icons/area/areas_station.dmi'
 	icon_state = "cryo"
 
 /area/ruin/space/has_grav/port_tarkon/kitchen
@@ -209,7 +209,7 @@
  */
 /area/ruin/space/has_grav/nova/des_two
 	name = "DS-2" //If DS-1 is so great...
-	icon = 'icons/area/areas_centcom.dmi'
+	icon = '../assets/icons/area/areas_centcom.dmi'
 	icon_state = "syndie-ship"
 
 //Cargo

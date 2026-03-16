@@ -1,7 +1,7 @@
 /obj/item/mecha_parts/mecha_equipment/kinetic_dampener
 	name = "Projectile Dampener Module"
 	desc = "An advanced electromagnetic field generator adapted from peaceborg technology. It weakens incoming projectiles within a short radius, reducing their kinetic impact."
-	icon = 'icons/obj/clothing/modsuit/mod_modules.dmi'
+	icon = '../assets/icons/obj/clothing/modsuit/mod_modules.dmi'
 	icon_state = "projectile_dampener"
 	equipment_slot = MECHA_UTILITY
 	detachable = FALSE

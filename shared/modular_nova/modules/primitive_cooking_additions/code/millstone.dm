@@ -143,7 +143,7 @@
 	balloon_alert_to_viewers("grinding...")
 
 	flick("millstone_spin", src)
-	playsound(src, 'sound/effects/stonedoor_openclose.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/effects/stonedoor_openclose.ogg', 50, TRUE)
 
 	user.adjust_stamina_loss(MILLSTONE_STAMINA_USE) // Prevents spamming it
 

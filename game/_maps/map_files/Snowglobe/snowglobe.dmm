@@ -28081,7 +28081,7 @@
 /obj/structure/decorative{
 	icon_state = "hologram_on";
 	pixel_y = 7;
-	icon = 'icons/obj/machines/shuttle_manipulator.dmi';
+	icon = '../assets/icons/obj/machines/shuttle_manipulator.dmi';
 	base_icon_state = "hologram_on";
 	dir = 8;
 	pixel_x = -16;
@@ -35901,7 +35901,7 @@
 	},
 /turf/open/floor/iron/stairs{
 	icon_state = "stairs_wood";
-	icon = 'icons/obj/stairs.dmi';
+	icon = '../assets/icons/obj/stairs.dmi';
 	dir = 8
 	},
 /area/station/security/courtroom)
@@ -54285,7 +54285,7 @@
 /obj/structure/railing/wooden_fencing,
 /turf/open/floor/iron/stairs{
 	icon_state = "stairs_wood";
-	icon = 'icons/obj/stairs.dmi';
+	icon = '../assets/icons/obj/stairs.dmi';
 	dir = 8
 	},
 /area/station/security/courtroom)
@@ -74607,7 +74607,7 @@
 "tWy" = (
 /turf/open/floor/iron/stairs{
 	icon_state = "stairs_wood";
-	icon = 'icons/obj/stairs.dmi';
+	icon = '../assets/icons/obj/stairs.dmi';
 	dir = 1
 	},
 /area/station/service/theater/abandoned)
@@ -85294,7 +85294,7 @@
 "wMH" = (
 /turf/open/floor/iron/stairs{
 	icon_state = "stairs_wood";
-	icon = 'icons/obj/stairs.dmi';
+	icon = '../assets/icons/obj/stairs.dmi';
 	dir = 8
 	},
 /area/station/security/courtroom)
@@ -85306,7 +85306,7 @@
 "wMU" = (
 /turf/open/floor/iron/stairs{
 	icon_state = "stairs_wood";
-	icon = 'icons/obj/stairs.dmi';
+	icon = '../assets/icons/obj/stairs.dmi';
 	dir = 1
 	},
 /area/station/service/chapel)

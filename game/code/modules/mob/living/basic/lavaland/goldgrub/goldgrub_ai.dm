@@ -213,7 +213,7 @@
 
 /datum/pet_command/grub_spit
 	command_name = "Spit"
-	radial_icon = 'icons/obj/ore.dmi'
+	radial_icon = '../assets/icons/obj/ore.dmi'
 	radial_icon_state = "uranium"
 	command_desc = "Ask your grub pet to spit out its ores."
 	speech_commands = list("spit", "ores")

@@ -1,7 +1,7 @@
 //I will need to recode parts of this but I am way too tired atm //I don't know who left this comment but they never did come back
 /obj/structure/blob
 	name = "blob"
-	icon = 'icons/mob/nonhuman-player/blob.dmi'
+	icon = '../assets/icons/mob/nonhuman-player/blob.dmi'
 	light_range = 2
 	desc = "A thick wall of writhing tendrils."
 	density = TRUE
@@ -81,7 +81,7 @@
 		overmind.blobs_legit -= src  //if it was in the legit blobs list, it isn't now
 		overmind = null
 	GLOB.blobs -= src //it's no longer in the all blobs list either
-	playsound(src.loc, 'sound/effects/splat.ogg', 50, TRUE) //Expand() is no longer broken, no check necessary.
+	playsound(src.loc, '../assets/sound/effects/splat.ogg', 50, TRUE) //Expand() is no longer broken, no check necessary.
 	return ..()
 
 /obj/structure/blob/blob_act()
@@ -174,7 +174,7 @@
 
 	if(isspaceturf(T) && !(locate(/obj/structure/lattice) in T) && prob(80))
 		make_blob = FALSE
-		playsound(src.loc, 'sound/effects/splat.ogg', 50, TRUE) //Let's give some feedback that we DID try to spawn in space, since players are used to it
+		playsound(src.loc, '../assets/sound/effects/splat.ogg', 50, TRUE) //Let's give some feedback that we DID try to spawn in space, since players are used to it
 		balloon_alert(controller, "failed to expand!")
 
 	ConsumeTile() //hit the tile we're in, making sure there are no border objects blocking us
@@ -246,7 +246,7 @@
 	if(I.tool_behaviour == TOOL_ANALYZER)
 		user.changeNext_move(CLICK_CD_MELEE)
 		to_chat(user, "<b>The analyzer beeps once, then reports:</b><br>")
-		SEND_SOUND(user, sound('sound/machines/ping.ogg'))
+		SEND_SOUND(user, sound('../assets/sound/machines/ping.ogg'))
 		if(overmind)
 			to_chat(user, "<b>Progress to Critical Mass:</b> [span_notice("[overmind.blobs_legit.len]/[overmind.blobwincount].")]")
 			to_chat(user, chemeffectreport(user).Join("\n"))
@@ -282,11 +282,11 @@
 	switch(damage_type)
 		if(BRUTE)
 			if(damage_amount)
-				playsound(src.loc, 'sound/effects/blob/attackblob.ogg', 50, TRUE)
+				playsound(src.loc, '../assets/sound/effects/blob/attackblob.ogg', 50, TRUE)
 			else
-				playsound(src, 'sound/items/weapons/tap.ogg', 50, TRUE)
+				playsound(src, '../assets/sound/items/weapons/tap.ogg', 50, TRUE)
 		if(BURN)
-			playsound(src.loc, 'sound/items/tools/welder.ogg', 100, TRUE)
+			playsound(src.loc, '../assets/sound/items/tools/welder.ogg', 100, TRUE)
 
 /obj/structure/blob/run_atom_armor(damage_amount, damage_type, damage_flag = 0, attack_dir)
 	switch(damage_type)

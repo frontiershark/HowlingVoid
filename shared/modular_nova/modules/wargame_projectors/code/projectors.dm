@@ -3,15 +3,15 @@
 	desc = "A handy-dandy holographic projector developed by Nanotrasen Naval Command for playing wargames with, this one seems broken."
 	inhand_icon_state = "electronic"
 	worn_icon_state = "electronic"
-	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/devices_righthand.dmi'
 	force = 0
 	w_class = WEIGHT_CLASS_SMALL
 	throwforce = 0
 	throw_speed = 3
 	throw_range = 7
 	item_flags = NOBLUDGEON
-	icon = 'icons/map_icons/items/_item.dmi'
+	icon = '../assets/icons/map_icons/items/_item.dmi'
 	icon_state = "/obj/item/wargame_projector"
 	post_init_icon_state = "projector"
 	greyscale_config = /datum/greyscale_config/wargame_hologram_projector
@@ -132,7 +132,7 @@
 
 	target_holosign.color = holosign_color
 
-	playsound(loc, 'sound/machines/click.ogg', 20, TRUE)
+	playsound(loc, '../assets/sound/machines/click.ogg', 20, TRUE)
 
 /obj/item/wargame_projector/ranged_interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)
 	if(istype(interacting_with, /obj/structure/wargame_hologram))

@@ -45,7 +45,7 @@
 /obj/item/borg_snack_dispenser
 	name = "\improper Automated Borg Snack Dispenser"
 	desc = "Has the ability to automatically print many differnt forms of snacks. Now Lizard approved!"
-	icon = 'icons/obj/tools.dmi'
+	icon = '../assets/icons/obj/tools.dmi'
 	icon_state = "rsf"
 	/// Contains the PATH of the selected snack
 	var/atom/selected_snack
@@ -111,7 +111,7 @@
 	var/atom/snack = new selected_snack(src)
 	patron.put_in_hand(snack, empty_hand)
 	borg.do_item_attack_animation(patron, null, snack)
-	playsound(loc, 'sound/machines/click.ogg', 10, TRUE)
+	playsound(loc, '../assets/sound/machines/click.ogg', 10, TRUE)
 	to_chat(patron, span_notice("[borg] dispenses [snack] into your empty hand and you reflexively grasp it."))
 	to_chat(borg, span_notice("You dispense [snack] into the hand of [patron]."))
 	return ITEM_INTERACT_SUCCESS
@@ -138,7 +138,7 @@
 		return ITEM_INTERACT_BLOCKING
 	var/atom/movable/snack = new selected_snack(get_turf(src))
 	snack.throw_at(interacting_with, 7, 2, borg, TRUE, FALSE)
-	playsound(loc, 'sound/machines/click.ogg', 10, TRUE)
+	playsound(loc, '../assets/sound/machines/click.ogg', 10, TRUE)
 	borg.visible_message(span_notice("[src] launches [snack] at [interacting_with]!"))
 	return ITEM_INTERACT_SUCCESS
 

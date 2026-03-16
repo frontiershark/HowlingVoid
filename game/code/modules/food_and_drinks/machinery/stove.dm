@@ -1,7 +1,7 @@
 /obj/machinery/stove
 	name = "stove"
 	desc = "You'd think this thing would be more useful in here."
-	icon = 'icons/obj/machines/kitchen_stove.dmi'
+	icon = '../assets/icons/obj/machines/kitchen_stove.dmi'
 	icon_state = "stove"
 	base_icon_state = "stove"
 	density = TRUE
@@ -14,7 +14,7 @@
 	active_power_usage = BASE_MACHINE_IDLE_CONSUMPTION * 0.8
 
 	// Stove icon is 32x48, we'll use a Range for preview instead
-	icon_preview = 'icons/obj/machines/kitchen.dmi'
+	icon_preview = '../assets/icons/obj/machines/kitchen.dmi'
 	icon_state_preview = "range_off"
 
 /obj/machinery/stove/Initialize(mapload)
@@ -28,7 +28,7 @@
 /obj/item/reagent_containers/cup/soup_pot
 	name = "soup pot"
 	desc = "A tall soup designed to mix and cook all kinds of soup."
-	icon = 'icons/obj/service/kitchen.dmi'
+	icon = '../assets/icons/obj/service/kitchen.dmi'
 	icon_state = "pot"
 	base_icon_state = "pot"
 	volume = 200

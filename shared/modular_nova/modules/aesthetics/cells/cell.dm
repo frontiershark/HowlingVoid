@@ -35,14 +35,14 @@
 /obj/item/stock_parts/power_store/cell/update_overlays()
 	. = ..()
 	if(grown_battery)
-		. += mutable_appearance('icons/obj/machines/cell_charger.dmi', "grown_wires")
+		. += mutable_appearance('../assets/icons/obj/machines/cell_charger.dmi', "grown_wires")
 	if((charge < 0.01) || !charge_light_type)
 		return
 	var/icon_link
 	if(!grown_battery)
 		icon_link = 'modular_nova/modules/aesthetics/cells/icons/cell.dmi'
 	else
-		icon_link = 'icons/obj/machines/cell_charger.dmi'
+		icon_link = '../assets/icons/obj/machines/cell_charger.dmi'
 	. += mutable_appearance(icon_link, "cell-[charge_light_type]-o[(percent() >= 99.5) ? 2 : 1]")
 
 /obj/machinery/cell_charger

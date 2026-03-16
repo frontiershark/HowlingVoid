@@ -20,7 +20,7 @@
 	var/skip_normal = FALSE
 	var/wipe_atoms = FALSE
 
-	var/mutable_appearance/backdrop = mutable_appearance('icons/hud/screen_gen.dmi', "flash")
+	var/mutable_appearance/backdrop = mutable_appearance('../assets/icons/hud/screen_gen.dmi', "flash")
 	backdrop.blend_mode = BLEND_OVERLAY
 	backdrop.color = "#292319"
 
@@ -71,7 +71,7 @@
 				atoms += A
 			CHECK_TICK
 
-	var/icon/res = icon('icons/blanks/96x96.dmi', "nothing")
+	var/icon/res = icon('../assets/icons/blanks/96x96.dmi', "nothing")
 	res.Scale(psize_x, psize_y)
 	atoms += lighting
 

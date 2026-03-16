@@ -4,9 +4,9 @@
 	force = 10
 	max_integrity = 100
 	resistance_flags = FLAMMABLE
-	icon = 'icons/obj/art/musician.dmi'
-	lefthand_file = 'icons/mob/inhands/equipment/instruments_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/instruments_righthand.dmi'
+	icon = '../assets/icons/obj/art/musician.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/instruments_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/instruments_righthand.dmi'
 	abstract_type = /obj/item/instrument
 	/// Our song datum.
 	var/datum/song/handheld/song
@@ -65,7 +65,7 @@
 	inhand_icon_state = "banjo"
 	attack_verb_continuous = list("scruggs-styles", "hum-diggitys", "shin-digs", "clawhammers")
 	attack_verb_simple = list("scruggs-style", "hum-diggity", "shin-dig", "clawhammer")
-	hitsound = 'sound/items/weapons/banjoslap.ogg'
+	hitsound = '../assets/sound/items/weapons/banjoslap.ogg'
 	allowed_instrument_ids = "banjo"
 
 /obj/item/instrument/guitar
@@ -75,7 +75,7 @@
 	inhand_icon_state = "guitar"
 	attack_verb_continuous = list("plays metal on", "serenades", "crashes", "smashes")
 	attack_verb_simple = list("play metal on", "serenade", "crash", "smash")
-	hitsound = 'sound/items/weapons/stringsmash.ogg'
+	hitsound = '../assets/sound/items/weapons/stringsmash.ogg'
 	allowed_instrument_ids = list("guitar","csteelgt","cnylongt", "ccleangt", "cmutedgt")
 
 /obj/item/instrument/eguitar
@@ -86,7 +86,7 @@
 	force = 12
 	attack_verb_continuous = list("plays metal on", "shreds", "crashes", "smashes")
 	attack_verb_simple = list("play metal on", "shred", "crash", "smash")
-	hitsound = 'sound/items/weapons/stringsmash.ogg'
+	hitsound = '../assets/sound/items/weapons/stringsmash.ogg'
 	allowed_instrument_ids = "eguitar"
 
 /obj/item/instrument/glockenspiel
@@ -125,7 +125,7 @@
 	AddElement(/datum/element/spooky, too_spooky = !single_use, single_use = single_use)
 
 /obj/item/instrument/trumpet/spectral/attack(mob/living/target_mob, mob/living/user, list/modifiers, list/attack_modifiers)
-	playsound(src, 'sound/runtime/instruments/trombone/En4.mid', 1000, 1, -1)
+	playsound(src, '../assets/sound/runtime/instruments/trombone/En4.mid', 1000, 1, -1)
 	return ..()
 
 /obj/item/instrument/trumpet/spectral/one_doot
@@ -153,7 +153,7 @@
 	AddElement(/datum/element/spooky, too_spooky = !single_use, single_use = single_use)
 
 /obj/item/instrument/saxophone/spectral/attack(mob/living/target_mob, mob/living/user, list/modifiers, list/attack_modifiers)
-	playsound(src, 'sound/runtime/instruments/trombone/En4.mid', 1000, 1, -1)
+	playsound(src, '../assets/sound/runtime/instruments/trombone/En4.mid', 1000, 1, -1)
 	return ..()
 
 /obj/item/instrument/saxophone/spectral/one_doot
@@ -184,7 +184,7 @@
 	single_use = TRUE
 
 /obj/item/instrument/trombone/spectral/attack(mob/living/target_mob, mob/living/user, list/modifiers, list/attack_modifiers)
-	playsound(src, 'sound/runtime/instruments/trombone/Cn4.mid', 1000, 1, -1)
+	playsound(src, '../assets/sound/runtime/instruments/trombone/Cn4.mid', 1000, 1, -1)
 	return ..()
 
 /obj/item/instrument/recorder
@@ -242,8 +242,8 @@
 	desc = "An exquisitely decorated bike horn, capable of honking in a variety of notes."
 	icon_state = "bike_horn"
 	inhand_icon_state = "bike_horn"
-	lefthand_file = 'icons/mob/inhands/equipment/horns_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/horns_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/horns_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/horns_righthand.dmi'
 	allowed_instrument_ids = list("bikehorn", "honk")
 	attack_verb_continuous = list("beautifully honks")
 	attack_verb_simple = list("beautifully honk")
@@ -251,7 +251,7 @@
 	force = 0
 	throw_speed = 3
 	throw_range = 15
-	hitsound = 'sound/items/bikehorn.ogg'
+	hitsound = '../assets/sound/items/bikehorn.ogg'
 
 /obj/item/instrument/musicalmoth
 	name = "musical moth"
@@ -262,6 +262,6 @@
 	attack_verb_simple = list("flutter", "flap")
 	w_class = WEIGHT_CLASS_TINY
 	force = 0
-	hitsound = 'sound/mobs/humanoids/moth/scream_moth.ogg'
+	hitsound = '../assets/sound/mobs/humanoids/moth/scream_moth.ogg'
 	custom_price = PAYCHECK_COMMAND * 2.37
 	custom_premium_price = PAYCHECK_COMMAND * 2.37

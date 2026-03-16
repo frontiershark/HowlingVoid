@@ -7,19 +7,19 @@
 /obj/item/his_grace
 	name = "artistic toolbox"
 	desc = "A toolbox painted bright green. Looking at it makes you feel uneasy."
-	icon = 'icons/obj/storage/toolbox.dmi'
+	icon = '../assets/icons/obj/storage/toolbox.dmi'
 	icon_state = "green"
 	inhand_icon_state = "toolbox_green"
-	lefthand_file = 'icons/mob/inhands/equipment/toolbox_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/toolbox_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/toolbox_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/toolbox_righthand.dmi'
 	w_class = WEIGHT_CLASS_GIGANTIC
 	force = 12
 	demolition_mod = 1.25
 	attack_verb_continuous = list("robusts")
 	attack_verb_simple = list("robust")
-	hitsound = 'sound/items/weapons/smash.ogg'
-	drop_sound = 'sound/items/handling/toolbox/toolbox_drop.ogg'
-	pickup_sound = 'sound/items/handling/toolbox/toolbox_pickup.ogg'
+	hitsound = '../assets/sound/items/weapons/smash.ogg'
+	drop_sound = '../assets/sound/items/handling/toolbox/toolbox_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/toolbox/toolbox_pickup.ogg'
 	gender = MALE
 	var/awakened = FALSE
 	var/bloodthirst = HIS_GRACE_SATIATED
@@ -158,7 +158,7 @@
 				REMOVE_TRAIT(src, TRAIT_NODROP, HIS_GRACE_TRAIT)
 				master.Paralyze(60)
 				master.adjust_brute_loss(master.maxHealth)
-				playsound(master, 'sound/effects/splat.ogg', 100, FALSE)
+				playsound(master, '../assets/sound/effects/splat.ogg', 100, FALSE)
 			else
 				master.apply_status_effect(/datum/status_effect/his_grace,gender)
 		return
@@ -179,8 +179,8 @@
 		if(!L.stat)
 			L.visible_message(span_warning("[src] lunges at [L]!"), "<span class='his_grace big bold'>[src] lunges at you!</span>")
 			do_attack_animation(L, null, src)
-			playsound(L, 'sound/items/weapons/smash.ogg', 50, TRUE)
-			playsound(L, 'sound/effects/desecration/desecration-01.ogg', 50, TRUE)
+			playsound(L, '../assets/sound/items/weapons/smash.ogg', 50, TRUE)
+			playsound(L, '../assets/sound/effects/desecration/desecration-01.ogg', 50, TRUE)
 			L.adjust_brute_loss(force)
 			adjust_bloodthirst(-5) //Don't stop attacking they're right there!
 		else
@@ -200,7 +200,7 @@
 		source = src,
 		header = "All Hail [src]!",
 	)
-	playsound(user, 'sound/effects/pope_entry.ogg', 100)
+	playsound(user, '../assets/sound/effects/pope_entry.ogg', 100)
 	update_appearance()
 	move_gracefully()
 
@@ -217,7 +217,7 @@
 		return
 	var/turf/T = get_turf(src)
 	T.visible_message(span_boldwarning("[src] slowly stops rattling and falls still, [p_Their()] latch snapping shut."))
-	playsound(loc, 'sound/items/weapons/batonextend.ogg', 100, TRUE)
+	playsound(loc, '../assets/sound/items/weapons/batonextend.ogg', 100, TRUE)
 	name = initial(name)
 	if(gender == MALE)
 		desc = "A toolbox painted bright green. Looking at it makes you feel uneasy."
@@ -236,8 +236,8 @@
 	var/victims = 0
 	meal.visible_message(span_warning("[src] swings open and devours [meal]!"), "<span class='his_grace big bold'>[src] consumes you!</span>")
 	meal.adjust_brute_loss(200)
-	playsound(meal, 'sound/effects/desecration/desecration-02.ogg', 75, TRUE)
-	playsound(src, 'sound/items/eatfood.ogg', 100, TRUE)
+	playsound(meal, '../assets/sound/effects/desecration/desecration-02.ogg', 75, TRUE)
+	playsound(src, '../assets/sound/items/eatfood.ogg', 100, TRUE)
 	meal.forceMove(src)
 	force_bonus += HIS_GRACE_FORCE_BONUS
 	prev_bloodthirst = bloodthirst
@@ -308,7 +308,7 @@
 	desc = "A legendary toolbox and a distant artifact from The Age of Three Powers. On its three latches engraved are the words \"The Sun\", \"The Moon\", and \"The Stars\". The entire toolbox has the words \"The World\" engraved into its sides."
 	ascended = TRUE
 	update_appearance()
-	playsound(src, 'sound/effects/his_grace/his_grace_ascend.ogg', 100)
+	playsound(src, '../assets/sound/effects/his_grace/his_grace_ascend.ogg', 100)
 	if(istype(master))
 		master.update_held_items()
 		master.visible_message("<span class='his_grace big bold'>Gods will be watching.</span>")

@@ -14,7 +14,7 @@
 	var/required_zone = BODY_ZONE_CHEST
 
 /datum/surgery_operation/limb/subsystem_upgrade/get_default_radial_image()
-	return image('icons/hud/implants.dmi', "lighting_bolt")
+	return image('../assets/icons/hud/implants.dmi', "lighting_bolt")
 
 /datum/surgery_operation/limb/subsystem_upgrade/all_required_strings()
 	return list("operate on [parse_zone(required_zone)] (target [parse_zone(required_zone)])") + ..()

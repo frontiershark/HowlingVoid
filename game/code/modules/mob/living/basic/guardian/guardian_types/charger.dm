@@ -24,9 +24,9 @@
 	name = "Charge!"
 	cooldown_time = 4 SECONDS
 	melee_cooldown_time = 0 SECONDS
-	button_icon = 'icons/effects/effects.dmi'
+	button_icon = '../assets/icons/effects/effects.dmi'
 	button_icon_state = "speed"
-	background_icon = 'icons/hud/guardian.dmi'
+	background_icon = '../assets/icons/hud/guardian.dmi'
 	background_icon_state = "base"
 	charge_delay = 0
 	recoil_duration = 0
@@ -44,7 +44,7 @@
 	return FALSE
 
 /datum/action/cooldown/mob_cooldown/charge/basic_charge/guardian/do_charge_indicator(atom/charger, atom/charge_target)
-	playsound(charger, 'sound/items/modsuit/loader_launch.ogg', 75, TRUE)
+	playsound(charger, '../assets/sound/items/modsuit/loader_launch.ogg', 75, TRUE)
 	var/obj/effect/temp_visual/decoy/decoy_flash = new /obj/effect/temp_visual/decoy(charger.loc, charger)
 	animate(decoy_flash, alpha = 0, color = COLOR_RED, transform = matrix() * 2, time = 3)
 

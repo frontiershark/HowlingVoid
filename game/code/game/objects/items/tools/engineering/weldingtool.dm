@@ -1,20 +1,20 @@
 /obj/item/weldingtool
 	name = "welding tool"
 	desc = "A standard edition welder provided by Nanotrasen."
-	icon = 'icons/obj/tools.dmi'
+	icon = '../assets/icons/obj/tools.dmi'
 	icon_state = "welder"
 	inhand_icon_state = "welder"
 	worn_icon_state = "welder"
-	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/tools_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/tools_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/tools_righthand.dmi'
 	obj_flags = CONDUCTS_ELECTRICITY
 	slot_flags = ITEM_SLOT_BELT
 	force = 3
 	throwforce = 5
 	hitsound = SFX_SWING_HIT
-	usesound = list('sound/items/tools/welder.ogg', 'sound/items/tools/welder2.ogg')
-	drop_sound = 'sound/items/handling/tools/weldingtool_drop.ogg'
-	pickup_sound = 'sound/items/handling/tools/weldingtool_pickup.ogg'
+	usesound = list('../assets/sound/items/tools/welder.ogg', '../assets/sound/items/tools/welder2.ogg')
+	drop_sound = '../assets/sound/items/handling/tools/weldingtool_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/tools/weldingtool_pickup.ogg'
 	light_system = OVERLAY_LIGHT
 	light_range = 2
 	light_power = 1.5
@@ -46,8 +46,8 @@
 	/// When fuel was last removed.
 	var/burned_fuel_for = 0
 
-	var/activation_sound = 'sound/items/tools/welderactivate.ogg'
-	var/deactivation_sound = 'sound/items/tools/welderdeactivate.ogg'
+	var/activation_sound = '../assets/sound/items/tools/welderactivate.ogg'
+	var/deactivation_sound = '../assets/sound/items/tools/welderdeactivate.ogg'
 
 /datum/armor/item_weldingtool
 	fire = 100
@@ -125,7 +125,7 @@
 	switched_on(user)
 
 /obj/item/weldingtool/use_tool(atom/target, mob/living/user, delay, amount, volume, datum/callback/extra_checks)
-	var/mutable_appearance/sparks = mutable_appearance('icons/effects/welding_effect.dmi', "welding_sparks", GASFIRE_LAYER, src, ABOVE_LIGHTING_PLANE)
+	var/mutable_appearance/sparks = mutable_appearance('../assets/icons/effects/welding_effect.dmi', "welding_sparks", GASFIRE_LAYER, src, ABOVE_LIGHTING_PLANE)
 	target.add_overlay(sparks)
 	LAZYADD(target.update_overlays_on_z, sparks)
 	. = ..()
@@ -246,7 +246,7 @@
 			playsound(loc, activation_sound, 50, TRUE)
 			force = 15
 			damtype = BURN
-			hitsound = 'sound/items/tools/welder.ogg'
+			hitsound = '../assets/sound/items/tools/welder.ogg'
 			update_appearance()
 			START_PROCESSING(SSobj, src)
 		else
@@ -345,7 +345,7 @@
 /obj/item/weldingtool/largetank/cyborg
 	name = "integrated welding tool"
 	desc = "An advanced welder designed to be used in robotic systems. Custom framework doubles the speed of welding."
-	icon = 'icons/obj/items_cyborg.dmi'
+	icon = '../assets/icons/obj/items_cyborg.dmi'
 	icon_state = "indwelder_cyborg"
 	toolspeed = 0.5
 
@@ -368,7 +368,7 @@
 /obj/item/weldingtool/abductor
 	name = "alien welding tool"
 	desc = "An alien welding tool. Whatever fuel it uses, it never runs out."
-	icon = 'icons/obj/antags/abductor.dmi'
+	icon = '../assets/icons/obj/antags/abductor.dmi'
 	icon_state = "welder"
 	inhand_icon_state = "abductorwelder"
 	toolspeed = 0.1

@@ -1,7 +1,7 @@
 /obj/machinery/transport/destination_sign
 	name = "destination sign"
 	desc = "A display to show you what direction the tram is travelling."
-	icon = 'icons/obj/tram/tram_display.dmi'
+	icon = '../assets/icons/obj/tram/tram_display.dmi'
 	icon_state = "desto_blank"
 	base_icon_state = "desto"
 	use_power = NO_POWER_USE
@@ -24,7 +24,7 @@
 	pixel_x = 8
 
 /obj/machinery/transport/destination_sign/indicator
-	icon = 'icons/obj/tram/tram_indicator.dmi'
+	icon = '../assets/icons/obj/tram/tram_indicator.dmi'
 	icon_state = "indi_blank"
 	base_icon_state = "indi"
 	use_power = IDLE_POWER_USE
@@ -38,7 +38,7 @@
 	name = "indicator display frame"
 	desc = "Used to build tram indicator displays, just secure to the wall."
 	icon_state = "indi_blank"
-	icon = 'icons/obj/tram/tram_indicator.dmi'
+	icon = '../assets/icons/obj/tram/tram_indicator.dmi'
 	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 7)
 	result_path = /obj/machinery/transport/destination_sign/indicator
 	pixel_shift = 32
@@ -95,7 +95,7 @@
 	balloon_alert(user, "[anchored ? "un" : ""]securing...")
 	tool.play_tool_sound(src)
 	if(tool.use_tool(src, user, 6 SECONDS))
-		playsound(loc, 'sound/items/deconstruct.ogg', 50, vary = TRUE)
+		playsound(loc, '../assets/sound/items/deconstruct.ogg', 50, vary = TRUE)
 		balloon_alert(user, "[anchored ? "un" : ""]secured")
 		deconstruct()
 		return TRUE

@@ -4,7 +4,7 @@
 
 /obj/item/stack/ore
 	name = "rock"
-	icon = 'icons/obj/ore.dmi'
+	icon = '../assets/icons/obj/ore.dmi'
 	icon_state = "ore"
 	inhand_icon_state = null
 	full_w_class = WEIGHT_CLASS_BULKY
@@ -255,7 +255,7 @@ GLOBAL_LIST_INIT(sand_recipes, list(\
 /obj/item/gibtonite
 	name = "gibtonite ore"
 	desc = "Extremely explosive if struck with mining equipment, Gibtonite is often used by miners to speed up their work by using it as a mining charge. This material is illegal to possess by unauthorized personnel under space law."
-	icon = 'icons/obj/ore.dmi'
+	icon = '../assets/icons/obj/ore.dmi'
 	icon_state = "gibtonite"
 	inhand_icon_state = "Gibtonite ore"
 	w_class = WEIGHT_CLASS_BULKY
@@ -371,7 +371,7 @@ GLOBAL_LIST_INIT(sand_recipes, list(\
 	if(primed)
 		return
 	primed = TRUE
-	playsound(src,'sound/effects/hit_on_shattered_glass.ogg',50,TRUE)
+	playsound(src,'../assets/sound/effects/hit_on_shattered_glass.ogg',50,TRUE)
 	icon_state = "gibtonite_active"
 	var/notify_admins = FALSE
 	if(!is_mining_level(z))//Only annoy the admins ingame if we're triggered off the mining zlevel
@@ -431,7 +431,7 @@ GLOBAL_LIST_INIT(sand_recipes, list(\
 // Yes, the gold standard makes a come-back!
 // This is the only way to make coins that are possible to produce on station actually worth anything.
 /obj/item/coin
-	icon = 'icons/obj/economy.dmi'
+	icon = '../assets/icons/obj/economy.dmi'
 	name = "coin"
 	icon_state = "coin"
 	obj_flags = CONDUCTS_ELECTRICITY
@@ -531,7 +531,7 @@ GLOBAL_LIST_INIT(sand_recipes, list(\
 		flick("coin_[coinflip]_flip", src)
 		coinflip = pick(sideslist)
 		icon_state = "coin_[coinflip]"
-		playsound(user.loc, 'sound/items/coinflip.ogg', 50, TRUE)
+		playsound(user.loc, '../assets/sound/items/coinflip.ogg', 50, TRUE)
 		var/oldloc = loc
 		sleep(1.5 SECONDS)
 		if(loc == oldloc && user && !user.incapacitated)
@@ -650,7 +650,7 @@ GLOBAL_LIST_INIT(sand_recipes, list(\
 		flick("coin_[coinflip]_flip", src)
 		coinflip = pick(sideslist)
 		icon_state = "coin_[coinflip]"
-		playsound(user.loc, 'sound/items/coinflip.ogg', 50, TRUE)
+		playsound(user.loc, '../assets/sound/items/coinflip.ogg', 50, TRUE)
 		var/oldloc = loc
 		sleep(1.5 SECONDS)
 		if(loc == oldloc && user && !user.incapacitated)

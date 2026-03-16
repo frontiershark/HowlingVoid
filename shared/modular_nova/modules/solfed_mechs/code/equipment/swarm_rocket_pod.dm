@@ -104,7 +104,7 @@
 	build_all_button_icons()
 
 /obj/effect/swarm_rocket_tracker
-	icon = 'icons/mob/actions/actions_items.dmi'
+	icon = '../assets/icons/mob/actions/actions_items.dmi'
 	icon_state = "sniper_zoom"
 	layer = ABOVE_MOB_LAYER
 	///What is the tracked target
@@ -171,7 +171,7 @@
 
 /obj/effect/temp_visual/swarm_rocket_rise
 	name = "Swarm Micro-Rocket"
-	icon = 'icons/obj/weapons/guns/projectiles.dmi'
+	icon = '../assets/icons/obj/weapons/guns/projectiles.dmi'
 	icon_state = "84mm-heap"
 	duration = 20
 	///max size for the rocket icon when animated
@@ -187,11 +187,11 @@
 		pixel_y = base_pixel_y + 500,
 		time = duration,
 		easing = QUAD_EASING | EASE_IN)
-	playsound(src, 'sound/items/weapons/minebot_rocket.ogg', 100, FALSE)
+	playsound(src, '../assets/sound/items/weapons/minebot_rocket.ogg', 100, FALSE)
 
 /obj/effect/temp_visual/swarm_rocket_fall
 	name = "Swarm Micro-Rocket"
-	icon = 'icons/obj/weapons/guns/projectiles.dmi'
+	icon = '../assets/icons/obj/weapons/guns/projectiles.dmi'
 	icon_state = "84mm-heap"
 	duration = 14
 	var/explosion_radius = 1
@@ -210,7 +210,7 @@
 
 /obj/effect/temp_visual/swarm_rocket_fall/Destroy()
 	// Explosion payload occurs exactly when the temp_visual is being cleaned up by duration
-	playsound(src, 'sound/items/weapons/minebot_rocket.ogg', 100, FALSE)
+	playsound(src, '../assets/sound/items/weapons/minebot_rocket.ogg', 100, FALSE)
 	explosion(src,
 		devastation_range = -1,
 		heavy_impact_range = -1,

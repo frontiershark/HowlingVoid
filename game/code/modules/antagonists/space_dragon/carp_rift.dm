@@ -10,7 +10,7 @@
 	desc = "Summon a rift to bring forth a horde of space carp."
 	background_icon_state = "bg_default"
 	overlay_icon_state = "bg_default_border"
-	button_icon = 'icons/mob/actions/actions_space_dragon.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_space_dragon.dmi'
 	button_icon_state = "carp_rift"
 
 /datum/action/innate/summon_rift/Activate()
@@ -36,7 +36,7 @@
 	if(locate(/obj/structure/carp_rift) in owner.loc)
 		return
 	var/obj/structure/carp_rift/new_rift = new(get_turf(owner))
-	playsound(owner.loc, 'sound/vehicles/rocketlaunch.ogg', 100, TRUE)
+	playsound(owner.loc, '../assets/sound/vehicles/rocketlaunch.ogg', 100, TRUE)
 	dragon.riftTimer = -1
 	new_rift.dragon = dragon
 	dragon.rift_list += new_rift
@@ -72,7 +72,7 @@
 	desc = "A rift akin to the ones space carp use to travel long distances."
 	armor_type = /datum/armor/structure_carp_rift
 	max_integrity = 300
-	icon = 'icons/obj/anomaly.dmi'
+	icon = '../assets/icons/obj/anomaly.dmi'
 	icon_state = "carp_rift_carpspawn"
 	light_color = LIGHT_COLOR_PURPLE
 	light_range = 10
@@ -151,7 +151,7 @@
 		. += span_notice("It has [carp_stored] carp available to spawn as.")
 
 /obj/structure/carp_rift/play_attack_sound(damage_amount, damage_type = BRUTE, damage_flag = 0)
-	playsound(src, 'sound/effects/magic/lightningshock.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/effects/magic/lightningshock.ogg', 50, TRUE)
 
 /obj/structure/carp_rift/Destroy()
 	STOP_PROCESSING(SSobj, src)

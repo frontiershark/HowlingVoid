@@ -6,13 +6,13 @@
 	ui_name = "AntagInfoSentient"
 
 /datum/antagonist/sentient_creature/get_preview_icon()
-	var/icon/final_icon = icon('icons/mob/simple/pets.dmi', "corgi")
+	var/icon/final_icon = icon('../assets/icons/mob/simple/pets.dmi', "corgi")
 
-	var/icon/pandora = icon('icons/mob/simple/lavaland/lavaland_elites.dmi', "pandora")
+	var/icon/pandora = icon('../assets/icons/mob/simple/lavaland/lavaland_elites.dmi', "pandora")
 	pandora.Blend(rgb(128, 128, 128, 128), ICON_MULTIPLY)
 	final_icon.Blend(pandora, ICON_UNDERLAY, -ICON_SIZE_X / 4, 0)
 
-	var/icon/rat = icon('icons/mob/simple/animal.dmi', "regalrat")
+	var/icon/rat = icon('../assets/icons/mob/simple/animal.dmi', "regalrat")
 	rat.Blend(rgb(128, 128, 128, 128), ICON_MULTIPLY)
 	final_icon.Blend(rat, ICON_UNDERLAY, ICON_SIZE_X / 4, 0)
 

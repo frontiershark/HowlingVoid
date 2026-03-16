@@ -37,7 +37,7 @@
 /*
 /obj/item/clothing/under/rank/civilian/clown/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/squeak, list('sound/items/bikehorn.ogg'=1), 50, falloff_exponent = 20) //die off quick please
+	AddComponent(/datum/component/squeak, list('../assets/sound/items/bikehorn.ogg'=1), 50, falloff_exponent = 20) //die off quick please
 	AddElement(/datum/element/swabable, CELL_LINE_TABLE_CLOWN, CELL_VIRUS_TABLE_GENERIC, rand(2,3), 0)
 */
 //NOVA EDIT REMOVAL END
@@ -81,7 +81,7 @@
 /obj/item/clothing/under/rank/civilian/clown/jester
 	name = "jester suit"
 	desc = "A jolly dress, well suited to entertain your master, nuncle."
-	icon = 'icons/map_icons/clothing/under/_under.dmi'
+	icon = '../assets/icons/map_icons/clothing/under/_under.dmi'
 	icon_state = "/obj/item/clothing/under/rank/civilian/clown/jester"
 	post_init_icon_state = "jester_map"
 	greyscale_config = /datum/greyscale_config/jester_suit

@@ -4,9 +4,9 @@
 			If any copies are attacked, they cause brain damage, sanity damage, and will briefly stun everyone nearby."
 	background_icon_state = "bg_heretic"
 	overlay_icon_state = "bg_heretic_border"
-	button_icon = 'icons/mob/actions/actions_ecult.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_ecult.dmi'
 	button_icon_state = "moon_ringleader"
-	sound = 'sound/effects/moon_parade.ogg'
+	sound = '../assets/sound/effects/moon_parade.ogg'
 
 	school = SCHOOL_FORBIDDEN
 	cooldown_time = 1 MINUTES
@@ -61,7 +61,7 @@
 		var/mob/living/living_attacker = attacker
 		if(IS_HERETIC_OR_MONSTER(living_attacker)) // Heretics cant smack these guys to trigger their effects
 			return
-	playsound(victim, 'sound/items/party_horn.ogg', 30)
+	playsound(victim, '../assets/sound/items/party_horn.ogg', 30)
 	new /obj/effect/decal/cleanable/confetti(get_turf(victim))
 
 	for(var/mob/living/mob in range(3, victim))
@@ -87,7 +87,7 @@
 	qdel(victim)
 
 /obj/effect/temp_visual/moon_ringleader
-	icon = 'icons/effects/eldritch.dmi'
+	icon = '../assets/icons/effects/eldritch.dmi'
 	icon_state = "ring_leader_effect"
 	alpha = 180
 	duration = 6

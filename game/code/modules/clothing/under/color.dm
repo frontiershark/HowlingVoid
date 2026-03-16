@@ -1,12 +1,12 @@
 /obj/item/clothing/under/color
 	name = "jumpsuit"
 	desc = "A standard issue colored jumpsuit. Variety is the spice of life!"
-	icon = 'icons/map_icons/clothing/under/color.dmi'
+	icon = '../assets/icons/map_icons/clothing/under/color.dmi'
 	icon_state = "/obj/item/clothing/under/color"
 	post_init_icon_state = "jumpsuit"
 	inhand_icon_state = "jumpsuit"
 	worn_icon_state = "jumpsuit"
-	worn_icon = 'icons/mob/clothing/under/color.dmi'
+	worn_icon = '../assets/icons/mob/clothing/under/color.dmi'
 	dying_key = DYE_REGISTRY_UNDER
 	greyscale_colors = "#3f3f3f"
 	greyscale_config = /datum/greyscale_config/jumpsuit
@@ -36,7 +36,7 @@
 	)
 
 /obj/item/clothing/under/color/random
-	icon = 'icons/obj/clothing/under/color.dmi'
+	icon = '../assets/icons/obj/clothing/under/color.dmi'
 	icon_state = "random_jumpsuit"
 	flags_1 = parent_type::flags_1 | NO_NEW_GAGS_PREVIEW_1
 
@@ -59,7 +59,7 @@
 	)
 
 /obj/item/clothing/under/color/jumpskirt/random
-	icon = 'icons/obj/clothing/under/color.dmi'
+	icon = '../assets/icons/obj/clothing/under/color.dmi'
 	icon_state = "random_jumpsuit" //Skirt variant needed
 	flags_1 = parent_type::flags_1 | NO_NEW_GAGS_PREVIEW_1
 
@@ -104,7 +104,7 @@
 /obj/item/clothing/under/color/grey/ancient
 	name = "ancient jumpsuit"
 	desc = "A terribly ragged and frayed grey jumpsuit. It looks like it hasn't been washed in over a decade."
-	icon = 'icons/obj/clothing/under/color.dmi'
+	icon = '../assets/icons/obj/clothing/under/color.dmi'
 	icon_state = "grey_ancient"
 	post_init_icon_state = null
 	inhand_icon_state = "gy_suit"
@@ -259,7 +259,7 @@
 /obj/item/clothing/under/color/rainbow
 	name = "rainbow jumpsuit"
 	desc = "A multi-colored jumpsuit!"
-	icon = 'icons/obj/clothing/under/color.dmi'
+	icon = '../assets/icons/obj/clothing/under/color.dmi'
 	icon_state = "rainbow"
 	post_init_icon_state = null
 	inhand_icon_state = "rainbow"
@@ -276,7 +276,7 @@
 /obj/item/clothing/under/color/jumpskirt/rainbow
 	name = "rainbow jumpskirt"
 	desc = "A multi-colored jumpskirt!"
-	icon = 'icons/obj/clothing/under/color.dmi'
+	icon = '../assets/icons/obj/clothing/under/color.dmi'
 	icon_state = "rainbow_skirt"
 	post_init_icon_state = null
 	inhand_icon_state = "rainbow"

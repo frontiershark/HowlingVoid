@@ -633,7 +633,7 @@
 	.["minTemperature"] = min_fluid_temp
 	.["maxTemperature"] = max_fluid_temp
 	.["fluidTypes"] = fluid_types
-	.["heartIcon"] = 'icons/effects/effects.dmi'
+	.["heartIcon"] = '../assets/icons/effects/effects.dmi'
 	var/list/modes_no_assoc = list() //the UI dropdown won't work with assoc lists here
 	for(var/mode in aquarium_modes)
 		modes_no_assoc += mode

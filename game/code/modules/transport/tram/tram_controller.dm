@@ -256,7 +256,7 @@
 	set_status_code(PRE_DEPARTURE, FALSE)
 	if(controller_status & EMERGENCY_STOP)
 		set_status_code(EMERGENCY_STOP, FALSE)
-		playsound(paired_cabinet, 'sound/machines/synth/synth_yes.ogg', 40, vary = FALSE, extrarange = SHORT_RANGE_SOUND_EXTRARANGE)
+		playsound(paired_cabinet, '../assets/sound/machines/synth/synth_yes.ogg', 40, vary = FALSE, extrarange = SHORT_RANGE_SOUND_EXTRARANGE)
 		paired_cabinet.say("Controller reset.")
 
 	SEND_SIGNAL(src, COMSIG_TRAM_TRAVEL, idle_platform, destination_platform)
@@ -348,7 +348,7 @@
 	addtimer(CALLBACK(src, PROC_REF(unlock_controls)), 2 SECONDS)
 	if((controller_status & SYSTEM_FAULT) && (nav_beacon.loc == destination_platform.loc)) //position matches between controller and tram, we're back on track
 		set_status_code(SYSTEM_FAULT, FALSE)
-		playsound(paired_cabinet, 'sound/machines/synth/synth_yes.ogg', 40, vary = FALSE, extrarange = SHORT_RANGE_SOUND_EXTRARANGE)
+		playsound(paired_cabinet, '../assets/sound/machines/synth/synth_yes.ogg', 40, vary = FALSE, extrarange = SHORT_RANGE_SOUND_EXTRARANGE)
 		paired_cabinet.say("Controller reset.")
 		log_transport("TC: [specific_transport_id] position data successfully reset.")
 		speed_limiter = initial(speed_limiter)
@@ -368,7 +368,7 @@
 	addtimer(CALLBACK(src, PROC_REF(unlock_controls)), 4 SECONDS)
 	if(controller_status & SYSTEM_FAULT)
 		set_status_code(SYSTEM_FAULT, FALSE)
-		playsound(paired_cabinet, 'sound/machines/synth/synth_yes.ogg', 40, vary = FALSE, extrarange = SHORT_RANGE_SOUND_EXTRARANGE)
+		playsound(paired_cabinet, '../assets/sound/machines/synth/synth_yes.ogg', 40, vary = FALSE, extrarange = SHORT_RANGE_SOUND_EXTRARANGE)
 		paired_cabinet.say("Controller reset.")
 		log_transport("TC: [specific_transport_id] position data successfully reset. ")
 		speed_limiter = initial(speed_limiter)
@@ -377,7 +377,7 @@
 		addtimer(CALLBACK(src, PROC_REF(cycle_doors), CYCLE_OPEN), 2 SECONDS)
 		malf_active = TRANSPORT_SYSTEM_NORMAL
 		throw_chance = initial(throw_chance)
-		playsound(paired_cabinet, 'sound/machines/buzz/buzz-sigh.ogg', 60, vary = FALSE, extrarange = SHORT_RANGE_SOUND_EXTRARANGE)
+		playsound(paired_cabinet, '../assets/sound/machines/buzz/buzz-sigh.ogg', 60, vary = FALSE, extrarange = SHORT_RANGE_SOUND_EXTRARANGE)
 		paired_cabinet.say("Controller error. Please contact your engineering department.")
 	idle_platform = destination_platform
 	tram_registration.distance_travelled += (travel_trip_length - travel_remaining)
@@ -395,7 +395,7 @@
 /datum/transport_controller/linear/tram/proc/halt_and_catch_fire()
 	if(controller_status & SYSTEM_FAULT)
 		if(!isnull(paired_cabinet))
-			playsound(paired_cabinet, 'sound/machines/buzz/buzz-sigh.ogg', 60, vary = FALSE, extrarange = SHORT_RANGE_SOUND_EXTRARANGE)
+			playsound(paired_cabinet, '../assets/sound/machines/buzz/buzz-sigh.ogg', 60, vary = FALSE, extrarange = SHORT_RANGE_SOUND_EXTRARANGE)
 			paired_cabinet.say("Controller error. Please contact your engineering department.")
 		log_transport("TC: [specific_transport_id] Transport Controller failed!")
 
@@ -424,7 +424,7 @@
 		if(get_turf(idle_platform) == get_turf(nav_beacon))
 			set_status_code(SYSTEM_FAULT, FALSE)
 			set_status_code(EMERGENCY_STOP, FALSE)
-			playsound(paired_cabinet, 'sound/machines/synth/synth_yes.ogg', 40, vary = FALSE, extrarange = SHORT_RANGE_SOUND_EXTRARANGE)
+			playsound(paired_cabinet, '../assets/sound/machines/synth/synth_yes.ogg', 40, vary = FALSE, extrarange = SHORT_RANGE_SOUND_EXTRARANGE)
 			paired_cabinet.say("Controller reset.")
 			log_transport("TC: [specific_transport_id] Transport Controller reset was requested, but the tram nav data seems correct. Info: nav_pos ([nav_beacon.x], [nav_beacon.y], [nav_beacon.z]) idle_pos ([idle_platform.x], [idle_platform.y], [idle_platform.z]).")
 			return
@@ -439,7 +439,7 @@
 	var/reset_beacon = closest_nav_in_travel_dir(nav_beacon, tram_velocity_sign, specific_transport_id)
 
 	if(!reset_beacon)
-		playsound(paired_cabinet, 'sound/machines/buzz/buzz-sigh.ogg', 60, vary = FALSE, extrarange = SHORT_RANGE_SOUND_EXTRARANGE)
+		playsound(paired_cabinet, '../assets/sound/machines/buzz/buzz-sigh.ogg', 60, vary = FALSE, extrarange = SHORT_RANGE_SOUND_EXTRARANGE)
 		paired_cabinet.say("Controller reset failed. Contact manufacturer.") // If you screwed up the tram this bad, I don't even
 		log_transport("TC: [specific_transport_id] non-recoverable error! Tram is at ([nav_beacon.x], [nav_beacon.y], [nav_beacon.z] [tram_velocity_sign ? "OUTBOUND" : "INBOUND"]) and can't find a reset beacon.")
 		message_admins("Tram ID [specific_transport_id] is in a non-recoverable error state at [ADMIN_JMP(nav_beacon)]. If it's causing problems, delete the controller datum from the 'Reset Tram' proc in the Debug tab.")
@@ -450,7 +450,7 @@
 	travel_trip_length = travel_remaining
 	destination_platform = reset_beacon
 	speed_limiter = 1.5
-	playsound(paired_cabinet, 'sound/machines/ping.ogg', 40, vary = FALSE, extrarange = SHORT_RANGE_SOUND_EXTRARANGE)
+	playsound(paired_cabinet, '../assets/sound/machines/ping.ogg', 40, vary = FALSE, extrarange = SHORT_RANGE_SOUND_EXTRARANGE)
 	paired_cabinet.say("Peforming controller reset... Navigating to reset point.")
 	log_transport("TC: [specific_transport_id] trip calculation: src: [nav_beacon.x], [nav_beacon.y], [nav_beacon.z] dst: [destination_platform] [destination_platform.x], [destination_platform.y], [destination_platform.z] = Dir [travel_direction] Dist [travel_remaining].")
 	cycle_doors(CYCLE_CLOSED)
@@ -460,7 +460,7 @@
 	log_transport("TC: [specific_transport_id] trying to reset at [destination_platform].")
 
 /datum/transport_controller/linear/tram/proc/estop()
-	playsound(paired_cabinet, 'sound/machines/buzz/buzz-sigh.ogg', 60, vary = FALSE, extrarange = SHORT_RANGE_SOUND_EXTRARANGE)
+	playsound(paired_cabinet, '../assets/sound/machines/buzz/buzz-sigh.ogg', 60, vary = FALSE, extrarange = SHORT_RANGE_SOUND_EXTRARANGE)
 	paired_cabinet.say("Emergency stop activated!")
 	set_status_code(EMERGENCY_STOP, TRUE)
 	log_transport("TC: [specific_transport_id] requested emergency stop.")
@@ -469,7 +469,7 @@
  * Tram crash sound and visuals
  */
 /datum/transport_controller/linear/tram/proc/crash_fx()
-	playsound(source = nav_beacon, soundin = 'sound/vehicles/car_crash.ogg', vol = 100, vary = FALSE, falloff_distance = DEFAULT_TRAM_LENGTH)
+	playsound(source = nav_beacon, soundin = '../assets/sound/vehicles/car_crash.ogg', vol = 100, vary = FALSE, falloff_distance = DEFAULT_TRAM_LENGTH)
 	nav_beacon.audible_message(span_userdanger("You hear metal grinding as the tram comes to a sudden, complete stop!"))
 	for(var/mob/living/tram_passenger in range(DEFAULT_TRAM_LENGTH - 2, nav_beacon))
 		if(tram_passenger.stat != CONSCIOUS)
@@ -750,7 +750,7 @@
 /obj/machinery/transport/tram_controller
 	name = "tram controller"
 	desc = "Makes the tram go, or something. Holds the tram's electronics, controls, and maintenance panel. A sticker above the card reader says 'Engineering access only.'"
-	icon = 'icons/obj/tram/tram_controllers.dmi'
+	icon = '../assets/icons/obj/tram/tram_controllers.dmi'
 	icon_state = "tram-controller"
 	base_icon_state = "tram"
 	anchored = TRUE
@@ -888,9 +888,9 @@
 
 /obj/machinery/transport/tram_controller/proc/toggle_door()
 	if(!cover_open)
-		playsound(loc, 'sound/machines/closet/closet_open.ogg', 35, TRUE, -3)
+		playsound(loc, '../assets/sound/machines/closet/closet_open.ogg', 35, TRUE, -3)
 	else
-		playsound(loc, 'sound/machines/closet/closet_close.ogg', 50, TRUE, -3)
+		playsound(loc, '../assets/sound/machines/closet/closet_close.ogg', 50, TRUE, -3)
 	cover_open = !cover_open
 	update_appearance()
 
@@ -920,7 +920,7 @@
 		tool.play_tool_sound(src)
 		if(!tool.use_tool(src, user, 6 SECONDS))
 			return
-		playsound(loc, 'sound/items/deconstruct.ogg', 50, vary = TRUE)
+		playsound(loc, '../assets/sound/items/deconstruct.ogg', 50, vary = TRUE)
 		balloon_alert(user, "unsecured")
 		deconstruct(TRUE)
 		return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
@@ -1189,7 +1189,7 @@
 /obj/item/wallframe/tram
 	name = "tram controller cabinet"
 	desc = "A box that contains the equipment to control a tram. Just secure to the tram wall."
-	icon = 'icons/obj/tram/tram_controllers.dmi'
+	icon = '../assets/icons/obj/tram/tram_controllers.dmi'
 	icon_state = "tram-controller"
 	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 20)
 	result_path = /obj/machinery/transport/tram_controller

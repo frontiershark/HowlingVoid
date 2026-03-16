@@ -33,5 +33,5 @@
 		master.wiz_team.add_member(imposter)
 		I.mind.add_antag_datum(imposter)
 		I.log_message("is an imposter!", LOG_ATTACK, color="red") //?
-		SEND_SOUND(I, sound('sound/effects/magic.ogg'))
+		SEND_SOUND(I, sound('../assets/sound/effects/magic.ogg'))
 		announce_to_ghosts(I)

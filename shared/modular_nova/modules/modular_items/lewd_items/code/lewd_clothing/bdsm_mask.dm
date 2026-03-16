@@ -11,7 +11,7 @@
 	name = "latex gasmask"
 	desc = "A strict-tensity gas mask that hugs to the face and completely muffles the wearer."
 	greyscale_colors = "#383840#dc7ef4"
-	icon = 'icons/map_icons/clothing/mask.dmi'
+	icon = '../assets/icons/map_icons/clothing/mask.dmi'
 	icon_state = "/obj/item/clothing/mask/gas/bdsm_mask"
 	post_init_icon_state = "mask"
 	greyscale_config = /datum/greyscale_config/dorms_mask
@@ -228,7 +228,7 @@
 /obj/item/clothing/mask/gas/bdsm_mask/proc/toggle(mob/living/carbon/user)
 	mask_on = !mask_on
 	to_chat(user, span_notice("You turn the air filter [mask_on ? "on. Use with caution!" : "off. Now it's safe to wear."]"))
-	playsound_if_pref(user, mask_on ? 'sound/items/weapons/magin.ogg' : 'sound/items/weapons/magout.ogg', 40, TRUE)
+	playsound_if_pref(user, mask_on ? '../assets/sound/items/weapons/magin.ogg' : '../assets/sound/items/weapons/magout.ogg', 40, TRUE)
 	update_mob_action_buttonss()
 	update_icon()
 	if(mask_on)

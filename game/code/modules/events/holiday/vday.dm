@@ -125,7 +125,7 @@
 /obj/item/paper/valentine
 	name = "valentine"
 	desc = "A Valentine's card! Wonder what it says..."
-	icon = 'icons/obj/toys/playing_cards.dmi'
+	icon = '../assets/icons/obj/toys/playing_cards.dmi'
 	icon_state = "sc_Ace of Hearts_syndicate" // shut up // bye felicia
 	show_written_words = FALSE
 
@@ -135,7 +135,7 @@
 
 /obj/item/food/candyheart
 	name = "candy heart"
-	icon = 'icons/obj/holiday/holiday_misc.dmi'
+	icon = '../assets/icons/obj/holiday/holiday_misc.dmi'
 	icon_state = "candyheart"
 	desc = "A heart-shaped candy that reads: "
 	food_reagents = list(/datum/reagent/consumable/sugar = 2)

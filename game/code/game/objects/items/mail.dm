@@ -3,14 +3,14 @@
 	name = "mail"
 	gender = NEUTER
 	desc = "An officially postmarked, tamper-evident parcel regulated by CentCom and made of high-quality materials."
-	icon = 'icons/obj/service/bureaucracy.dmi'
+	icon = '../assets/icons/obj/service/bureaucracy.dmi'
 	icon_state = "mail_small"
 	inhand_icon_state = "paper"
 	worn_icon_state = "paper"
 	item_flags = NOBLUDGEON
 	w_class = WEIGHT_CLASS_SMALL
-	drop_sound = 'sound/items/handling/paper_drop.ogg'
-	pickup_sound = 'sound/items/handling/paper_pickup.ogg'
+	drop_sound = '../assets/sound/items/handling/paper_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/paper_pickup.ogg'
 	mouse_drag_pointer = MOUSE_ACTIVE_POINTER
 	/// Destination tagging for the mail sorter.
 	var/sort_tag = 0
@@ -109,7 +109,7 @@
 			var/tag = uppertext(GLOB.TAGGERLOCATIONS[destination_tag.currTag])
 			to_chat(user, span_notice("*[tag]*"))
 			sort_tag = destination_tag.currTag
-			playsound(loc, 'sound/machines/beep/twobeep_high.ogg', vol = 100, vary = TRUE)
+			playsound(loc, '../assets/sound/machines/beep/twobeep_high.ogg', vol = 100, vary = TRUE)
 
 /obj/item/mail/multitool_act(mob/living/user, obj/item/tool)
 	if(user.get_inactive_held_item() == src)
@@ -147,7 +147,7 @@
 			user.put_in_hands(stuff)
 		else
 			stuff.forceMove(drop_location())
-	playsound(loc, 'sound/items/poster/poster_ripped.ogg', vol = 50, vary = TRUE)
+	playsound(loc, '../assets/sound/items/poster/poster_ripped.ogg', vol = 50, vary = TRUE)
 	qdel(src)
 	return TRUE
 
@@ -346,7 +346,7 @@
 /obj/item/storage/bag/mail
 	name = "mail bag"
 	desc = "A bag for letters, envelopes, and other postage."
-	icon = 'icons/obj/service/bureaucracy.dmi'
+	icon = '../assets/icons/obj/service/bureaucracy.dmi'
 	icon_state = "mailbag"
 	worn_icon_state = "mailbag"
 	resistance_flags = FLAMMABLE
@@ -400,7 +400,7 @@
 
 /obj/item/mail/traitor/after_unwrap(mob/user)
 	user.temporarilyRemoveItemFromInventory(src, force = TRUE)
-	playsound(loc, 'sound/items/poster/poster_ripped.ogg', vol = 50, vary = TRUE)
+	playsound(loc, '../assets/sound/items/poster/poster_ripped.ogg', vol = 50, vary = TRUE)
 	for(var/obj/item/stuff as anything in contents) // Mail and envelope actually can have more than 1 item.
 		if(user.put_in_hands(stuff) && armed)
 			var/whomst = made_by_cached_name ? "[made_by_cached_name] ([made_by_cached_ckey])" : "no one in particular"
@@ -417,7 +417,7 @@
 		if(!do_after(user, 2 SECONDS, target = src))
 			return FALSE
 		balloon_alert(user, "disarmed")
-		playsound(src, 'sound/machines/defib/defib_ready.ogg', vol = 100, vary = TRUE)
+		playsound(src, '../assets/sound/machines/defib/defib_ready.ogg', vol = 100, vary = TRUE)
 		armed = FALSE
 		return TRUE
 	else
@@ -428,7 +428,7 @@
 			return FALSE
 		if(prob(50))
 			balloon_alert(user, "disarmed something...?")
-			playsound(src, 'sound/machines/defib/defib_ready.ogg', vol = 100, vary = TRUE)
+			playsound(src, '../assets/sound/machines/defib/defib_ready.ogg', vol = 100, vary = TRUE)
 			armed = FALSE
 			return TRUE
 		else
@@ -488,7 +488,7 @@
 	name = "GLA-2 mail counterfeit device"
 	desc = "A single-use device for spoofing official NT envelopes. Can hold one normal sized object, and can be programmed to arm its contents when opened."
 	w_class = WEIGHT_CLASS_NORMAL
-	icon = 'icons/obj/antags/syndicate_tools.dmi'
+	icon = '../assets/icons/obj/antags/syndicate_tools.dmi'
 	icon_state = "mail_counterfeit_device"
 	storage_type = /datum/storage/mail_counterfeit
 

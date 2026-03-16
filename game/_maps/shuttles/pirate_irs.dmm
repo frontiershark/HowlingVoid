@@ -233,7 +233,7 @@
 /obj/structure/fluff{
 	density = 1;
 	desc = "Ill-gotten gains of the Space IRS";
-	icon = 'icons/obj/stack_objects.dmi';
+	icon = '../assets/icons/obj/stack_objects.dmi';
 	icon_state = "sheet-gold_3";
 	name = "recouped gold"
 	},
@@ -1734,7 +1734,7 @@
 /obj/structure/fluff{
 	density = 1;
 	desc = "Ill-gotten gains of the Space IRS";
-	icon = 'icons/obj/stack_objects.dmi';
+	icon = '../assets/icons/obj/stack_objects.dmi';
 	icon_state = "sheet-silver_3";
 	name = "recouped silver"
 	},

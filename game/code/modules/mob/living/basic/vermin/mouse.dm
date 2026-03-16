@@ -55,7 +55,7 @@
 	message = "squeak!"
 	emote_type = EMOTE_VISIBLE | EMOTE_AUDIBLE
 	vary = TRUE
-	sound = 'sound/mobs/non-humanoids/mouse/mousesqueek.ogg'
+	sound = '../assets/sound/mobs/non-humanoids/mouse/mousesqueek.ogg'
 
 /mob/living/basic/mouse/Initialize(mapload, tame = FALSE, new_body_color)
 	. = ..()
@@ -71,7 +71,7 @@
 	held_state = "mouse_[body_color]" // not handled by variety element
 	AddElement(/datum/element/animal_variety, "mouse", body_color, FALSE)
 	AddElement(/datum/element/swabable, CELL_LINE_TABLE_MOUSE, CELL_VIRUS_TABLE_GENERIC_MOB, 1, 10)
-	AddComponent(/datum/component/squeak, list('sound/mobs/non-humanoids/mouse/mousesqueek.ogg' = 1), 100, extrarange = SHORT_RANGE_SOUND_EXTRARANGE) //as quiet as a mouse or whatever
+	AddComponent(/datum/component/squeak, list('../assets/sound/mobs/non-humanoids/mouse/mousesqueek.ogg' = 1), 100, extrarange = SHORT_RANGE_SOUND_EXTRARANGE) //as quiet as a mouse or whatever
 	var/static/list/loc_connections = list(
 		COMSIG_ATOM_ENTERED = PROC_REF(on_entered),
 	)
@@ -271,7 +271,7 @@
 			span_notice("You chew through \the [cable]."),
 		)
 
-	playsound(cable, 'sound/effects/sparks/sparks2.ogg', 100, TRUE)
+	playsound(cable, '../assets/sound/effects/sparks/sparks2.ogg', 100, TRUE)
 	cable.deconstruct()
 
 /mob/living/basic/mouse/white
@@ -337,7 +337,7 @@
 /obj/item/food/deadmouse
 	name = "dead mouse"
 	desc = "They look like somebody dropped the bass on it. A lizard's favorite meal."
-	icon = 'icons/mob/simple/animal.dmi'
+	icon = '../assets/icons/mob/simple/animal.dmi'
 	icon_state = "mouse_gray_dead"
 	bite_consumption = 3
 	eatverbs = list("devour")

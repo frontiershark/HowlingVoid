@@ -38,9 +38,9 @@
 		addtimer(CALLBACK(src, PROC_REF(by_god)), bleed_duration * pick(0.5, 0.66))
 	stamina_loop()
 
-	hallucinator.playsound_local(get_turf(hallucinator), pick('sound/effects/wounds/blood1.ogg', 'sound/effects/wounds/blood2.ogg', 'sound/effects/wounds/blood3.ogg'), 50, TRUE)
+	hallucinator.playsound_local(get_turf(hallucinator), pick('../assets/sound/effects/wounds/blood1.ogg', '../assets/sound/effects/wounds/blood2.ogg', '../assets/sound/effects/wounds/blood3.ogg'), 50, TRUE)
 	bleeding = image(
-		icon = 'icons/mob/effects/bleed_overlays.dmi',
+		icon = '../assets/icons/mob/effects/bleed_overlays.dmi',
 		icon_state = "[bleeding_bodypart.body_zone]_[pick(2, 3)]",
 		loc = hallucinator,
 	)

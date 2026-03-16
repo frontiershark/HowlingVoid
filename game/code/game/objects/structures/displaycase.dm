@@ -1,6 +1,6 @@
 /obj/structure/displaycase
 	name = "display case"
-	icon = 'icons/obj/structures.dmi'
+	icon = '../assets/icons/obj/structures.dmi'
 	icon_state = "glassbox"
 	desc = "A display case for prized possessions."
 	density = TRUE
@@ -77,9 +77,9 @@
 /obj/structure/displaycase/play_attack_sound(damage_amount, damage_type = BRUTE, damage_flag = 0)
 	switch(damage_type)
 		if(BRUTE)
-			playsound(src, 'sound/effects/glass/glasshit.ogg', 75, TRUE)
+			playsound(src, '../assets/sound/effects/glass/glasshit.ogg', 75, TRUE)
 		if(BURN)
-			playsound(src, 'sound/items/tools/welder.ogg', 100, TRUE)
+			playsound(src, '../assets/sound/items/tools/welder.ogg', 100, TRUE)
 
 /obj/structure/displaycase/atom_deconstruct(disassembled = TRUE)
 	dump()
@@ -107,7 +107,7 @@
 	alarm_manager.send_alarm(ALARM_BURGLAR)
 	addtimer(CALLBACK(alarm_manager, TYPE_PROC_REF(/datum/alarm_handler, clear_alarm), ALARM_BURGLAR), 1 MINUTES)
 
-	playsound(src, 'sound/effects/alert.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/effects/alert.ogg', 50, TRUE)
 
 /obj/structure/displaycase/update_overlays()
 	. = ..()
@@ -186,7 +186,7 @@
 
 ///Opens and closes the display case
 /obj/structure/displaycase/proc/toggle_lock(mob/user)
-	playsound(src, 'sound/machines/click.ogg', 20, TRUE)
+	playsound(src, '../assets/sound/machines/click.ogg', 20, TRUE)
 	open = !open
 	update_appearance()
 
@@ -222,7 +222,7 @@
 /obj/structure/displaycase_chassis
 	name = "display case chassis"
 	desc = "The wooden base of a display case."
-	icon = 'icons/obj/structures.dmi'
+	icon = '../assets/icons/obj/structures.dmi'
 	icon_state = "glassbox_chassis"
 	resistance_flags = FLAMMABLE
 	anchored = TRUE
@@ -265,7 +265,7 @@
 	balloon_alert(user, "disassembling...")
 	tool.play_tool_sound(src)
 	if(tool.use_tool(src, user, 3 SECONDS))
-		playsound(loc, 'sound/items/deconstruct.ogg', 50, TRUE)
+		playsound(loc, '../assets/sound/items/deconstruct.ogg', 50, TRUE)
 		new /obj/item/stack/sheet/mineral/wood(drop_location(), 5)
 		if(electronics)
 			electronics.forceMove(drop_location())
@@ -388,7 +388,7 @@
 /obj/structure/displaycase/trophy/proc/toggle_historian_mode(mob/user)
 	historian_mode = !historian_mode
 	balloon_alert(user, "[historian_mode ? "enabled" : "disabled"] historian mode.")
-	playsound(src, 'sound/machines/beep/twobeep.ogg', vary = 50)
+	playsound(src, '../assets/sound/machines/beep/twobeep.ogg', vary = 50)
 	SStgui.update_uis(src)
 
 /obj/structure/displaycase/trophy/toggle_lock(mob/user)
@@ -468,7 +468,7 @@
 
 /obj/structure/displaycase/forsale
 	name = "vend-a-tray"
-	icon = 'icons/obj/machines/display.dmi'
+	icon = '../assets/icons/obj/machines/display.dmi'
 	icon_state = "laserbox"
 	custom_glass_overlay = TRUE
 	desc = "A display case with an ID-card swiper. Use your ID to purchase the contents."
@@ -564,7 +564,7 @@
 					payments_acc.adjust_money(sale_price, "Display Case: [capitalize(showpiece.name)]")
 				usr.put_in_hands(showpiece)
 				to_chat(usr, span_notice("You purchase [showpiece] for [sale_price] [MONEY_NAME]."))
-				playsound(src, 'sound/effects/cashregister.ogg', 40, TRUE)
+				playsound(src, '../assets/sound/effects/cashregister.ogg', 40, TRUE)
 				flick("[initial(icon_state)]_vend", src)
 				showpiece = null
 				update_appearance()
@@ -577,7 +577,7 @@
 			if(!potential_acc || !potential_acc.registered_account)
 				return
 			if(!check_access(potential_acc))
-				playsound(src, 'sound/machines/buzz/buzz-sigh.ogg', 50, TRUE)
+				playsound(src, '../assets/sound/machines/buzz/buzz-sigh.ogg', 50, TRUE)
 				return
 			toggle_lock()
 		if("Register")
@@ -586,13 +586,13 @@
 			if(!potential_acc || !potential_acc.registered_account)
 				return
 			if(!check_access(potential_acc))
-				playsound(src, 'sound/machines/buzz/buzz-sigh.ogg', 50, TRUE)
+				playsound(src, '../assets/sound/machines/buzz/buzz-sigh.ogg', 50, TRUE)
 				return
 			payments_acc = potential_acc.registered_account
-			playsound(src, 'sound/machines/click.ogg', 20, TRUE)
+			playsound(src, '../assets/sound/machines/click.ogg', 20, TRUE)
 		if("Adjust")
 			if(!check_access(potential_acc) || potential_acc.registered_account != payments_acc)
-				playsound(src, 'sound/machines/buzz/buzz-sigh.ogg', 50, TRUE)
+				playsound(src, '../assets/sound/machines/buzz/buzz-sigh.ogg', 50, TRUE)
 				return
 
 			var/new_price_input = tgui_input_number(usr, "Sale price for this vend-a-tray", "New Price", 10, 1000)

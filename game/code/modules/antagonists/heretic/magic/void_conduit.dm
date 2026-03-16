@@ -5,7 +5,7 @@
 		Affected Heretics instead receive low pressure resistance."
 	background_icon_state = "bg_heretic"
 	overlay_icon_state = "bg_heretic_border"
-	button_icon = 'icons/mob/actions/actions_ecult.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_ecult.dmi'
 	button_icon_state = "void_rift"
 
 	cooldown_time = 1 MINUTES
@@ -24,13 +24,13 @@
 /obj/structure/void_conduit
 	name = "Void Conduit"
 	desc = "An open gate which leads to nothingness. Releases pulses which you do not want to get hit by."
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	icon_state = "void_conduit"
 	anchored = TRUE
 	density = TRUE
 	max_integrity = 150
 	///Overlay to apply to the tiles in range of the conduit
-	var/static/image/void_overlay = image(icon = 'icons/turf/overlays.dmi', icon_state = "voidtile")
+	var/static/image/void_overlay = image(icon = '../assets/icons/turf/overlays.dmi', icon_state = "voidtile")
 	///List of tiles that we added an overlay to, so we can clear them when the conduit is deleted
 	var/list/overlayed_turfs = list()
 	///How many tiles far our effect is
@@ -105,7 +105,7 @@
 				affected_structure.take_damage(rand(15, 30))
 
 /datum/looping_sound/void_conduit
-	mid_sounds = 'sound/ambience/misc/ambiatm1.ogg'
+	mid_sounds = '../assets/sound/ambience/misc/ambiatm1.ogg'
 	mid_length = 1 SECONDS
 	extra_range = 10
 	volume = 40

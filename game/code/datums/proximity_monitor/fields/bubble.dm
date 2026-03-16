@@ -37,14 +37,14 @@
 
 /datum/proximity_monitor/advanced/bubble/proc/setup_effect_directions()
 	effect_direction_images = list(
-		"[SOUTH]" = image('icons/effects/fields.dmi', icon_state = "projectile_dampen_south"),
-		"[NORTH]" = image('icons/effects/fields.dmi', icon_state = "projectile_dampen_north"),
-		"[WEST]" = image('icons/effects/fields.dmi', icon_state = "projectile_dampen_west"),
-		"[EAST]" = image('icons/effects/fields.dmi', icon_state = "projectile_dampen_east"),
-		"[NORTHWEST]" = image('icons/effects/fields.dmi', icon_state = "projectile_dampen_northwest"),
-		"[SOUTHWEST]" = image('icons/effects/fields.dmi', icon_state = "projectile_dampen_southwest"),
-		"[NORTHEAST]" = image('icons/effects/fields.dmi', icon_state = "projectile_dampen_northeast"),
-		"[SOUTHEAST]" = image('icons/effects/fields.dmi', icon_state = "projectile_dampen_southeast"),
+		"[SOUTH]" = image('../assets/icons/effects/fields.dmi', icon_state = "projectile_dampen_south"),
+		"[NORTH]" = image('../assets/icons/effects/fields.dmi', icon_state = "projectile_dampen_north"),
+		"[WEST]" = image('../assets/icons/effects/fields.dmi', icon_state = "projectile_dampen_west"),
+		"[EAST]" = image('../assets/icons/effects/fields.dmi', icon_state = "projectile_dampen_east"),
+		"[NORTHWEST]" = image('../assets/icons/effects/fields.dmi', icon_state = "projectile_dampen_northwest"),
+		"[SOUTHWEST]" = image('../assets/icons/effects/fields.dmi', icon_state = "projectile_dampen_southwest"),
+		"[NORTHEAST]" = image('../assets/icons/effects/fields.dmi', icon_state = "projectile_dampen_northeast"),
+		"[SOUTHEAST]" = image('../assets/icons/effects/fields.dmi', icon_state = "projectile_dampen_southeast"),
 	)
 
 /datum/proximity_monitor/advanced/bubble/on_moved(atom/movable/source, atom/old_loc)

@@ -8,11 +8,11 @@
 
 /datum/sound_effect/explosion
 	file_paths = list(
-		'sound/effects/explosion/explosion1.ogg',
-		'sound/effects/explosion/explosion2.ogg',
-		'sound/effects/explosion/explosion3.ogg',
-		'sound/effects/explosion/explosioncreak1.ogg',
-		'sound/effects/explosion/explosioncreak2.ogg',
+		'../assets/sound/effects/explosion/explosion1.ogg',
+		'../assets/sound/effects/explosion/explosion2.ogg',
+		'../assets/sound/effects/explosion/explosion3.ogg',
+		'../assets/sound/effects/explosion/explosioncreak1.ogg',
+		'../assets/sound/effects/explosion/explosioncreak2.ogg',
 	)
 
 /datum/sound_effect/keyboard

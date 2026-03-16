@@ -14,7 +14,7 @@
  */
 
 /obj/item/storage/fancy
-	icon = 'icons/obj/food/containers.dmi'
+	icon = '../assets/icons/obj/food/containers.dmi'
 	abstract_type = /obj/item/storage/fancy
 	resistance_flags = FLAMMABLE
 	custom_materials = list(/datum/material/cardboard = SHEET_MATERIAL_AMOUNT)
@@ -90,7 +90,7 @@
 /obj/item/storage/fancy/donut_box
 	name = "donut box"
 	desc = "Mmm. Donuts."
-	icon = 'icons/obj/food/donuts.dmi'
+	icon = '../assets/icons/obj/food/donuts.dmi'
 	icon_state = "donutbox_open" //composite image used for mapping
 	base_icon_state = "donutbox"
 	spawn_type = /obj/item/food/donut/plain
@@ -134,12 +134,12 @@
  */
 
 /obj/item/storage/fancy/egg_box
-	icon = 'icons/obj/food/containers.dmi'
+	icon = '../assets/icons/obj/food/containers.dmi'
 	inhand_icon_state = "eggbox"
 	icon_state = "eggbox"
 	base_icon_state = "eggbox"
-	lefthand_file = 'icons/mob/inhands/items/food_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/food_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/food_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/food_righthand.dmi'
 	name = "egg box"
 	desc = "A carton for containing eggs."
 	spawn_type = /obj/item/food/egg
@@ -164,7 +164,7 @@
 /obj/item/storage/fancy/candle_box
 	name = "candle pack"
 	desc = "A pack of red candles."
-	icon = 'icons/obj/candle.dmi'
+	icon = '../assets/icons/obj/candle.dmi'
 	icon_state = "candlebox5"
 	base_icon_state = "candlebox"
 	inhand_icon_state = null
@@ -183,7 +183,7 @@
 /obj/item/storage/fancy/cigarettes
 	name = "\improper Space Cigarettes packet"
 	desc = "The most popular brand of cigarettes, sponsors of the Space Olympics. On the back it advertises to be the only brand that can be smoked in the vacuum of space."
-	icon = 'icons/obj/cigarettes.dmi'
+	icon = '../assets/icons/obj/cigarettes.dmi'
 	icon_state = "cig"
 	inhand_icon_state = "cigpacket"
 	worn_icon_state = "cigpack"
@@ -472,7 +472,7 @@
 	name = "rolling paper pack"
 	desc = "A pack of Nanotrasen brand rolling papers."
 	w_class = WEIGHT_CLASS_TINY
-	icon = 'icons/obj/cigarettes.dmi'
+	icon = '../assets/icons/obj/cigarettes.dmi'
 	icon_state = "cig_paper_pack"
 	base_icon_state = "cig_paper_pack"
 	contents_tag = "rolling paper"
@@ -503,7 +503,7 @@
 /obj/item/storage/fancy/cigarettes/cigars
 	name = "\improper premium cigar case"
 	desc = "A case of premium cigars. Very expensive."
-	icon = 'icons/obj/cigarettes.dmi'
+	icon = '../assets/icons/obj/cigarettes.dmi'
 	icon_state = "cigarcase"
 	base_icon_state = "cigarcase"
 	w_class = WEIGHT_CLASS_NORMAL
@@ -561,12 +561,12 @@
 /obj/item/storage/fancy/heart_box
 	name = "heart-shaped box"
 	desc = "A heart-shaped box for holding tiny chocolates."
-	icon = 'icons/obj/food/containers.dmi'
+	icon = '../assets/icons/obj/food/containers.dmi'
 	inhand_icon_state = "chocolatebox"
 	icon_state = "chocolatebox"
 	base_icon_state = "chocolatebox"
-	lefthand_file = 'icons/mob/inhands/items/food_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/food_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/food_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/food_righthand.dmi'
 	contents_tag = "chocolate"
 	spawn_type = list(
 		/obj/item/food/bonbon,
@@ -581,7 +581,7 @@
 /obj/item/storage/fancy/nugget_box
 	name = "nugget box"
 	desc = "A cardboard box used for holding chicken nuggies."
-	icon = 'icons/obj/food/containers.dmi'
+	icon = '../assets/icons/obj/food/containers.dmi'
 	icon_state = "nuggetbox"
 	base_icon_state = "nuggetbox"
 	contents_tag = "nugget"
@@ -600,7 +600,7 @@
  */
 
 /obj/item/storage/fancy/pickles_jar
-	icon = 'icons/obj/food/containers.dmi'
+	icon = '../assets/icons/obj/food/containers.dmi'
 	icon_state = "pickles"
 	base_icon_state = "pickles"
 	name = "pickles"
@@ -629,7 +629,7 @@
  */
 
 /obj/item/storage/fancy/coffee_condi_display
-	icon = 'icons/obj/food/containers.dmi'
+	icon = '../assets/icons/obj/food/containers.dmi'
 	icon_state = "coffee_condi_display"
 	base_icon_state = "coffee_condi_display"
 	name = "coffee condiments display"

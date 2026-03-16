@@ -3,7 +3,7 @@
 /obj/machinery/limbgrower
 	name = "limb grower"
 	desc = "It grows new limbs using Synthflesh."
-	icon = 'icons/obj/machines/limbgrower.dmi'
+	icon = '../assets/icons/obj/machines/limbgrower.dmi'
 	icon_state = "limbgrower_idleoff"
 	density = TRUE
 	circuit = /obj/item/circuitboard/machine/limbgrower
@@ -219,7 +219,7 @@
 				consumed_reagents_list[reagent_id] *= production_coefficient
 				if(!reagents.has_reagent(reagent_id, consumed_reagents_list[reagent_id]))
 					audible_message(span_notice("[src] buzzes."))
-					playsound(src, 'sound/machines/buzz/buzz-sigh.ogg', 50, FALSE)
+					playsound(src, '../assets/sound/machines/buzz/buzz-sigh.ogg', 50, FALSE)
 					return
 
 				power = max(active_power_usage, (power + consumed_reagents_list[reagent_id]))
@@ -245,7 +245,7 @@
 	for(var/reagent_id in modified_consumed_reagents_list)
 		if(!reagents.has_reagent(reagent_id, modified_consumed_reagents_list[reagent_id]))
 			audible_message(span_notice("The [src] buzzes."))
-			playsound(src, 'sound/machines/buzz/buzz-sigh.ogg', 50, FALSE)
+			playsound(src, '../assets/sound/machines/buzz/buzz-sigh.ogg', 50, FALSE)
 			break
 
 		reagents.remove_reagent(reagent_id, modified_consumed_reagents_list[reagent_id])

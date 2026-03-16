@@ -264,7 +264,7 @@
 /obj/item/food/gumball
 	name = "gumball"
 	desc = "A colorful, sugary gumball."
-	icon = 'icons/obj/food/lollipop.dmi'
+	icon = '../assets/icons/obj/food/lollipop.dmi'
 	icon_state = "gumball"
 	worn_icon_state = "bubblegum"
 	food_reagents = list(/datum/reagent/consumable/sugar = 5, /datum/reagent/medicine/sal_acid = 2, /datum/reagent/medicine/oxandrolone = 2) //Kek
@@ -285,7 +285,7 @@
 /obj/item/food/lollipop
 	name = "lollipop"
 	desc = "A delicious lollipop. Makes for a great Valentine's present."
-	icon = 'icons/obj/food/lollipop.dmi'
+	icon = '../assets/icons/obj/food/lollipop.dmi'
 	icon_state = "lollipop_stick"
 	inhand_icon_state = null
 	food_reagents = list(
@@ -305,7 +305,7 @@
 
 /obj/item/food/lollipop/Initialize(mapload)
 	. = ..()
-	head = mutable_appearance('icons/obj/food/lollipop.dmi', "lollipop_head")
+	head = mutable_appearance('../assets/icons/obj/food/lollipop.dmi', "lollipop_head")
 	change_head_color(rgb(rand(0, 255), rand(0, 255), rand(0, 255)))
 	AddElement(/datum/element/chewable)
 

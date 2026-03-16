@@ -1,7 +1,7 @@
 /obj/item/reagent_containers/spray/waterflower/lube
 	name = "water flower"
 	desc = "A seemingly innocent sunflower...with a twist. A <i>slippery</i> twist."
-	icon = 'icons/obj/service/hydroponics/harvest.dmi'
+	icon = '../assets/icons/obj/service/hydroponics/harvest.dmi'
 	icon_state = "sunflower"
 	inhand_icon_state = "sunflower"
 	amount_per_transfer_from_this = 3
@@ -66,7 +66,7 @@
 	if(COOLDOWN_FINISHED(src, next_trombone_allowed) && istype(weapon, /obj/item/melee/energy/sword/bananium))
 		COOLDOWN_START(src, next_trombone_allowed, 5 SECONDS)
 		to_chat(user, span_warning("You slap the two swords together. Sadly, they do not seem to fit!"))
-		playsound(src, 'sound/misc/sadtrombone.ogg', 50)
+		playsound(src, '../assets/sound/misc/sadtrombone.ogg', 50)
 		return TRUE
 	return ..()
 
@@ -179,7 +179,7 @@
 
 /obj/item/grown/bananapeel/bombanana/suicide_act(mob/living/user)
 	user.visible_message(span_suicide("[user] is deliberately slipping on \the [src]! It looks like \he's trying to commit suicide."))
-	playsound(loc, 'sound/misc/slip.ogg', 50, TRUE, -1)
+	playsound(loc, '../assets/sound/misc/slip.ogg', 50, TRUE, -1)
 	bomb.arm_grenade(user, 0, FALSE)
 	return BRUTELOSS
 

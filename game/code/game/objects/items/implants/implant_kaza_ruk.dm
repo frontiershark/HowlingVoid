@@ -1,7 +1,7 @@
 /obj/item/implant/kaza_ruk
 	name = "kaza ruk implant"
 	desc = "Teaches you the Tiziran martial arts of Kaza Ruk in 5 short instructional videos beamed directly into your eyeballs."
-	icon = 'icons/obj/scrolls.dmi'
+	icon = '../assets/icons/obj/scrolls.dmi'
 	icon_state ="scroll2"
 	/// The martial art style this implant teaches.
 	var/datum/martial_art/kaza_ruk/style

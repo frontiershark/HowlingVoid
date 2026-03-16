@@ -1,6 +1,6 @@
 
 /datum/action/cooldown/mob_cooldown/minedrone
-	button_icon = 'icons/mob/actions/actions_mecha.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_mecha.dmi'
 	background_icon_state = "bg_default"
 	overlay_icon_state = "bg_default_border"
 	click_to_activate = FALSE
@@ -51,7 +51,7 @@
 
 /datum/action/cooldown/mob_cooldown/missile_launcher
 	name = "Launch Missile"
-	button_icon = 'icons/obj/weapons/guns/projectiles.dmi'
+	button_icon = '../assets/icons/obj/weapons/guns/projectiles.dmi'
 	button_icon_state = "84mm-heap"
 	background_icon_state = "bg_default"
 	overlay_icon_state = "bg_default_border"
@@ -93,7 +93,7 @@
 /datum/action/cooldown/mob_cooldown/drop_landmine
 	name = "Landmine"
 	desc = "Drop a landmine!"
-	button_icon = 'icons/obj/weapons/grenade.dmi'
+	button_icon = '../assets/icons/obj/weapons/grenade.dmi'
 	button_icon_state = "landmine"
 	background_icon_state = "bg_default"
 	overlay_icon_state = "bg_default_border"
@@ -117,25 +117,25 @@
 		return FALSE
 	var/obj/effect/mine/minebot/my_mine = new(my_turf)
 	my_mine.ignore_list = owner.get_faction()
-	playsound(my_turf, 'sound/items/weapons/armbomb.ogg', 20)
+	playsound(my_turf, '../assets/sound/items/weapons/armbomb.ogg', 20)
 	StartCooldown()
 	return TRUE
 
 /obj/effect/temp_visual/rising_rocket
 	name = "Missile"
-	icon = 'icons/obj/weapons/guns/projectiles.dmi'
+	icon = '../assets/icons/obj/weapons/guns/projectiles.dmi'
 	icon_state = "84mm-heap"
 	layer = ABOVE_ALL_MOB_LAYER
 	duration = 2 SECONDS
 
 /obj/effect/temp_visual/rising_rocket/Initialize(mapload)
 	. = ..()
-	playsound(src, 'sound/items/weapons/minebot_rocket.ogg', 100, FALSE)
+	playsound(src, '../assets/sound/items/weapons/minebot_rocket.ogg', 100, FALSE)
 	animate(src, pixel_y = base_pixel_y + 500, time = duration, easing = QUAD_EASING|EASE_IN)
 
 /obj/effect/temp_visual/falling_rocket
 	name = "Missile"
-	icon = 'icons/obj/weapons/guns/projectiles.dmi'
+	icon = '../assets/icons/obj/weapons/guns/projectiles.dmi'
 	icon_state = "84mm-heap"
 	layer = ABOVE_ALL_MOB_LAYER
 	duration = 0.7 SECONDS
@@ -152,7 +152,7 @@
 	animate(src, pixel_y = 0, time = duration)
 
 /obj/effect/temp_visual/falling_rocket/proc/create_explosion()
-	playsound(src, 'sound/items/weapons/minebot_rocket.ogg', 100, FALSE)
+	playsound(src, '../assets/sound/items/weapons/minebot_rocket.ogg', 100, FALSE)
 	do_smoke(1, src, loc)
 	for(var/mob/living/living_target in oview(explosion_radius, src))
 		if(living_target.incorporeal_move)
@@ -170,7 +170,7 @@
 	if(!istype(victim))
 		return
 	do_smoke(0, src, loc)
-	playsound(src, 'sound/effects/explosion/explosion3.ogg', 100)
+	playsound(src, '../assets/sound/effects/explosion/explosion3.ogg', 100)
 	victim.apply_damage(damage_to_apply)
 
 /obj/effect/mine/minebot/can_trigger(atom/movable/on_who)

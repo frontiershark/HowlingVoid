@@ -79,7 +79,7 @@
 
 /datum/component/construction/unordered/mecha_chassis/spawn_result()
 	var/atom/parent_atom = parent
-	parent_atom.icon = 'icons/mob/rideables/mech_construction.dmi'
+	parent_atom.icon = '../assets/icons/mob/rideables/mech_construction.dmi'
 	parent_atom.set_density(TRUE)
 	parent_atom.cut_overlays()
 	return ..()
@@ -608,13 +608,13 @@
 /datum/component/construction/mecha/honker/update_parent(step_index)
 	if(step_index == 1)
 		var/atom/parent_atom = parent
-		parent_atom.icon = 'icons/mob/rideables/mech_construct.dmi'
+		parent_atom.icon = '../assets/icons/mob/rideables/mech_construct.dmi'
 		parent_atom.icon_state = "honker_chassis"
 	return ..()
 
 /datum/component/construction/mecha/honker/custom_action(obj/item/I, mob/living/user, diff)
 	if(istype(I, /obj/item/bikehorn))
-		playsound(parent, 'sound/items/bikehorn.ogg', 50, TRUE)
+		playsound(parent, '../assets/sound/items/bikehorn.ogg', 50, TRUE)
 		user.balloon_alert_to_viewers("HONK!")
 		return TRUE
 

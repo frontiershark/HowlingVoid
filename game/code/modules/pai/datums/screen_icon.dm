@@ -6,7 +6,7 @@
 	// The name to show in the radial menu.
 	var/name
 	// The icon and icon state that is applied to the pAI device when this screen image is selected.
-	var/icon/icon = 'icons/obj/aicards.dmi'
+	var/icon/icon = '../assets/icons/obj/aicards.dmi'
 	var/icon_state
 	// The FontAwesome icon to use next to the "Display" button in the pAI's tgui interface window.
 	var/interface_icon

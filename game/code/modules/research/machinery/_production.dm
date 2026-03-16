@@ -70,7 +70,7 @@
 	if(!stripe_color)
 		return
 
-	var/mutable_appearance/stripe = mutable_appearance('icons/obj/machines/research.dmi', "protolathe_stripe[panel_open ? "_t" : ""]")
+	var/mutable_appearance/stripe = mutable_appearance('../assets/icons/obj/machines/research.dmi', "protolathe_stripe[panel_open ? "_t" : ""]")
 	stripe.color = stripe_color
 	. += stripe
 
@@ -126,7 +126,7 @@
 
 	if(design_delta > 0)
 		say("Received [design_delta] new design[design_delta == 1 ? "" : "s"].")
-		playsound(src, 'sound/machines/beep/twobeep_high.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/machines/beep/twobeep_high.ogg', 50, TRUE)
 
 	update_static_data_for_all_viewers()
 
@@ -180,7 +180,7 @@
 	flick_overlay_view(material_insertion_animation(mat_ref), 1 SECONDS)
 
 	//now play the progress bar animation
-	flick_overlay_view(mutable_appearance('icons/obj/machines/research.dmi', "protolathe_progress"), 1 SECONDS)
+	flick_overlay_view(mutable_appearance('../assets/icons/obj/machines/research.dmi', "protolathe_progress"), 1 SECONDS)
 
 ///When materials are instered into local storage
 /obj/machinery/rnd/production/proc/local_material_insert(container, obj/item/item_inserted, last_inserted_id, list/mats_consumed, amount_inserted, atom/context)

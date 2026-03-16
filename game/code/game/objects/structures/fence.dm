@@ -16,7 +16,7 @@
 	density = TRUE
 	anchored = TRUE
 
-	icon = 'icons/obj/fence.dmi'
+	icon = '../assets/icons/obj/fence.dmi'
 	icon_state = "straight"
 
 	var/cuttable = TRUE
@@ -130,7 +130,7 @@
 	visible_message(span_notice("\The [user] [density ? "opens" : "closes"] \the [src]."))
 	set_density(!density)
 	update_icon_state()
-	playsound(src, 'sound/machines/click.ogg', 100, TRUE)
+	playsound(src, '../assets/sound/machines/click.ogg', 100, TRUE)
 
 /obj/structure/fence/door/update_icon_state()
 	icon_state = density ? "door_closed" : "door_opened"

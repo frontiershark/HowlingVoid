@@ -37,7 +37,7 @@
 /// Show a little crack on here
 /datum/element/bombable_turf/proc/on_update_overlays(turf/source, list/overlays)
 	SIGNAL_HANDLER
-	overlays += mutable_appearance('icons/turf/overlays.dmi', "explodable", source.layer + 0.1)
+	overlays += mutable_appearance('../assets/icons/turf/overlays.dmi', "explodable", source.layer + 0.1)
 
 /// Show a little extra on examine
 /datum/element/bombable_turf/proc/on_examined(turf/source, mob/user, list/examine_list)

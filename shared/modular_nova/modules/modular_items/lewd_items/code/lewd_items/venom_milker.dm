@@ -24,7 +24,7 @@
 	if (!can_milk(target_mob, user))
 		return FALSE
 
-	playsound(user, 'sound/effects/compressed_air/tank_insert_clunky.ogg', 50)
+	playsound(user, '../assets/sound/effects/compressed_air/tank_insert_clunky.ogg', 50)
 	user.balloon_alert_to_viewers("siphoning...")
 
 	var/text = span_purple("[user] starts hooking up [src] to [target_mob]'s fangs...")
@@ -36,7 +36,7 @@
 
 	if (!do_after(user, 3 SECONDS, target_mob, IGNORE_HELD_ITEM, extra_checks = CALLBACK(src, PROC_REF(can_milk), target_mob, user)))
 		return FALSE
-	playsound(user, 'sound/effects/compressed_air/tank_remove_thunk.ogg', 50)
+	playsound(user, '../assets/sound/effects/compressed_air/tank_remove_thunk.ogg', 50)
 
 	siphon(target_mob, user)
 

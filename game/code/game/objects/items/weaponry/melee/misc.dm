@@ -6,16 +6,16 @@
 /obj/item/melee/synthetic_arm_blade
 	name = "synthetic arm blade"
 	desc = "A grotesque blade that on closer inspection seems to be made out of synthetic flesh, it still feels like it would hurt very badly as a weapon."
-	icon = 'icons/obj/weapons/changeling_items.dmi'
+	icon = '../assets/icons/obj/weapons/changeling_items.dmi'
 	icon_state = "arm_blade"
 	inhand_icon_state = "arm_blade"
 	icon_angle = 180
-	lefthand_file = 'icons/mob/inhands/antag/changeling_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/antag/changeling_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/antag/changeling_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/antag/changeling_righthand.dmi'
 	w_class = WEIGHT_CLASS_HUGE
 	force = 20
 	throwforce = 10
-	hitsound = 'sound/items/weapons/bladeslice.ogg'
+	hitsound = '../assets/sound/items/weapons/bladeslice.ogg'
 	attack_verb_continuous = list("attacks", "slashes", "slices", "tears", "lacerates", "rips", "dices", "cuts")
 	attack_verb_simple = list("attack", "slash", "slice", "tear", "lacerate", "rip", "dice", "cut")
 	sharpness = SHARP_EDGED
@@ -36,13 +36,13 @@
 /obj/item/melee/beesword
 	name = "The Stinger"
 	desc = "Taken from a giant bee and folded over one thousand times in pure honey. Can sting through anything."
-	icon = 'icons/obj/weapons/sword.dmi'
+	icon = '../assets/icons/obj/weapons/sword.dmi'
 	icon_state = "beesword"
 	inhand_icon_state = "stinger"
 	worn_icon_state = "stinger"
 	icon_angle = -45
-	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/melee_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/melee_righthand.dmi'
 	slot_flags = ITEM_SLOT_BELT
 	force = 5
 	w_class = WEIGHT_CLASS_BULKY
@@ -53,8 +53,8 @@
 	armour_penetration = 65
 	attack_verb_continuous = list("slashes", "stings", "prickles", "pokes")
 	attack_verb_simple = list("slash", "sting", "prickle", "poke")
-	hitsound = 'sound/items/weapons/rapierhit.ogg'
-	block_sound = 'sound/items/weapons/parry.ogg'
+	hitsound = '../assets/sound/items/weapons/rapierhit.ogg'
+	block_sound = '../assets/sound/items/weapons/parry.ogg'
 
 /obj/item/melee/beesword/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK, damage_type = BRUTE)
 	if(attack_type == PROJECTILE_ATTACK || attack_type == LEAP_ATTACK || attack_type == OVERWHELMING_ATTACK)
@@ -74,12 +74,12 @@
 /obj/item/melee/curator_whip
 	name = "curator's whip"
 	desc = "Somewhat eccentric and outdated, it still stings like hell to be hit by."
-	icon = 'icons/obj/weapons/whip.dmi'
+	icon = '../assets/icons/obj/weapons/whip.dmi'
 	icon_state = "whip"
 	inhand_icon_state = "chain"
 	icon_angle = -90
-	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/melee_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/melee_righthand.dmi'
 	worn_icon_state = "whip"
 	slot_flags = ITEM_SLOT_BELT
 	force = 15
@@ -87,7 +87,7 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	attack_verb_continuous = list("flogs", "whips", "lashes", "disciplines")
 	attack_verb_simple = list("flog", "whip", "lash", "discipline")
-	hitsound = 'sound/items/weapons/whip.ogg'
+	hitsound = '../assets/sound/items/weapons/whip.ogg'
 
 /obj/item/melee/curator_whip/afterattack(atom/target, mob/user, list/modifiers, list/attack_modifiers)
 	if(ishuman(target))
@@ -98,7 +98,7 @@
 /obj/item/melee/roastingstick
 	name = "advanced roasting stick"
 	desc = "A telescopic roasting stick with a miniature shield generator designed to ensure entry into various high-tech shielded cooking ovens and firepits."
-	icon = 'icons/obj/service/kitchen.dmi'
+	icon = '../assets/icons/obj/service/kitchen.dmi'
 	icon_state = "roastingstick"
 	inhand_icon_state = null
 	worn_icon_state = "tele_baton"
@@ -152,7 +152,7 @@
 	inhand_icon_state = active ? "nullrod" : null
 	if(user)
 		balloon_alert(user, "[active ? "extended" : "collapsed"] [src]")
-	playsound(src, 'sound/items/weapons/batonextend.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/weapons/batonextend.ogg', 50, TRUE)
 	return COMPONENT_NO_DEFAULT_MESSAGE
 
 /obj/item/melee/roastingstick/attackby(atom/target, mob/user)
@@ -193,7 +193,7 @@
 		return NONE
 	if (istype(interacting_with, /obj/singularity) || istype(interacting_with, /obj/energy_ball) && get_dist(user, interacting_with) < 10)
 		to_chat(user, span_notice("You send [held_sausage] towards [interacting_with]."))
-		playsound(src, 'sound/items/tools/rped.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/items/tools/rped.ogg', 50, TRUE)
 		beam = user.Beam(interacting_with, icon_state = "rped_upgrade", time = 10 SECONDS)
 		finish_roasting(user, interacting_with)
 		return ITEM_INTERACT_SUCCESS
@@ -205,27 +205,27 @@
 	if (!is_type_in_typecache(interacting_with, ovens))
 		return NONE
 	to_chat(user, span_notice("You extend [src] towards [interacting_with]."))
-	playsound(src, 'sound/items/weapons/batonextend.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/weapons/batonextend.ogg', 50, TRUE)
 	finish_roasting(user, interacting_with)
 	return ITEM_INTERACT_SUCCESS
 
 /obj/item/melee/roastingstick/proc/finish_roasting(user, atom/target)
 	if(do_after(user, 10 SECONDS, target = user))
 		to_chat(user, span_notice("You finish roasting [held_sausage]."))
-		playsound(src, 'sound/items/tools/welder2.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/items/tools/welder2.ogg', 50, TRUE)
 		held_sausage.add_atom_colour(rgb(103, 63, 24), FIXED_COLOUR_PRIORITY)
 		held_sausage.name = "[target.name]-roasted [held_sausage.name]"
 		held_sausage.desc = "[held_sausage.desc] It has been cooked to perfection on \a [target]."
 		update_appearance()
 	else
 		QDEL_NULL(beam)
-		playsound(src, 'sound/items/weapons/batonextend.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/items/weapons/batonextend.ogg', 50, TRUE)
 		to_chat(user, span_notice("You put [src] away."))
 
 /obj/item/melee/cleric_mace
 	name = "cleric mace"
 	desc = "The grandson of the club, yet the grandfather of the baseball bat. Most notably used by holy orders in days past."
-	icon = 'icons/map_icons/items/_item.dmi'
+	icon = '../assets/icons/map_icons/items/_item.dmi'
 	icon_state = "/obj/item/melee/cleric_mace"
 	post_init_icon_state = "default"
 	inhand_icon_state = "default"
@@ -245,7 +245,7 @@
 	w_class = WEIGHT_CLASS_BULKY
 	throwforce = 8
 	block_chance = 10
-	block_sound = 'sound/items/weapons/genhit.ogg'
+	block_sound = '../assets/sound/items/weapons/genhit.ogg'
 	armour_penetration = 50
 	attack_verb_continuous = list("smacks", "strikes", "cracks", "beats")
 	attack_verb_simple = list("smack", "strike", "crack", "beat")
@@ -278,17 +278,17 @@
 /obj/item/sord
 	name = "\improper SORD"
 	desc = "This thing is so unspeakably shitty you are having a hard time even holding it."
-	icon = 'icons/obj/weapons/sword.dmi'
+	icon = '../assets/icons/obj/weapons/sword.dmi'
 	icon_state = "sord"
 	inhand_icon_state = "sord"
 	icon_angle = -35
-	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/swords_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/swords_righthand.dmi'
 	slot_flags = ITEM_SLOT_BELT
 	force = 2
 	throwforce = 1
 	w_class = WEIGHT_CLASS_NORMAL
-	hitsound = 'sound/items/weapons/bladeslice.ogg'
+	hitsound = '../assets/sound/items/weapons/bladeslice.ogg'
 	attack_verb_continuous = list("attacks", "slashes", "stabs", "slices", "tears", "lacerates", "rips", "dices", "cuts")
 	attack_verb_simple = list("attack", "slash", "stab", "slice", "tear", "lacerate", "rip", "dice", "cut")
 
@@ -299,13 +299,13 @@
 
 /obj/item/carpenter_hammer
 	name = "carpenter hammer"
-	icon = 'icons/obj/weapons/hammer.dmi'
+	icon = '../assets/icons/obj/weapons/hammer.dmi'
 	icon_state = "carpenter_hammer"
 	inhand_icon_state = "carpenter_hammer"
 	worn_icon_state = "clawhammer" //plaecholder
 	icon_angle = -45
-	lefthand_file = 'icons/mob/inhands/weapons/hammers_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/hammers_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/hammers_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/hammers_righthand.dmi'
 	desc = "Uncanny looking hammer."
 	force = 17
 	throwforce = 14
@@ -320,7 +320,7 @@
 	AddElement(/datum/element/kneejerk)
 	AddComponent(/datum/component/item_killsound, \
 	allowed_mobs = list(/mob/living/carbon/human), \
-	killsound = 'sound/items/weapons/hammer_death_scream.ogg', \
+	killsound = '../assets/sound/items/weapons/hammer_death_scream.ogg', \
 	replace_default_death_sound = TRUE, \
 	)
 
@@ -340,7 +340,7 @@
 /obj/item/phone
 	name = "red phone"
 	desc = "Should anything ever go wrong..."
-	icon = 'icons/obj/devices/voice.dmi'
+	icon = '../assets/icons/obj/devices/voice.dmi'
 	icon_state = "red_phone"
 	force = 3
 	throwforce = 2
@@ -349,7 +349,7 @@
 	w_class = WEIGHT_CLASS_SMALL
 	attack_verb_continuous = list("calls", "rings")
 	attack_verb_simple = list("call", "ring")
-	hitsound = 'sound/items/weapons/ring.ogg'
+	hitsound = '../assets/sound/items/weapons/ring.ogg'
 
 /obj/item/phone/suicide_act(mob/living/user)
 	if(locate(/obj/structure/chair/stool) in user.loc)
@@ -363,20 +363,20 @@
 	desc = "A long bamboo-made staff with steel-capped ends. It is rumoured that initiates of Spider Clan train with such before getting to learn how to use a katana."
 	force = 10
 	block_chance = 45
-	block_sound = 'sound/items/weapons/genhit.ogg'
+	block_sound = '../assets/sound/items/weapons/genhit.ogg'
 	slot_flags = ITEM_SLOT_BACK
 	w_class = WEIGHT_CLASS_BULKY
 	hitsound = SFX_SWING_HIT
 	attack_verb_continuous = list("smashes", "slams", "whacks", "thwacks")
 	attack_verb_simple = list("smash", "slam", "whack", "thwack")
-	icon = 'icons/obj/weapons/staff.dmi'
+	icon = '../assets/icons/obj/weapons/staff.dmi'
 	icon_state = "bambostaff0"
 	base_icon_state = "bambostaff"
 	inhand_icon_state = "bambostaff0"
 	worn_icon_state = "bambostaff0"
 	icon_angle = -135
-	lefthand_file = 'icons/mob/inhands/weapons/staves_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/staves_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/staves_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/staves_righthand.dmi'
 	custom_materials = list(/datum/material/bamboo = SHEET_MATERIAL_AMOUNT * 4)
 
 /obj/item/bambostaff/Initialize(mapload)
@@ -400,11 +400,11 @@
 /obj/item/staff
 	name = "wizard staff"
 	desc = "Apparently a staff used by the wizard."
-	icon = 'icons/obj/weapons/guns/magic.dmi'
+	icon = '../assets/icons/obj/weapons/guns/magic.dmi'
 	icon_state = "staff"
 	inhand_icon_state = "staff"
-	lefthand_file = 'icons/mob/inhands/weapons/staves_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/staves_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/staves_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/staves_righthand.dmi'
 	force = 3
 	throwforce = 5
 	throw_speed = 2
@@ -432,12 +432,12 @@
 /obj/item/staff/stick
 	name = "stick"
 	desc = "A great tool to drag someone else's drinks across the bar."
-	icon = 'icons/obj/weapons/staff.dmi'
+	icon = '../assets/icons/obj/weapons/staff.dmi'
 	icon_state = "cane"
 	inhand_icon_state = "stick"
 	icon_angle = 135
-	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/melee_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/melee_righthand.dmi'
 	force = 3
 	throwforce = 5
 	throw_speed = 2
@@ -447,7 +447,7 @@
 /obj/item/tailclub
 	name = "tail club"
 	desc = "For the beating to death of lizards with their own tails."
-	icon = 'icons/obj/weapons/club.dmi'
+	icon = '../assets/icons/obj/weapons/club.dmi'
 	icon_state = "tailclub"
 	icon_angle = -25
 	force = 14
@@ -461,17 +461,17 @@
 /obj/item/melee/flyswatter
 	name = "flyswatter"
 	desc = "Useful for killing pests of all sizes."
-	icon = 'icons/obj/service/hydroponics/equipment.dmi'
+	icon = '../assets/icons/obj/service/hydroponics/equipment.dmi'
 	icon_state = "flyswatter"
 	inhand_icon_state = "flyswatter"
 	icon_angle = -45
-	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/melee_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/melee_righthand.dmi'
 	force = 1
 	throwforce = 1
 	attack_verb_continuous = list("swats", "smacks")
 	attack_verb_simple = list("swat", "smack")
-	hitsound = 'sound/effects/snap.ogg'
+	hitsound = '../assets/sound/effects/snap.ogg'
 	w_class = WEIGHT_CLASS_SMALL
 	/// Things in this list will be instantly splatted.  Flyman weakness is handled in the flyman species weakness proc.
 	var/static/list/splattable
@@ -518,31 +518,31 @@
 	hitsound = SFX_SWING_HIT
 	attack_verb_continuous = list("whacks", "thwacks", "wallops", "socks")
 	attack_verb_simple = list("whack", "thwack", "wallop", "sock")
-	icon = 'icons/obj/weapons/club.dmi'
+	icon = '../assets/icons/obj/weapons/club.dmi'
 	icon_state = "gohei"
 	inhand_icon_state = "gohei"
 	icon_angle = -65
-	lefthand_file = 'icons/mob/inhands/weapons/staves_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/staves_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/staves_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/staves_righthand.dmi'
 
 /obj/item/melee/moonlight_greatsword
 	name = "moonlight greatsword"
 	desc = "Don't tell anyone you put any points into dex, though."
-	icon = 'icons/obj/weapons/sword.dmi'
+	icon = '../assets/icons/obj/weapons/sword.dmi'
 	icon_state = "swordon"
 	inhand_icon_state = "swordon"
 	worn_icon_state = "swordon"
 	icon_angle = -45
-	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/swords_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/swords_righthand.dmi'
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BACK|ITEM_SLOT_BELT
 	block_chance = 20
-	block_sound = 'sound/items/weapons/parry.ogg'
+	block_sound = '../assets/sound/items/weapons/parry.ogg'
 	sharpness = SHARP_EDGED
 	force = 14
 	throwforce = 12
-	hitsound = 'sound/items/weapons/bladeslice.ogg'
+	hitsound = '../assets/sound/items/weapons/bladeslice.ogg'
 	attack_verb_continuous = list("attacks", "slashes", "slices", "tears", "lacerates", "rips", "dices", "cuts")
 	attack_verb_simple = list("attack", "slash", "slice", "tear", "lacerate", "rip", "dice", "cut")
 	var/list/alt_continuous = list("stabs", "pierces", "impales")

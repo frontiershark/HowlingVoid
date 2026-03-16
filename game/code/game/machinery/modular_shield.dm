@@ -1,7 +1,7 @@
 /obj/machinery/modular_shield_generator
 	name = "modular shield generator"
 	desc = "A forcefield generator, it seems more stationary than its cousins. It can't handle G-force and will require frequent reboots when built on mobile craft."
-	icon = 'icons/obj/machines/modular_shield_generator.dmi'
+	icon = '../assets/icons/obj/machines/modular_shield_generator.dmi'
 	icon_state = "gen_recovering_closed"
 	density = TRUE
 	circuit = /obj/item/circuitboard/machine/modular_shield_generator
@@ -401,7 +401,7 @@
 /obj/machinery/modular_shield_generator/gate
 	name = "modular shield gate"
 	desc = "A forcefield generator that can deploy a flat wall, it seems more stationary than its cousins. It can't handle G-force and will require frequent reboots when built on mobile craft."
-	icon = 'icons/obj/machines/modular_shield_generator.dmi'
+	icon = '../assets/icons/obj/machines/modular_shield_generator.dmi'
 	icon_state = "gate_recovering_closed"
 	density = FALSE
 	circuit = /obj/item/circuitboard/machine/modular_shield_generator/gate
@@ -458,7 +458,7 @@
 /obj/machinery/modular_shield/module
 	name = "modular shield debugger" //Filler name and sprite for testing
 	desc = "This is filler for testing you shouldn't see this."
-	icon = 'icons/obj/machines/mech_bay.dmi'
+	icon = '../assets/icons/obj/machines/mech_bay.dmi'
 	icon_state = "recharge_port"
 	density = TRUE
 
@@ -599,7 +599,7 @@
 /obj/machinery/modular_shield/module/node
 	name = "modular shield node"
 	desc = "A waist high mess of humming pipes and wires that extend the modular shield network."
-	icon = 'icons/obj/machines/modular_shield_generator.dmi'
+	icon = '../assets/icons/obj/machines/modular_shield_generator.dmi'
 	icon_state = "node_off_closed"
 	active_power_usage = BASE_MACHINE_ACTIVE_CONSUMPTION * 0.5
 	circuit = /obj/item/circuitboard/machine/modular_shield_node
@@ -680,7 +680,7 @@
 /obj/machinery/modular_shield/module/node/cable
 	name = "modular shield cable"
 	desc = "An ankle high mess of cables packed as low as possible at the cost of lacking connection components necessary for anything other than nodes and the generator itself."
-	icon = 'icons/obj/machines/modular_shield_generator.dmi'
+	icon = '../assets/icons/obj/machines/modular_shield_generator.dmi'
 	icon_state = "cable_node_closed_r_b_l"
 	active_power_usage = BASE_MACHINE_ACTIVE_CONSUMPTION * 0.1
 	circuit = /obj/item/circuitboard/machine/modular_shield_cable
@@ -706,7 +706,7 @@
 /obj/machinery/modular_shield/module/charger
 	name = "modular shield charger"
 	desc = "A machine that somehow fabricates hardlight using electrons."
-	icon = 'icons/obj/machines/modular_shield_generator.dmi'
+	icon = '../assets/icons/obj/machines/modular_shield_generator.dmi'
 	icon_state = "charger_off_closed"
 	is_booster = TRUE
 
@@ -734,7 +734,7 @@
 /obj/machinery/modular_shield/module/relay
 	name = "modular shield relay"
 	desc = "It helps the shield generator project farther out."
-	icon = 'icons/obj/machines/modular_shield_generator.dmi'
+	icon = '../assets/icons/obj/machines/modular_shield_generator.dmi'
 	icon_state = "relay_off_closed"
 	is_booster = TRUE
 
@@ -762,7 +762,7 @@
 /obj/machinery/modular_shield/module/well
 	name = "modular shield well"
 	desc = "A device used to hold more hardlight for the modular shield generator."
-	icon = 'icons/obj/machines/modular_shield_generator.dmi'
+	icon = '../assets/icons/obj/machines/modular_shield_generator.dmi'
 	icon_state = "well_off_closed"
 	is_booster = TRUE
 

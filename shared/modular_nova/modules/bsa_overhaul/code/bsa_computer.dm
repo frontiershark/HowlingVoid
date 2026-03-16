@@ -8,7 +8,7 @@
 	name = "bluespace artillery control"
 	use_power = NO_POWER_USE
 	circuit = /obj/item/circuitboard/computer/bsa_control
-	icon = 'icons/obj/machines/particle_accelerator.dmi'
+	icon = '../assets/icons/obj/machines/particle_accelerator.dmi'
 	icon_state = "control_boxp"
 	icon_keyboard = null
 	icon_screen = null

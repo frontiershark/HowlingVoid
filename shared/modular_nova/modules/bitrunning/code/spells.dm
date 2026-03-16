@@ -8,7 +8,7 @@
 	cooldown_time = 10 SECONDS
 	invocation_type = INVOCATION_NONE
 	spell_requirements = NONE
-	sound = 'sound/items/match_strike.ogg'
+	sound = '../assets/sound/items/match_strike.ogg'
 	summon_radius = 0
 	summon_type = list(/obj/item/flashlight/flare/plasma_projectile)
 
@@ -16,9 +16,9 @@
 	name = "Death Loop"
 	desc = "Makes the caster unable to die unwillingly via a forced memory leak delaying the death state assignation."
 
-	button_icon = 'icons/mob/actions/actions_items.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_items.dmi'
 	button_icon_state = "bci_plus"
-	sound = 'sound/effects/magic/staff_healing.ogg'
+	sound = '../assets/sound/effects/magic/staff_healing.ogg'
 	cooldown_time = 10 SECONDS
 	spell_requirements = SPELL_REQUIRES_NO_ANTIMAGIC|SPELL_REQUIRES_HUMAN
 
@@ -59,13 +59,13 @@
 /datum/action/cooldown/spell/shapeshift/minor_illusion
 	name = "Minor Illusion"
 	desc = "Assume the form of a tree, a furniture or a plant, perfect for hiding."
-	button_icon = 'icons/obj/fluff/beach.dmi'
+	button_icon = '../assets/icons/obj/fluff/beach.dmi'
 	button_icon_state = "coconuts"
 	invocation = "covers themselves in sticks and leaves."
 	invocation_self_message = span_notice("You cover yourself in sticks and leaves.")
 	invocation_type = INVOCATION_EMOTE
 	spell_requirements = NONE
-	sound = 'sound/effects/treechop/treechop1.ogg'
+	sound = '../assets/sound/effects/treechop/treechop1.ogg'
 
 	possible_shapes = list(/mob/living/basic/tree/palm, /mob/living/basic/mimic/crate/minor_illusion, /mob/living/basic/mimic/watermelon)
 
@@ -82,7 +82,7 @@
 	invocation_self_message = span_notice("You light a piece of fleece on fire.")
 	invocation_type = INVOCATION_EMOTE
 	spell_requirements = NONE
-	sound = 'sound/items/match_strike.ogg'
+	sound = '../assets/sound/items/match_strike.ogg'
 	item_type = /obj/item/flashlight/flare/fire
 	delete_old = FALSE
 	delete_on_failure = TRUE
@@ -94,14 +94,14 @@
 /datum/action/cooldown/spell/conjure_item/water
 	name = "Produce Water"
 	desc = "Concentrates hydrokinetic forces to create a glass of water. Might help if you're parched."
-	button_icon = 'icons/obj/drinks/drinks.dmi'
+	button_icon = '../assets/icons/obj/drinks/drinks.dmi'
 	button_icon_state = "water"
 	cooldown_time = 5 SECONDS
 	invocation = "gathers some ambient moisture."
 	invocation_self_message = span_notice("You gather some ambient moisure.")
 	invocation_type = INVOCATION_EMOTE
 	spell_requirements = NONE
-	sound = 'sound/effects/bubbles/bubbles.ogg'
+	sound = '../assets/sound/effects/bubbles/bubbles.ogg'
 	item_type = /obj/item/reagent_containers/cup/glass/drinkingglass/filled/half_full
 	delete_old = FALSE
 	delete_on_failure = FALSE

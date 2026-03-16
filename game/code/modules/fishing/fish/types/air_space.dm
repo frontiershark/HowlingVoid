@@ -121,7 +121,7 @@
 /obj/item/fish/starfish/proc/ascension(mob/living/user)
 	user.visible_message(span_suicide("[user] abandons [user.p_their()] corporeal form!"))
 	user.drop_everything()
-	user.add_filter("space", 1, layering_filter(icon = icon('icons/mob/human/textures.dmi', "spacey"), blend_mode = BLEND_INSET_OVERLAY))
+	user.add_filter("space", 1, layering_filter(icon = icon('../assets/icons/mob/human/textures.dmi', "spacey"), blend_mode = BLEND_INSET_OVERLAY))
 	user.apply_status_effect(/datum/status_effect/go_away/deletes_mob)
 	qdel(src)
 

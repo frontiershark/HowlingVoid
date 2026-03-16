@@ -22,7 +22,7 @@ GLOBAL_LIST_EMPTY(gravity_generators)
 /obj/machinery/gravity_generator
 	name = "gravitational generator"
 	desc = "A device which produces a graviton field when set up."
-	icon = 'icons/obj/machines/gravity_generator.dmi'
+	icon = '../assets/icons/obj/machines/gravity_generator.dmi'
 	density = TRUE
 	move_resist = INFINITY
 	use_power = NO_POWER_USE
@@ -258,7 +258,7 @@ GLOBAL_LIST_EMPTY(gravity_generators)
 					if(PS.get_amount() >= 10)
 						PS.use(10)
 						to_chat(user, span_notice("You add the plating to the framework."))
-						playsound(src.loc, 'sound/machines/click.ogg', 75, TRUE)
+						playsound(src.loc, '../assets/sound/machines/click.ogg', 75, TRUE)
 						broken_state++
 						update_appearance()
 					else
@@ -382,7 +382,7 @@ GLOBAL_LIST_EMPTY(gravity_generators)
 			charge_count -= 2
 
 		if(charge_count % 4 == 0 && prob(75)) // Let them know it is charging/discharging.
-			playsound(src.loc, 'sound/effects/empulse.ogg', 100, TRUE)
+			playsound(src.loc, '../assets/sound/effects/empulse.ogg', 100, TRUE)
 
 		var/overlay_state = null
 		switch(charge_count)
@@ -407,7 +407,7 @@ GLOBAL_LIST_EMPTY(gravity_generators)
 /// Shake everyone on the z level to let them know that gravity was enagaged/disengaged.
 /obj/machinery/gravity_generator/main/proc/shake_everyone()
 	var/turf/T = get_turf(src)
-	var/sound/alert_sound = sound('sound/effects/alert.ogg')
+	var/sound/alert_sound = sound('../assets/sound/effects/alert.ogg')
 	for(var/mob/mobs as anything in GLOB.mob_list)
 		var/turf/mob_turf = get_turf(mobs)
 		if(!istype(mob_turf))

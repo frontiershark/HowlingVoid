@@ -2,7 +2,7 @@
 #define MOVE_ANIMATION_STAGE_TWO 2
 
 /obj/structure/transit_tube_pod
-	icon = 'icons/obj/pipes_n_cables/transit_tube.dmi'
+	icon = '../assets/icons/obj/pipes_n_cables/transit_tube.dmi'
 	icon_state = "pod"
 	animate_movement = FORWARD_STEPS
 	anchored = TRUE

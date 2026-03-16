@@ -25,7 +25,7 @@
 	SIGNAL_HANDLER
 	if(attacking_item.tool_behaviour == TOOL_MINING)
 		destruction_proc?.Invoke()
-		playsound(parent, 'sound/effects/pickaxe/picaxe1.ogg', 50, TRUE)
+		playsound(parent, '../assets/sound/effects/pickaxe/picaxe1.ogg', 50, TRUE)
 		qdel(parent)
 		return TRUE
 
@@ -33,7 +33,7 @@
 		if(user.mind?.get_skill_level(/datum/skill/athletics) < SKILL_LEVEL_EXPERT)
 			to_chat(user, span_warning("\The [parent] is too heavy for you!"))
 			return FALSE
-		playsound(parent, 'sound/items/baseballhit.ogg', 100, TRUE)
+		playsound(parent, '../assets/sound/items/baseballhit.ogg', 100, TRUE)
 		redirection_proc.Invoke(user)
 		return TRUE
 
@@ -46,7 +46,7 @@
 		if(!gas_used || !molar_cmp_equals(gas_used.total_moles(), fist.gas_per_fist * 3))
 			to_chat(user, span_warning("\The [fist] didn't have enough gas to budge \the [parent]!"))
 			return FALSE
-		playsound(parent, 'sound/items/weapons/resonator_blast.ogg', 50, TRUE)
+		playsound(parent, '../assets/sound/items/weapons/resonator_blast.ogg', 50, TRUE)
 		redirection_proc.Invoke(user)
 		return TRUE
 

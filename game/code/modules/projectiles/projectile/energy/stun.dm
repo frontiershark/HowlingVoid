@@ -2,7 +2,7 @@
 	name = "electrode"
 	icon_state = "spark"
 	color = COLOR_YELLOW
-	hitsound = 'sound/items/weapons/taserhit.ogg'
+	hitsound = '../assets/sound/items/weapons/taserhit.ogg'
 	range = 5
 	reflectable = FALSE
 	tracer_type = /obj/effect/projectile/tracer/stun
@@ -26,7 +26,7 @@
 	if(firer)
 		beam_weakref = WEAKREF(firer.Beam(
 			BeamTarget = src,
-			icon = 'icons/effects/beam.dmi',
+			icon = '../assets/icons/effects/beam.dmi',
 			icon_state = "electrodes_nozap",
 			maxdistance = maximum_range + 1,
 			beam_type = /obj/effect/ebeam/electrodes_nozap,
@@ -244,7 +244,7 @@
 	// clumsy people might hit their head while being tased
 	if(HAS_TRAIT(owner, TRAIT_CLUMSY) && owner.body_position == LYING_DOWN && SPT_PROB(20, seconds_between_ticks))
 		owner.apply_damage(10, BRUTE, BODY_ZONE_HEAD)
-		playsound(owner, 'sound/effects/tableheadsmash.ogg', 75, TRUE)
+		playsound(owner, '../assets/sound/effects/tableheadsmash.ogg', 75, TRUE)
 
 	// the actual stunning is here
 	if(!owner.check_stun_immunity(CANSTUN|CANKNOCKDOWN))
@@ -285,7 +285,7 @@
 
 	tase_line = firer.Beam(
 		BeamTarget = owner,
-		icon = 'icons/effects/beam.dmi',
+		icon = '../assets/icons/effects/beam.dmi',
 		icon_state = "electrodes",
 		maxdistance = tase_range,
 		beam_type = /obj/effect/ebeam/reacting/electrodes,
@@ -332,7 +332,7 @@
 	if(DOING_INTERACTION(remover, id))
 		return
 	owner.shake_up_animation()
-	playsound(owner, 'sound/items/weapons/thudswoosh.ogg', 50, TRUE, -1)
+	playsound(owner, '../assets/sound/items/weapons/thudswoosh.ogg', 50, TRUE, -1)
 	remover.visible_message(
 		span_warning("[owner] tries to remove [electrode_name][remover == owner ? "" : " from [owner]"]!"),
 		span_notice("You try to remove [electrode_name][remover == owner ? "" : " from [owner]"]!"),

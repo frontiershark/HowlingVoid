@@ -4,7 +4,7 @@
 	desc = "A wrench that uses the same magnetic technology that abductor tools use, but slightly more ineffeciently. It looks cobbled together."
 	icon = 'modular_nova/modules/mapping/icons/obj/items/advancedtools.dmi'
 	icon_state = "wrench"
-	usesound = 'sound/effects/empulse.ogg'
+	usesound = '../assets/sound/effects/empulse.ogg'
 	toolspeed = 0.2
 
 //WIRECUTTERS//
@@ -44,7 +44,7 @@
 	icon_state = "screwdriver_a"
 	post_init_icon_state = null
 	inhand_icon_state = "screwdriver_nuke"
-	usesound = 'sound/items/pshoom/pshoom.ogg'
+	usesound = '../assets/sound/items/pshoom/pshoom.ogg'
 	toolspeed = 0.2
 	random_color = FALSE
 	greyscale_colors = null
@@ -58,7 +58,7 @@
 	name = "advanced crowbar"
 	desc = "A scientist's almost successful reproduction of an abductor's crowbar, it uses the same technology combined with a handle that can't quite hold it."
 	icon = 'modular_nova/modules/mapping/icons/obj/items/advancedtools.dmi'
-	usesound = 'sound/items/weapons/sonic_jackhammer.ogg'
+	usesound = '../assets/sound/items/weapons/sonic_jackhammer.ogg'
 	icon_state = "crowbar"
 	toolspeed = 0.2
 

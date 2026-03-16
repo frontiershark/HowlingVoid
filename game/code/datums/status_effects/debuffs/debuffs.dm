@@ -395,7 +395,7 @@
 // Object used to apply a underlay to the mob that gets this status applied
 /obj/effect/abstract/crusher_mark
 	name = "Crusher mark underlay"
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	icon_state = "shield"
 	appearance_flags = TILE_BOUND|LONG_GLIDE|RESET_COLOR|PIXEL_SCALE|KEEP_APART
 	vis_flags = VIS_UNDERLAY
@@ -407,7 +407,7 @@
 	delay_before_decay = 5
 	stack_threshold = 10
 	max_stacks = 10
-	overlay_file = 'icons/effects/bleed.dmi'
+	overlay_file = '../assets/icons/effects/bleed.dmi'
 	overlay_state = "bleed"
 	var/bleed_damage = 200
 
@@ -526,7 +526,7 @@
 		wasting_effect.transform = owner.transform //if the owner has been stunned the overlay should inherit that position
 		wasting_effect.alpha = 255
 		animate(wasting_effect, alpha = 0, time = 32)
-		playsound(owner, 'sound/effects/curse/curse5.ogg', 20, TRUE, -1)
+		playsound(owner, '../assets/sound/effects/curse/curse5.ogg', 20, TRUE, -1)
 		owner.adjust_fire_loss(0.75)
 
 	if(curse_flags & CURSE_GRASPING)
@@ -1108,7 +1108,7 @@
 	SIGNAL_HANDLER
 
 	if(midas_state)
-		var/mutable_appearance/midas_overlay = mutable_appearance('icons/mob/effects/debuff_overlays.dmi', midas_state)
+		var/mutable_appearance/midas_overlay = mutable_appearance('../assets/icons/mob/effects/debuff_overlays.dmi', midas_state)
 		midas_overlay.blend_mode = BLEND_MULTIPLY
 		overlays += midas_overlay
 

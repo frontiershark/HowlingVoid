@@ -58,7 +58,7 @@
 
 	owner.visible_message(span_danger("[owner.name] jolts suddenly as two small glass vials are fired from ports in the implant on their spine, shattering as they land."), \
 			span_userdanger("You jolt suddenly as your Qani-Laaca system ejects two empty glass vials rearward, shattering as they land."))
-	playsound(human_owner, 'sound/items/hypospray.ogg', 50, TRUE)
+	playsound(human_owner, '../assets/sound/items/hypospray.ogg', 50, TRUE)
 
 	var/obj/item/telegraph_vial = new /obj/item/qani_laaca_telegraph(get_turf(owner))
 	var/turf/turf_we_throw_at = get_step(owner, REVERSE_DIR(owner.dir))
@@ -69,7 +69,7 @@
 	desc = "A small glass vial, usually kept in a large stack inside a Qani-Laaca implant, that is broken open and ejected \
 		each time the implant is used. If you're looking at one long enough to think about it this long, you either have fast eyes \
 		or were lucky enough to catch one before it broke."
-	icon = 'icons/obj/medical/drugs.dmi'
+	icon = '../assets/icons/obj/medical/drugs.dmi'
 	icon_state = "blastoff_ampoule_empty"
 	w_class = WEIGHT_CLASS_SMALL
 
@@ -129,7 +129,7 @@
 	spell_max_level = 1 // God I hate actions
 	cooldown_time = 5 MINUTES
 	sparks_amt = 2
-	ranged_mousepointer = 'icons/effects/mouse_pointers/override_machine_target.dmi'
+	ranged_mousepointer = '../assets/icons/effects/mouse_pointers/override_machine_target.dmi'
 	/// What we don't work on, will always not work on mobs because I know what you are
 	var/static/list/emag_blacklist = list(
 		/obj/machinery/satellite/meteor_shield,
@@ -166,7 +166,7 @@
 
 	unset_click_ability(owner)
 
-	playsound(owner, 'sound/effects/light_flicker.ogg', 50, TRUE)
+	playsound(owner, '../assets/sound/effects/light_flicker.ogg', 50, TRUE)
 	var/beam = owner.Beam(cast_on, icon_state = "light_beam", time = 5 SECONDS)
 
 	owner.visible_message(span_bolddanger("[owner.name] makes an unusual buzzing sound as the air between [owner.p_them()] and [cast_on] crackles."), \
@@ -186,7 +186,7 @@
 	cast_on.forensics?.add_hacking_implant_trace()
 	cast_on.add_hiddenprint(owner)
 
-	playsound(cast_on, 'sound/machines/terminal/terminal_processing.ogg', 15, TRUE)
+	playsound(cast_on, '../assets/sound/machines/terminal/terminal_processing.ogg', 15, TRUE)
 
 	var/mob/living/carbon/human/human_owner = owner
 

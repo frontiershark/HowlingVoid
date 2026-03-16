@@ -2,7 +2,7 @@
 	name = "Mind Swap"
 	desc = "This spell allows the user to switch bodies with a target next to him."
 	button_icon_state = "mindswap"
-	ranged_mousepointer = 'icons/effects/mouse_pointers/mindswap_target.dmi'
+	ranged_mousepointer = '../assets/icons/effects/mouse_pointers/mindswap_target.dmi'
 
 	school = SCHOOL_TRANSMUTATION
 	cooldown_time = 60 SECONDS
@@ -138,7 +138,7 @@
 
 	// Only the caster and victim hear the sounds,
 	// that way no one knows for sure if the swap happened
-	SEND_SOUND(caster, sound('sound/effects/magic/mandswap.ogg'))
-	SEND_SOUND(to_swap, sound('sound/effects/magic/mandswap.ogg'))
+	SEND_SOUND(caster, sound('../assets/sound/effects/magic/mandswap.ogg'))
+	SEND_SOUND(to_swap, sound('../assets/sound/effects/magic/mandswap.ogg'))
 
 	return TRUE

@@ -65,7 +65,7 @@
 	if(mod.wearer.has_gravity())
 		new /obj/effect/temp_visual/mook_dust(get_turf(src))
 	mod.wearer.AddElement(/datum/element/forced_gravity, 0)
-	playsound(src, 'sound/effects/gravhit.ogg', 50)
+	playsound(src, '../assets/sound/effects/gravhit.ogg', 50)
 
 /obj/item/mod/module/anomaly_locked/antigrav/on_deactivation(mob/activator, display_message = TRUE, deleting = FALSE)
 	mod.wearer.RemoveElement(/datum/element/forced_gravity, 0)
@@ -73,7 +73,7 @@
 		return
 	if(mod.wearer.has_gravity())
 		new /obj/effect/temp_visual/mook_dust(get_turf(src))
-	playsound(src, 'sound/effects/gravhit.ogg', 50)
+	playsound(src, '../assets/sound/effects/gravhit.ogg', 50)
 
 /obj/item/mod/module/anomaly_locked/antigrav/prebuilt
 	prebuilt = TRUE
@@ -127,7 +127,7 @@
 		animate(mod.wearer, teleport_time*0.1, color = null, transform = post_matrix.Multiply(mod.wearer.transform), easing = SINE_EASING|EASE_IN)
 		return
 	animate(mod.wearer, teleport_time*0.1, color = null, transform = post_matrix.Multiply(mod.wearer.transform), easing = SINE_EASING|EASE_IN)
-	if(!do_teleport(mod.wearer, target_turf, asoundin = 'sound/effects/phasein.ogg'))
+	if(!do_teleport(mod.wearer, target_turf, asoundin = '../assets/sound/effects/phasein.ogg'))
 		return
 	drain_power(use_energy_cost)
 

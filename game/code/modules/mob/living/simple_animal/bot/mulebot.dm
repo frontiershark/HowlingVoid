@@ -360,16 +360,16 @@
 	switch(type)
 		if(SIGH)
 			audible_message(span_hear("[src] makes a sighing buzz."))
-			playsound(src, 'sound/machines/buzz/buzz-sigh.ogg', 50, FALSE)
+			playsound(src, '../assets/sound/machines/buzz/buzz-sigh.ogg', 50, FALSE)
 		if(ANNOYED)
 			audible_message(span_hear("[src] makes an annoyed buzzing sound."))
-			playsound(src, 'sound/machines/buzz/buzz-two.ogg', 50, FALSE)
+			playsound(src, '../assets/sound/machines/buzz/buzz-two.ogg', 50, FALSE)
 		if(DELIGHT)
 			audible_message(span_hear("[src] makes a delighted ping!"))
-			playsound(src, 'sound/machines/ping.ogg', 50, FALSE)
+			playsound(src, '../assets/sound/machines/ping.ogg', 50, FALSE)
 		if(CHIME)
 			audible_message(span_hear("[src] makes a chiming sound!"))
-			playsound(src, 'sound/machines/chime.ogg', 50, FALSE)
+			playsound(src, '../assets/sound/machines/chime.ogg', 50, FALSE)
 	flick("[base_icon]1", src)
 
 
@@ -630,7 +630,7 @@
 			loaddir = dir //The MULE will attempt to load a crate in whatever direction the MULE is "facing".
 			if(calling_ai)
 				to_chat(calling_ai, span_notice("[icon2html(src, calling_ai)] [src] wirelessly plays a chiming sound!"))
-				calling_ai.playsound_local(calling_ai, 'sound/machines/chime.ogg', 40, FALSE)
+				calling_ai.playsound_local(calling_ai, '../assets/sound/machines/chime.ogg', 40, FALSE)
 				calling_ai = null
 				radio_channel = RADIO_CHANNEL_AI_PRIVATE //Report on AI Private instead if the AI is controlling us.
 
@@ -689,7 +689,7 @@
 		span_userdanger("[src] drives over you!"),
 	)
 
-	playsound(src, 'sound/effects/splat.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/effects/splat.ogg', 50, TRUE)
 
 	var/damage = rand(5, 15)
 	crushed.apply_damage(2 * damage, BRUTE, BODY_ZONE_HEAD, run_armor_check(BODY_ZONE_HEAD, MELEE))
@@ -852,7 +852,7 @@
 	. = ..()
 	if(!isobserver(load))
 		return
-	var/mutable_appearance/ghost_overlay = mutable_appearance('icons/mob/simple/mob.dmi', "ghost", layer + 0.01) //use a generic ghost icon, otherwise you can metagame who's dead if they have a custom ghost set
+	var/mutable_appearance/ghost_overlay = mutable_appearance('../assets/icons/mob/simple/mob.dmi', "ghost", layer + 0.01) //use a generic ghost icon, otherwise you can metagame who's dead if they have a custom ghost set
 	ghost_overlay.pixel_z = 12
 	. += ghost_overlay
 

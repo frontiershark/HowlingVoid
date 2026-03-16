@@ -19,7 +19,7 @@
 		preserved_food = FALSE
 		icon_state = "[base_icon_state]_unwrapped"
 		to_chat(user, span_notice("You unpackage \the [src]."))
-		playsound(user.loc, 'sound/items/foodcanopen.ogg', 50)
+		playsound(user.loc, '../assets/sound/items/foodcanopen.ogg', 50)
 
 /obj/item/food/colonial_course/attack(mob/living/target, mob/user, def_zone)
 	if(preserved_food)
@@ -66,7 +66,7 @@
 			to_chat(user, span_notice("You unpackage \the [src]."))
 			to_chat(user, span_warning("<i>Wait, are they upside down?</i>"))
 			name = "upside-down [initial(name)]"
-			playsound(user.loc, 'sound/items/foodcanopen.ogg', 50)
+			playsound(user.loc, '../assets/sound/items/foodcanopen.ogg', 50)
 		else
 			return ..()
 
@@ -133,7 +133,7 @@
 	icon_state = base_icon_state
 	add_container_flags(OPENCONTAINER)
 	update_appearance()
-	playsound(user.loc, 'sound/items/foodcanopen.ogg', 50)
+	playsound(user.loc, '../assets/sound/items/foodcanopen.ogg', 50)
 
 // Side Dishes
 

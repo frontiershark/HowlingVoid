@@ -32,7 +32,7 @@
 			if((chosen_machine.resistance_flags & INDESTRUCTIBLE) || is_type_in_typecache(chosen_machine, GLOB.blacklisted_malf_machines))
 				return FALSE
 
-			playsound(holder, 'sound/misc/interference.ogg', 50, ignore_walls = TRUE)
+			playsound(holder, '../assets/sound/misc/interference.ogg', 50, ignore_walls = TRUE)
 			chosen_machine.audible_message(span_userdanger("You hear a loud electrical buzzing sound coming from [chosen_machine]!"))
 			if(QDELETED(chosen_machine))
 				return

@@ -66,7 +66,7 @@
 /obj/structure/barricade/wooden
 	name = "wooden barricade"
 	desc = "This space is blocked off by a wooden barricade."
-	icon = 'icons/obj/structures.dmi'
+	icon = '../assets/icons/obj/structures.dmi'
 	icon_state = "woodenbarricade"
 	resistance_flags = FLAMMABLE
 	bar_material = WOOD
@@ -113,7 +113,7 @@
 /obj/structure/barricade/sandbags
 	name = "sandbags"
 	desc = "Bags of sand. Self explanatory."
-	icon = 'icons/obj/smooth_structures/sandbags.dmi'
+	icon = '../assets/icons/obj/smooth_structures/sandbags.dmi'
 	icon_state = "sandbags-0"
 	base_icon_state = "sandbags"
 	max_integrity = 280
@@ -132,7 +132,7 @@
 /obj/structure/barricade/security
 	name = "security barrier"
 	desc = "A deployable barrier. Provides good cover in fire fights."
-	icon = 'icons/obj/structures.dmi'
+	icon = '../assets/icons/obj/structures.dmi'
 	icon_state = "barrier1"
 	max_integrity = 180
 	proj_pass_rate = 20
@@ -149,7 +149,7 @@
 /obj/item/grenade/barrier
 	name = "barrier grenade"
 	desc = "Instant cover."
-	icon = 'icons/obj/weapons/grenade.dmi'
+	icon = '../assets/icons/obj/weapons/grenade.dmi'
 	icon_state = "wallbang"
 	inhand_icon_state = "flashbang"
 	actions_types = list(/datum/action/item_action/toggle_barrier_spread)
@@ -205,7 +205,7 @@
 /obj/item/deployable_turret_folded
 	name = "folded heavy machine gun"
 	desc = "A folded and unloaded heavy machine gun, ready to be deployed and used."
-	icon = 'icons/obj/weapons/turrets.dmi'
+	icon = '../assets/icons/obj/weapons/turrets.dmi'
 	icon_state = "folded_hmg"
 	inhand_icon_state = "folded_hmg"
 	max_integrity = 250

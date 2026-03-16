@@ -3,7 +3,7 @@
 /obj/machinery/fugitive_capture
 	name = "bluespace capture machine"
 	desc = "Much, MUCH bigger on the inside to transport prisoners safely."
-	icon = 'icons/obj/machines/research.dmi'
+	icon = '../assets/icons/obj/machines/research.dmi'
 	icon_state = "bluespace-prison"
 	density = TRUE
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | ACID_PROOF //ha ha no getting out!!
@@ -128,7 +128,7 @@
 /obj/structure/bouncy_castle
 	name = "bouncy castle"
 	desc = "And if you do drugs, you go to hell before you die. Please."
-	icon = 'icons/obj/toys/bouncy_castle.dmi'
+	icon = '../assets/icons/obj/toys/bouncy_castle.dmi'
 	icon_state = "bouncy_castle"
 	anchored = TRUE
 	density = TRUE
@@ -152,11 +152,11 @@
 	switch(damage_type)
 		if(BRUTE)
 			if(damage_amount)
-				playsound(src, 'sound/effects/blob/attackblob.ogg', 50, TRUE)
+				playsound(src, '../assets/sound/effects/blob/attackblob.ogg', 50, TRUE)
 			else
-				playsound(src, 'sound/items/weapons/tap.ogg', 50, TRUE)
+				playsound(src, '../assets/sound/items/weapons/tap.ogg', 50, TRUE)
 		if(BURN)
-			playsound(src, 'sound/items/tools/welder.ogg', 100, TRUE)
+			playsound(src, '../assets/sound/items/tools/welder.ogg', 100, TRUE)
 
 /obj/item/paper/crumpled/fluff/fortune_teller
 	name = "scribbled note"
@@ -175,7 +175,7 @@
 	name = "Bounty Locator"
 	desc = "Tracks the signatures of bounty targets in your sector. Nobody actually knows what mechanism this thing uses to track its targets. \
 		Whether it be bluespace entanglement or a simple RFID implant, this machine will find you who you're looking for no matter where they're hiding."
-	icon = 'icons/obj/machines/dominator.dmi'
+	icon = '../assets/icons/obj/machines/dominator.dmi'
 	icon_state = "dominator-Purple"
 	density = TRUE
 	/// Cooldown on locating a fugitive.

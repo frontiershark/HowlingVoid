@@ -92,7 +92,7 @@
 		var/obj/item/stamp/granted/our_stamp = new
 		var/stamp_data = our_stamp.get_writing_implement_details()
 		artifact_report.add_stamp(stamp_data["stamp_class"], rand(0, 300), rand(0, 400), rand(0, 360), stamp_data["stamp_icon_state"])
-		playsound(src, 'sound/machines/printer.ogg', 25, FALSE)
+		playsound(src, '../assets/sound/machines/printer.ogg', 25, FALSE)
 		scanning = FALSE
 		icon_state = "spectrometer"
 		update_use_power(IDLE_POWER_USE)

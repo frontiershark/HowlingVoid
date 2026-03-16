@@ -27,7 +27,7 @@
 	/// If it's manipulating gravity at all.
 	var/gravity_on = FALSE
 	/// Defines sound to be played upon mode switching
-	var/modeswitch_sound = 'sound/effects/pop.ogg'
+	var/modeswitch_sound = '../assets/sound/effects/pop.ogg'
 	/// Max weight class of items in the storage.
 	var/max_w_class = WEIGHT_CLASS_NORMAL
 	/// Max combined weight of all items in the storage.
@@ -110,7 +110,7 @@
 				new /obj/effect/temp_visual/mook_dust(get_turf(src))
 
 			user.AddElement(/datum/element/forced_gravity, 0)
-			playsound(src, 'sound/effects/gravhit.ogg', 50)
+			playsound(src, '../assets/sound/effects/gravhit.ogg', 50)
 			to_chat(user, span_notice("[src] releases a metallic hum, projecting a local anti-gravity field."))
 			gravity_on = TRUE
 			icon_state = ANTIGRAVITY_STATE
@@ -147,7 +147,7 @@
 			else
 				if(user.has_gravity() && mode != MODE_GRAVOFF)
 					new /obj/effect/temp_visual/mook_dust(get_turf(src))
-					playsound(src, 'sound/effects/gravhit.ogg', 50)
+					playsound(src, '../assets/sound/effects/gravhit.ogg', 50)
 					to_chat(user, span_notice("[src] lets out a soft whine as your suspension field dissipates, gravity around you normalizing."))
 					mode = MODE_GRAVOFF
 
@@ -253,7 +253,7 @@
 
 	change_mode(MODE_GRAVOFF)
 	balloon_alert(user, "cell removed")
-	playsound(src, 'sound/machines/click.ogg', 50, TRUE, SILENCED_SOUND_EXTRARANGE)
+	playsound(src, '../assets/sound/machines/click.ogg', 50, TRUE, SILENCED_SOUND_EXTRARANGE)
 	if(!user.put_in_hands(current_cell))
 		current_cell.forceMove(drop_location())
 
@@ -272,19 +272,19 @@
 
 	if(!cell_cover_open)
 		balloon_alert(user, "open the cell cover first!")
-		playsound(src, 'sound/machines/buzz/buzz-sigh.ogg', 25, TRUE, SILENCED_SOUND_EXTRARANGE)
+		playsound(src, '../assets/sound/machines/buzz/buzz-sigh.ogg', 25, TRUE, SILENCED_SOUND_EXTRARANGE)
 		return ITEM_INTERACT_BLOCKING
 
 	if(current_cell)
 		balloon_alert(user, "cell already installed!")
-		playsound(src, 'sound/machines/buzz/buzz-sigh.ogg', 25, TRUE, SILENCED_SOUND_EXTRARANGE)
+		playsound(src, '../assets/sound/machines/buzz/buzz-sigh.ogg', 25, TRUE, SILENCED_SOUND_EXTRARANGE)
 		return ITEM_INTERACT_BLOCKING
 
 	/// Shadow realm? I'm sending you to Lake City, FL!
 	tool.moveToNullspace()
 	current_cell = tool
 	balloon_alert(user, "cell installed")
-	playsound(src, 'sound/machines/click.ogg', 50, TRUE, SILENCED_SOUND_EXTRARANGE)
+	playsound(src, '../assets/sound/machines/click.ogg', 50, TRUE, SILENCED_SOUND_EXTRARANGE)
 	return ITEM_INTERACT_SUCCESS
 
 #undef MODE_GRAVOFF

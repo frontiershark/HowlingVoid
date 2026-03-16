@@ -39,11 +39,11 @@
 	icon_state = "nettle"
 	inhand_icon_state = "nettle"
 	bite_consumption_mod = 2
-	lefthand_file = 'icons/mob/inhands/weapons/plants_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/plants_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/plants_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/plants_righthand.dmi'
 	damtype = BURN
 	force = 15
-	hitsound = 'sound/items/weapons/bladeslice.ogg'
+	hitsound = '../assets/sound/items/weapons/bladeslice.ogg'
 	throwforce = 5
 	w_class = WEIGHT_CLASS_NORMAL
 	throw_speed = 1

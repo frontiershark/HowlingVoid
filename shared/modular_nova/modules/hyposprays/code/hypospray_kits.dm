@@ -6,8 +6,8 @@
 	icon = 'modular_nova/modules/hyposprays/icons/hypokits.dmi'
 	icon_state = "firstaid-mini"
 	greyscale_config = /datum/greyscale_config/hypokit
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/medical_righthand.dmi'
 	// Small hypokits can be pocketed, but don't have much storage.
 	w_class = WEIGHT_CLASS_SMALL
 	slot_flags = ITEM_SLOT_BELT

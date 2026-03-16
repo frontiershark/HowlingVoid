@@ -1,7 +1,7 @@
 /obj/item/mecha_parts/mecha_equipment/utility/fob_3d_printer
 	name = "FOBricator Module"
 	desc = "A deployable structure printer for SolFed field mechs. Allows fabrication of tactical infrastructure."
-	icon = 'icons/obj/machines/lathes.dmi'
+	icon = '../assets/icons/obj/machines/lathes.dmi'
 	icon_state = "autolathe"
 	equipment_slot = MECHA_UTILITY
 	detachable = FALSE

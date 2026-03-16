@@ -9,7 +9,7 @@
 	background_icon_state = "bg_demon"
 	overlay_icon_state = "bg_demon_border"
 
-	button_icon = 'icons/mob/actions/actions_minor_antag.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_minor_antag.dmi'
 	button_icon_state = "bloodcrawl"
 
 	spell_requirements = NONE
@@ -103,7 +103,7 @@
 		jaunter.put_in_hands(right_hand)
 
 	blood.visible_message(span_warning("[jaunter] sinks into [blood]!"))
-	playsound(jaunt_turf, 'sound/effects/magic/enter_blood.ogg', 50, TRUE, -1)
+	playsound(jaunt_turf, '../assets/sound/effects/magic/enter_blood.ogg', 50, TRUE, -1)
 	jaunter.extinguish_mob()
 
 	REMOVE_TRAIT(jaunter, TRAIT_NO_TRANSFORM, REF(src))
@@ -142,7 +142,7 @@
 /// Adds an coloring effect to mobs which exit blood crawl.
 /datum/action/cooldown/spell/jaunt/bloodcrawl/proc/exit_blood_effect(mob/living/exited)
 	var/turf/landing_turf = get_turf(exited)
-	playsound(landing_turf, 'sound/effects/magic/exit_blood.ogg', 50, TRUE, -1)
+	playsound(landing_turf, '../assets/sound/effects/magic/exit_blood.ogg', 50, TRUE, -1)
 
 	// Make the mob have the color of the blood pool it came out of
 	var/obj/effect/decal/cleanable/blood/came_from = locate() in landing_turf
@@ -163,7 +163,7 @@
 	desc = "Allows you to phase in and out of existence via pools of blood. If you are dragging someone in critical or dead, \
 		they will be consumed by you, fully healing you."
 	/// The sound played when someone's consumed.
-	var/consume_sound = 'sound/effects/magic/demon_consume.ogg'
+	var/consume_sound = '../assets/sound/effects/magic/demon_consume.ogg'
 	/// Apply damage every 20 seconds if we bloodcrawling
 	var/jaunt_damage_timer
 	/// When demon first appears, it does not take damage while in Jaunt. He also doesn't take damage while he's eating someone.
@@ -290,7 +290,7 @@
 	name = "Friendly Blood Crawl"
 	desc = "Allows you to phase in and out of existence via pools of blood. If you are dragging someone in critical or dead - I mean, \
 		sleeping, when entering a blood pool, they will be invited to a party and fully heal you!"
-	consume_sound = 'sound/misc/scary_horn.ogg'
+	consume_sound = '../assets/sound/misc/scary_horn.ogg'
 
 	// Keep the people we hug!
 	var/list/mob/living/consumed_mobs = list()
@@ -335,7 +335,7 @@
 		// Heals them back to state one
 		if(!friend.revive(ADMIN_HEAL_ALL, force_grab_ghost = TRUE))
 			continue
-		friend.playsound_local(release_turf, 'sound/effects/magic/exit_blood.ogg', 50, TRUE, -1)
+		friend.playsound_local(release_turf, '../assets/sound/effects/magic/exit_blood.ogg', 50, TRUE, -1)
 		to_chat(friend, span_clown("You leave [source]'s warm embrace, and feel ready to take on the world."))
 
 
@@ -371,7 +371,7 @@
 /obj/item/bloodcrawl
 	name = "blood crawl"
 	desc = "You are unable to hold anything while in this form."
-	icon = 'icons/effects/blood.dmi'
+	icon = '../assets/icons/effects/blood.dmi'
 	item_flags = ABSTRACT | DROPDEL
 
 /obj/item/bloodcrawl/Initialize(mapload)

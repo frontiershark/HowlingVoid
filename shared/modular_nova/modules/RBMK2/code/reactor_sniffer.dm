@@ -160,7 +160,7 @@
 
 	stored_radio.talk_into(src, alert_text, alert_emergency_channel ? emergency_channel : warning_channel)
 
-	playsound(src, 'sound/effects/alert.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/effects/alert.ogg', 50, TRUE)
 
 	return TRUE
 

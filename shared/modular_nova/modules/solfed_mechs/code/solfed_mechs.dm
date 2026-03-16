@@ -19,6 +19,6 @@
 //Inserts the sprite used to the spritesheet
 /datum/asset/spritesheet_batched/mecha_equipment/create_spritesheets()
 	. = ..()
-	insert_icon("projectile_dampener", uni_icon('icons/obj/clothing/modsuit/mod_modules.dmi', "projectile_dampener"))
+	insert_icon("projectile_dampener", uni_icon('../assets/icons/obj/clothing/modsuit/mod_modules.dmi', "projectile_dampener"))
 	insert_icon("rotary", uni_icon('modular_nova/modules/solfed_mechs/icons/mecha_equipment.dmi', "rotary"))
-	insert_icon("autholathe", uni_icon('icons/obj/machines/lathes.dmi', "autolathe"))
+	insert_icon("autholathe", uni_icon('../assets/icons/obj/machines/lathes.dmi', "autolathe"))

@@ -8,17 +8,17 @@
 /obj/item/organ/cyberimp/arm/toolkit/shard
 	name = "dark spoon shard"
 	desc = "An eerie metal shard surrounded by dark energies...of soup drinking. You probably don't think you should have been able to find this."
-	icon = 'icons/obj/mining_zones/artefacts.dmi'
+	icon = '../assets/icons/obj/mining_zones/artefacts.dmi'
 	icon_state = "cursed_katana_organ"
 	organ_flags = ORGAN_ORGANIC | ORGAN_FROZEN | ORGAN_UNREMOVABLE
 	items_to_create = list(/obj/item/kitchen/spoon)
-	extend_sound = 'sound/items/unsheath.ogg'
-	retract_sound = 'sound/items/sheath.ogg'
+	extend_sound = '../assets/sound/items/unsheath.ogg'
+	retract_sound = '../assets/sound/items/sheath.ogg'
 
 /obj/item/organ/cyberimp/arm/toolkit/shard/attack_self(mob/user, modifiers)
 	. = ..()
 	to_chat(user, span_userdanger("The mass goes up your arm and goes inside it!"))
-	playsound(user, 'sound/effects/magic/demon_consume.ogg', 50, TRUE)
+	playsound(user, '../assets/sound/effects/magic/demon_consume.ogg', 50, TRUE)
 	var/index = user.get_held_index_of_item(src)
 	swap_zone(IS_LEFT_INDEX(index) ? BODY_ZONE_L_ARM : BODY_ZONE_R_ARM)
 	user.temporarilyRemoveItemFromInventory(src, TRUE)
@@ -38,7 +38,7 @@
 		return FALSE
 	if(!katana.drew_blood)
 		to_chat(owner, span_userdanger("[katana] lashes out at you in hunger!"))
-		playsound(owner, 'sound/effects/magic/demon_attack1.ogg', 50, TRUE)
+		playsound(owner, '../assets/sound/effects/magic/demon_attack1.ogg', 50, TRUE)
 		owner.apply_damage(25, BRUTE, hand, wound_bonus = 10, sharpness = SHARP_EDGED)
 	katana.drew_blood = FALSE
 	katana.wash(CLEAN_TYPE_BLOOD)
@@ -48,20 +48,20 @@
 	name = "cursed katana"
 	desc = "A katana used to seal something vile away long ago. \
 	Even with the weapon destroyed, all the pieces containing the creature have coagulated back together to find a new host."
-	icon = 'icons/obj/mining_zones/artefacts.dmi'
+	icon = '../assets/icons/obj/mining_zones/artefacts.dmi'
 	icon_state = "cursed_katana"
 	icon_angle = -45
-	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/swords_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/swords_righthand.dmi'
 	force = 15
 	armour_penetration = 30
 	block_chance = 30
-	block_sound = 'sound/items/weapons/parry.ogg'
+	block_sound = '../assets/sound/items/weapons/parry.ogg'
 	sharpness = SHARP_EDGED
 	w_class = WEIGHT_CLASS_HUGE
 	attack_verb_continuous = list("attacks", "slashes", "slices", "tears", "lacerates", "rips", "dices", "cuts")
 	attack_verb_simple = list("attack", "slash", "slice", "tear", "lacerate", "rip", "dice", "cut")
-	hitsound = 'sound/items/weapons/bladeslice.ogg'
+	hitsound = '../assets/sound/items/weapons/bladeslice.ogg'
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | UNACIDABLE | FREEZE_PROOF
 	var/shattered = FALSE
 	var/drew_blood = FALSE
@@ -118,7 +118,7 @@
 	user.visible_message(span_warning("[user] strikes [target] with [src]'s hilt!"),
 		span_notice("You hilt strike [target]!"))
 	to_chat(target, span_userdanger("You've been struck by [user]!"))
-	playsound(src, 'sound/items/weapons/genhit3.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/weapons/genhit3.ogg', 50, TRUE)
 	RegisterSignal(target, COMSIG_MOVABLE_IMPACT, PROC_REF(strike_throw_impact))
 	var/atom/throw_target = get_edge_target_turf(target, user.dir)
 	target.throw_at(throw_target, 5, 3, user, FALSE, gentle = TRUE)
@@ -143,7 +143,7 @@
 /obj/item/cursed_katana/proc/slice(mob/living/target, mob/user)
 	user.visible_message(span_warning("[user] does a wide slice!"),
 		span_notice("You do a wide slice!"))
-	playsound(src, 'sound/items/weapons/bladeslice.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/weapons/bladeslice.ogg', 50, TRUE)
 	user.do_item_attack_animation(target, used_item = src, animation_type = ATTACK_ANIMATION_SLASH)
 	var/turf/user_turf = get_turf(user)
 	var/dir_to_target = get_dir(user_turf, get_turf(target))
@@ -164,7 +164,7 @@
 	user.visible_message(span_warning("[user] vanishes into thin air!"),
 		span_notice("You enter the dark cloak."))
 	new /obj/effect/temp_visual/mook_dust(get_turf(src))
-	playsound(src, 'sound/effects/magic/smoke.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/effects/magic/smoke.ogg', 50, TRUE)
 	if(ishostile(target))
 		var/mob/living/simple_animal/hostile/hostile_target = target
 		if(hostile_target.target == user)
@@ -177,7 +177,7 @@
 	user.clear_sight(SEE_SELF)
 	user.visible_message(span_warning("[user] appears from thin air!"),
 		span_notice("You exit the dark cloak."))
-	playsound(src, 'sound/effects/magic/summonitems_generic.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/effects/magic/summonitems_generic.ogg', 50, TRUE)
 	new /obj/effect/temp_visual/mook_dust(get_turf(src))
 
 /obj/item/cursed_katana/proc/cut(mob/living/target, mob/user)
@@ -187,7 +187,7 @@
 	user.do_item_attack_animation(target, used_item = src, animation_type = ATTACK_ANIMATION_SLASH)
 	target.apply_damage(damage = 15, sharpness = SHARP_EDGED, wound_bonus = 15)
 	user.do_attack_animation(target, ATTACK_EFFECT_DISARM)
-	playsound(src, 'sound/items/weapons/rapierhit.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/weapons/rapierhit.ogg', 50, TRUE)
 	var/datum/status_effect/stacking/saw_bleed/bloodletting/status = target.has_status_effect(/datum/status_effect/stacking/saw_bleed/bloodletting)
 	if(!status)
 		target.apply_status_effect(/datum/status_effect/stacking/saw_bleed/bloodletting, 6)
@@ -198,7 +198,7 @@
 	user.visible_message(span_warning("[user] dashes through [target]!"),
 		span_notice("You dash through [target]!"))
 	to_chat(target, span_userdanger("[user] dashes through you!"))
-	playsound(src, 'sound/effects/magic/blink.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/effects/magic/blink.ogg', 50, TRUE)
 	target.apply_damage(damage = 17, sharpness = SHARP_POINTY, exposed_wound_bonus = 10)
 	var/turf/dash_target = get_turf(target)
 	for(var/distance in 0 to 8)
@@ -218,7 +218,7 @@
 	to_chat(target, span_userdanger("[user] shatters [src] over you!"))
 	target.apply_damage(damage = ismining(target) ? 75 : 35, wound_bonus = 20)
 	user.do_attack_animation(target, ATTACK_EFFECT_SMASH)
-	playsound(src, 'sound/effects/glass/glassbr3.ogg', 100, TRUE)
+	playsound(src, '../assets/sound/effects/glass/glassbr3.ogg', 100, TRUE)
 	shattered = TRUE
 	moveToNullspace()
 	balloon_alert(user, "katana shattered")
@@ -227,7 +227,7 @@
 /obj/item/cursed_katana/proc/coagulate(mob/user)
 	balloon_alert(user, "katana coagulated")
 	shattered = FALSE
-	playsound(src, 'sound/effects/magic/demon_consume.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/effects/magic/demon_consume.ogg', 50, TRUE)
 
 #undef ATTACK_STRIKE
 #undef ATTACK_SLICE

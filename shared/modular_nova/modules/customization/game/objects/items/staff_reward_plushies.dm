@@ -59,8 +59,8 @@
 		'modular_nova/modules/emotes/sound/voice/growl.ogg' = 1,
 		'modular_nova/modules/emotes/sound/voice/awoo.ogg' = 1,
 		'modular_nova/modules/emotes/sound/emotes/blush.ogg' = 1,
-		'sound/effects/magic/charge.ogg' = 1,
-		'sound/effects/supermatter.ogg' = 1,
+		'../assets/sound/effects/magic/charge.ogg' = 1,
+		'../assets/sound/effects/supermatter.ogg' = 1,
 	)
 	/// What the Plushie replies when used on another person
 	var/static/list/responses = list(
@@ -176,8 +176,8 @@
 		"bonkcore",
 	)
 	squeak_override = list(
-		'sound/effects/servostep.ogg' = 9,
-		'sound/effects/cartoon_sfx/cartoon_splat.ogg' = 1,
+		'../assets/sound/effects/servostep.ogg' = 9,
+		'../assets/sound/effects/cartoon_sfx/cartoon_splat.ogg' = 1,
 	)
 	/// What the Plushie replies when used on another person
 	var/static/list/responses = list(

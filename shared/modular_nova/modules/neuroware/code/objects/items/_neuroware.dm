@@ -97,7 +97,7 @@
 
 	playsound(
 		source = src,
-		soundin = 'sound/machines/click.ogg',
+		soundin = '../assets/sound/machines/click.ogg',
 		vol = HALFWAY_SOUND_VOLUME,
 		vary = TRUE,
 		extrarange = SILENCED_SOUND_EXTRARANGE
@@ -188,7 +188,7 @@
 	target.balloon_alert_to_viewers(success_message)
 	playsound(
 		source = target,
-		soundin = 'sound/machines/pda_button/pda_button1.ogg',
+		soundin = '../assets/sound/machines/pda_button/pda_button1.ogg',
 		vol = HALFWAY_SOUND_VOLUME,
 		vary = TRUE
 	)

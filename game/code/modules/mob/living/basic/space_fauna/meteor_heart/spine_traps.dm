@@ -2,7 +2,7 @@
 /datum/action/cooldown/mob_cooldown/spine_traps
 	name = "thrusting spines"
 	desc = "Mark several nearby areas with thrusting spines, which will spring up when disturbed."
-	button_icon = 'icons/mob/simple/meteor_heart.dmi'
+	button_icon = '../assets/icons/mob/simple/meteor_heart.dmi'
 	button_icon_state = "spikes_stabbing"
 	cooldown_time = 15 SECONDS
 	shared_cooldown = NONE
@@ -17,7 +17,7 @@
 /datum/action/cooldown/mob_cooldown/spine_traps/Activate(atom/target)
 	. = ..()
 
-	playsound(owner, 'sound/effects/magic/demon_consume.ogg', vol = 100, falloff_exponent = 2, vary = TRUE, pressure_affected = FALSE)
+	playsound(owner, '../assets/sound/effects/magic/demon_consume.ogg', vol = 100, falloff_exponent = 2, vary = TRUE, pressure_affected = FALSE)
 	var/list/valid_turfs = list()
 	var/turf/our_turf = get_turf(owner)
 	for (var/turf/zone_turf in orange(range, our_turf))
@@ -47,7 +47,7 @@
 	return used_turfs
 
 /obj/effect/temp_visual/thrusting_spines
-	icon = 'icons/mob/simple/meteor_heart.dmi'
+	icon = '../assets/icons/mob/simple/meteor_heart.dmi'
 	icon_state = "spikes_idle"
 	desc = "Sharp spines lying in wait in the ground, you probably don't want to walk on those."
 	duration = 10 SECONDS
@@ -92,7 +92,7 @@
 		return
 
 	COOLDOWN_START(src, thrust_delay, 0.7 SECONDS)
-	playsound(src, 'sound/items/weapons/pierce.ogg', vol = 50, vary = TRUE, pressure_affected = FALSE)
+	playsound(src, '../assets/sound/items/weapons/pierce.ogg', vol = 50, vary = TRUE, pressure_affected = FALSE)
 	var/mob/living/victim = arrived
 	flick("spikes_stabbing", src)
 	var/target_zone = victim.resting ? BODY_ZONE_CHEST : pick_weight(standing_damage_zones)

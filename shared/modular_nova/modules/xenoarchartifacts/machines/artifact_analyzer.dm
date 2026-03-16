@@ -96,10 +96,10 @@
 			reconnect_scanner()
 		if(!owned_scanner)
 			results = "Error communicating with scanner."
-			playsound(src, 'sound/machines/buzz/buzz-sigh.ogg', 25, FALSE)
+			playsound(src, '../assets/sound/machines/buzz/buzz-sigh.ogg', 25, FALSE)
 		else if(QDELETED(scanned_object) || get_turf(scanned_object) != get_turf(owned_scanner))
 			results = "Unable to locate scanned object. Ensure it was not moved in the process."
-			playsound(src, 'sound/machines/buzz/buzz-two.ogg', 25, FALSE)
+			playsound(src, '../assets/sound/machines/buzz/buzz-two.ogg', 25, FALSE)
 		else
 			results = get_scan_info(scanned_object)
 		owned_scanner.icon_state = "xenoarch_scanner"
@@ -114,7 +114,7 @@
 		var/obj/item/stamp/granted/our_stamp = new
 		var/stamp_data = our_stamp.get_writing_implement_details()
 		artifact_report.add_stamp(stamp_data["stamp_class"], rand(0, 300), rand(0, 400), rand(0, 360), stamp_data["stamp_icon_state"])
-		playsound(src, 'sound/machines/printer.ogg', 25, FALSE)
+		playsound(src, '../assets/sound/machines/printer.ogg', 25, FALSE)
 
 		if(scanned_object && istype(scanned_object, /obj/machinery/artifact))
 			var/obj/machinery/artifact/scanned_artifact = scanned_object
@@ -167,7 +167,7 @@
 			return
 		if(possible_artifact.being_used)
 			say("Cannot scan. Too much interference.")
-			playsound(src, 'sound/machines/buzz/buzz-two.ogg', 25, FALSE)
+			playsound(src, '../assets/sound/machines/buzz/buzz-two.ogg', 25, FALSE)
 			return
 
 		possible_artifact.being_used = TRUE

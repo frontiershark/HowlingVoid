@@ -4,7 +4,7 @@
 /obj/machinery/mineral/ore_redemption
 	name = "ore redemption machine"
 	desc = "A machine that accepts ore and instantly transforms it into workable material sheets. Points for ore are generated based on type and can be redeemed at a mining equipment vendor."
-	icon = 'icons/obj/machines/mining_machines.dmi'
+	icon = '../assets/icons/obj/machines/mining_machines.dmi'
 	icon_state = "ore_redemption"
 	density = TRUE
 	input_dir = NORTH
@@ -393,8 +393,8 @@
 	. = ..()
 	if((machine_stat & NOPOWER))
 		return
-	var/image/ore_input = image(icon='icons/obj/doors/airlocks/station/overlays.dmi', icon_state="unres_[input_dir]")
-	var/image/ore_output = image(icon='icons/obj/doors/airlocks/station/overlays.dmi', icon_state="unres_[REVERSE_DIR(input_dir)]")
+	var/image/ore_input = image(icon='../assets/icons/obj/doors/airlocks/station/overlays.dmi', icon_state="unres_[input_dir]")
+	var/image/ore_output = image(icon='../assets/icons/obj/doors/airlocks/station/overlays.dmi', icon_state="unres_[REVERSE_DIR(input_dir)]")
 
 	switch(input_dir)
 		if(NORTH)

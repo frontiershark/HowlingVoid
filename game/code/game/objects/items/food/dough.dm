@@ -3,7 +3,7 @@
 /obj/item/food/dough
 	name = "dough"
 	desc = "A piece of dough."
-	icon = 'icons/obj/food/food_ingredients.dmi'
+	icon = '../assets/icons/obj/food/food_ingredients.dmi'
 	icon_state = "dough"
 	food_reagents = list(/datum/reagent/consumable/nutriment = 6)
 	tastes = list("dough" = 1)
@@ -20,7 +20,7 @@
 /obj/item/food/flatdough
 	name = "flat dough"
 	desc = "A flattened dough."
-	icon = 'icons/obj/food/food_ingredients.dmi'
+	icon = '../assets/icons/obj/food/food_ingredients.dmi'
 	icon_state = "flat dough"
 	food_reagents = list(/datum/reagent/consumable/nutriment = 6)
 	tastes = list("dough" = 1)
@@ -37,7 +37,7 @@
 /obj/item/food/pizzabread
 	name = "pizza bread"
 	desc = "Add ingredients to make a pizza."
-	icon = 'icons/obj/food/food_ingredients.dmi'
+	icon = '../assets/icons/obj/food/food_ingredients.dmi'
 	icon_state = "pizzabread"
 	food_reagents = list(/datum/reagent/consumable/nutriment = 7)
 	tastes = list("bread" = 1)
@@ -51,7 +51,7 @@
 /obj/item/food/doughslice
 	name = "dough slice"
 	desc = "A slice of dough. Can be cooked into a bun."
-	icon = 'icons/obj/food/food_ingredients.dmi'
+	icon = '../assets/icons/obj/food/food_ingredients.dmi'
 	icon_state = "doughslice"
 	food_reagents = list(/datum/reagent/consumable/nutriment = 2)
 	w_class = WEIGHT_CLASS_SMALL
@@ -68,7 +68,7 @@
 /obj/item/food/bun
 	name = "bun"
 	desc = "A base for any self-respecting burger."
-	icon = 'icons/obj/food/burgerbread.dmi'
+	icon = '../assets/icons/obj/food/burgerbread.dmi'
 	icon_state = "bun"
 	food_reagents = list(/datum/reagent/consumable/nutriment = 3)
 	w_class = WEIGHT_CLASS_SMALL
@@ -83,7 +83,7 @@
 /obj/item/food/cakebatter
 	name = "cake batter"
 	desc = "Bake it to get a cake."
-	icon = 'icons/obj/food/food_ingredients.dmi'
+	icon = '../assets/icons/obj/food/food_ingredients.dmi'
 	icon_state = "cakebatter"
 	food_reagents = list(/datum/reagent/consumable/nutriment = 9)
 	tastes = list("batter" = 1)
@@ -107,7 +107,7 @@
 /obj/item/food/piedough
 	name = "pie dough"
 	desc = "Cook it to get a pie."
-	icon = 'icons/obj/food/food_ingredients.dmi'
+	icon = '../assets/icons/obj/food/food_ingredients.dmi'
 	icon_state = "piedough"
 	food_reagents = list(/datum/reagent/consumable/nutriment = 9)
 	tastes = list("dough" = 1)
@@ -123,7 +123,7 @@
 /obj/item/food/rawpastrybase
 	name = "raw pastry base"
 	desc = "Must be cooked before use."
-	icon = 'icons/obj/food/food_ingredients.dmi'
+	icon = '../assets/icons/obj/food/food_ingredients.dmi'
 	icon_state = "rawpastrybase"
 	food_reagents = list(/datum/reagent/consumable/nutriment = 2)
 	w_class = WEIGHT_CLASS_SMALL
@@ -137,7 +137,7 @@
 /obj/item/food/pastrybase
 	name = "pastry base"
 	desc = "A base for any self-respecting pastry."
-	icon = 'icons/obj/food/food_ingredients.dmi'
+	icon = '../assets/icons/obj/food/food_ingredients.dmi'
 	icon_state = "pastrybase"
 	food_reagents = list(/datum/reagent/consumable/nutriment = 3)
 	w_class = WEIGHT_CLASS_SMALL

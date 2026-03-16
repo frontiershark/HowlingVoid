@@ -2,10 +2,10 @@
 	name = "pressure plate"
 	desc = "An electronic device that triggers when stepped on."
 	desc_controls = "Ctrl-Click to toggle the pressure plate off and on."
-	icon = 'icons/obj/fluff/puzzle_small.dmi'
+	icon = '../assets/icons/obj/fluff/puzzle_small.dmi'
 	inhand_icon_state = "flashtool"
-	lefthand_file = 'icons/mob/inhands/equipment/security_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/security_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/security_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/security_righthand.dmi'
 	icon_state = "pressureplate"
 	layer = ABOVE_OPEN_TURF_LAYER
 	plane = FLOOR_PLANE
@@ -14,7 +14,7 @@
 	var/trigger_item = FALSE
 	var/specific_item = null
 	var/trigger_silent = FALSE
-	var/sound/trigger_sound = 'sound/effects/pressureplate.ogg'
+	var/sound/trigger_sound = '../assets/sound/effects/pressureplate.ogg'
 	var/obj/item/assembly/assembly = null
 	var/roundstart_signaller = FALSE
 	var/roundstart_signaller_freq = FREQ_PRESSURE_PLATE
@@ -30,7 +30,7 @@
 
 /obj/item/pressure_plate/Initialize(mapload)
 	. = ..()
-	tile_overlay = image(icon = 'icons/turf/floors.dmi', icon_state = "pp_overlay")
+	tile_overlay = image(icon = '../assets/icons/turf/floors.dmi', icon_state = "pp_overlay")
 	if(roundstart_signaller)
 		var/obj/item/assembly/signaler/signaller = new(src)
 		signaller.code = roundstart_signaller_code

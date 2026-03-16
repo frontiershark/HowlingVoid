@@ -1,13 +1,13 @@
 // Contains cult communion, guide, and cult master abilities
 
 /datum/action/innate/cult
-	button_icon = 'icons/mob/actions/actions_cult.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_cult.dmi'
 	background_icon_state = "bg_demon"
 	overlay_icon_state = "bg_demon_border"
 
 	buttontooltipstyle = "cult"
 	check_flags = AB_CHECK_INCAPACITATED|AB_CHECK_HANDS_BLOCKED|AB_CHECK_IMMOBILE|AB_CHECK_CONSCIOUS
-	ranged_mousepointer = 'icons/effects/mouse_pointers/cult_target.dmi'
+	ranged_mousepointer = '../assets/icons/effects/mouse_pointers/cult_target.dmi'
 
 /datum/action/innate/cult/IsAvailable(feedback = FALSE)
 	if(!IS_CULTIST(owner))
@@ -139,7 +139,7 @@
 		to_chat(owner, span_cult("[new_master] can no longer take on the role of a Master."))
 		return
 
-	SEND_SOUND(master, sound('sound/effects/magic.ogg', volume = 33))
+	SEND_SOUND(master, sound('../assets/sound/effects/magic.ogg', volume = 33))
 	confirmation = tgui_alert(master, "[owner.real_name] is offering their role as the cult's Master to you! Do you wish to accept it?", "Take the Mantle", list("Yes", "No"))
 
 	if (confirmation != "Yes")
@@ -192,7 +192,7 @@
 							new /obj/effect/temp_visual/dir_setting/cult/phase(mobloc, B.current.dir)
 							playsound(mobloc, SFX_PORTAL_ENTER, 100, TRUE, SHORT_RANGE_SOUND_EXTRARANGE)
 						if(4)
-							playsound(mobloc, 'sound/effects/magic/exit_blood.ogg', 100, TRUE)
+							playsound(mobloc, '../assets/sound/effects/magic/exit_blood.ogg', 100, TRUE)
 							if(B.current != owner)
 								var/turf/final = pick(destinations)
 								if(istype(B.current.loc, /obj/item/soulstone))
@@ -216,13 +216,13 @@
 			owner.say("C'arta forbici!", language = /datum/language/common, forced = "cult invocation")
 		if(2)
 			owner.say("Pleggh e'ntrath!", language = /datum/language/common, forced = "cult invocation")
-			playsound(get_turf(owner),'sound/effects/magic/clockwork/narsie_attack.ogg', 50, TRUE)
+			playsound(get_turf(owner),'../assets/sound/effects/magic/clockwork/narsie_attack.ogg', 50, TRUE)
 		if(3)
 			owner.say("Barhah hra zar'garis!", language = /datum/language/common, forced = "cult invocation")
-			playsound(get_turf(owner),'sound/effects/magic/clockwork/narsie_attack.ogg', 75, TRUE)
+			playsound(get_turf(owner),'../assets/sound/effects/magic/clockwork/narsie_attack.ogg', 75, TRUE)
 		if(4)
 			owner.say("N'ath reth sh'yro eth d'rekkathnor!!!", language = /datum/language/common, forced = "cult invocation")
-			playsound(get_turf(owner),'sound/effects/magic/clockwork/narsie_attack.ogg', 100, TRUE)
+			playsound(get_turf(owner),'../assets/sound/effects/magic/clockwork/narsie_attack.ogg', 100, TRUE)
 
 /datum/action/innate/cult/master/cultmark
 	name = "Mark Target"
@@ -347,7 +347,7 @@
 	if(QDELETED(owner) || QDELETED(src))
 		return
 
-	SEND_SOUND(owner, 'sound/effects/magic/enter_blood.ogg')
+	SEND_SOUND(owner, '../assets/sound/effects/magic/enter_blood.ogg')
 	to_chat(owner, span_cult_bold("Your previous mark is gone - you are now ready to create a new blood mark."))
 	build_all_button_icons(UPDATE_BUTTON_NAME|UPDATE_BUTTON_ICON)
 
@@ -356,7 +356,7 @@
 /datum/action/innate/cult/master/pulse
 	name = "Eldritch Pulse"
 	desc = "Seize upon a fellow cultist or cult structure and teleport it to a nearby location."
-	button_icon = 'icons/mob/actions/actions_spells.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_spells.dmi'
 	button_icon_state = "arcane_barrage"
 	click_action = TRUE
 	enable_text = span_cult("You prepare to tear through the fabric of reality... <b>Click a target to sieze them!</b>")
@@ -399,7 +399,7 @@
 
 		var/turf/throwee_turf = get_turf(throwee)
 
-		playsound(throwee_turf, 'sound/effects/magic/exit_blood.ogg')
+		playsound(throwee_turf, '../assets/sound/effects/magic/exit_blood.ogg')
 		new /obj/effect/temp_visual/cult/sparks(throwee_turf, clicker.dir)
 		throwee.visible_message(
 			span_warning("A pulse of magic whisks [throwee] away!"),
@@ -434,7 +434,7 @@
 		var/mob/living/living_clicked = clicked_on
 		if(!IS_CULTIST(living_clicked))
 			return FALSE
-		SEND_SOUND(clicker, sound('sound/items/weapons/thudswoosh.ogg'))
+		SEND_SOUND(clicker, sound('../assets/sound/items/weapons/thudswoosh.ogg'))
 		to_chat(clicker, span_cult_bold("You reach through the veil with your mind's eye and seize [clicked_on]! <b>Click anywhere nearby to teleport [clicked_on.p_them()]!</b>"))
 		throwee_ref = WEAKREF(clicked_on)
 		return TRUE

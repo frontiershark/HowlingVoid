@@ -38,7 +38,7 @@
 	var/eye_color_left = null // set to a hex code to override a mob's left eye color
 	var/eye_color_right = null // set to a hex code to override a mob's right eye color
 	/// The icon file of that eyes as its applied to the mob
-	var/eye_icon = 'icons/mob/human/human_eyes.dmi'
+	var/eye_icon = '../assets/icons/mob/human/human_eyes.dmi'
 	/// The icon state of that eyes as its applied to the mob
 	var/eye_icon_state = "eyes"
 	/// Do these eyes have blinking animations
@@ -324,12 +324,12 @@
 			overlays += eyelids
 
 	if (scarring & RIGHT_EYE_SCAR)
-		var/mutable_appearance/right_scar = mutable_appearance('icons/mob/human/human_eyes.dmi', "eye_scar_right", -EYES_LAYER, parent)
+		var/mutable_appearance/right_scar = mutable_appearance('../assets/icons/mob/human/human_eyes.dmi', "eye_scar_right", -EYES_LAYER, parent)
 		right_scar.color = my_head.draw_color
 		overlays += right_scar
 
 	if (scarring & LEFT_EYE_SCAR)
-		var/mutable_appearance/left_scar = mutable_appearance('icons/mob/human/human_eyes.dmi', "eye_scar_left", -EYES_LAYER, parent)
+		var/mutable_appearance/left_scar = mutable_appearance('../assets/icons/mob/human/human_eyes.dmi', "eye_scar_left", -EYES_LAYER, parent)
 		left_scar.color = my_head.draw_color
 		overlays += left_scar
 
@@ -373,12 +373,12 @@
 /obj/item/organ/eyes/update_overlays()
 	. = ..()
 	if (scarring & RIGHT_EYE_SCAR)
-		var/mutable_appearance/right_scar = mutable_appearance('icons/obj/medical/organs/organs.dmi', "eye_scar_right")
+		var/mutable_appearance/right_scar = mutable_appearance('../assets/icons/obj/medical/organs/organs.dmi', "eye_scar_right")
 		right_scar.blend_mode = BLEND_INSET_OVERLAY
 		. += right_scar
 
 	if (scarring & LEFT_EYE_SCAR)
-		var/mutable_appearance/left_scar = mutable_appearance('icons/obj/medical/organs/organs.dmi', "eye_scar_left")
+		var/mutable_appearance/left_scar = mutable_appearance('../assets/icons/obj/medical/organs/organs.dmi', "eye_scar_left")
 		left_scar.blend_mode = BLEND_INSET_OVERLAY
 		. += left_scar
 
@@ -573,7 +573,7 @@
 
 /obj/effect/abstract/eyelid_effect
 	name = "eyelid"
-	icon = 'icons/mob/human/human_eyes.dmi'
+	icon = '../assets/icons/mob/human/human_eyes.dmi'
 	layer = -EYES_LAYER
 	vis_flags = VIS_INHERIT_DIR | VIS_INHERIT_PLANE | VIS_INHERIT_ID
 
@@ -680,7 +680,7 @@
 /datum/action/cooldown/golem_ore_sight
 	name = "Ore Resonance"
 	desc = "Causes nearby ores to vibrate, revealing their location."
-	button_icon = 'icons/obj/devices/scanner.dmi'
+	button_icon = '../assets/icons/obj/devices/scanner.dmi'
 	button_icon_state = "manual_mining"
 	check_flags = AB_CHECK_CONSCIOUS
 	cooldown_time = 10 SECONDS
@@ -1217,7 +1217,7 @@
 	if(owner.get_eye_protection() <= FLASH_PROTECTION_SENSITIVE && !owner.is_blind() && isturf(owner.loc) && owner.has_light_nearby(light_amount=0.5)) //we allow a little more than usual so we can produce light from the adapted eyes
 		to_chat(owner, span_danger("Your eyes! They burn in the light!"))
 		apply_organ_damage(10) //blind quickly
-		playsound(owner, 'sound/machines/grill/grillsizzle.ogg', 50)
+		playsound(owner, '../assets/sound/machines/grill/grillsizzle.ogg', 50)
 	else
 		apply_organ_damage(-10) //heal quickly
 	. = ..()

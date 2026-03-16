@@ -101,7 +101,7 @@
 
 	next_crash = world.time + 10
 	rider.adjust_stamina_loss(instability*6)
-	playsound(src, 'sound/effects/bang.ogg', 40, TRUE)
+	playsound(src, '../assets/sound/effects/bang.ogg', 40, TRUE)
 	if(!iscarbon(rider) || rider.get_stamina_loss() >= 100 || grinding || iscarbon(bumped_thing))
 		var/atom/throw_target = get_edge_target_turf(rider, pick(GLOB.cardinals))
 		unbuckle_mob(rider)
@@ -142,7 +142,7 @@
 	skater.adjust_stamina_loss(instability*0.3)
 	if(skater.get_stamina_loss() >= 100)
 		obj_flags = CAN_BE_HIT
-		playsound(src, 'sound/effects/bang.ogg', 20, TRUE)
+		playsound(src, '../assets/sound/effects/bang.ogg', 20, TRUE)
 		unbuckle_mob(skater)
 		var/atom/throw_target = get_edge_target_turf(src, pick(GLOB.cardinals))
 		skater.throw_at(throw_target, 2, 2)
@@ -151,7 +151,7 @@
 		grinding = FALSE
 		icon_state = "[initial(icon_state)]"
 		return
-	playsound(src, 'sound/vehicles/skateboard_roll.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/vehicles/skateboard_roll.ogg', 50, TRUE)
 	var/turf/location = get_turf(src)
 
 	if(location)
@@ -160,7 +160,7 @@
 			sparks.start() //the most radical way to start plasma fires
 	for(var/mob/living/carbon/victim in location)
 		if(victim.body_position == LYING_DOWN)
-			playsound(location, 'sound/items/trayhit/trayhit2.ogg', 40)
+			playsound(location, '../assets/sound/items/trayhit/trayhit2.ogg', 40)
 			victim.apply_damage(damage = 25, damagetype = BRUTE, def_zone = victim.get_random_valid_zone(even_weights = TRUE), wound_bonus = 20)
 			victim.Paralyze(1.5 SECONDS)
 			skater.adjust_stamina_loss(instability)
@@ -243,7 +243,7 @@
 /obj/item/scooter_frame
 	name = "scooter frame"
 	desc = "A metal frame for building a scooter. Looks like you'll need to add some iron to make wheels."
-	icon = 'icons/mob/rideables/vehicles.dmi'
+	icon = '../assets/icons/mob/rideables/vehicles.dmi'
 	icon_state = "scooter_frame"
 	w_class = WEIGHT_CLASS_NORMAL
 	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 5)

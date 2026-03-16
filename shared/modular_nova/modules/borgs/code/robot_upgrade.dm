@@ -259,7 +259,7 @@
 /obj/item/borg/hydraulic_clamp/mail
 	name = "integrated rapid mail delivery device"
 	desc = "Allows you to carry around a lot of mail, to distribute it around the station like the good little mailbot you are!"
-	icon = 'icons/obj/service/library.dmi'
+	icon = '../assets/icons/obj/service/library.dmi'
 	icon_state = "bookbag"
 	storage_capacity = 100
 	loading_time = 0.25 SECONDS
@@ -269,7 +269,7 @@
 	whitelisted_item_description = "envelopes"
 	item_weight_limit = WEIGHT_CLASS_NORMAL
 	clamp_sound_volume = 25
-	clamp_sound = 'sound/items/pshoom/pshoom.ogg'
+	clamp_sound = '../assets/sound/items/pshoom/pshoom.ogg'
 
 /datum/design/borg_upgrade_clamp
 	name = "improved Integrated Hydraulic Clamp Module"
@@ -392,7 +392,7 @@
 	desc = "Useful for slurping mess off the floor before affectionally licking the crew members in the face."
 	icon = 'modular_nova/modules/borgs/icons/robot_items.dmi'
 	icon_state = "synthtongue"
-	hitsound = 'sound/effects/blob/attackblob.ogg'
+	hitsound = '../assets/sound/effects/blob/attackblob.ogg'
 	desc = "For giving affectionate kisses."
 	item_flags = NOBLUDGEON
 
@@ -408,7 +408,7 @@
 		borg.visible_message(span_warning("\the [borg] affectionally licks \the [mob]'s face!"), span_notice("You affectionally lick \the [mob]'s face!"))
 	else
 		borg.visible_message(span_warning("\the [borg] affectionally licks \the [mob]!"), span_notice("You affectionally lick \the [mob]!"))
-	playsound(borg, 'sound/effects/blob/attackblob.ogg', 50, 1)
+	playsound(borg, '../assets/sound/effects/blob/attackblob.ogg', 50, 1)
 	return ITEM_INTERACT_SUCCESS
 
 // Quadruped nose - Boop
@@ -459,7 +459,7 @@
 		do_smoke(1, borg, get_turf(borg))
 		sleep(0.2 SECONDS)
 		for(var/i in 1 to 4)
-			playsound(borg, pick('sound/items/tools/drill_use.ogg', 'sound/items/tools/jaws_cut.ogg', 'sound/items/tools/jaws_pry.ogg', 'sound/items/tools/welder.ogg', 'sound/items/tools/ratchet.ogg'), 80, TRUE, -1)
+			playsound(borg, pick('../assets/sound/items/tools/drill_use.ogg', '../assets/sound/items/tools/jaws_cut.ogg', '../assets/sound/items/tools/jaws_pry.ogg', '../assets/sound/items/tools/welder.ogg', '../assets/sound/items/tools/ratchet.ogg'), 80, TRUE, -1)
 			sleep(1.2 SECONDS)
 		if(!prev_lockcharge)
 			borg.SetLockdown(FALSE)

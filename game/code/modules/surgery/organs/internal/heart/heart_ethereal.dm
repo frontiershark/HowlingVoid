@@ -161,7 +161,7 @@
 /obj/structure/ethereal_crystal
 	name = "ethereal resurrection crystal"
 	desc = "It seems to contain the corpse of an ethereal mending its wounds."
-	icon = 'icons/mob/effects/ethereal_crystal.dmi'
+	icon = '../assets/icons/mob/effects/ethereal_crystal.dmi'
 	icon_state = "ethereal_crystal"
 	damage_deflection = 0
 	max_integrity = 100
@@ -186,7 +186,7 @@
 	src.ethereal_heart = ethereal_heart
 	ethereal_heart.owner.visible_message(span_notice("The crystals fully encase [ethereal_heart.owner]!"))
 	to_chat(ethereal_heart.owner, span_notice("You are encased in a huge crystal!"))
-	playsound(get_turf(src), 'sound/mobs/humanoids/ethereal/ethereal_crystalization.ogg', 50)
+	playsound(get_turf(src), '../assets/sound/mobs/humanoids/ethereal/ethereal_crystalization.ogg', 50)
 	var/atom/movable/possible_chair = ethereal_heart.owner.buckled
 	possible_chair?.unbuckle_mob(ethereal_heart.owner, force = TRUE)
 	ethereal_heart.owner.forceMove(src) //put that ethereal in
@@ -202,7 +202,7 @@
 	update_appearance(UPDATE_OVERLAYS)
 
 /obj/structure/ethereal_crystal/atom_destruction(damage_flag)
-	playsound(get_turf(ethereal_heart.owner), 'sound/mobs/humanoids/ethereal/ethereal_revive_fail.ogg', 100)
+	playsound(get_turf(ethereal_heart.owner), '../assets/sound/mobs/humanoids/ethereal/ethereal_revive_fail.ogg', 100)
 	return ..()
 
 /obj/structure/ethereal_crystal/Destroy()
@@ -227,7 +227,7 @@
 	// revive will regenerate organs, so our heart refence is going to be null'd. Unreliable
 	var/mob/living/carbon/regenerating = ethereal_heart.owner
 
-	playsound(get_turf(regenerating), 'sound/mobs/humanoids/ethereal/ethereal_revive.ogg', 100)
+	playsound(get_turf(regenerating), '../assets/sound/mobs/humanoids/ethereal/ethereal_revive.ogg', 100)
 	to_chat(regenerating, span_purple("You burst out of the crystal with vigour... but you feel as if you should keep safe for a little while.")) //NOVA EDIT CHANGE - Ethereal Rework 2024 - ORIGINAL: to_chat(regenerating, span_notice("You burst out of the crystal with vigour... </span><span class='userdanger'>But at a cost."))
 	regenerating.revive(HEAL_ALL & ~HEAL_REFRESH_ORGANS)
 	regenerating.apply_status_effect(/datum/status_effect/vulnerable_to_damage) // NOVA EDIT ADDITION - This lasts for five minutes, the full duration of the cooldown.

@@ -239,7 +239,7 @@
 		user.mind?.adjust_experience(/datum/skill/gaming, exp_gained)
 		user.won_game()
 	SSblackbox.record_feedback("nested tally", "arcade_results", 1, list("win", (obj_flags & EMAGGED ? "emagged":"normal")))
-	playsound(loc, 'sound/machines/arcade/win.ogg', 40)
+	playsound(loc, '../assets/sound/machines/arcade/win.ogg', 40)
 	if(ui_panel != UI_PANEL_WORLD_MAP) //we havent been booted to world map, we're still going.
 		ui_panel = UI_PANEL_BETWEEN_FIGHTS
 
@@ -263,12 +263,12 @@
 		ui_panel = UI_PANEL_GAMEOVER
 		feedback_message = "GAME OVER."
 		say("You have been crushed! GAME OVER.")
-		playsound(loc, 'sound/machines/arcade/lose.ogg', 40, TRUE)
+		playsound(loc, '../assets/sound/machines/arcade/lose.ogg', 40, TRUE)
 		lose_game(user)
 		return
 
 	feedback_message = "User took [damage_taken] damage!"
-	playsound(loc, 'sound/machines/arcade/hit.ogg', 40, TRUE, extrarange = -3)
+	playsound(loc, '../assets/sound/machines/arcade/hit.ogg', 40, TRUE, extrarange = -3)
 	SStgui.update_uis(src)
 
 ///Called when you attack the enemy.
@@ -284,17 +284,17 @@
 		if(BATTLE_ARCADE_PLAYER_COUNTERATTACK)
 			feedback_message = "User prepares to counterattack!"
 			process_enemy_turn(user, defending_flags = BATTLE_ATTACK_FLAG_COUNTERATTACK)
-			playsound(loc, 'sound/machines/arcade/mana.ogg', 40, TRUE, extrarange = -3)
+			playsound(loc, '../assets/sound/machines/arcade/mana.ogg', 40, TRUE, extrarange = -3)
 		if(BATTLE_ARCADE_PLAYER_DEFEND)
 			feedback_message = "User pulls up their shield!"
 			process_enemy_turn(user, defending_flags = BATTLE_ATTACK_FLAG_DEFEND)
-			playsound(loc, 'sound/machines/arcade/mana.ogg', 40, TRUE, extrarange = -3)
+			playsound(loc, '../assets/sound/machines/arcade/mana.ogg', 40, TRUE, extrarange = -3)
 
 	if(!damage_dealt)
 		return
 	enemy_hp -= round(max(0, damage_dealt), 1)
 	feedback_message = "[enemy_name] took [damage_dealt] damage!"
-	playsound(loc, 'sound/machines/arcade/hit.ogg', 40, TRUE, extrarange = -3)
+	playsound(loc, '../assets/sound/machines/arcade/hit.ogg', 40, TRUE, extrarange = -3)
 	process_enemy_turn(user)
 
 ///Called when you successfully counterattack the enemy.
@@ -303,7 +303,7 @@
 	var/damage_dealt = (rand(20, 30) * (!isnull(weapon) ? weapon.bonus_modifier : 1))
 	enemy_hp -= round(max(0, damage_dealt), 1)
 	feedback_message = "User counterattacked for [damage_dealt] damage!"
-	playsound(loc, 'sound/machines/arcade/boom.ogg', 40, TRUE, extrarange = -3)
+	playsound(loc, '../assets/sound/machines/arcade/boom.ogg', 40, TRUE, extrarange = -3)
 	if(enemy_hp <= 0)
 		on_battle_win(user)
 	SStgui.update_uis(src)
@@ -348,7 +348,7 @@
 			enemy_hp = round(min(enemy_max_hp, enemy_hp + healed_amount), 1)
 			enemy_mp -= round(max(0, 10), 1)
 			feedback_message = "[enemy_name] healed for [healed_amount] health points!"
-			playsound(loc, 'sound/machines/arcade/heal.ogg', 40, TRUE, extrarange = -3)
+			playsound(loc, '../assets/sound/machines/arcade/heal.ogg', 40, TRUE, extrarange = -3)
 			SStgui.update_uis(src)
 			return
 		if(player_current_mp >= 5) //minimum to steal
@@ -356,7 +356,7 @@
 			player_current_mp -= round(max(0, healed_amount), 1)
 			enemy_mp += healed_amount
 			feedback_message = "[enemy_name] stole [healed_amount] MP from you!"
-			playsound(loc, 'sound/machines/arcade/steal.ogg', 40, TRUE)
+			playsound(loc, '../assets/sound/machines/arcade/steal.ogg', 40, TRUE)
 			SStgui.update_uis(src)
 			return
 		//we couldn't heal ourselves or steal MP, we'll just attack instead.
@@ -452,7 +452,7 @@
 						say("You don't have enough gold to rest!")
 						return TRUE
 					player_gold -= DEFAULT_ITEM_PRICE / 2
-					playsound(loc, 'sound/vehicles/mecha/skyfall_power_up.ogg', 40)
+					playsound(loc, '../assets/sound/vehicles/mecha/skyfall_power_up.ogg', 40)
 					player_current_hp = PLAYER_MAX_HP
 					player_current_mp = PLAYER_MAX_MP
 					return TRUE
@@ -491,11 +491,11 @@
 					return TRUE
 				if("continue_with_rest")
 					if(prob(60))
-						playsound(loc, 'sound/vehicles/mecha/skyfall_power_up.ogg', 40)
+						playsound(loc, '../assets/sound/vehicles/mecha/skyfall_power_up.ogg', 40)
 						player_current_hp = PLAYER_MAX_HP
 						player_current_mp = PLAYER_MAX_MP
 					else
-						playsound(loc, 'sound/machines/defib/defib_zap.ogg', 40)
+						playsound(loc, '../assets/sound/machines/defib/defib_zap.ogg', 40)
 						if(prob(40))
 							//You got robbed, and now have to go to your next fight.
 							player_gold /= 2

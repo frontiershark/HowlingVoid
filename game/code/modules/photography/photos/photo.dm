@@ -3,14 +3,14 @@
  */
 /obj/item/photo
 	name = "photo"
-	icon = 'icons/obj/art/camera.dmi'
+	icon = '../assets/icons/obj/art/camera.dmi'
 	icon_state = "photo"
 	inhand_icon_state = "paper"
 	w_class = WEIGHT_CLASS_TINY
 	resistance_flags = FLAMMABLE
 	max_integrity = 50
-	drop_sound = 'sound/items/handling/paper_drop.ogg'
-	pickup_sound = 'sound/items/handling/paper_pickup.ogg'
+	drop_sound = '../assets/sound/items/handling/paper_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/paper_pickup.ogg'
 	var/datum/picture/picture
 	var/scribble //Scribble on the back.
 
@@ -71,9 +71,9 @@
 /obj/item/photo/suicide_act(mob/living/carbon/human/user)
 	user.visible_message(span_suicide("[user] is taking one last look at \the [src]! It looks like [user.p_theyre()] giving in to death!"))//when you wanna look at photo of waifu one last time before you die...
 	if (!ishuman(user) || user.physique == MALE)
-		playsound(user, 'sound/mobs/humanoids/human/laugh/manlaugh1.ogg', 50, TRUE)//EVERY TIME I DO IT MAKES ME LAUGH
+		playsound(user, '../assets/sound/mobs/humanoids/human/laugh/manlaugh1.ogg', 50, TRUE)//EVERY TIME I DO IT MAKES ME LAUGH
 	else
-		playsound(user, 'sound/mobs/humanoids/human/laugh/womanlaugh.ogg', 50, TRUE)
+		playsound(user, '../assets/sound/mobs/humanoids/human/laugh/womanlaugh.ogg', 50, TRUE)
 	return OXYLOSS
 
 /obj/item/photo/attack_self(mob/user)

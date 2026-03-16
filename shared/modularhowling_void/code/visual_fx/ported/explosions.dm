@@ -1,5 +1,5 @@
 /particles/explosion_smoke
-	icon = 'icons/effects/96x96.dmi'
+	icon = '../assets/icons/effects/96x96.dmi'
 	icon_state = "smoke3"
 	width = 1000
 	height = 1000
@@ -29,7 +29,7 @@
 	velocity = generator(GEN_CIRCLE, 10, 10)
 
 /particles/explosion_water
-	icon = 'icons/effects/96x96.dmi'
+	icon = '../assets/icons/effects/96x96.dmi'
 	icon_state = list("smoke4" = 1, "smoke5" = 1)
 	width = 1000
 	height = 1000
@@ -46,7 +46,7 @@
 	grow = 0.02
 
 /particles/smoke_wave
-	icon = 'icons/effects/96x96.dmi'
+	icon = '../assets/icons/effects/96x96.dmi'
 	icon_state = "smoke3"
 	width = 750
 	height = 750
@@ -69,7 +69,7 @@
 	scale = 0.1
 
 /particles/wave_water
-	icon = 'icons/effects/96x96.dmi'
+	icon = '../assets/icons/effects/96x96.dmi'
 	icon_state = "smoke5"
 	width = 750
 	height = 750
@@ -85,7 +85,7 @@
 	friction = 0.05
 
 /particles/dirt_kickup
-	icon = 'icons/effects/96x96.dmi'
+	icon = '../assets/icons/effects/96x96.dmi'
 	icon_state = "smoke"
 	width = 500
 	height = 500
@@ -102,7 +102,7 @@
 	gravity = list(0, -1.25)
 
 /particles/water_splash
-	icon = 'icons/effects/96x96.dmi'
+	icon = '../assets/icons/effects/96x96.dmi'
 	icon_state = "smoke2"
 	width = 500
 	height = 500
@@ -118,7 +118,7 @@
 	gravity = list(0, -1.25)
 
 /particles/dirt_kickup_large
-	icon = 'icons/effects/96x96.dmi'
+	icon = '../assets/icons/effects/96x96.dmi'
 	icon_state = "smoke"
 	width = 750
 	height = 750
@@ -144,7 +144,7 @@
 	fade = 10
 
 /particles/water_splash_large
-	icon = 'icons/effects/96x96.dmi'
+	icon = '../assets/icons/effects/96x96.dmi'
 	icon_state = "smoke2"
 	width = 750
 	height = 750
@@ -160,7 +160,7 @@
 	gravity = list(0, -1)
 
 /particles/falling_debris
-	icon = 'icons/effects/particles/generic_particles.dmi'
+	icon = '../assets/icons/effects/particles/generic_particles.dmi'
 	icon_state = "rock"
 	width = 750
 	height = 750
@@ -181,7 +181,7 @@
 	spawning = 40
 
 /particles/water_falling
-	icon = 'icons/effects/particles/generic_particles.dmi'
+	icon = '../assets/icons/effects/particles/generic_particles.dmi'
 	icon_state = "drop"
 	width = 750
 	height = 750
@@ -197,7 +197,7 @@
 	drift = generator(GEN_CIRCLE, 0, 1.5)
 
 /particles/sparks_outwards
-	icon = 'icons/effects/64x64.dmi'
+	icon = '../assets/icons/effects/64x64.dmi'
 	icon_state = "flare"
 	width = 750
 	height = 750
@@ -211,7 +211,7 @@
 	friction = 0.1
 
 /particles/water_outwards
-	icon = 'icons/effects/particles/generic_particles.dmi'
+	icon = '../assets/icons/effects/particles/generic_particles.dmi'
 	icon_state = "cross"
 	width = 750
 	height = 750
@@ -226,7 +226,7 @@
 
 /obj/effect/temp_visual/explosion
 	name = "boom"
-	icon = 'icons/effects/96x96.dmi'
+	icon = '../assets/icons/effects/96x96.dmi'
 	icon_state = "explosion"
 	light_system = COMPLEX_LIGHT
 	duration = 25

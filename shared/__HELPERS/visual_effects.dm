@@ -100,7 +100,7 @@
 	// Gonna take this atom and give it a render target, then use it as a source for a filter
 	// (We use an atom because it seems as if setting render_target on an MA is just invalid. I hate this engine)
 	var/atom/movable/scanline = new(null)
-	scanline.icon = 'icons/effects/effects.dmi'
+	scanline.icon = '../assets/icons/effects/effects.dmi'
 	scanline.icon_state = "scanline"
 	scanline.appearance_flags |= RESET_TRANSFORM
 	// * so it doesn't render

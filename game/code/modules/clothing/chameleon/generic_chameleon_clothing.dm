@@ -18,7 +18,7 @@ do { \
 /obj/item/clothing/under/chameleon
 	name = "black jumpsuit"
 	desc = "It's a plain jumpsuit. It has a small dial on the wrist."
-	icon = 'icons/map_icons/clothing/under/color.dmi'
+	icon = '../assets/icons/map_icons/clothing/under/color.dmi'
 	icon_state = "/obj/item/clothing/under/color"
 	post_init_icon_state = "jumpsuit"
 	flags_1 = parent_type::flags_1 | NO_NEW_GAGS_PREVIEW_1
@@ -54,8 +54,8 @@ do { \
 	name = "armor"
 	desc = "A slim armored vest that protects against most types of damage."
 	icon_state = "armor"
-	icon = 'icons/obj/clothing/suits/armor.dmi'
-	worn_icon = 'icons/mob/clothing/suits/armor.dmi'
+	icon = '../assets/icons/obj/clothing/suits/armor.dmi'
+	worn_icon = '../assets/icons/mob/clothing/suits/armor.dmi'
 	inhand_icon_state = "armor"
 	blood_overlay_type = "armor"
 	resistance_flags = NONE
@@ -140,8 +140,8 @@ do { \
 /obj/item/clothing/head/chameleon
 	name = "grey cap"
 	desc = "It's a baseball hat in a tasteful grey colour."
-	icon = 'icons/obj/clothing/head/hats.dmi'
-	worn_icon = 'icons/mob/clothing/head/hats.dmi'
+	icon = '../assets/icons/obj/clothing/head/hats.dmi'
+	worn_icon = '../assets/icons/mob/clothing/head/hats.dmi'
 	icon_state = "greysoft"
 	resistance_flags = NONE
 	clothing_flags = CARP_STYLE_FACTOR
@@ -235,7 +235,7 @@ do { \
 /obj/item/clothing/shoes/chameleon
 	name = "black shoes"
 	desc = "A pair of black shoes."
-	icon = 'icons/map_icons/clothing/shoes.dmi'
+	icon = '../assets/icons/map_icons/clothing/shoes.dmi'
 	icon_state = "/obj/item/clothing/shoes/chameleon"
 	post_init_icon_state = "sneakers"
 	inhand_icon_state = "sneakers_back"

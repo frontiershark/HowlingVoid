@@ -1,7 +1,7 @@
 /datum/action/innate/brain_undeployment
 	name = "Disconnect from shell"
 	desc = "Stop controlling your shell and resume normal core operations."
-	button_icon = 'icons/mob/actions/actions_AI.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_AI.dmi'
 	button_icon_state = "ai_core"
 
 /datum/action/innate/brain_undeployment/Trigger(mob/clicker, trigger_flags)

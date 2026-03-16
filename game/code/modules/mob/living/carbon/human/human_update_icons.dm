@@ -180,7 +180,7 @@ There are several things that need to be remembered:
 		if(HAS_TRAIT(worn_item, TRAIT_NO_WORN_ICON))
 			return
 
-		var/icon_file = 'icons/mob/clothing/id.dmi'
+		var/icon_file = '../assets/icons/mob/clothing/id.dmi'
 
 		id_overlay = wear_id.build_worn_icon(default_layer = ID_LAYER, default_icon_file = icon_file)
 
@@ -208,11 +208,11 @@ There are several things that need to be remembered:
 		// When byond gives us filters that respect dirs we can just use an alpha mask for this but until then, two icons weeeee
 		var/mutable_appearance/hands_combined = mutable_appearance(layer = -GLOVES_LAYER, appearance_flags = KEEP_TOGETHER)
 		if(has_left_hand(check_disabled = FALSE))
-			var/mutable_appearance/blood_overlay = mutable_appearance('icons/effects/blood.dmi', "bloodyhands_left")
+			var/mutable_appearance/blood_overlay = mutable_appearance('../assets/icons/effects/blood.dmi', "bloodyhands_left")
 			blood_overlay.color = get_blood_dna_color()
 			hands_combined.overlays += blood_overlay
 		if(has_right_hand(check_disabled = FALSE))
-			var/mutable_appearance/blood_overlay = mutable_appearance('icons/effects/blood.dmi', "bloodyhands_right")
+			var/mutable_appearance/blood_overlay = mutable_appearance('../assets/icons/effects/blood.dmi', "bloodyhands_right")
 			blood_overlay.color = get_blood_dna_color()
 			hands_combined.overlays += blood_overlay
 		overlays_standing[GLOVES_LAYER] = hands_combined
@@ -226,7 +226,7 @@ There are several things that need to be remembered:
 	if(HAS_TRAIT(worn_item, TRAIT_NO_WORN_ICON) || (obscured_slots & HIDEGLOVES))
 		return
 
-	var/icon_file = 'icons/mob/clothing/hands.dmi'
+	var/icon_file = '../assets/icons/mob/clothing/hands.dmi'
 
 	// NOVA EDIT ADDITION START
 	var/mutant_override = FALSE
@@ -254,7 +254,7 @@ There are several things that need to be remembered:
 		var/static/atom/movable/alpha_filter_target
 		if(isnull(alpha_filter_target))
 			alpha_filter_target = new(null)
-		alpha_filter_target.icon = 'icons/effects/effects.dmi'
+		alpha_filter_target.icon = '../assets/icons/effects/effects.dmi'
 		alpha_filter_target.icon_state = "missing[!has_left_hand(check_disabled = FALSE) ? "l" : "r"]"
 		alpha_filter_target.render_target = "*MissGlove [REF(src)] [!has_left_hand(check_disabled = FALSE) ? "L" : "R"]"
 		gloves_overlay.add_overlay(alpha_filter_target)
@@ -281,7 +281,7 @@ There are several things that need to be remembered:
 		if(HAS_TRAIT(worn_item, TRAIT_NO_WORN_ICON) || (obscured_slots & HIDEEYES))
 			return
 
-		var/icon_file = 'icons/mob/clothing/eyes.dmi'
+		var/icon_file = '../assets/icons/mob/clothing/eyes.dmi'
 
 		// NOVA EDIT ADDITION
 		var/mutant_override = FALSE
@@ -320,7 +320,7 @@ There are several things that need to be remembered:
 		if(HAS_TRAIT(worn_item, TRAIT_NO_WORN_ICON) || (obscured_slots & HIDEEARS))
 			return
 
-		var/icon_file = 'icons/mob/clothing/ears.dmi'
+		var/icon_file = '../assets/icons/mob/clothing/ears.dmi'
 
 		// NOVA EDIT ADDITION
 		var/mutant_override = FALSE
@@ -354,7 +354,7 @@ There are several things that need to be remembered:
 		if(HAS_TRAIT(worn_item, TRAIT_NO_WORN_ICON) || (obscured_slots & HIDENECK))
 			return
 
-		var/icon_file = 'icons/mob/clothing/neck.dmi'
+		var/icon_file = '../assets/icons/mob/clothing/neck.dmi'
 
 		// NOVA EDIT ADDITION
 		var/mutant_override = FALSE
@@ -453,7 +453,7 @@ There are several things that need to be remembered:
 		if(HAS_TRAIT(worn_item, TRAIT_NO_WORN_ICON) || (obscured_slots & HIDESUITSTORAGE))
 			return
 
-		var/mutable_appearance/s_store_overlay = worn_item.build_worn_icon(default_layer = SUIT_STORE_LAYER, default_icon_file = 'icons/mob/clothing/belt_mirror.dmi')
+		var/mutable_appearance/s_store_overlay = worn_item.build_worn_icon(default_layer = SUIT_STORE_LAYER, default_icon_file = '../assets/icons/mob/clothing/belt_mirror.dmi')
 		var/obj/item/bodypart/chest/my_chest = get_bodypart(BODY_ZONE_CHEST)
 		my_chest?.worn_suit_storage_offset?.apply_offset(s_store_overlay)
 		overlays_standing[SUIT_STORE_LAYER] = s_store_overlay
@@ -472,7 +472,7 @@ There are several things that need to be remembered:
 		if(HAS_TRAIT(worn_item, TRAIT_NO_WORN_ICON) || (obscured_slots & HIDEHEADGEAR))
 			return
 
-		var/icon_file = 'icons/mob/clothing/head/default.dmi'
+		var/icon_file = '../assets/icons/mob/clothing/head/default.dmi'
 
 		// NOVA EDIT ADDITION - This needs to be refactored.
 		var/mutant_override = FALSE
@@ -481,7 +481,7 @@ There are several things that need to be remembered:
 			if(species_icon_file)
 				icon_file = species_icon_file
 				mutant_override = TRUE
-		if((icon_file == 'icons/mob/clothing/head/default.dmi') && (bodyshape & BODYSHAPE_SNOUTED) && (worn_item.supports_variations_flags & CLOTHING_SNOUTED_VARIATION))
+		if((icon_file == '../assets/icons/mob/clothing/head/default.dmi') && (bodyshape & BODYSHAPE_SNOUTED) && (worn_item.supports_variations_flags & CLOTHING_SNOUTED_VARIATION))
 			var/snout_icon_file = worn_item.worn_icon_muzzled || SNOUTED_HEAD_FILE
 			if(snout_icon_file && icon_exists(snout_icon_file, RESOLVE_ICON_STATE(worn_item)))
 				icon_file = snout_icon_file
@@ -514,7 +514,7 @@ There are several things that need to be remembered:
 		if(HAS_TRAIT(worn_item, TRAIT_NO_WORN_ICON) || (obscured_slots & HIDEBELT))
 			return
 
-		var/icon_file = 'icons/mob/clothing/belt.dmi'
+		var/icon_file = '../assets/icons/mob/clothing/belt.dmi'
 
 		// NOVA EDIT ADDITION
 		var/mutant_override = FALSE
@@ -628,7 +628,7 @@ There are several things that need to be remembered:
 		if(HAS_TRAIT(worn_item, TRAIT_NO_WORN_ICON) || (obscured_slots & HIDEMASK))
 			return
 
-		var/icon_file = 'icons/mob/clothing/mask.dmi'
+		var/icon_file = '../assets/icons/mob/clothing/mask.dmi'
 
 		// NOVA EDIT ADDITION
 		var/mutant_override = FALSE
@@ -670,7 +670,7 @@ There are several things that need to be remembered:
 		if(HAS_TRAIT(worn_item, TRAIT_NO_WORN_ICON))
 			return
 
-		var/icon_file = 'icons/mob/clothing/back.dmi'
+		var/icon_file = '../assets/icons/mob/clothing/back.dmi'
 
 		// NOVA EDIT ADDITION
 		var/mutant_override = FALSE
@@ -803,7 +803,7 @@ There are several things that need to be remembered:
 	var/icon/female_clothing_icon = female_clothing_icons[index]
 	if(!female_clothing_icon) //Create standing/laying icons if they don't exist
 		var/female_icon_state = "female[type == FEMALE_UNIFORM_FULL ? "_full" : ((!type || type & FEMALE_UNIFORM_TOP_ONLY) ? "_top" : "")][type & FEMALE_UNIFORM_NO_BREASTS ? "_no_breasts" : ""]"
-		var/icon/female_cropping_mask = icon('icons/mob/clothing/under/masking_helpers.dmi', female_icon_state)
+		var/icon/female_cropping_mask = icon('../assets/icons/mob/clothing/under/masking_helpers.dmi', female_icon_state)
 		female_clothing_icon = icon(icon, icon_state)
 		female_clothing_icon.Blend(female_cropping_mask, ICON_MULTIPLY)
 		female_clothing_icon = fcopy_rsc(female_clothing_icon)
@@ -834,7 +834,7 @@ There are several things that need to be remembered:
 /proc/replace_icon_legs(icon/base_icon, icon/new_legs)
 	var/static/icon/leg_mask
 	if(!leg_mask)
-		leg_mask = icon('icons/mob/clothing/under/masking_helpers.dmi', "digi_leg_mask")
+		leg_mask = icon('../assets/icons/mob/clothing/under/masking_helpers.dmi', "digi_leg_mask")
 
 	// cuts the legs off
 	base_icon.Blend(leg_mask, ICON_SUBTRACT)
@@ -1370,10 +1370,10 @@ mutant_styles: The mutant style - taur bodytype, STYLE_TESHARI, etc. // NOVA EDI
  * Applies a filter to an appearance according to mob height
  */
 /mob/living/carbon/human/proc/apply_height_filters(image/appearance)
-	var/static/icon/cut_torso_mask = icon('icons/effects/cut.dmi', "Cut1")
-	var/static/icon/cut_legs_mask = icon('icons/effects/cut.dmi', "Cut2")
-	var/static/icon/lenghten_torso_mask = icon('icons/effects/cut.dmi', "Cut3")
-	var/static/icon/lenghten_legs_mask = icon('icons/effects/cut.dmi', "Cut4")
+	var/static/icon/cut_torso_mask = icon('../assets/icons/effects/cut.dmi', "Cut1")
+	var/static/icon/cut_legs_mask = icon('../assets/icons/effects/cut.dmi', "Cut2")
+	var/static/icon/lenghten_torso_mask = icon('../assets/icons/effects/cut.dmi', "Cut3")
+	var/static/icon/lenghten_legs_mask = icon('../assets/icons/effects/cut.dmi', "Cut4")
 
 	appearance.remove_filter(list(
 		"Cut_Torso",

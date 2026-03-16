@@ -55,23 +55,23 @@
 	var/static/list/ascension_bodies = list(
 		list(
 			"text" = "Fear the blaze, for the Ashlord, %FAKENAME% has ascended! The flames shall consume all!",
-			"sound" = 'sound/music/antag/heretic/ascend_blade.ogg',
+			"sound" = '../assets/sound/music/antag/heretic/ascend_blade.ogg',
 		),
 		list(
 			"text" = "Master of blades, the Torn Champion's disciple, %FAKENAME% has ascended! Their steel is that which will cut reality in a maelstom of silver!",
-			"sound" = 'sound/music/antag/heretic/ascend_blade.ogg',
+			"sound" = '../assets/sound/music/antag/heretic/ascend_blade.ogg',
 		),
 		list(
 			"text" = "Ever coiling vortex. Reality unfolded. ARMS OUTREACHED, THE LORD OF THE NIGHT, %FAKENAME% has ascended! Fear the ever twisting hand!",
-			"sound" = 'sound/music/antag/heretic/ascend_flesh.ogg',
+			"sound" = '../assets/sound/music/antag/heretic/ascend_flesh.ogg',
 		),
 		list(
 			"text" = "Fear the decay, for the Rustbringer, %FAKENAME% has ascended! None shall escape the corrosion!",
-			"sound" = 'sound/music/antag/heretic/ascend_rust.ogg',
+			"sound" = '../assets/sound/music/antag/heretic/ascend_rust.ogg',
 		),
 		list(
 			"text" = "The nobleman of void %FAKENAME% has arrived, stepping along the Waltz that ends worlds!",
-			"sound" = 'sound/music/antag/heretic/ascend_void.ogg',
+			"sound" = '../assets/sound/music/antag/heretic/ascend_void.ogg',
 		)
 	)
 
@@ -108,7 +108,7 @@
 	priority_announce(
 		text = "Figments from an eldritch god are being summoned by [totally_real_cult_leader.real_name] into [fake_summon_area] from an unknown dimension. Disrupt the ritual at all costs!",
 		title = "[command_name()] Higher Dimensional Affairs",
-		sound = 'sound/music/antag/bloodcult/bloodcult_scribe.ogg',
+		sound = '../assets/sound/music/antag/bloodcult/bloodcult_scribe.ogg',
 		has_important_message = TRUE,
 		players = list(hallucinator),
 	)
@@ -123,7 +123,7 @@
 /datum/hallucination/station_message/supermatter_delam
 
 /datum/hallucination/station_message/supermatter_delam/do_fake_alert()
-	SEND_SOUND(hallucinator, 'sound/effects/magic/charge.ogg')
+	SEND_SOUND(hallucinator, '../assets/sound/effects/magic/charge.ogg')
 	to_chat(hallucinator, span_bolddanger("You feel reality distort for a moment..."))
 
 /datum/hallucination/station_message/clock_cult_ark
@@ -131,8 +131,8 @@
 	random_hallucination_weight = 0
 
 /datum/hallucination/station_message/clock_cult_ark/start()
-	hallucinator.playsound_local(hallucinator, 'sound/machines/clockcult/ark_deathrattle.ogg', 50, FALSE, pressure_affected = FALSE)
-	hallucinator.playsound_local(hallucinator, 'sound/effects/clockcult_gateway_disrupted.ogg', 50, FALSE, pressure_affected = FALSE)
+	hallucinator.playsound_local(hallucinator, '../assets/sound/machines/clockcult/ark_deathrattle.ogg', 50, FALSE, pressure_affected = FALSE)
+	hallucinator.playsound_local(hallucinator, '../assets/sound/effects/clockcult_gateway_disrupted.ogg', 50, FALSE, pressure_affected = FALSE)
 	addtimer(CALLBACK(src, PROC_REF(play_distant_explosion_sound)), 2.7 SECONDS)
 	return TRUE // does not call parent to finish up the sound in a few seconds
 
@@ -140,7 +140,7 @@
 	if(QDELETED(src))
 		return
 
-	hallucinator.playsound_local(get_turf(hallucinator), 'sound/effects/explosion/explosion_distant.ogg', 50, FALSE, pressure_affected = FALSE)
+	hallucinator.playsound_local(get_turf(hallucinator), '../assets/sound/effects/explosion/explosion_distant.ogg', 50, FALSE, pressure_affected = FALSE)
 	qdel(src)
 
 #undef CANCEL_FAKE_ALERT

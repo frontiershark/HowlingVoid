@@ -210,7 +210,7 @@
 	desc = "Forces your body to contract onto a single tile."
 	background_icon_state = "bg_heretic"
 	overlay_icon_state = "bg_heretic_border"
-	button_icon = 'icons/mob/actions/actions_ecult.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_ecult.dmi'
 	button_icon_state = "worm_contract"
 	cooldown_time = 30 SECONDS
 	melee_cooldown_time = 0 SECONDS

@@ -2,7 +2,7 @@
 /obj/item/organ/heart/demon
 	name = "demon heart"
 	desc = "Still it beats furiously, emanating an aura of utter hate."
-	icon = 'icons/obj/medical/organs/organs.dmi'
+	icon = '../assets/icons/obj/medical/organs/organs.dmi'
 	icon_state = "demon_heart-on"
 	decay_factor = 0
 
@@ -18,7 +18,7 @@
 		span_warning("[user] raises [src] to [user.p_their()] mouth and tears into it with [user.p_their()] teeth!"),
 		span_danger("An unnatural hunger consumes you. You raise [src] your mouth and devour it!"),
 	)
-	playsound(user, 'sound/effects/magic/demon_consume.ogg', 50, TRUE)
+	playsound(user, '../assets/sound/effects/magic/demon_consume.ogg', 50, TRUE)
 
 	if(locate(/datum/action/cooldown/spell/jaunt/bloodcrawl) in user.actions)
 		to_chat(user, span_warning("...and you don't feel any different."))
@@ -51,6 +51,6 @@
 	name = "pile of viscera"
 	desc = "A repulsive pile of guts and gore."
 	gender = NEUTER
-	icon = 'icons/obj/medical/organs/organs.dmi'
+	icon = '../assets/icons/obj/medical/organs/organs.dmi'
 	icon_state = "innards"
 	random_icon_states = null

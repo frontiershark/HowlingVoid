@@ -1,12 +1,12 @@
 /obj/item/reagent_containers/spray
 	name = "spray bottle"
 	desc = "A spray bottle, with an unscrewable top."
-	icon = 'icons/obj/service/janitor.dmi'
+	icon = '../assets/icons/obj/service/janitor.dmi'
 	icon_state = "sprayer_large"
 	inhand_icon_state = "cleaner"
 	worn_icon_state = "spraybottle"
-	lefthand_file = 'icons/mob/inhands/equipment/custodial_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/custodial_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/custodial_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/custodial_righthand.dmi'
 	item_flags = NOBLUDGEON
 	initial_reagent_flags = OPENCONTAINER | NO_SPLASH
 	slot_flags = ITEM_SLOT_BELT
@@ -24,7 +24,7 @@
 	amount_per_transfer_from_this = 5
 	volume = 250
 	possible_transfer_amounts = list(5,10)
-	var/spray_sound = 'sound/effects/spray2.ogg'
+	var/spray_sound = '../assets/sound/effects/spray2.ogg'
 	reagent_container_liquid_sound = SFX_DEFAULT_LIQUID_SLOSH
 
 /obj/item/reagent_containers/spray/Initialize(mapload, vol)
@@ -206,17 +206,17 @@
 /obj/item/reagent_containers/spray/pepper
 	name = "pepperspray"
 	desc = "Manufactured by UhangInc, used to blind and down an opponent quickly."
-	icon = 'icons/obj/medical/chemical.dmi'
+	icon = '../assets/icons/obj/medical/chemical.dmi'
 	icon_state = "pepperspray"
 	inhand_icon_state = "pepperspray"
-	lefthand_file = 'icons/mob/inhands/equipment/security_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/security_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/security_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/security_righthand.dmi'
 	volume = 50
 	stream_range = 4
 	amount_per_transfer_from_this = 5
 	list_reagents = list(/datum/reagent/consumable/condensedcapsaicin = 50)
-	pickup_sound = 'sound/items/handling/pepper_spray/pepper_spray_pick_up.ogg'
-	drop_sound = 'sound/items/handling/pepper_spray/pepper_spray_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/pepper_spray/pepper_spray_pick_up.ogg'
+	drop_sound = '../assets/sound/items/handling/pepper_spray/pepper_spray_drop.ogg'
 
 /obj/item/reagent_containers/spray/pepper/empty //for protolathe printing
 	list_reagents = null
@@ -229,11 +229,11 @@
 /obj/item/reagent_containers/spray/waterflower
 	name = "water flower"
 	desc = "A seemingly innocent sunflower...with a twist."
-	icon = 'icons/obj/service/hydroponics/harvest.dmi'
+	icon = '../assets/icons/obj/service/hydroponics/harvest.dmi'
 	icon_state = "sunflower"
 	inhand_icon_state = "sunflower"
-	lefthand_file = 'icons/mob/inhands/weapons/plants_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/plants_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/plants_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/plants_righthand.dmi'
 	amount_per_transfer_from_this = 1
 	has_variable_transfer_amount = FALSE
 	can_toggle_range = FALSE
@@ -245,7 +245,7 @@
 /obj/item/reagent_containers/spray/waterflower/superlube
 	name = "clown flower"
 	desc = "A delightfully devilish flower... you've got a feeling where this is going."
-	icon = 'icons/obj/medical/chemical.dmi'
+	icon = '../assets/icons/obj/medical/chemical.dmi'
 	icon_state = "clownflower"
 	volume = 30
 	list_reagents = list(/datum/reagent/lube/superlube = 30)
@@ -294,11 +294,11 @@
 /obj/item/reagent_containers/spray/chemsprayer
 	name = "chem sprayer"
 	desc = "A utility used to spray large amounts of reagents in a given area."
-	icon = 'icons/obj/weapons/guns/ballistic.dmi'
+	icon = '../assets/icons/obj/weapons/guns/ballistic.dmi'
 	icon_state = "chemsprayer"
 	inhand_icon_state = "chemsprayer"
-	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/guns_righthand.dmi'
 	throwforce = 0
 	w_class = WEIGHT_CLASS_NORMAL
 	stream_mode = 1
@@ -329,8 +329,8 @@
 	desc = "A utility used to spray large amounts of cleaning reagents in a given area. It regenerates space cleaner by itself but it's unable to be fueled by normal means."
 	icon_state = "chemsprayer_janitor"
 	inhand_icon_state = "chemsprayer_janitor"
-	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/guns_righthand.dmi'
 	initial_reagent_flags = NONE
 	list_reagents = list(/datum/reagent/space_cleaner = 1000)
 	volume = 1000
@@ -357,11 +357,11 @@
 /obj/item/reagent_containers/spray/chemsprayer/party
 	name = "party popper"
 	desc = "A small device used for celebrations and annoying the janitor."
-	icon = 'icons/obj/toys/toy.dmi'
+	icon = '../assets/icons/obj/toys/toy.dmi'
 	icon_state = "party_popper"
 	inhand_icon_state = "party_popper"
-	lefthand_file = 'icons/mob/inhands/items_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items_righthand.dmi'
 	w_class = WEIGHT_CLASS_TINY
 	initial_reagent_flags = NONE
 	list_reagents = list(/datum/reagent/confetti = 15)
@@ -371,7 +371,7 @@
 	stream_mode = FALSE
 	current_range = 2
 	spray_range = 2
-	spray_sound = 'sound/effects/snap.ogg'
+	spray_sound = '../assets/sound/effects/snap.ogg'
 	possible_transfer_amounts = list(5)
 	reagent_container_liquid_sound = null
 
@@ -384,22 +384,22 @@
 /obj/item/reagent_containers/spray/plantbgone // -- Skie
 	name = "Plant-B-Gone"
 	desc = "Kills those pesky weeds!"
-	icon = 'icons/obj/service/hydroponics/equipment.dmi'
+	icon = '../assets/icons/obj/service/hydroponics/equipment.dmi'
 	icon_state = "plantbgone"
 	inhand_icon_state = "plantbgone"
-	lefthand_file = 'icons/mob/inhands/equipment/hydroponics_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/hydroponics_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/hydroponics_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/hydroponics_righthand.dmi'
 	volume = 100
 	list_reagents = list(/datum/reagent/toxin/plantbgone = 100)
 
 /obj/item/reagent_containers/spray/syndicate
 	name = "suspicious spray bottle"
 	desc = "A spray bottle, with a high performance plastic nozzle. The color scheme makes you feel slightly uneasy."
-	icon = 'icons/obj/medical/chemical.dmi'
+	icon = '../assets/icons/obj/medical/chemical.dmi'
 	icon_state = "sprayer_sus_8"
 	inhand_icon_state = "sprayer_sus"
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/medical_righthand.dmi'
 	spray_range = 4
 	stream_range = 2
 	volume = 100
@@ -428,11 +428,11 @@
 
 /obj/item/reagent_containers/spray/medical
 	name = "medical spray bottle"
-	icon = 'icons/obj/medical/chemical.dmi'
+	icon = '../assets/icons/obj/medical/chemical.dmi'
 	icon_state = "sprayer_med_red"
 	inhand_icon_state = "sprayer_med_red"
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/medical_righthand.dmi'
 	volume = 100
 
 /obj/item/reagent_containers/spray/medical/setup_reskins()
@@ -441,6 +441,6 @@
 /obj/item/reagent_containers/spray/hercuri
 	name = "medical spray (hercuri)"
 	desc = "A medical spray bottle. This one contains hercuri, a medicine used to negate the effects of dangerous high-temperature environments. Careful not to freeze the patient!"
-	icon = 'icons/obj/medical/chemical.dmi'
+	icon = '../assets/icons/obj/medical/chemical.dmi'
 	icon_state = "sprayer_med_yellow"
 	list_reagents = list(/datum/reagent/medicine/c2/hercuri = 100)

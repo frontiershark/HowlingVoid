@@ -5,7 +5,7 @@
 	///The sign that will greet the customers
 	sign_type = /obj/structure/trader_sign
 	///Sound used when item sold/bought
-	sell_sound = 'sound/effects/cashregister.ogg'
+	sell_sound = '../assets/sound/effects/cashregister.ogg'
 	///The currency name
 	currency_name = "credits"
 	///The initial products that the trader offers

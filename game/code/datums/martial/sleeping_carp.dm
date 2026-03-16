@@ -89,7 +89,7 @@
 		attacker,
 	)
 	to_chat(attacker, span_danger("You violently twist [defender]'s [affecting]!"))
-	playsound(defender, 'sound/items/weapons/punch1.ogg', 25, TRUE, -1)
+	playsound(defender, '../assets/sound/items/weapons/punch1.ogg', 25, TRUE, -1)
 	log_combat(attacker, defender, "wrist wrenched (Sleeping Carp)")
 	defender.apply_damage(20, BRUTE, affecting, wound_bonus = 30)
 	defender.drop_all_held_items()
@@ -105,7 +105,7 @@
 		COMBAT_MESSAGE_RANGE,
 		attacker,
 	)
-	playsound(attacker, 'sound/effects/hit_kick.ogg', 50, TRUE, -1)
+	playsound(attacker, '../assets/sound/effects/hit_kick.ogg', 50, TRUE, -1)
 	var/atom/throw_target = get_edge_target_turf(defender, attacker.dir)
 	defender.throw_at(throw_target, 7, 4, attacker)
 	defender.apply_damage(15, attacker.get_attack_type(), BODY_ZONE_CHEST, wound_bonus = CANT_WOUND)
@@ -115,7 +115,7 @@
 /// Keelhaul: Disarm Disarm combo, knocks people down and deals substantial stamina damage, and also discombobulates them. Knocks objects out of their hands if they're already on the ground.
 /datum/martial_art/the_sleeping_carp/proc/drop_kick(mob/living/attacker, mob/living/defender)
 	attacker.do_attack_animation(defender, ATTACK_EFFECT_KICK)
-	playsound(attacker, 'sound/effects/hit_kick.ogg', 50, TRUE, -1)
+	playsound(attacker, '../assets/sound/effects/hit_kick.ogg', 50, TRUE, -1)
 	if(defender.body_position == STANDING_UP)
 		defender.Knockdown(4 SECONDS)
 		defender.visible_message(span_warning("[attacker] kicks [defender] in the head, sending them face first into the floor!"), \
@@ -133,7 +133,7 @@
 /// Kraken Wrack: Grab Harm combo, causes them to be silenced and briefly stunned, as well as doing a moderate amount of stamina damage.
 /datum/martial_art/the_sleeping_carp/proc/knee_stomach(mob/living/attacker, mob/living/defender)
 	attacker.do_attack_animation(defender, ATTACK_EFFECT_KICK)
-	playsound(attacker, 'sound/effects/hit_kick.ogg', 50, TRUE, -1)
+	playsound(attacker, '../assets/sound/effects/hit_kick.ogg', 50, TRUE, -1)
 	defender.visible_message(
 		span_warning("[attacker] violently slams [attacker.p_their()] knee into [defender]!"),
 		span_userdanger("You slam your knee straight into [defender]!"),
@@ -162,7 +162,7 @@
 
 	var/grab_log_description = "grabbed"
 	attacker.do_attack_animation(defender, ATTACK_EFFECT_PUNCH)
-	playsound(defender, 'sound/items/weapons/punch1.ogg', 25, TRUE, -1)
+	playsound(defender, '../assets/sound/items/weapons/punch1.ogg', 25, TRUE, -1)
 	if(defender.stat != DEAD && !defender.IsUnconscious() && defender.get_stamina_loss() >= 80) //We put our target to sleep.
 		defender.visible_message(
 			span_danger("[attacker] carefully pinch a nerve in [defender]'s neck, knocking them out cold!"),
@@ -182,7 +182,7 @@
 	)
 		var/obj/item/bodypart/head = defender.get_bodypart(BODY_ZONE_HEAD)
 		if(!isnull(head))
-			playsound(defender, 'sound/effects/wounds/crack1.ogg', 100)
+			playsound(defender, '../assets/sound/effects/wounds/crack1.ogg', 100)
 			defender.visible_message(
 				span_danger("[attacker] snaps the neck of [defender]!"),
 				span_userdanger("Your neck is snapped by [attacker]!"),
@@ -217,7 +217,7 @@
 		return MARTIAL_ATTACK_SUCCESS
 
 	attacker.do_attack_animation(defender, ATTACK_EFFECT_PUNCH)
-	playsound(defender, 'sound/items/weapons/punch1.ogg', 25, TRUE, -1)
+	playsound(defender, '../assets/sound/items/weapons/punch1.ogg', 25, TRUE, -1)
 	defender.apply_damage(20, STAMINA)
 	log_combat(attacker, defender, "disarmed (Sleeping Carp)")
 	return MARTIAL_ATTACK_INVALID // normal disarm
@@ -300,7 +300,7 @@
 		span_danger("[carp_user] cleanly avoids [attack_text] with incredible speed!"),
 		span_userdanger("You dodge [attack_text]"),
 	)
-	playsound(carp_user.loc, 'sound/items/weapons/punchmiss.ogg', 25, TRUE, -1)
+	playsound(carp_user.loc, '../assets/sound/items/weapons/punchmiss.ogg', 25, TRUE, -1)
 	return SUCCESSFUL_BLOCK
 
 /* Determines how 'carp-y' or how 'martial arts-y' we are, granting us the ability to avoid attacks.
@@ -403,12 +403,12 @@
 	throw_speed = 2
 	attack_verb_continuous = list("smashes", "slams", "whacks", "thwacks")
 	attack_verb_simple = list("smash", "slam", "whack", "thwack")
-	icon = 'icons/obj/weapons/staff.dmi'
+	icon = '../assets/icons/obj/weapons/staff.dmi'
 	icon_state = "bostaff0"
 	base_icon_state = "bostaff"
 	icon_angle = -135
-	lefthand_file = 'icons/mob/inhands/weapons/staves_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/staves_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/staves_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/staves_righthand.dmi'
 	block_chance = 50
 
 /obj/item/staff/bostaff/Initialize(mapload)
@@ -451,7 +451,7 @@
 		H.visible_message(span_warning("[user] [pick(fluffmessages)]s [H] with [src]!"), \
 						span_userdanger("[user] [pick(fluffmessages)]s you with [src]!"), span_hear("You hear a sickening sound of flesh hitting flesh!"), null, user)
 		to_chat(user, span_danger("You [pick(fluffmessages)] [H] with [src]!"))
-		playsound(get_turf(user), 'sound/effects/woodhit.ogg', 75, TRUE, -1)
+		playsound(get_turf(user), '../assets/sound/effects/woodhit.ogg', 75, TRUE, -1)
 		H.adjust_stamina_loss(rand(13,20))
 		if(prob(10))
 			H.visible_message(span_warning("[H] collapses!"), \

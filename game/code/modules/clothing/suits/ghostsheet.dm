@@ -21,13 +21,13 @@
 /obj/item/clothing/suit/costume/ghost_sheet/worn_overlays(mutable_appearance/standing, isinhands, icon_file)
 	. = ..()
 	if(!isinhands && check_holidays(HALLOWEEN))
-		. += emissive_appearance('icons/mob/simple/mob.dmi', "ghost", offset_spokesman = src, alpha = src.alpha)
+		. += emissive_appearance('../assets/icons/mob/simple/mob.dmi', "ghost", offset_spokesman = src, alpha = src.alpha)
 
 /obj/item/clothing/suit/spooky_ghost_sheet
 	name = "spooky ghost"
 	desc = "This is obviously just a bedsheet, but maybe try it on?"
-	icon = 'icons/obj/clothing/suits/costume.dmi'
-	worn_icon = 'icons/mob/clothing/suits/costume.dmi'
+	icon = '../assets/icons/obj/clothing/suits/costume.dmi'
+	worn_icon = '../assets/icons/mob/clothing/suits/costume.dmi'
 	icon_state = "ghost_sheet"
 	inhand_icon_state = null
 	user_vars_to_edit = list("name" = "Spooky Ghost", "real_name" = "Spooky Ghost", "incorporeal_move" = INCORPOREAL_MOVE_BASIC, "appearance_flags" = KEEP_TOGETHER|TILE_BOUND, "alpha" = 150)

@@ -1,7 +1,7 @@
 /obj/structure/towel_bin
 	name = "towel bin"
 	desc = "Seeing this really makes you think of how much worse your life would have been without towels. Seriously, who doesn't use towels?"
-	icon = 'icons/obj/structures.dmi'
+	icon = '../assets/icons/obj/structures.dmi'
 	icon_state = "linenbin-full"
 	anchored = TRUE
 	resistance_flags = FLAMMABLE

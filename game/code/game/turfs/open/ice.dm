@@ -1,7 +1,7 @@
 /turf/open/misc/ice
 	name = "ice sheet"
 	desc = "A sheet of solid ice. Looks slippery."
-	icon = 'icons/turf/floors/ice_turf.dmi'
+	icon = '../assets/icons/turf/floors/ice_turf.dmi'
 	icon_state = "ice_turf-0"
 	base_icon_state = "ice_turf-0"
 	initial_gas_mix = FROZEN_ATMOS
@@ -56,7 +56,7 @@
 	if(!can_make_hole)
 		return FALSE
 	balloon_alert(user, "digging...")
-	playsound(src, 'sound/effects/shovel_dig.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/effects/shovel_dig.ogg', 50, TRUE)
 	if(!do_after(user, 5 SECONDS, src))
 		return FALSE
 	balloon_alert(user, "dug hole")
@@ -66,7 +66,7 @@
 /turf/open/misc/ice/proc/spawn_hole()
 	AddComponent(/datum/component/fishing_spot, GLOB.preset_fish_sources[/datum/fish_source/ice_fishing])
 	ADD_TRAIT(src, TRAIT_CATCH_AND_RELEASE, INNATE_TRAIT)
-	add_overlay(mutable_appearance('icons/turf/overlays.dmi', "ice_hole"))
+	add_overlay(mutable_appearance('../assets/icons/turf/overlays.dmi', "ice_hole"))
 	can_make_hole = FALSE
 	RemoveElement(/datum/element/contextual_screentip_tools, tool_screentips)
 	flags_1 &= ~HAS_CONTEXTUAL_SCREENTIPS_1

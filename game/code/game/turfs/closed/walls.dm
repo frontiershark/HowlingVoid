@@ -1,7 +1,7 @@
 /turf/closed/wall
 	name = "wall"
 	desc = "A huge chunk of iron used to separate rooms."
-	icon = 'icons/turf/walls/wall.dmi' //NOVA EDIT - ICON OVERRIDDEN IN AESTHETICS MODULE
+	icon = '../assets/icons/turf/walls/wall.dmi' //NOVA EDIT - ICON OVERRIDDEN IN AESTHETICS MODULE
 	icon_state = "wall-0"
 	base_icon_state = "wall"
 	explosive_resistance = 1
@@ -94,7 +94,7 @@
 	if(devastated)
 		devastate_wall()
 	else
-		playsound(src, 'sound/items/tools/welder.ogg', 100, TRUE)
+		playsound(src, '../assets/sound/items/tools/welder.ogg', 100, TRUE)
 		var/newgirder = break_wall()
 		if(newgirder) //maybe we don't /want/ a girder!
 			transfer_fingerprints_to(newgirder)
@@ -156,13 +156,13 @@
 	if(arm.bodypart_disabled)
 		return
 	if(prob(hardness))
-		playsound(src, 'sound/effects/meteorimpact.ogg', 100, TRUE)
+		playsound(src, '../assets/sound/effects/meteorimpact.ogg', 100, TRUE)
 		user.say(pick(";RAAAAAAAARGH!", ";HNNNNNNNNNGGGGGGH!", ";GWAAAAAAAARRRHHH!", "NNNNNNNNGGGGGGGGHH!", ";AAAAAAARRRGH!" ), forced = "hulk")
 		hulk_recoil(arm, user)
 		dismantle_wall(1)
 
 	else
-		playsound(src, 'sound/effects/bang.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/effects/bang.ogg', 50, TRUE)
 		add_dent(WALL_DENT_HIT)
 		user.visible_message(span_danger("[user] smashes \the [src]!"), \
 					span_danger("You smash \the [src]!"), \
@@ -191,7 +191,7 @@
 		return
 	user.changeNext_move(CLICK_CD_MELEE)
 	to_chat(user, span_notice("You push the wall but nothing happens!"))
-	playsound(src, 'sound/items/weapons/genhit.ogg', 25, TRUE)
+	playsound(src, '../assets/sound/items/weapons/genhit.ogg', 25, TRUE)
 	add_fingerprint(user)
 
 /turf/closed/wall/item_interaction(mob/living/user, obj/item/tool, list/modifiers)
@@ -287,7 +287,7 @@
 	if(LAZYLEN(dent_decals) >= MAX_DENT_DECALS)
 		return
 
-	var/mutable_appearance/decal = mutable_appearance('icons/effects/effects.dmi', "", BULLET_HOLE_LAYER)
+	var/mutable_appearance/decal = mutable_appearance('../assets/icons/effects/effects.dmi', "", BULLET_HOLE_LAYER)
 	switch(denttype)
 		if(WALL_DENT_SHOT)
 			decal.icon_state = "bullet_hole"

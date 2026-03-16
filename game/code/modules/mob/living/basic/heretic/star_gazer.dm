@@ -1,7 +1,7 @@
 /mob/living/basic/heretic_summon/star_gazer
 	name = "\improper Star Gazer"
 	desc = "A creature that has been tasked to watch over the stars."
-	icon = 'icons/mob/nonhuman-player/96x96eldritch_mobs.dmi'
+	icon = '../assets/icons/mob/nonhuman-player/96x96eldritch_mobs.dmi'
 	icon_state = "star_gazer"
 	icon_living = "star_gazer"
 	pixel_x = -32
@@ -21,11 +21,11 @@
 	attack_verb_continuous = "ravages"
 	attack_verb_simple = "ravage"
 	attack_vis_effect = ATTACK_EFFECT_SLASH
-	attack_sound = 'sound/items/weapons/bladeslice.ogg'
+	attack_sound = '../assets/sound/items/weapons/bladeslice.ogg'
 	melee_attack_cooldown = 0.6 SECONDS
 	speak_emote = list("growls")
 	damage_coeff = list(BRUTE = 1, BURN = 0.5, TOX = 0, STAMINA = 0, OXY = 0)
-	death_sound = 'sound/effects/magic/cosmic_expansion.ogg'
+	death_sound = '../assets/sound/effects/magic/cosmic_expansion.ogg'
 
 	slowed_by_drag = FALSE
 	move_force = MOVE_FORCE_OVERPOWERING
@@ -100,7 +100,7 @@
 		check_jobban = ROLE_HERETIC,
 		poll_time = 20 SECONDS,
 		ignore_category = POLL_IGNORE_HERETIC_MONSTER,
-		alert_pic = mutable_appearance('icons/effects/eldritch.dmi', "cosmic_diamond"),
+		alert_pic = mutable_appearance('../assets/icons/effects/eldritch.dmi', "cosmic_diamond"),
 		jump_target = src,
 		role_name_text = "star gazer",
 		amount_to_pick = 1
@@ -144,7 +144,7 @@
 	desc = "Teleports you to your master"
 	background_icon_state = "bg_heretic"
 	overlay_icon_state = "bg_heretic_border"
-	button_icon = 'icons/mob/actions/actions_ecult.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_ecult.dmi'
 	button_icon_state = "stargazer_menu"
 	check_flags = NONE
 	cooldown_time = 5 SECONDS
@@ -164,7 +164,7 @@
 			Has it's own gravitational pull, sucking in new victims."
 	background_icon_state = "bg_heretic"
 	overlay_icon_state = "bg_heretic_border"
-	button_icon = 'icons/mob/actions/actions_ecult.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_ecult.dmi'
 	button_icon_state = "gazer_beam_charge"
 	check_flags = NONE
 	cooldown_time = 30 SECONDS
@@ -218,7 +218,7 @@
 	cycle_tracker = 0
 	orb_visual = new(get_step(owner, owner.dir))
 	var/beam_timer = addtimer(CALLBACK(src, PROC_REF(open_laser), owner, targets), 2.2 SECONDS, TIMER_STOPPABLE)
-	playsound(owner, 'sound/mobs/non-humanoids/stargazer/beam_open.ogg', 50, FALSE)
+	playsound(owner, '../assets/sound/mobs/non-humanoids/stargazer/beam_open.ogg', 50, FALSE)
 	if(!do_after(owner, 3 SECONDS, owner))
 		cooldown_time = 1 SECONDS
 		deltimer(beam_timer)
@@ -258,13 +258,13 @@
 
 // Visual effect of the big orb when you start channeling the laser
 /obj/effect/abstract/gazer_orb
-	icon = 'icons/effects/160x160.dmi'
+	icon = '../assets/icons/effects/160x160.dmi'
 	icon_state = "gazer_beam_charge"
 	SET_BASE_VISUAL_PIXEL(-64, -64)
 
 // Visual effect at the start of the beam, has an opening/active/closing state
 /obj/effect/abstract/gazer_beam
-	icon = 'icons/effects/beam96x96.dmi'
+	icon = '../assets/icons/effects/beam96x96.dmi'
 	SET_BASE_VISUAL_PIXEL(-32, -32)
 
 /obj/effect/abstract/gazer_beam/Initialize(mapload, turf/target)
@@ -281,7 +281,7 @@
 
 // Visual effect of the middle of the beam, has an opening/active/closing state
 /obj/effect/abstract/gazer_beam_filling
-	icon = 'icons/effects/beam.dmi'
+	icon = '../assets/icons/effects/beam.dmi'
 	icon_state = "gazer_beam"
 
 /obj/effect/abstract/gazer_beam_filling/Initialize(mapload, direction)
@@ -307,7 +307,7 @@
 
 // Visual effect at the end of the beam, has an opening/active/closing state
 /obj/effect/abstract/gazer_beamend
-	icon = 'icons/effects/beam.dmi'
+	icon = '../assets/icons/effects/beam.dmi'
 
 /obj/effect/abstract/gazer_beamend/Initialize(mapload, atom/origin)
 	. = ..()
@@ -322,7 +322,7 @@
 	flick("gazer_beam_end_opening", src)
 
 /datum/looping_sound/gazer_beam
-	mid_sounds = list('sound/mobs/non-humanoids/stargazer/beam_loop_one.ogg')
+	mid_sounds = list('../assets/sound/mobs/non-humanoids/stargazer/beam_loop_one.ogg')
 	mid_length = 109
 	volume = 80
 
@@ -365,7 +365,7 @@
 					continue
 				var/mob/living/living_victim = victim
 				if(living_victim.stat > CONSCIOUS)
-					playsound(living_victim, 'sound/effects/supermatter.ogg', 80, TRUE)
+					playsound(living_victim, '../assets/sound/effects/supermatter.ogg', 80, TRUE)
 					living_victim.visible_message(
 						span_danger("You see [living_victim] engulfed in the scorching wrath of the cosmos. \
 							For a moment, you see their silhouette flail in agony before fading to mere atoms."),

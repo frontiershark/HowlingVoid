@@ -3,7 +3,7 @@
 	name = "PanD.E.M.I.C 2200"
 	desc = "Used to work with viruses."
 	density = TRUE
-	icon = 'icons/obj/medical/chemical.dmi'
+	icon = '../assets/icons/obj/medical/chemical.dmi'
 	icon_state = "pandemic0"
 	icon_keyboard = null
 	icon_screen = null
@@ -381,5 +381,5 @@
 	wait = FALSE
 	SStgui.update_uis(src)
 	update_appearance()
-	playsound(src, 'sound/machines/ping.ogg', 30, TRUE)
+	playsound(src, '../assets/sound/machines/ping.ogg', 30, TRUE)
 	return TRUE

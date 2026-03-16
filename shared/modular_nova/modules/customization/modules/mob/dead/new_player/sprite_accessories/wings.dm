@@ -6,7 +6,7 @@
 * Check some of the wings that make use of them for examples on how to make it look decent.
 */
 /datum/sprite_accessory/wings
-	icon = 'icons/mob/human/species/wings.dmi'
+	icon = '../assets/icons/mob/human/species/wings.dmi'
 	key = FEATURE_WINGS
 	color_src = USE_ONE_COLOR
 	recommended_species = list(
@@ -319,7 +319,7 @@
 */
 
 /datum/sprite_accessory/wings/moth
-	icon = 'icons/mob/human/species/moth/moth_wings.dmi' // Needs new icon to suit new naming convention
+	icon = '../assets/icons/mob/human/species/moth/moth_wings.dmi' // Needs new icon to suit new naming convention
 	default_color = "#FFFFFF"
 	recommended_species = list(SPECIES_MOTH = 1, SPECIES_MAMMAL = 1, SPECIES_INSECT = 1) // Mammals too, I guess. They wont get flight though, see the wing organs for that logic
 	organ_type = /obj/item/organ/wings/moth

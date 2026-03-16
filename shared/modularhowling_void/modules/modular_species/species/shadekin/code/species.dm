@@ -119,7 +119,7 @@
 /obj/item/organ/brain/shadekin
 	name = "shadekin brain"
 	desc = "A mysterious brain."
-	icon = 'icons/obj/medical/organs/organs.dmi'
+	icon = '../assets/icons/obj/medical/organs/organs.dmi'
 	icon_state = "brain-x-d"
 	var/applied_status = /datum/status_effect/shadekin_regeneration
 

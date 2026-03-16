@@ -1,6 +1,6 @@
 /obj/effect/sliding_puzzle
 	name = "Sliding puzzle generator"
-	icon = 'icons/obj/toys/balloons.dmi' //mapping
+	icon = '../assets/icons/obj/toys/balloons.dmi' //mapping
 	icon_state = "syndballoon"
 	invisibility = INVISIBILITY_ABSTRACT
 	anchored = TRUE
@@ -138,10 +138,10 @@
 	return sortTim(elements,cmp=/proc/cmp_xy_desc)
 
 /obj/effect/sliding_puzzle/proc/get_base_icon()
-	var/icon/I = new('icons/obj/fluff/puzzle.dmi')
+	var/icon/I = new('../assets/icons/obj/fluff/puzzle.dmi')
 	var/list/puzzles = icon_states(I)
 	var/puzzle_state = pick(puzzles)
-	var/icon/P = new('icons/obj/fluff/puzzle.dmi',puzzle_state)
+	var/icon/P = new('../assets/icons/obj/fluff/puzzle.dmi',puzzle_state)
 	return P
 
 /obj/effect/sliding_puzzle/proc/setup()
@@ -197,7 +197,7 @@
 /obj/structure/puzzle_element
 	name = "mysterious pillar"
 	desc = "Puzzling..."
-	icon = 'icons/obj/mining_zones/artefacts.dmi'
+	icon = '../assets/icons/obj/mining_zones/artefacts.dmi'
 	icon_state = "puzzle_pillar"
 	anchored = FALSE
 	density = TRUE
@@ -317,7 +317,7 @@
 /obj/item/prisoncube
 	name = "prison cube"
 	desc = "Dusty cube with humanoid imprint on it."
-	icon = 'icons/obj/mining_zones/artefacts.dmi'
+	icon = '../assets/icons/obj/mining_zones/artefacts.dmi'
 	icon_state = "prison_cube"
 
 /obj/item/prisoncube/interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)

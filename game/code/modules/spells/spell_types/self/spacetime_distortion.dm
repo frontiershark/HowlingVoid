@@ -3,7 +3,7 @@
 	name = "Spacetime Distortion"
 	desc = "Entangle the strings of space-time in an area around you, \
 		randomizing the layout and making proper movement impossible. The strings vibrate..."
-	sound = 'sound/effects/magic.ogg'
+	sound = '../assets/sound/effects/magic.ogg'
 	button_icon_state = "spacetime"
 
 	school = SCHOOL_EVOCATION

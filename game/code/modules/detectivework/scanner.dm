@@ -3,13 +3,13 @@
 /obj/item/detective_scanner
 	name = "forensic scanner"
 	desc = "Used to remotely scan objects and biomass for DNA and fingerprints. Can print a report of the findings."
-	icon = 'icons/obj/devices/scanner.dmi'
+	icon = '../assets/icons/obj/devices/scanner.dmi'
 	icon_state = "forensicnew"
 	w_class = WEIGHT_CLASS_SMALL
 	inhand_icon_state = "electronic"
 	worn_icon_state = "electronic"
-	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/devices_righthand.dmi'
 	obj_flags = CONDUCTS_ELECTRICITY
 	item_flags = NOBLUDGEON
 	slot_flags = ITEM_SLOT_BELT
@@ -244,7 +244,7 @@
 				balloon_alert(ui.user, "scanner busy!")
 				return
 			scanner_busy = TRUE
-			playsound(src, 'sound/machines/printer.ogg', 50)
+			playsound(src, '../assets/sound/machines/printer.ogg', 50)
 			balloon_alert(ui.user, "printing report...")
 			addtimer(CALLBACK(src, PROC_REF(safe_print_report)), 3 SECONDS)
 

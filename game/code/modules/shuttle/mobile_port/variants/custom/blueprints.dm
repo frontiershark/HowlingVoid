@@ -1,5 +1,5 @@
 /obj/effect/client_image_holder/shuttle_construction_visualization
-	image_icon = 'icons/effects/alphacolors.dmi'
+	image_icon = '../assets/icons/effects/alphacolors.dmi'
 	image_state = "transparent"
 	image_layer = ABOVE_NORMAL_TURF_LAYER
 	image_plane = ABOVE_GAME_PLANE
@@ -122,7 +122,7 @@
 /obj/item/shuttle_blueprints
 	name = "shuttle blueprints"
 	desc = "A blank sheet of synthetic engineering-grade paper."
-	icon = 'icons/obj/scrolls.dmi'
+	icon = '../assets/icons/obj/scrolls.dmi'
 	icon_state = "shuttle_blueprints0"
 	base_icon_state = "shuttle_blueprints"
 	inhand_icon_state = "blueprints"
@@ -267,13 +267,13 @@
 			user.do_attack_animation(attacked, used_item = hitting_implement)
 			if(hitting_implement && !bottle)
 				if(hitting_implement.force)
-					playsound(hitting_implement, 'sound/items/weapons/smash.ogg', hitting_implement.get_clamped_volume(), TRUE, hitting_implement.stealthy_audio ? SILENCED_SOUND_EXTRARANGE : -1, falloff_distance = 0)
+					playsound(hitting_implement, '../assets/sound/items/weapons/smash.ogg', hitting_implement.get_clamped_volume(), TRUE, hitting_implement.stealthy_audio ? SILENCED_SOUND_EXTRARANGE : -1, falloff_distance = 0)
 				else
-					playsound(hitting_implement, 'sound/items/weapons/tap.ogg', hitting_implement.get_clamped_volume(), TRUE, -1)
+					playsound(hitting_implement, '../assets/sound/items/weapons/tap.ogg', hitting_implement.get_clamped_volume(), TRUE, -1)
 			else if(bottle)
 				bottle.smash(attacked, user)
 			else
-				playsound(user, 'sound/effects/bang.ogg', 50, TRUE)
+				playsound(user, '../assets/sound/effects/bang.ogg', 50, TRUE)
 		user.visible_message(span_warning(msg), span_warning(self_msg))
 	else
 		user.visible_message(
@@ -705,7 +705,7 @@
 /obj/item/shuttle_blueprints/borg
 	name = "shuttle blueprint database"
 	desc = "A module designed to store the plans for one or more shuttles."
-	icon = 'icons/obj/items_cyborg.dmi'
+	icon = '../assets/icons/obj/items_cyborg.dmi'
 	icon_state = "shuttle_database0"
 	base_icon_state = "shuttle_database"
 	damtype = BURN // In case fantasy affixes or adminbus end up making this actually capable of hurting someone.

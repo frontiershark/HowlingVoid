@@ -45,7 +45,7 @@
 	RegisterSignal(marked_atom, COMSIG_QDELETING, PROC_REF(cleanup_marked_atom))
 	update_icon()
 	flick("multitool_circuit_flick", src)
-	playsound(src.loc, 'sound/machines/compiler/compiler-stage2.ogg', 30, TRUE)
+	playsound(src.loc, '../assets/sound/machines/compiler/compiler-stage2.ogg', 30, TRUE)
 	return TRUE
 
 /// Allow users to mark items equipped by the target that are visible.
@@ -66,7 +66,7 @@
 
 	var/list/selectable_targets = list()
 	var/datum/radial_menu_choice/mob_choice = new
-	mob_choice.image = image(icon = 'icons/hud/radial.dmi', icon_state = "radial_mob")
+	mob_choice.image = image(icon = '../assets/icons/hud/radial.dmi', icon_state = "radial_mob")
 	mob_choice.name = target.name
 	selectable_targets[REF(target)] = mob_choice
 	for(var/obj/item/item as anything in visible_items)

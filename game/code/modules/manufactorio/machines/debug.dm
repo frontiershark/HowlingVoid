@@ -1,6 +1,6 @@
 /obj/loop_spawner
 	name = "testing loop spawner"
-	icon = 'icons/obj/machines/mining_machines.dmi'
+	icon = '../assets/icons/obj/machines/mining_machines.dmi'
 	icon_state = "unloader"
 	anchored = TRUE
 	color = COLOR_PURPLE

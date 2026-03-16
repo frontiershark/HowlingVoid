@@ -4,13 +4,13 @@
 	var/static/datum/universal_icon/lizard_with_snout
 
 	if (isnull(lizard))
-		lizard = uni_icon('icons/mob/human/species/lizard/bodyparts.dmi', "lizard_head", EAST)
+		lizard = uni_icon('../assets/icons/mob/human/species/lizard/bodyparts.dmi', "lizard_head", EAST)
 		var/datum/universal_icon/eyes = uni_icon(/obj/item/organ/eyes/lizard::eye_icon, "[/obj/item/organ/eyes/lizard::eye_icon_state]_l", EAST)
 		eyes.blend_color(COLOR_GRAY, ICON_MULTIPLY)
 		lizard.blend_icon(eyes, ICON_OVERLAY)
 
 		lizard_with_snout = lizard.copy()
-		lizard_with_snout.blend_icon(uni_icon('icons/mob/human/species/lizard/lizard_misc.dmi', "m_snout_round_ADJ", EAST), ICON_OVERLAY)
+		lizard_with_snout.blend_icon(uni_icon('../assets/icons/mob/human/species/lizard/lizard_misc.dmi', "m_snout_round_ADJ", EAST), ICON_OVERLAY)
 
 	var/datum/universal_icon/final_icon = include_snout ? lizard_with_snout.copy() : lizard.copy()
 
@@ -35,7 +35,7 @@
 /datum/preference/choiced/species_feature/lizard_body_markings/icon_for(value)
 	var/datum/sprite_accessory/sprite_accessory = get_accessory_for_value(value)
 
-	var/datum/universal_icon/final_icon = uni_icon('icons/mob/human/species/lizard/bodyparts.dmi', "lizard_chest_m")
+	var/datum/universal_icon/final_icon = uni_icon('../assets/icons/mob/human/species/lizard/bodyparts.dmi', "lizard_chest_m")
 
 	if (sprite_accessory.icon_state != SPRITE_ACCESSORY_NONE)
 		var/datum/universal_icon/body_markings_icon = uni_icon(

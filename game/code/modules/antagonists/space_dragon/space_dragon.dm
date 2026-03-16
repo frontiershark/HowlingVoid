@@ -41,7 +41,7 @@
 					Today, we will snuff out one of those lights.</b>")
 	to_chat(owner, span_boldwarning("You have five minutes to find a safe location to place down the first rift.  If you take longer than five minutes to place a rift, you will be returned from whence you came."))
 	owner.announce_objectives()
-	owner.current.playsound_local(get_turf(owner.current), 'sound/effects/magic/demon_attack1.ogg', 80)
+	owner.current.playsound_local(get_turf(owner.current), '../assets/sound/effects/magic/demon_attack1.ogg', 80)
 
 /datum/antagonist/space_dragon/forge_objectives()
 	var/static/list/area/allowed_areas
@@ -89,7 +89,7 @@
 		network_name = "Wavespeak", \
 		chat_color = "#635BAF", \
 		signals_which_destroy_us = list(COMSIG_LIVING_DEATH), \
-		speech_action_icon = 'icons/mob/actions/actions_space_dragon.dmi', \
+		speech_action_icon = '../assets/icons/mob/actions/actions_space_dragon.dmi', \
 		speech_action_icon_state = "wavespeak", \
 	)
 	RegisterSignal(wavespeak, COMSIG_QDELETING, PROC_REF(clear_wavespeak))
@@ -111,10 +111,10 @@
 	return ..()
 
 /datum/antagonist/space_dragon/get_preview_icon()
-	var/icon/icon = icon('icons/mob/nonhuman-player/spacedragon.dmi', "spacedragon")
+	var/icon/icon = icon('../assets/icons/mob/nonhuman-player/spacedragon.dmi', "spacedragon")
 
 	icon.Blend(COLOR_STRONG_VIOLET, ICON_MULTIPLY)
-	icon.Blend(icon('icons/mob/nonhuman-player/spacedragon.dmi', "spacedragon_overlay_base"), ICON_OVERLAY)
+	icon.Blend(icon('../assets/icons/mob/nonhuman-player/spacedragon.dmi', "spacedragon_overlay_base"), ICON_OVERLAY)
 
 	icon.Crop(10, 9, 54, 53)
 	icon.Scale(ANTAGONIST_PREVIEW_ICON_SIZE, ANTAGONIST_PREVIEW_ICON_SIZE)
@@ -144,7 +144,7 @@
 	if(riftTimer >= maxRiftTimer)
 		to_chat(owner.current, span_boldwarning("You've failed to summon the rift in a timely manner! You're being pulled back from whence you came!"))
 		destroy_rifts()
-		SEND_SOUND(owner.current, sound('sound/effects/magic/demon_dies.ogg'))
+		SEND_SOUND(owner.current, sound('../assets/sound/effects/magic/demon_dies.ogg'))
 		owner.current.death(/* gibbed = */ TRUE)
 		QDEL_NULL(owner.current)
 
@@ -162,7 +162,7 @@
 	ADD_TRAIT(owner.current, TRAIT_RIFT_FAILURE, REF(src))
 	owner.current.add_movespeed_modifier(/datum/movespeed_modifier/dragon_depression)
 	riftTimer = -1
-	SEND_SOUND(owner.current, sound('sound/vehicles/rocketlaunch.ogg'))
+	SEND_SOUND(owner.current, sound('../assets/sound/vehicles/rocketlaunch.ogg'))
 	for(var/obj/structure/carp_rift/rift as anything in rift_list)
 		rift.dragon = null
 		rift_list -= rift
@@ -190,7 +190,7 @@
 	main_objective?.completed = TRUE
 	priority_announce("A large amount of lifeforms have been detected approaching [station_name()] at extreme speeds. \
 		Remaining crew are advised to evacuate as soon as possible.", "[command_name()] Wildlife Observations", has_important_message = TRUE)
-	sound_to_playing_players('sound/mobs/non-humanoids/space_dragon/space_dragon_roar.ogg', volume = 75)
+	sound_to_playing_players('../assets/sound/mobs/non-humanoids/space_dragon/space_dragon_roar.ogg', volume = 75)
 	for(var/obj/structure/carp_rift/rift as anything in rift_list)
 		rift.carp_stored = 999999
 		rift.time_charged = rift.max_charge

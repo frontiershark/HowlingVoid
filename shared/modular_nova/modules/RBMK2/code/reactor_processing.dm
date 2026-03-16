@@ -81,7 +81,7 @@
 	transfer_rod_temperature(buffer_gases)
 
 	if(SPT_PROB(2.5, seconds_per_tick))
-		playsound(src, 'sound/misc/metal_creak.ogg', 50, TRUE, extrarange = -3)
+		playsound(src, '../assets/sound/misc/metal_creak.ogg', 50, TRUE, extrarange = -3)
 
 	if(!jammed && safety && (last_power_generation >= safeties_max_power_generation || rod_mix_pressure > stored_rod.pressure_limit*0.9)) //The safety system is very strict. Nanotrasen wants employees to feel safe!
 		var/health_percent = atom_integrity/max_integrity

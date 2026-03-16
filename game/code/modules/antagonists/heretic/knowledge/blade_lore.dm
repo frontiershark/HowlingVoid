@@ -4,7 +4,7 @@
 	complexity = "Hard"
 	complexity_color = COLOR_RED
 	icon = list(
-		"icon" = 'icons/obj/weapons/khopesh.dmi',
+		"icon" = '../assets/icons/obj/weapons/khopesh.dmi',
 		"state" = "dark_blade",
 		"frame" = 1,
 		"dir" = SOUTH,
@@ -62,7 +62,7 @@
 	)
 	result_atoms = list(/obj/item/melee/sickly_blade/dark)
 	limit = 4 // It's the blade path, it's a given
-	research_tree_icon_path = 'icons/obj/weapons/khopesh.dmi'
+	research_tree_icon_path = '../assets/icons/obj/weapons/khopesh.dmi'
 	research_tree_icon_state = "dark_blade"
 	mark_type = /datum/status_effect/eldritch/blade
 	eldritch_passive = /datum/status_effect/heretic_passive/blade
@@ -77,7 +77,7 @@
 	target.AdjustParalyzed(1.5 SECONDS)
 	target.apply_damage(10, BRUTE, wound_bonus = CANT_WOUND)
 	target.balloon_alert(source, "backstab!")
-	playsound(target, 'sound/items/weapons/guillotine.ogg', 100, TRUE)
+	playsound(target, '../assets/sound/items/weapons/guillotine.ogg', 100, TRUE)
 
 /datum/heretic_knowledge/limited_amount/starting/base_blade/create_mark(mob/living/source, mob/living/target)
 	var/datum/status_effect/eldritch/blade/blade_mark = ..()
@@ -113,7 +113,7 @@
 	gain_text = "In time, it was he who stood alone among the bodies of his former comrades, awash in blood, none of it his own. \
 		He was without rival, equal, or purpose."
 	cost = 2
-	research_tree_icon_path = 'icons/effects/blood.dmi'
+	research_tree_icon_path = '../assets/icons/effects/blood.dmi'
 	research_tree_icon_state = "suitblood"
 	research_tree_icon_dir = SOUTH
 	drafting_tier = 5
@@ -209,7 +209,7 @@
 		You are able to infuse your mansus grasp directly into your blades, and your blades are more effective against structures."
 	gain_text = "I found him cleaved in twain, halves locked in a duel without end; \
 		a flurry of blades, neither hitting their mark, for the Champion was indomitable."
-	research_tree_icon_path = 'icons/ui_icons/antags/heretic/knowledge.dmi'
+	research_tree_icon_path = '../assets/icons/ui_icons/antags/heretic/knowledge.dmi'
 	research_tree_icon_state = "blade_upgrade_blade"
 	/// How much force do we apply to the offhand?
 	var/offand_force_decrement = 0
@@ -321,7 +321,7 @@
 
 	ascension_achievement = /datum/award/achievement/misc/blade_ascension
 	announcement_text = "%SPOOKY% Master of blades, the Torn Champion's disciple, %NAME% has ascended! Their steel is that which will cut reality in a maelstom of silver! %SPOOKY%"
-	announcement_sound = 'sound/music/antag/heretic/ascend_blade.ogg'
+	announcement_sound = '../assets/sound/music/antag/heretic/ascend_blade.ogg'
 
 /datum/heretic_knowledge/ultimate/blade_final/is_valid_sacrifice(mob/living/carbon/human/sacrifice)
 	. = ..()

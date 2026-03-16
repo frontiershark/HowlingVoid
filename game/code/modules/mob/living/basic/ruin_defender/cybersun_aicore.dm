@@ -6,7 +6,7 @@
 /mob/living/basic/cybersun_ai_core
 	name = "\improper Cybersun AI Core"
 	desc = "An evil looking computer."
-	icon = 'icons/mob/silicon/ai.dmi'
+	icon = '../assets/icons/mob/silicon/ai.dmi'
 	icon_state = "ai-core"
 	icon_living = "ai-core"
 	gender = NEUTER
@@ -88,7 +88,7 @@
 	return ..()
 
 /obj/effect/temp_visual/cybersun_ai_core_death
-	icon = 'icons/mob/silicon/ai.dmi'
+	icon = '../assets/icons/mob/silicon/ai.dmi'
 	icon_state = "ai-core"
 	duration = 2 SECONDS
 
@@ -96,7 +96,7 @@
 	. = ..()
 	add_overlay("ai-red_dead")
 
-	playsound(src, 'sound/misc/metal_creak.ogg', vol = 100, vary = TRUE, pressure_affected = FALSE)
+	playsound(src, '../assets/sound/misc/metal_creak.ogg', vol = 100, vary = TRUE, pressure_affected = FALSE)
 	Shake(1, 0, 2 SECONDS)
 	addtimer(CALLBACK(src, PROC_REF(gib)), duration - 1, TIMER_DELETE_ME)
 
@@ -104,7 +104,7 @@
 ///dramatic death animations
 	var/turf/my_turf = get_turf(src)
 	new /obj/effect/gibspawner/robot(my_turf)
-	playsound(loc, 'sound/effects/explosion/explosion2.ogg', vol = 75, vary = TRUE, pressure_affected = FALSE)
+	playsound(loc, '../assets/sound/effects/explosion/explosion2.ogg', vol = 75, vary = TRUE, pressure_affected = FALSE)
 	for (var/mob/witness in range(10, src))
 		if (!witness.client || !isliving(witness))
 			continue
@@ -131,7 +131,7 @@
 /datum/action/cooldown/spell/pointed/lightning_strike
 	name = "lightning strike"
 	desc = "Electrocutes a target with a big lightning bolt. Has a small delay."
-	button_icon = 'icons/mob/actions/actions_spells.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_spells.dmi'
 	button_icon_state = "lightning"
 	cooldown_time = 4 SECONDS
 	click_to_activate = TRUE
@@ -146,12 +146,12 @@
 	. = ..()
 	//this is where the spell will hit. it will not move even if the target does, allowing the spell to be dodged.
 	new/obj/effect/temp_visual/lightning_strike(get_turf(target))
-	playsound(owner, 'sound/effects/sparks/sparks1.ogg', vol = 120, vary = TRUE)
+	playsound(owner, '../assets/sound/effects/sparks/sparks1.ogg', vol = 120, vary = TRUE)
 
 /obj/effect/temp_visual/lightning_strike
 	name = "lightning strike"
 	desc = "A lightning bolt is about to hit this location. There's a handy hologram to warn people so they don't stand here."
-	icon = 'icons/mob/telegraphing/telegraph_holographic.dmi'
+	icon = '../assets/icons/mob/telegraphing/telegraph_holographic.dmi'
 	icon_state = "target_circle"
 	duration = 1 SECONDS
 	//  amount of damage a guy takes if they're on this tile
@@ -169,7 +169,7 @@
 
 /obj/effect/temp_visual/lightning_strike/proc/zap()
 	new/obj/effect/temp_visual/lightning_strike_zap(loc)
-	playsound(src, 'sound/effects/magic/lightningbolt.ogg', vol = 70, vary = TRUE)
+	playsound(src, '../assets/sound/effects/magic/lightningbolt.ogg', vol = 70, vary = TRUE)
 	if (!isturf(loc))
 		return
 	for(var/mob/living/victim in loc)
@@ -181,7 +181,7 @@
 /obj/effect/temp_visual/lightning_strike_zap
 	name = "lightning bolt"
 	desc = "Lightning bolt! Lightning bolt! Lightning bolt! Lightning bolt! Lightning bolt! Lightning bolt! Lightning bolt! Lightning bolt!"
-	icon = 'icons/effects/32x96.dmi'
+	icon = '../assets/icons/effects/32x96.dmi'
 	icon_state = "thunderbolt"
 	duration = 0.4 SECONDS
 
@@ -197,7 +197,7 @@
 /datum/action/cooldown/spell/pointed/projectile/cybersun_barrage
 	name = "plasma beam barrage"
 	desc = "Charges up a cluster of lasers, then sends it towards a foe after a short delay."
-	button_icon = 'icons/obj/weapons/transforming_energy.dmi'
+	button_icon = '../assets/icons/obj/weapons/transforming_energy.dmi'
 	button_icon_state = "e_sword_on_red"
 	cooldown_time = 5.5 SECONDS
 	click_to_activate = TRUE
@@ -215,7 +215,7 @@
 	if(lockon_zone == my_turf)
 		return
 	my_turf.Beam(lockon_zone, icon_state = "1-full", beam_color = COLOR_MEDIUM_DARK_RED, time = barrage_delay)
-	playsound(lockon_zone, 'sound/machines/terminal/terminal_prompt_deny.ogg', vol = 60, vary = TRUE)
+	playsound(lockon_zone, '../assets/sound/machines/terminal/terminal_prompt_deny.ogg', vol = 60, vary = TRUE)
 	StartCooldown(cooldown_time)
 	return ..()
 

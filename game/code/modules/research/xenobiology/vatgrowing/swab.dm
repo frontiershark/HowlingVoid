@@ -2,7 +2,7 @@
 /obj/item/swab
 	name = "swab"
 	desc = "Some men use these for different reasons."
-	icon = 'icons/obj/science/vatgrowing.dmi'
+	icon = '../assets/icons/obj/science/vatgrowing.dmi'
 	icon_state = "swab"
 	w_class = WEIGHT_CLASS_TINY
 

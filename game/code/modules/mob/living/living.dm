@@ -429,7 +429,7 @@
 	SEND_SIGNAL(src, COMSIG_LIVING_START_PULL, AM, state, force)
 
 	if(!supress_message)
-		var/sound_to_play = 'sound/items/weapons/thudswoosh.ogg'
+		var/sound_to_play = '../assets/sound/items/weapons/thudswoosh.ogg'
 		if(ishuman(src))
 			var/mob/living/carbon/human/H = src
 			if(H.dna.species.grab_sound)
@@ -918,7 +918,7 @@ NOVA EDIT REMOVAL END */
 			var/icon/mob_mask = icon(icon, icon_state)
 			if(get_cached_height() > ICON_SIZE_Y || get_cached_width() > ICON_SIZE_X)
 				var/health_doll_icon_state = health_doll_icon ? health_doll_icon : "megasprite"
-				mob_mask = icon('icons/hud/screen_gen.dmi', health_doll_icon_state) //swap to something generic if they have no special doll
+				mob_mask = icon('../assets/icons/hud/screen_gen.dmi', health_doll_icon_state) //swap to something generic if they have no special doll
 			livingdoll.add_filter("mob_shape_mask", 1, alpha_mask_filter(icon = mob_mask))
 			livingdoll.add_filter("inset_drop_shadow", 2, drop_shadow_filter(size = -1))
 	if(severity > 0)
@@ -1156,7 +1156,7 @@ NOVA EDIT REMOVAL END */
 	return TRUE
 
 /mob/living/experience_pressure_difference(pressure_difference, direction, pressure_resistance_prob_delta = 0)
-	playsound(src, 'sound/effects/space_wind.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/effects/space_wind.ogg', 50, TRUE)
 	if(buckled || mob_negates_gravity())
 		return
 
@@ -1313,7 +1313,7 @@ NOVA EDIT REMOVAL END */
 				visible_message(span_cyan("[src] slips free of [pulledby]'s grip!"), \
 								span_cyan("You slip free of [pulledby]'s grip!"), null, null, pulledby)
 				to_chat(pulledby, span_cyan("[src] slips free of your grip!"))
-				playsound(loc, 'sound/misc/slip.ogg', 50, TRUE, -1)
+				playsound(loc, '../assets/sound/misc/slip.ogg', 50, TRUE, -1)
 				log_combat(pulledby, src, "broke grab")
 				pulledby.stop_pulling()
 				return FALSE
@@ -3005,7 +3005,7 @@ GLOBAL_LIST_EMPTY(fire_appearances)
 	if(isnull(guardian_client))
 		return
 	else if(guardian_client == "Poll Ghosts")
-		var/mob/chosen_one = SSpolling.poll_ghost_candidates("Do you want to play as an admin created [span_notice("Guardian Spirit")] of [span_danger(real_name)]?", check_jobban = ROLE_PAI, poll_time = 10 SECONDS, ignore_category = POLL_IGNORE_HOLOPARASITE, alert_pic = mutable_appearance('icons/mob/nonhuman-player/guardian.dmi', "magicexample"), jump_target = src, role_name_text = "guardian spirit", amount_to_pick = 1)
+		var/mob/chosen_one = SSpolling.poll_ghost_candidates("Do you want to play as an admin created [span_notice("Guardian Spirit")] of [span_danger(real_name)]?", check_jobban = ROLE_PAI, poll_time = 10 SECONDS, ignore_category = POLL_IGNORE_HOLOPARASITE, alert_pic = mutable_appearance('../assets/icons/mob/nonhuman-player/guardian.dmi', "magicexample"), jump_target = src, role_name_text = "guardian spirit", amount_to_pick = 1)
 		if(chosen_one)
 			guardian_client = chosen_one.client
 		else
@@ -3122,14 +3122,14 @@ GLOBAL_LIST_EMPTY(fire_appearances)
 	var/static/list/icon/blocking_overlay
 	if(isnull(blocking_overlay))
 		blocking_overlay = list(
-			mutable_appearance('icons/mob/effects/blocking.dmi', "wow"),
-			mutable_appearance('icons/mob/effects/blocking.dmi', "nice"),
-			mutable_appearance('icons/mob/effects/blocking.dmi', "good"),
+			mutable_appearance('../assets/icons/mob/effects/blocking.dmi', "wow"),
+			mutable_appearance('../assets/icons/mob/effects/blocking.dmi', "nice"),
+			mutable_appearance('../assets/icons/mob/effects/blocking.dmi', "good"),
 		)
 	ADD_TRAIT(src, TRAIT_BLOCKING_PROJECTILES, BLOCKING_TRAIT)
 	var/icon/selected_overlay = pick(blocking_overlay)
 	add_overlay(selected_overlay)
-	playsound(src, 'sound/items/weapons/fwoosh.ogg', 90, FALSE, frequency = 0.7)
+	playsound(src, '../assets/sound/items/weapons/fwoosh.ogg', 90, FALSE, frequency = 0.7)
 	update_transform(1.25)
 	addtimer(CALLBACK(src, PROC_REF(end_block_effects), selected_overlay), 0.6 SECONDS)
 

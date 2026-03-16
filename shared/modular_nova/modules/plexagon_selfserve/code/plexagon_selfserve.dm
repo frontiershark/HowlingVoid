@@ -247,7 +247,7 @@
 				user_mind.clocked_out_of_job = FALSE
 
 				computer.update_static_data_for_all_viewers()
-				playsound(computer, 'sound/machines/ping.ogg', 50, FALSE)
+				playsound(computer, '../assets/sound/machines/ping.ogg', 50, FALSE)
 
 			else
 				if(!clock_out(inserted_auth_card))
@@ -257,7 +257,7 @@
 				user_mind.clocked_out_of_job = TRUE
 
 				computer.update_static_data_for_all_viewers()
-				playsound(computer, 'sound/machines/ping.ogg', 50, FALSE)
+				playsound(computer, '../assets/sound/machines/ping.ogg', 50, FALSE)
 				computer.remove_id(human_user, silent = TRUE)
 
 			return TRUE

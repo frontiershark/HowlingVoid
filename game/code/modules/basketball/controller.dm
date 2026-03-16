@@ -118,17 +118,17 @@ GLOBAL_VAR(basketball_game)
 		"Basketball minigame is about to start!",
 		source = home_hoop,
 		header = "Basketball Minigame",
-		ghost_sound = 'sound/effects/ghost2.ogg',
+		ghost_sound = '../assets/sound/effects/ghost2.ogg',
 		notify_volume = 75,
 	)
 
 	create_bodies(ready_players)
 	addtimer(CALLBACK(src, PROC_REF(victory)), game_duration)
 	for(var/i in 1 to 10)
-		addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(playsound), home_hoop, 'sound/items/timer.ogg', 75, FALSE), game_duration - (i SECONDS))
+		addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(playsound), home_hoop, '../assets/sound/items/timer.ogg', 75, FALSE), game_duration - (i SECONDS))
 		addtimer(CALLBACK(home_hoop, TYPE_PROC_REF(/atom/movable/, say), "[i] seconds left"), game_duration - (i SECONDS))
 
-		addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(playsound), away_hoop, 'sound/items/timer.ogg', 75, FALSE), game_duration - (i SECONDS))
+		addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(playsound), away_hoop, '../assets/sound/items/timer.ogg', 75, FALSE), game_duration - (i SECONDS))
 		addtimer(CALLBACK(away_hoop, TYPE_PROC_REF(/atom/movable/, say), "[i] seconds left"), game_duration - (i SECONDS))
 
 /**
@@ -201,7 +201,7 @@ GLOBAL_VAR(basketball_game)
 		baller.PossessByPlayer(player_key)
 		minigame_basketball_mobs |= baller
 
-		SEND_SOUND(baller, sound('sound/items/whistle/whistle.ogg', volume=30))
+		SEND_SOUND(baller, sound('../assets/sound/items/whistle/whistle.ogg', volume=30))
 		if(is_player_referee)
 			to_chat(baller, span_notice("You are a referee. Make sure the teams play fair and use your whistle to call fouls appropriately."))
 		else

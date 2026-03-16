@@ -8,7 +8,7 @@
 	check_flags = AB_CHECK_CONSCIOUS|AB_CHECK_INCAPACITATED
 	click_to_activate = FALSE
 	cooldown_time = 1 SECONDS
-	button_icon = 'icons/mob/actions/actions_animal.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_animal.dmi'
 	background_icon_state = "bg_clock"
 	overlay_icon_state = "bg_clock_border"
 	button_icon_state = "coffer_off"
@@ -97,7 +97,7 @@
 	desc = "Raise an army out of the hordes of mice and pests crawling around the maintenance shafts."
 	check_flags = AB_CHECK_CONSCIOUS|AB_CHECK_INCAPACITATED
 	click_to_activate = FALSE
-	button_icon = 'icons/mob/actions/actions_animal.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_animal.dmi'
 	button_icon_state = "riot"
 	background_icon_state = "bg_clock"
 	overlay_icon_state = "bg_clock_border"
@@ -128,7 +128,7 @@
  * * Spawn a single mouse if below the mouse cap.
  */
 /datum/action/cooldown/mob_cooldown/riot/proc/riot()
-	playsound(owner, 'sound/mobs/non-humanoids/mouse/mousesqueek.ogg', vol = 150, frequency = 10000)
+	playsound(owner, '../assets/sound/mobs/non-humanoids/mouse/mousesqueek.ogg', vol = 150, frequency = 10000)
 
 	new /obj/effect/temp_visual/circle_wave/brown(get_turf(owner))
 	for (var/mob/living/possible_minion in oview(owner, range))

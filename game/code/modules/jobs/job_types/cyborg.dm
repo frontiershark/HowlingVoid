@@ -66,4 +66,4 @@
 	new_character.Robotize(TRUE)
 
 /datum/job/cyborg/get_lobby_icon()
-	return icon('icons/mob/huds/hud.dmi', "hudcyborg")
+	return icon('../assets/icons/mob/huds/hud.dmi', "hudcyborg")

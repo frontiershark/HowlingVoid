@@ -1,7 +1,7 @@
 /obj/item/summon_beacon
 	name = "summoner beacon"
 	desc = "Summons a thing. Probably shouldn't use this one, though."
-	icon = 'icons/obj/devices/remote.dmi'
+	icon = '../assets/icons/obj/devices/remote.dmi'
 	icon_state = "self_delivery"
 	inhand_icon_state = null
 	w_class = WEIGHT_CLASS_SMALL
@@ -48,7 +48,7 @@
 	if(user.can_perform_action(src, FORBID_TELEKINESIS_REACH))
 		return TRUE
 	else
-		playsound(src, 'sound/machines/buzz/buzz-sigh.ogg', 40, TRUE)
+		playsound(src, '../assets/sound/machines/buzz/buzz-sigh.ogg', 40, TRUE)
 		return FALSE
 
 /obj/item/summon_beacon/proc/generate_display_names()

@@ -27,7 +27,7 @@
 	sharpness = SHARP_EDGED
 	attack_verb_continuous = "claws"
 	attack_verb_simple = "claw"
-	attack_sound = 'sound/items/weapons/bladeslice.ogg'
+	attack_sound = '../assets/sound/items/weapons/bladeslice.ogg'
 	attack_vis_effect = ATTACK_EFFECT_CLAW
 	friendly_verb_continuous = "bear hugs"
 	friendly_verb_simple = "bear hug"
@@ -132,10 +132,10 @@
 	armour_penetration = 0
 	response_harm_continuous = "takes a bite out of"
 	response_harm_simple = "take a bite out of"
-	attacked_sound = 'sound/items/eatfood.ogg'
+	attacked_sound = '../assets/sound/items/eatfood.ogg'
 	death_message = "loses its false life and collapses!"
 	butcher_results = list(/obj/item/food/butter = 6, /obj/item/food/meat/slab = 3, /obj/item/organ/brain = 1, /obj/item/organ/heart = 1)
-	attack_sound = 'sound/items/weapons/slap.ogg'
+	attack_sound = '../assets/sound/items/weapons/slap.ogg'
 	attack_vis_effect = ATTACK_EFFECT_DISARM
 	attack_verb_simple = "slap"
 	attack_verb_continuous = "slaps"
@@ -187,5 +187,5 @@
 	if((victim.body_position != STANDING_UP))
 		return
 	victim.Knockdown(20)
-	playsound(loc, 'sound/misc/slip.ogg', 15)
+	playsound(loc, '../assets/sound/misc/slip.ogg', 15)
 	victim.visible_message(span_danger("[victim] slips on [src]'s butter!"))

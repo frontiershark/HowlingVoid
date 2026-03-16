@@ -23,4 +23,4 @@
 /datum/component/clockwork_trap/lever/attack_hand(mob/user)
 	trigger_connected()
 	to_chat(user, span_notice("You activate the switch."))
-	playsound(user, 'sound/machines/click.ogg', 50)
+	playsound(user, '../assets/sound/machines/click.ogg', 50)

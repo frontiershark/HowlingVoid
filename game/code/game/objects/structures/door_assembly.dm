@@ -1,8 +1,8 @@
 /obj/structure/door_assembly
 	name = "airlock assembly"
-	icon = 'icons/obj/doors/airlocks/station/public.dmi'
+	icon = '../assets/icons/obj/doors/airlocks/station/public.dmi'
 	icon_state = "construction"
-	var/overlays_file = 'icons/obj/doors/airlocks/station/overlays.dmi'
+	var/overlays_file = '../assets/icons/obj/doors/airlocks/station/overlays.dmi'
 	anchored = FALSE
 	density = TRUE
 	max_integrity = 200
@@ -36,8 +36,8 @@
 
 /obj/structure/door_assembly/multi_tile
 	name = "large airlock assembly"
-	icon = 'icons/obj/doors/airlocks/multi_tile/public/glass.dmi'
-	overlays_file = 'icons/obj/doors/airlocks/multi_tile/public/overlays.dmi'
+	icon = '../assets/icons/obj/doors/airlocks/multi_tile/public/glass.dmi'
+	overlays_file = '../assets/icons/obj/doors/airlocks/multi_tile/public/overlays.dmi'
 	base_name = "large airlock"
 	glass_type = /obj/machinery/door/airlock/multi_tile/public/glass
 	airlock_type = /obj/machinery/door/airlock/multi_tile/public/glass
@@ -212,7 +212,7 @@
 			if(noglass)
 				to_chat(user, span_warning("You cannot add [sheet] to [src]!"))
 				return
-			playsound(src, 'sound/items/tools/crowbar.ogg', 100, TRUE)
+			playsound(src, '../assets/sound/items/tools/crowbar.ogg', 100, TRUE)
 			user.visible_message(span_notice("[user] adds [sheet.name] to the airlock assembly."), \
 								span_notice("You start to install [sheet.name] into the airlock assembly..."))
 			if(do_after(user, 4 SECONDS, target = src))
@@ -243,7 +243,7 @@
 				to_chat(user, span_warning("You need at least two sheets add a mineral cover!"))
 				return
 
-			playsound(src, 'sound/items/tools/crowbar.ogg', 100, TRUE)
+			playsound(src, '../assets/sound/items/tools/crowbar.ogg', 100, TRUE)
 			user.visible_message(span_notice("[user] adds [sheet.name] to the airlock assembly."), \
 				span_notice("You start to install [sheet.name] into the airlock assembly..."))
 			if(!do_after(user, 4 SECONDS, target = src) || sheet.get_amount() < 2 || mineral)

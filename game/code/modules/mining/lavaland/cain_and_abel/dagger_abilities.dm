@@ -1,7 +1,7 @@
 /datum/action/cooldown/dagger_swing
 	name = "Dagger swing"
 	desc = "Swing your daggers around."
-	button_icon = 'icons/obj/mining_zones/artefacts.dmi'
+	button_icon = '../assets/icons/obj/mining_zones/artefacts.dmi'
 	button_icon_state = "cain_and_abel"
 	background_icon_state = "bg_default"
 	overlay_icon_state = "bg_default_border"
@@ -23,12 +23,12 @@
 	living_owner.apply_status_effect(/datum/status_effect/dagger_swinging)
 
 	var/static/list/possible_sounds = list(
-		'sound/items/weapons/cain_and_abel/dagger_slash_1.ogg',
-		'sound/items/weapons/cain_and_abel/dagger_slash_2.ogg',
-		'sound/items/weapons/cain_and_abel/dagger_slash_3.ogg',
-		'sound/items/weapons/cain_and_abel/dagger_slash_4.ogg',
-		'sound/items/weapons/cain_and_abel/dagger_slash_5.ogg',
-		'sound/items/weapons/cain_and_abel/dagger_slash_6.ogg',
+		'../assets/sound/items/weapons/cain_and_abel/dagger_slash_1.ogg',
+		'../assets/sound/items/weapons/cain_and_abel/dagger_slash_2.ogg',
+		'../assets/sound/items/weapons/cain_and_abel/dagger_slash_3.ogg',
+		'../assets/sound/items/weapons/cain_and_abel/dagger_slash_4.ogg',
+		'../assets/sound/items/weapons/cain_and_abel/dagger_slash_5.ogg',
+		'../assets/sound/items/weapons/cain_and_abel/dagger_slash_6.ogg',
 	)
 
 	var/list/sounds_to_pick_from = possible_sounds.Copy()

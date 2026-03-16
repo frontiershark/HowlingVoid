@@ -42,7 +42,7 @@
 /// Play a fun animation and make our wall look damaged
 /datum/component/torn_wall/proc/apply_visuals()
 	var/atom/atom_parent = parent
-	playsound(atom_parent, 'sound/effects/bang.ogg', 50, vary = TRUE)
+	playsound(atom_parent, '../assets/sound/effects/bang.ogg', 50, vary = TRUE)
 	atom_parent.update_appearance(UPDATE_ICON)
 	atom_parent.Shake(shake_interval = 0.1 SECONDS, duration = 0.5 SECONDS)
 
@@ -53,7 +53,7 @@
 		apply_visuals()
 		return
 	var/turf/closed/wall/attached_wall = parent
-	playsound(attached_wall, 'sound/effects/meteorimpact.ogg', 100, vary = TRUE)
+	playsound(attached_wall, '../assets/sound/effects/meteorimpact.ogg', 100, vary = TRUE)
 
 	if(ismineralturf(attached_wall))
 		var/turf/closed/mineral/mineral_turf = attached_wall
@@ -91,7 +91,7 @@
 /// Show a little crack on here
 /datum/component/torn_wall/proc/on_update_overlays(turf/source, list/overlays)
 	SIGNAL_HANDLER
-	var/mutable_appearance/crack = mutable_appearance('icons/turf/overlays.dmi', "explodable", source.layer + 0.1)
+	var/mutable_appearance/crack = mutable_appearance('../assets/icons/turf/overlays.dmi', "explodable", source.layer + 0.1)
 	if (current_stage == TORN_WALL_INITIAL)
 		crack.alpha *= 0.5
 	overlays += crack

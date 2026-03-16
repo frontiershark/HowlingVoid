@@ -3,7 +3,7 @@
 /obj/effect/mob_spawn/ghost_role/human/ship_crew
 	name = "ship crew sleeper"
 	desc = "A cryo sleeper for ship crew."
-	icon = 'icons/obj/machines/sleeper.dmi'
+	icon = '../assets/icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
 	prompt_name = "a ship crew member"
 	outfit = /datum/outfit/ship_crew

@@ -3,7 +3,7 @@
 	desc = "A wizard with a taste for the arts."
 	mob_biotypes = MOB_ORGANIC|MOB_HUMANOID
 	faction = list(FACTION_HOSTILE, FACTION_STICKMAN)
-	icon = 'icons/mob/simple/simple_human.dmi'
+	icon = '../assets/icons/mob/simple/simple_human.dmi'
 	icon_state = "paperwizard"
 	gender = MALE
 
@@ -19,7 +19,7 @@
 	melee_damage_lower = 10
 	melee_damage_upper = 20
 	obj_damage = 50
-	attack_sound = 'sound/effects/hallucinations/growl1.ogg'
+	attack_sound = '../assets/sound/effects/hallucinations/growl1.ogg'
 	ai_controller = /datum/ai_controller/basic_controller/paper_wizard
 	damage_coeff = list(BRUTE = 1, BURN = 1, TOX = 1, STAMINA = 0, OXY = 1)
 	unsuitable_atmos_damage = 0
@@ -142,7 +142,7 @@
 	desc = "Pieces of paper scattering to the wind."
 	layer = ABOVE_NORMAL_TURF_LAYER
 	plane = GAME_PLANE
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	icon_state = "paper_scatter"
 	anchored = TRUE
 	duration = 0.5 SECONDS
@@ -153,7 +153,7 @@
 	desc = "A wormhole sucking the wizard into the void. Neat."
 	layer = ABOVE_NORMAL_TURF_LAYER
 	plane = GAME_PLANE
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	icon_state = "paperwiz_poof"
 	anchored = TRUE
 	duration = 1.8 SECONDS
@@ -162,8 +162,8 @@
 /obj/effect/temp_visual/paperwiz_dying/Initialize(mapload)
 	. = ..()
 	visible_message(span_bolddanger("The wizard cries out in pain as a gate appears behind him, sucking him in!"))
-	playsound(get_turf(src), 'sound/effects/magic/mandswap.ogg', 50, vary = TRUE, pressure_affected = TRUE)
-	playsound(get_turf(src), 'sound/effects/hallucinations/wail.ogg', 50, vary = TRUE, pressure_affected = TRUE)
+	playsound(get_turf(src), '../assets/sound/effects/magic/mandswap.ogg', 50, vary = TRUE, pressure_affected = TRUE)
+	playsound(get_turf(src), '../assets/sound/effects/hallucinations/wail.ogg', 50, vary = TRUE, pressure_affected = TRUE)
 	RegisterSignal(src, COMSIG_PREQDELETED, PROC_REF(on_delete))
 
 /obj/effect/temp_visual/paperwiz_dying/proc/on_delete()
@@ -172,7 +172,7 @@
 	for(var/mob/nearby in range(7, src))
 		shake_camera(nearby, duration = 7 SECONDS, strength = 1)
 	var/turf/current_turf = get_turf(src)
-	playsound(current_turf,'sound/effects/magic/summon_magic.ogg', 50, vary = TRUE, vary = TRUE)
+	playsound(current_turf,'../assets/sound/effects/magic/summon_magic.ogg', 50, vary = TRUE, vary = TRUE)
 	new /obj/effect/temp_visual/paper_scatter(current_turf)
 	new /obj/item/clothing/suit/wizrobe/paper(current_turf)
 	new /obj/item/clothing/head/collectable/paper(current_turf)

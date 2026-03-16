@@ -76,7 +76,7 @@
 	text += "<br>"
 	text += "(Syndicates used [TC_uses] TC) [purchases]"
 	if(TC_uses == 0 && GLOB.station_was_nuked && !are_all_operatives_dead())
-		text += "<BIG>[icon2html('icons/ui/antags/badass.dmi', world, "badass")]</BIG>"
+		text += "<BIG>[icon2html('../assets/icons/ui/antags/badass.dmi', world, "badass")]</BIG>"
 
 	parts += text
 
@@ -211,7 +211,7 @@
 	do_sparks(4, FALSE, spawn_loc)
 	new /obj/effect/temp_visual/teleport_abductor/syndi_teleporter(spawn_loc)
 	playsound(spawn_loc, SFX_SPARKS, 50, TRUE)
-	playsound(spawn_loc, 'sound/effects/phasein.ogg', 50, TRUE)
+	playsound(spawn_loc, '../assets/sound/effects/phasein.ogg', 50, TRUE)
 
 	tgui_alert(admin, "Reinforcement spawned at [infil_or_nukebase] with [tc_to_spawn].", "Reinforcements have arrived", list("God speed"))
 

@@ -1,5 +1,5 @@
 /obj/item/language_manual
-	icon = 'icons/obj/service/library.dmi'
+	icon = '../assets/icons/obj/service/library.dmi'
 	icon_state = "book2"
 	/// Number of charges the book has, limits the number of times it can be used.
 	var/charges = 1

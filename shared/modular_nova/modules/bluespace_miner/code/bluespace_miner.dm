@@ -129,7 +129,7 @@
 
 	// Check if it is nonzero
 	if(mining_stat)
-		playsound(src, 'sound/machines/buzz/buzz-sigh.ogg', 50, FALSE, SILENCED_SOUND_EXTRARANGE, ignore_walls = FALSE)
+		playsound(src, '../assets/sound/machines/buzz/buzz-sigh.ogg', 50, FALSE, SILENCED_SOUND_EXTRARANGE, ignore_walls = FALSE)
 		return FALSE
 
 	// mining_stat = 0, we are ready to go
@@ -207,7 +207,7 @@
 	spawn_mats()
 	// Crazy? I was crazy once. They locked me in a room, an atmos room, an atmos room with bluespace miners, and the bluespace miners made me crazy.
 	// This sound no longer echoes through departments like before. Got that was an era.
-	playsound(src, 'sound/machines/ping.ogg', 50, FALSE, SILENCED_SOUND_EXTRARANGE, ignore_walls = FALSE)
+	playsound(src, '../assets/sound/machines/ping.ogg', 50, FALSE, SILENCED_SOUND_EXTRARANGE, ignore_walls = FALSE)
 
 /obj/machinery/bluespace_miner/crowbar_act(mob/living/user, obj/item/tool)
 	if(default_deconstruction_crowbar(tool))

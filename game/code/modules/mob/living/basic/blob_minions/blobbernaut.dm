@@ -18,7 +18,7 @@
 	obj_damage = BLOBMOB_BLOBBERNAUT_DMG_OBJ
 	attack_verb_continuous = "slams"
 	attack_verb_simple = "slam"
-	attack_sound = 'sound/effects/blob/blobattack.ogg'
+	attack_sound = '../assets/sound/effects/blob/blobattack.ogg'
 	verb_say = "gurgles"
 	verb_ask = "demands"
 	verb_exclaim = "roars"
@@ -60,7 +60,7 @@
 
 /mob/living/basic/blob_minion/blobbernaut/death(gibbed)
 	flick("[icon_state]_death", src)
-	playsound(src, 'sound/mobs/non-humanoids/blobmob/blobbernaut_death.ogg', 100, TRUE)
+	playsound(src, '../assets/sound/mobs/non-humanoids/blobmob/blobbernaut_death.ogg', 100, TRUE)
 	update_overlays()
 	return ..()
 
@@ -149,7 +149,7 @@
 
 	//hopefully this sound won't get too annoying.
 	if(prob(20))
-		playsound(src, 'sound/items/weapons/sear.ogg', 5, vary = TRUE)
+		playsound(src, '../assets/sound/items/weapons/sear.ogg', 5, vary = TRUE)
 
 	//create aooearances for the naut damage effect
 	var/mutable_appearance/naut_damage_overlay = mutable_appearance(icon, "[base_icon_state]_veins", appearance_flags = RESET_COLOR | KEEP_APART)
@@ -174,8 +174,8 @@
 	key = ckey
 	flick("blobbernaut_produce", src)
 	health = maxHealth / 2 // Start out injured to encourage not beelining away from the blob
-	SEND_SOUND(src, sound('sound/effects/blob/blobattack.ogg'))
-	SEND_SOUND(src, sound('sound/effects/blob/attackblob.ogg'))
+	SEND_SOUND(src, sound('../assets/sound/effects/blob/blobattack.ogg'))
+	SEND_SOUND(src, sound('../assets/sound/effects/blob/attackblob.ogg'))
 	to_chat(src, span_infoplain("You are powerful, hard to kill, and slowly regenerate near nodes and cores, [span_cult_large("but will slowly die if not near the blob")] or if the factory that made you is killed."))
 	to_chat(src, span_infoplain("You can communicate with other blobbernauts and overminds <b>telepathically</b> by attempting to speak normally"))
 	to_chat(src, span_infoplain("Your overmind's blob reagent is: <b><font color=\"[blobstrain.color]\">[blobstrain.name]</b></font>!"))

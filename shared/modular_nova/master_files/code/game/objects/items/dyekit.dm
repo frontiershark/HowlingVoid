@@ -70,7 +70,7 @@
 			human_target.set_facial_hair_gradient_color(sanitize_hexcolor(new_grad_color), update = FALSE)
 			human_target.set_facial_hair_gradient_style(new_grad_style, update = TRUE)
 
-	playsound(src, 'sound/effects/spray.ogg', 10, vary = TRUE)
+	playsound(src, '../assets/sound/effects/spray.ogg', 10, vary = TRUE)
 
 	human_target.visible_message(
 		span_notice("[user] finishes applying hair dye to [dyeing_themselves ? "their own" : "[human_target]'s"] hair, changing its color!"),

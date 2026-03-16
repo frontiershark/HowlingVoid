@@ -218,7 +218,7 @@
 /datum/action/cooldown/turn_to_statue
 	name = "Become Statue"
 	desc = "Become an elegant silver statue. Its durability and yours are directly tied together, so make sure you're careful."
-	button_icon = 'icons/obj/medical/organs/organs.dmi'
+	button_icon = '../assets/icons/obj/medical/organs/organs.dmi'
 	button_icon_state = "silvertongue"
 	cooldown_time = 10 SECONDS
 	check_flags = AB_CHECK_CONSCIOUS|AB_CHECK_LYING
@@ -698,7 +698,7 @@
 /obj/item/organ/tongue/mush
 	name = "mush-tongue-room"
 	desc = "You poof with this. Got it?"
-	icon = 'icons/obj/service/hydroponics/seeds.dmi'
+	icon = '../assets/icons/obj/service/hydroponics/seeds.dmi'
 	icon_state = "mycelium-angel"
 	say_mod = "poofs"
 	languages_native = list(/datum/language/mushroom)

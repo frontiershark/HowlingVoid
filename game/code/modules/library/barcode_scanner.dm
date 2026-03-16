@@ -1,6 +1,6 @@
 /obj/item/barcodescanner
 	name = "barcode scanner"
-	icon = 'icons/obj/service/library.dmi'
+	icon = '../assets/icons/obj/service/library.dmi'
 	icon_state ="scanner"
 	desc = "A fabulous tool if you need to scan a barcode."
 	throw_speed = 3
@@ -55,7 +55,7 @@
 				checkouts -= checkout_ref
 				linked_computer.checkout_update()
 				balloon_alert(user, "checked in")
-				playsound(src, 'sound/items/barcodebeep.ogg', 20, FALSE)
+				playsound(src, '../assets/sound/items/barcodebeep.ogg', 20, FALSE)
 				return ITEM_INTERACT_SUCCESS
 
 			user.balloon_alert(user, "isn't checked out!")
@@ -66,7 +66,7 @@
 			linked_computer.inventory[ref(our_copy)] = our_copy
 			linked_computer.inventory_update()
 			balloon_alert(user, "added to inventory")
-			playsound(src, 'sound/items/barcodebeep.ogg', 20, FALSE)
+			playsound(src, '../assets/sound/items/barcodebeep.ogg', 20, FALSE)
 			return ITEM_INTERACT_SUCCESS
 
 	return NONE
@@ -85,4 +85,4 @@
 		if(BARCODE_SCANNER_INVENTORY)
 			scan_mode = BARCODE_SCANNER_CHECKIN
 			balloon_alert(user, "check-in mode")
-	playsound(loc, 'sound/items/click.ogg', 20, TRUE)
+	playsound(loc, '../assets/sound/items/click.ogg', 20, TRUE)

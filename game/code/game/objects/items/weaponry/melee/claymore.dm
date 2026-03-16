@@ -1,13 +1,13 @@
 /obj/item/claymore
 	name = "claymore"
 	desc = "What are you standing around staring at this for? Get to killing!"
-	icon = 'icons/obj/weapons/sword.dmi'
+	icon = '../assets/icons/obj/weapons/sword.dmi'
 	icon_state = "claymore"
 	inhand_icon_state = "claymore"
 	icon_angle = -45
-	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
-	hitsound = 'sound/items/weapons/bladeslice.ogg'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/swords_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/swords_righthand.dmi'
+	hitsound = '../assets/sound/items/weapons/bladeslice.ogg'
 	obj_flags = CONDUCTS_ELECTRICITY
 	slot_flags = ITEM_SLOT_BELT | ITEM_SLOT_BACK
 	force = 40
@@ -16,7 +16,7 @@
 	attack_verb_continuous = list("attacks", "slashes", "slices", "tears", "lacerates", "rips", "dices", "cuts")
 	attack_verb_simple = list("attack", "slash", "slice", "tear", "lacerate", "rip", "dice", "cut")
 	block_chance = 50
-	block_sound = 'sound/items/weapons/parry.ogg'
+	block_sound = '../assets/sound/items/weapons/parry.ogg'
 	sharpness = SHARP_EDGED
 	max_integrity = 200
 	armor_type = /datum/armor/item_claymore
@@ -235,16 +235,16 @@
 			new_name = "GORE-DRENCHED CLAYMORE OF [pick("THE WHIMSICAL SLAUGHTER", "A THOUSAND SLAUGHTERED CATTLE", "GLORY AND VALHALLA", "ANNIHILATION", "OBLITERATION")]"
 			icon_state = "claymore_gold"
 			inhand_icon_state = "cultblade"
-			lefthand_file = 'icons/mob/inhands/64x64_lefthand.dmi'
-			righthand_file = 'icons/mob/inhands/64x64_righthand.dmi'
+			lefthand_file = '../assets/icons/mob/inhands/64x64_lefthand.dmi'
+			righthand_file = '../assets/icons/mob/inhands/64x64_righthand.dmi'
 			remove_atom_colour(ADMIN_COLOUR_PRIORITY)
 			user.update_held_items()
 
 	name = new_name
-	playsound(user, 'sound/items/tools/screwdriver2.ogg', 50, TRUE)
+	playsound(user, '../assets/sound/items/tools/screwdriver2.ogg', 50, TRUE)
 
 /obj/item/claymore/highlander/robot //BLOODTHIRSTY BORGS NOW COME IN PLAID
-	icon = 'icons/obj/items_cyborg.dmi'
+	icon = '../assets/icons/obj/items_cyborg.dmi'
 	icon_state = "claymore_cyborg"
 
 /obj/item/claymore/highlander/robot/Initialize(mapload)
@@ -258,17 +258,17 @@
 /obj/item/claymore/gladius
 	name = "gladius"
 	desc = "A short but formidable sword, favored by recently-reanimated ancient warriors."
-	icon = 'icons/obj/weapons/sword.dmi'
+	icon = '../assets/icons/obj/weapons/sword.dmi'
 	icon_state = "gladius"
 	inhand_icon_state = "gladius"
-	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/swords_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/swords_righthand.dmi'
 	sharpness = SHARP_POINTY
 	attack_verb_continuous = list("stabs", "cuts")
 	attack_verb_simple = list("stab", "cut")
 	slot_flags = null
 	sound_vary = TRUE
-	block_sound = 'sound/items/weapons/parry.ogg'
-	hitsound = 'sound/items/weapons/bladeslice.ogg'
+	block_sound = '../assets/sound/items/weapons/parry.ogg'
+	hitsound = '../assets/sound/items/weapons/bladeslice.ogg'
 	pickup_sound = SFX_KNIFE_PICKUP
 	drop_sound = SFX_KNIFE_DROP

@@ -6,7 +6,7 @@
 /obj/item/organ/brain/shadow/nightmare
 	name = "tumorous mass"
 	desc = "A fleshy growth that was dug out of the skull of a Nightmare."
-	icon = 'icons/obj/medical/organs/organs.dmi'
+	icon = '../assets/icons/obj/medical/organs/organs.dmi'
 	icon_state = "brain-x-d"
 	shade_color = "black, somehow"
 
@@ -78,7 +78,7 @@
 	name = "heart of darkness"
 	desc = "An alien organ that twists and writhes when exposed to light."
 	visual = TRUE
-	icon = 'icons/obj/medical/organs/shadow_organs.dmi'
+	icon = '../assets/icons/obj/medical/organs/shadow_organs.dmi'
 	icon_state = "dark_heart-on"
 	base_icon_state = "dark_heart"
 
@@ -100,7 +100,7 @@
 		span_warning("[user] raises [src] to [user.p_their()] mouth and tears into it with [user.p_their()] teeth!"),
 		span_danger("[src] feels unnaturally cold in your hands. You raise [src] to your mouth and devour it!")
 	)
-	playsound(user, 'sound/effects/magic/demon_consume.ogg', 50, TRUE)
+	playsound(user, '../assets/sound/effects/magic/demon_consume.ogg', 50, TRUE)
 
 	user.visible_message(
 		span_warning("Blood erupts from [user]'s arm as it reforms into a weapon!"),
@@ -133,7 +133,7 @@
 		var/light_amount = T.get_lumcount()
 		if(light_amount < SHADOW_SPECIES_LIGHT_THRESHOLD)
 			respawn_progress += seconds_per_tick SECONDS
-			playsound(owner, 'sound/effects/singlebeat.ogg', 40, TRUE)
+			playsound(owner, '../assets/sound/effects/singlebeat.ogg', 40, TRUE)
 	if(respawn_progress < HEART_RESPAWN_THRESHHOLD)
 		return
 
@@ -144,9 +144,9 @@
 		old_owner.set_species(/datum/species/shadow)
 		Insert(old_owner, HEART_SPECIAL_SHADOWIFY)
 		to_chat(owner, span_userdanger("You feel the shadows invade your skin, leaping into the center of your chest! You're alive!"))
-		SEND_SOUND(owner, sound('sound/effects/ghost.ogg'))
+		SEND_SOUND(owner, sound('../assets/sound/effects/ghost.ogg'))
 	owner.visible_message(span_warning("[owner] staggers to [owner.p_their()] feet!"))
-	playsound(owner, 'sound/effects/hallucinations/far_noise.ogg', 50, TRUE)
+	playsound(owner, '../assets/sound/effects/hallucinations/far_noise.ogg', 50, TRUE)
 	respawn_progress = 0
 
 /obj/item/organ/heart/nightmare/get_availability(datum/species/owner_species, mob/living/owner_mob)

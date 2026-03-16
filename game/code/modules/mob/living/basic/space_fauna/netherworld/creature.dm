@@ -13,7 +13,7 @@
 	attack_verb_continuous = "slashes"
 	attack_verb_simple = "slash"
 	gold_core_spawnable = HOSTILE_SPAWN
-	attack_sound = 'sound/items/weapons/bite.ogg'
+	attack_sound = '../assets/sound/items/weapons/bite.ogg'
 	attack_vis_effect = ATTACK_EFFECT_BITE
 	melee_attack_cooldown = 1 SECONDS
 	faction = list(FACTION_NETHER)
@@ -70,7 +70,7 @@
 /datum/action/cooldown/spell/jaunt/creature_teleport
 	name = "Uncanny Movement"
 	desc = "Enter or leave an alternate plane where you can travel through walls. You can only enter or emerge if unobserved."
-	button_icon = 'icons/mob/actions/actions_spells.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_spells.dmi'
 	button_icon_state = "blink"
 	background_icon_state = "bg_default"
 	overlay_icon_state = "bg_default_border"
@@ -98,7 +98,7 @@
 
 /datum/action/cooldown/spell/jaunt/creature_teleport/cast(atom/cast_on)
 	. = ..()
-	playsound(get_turf(owner), 'sound/effects/podwoosh.ogg', 50, TRUE, -1)
+	playsound(get_turf(owner), '../assets/sound/effects/podwoosh.ogg', 50, TRUE, -1)
 	if(is_jaunting(cast_on))
 		exit_jaunt(cast_on)
 		return

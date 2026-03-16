@@ -4,7 +4,7 @@
 /obj/structure/bed/abductor
 	name = "resting contraption"
 	desc = "This looks similar to contraptions from Earth. Could aliens be stealing our technology?"
-	icon = 'icons/obj/antags/abductor.dmi'
+	icon = '../assets/icons/obj/antags/abductor.dmi'
 	build_stack_type = /obj/item/stack/sheet/mineral/abductor
 	icon_state = "bed"
 	custom_materials = list(/datum/material/alloy/alien = SHEET_MATERIAL_AMOUNT * 2)
@@ -26,7 +26,7 @@
 /obj/structure/table/abductor
 	name = "alien table"
 	desc = "Advanced flat surface technology at work!"
-	icon = 'icons/obj/smooth_structures/alien_table.dmi'
+	icon = '../assets/icons/obj/smooth_structures/alien_table.dmi'
 	icon_state = "alien_table-0"
 	base_icon_state = "alien_table"
 	buildstack = /obj/item/stack/sheet/mineral/abductor
@@ -48,7 +48,7 @@
 	framestack = /obj/item/stack/sheet/mineral/abductor
 	buildstackamount = 1
 	framestackamount = 1
-	icon = 'icons/obj/antags/abductor.dmi'
+	icon = '../assets/icons/obj/antags/abductor.dmi'
 	icon_state = "bed"
 	can_buckle = TRUE
 	buckle_lying = 90
@@ -96,9 +96,9 @@
 
 /obj/structure/door_assembly/door_assembly_abductor
 	name = "alien airlock assembly"
-	icon = 'icons/obj/doors/airlocks/abductor/abductor_airlock.dmi'
+	icon = '../assets/icons/obj/doors/airlocks/abductor/abductor_airlock.dmi'
 	base_name = "alien airlock"
-	overlays_file = 'icons/obj/doors/airlocks/abductor/overlays.dmi'
+	overlays_file = '../assets/icons/obj/doors/airlocks/abductor/overlays.dmi'
 	airlock_type = /obj/machinery/door/airlock/abductor
 	material_type = /obj/item/stack/sheet/mineral/abductor
 	noglass = TRUE

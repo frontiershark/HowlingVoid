@@ -1,7 +1,7 @@
 ///Sound played when boulders are teleported manually by hand
-#define MANUAL_TELEPORT_SOUND 'sound/machines/mining/manual_teleport.ogg'
+#define MANUAL_TELEPORT_SOUND '../assets/sound/machines/mining/manual_teleport.ogg'
 ///Sound played when boulders are teleported automatically in process()
-#define AUTO_TELEPORT_SOUND 'sound/machines/mining/auto_teleport.ogg'
+#define AUTO_TELEPORT_SOUND '../assets/sound/machines/mining/auto_teleport.ogg'
 ///Time taken to spawn a boulder, also the cooldown applied before the next manual teleportation
 #define TELEPORTATION_TIME (1.5 SECONDS)
 ///Cooldown for automatic teleportation after processing boulders_processing_max number of boulders
@@ -12,7 +12,7 @@
 /obj/machinery/brm
 	name = "boulder retrieval matrix"
 	desc = "A teleportation matrix used to retrieve boulders excavated by mining NODEs from ore vents."
-	icon = 'icons/obj/machines/mining_machines.dmi'
+	icon = '../assets/icons/obj/machines/mining_machines.dmi'
 	icon_state = "brm"
 	active_power_usage = BASE_MACHINE_ACTIVE_CONSUMPTION * 0.5
 	circuit = /obj/item/circuitboard/machine/brm
@@ -305,7 +305,7 @@
 	//no more boulders
 	if(!SSore_generation.available_boulders.len)
 		if(feedback)
-			playsound(loc, 'sound/machines/synth/synth_no.ogg', 30 , TRUE)
+			playsound(loc, '../assets/sound/machines/synth/synth_no.ogg', 30 , TRUE)
 			balloon_alert_to_viewers("no boulders to collect!")
 		batch_processing = FALSE
 		return FALSE

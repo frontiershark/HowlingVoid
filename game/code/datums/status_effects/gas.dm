@@ -19,7 +19,7 @@
 	RegisterSignal(owner, COMSIG_LIVING_RESIST, PROC_REF(owner_resist))
 	if(!owner.stat)
 		to_chat(owner, span_userdanger("You become frozen in a cube!"))
-	cube = icon('icons/effects/freeze.dmi', "ice_cube")
+	cube = icon('../assets/icons/effects/freeze.dmi', "ice_cube")
 	owner.add_overlay(cube)
 
 

@@ -65,7 +65,7 @@
 /obj/item/pipe_dispenser/bluespace/click_alt(mob/user)
 	remote_piping_toggle = !remote_piping_toggle
 	balloon_alert(user, "remote piping [remote_piping_toggle ? "on" : "off"]")
-	playsound(get_turf(src), 'sound/machines/click.ogg', 50, TRUE)
+	playsound(get_turf(src), '../assets/sound/machines/click.ogg', 50, TRUE)
 	return CLICK_ACTION_SUCCESS
 
 /obj/item/pipe_dispenser/bluespace/ranged_interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)

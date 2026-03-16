@@ -85,7 +85,7 @@
 			processed_colors += colors[i]
 		else
 			processed_colors += i
-	var/datum/universal_icon/copy_of_new_icon = isnull(new_icon) ? uni_icon('icons/effects/effects.dmi', "nothing") : new_icon.copy() // Layers shouldn't be modifying it directly, this is just for them to reference
+	var/datum/universal_icon/copy_of_new_icon = isnull(new_icon) ? uni_icon('../assets/icons/effects/effects.dmi', "nothing") : new_icon.copy() // Layers shouldn't be modifying it directly, this is just for them to reference
 	return InternalGenerateUniversalIcon(processed_colors, copy_of_new_icon)
 
 /// Override this to implement layers.

@@ -6,7 +6,7 @@
 /obj/machinery/door
 	name = "door"
 	desc = "It opens and closes."
-	icon = 'icons/obj/doors/doorint.dmi'
+	icon = '../assets/icons/obj/doors/doorint.dmi'
 	icon_state = "door_closed"
 	base_icon_state = "door"
 	opacity = TRUE
@@ -233,7 +233,7 @@
 	if(!red_alert_access)
 		return
 	audible_message(span_notice("[src] whirr[p_s()] as [p_they()] automatically lift[p_s()] access requirements!"))
-	playsound(src, 'sound/machines/airlock/boltsup.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/machines/airlock/boltsup.ogg', 50, TRUE)
 
 /obj/machinery/door/proc/try_safety_unlock(mob/user)
 	return FALSE
@@ -380,9 +380,9 @@
 	balloon_alert(opener, "activating unrestricted latch...")
 
 	if(istype(get_area(src), /area/station/maintenance))
-		playsound(get_turf(src), 'sound/machines/airlock/airlock_latch_hiss.ogg', 45, vary = TRUE, falloff_exponent = (SOUND_FALLOFF_EXPONENT * 2)) // sound travels further in maintenance muahaha
+		playsound(get_turf(src), '../assets/sound/machines/airlock/airlock_latch_hiss.ogg', 45, vary = TRUE, falloff_exponent = (SOUND_FALLOFF_EXPONENT * 2)) // sound travels further in maintenance muahaha
 	else
-		playsound(get_turf(src), 'sound/machines/airlock/airlock_latch_hiss.ogg', 30, vary = TRUE, extrarange = MEDIUM_RANGE_SOUND_EXTRARANGE, falloff_exponent = (SOUND_FALLOFF_EXPONENT * 1.5))
+		playsound(get_turf(src), '../assets/sound/machines/airlock/airlock_latch_hiss.ogg', 30, vary = TRUE, extrarange = MEDIUM_RANGE_SOUND_EXTRARANGE, falloff_exponent = (SOUND_FALLOFF_EXPONENT * 1.5))
 
 	if(do_after(opener, do_after_time, target = src))
 		SSblackbox.record_feedback("tally", "unrestricted_airlock_usage", 1, "open success ([type])") // no need to tally failures as we can assume it as long as we have this + the total
@@ -492,9 +492,9 @@
 	switch(damage_type)
 		if(BRUTE)
 			if(glass)
-				playsound(loc, 'sound/effects/glass/glasshit.ogg', 90, TRUE)
+				playsound(loc, '../assets/sound/effects/glass/glasshit.ogg', 90, TRUE)
 			else if(damage_amount)
-				//playsound(loc, 'sound/items/weapons/smash.ogg', 50, TRUE) // NOVA EDIT REMOVAL
+				//playsound(loc, '../assets/sound/items/weapons/smash.ogg', 50, TRUE) // NOVA EDIT REMOVAL
 				//NOVA EDIT ADDITION - CREDITS TO WHITEDREAM(valtos)
 				playsound(src, pick('modular_nova/master_files/sound/effects/metalblock1.wav', 'modular_nova/master_files/sound/effects/metalblock2.wav', \
 									'modular_nova/master_files/sound/effects/metalblock3.wav', 'modular_nova/master_files/sound/effects/metalblock4.wav', \
@@ -502,9 +502,9 @@
 									'modular_nova/master_files/sound/effects/metalblock7.wav', 'modular_nova/master_files/sound/effects/metalblock8.wav'), 50, TRUE)
 				//NOVA EDIT END
 			else
-				playsound(src, 'sound/items/weapons/tap.ogg', 50, TRUE)
+				playsound(src, '../assets/sound/items/weapons/tap.ogg', 50, TRUE)
 		if(BURN)
-			playsound(src.loc, 'sound/items/tools/welder.ogg', 100, TRUE)
+			playsound(src.loc, '../assets/sound/items/tools/welder.ogg', 100, TRUE)
 
 /obj/machinery/door/emp_act(severity)
 	. = ..()
@@ -701,7 +701,7 @@
 	return 0
 
 /obj/machinery/door/morgue
-	icon = 'icons/obj/doors/doormorgue.dmi'
+	icon = '../assets/icons/obj/doors/doormorgue.dmi'
 
 /obj/machinery/door/morgue/Initialize(mapload)
 	. = ..()

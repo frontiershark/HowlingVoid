@@ -1,7 +1,7 @@
 /area/ocean
 	name = "Ocean"
 	icon_state = "space"
-	icon = 'icons/area/areas_misc.dmi'
+	icon = '../assets/icons/area/areas_misc.dmi'
 	requires_power = TRUE
 	always_unpowered = TRUE
 	static_lighting = FALSE

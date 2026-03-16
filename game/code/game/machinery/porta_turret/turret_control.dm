@@ -1,7 +1,7 @@
 /obj/machinery/turretid
 	name = "turret control panel"
 	desc = "Used to control a room's automated defenses."
-	icon = 'icons/obj/machines/turret_control.dmi'
+	icon = '../assets/icons/obj/machines/turret_control.dmi'
 	icon_state = "control"
 	base_icon_state = "control"
 	density = FALSE
@@ -207,7 +207,7 @@
 /obj/item/wallframe/turret_control
 	name = "turret control frame"
 	desc = "Used for building turret control panels."
-	icon = 'icons/obj/machines/turret_control.dmi'
+	icon = '../assets/icons/obj/machines/turret_control.dmi'
 	icon_state = "control_frame"
 	result_path = /obj/machinery/turretid
 	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 6)

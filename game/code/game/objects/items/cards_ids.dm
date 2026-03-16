@@ -21,13 +21,13 @@
 /obj/item/card
 	name = "card"
 	desc = "Does card things."
-	icon = 'icons/obj/card.dmi'
+	icon = '../assets/icons/obj/card.dmi'
 	inhand_icon_state = "card-id"
-	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/idcards_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/idcards_righthand.dmi'
 	w_class = WEIGHT_CLASS_TINY
-	pickup_sound = 'sound/items/handling/id_card/id_card_pickup1.ogg'
-	drop_sound = 'sound/items/handling/id_card/id_card_drop1.ogg'
+	pickup_sound = '../assets/sound/items/handling/id_card/id_card_pickup1.ogg'
+	drop_sound = '../assets/sound/items/handling/id_card/id_card_drop1.ogg'
 	sound_vary = TRUE
 
 	/// Cached icon that has been built for this card. Intended to be displayed in chat. Cardboards IDs and actual IDs use it.
@@ -635,7 +635,7 @@
 	var/obj/structure/holopay/new_store = new(projection)
 	if(new_store?.assign_card(projection, src))
 		COOLDOWN_START(src, last_holopay_projection, HOLOPAY_PROJECTION_INTERVAL)
-		playsound(projection, 'sound/effects/empulse.ogg', 40, TRUE)
+		playsound(projection, '../assets/sound/effects/empulse.ogg', 40, TRUE)
 		my_store = new_store
 
 /**
@@ -897,7 +897,7 @@
 		if(HAS_TRAIT(src, TRAIT_TASTEFULLY_THICK_ID_CARD) && (user.is_holding(src) || (IsReachableBy(user) && user.put_in_hands(src, ignore_animation = FALSE))))
 			ADD_TRAIT(src, TRAIT_NODROP, "psycho")
 			. += span_hypnophrase("Look at that subtle coloring... The tasteful thickness of it. Oh my God, it even has a watermark...")
-			var/sound/slowbeat = sound('sound/effects/health/slowbeat.ogg', repeat = TRUE)
+			var/sound/slowbeat = sound('../assets/sound/effects/health/slowbeat.ogg', repeat = TRUE)
 			user.playsound_local(get_turf(src), slowbeat, 40, 0, channel = CHANNEL_HEARTBEAT, use_reverb = FALSE)
 			if(isliving(user))
 				var/mob/living/living_user = user
@@ -2084,8 +2084,8 @@
 	var/scribbled_trim
 	///The colors for each of the above variables, for when overlays are updated.
 	var/details_colors = list(COLOR_BLACK, COLOR_BLACK, COLOR_BLACK)
-	pickup_sound = 'sound/items/handling/materials/cardboard_pick_up.ogg'
-	drop_sound = 'sound/items/handling/materials/cardboard_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/materials/cardboard_pick_up.ogg'
+	drop_sound = '../assets/sound/items/handling/materials/cardboard_drop.ogg'
 
 /obj/item/card/cardboard/Initialize(mapload)
 	. = ..()

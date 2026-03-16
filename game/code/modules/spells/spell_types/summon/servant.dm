@@ -57,8 +57,8 @@
 		to_summon,
 		get_turf(owner),
 		precision = 1,
-		asoundin = 'sound/effects/magic/wand_teleport.ogg',
-		asoundout = 'sound/effects/magic/wand_teleport.ogg',
+		asoundin = '../assets/sound/effects/magic/wand_teleport.ogg',
+		asoundout = '../assets/sound/effects/magic/wand_teleport.ogg',
 		channel = TELEPORT_CHANNEL_MAGIC,
 	)
 
@@ -93,7 +93,7 @@
 
 /datum/action/cooldown/spell/summon_mob/dice
 	name = "Summon Dice Servant"
-	sound = 'sound/machines/microwave/microwave-end.ogg'
+	sound = '../assets/sound/machines/microwave/microwave-end.ogg'
 	servant_title = "Dice Servant"
 
 /datum/outfit/butler

@@ -17,7 +17,7 @@
 	name = "Black Market Trader"
 	prompt_name = "a blackmarket dealer"
 	desc = "A humming cryo pod. The machine is attempting to wake up its occupant."
-	icon = 'icons/obj/machines/sleeper.dmi'
+	icon = '../assets/icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
 	mob_species = /datum/species/human
 	you_are_text = "You are a black market dealer, with shop set up in Nanotrasen Space."
@@ -97,7 +97,7 @@
 	you_are_text = "You are a Syndicate prisoner aboard an unknown ship."
 	flavour_text = "Unaware of where you are, all you know is you are a prisoner. The plastitanium should clue you into who your captors are... as for why you're here? That's for you to know, and for us to find out."
 	important_text = "You are still subject to standard prisoner policy and must Adminhelp before antagonizing DS2."
-	icon = 'icons/obj/machines/sleeper.dmi'
+	icon = '../assets/icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper_s"
 	computer_area = /area/ruin/space/has_grav/nova/des_two/security/prison
 	outfit = /datum/outfit/ds2/prisoner
@@ -107,7 +107,7 @@
 /obj/effect/mob_spawn/ghost_role/human/ds2/syndicate
 	name = "Syndicate Operative"
 	prompt_name = "a Syndicate operative"
-	icon = 'icons/obj/machines/sleeper.dmi'
+	icon = '../assets/icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper_s"
 	you_are_text = "You are a Syndicate operative, employed onboard the Deep Space 2 FOB for reasons that are yours."
 	flavour_text = "The Syndicate has found it fit to send a forward operating base to Sector 13 to monitor NT's operations. Your orders are maintaining the ship's integrity and keeping a low profile as well as possible."
@@ -121,7 +121,7 @@
 /obj/effect/mob_spawn/ghost_role/human/ds2/syndicate_command
 	name = "Syndicate Command Operative"
 	prompt_name = "a Syndicate leader"
-	icon = 'icons/obj/machines/sleeper.dmi'
+	icon = '../assets/icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper_s"
 	you_are_text = "You are a Syndicate command operative, employed onboard the Deep Space 2 FOB to guide it forward in its goals."
 	flavour_text = "The Syndicate has found it fit to send you to help command the forward operating base in Sector 13. Your orders are commanding the crew of DS-2 while keeping a low profile as well as possible."
@@ -516,7 +516,7 @@
 	desc = "A humming cryo pod. There's a freight hauler inside."
 	outfit = /datum/outfit/freighter_crew
 	spawner_job_path = /datum/job/freighter_crew
-	icon = 'icons/obj/machines/sleeper.dmi'
+	icon = '../assets/icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
 	mob_species = /datum/species/human
 	you_are_text = "You were running cargo, a typical freight job until pirates attacked. You and your crewmates just barely made it, but the engines are shot. You're trapped in space now, only able to work together to survive this nightmare."
@@ -549,7 +549,7 @@
 	desc = "A humming cryo pod. There's an excavation worker inside."
 	outfit = /datum/outfit/freighter_excavator
 	spawner_job_path = /datum/job/freighter_crew
-	icon = 'icons/obj/machines/sleeper.dmi'
+	icon = '../assets/icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
 	mob_species = /datum/species/human
 	you_are_text = "You were running cargo, a typical freight job until pirates attacked. You and your crewmates just barely made it, but the engines are shot. You're trapped in space now, only able to work together to survive this nightmare."
@@ -590,7 +590,7 @@
 	desc = "A humming cryo pod. You see someone who looks In Charge inside."
 	outfit = /datum/outfit/freighter_boss
 	spawner_job_path = /datum/job/freighter_crew
-	icon = 'icons/obj/machines/sleeper.dmi'
+	icon = '../assets/icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
 	mob_species = /datum/species/human
 	you_are_text = "You and your crew were running a normal freight haul until a pirate attack knocked out the engines. All you can do now is try and survive and keep your crew alive."

@@ -2,11 +2,11 @@
 	name = "toy turret kit"
 	desc = "A deployable turret designed for office warfare. Throw it in the neighboring cubicle and take cover as it does the rest. Made with a flexible, recolourable material."
 	inhand_icon_state = "smoke" //I was originally gonna leave it spriteless here but after doing this for the other quick_deploy, why not.
-	lefthand_file = 'icons/mob/inhands/equipment/security_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/security_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/security_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/security_righthand.dmi'
 	flags_1 = IS_PLAYER_COLORABLE_1
 	w_class = WEIGHT_CLASS_NORMAL
-	icon = 'icons/map_icons/objects.dmi'
+	icon = '../assets/icons/map_icons/objects.dmi'
 	icon_state = "/obj/item/storage/toolbox/emergency/turret/mag_fed/toy"
 	post_init_icon_state = "toy_toolbox"
 	greyscale_config = /datum/greyscale_config/turret/toolbox
@@ -35,7 +35,7 @@
 	max_integrity = 10 //small weak thing
 	base_icon_state = "toy"
 	flags_1 = IS_PLAYER_COLORABLE_1
-	icon = 'icons/map_icons/items/_item.dmi'
+	icon = '../assets/icons/map_icons/items/_item.dmi'
 	icon_state = "/obj/machinery/porta_turret/syndicate/toolbox/mag_fed/toy"
 	post_init_icon_state = "toy_off"
 	greyscale_config = /datum/greyscale_config/turret

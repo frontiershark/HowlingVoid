@@ -1,6 +1,6 @@
 /datum/action/cooldown/mob_cooldown/create_legion_skull
 	name = "Create Legion Skull"
-	button_icon = 'icons/mob/simple/lavaland/lavaland_monsters.dmi'
+	button_icon = '../assets/icons/mob/simple/lavaland/lavaland_monsters.dmi'
 	button_icon_state = "legion_head"
 	desc = "Create a legion skull to chase down a targeted enemy"
 	cooldown_time = 2 SECONDS

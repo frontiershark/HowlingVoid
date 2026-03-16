@@ -62,11 +62,11 @@
 		Regardless of perceived drawbacks, some express a fondness for such experimental firearms. Many choose to give theirs a name."
 
 	/// Base fire sound of the revolver.
-	var/base_fire_sound = 'sound/items/weapons/gun/revolver/shot_alt.ogg'
+	var/base_fire_sound = '../assets/sound/items/weapons/gun/revolver/shot_alt.ogg'
 	/// Base recoil of the revolver.
 	var/base_recoil = NONE
 	/// Amped fire sound of the revolver.
-	var/amped_fire_sound = 'sound/items/weapons/thermalpistol.ogg'
+	var/amped_fire_sound = '../assets/sound/items/weapons/thermalpistol.ogg'
 	/// Amped recoil of the revolver.
 	var/amped_recoil = 0.5
 

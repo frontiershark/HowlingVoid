@@ -14,7 +14,7 @@
 	message = "beeps."
 	message_param = "beeps at %t."
 	emote_type = EMOTE_AUDIBLE
-	sound = 'sound/machines/beep/twobeep.ogg'
+	sound = '../assets/sound/machines/beep/twobeep.ogg'
 
 /datum/emote/silicon/buzz
 	key = "buzz"
@@ -22,20 +22,20 @@
 	message = "buzzes."
 	message_param = "buzzes at %t."
 	emote_type = EMOTE_AUDIBLE
-	sound = 'sound/machines/buzz/buzz-sigh.ogg'
+	sound = '../assets/sound/machines/buzz/buzz-sigh.ogg'
 
 /datum/emote/silicon/buzz2
 	key = "buzz2"
 	message = "buzzes twice."
 	emote_type = EMOTE_AUDIBLE
-	sound = 'sound/machines/buzz/buzz-two.ogg'
+	sound = '../assets/sound/machines/buzz/buzz-two.ogg'
 
 /datum/emote/silicon/chime
 	key = "chime"
 	key_third_person = "chimes"
 	message = "chimes."
 	emote_type = EMOTE_AUDIBLE
-	sound = 'sound/machines/chime.ogg'
+	sound = '../assets/sound/machines/chime.ogg'
 
 /datum/emote/silicon/honk
 	key = "honk"
@@ -43,7 +43,7 @@
 	message = "honks."
 	emote_type = EMOTE_AUDIBLE
 	vary = TRUE
-	sound = 'sound/items/bikehorn.ogg'
+	sound = '../assets/sound/items/bikehorn.ogg'
 
 /datum/emote/silicon/ping
 	key = "ping"
@@ -51,23 +51,23 @@
 	message = "pings."
 	message_param = "pings at %t."
 	emote_type = EMOTE_AUDIBLE
-	sound = 'sound/machines/ping.ogg'
+	sound = '../assets/sound/machines/ping.ogg'
 
 /datum/emote/silicon/sad
 	key = "sad"
 	message = "plays a sad trombone..."
 	emote_type = EMOTE_AUDIBLE
-	sound = 'sound/misc/sadtrombone.ogg'
+	sound = '../assets/sound/misc/sadtrombone.ogg'
 
 /datum/emote/silicon/warn
 	key = "warn"
 	message = "blares an alarm!"
 	emote_type = EMOTE_AUDIBLE
-	sound = 'sound/machines/warning-buzzer.ogg'
+	sound = '../assets/sound/machines/warning-buzzer.ogg'
 	sound_wall_ignore = TRUE // NOVA EDIT ADDITION
 
 /datum/emote/silicon/slowclap
 	key = "slowclap"
 	message = "activates their slow clap processor."
 	emote_type = EMOTE_AUDIBLE
-	sound = 'sound/machines/slowclap.ogg'
+	sound = '../assets/sound/machines/slowclap.ogg'

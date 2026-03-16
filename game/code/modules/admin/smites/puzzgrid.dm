@@ -29,13 +29,13 @@
 	target.forceMove(puzzgrid_effect)
 	puzzgrid_effect.visible_message(span_warning("[target] has suddenly transformed into a fiendishly hard puzzle!"))
 
-	playsound(puzzgrid_effect, 'sound/effects/magic.ogg', 70)
+	playsound(puzzgrid_effect, '../assets/sound/effects/magic.ogg', 70)
 
 /obj/structure/puzzgrid_effect
 	anchored = TRUE
 	density = TRUE
 	resistance_flags = INDESTRUCTIBLE
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	icon_state = "shield2"
 
 	var/mob/living/victim

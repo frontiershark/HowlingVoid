@@ -1,6 +1,6 @@
 /obj/effect/landmark
 	name = "landmark"
-	icon = 'icons/effects/landmarks_static.dmi'
+	icon = '../assets/icons/effects/landmarks_static.dmi'
 	icon_state = "x2"
 	anchored = TRUE
 	layer = OBJ_LAYER
@@ -26,7 +26,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 
 /obj/effect/landmark/start
 	name = "start"
-	icon = 'icons/mob/landmarks.dmi'
+	icon = '../assets/icons/mob/landmarks.dmi'
 	icon_state = "x"
 	anchored = TRUE
 	layer = MOB_LAYER
@@ -226,7 +226,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	return ..()
 
 /obj/effect/landmark/start/ai/secondary
-	icon = 'icons/effects/landmarks_static.dmi'
+	icon = '../assets/icons/effects/landmarks_static.dmi'
 	icon_state = "ai_spawn"
 	primary_ai = FALSE
 	latejoin_active = FALSE
@@ -267,7 +267,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 
 /obj/effect/landmark/start/wizard
 	name = "wizard"
-	icon = 'icons/effects/landmarks_static.dmi'
+	icon = '../assets/icons/effects/landmarks_static.dmi'
 	icon_state = "wiznerd_spawn"
 
 /obj/effect/landmark/start/wizard/Initialize(mapload)
@@ -277,7 +277,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 
 /obj/effect/landmark/start/nukeop
 	name = "nukeop"
-	icon = 'icons/effects/landmarks_static.dmi'
+	icon = '../assets/icons/effects/landmarks_static.dmi'
 	icon_state = "snukeop_spawn"
 
 /obj/effect/landmark/start/nukeop/Initialize(mapload)
@@ -287,7 +287,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 
 /obj/effect/landmark/start/nukeop_leader
 	name = "nukeop leader"
-	icon = 'icons/effects/landmarks_static.dmi'
+	icon = '../assets/icons/effects/landmarks_static.dmi'
 	icon_state = "snukeop_leader_spawn"
 
 /obj/effect/landmark/start/nukeop_leader/Initialize(mapload)
@@ -297,7 +297,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 
 /obj/effect/landmark/start/nukeop_overwatch
 	name = "nukeop overwatch"
-	icon = 'icons/effects/landmarks_static.dmi'
+	icon = '../assets/icons/effects/landmarks_static.dmi'
 	icon_state = "snukeop_leader_spawn"
 
 /obj/effect/landmark/start/nukeop_overwatch/Initialize(mapload)
@@ -319,7 +319,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 
 /obj/effect/landmark/start/pun_pun
 	name = JOB_PUN_PUN
-	icon = 'icons/mob/human/human.dmi'
+	icon = '../assets/icons/mob/human/human.dmi'
 	icon_state = "monkey"
 
 /obj/effect/landmark/latejoin

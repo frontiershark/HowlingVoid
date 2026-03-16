@@ -18,8 +18,8 @@
 	possessed_message = "You are a honkbot! Make sure the crew are having a great time!"
 	///our voicelines
 	var/static/list/honkbot_sounds = list(
-		HONKBOT_VOICED_HONK_HAPPY = 'sound/items/bikehorn.ogg',
-		HONKBOT_VOICED_HONK_SAD = 'sound/misc/sadtrombone.ogg',
+		HONKBOT_VOICED_HONK_HAPPY = '../assets/sound/items/bikehorn.ogg',
+		HONKBOT_VOICED_HONK_SAD = '../assets/sound/misc/sadtrombone.ogg',
 	)
 	///Honkbot's flags
 	var/honkbot_flags = HONKBOT_CHECK_RECORDS | HONKBOT_HANDCUFF_TARGET | HONKBOT_MODE_SLIP
@@ -49,7 +49,7 @@
 		can_slip_callback = CALLBACK(src, PROC_REF(pre_slip)),\
 	)
 	AddComponent(/datum/component/stun_n_cuff,\
-		stun_sound = 'sound/items/airhorn/AirHorn.ogg',\
+		stun_sound = '../assets/sound/items/airhorn/AirHorn.ogg',\
 		post_stun_callback = CALLBACK(src, PROC_REF(post_stun)),\
 		post_arrest_callback = CALLBACK(src, PROC_REF(post_arrest)),\
 		handcuff_type = /obj/item/restraints/handcuffs/cable/zipties/fake,\
@@ -70,7 +70,7 @@
 	addtimer(CALLBACK(src, TYPE_PROC_REF(/atom, update_appearance)), 0.2 SECONDS)
 
 /mob/living/basic/bot/honkbot/proc/post_arrest(mob/living/carbon/current_target)
-	playsound(src, (bot_access_flags & BOT_COVER_EMAGGED ? SFX_HONKBOT_E : 'sound/items/bikehorn.ogg'), 50, FALSE)
+	playsound(src, (bot_access_flags & BOT_COVER_EMAGGED ? SFX_HONKBOT_E : '../assets/sound/items/bikehorn.ogg'), 50, FALSE)
 	icon_state = bot_access_flags & BOT_COVER_EMAGGED ? "[base_icon_state]-e" : "[base_icon_state]-c"
 	addtimer(CALLBACK(src, TYPE_PROC_REF(/atom, update_appearance)), 3 SECONDS, TIMER_OVERRIDE|TIMER_UNIQUE)
 

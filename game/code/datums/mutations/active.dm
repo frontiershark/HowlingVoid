@@ -22,7 +22,7 @@
 /datum/action/cooldown/adrenaline
 	name = "Adrenaline!"
 	desc = "Energize yourself, pushing your body to its limits!"
-	button_icon = 'icons/mob/actions/actions_genetic.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_genetic.dmi'
 	button_icon_state = "adrenaline"
 
 	cooldown_time = 2 MINUTES

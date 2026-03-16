@@ -61,7 +61,7 @@ GLOBAL_LIST_INIT(clown_mask_options, list(
 /obj/item/clothing/mask/gas/separate_worn_overlays(mutable_appearance/standing, mutable_appearance/draw_target, isinhands, icon_file, mutant_styles) // NOVA EDIT CHANGE - ORIGINAL: /obj/item/clothing/gloves/separate_worn_overlays(mutable_appearance/standing, mutable_appearance/draw_target, isinhands, icon_file)
 	. = ..()
 	if(!isinhands && cig)
-		. += cig.build_worn_icon(default_layer = FACEMASK_LAYER, default_icon_file = 'icons/mob/clothing/mask.dmi')
+		. += cig.build_worn_icon(default_layer = FACEMASK_LAYER, default_icon_file = '../assets/icons/mob/clothing/mask.dmi')
 
 /obj/item/clothing/mask/gas/Destroy()
 	QDEL_LAZYLIST(gas_filters)
@@ -203,8 +203,8 @@ GLOBAL_LIST_INIT(clown_mask_options, list(
 /obj/item/clothing/mask/gas/atmos/centcom
 	name = "\improper CentCom gas mask"
 	desc = "Oooh, gold and green. Fancy! This should help as you sit in your office."
-	icon = 'icons/obj/clothing/masks.dmi'
-	worn_icon = 'icons/mob/clothing/mask.dmi'
+	icon = '../assets/icons/obj/clothing/masks.dmi'
+	worn_icon = '../assets/icons/mob/clothing/mask.dmi'
 	worn_icon_state = "gas_centcom"
 	icon_state = "gas_centcom"
 	inhand_icon_state = "gas_centcom"
@@ -293,8 +293,8 @@ GLOBAL_LIST_INIT(clown_mask_options, list(
 	clothing_flags = MASKINTERNALS
 	icon_state = "clown"
 	inhand_icon_state = "clown_hat"
-	lefthand_file = 'icons/mob/inhands/clothing/hats_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/clothing/hats_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/clothing/hats_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/clothing/hats_righthand.dmi'
 	dye_color = DYE_CLOWN
 	w_class = WEIGHT_CLASS_SMALL
 	flags_cover = MASKCOVERSEYES
@@ -342,8 +342,8 @@ GLOBAL_LIST_INIT(clown_mask_options, list(
 	clothing_flags = MASKINTERNALS
 	icon_state = "sexyclown"
 	inhand_icon_state = "sexyclown_hat"
-	lefthand_file = 'icons/mob/inhands/clothing/hats_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/clothing/hats_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/clothing/hats_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/clothing/hats_righthand.dmi'
 	flags_cover = MASKCOVERSEYES
 	resistance_flags = FLAMMABLE
 	fishing_modifier = 0
@@ -408,8 +408,8 @@ GLOBAL_LIST_INIT(clown_mask_options, list(
 			if(snout.name in avian_snouts)
 				icon_state = "[options[choice]]_b"
 		else
-			icon = 'icons/obj/clothing/masks.dmi'
-			worn_icon = 'icons/mob/clothing/mask.dmi'
+			icon = '../assets/icons/obj/clothing/masks.dmi'
+			worn_icon = '../assets/icons/mob/clothing/mask.dmi'
 			icon_state = options[choice]
 		/* NOVA EDIT ADDITION END
 		icon_state = options[choice]

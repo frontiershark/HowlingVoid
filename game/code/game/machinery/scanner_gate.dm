@@ -10,7 +10,7 @@
 /obj/machinery/scanner_gate
 	name = "scanner gate"
 	desc = "A gate able to perform mid-depth scans on any organisms who pass under it."
-	icon = 'icons/obj/machines/scangate.dmi'
+	icon = '../assets/icons/obj/machines/scangate.dmi'
 	icon_state = "scangate"
 	layer = ABOVE_MOB_LAYER
 	circuit = /obj/item/circuitboard/machine/scanner_gate
@@ -293,7 +293,7 @@
 		say("[detected_thing][reverse ? " not " : " "]detected!!")
 
 	COOLDOWN_START(src, next_beep, 2 SECONDS)
-	playsound(source = src, soundin = 'sound/machines/scanner/scanbuzz.ogg', vol = 30, vary = FALSE, extrarange = MEDIUM_RANGE_SOUND_EXTRARANGE, falloff_distance = 4)
+	playsound(source = src, soundin = '../assets/sound/machines/scanner/scanbuzz.ogg', vol = 30, vary = FALSE, extrarange = MEDIUM_RANGE_SOUND_EXTRARANGE, falloff_distance = 4)
 	set_scanline("alarm", 2 SECONDS)
 
 /obj/machinery/scanner_gate/can_interact(mob/user)

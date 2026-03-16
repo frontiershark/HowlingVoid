@@ -5,7 +5,7 @@
 
 /obj/machinery/porta_turret_cover
 	name = "turret"
-	icon = 'icons/obj/weapons/turrets.dmi'
+	icon = '../assets/icons/obj/weapons/turrets.dmi'
 	icon_state = "turretCover"
 	layer = HIGH_OBJ_LAYER
 	density = FALSE

@@ -1,7 +1,7 @@
 /obj/item/food/meat
 	custom_materials = list(/datum/material/meat = MEATSLAB_MATERIAL_AMOUNT)
 	w_class = WEIGHT_CLASS_SMALL
-	icon = 'icons/obj/food/meat.dmi'
+	icon = '../assets/icons/obj/food/meat.dmi'
 	abstract_type = /obj/item/food/meat
 	var/subjectname = ""
 	var/subjectjob = null

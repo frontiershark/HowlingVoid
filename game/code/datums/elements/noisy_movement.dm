@@ -4,7 +4,7 @@
 	var/movement_sound
 	var/volume
 
-/datum/element/noisy_movement/Attach(datum/target, movement_sound = 'sound/effects/roll.ogg', volume = 100)
+/datum/element/noisy_movement/Attach(datum/target, movement_sound = '../assets/sound/effects/roll.ogg', volume = 100)
 	. = ..()
 	if(!ismovable(target))
 		return ELEMENT_INCOMPATIBLE

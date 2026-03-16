@@ -36,7 +36,7 @@
 	. = ..()
 	actions += new /datum/action/innate/shuttledocker_rotate(src)
 	actions += new /datum/action/innate/shuttledocker_place(src)
-	AddElement(/datum/element/nav_computer_icon, 'icons/effects/nav_computer_indicators.dmi', "computer", FALSE)
+	AddElement(/datum/element/nav_computer_icon, '../assets/icons/effects/nav_computer_indicators.dmi', "computer", FALSE)
 	set_init_ports()
 
 	if(connect_to_shuttle(mapload, SSshuttle.get_containing_shuttle(src)))
@@ -118,7 +118,7 @@
 			for(var/turf/shuttle_turf as anything in zlevel_turfs)
 				if(shuttle_turf.z != origin.z)
 					continue
-				var/image/I = image('icons/effects/alphacolors.dmi', origin, "red")
+				var/image/I = image('../assets/icons/effects/alphacolors.dmi', origin, "red")
 				var/x_off = shuttle_turf.x - origin.x
 				var/y_off = shuttle_turf.y - origin.y
 				I.loc = locate(origin.x + x_off, origin.y + y_off, origin.z) //we have to set this after creating the image because it might be null, and images created in nullspace are immutable.
@@ -254,7 +254,7 @@
 	LAZYCLEARLIST(the_eye.placed_images)
 
 	for(var/image/place_spots as anything in the_eye.placement_images)
-		var/image/newI = image('icons/effects/alphacolors.dmi', the_eye.loc, "blue")
+		var/image/newI = image('../assets/icons/effects/alphacolors.dmi', the_eye.loc, "blue")
 		newI.loc = place_spots.loc //It is highly unlikely that any landing spot including a null tile will get this far, but better safe than sorry.
 		newI.layer = NAVIGATION_EYE_LAYER
 		SET_PLANE_EXPLICIT(newI, ABOVE_GAME_PLANE, place_spots)
@@ -409,7 +409,7 @@
 
 /datum/action/innate/shuttledocker_rotate
 	name = "Rotate"
-	button_icon = 'icons/mob/actions/actions_mecha.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_mecha.dmi'
 	button_icon_state = "mech_cycle_equip_off"
 
 /datum/action/innate/shuttledocker_rotate/Activate()
@@ -421,7 +421,7 @@
 
 /datum/action/innate/shuttledocker_place
 	name = "Place"
-	button_icon = 'icons/mob/actions/actions_mecha.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_mecha.dmi'
 	button_icon_state = "mech_zoom_off"
 
 /datum/action/innate/shuttledocker_place/Activate()
@@ -441,7 +441,7 @@
 	var/mob/eye/camera/remote/remote_eye = owner.remote_control
 	var/obj/machinery/computer/camera_advanced/shuttle_docker/console = remote_eye.origin_ref.resolve()
 
-	playsound(console, 'sound/machines/terminal/terminal_prompt_deny.ogg', 25, FALSE)
+	playsound(console, '../assets/sound/machines/terminal/terminal_prompt_deny.ogg', 25, FALSE)
 
 	var/list/L = list()
 	for(var/V in SSshuttle.stationary_docking_ports)
@@ -466,10 +466,10 @@
 		else
 			L["([L.len]) [nav_beacon.name] locked"] = null
 
-	playsound(console, 'sound/machines/terminal/terminal_prompt.ogg', 25, FALSE)
+	playsound(console, '../assets/sound/machines/terminal/terminal_prompt.ogg', 25, FALSE)
 	var/selected = tgui_input_list(usr, "Choose location to jump to", "Locations", sort_list(L))
 	if(isnull(selected))
-		playsound(console, 'sound/machines/terminal/terminal_prompt_deny.ogg', 25, FALSE)
+		playsound(console, '../assets/sound/machines/terminal/terminal_prompt_deny.ogg', 25, FALSE)
 		return
 	if(QDELETED(src) || QDELETED(owner) || !isliving(owner))
 		return
@@ -477,7 +477,7 @@
 	var/turf/T = get_turf(L[selected])
 	if(isnull(T))
 		return
-	playsound(console, 'sound/machines/terminal/terminal_prompt_confirm.ogg', 25, FALSE)
+	playsound(console, '../assets/sound/machines/terminal/terminal_prompt_confirm.ogg', 25, FALSE)
 	remote_eye.setLoc(T)
 	to_chat(owner, span_notice("Jumped to [selected]."))
 	owner.overlay_fullscreen("flash", /atom/movable/screen/fullscreen/flash/static)

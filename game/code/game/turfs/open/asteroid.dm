@@ -5,8 +5,8 @@
 	name = "asteroid sand"
 	desc = "It's coarse and rough and gets everywhere."
 	baseturfs = /turf/open/misc/asteroid
-	icon = 'icons/turf/floors.dmi'
-	damaged_dmi = 'icons/turf/floors.dmi'
+	icon = '../assets/icons/turf/floors.dmi'
+	damaged_dmi = '../assets/icons/turf/floors.dmi'
 	icon_state = "asteroid"
 	base_icon_state = "asteroid"
 	turf_flags = IS_SOLID
@@ -134,7 +134,7 @@ GLOBAL_LIST_EMPTY(dug_up_basalt)
 /turf/open/misc/asteroid/basalt
 	name = "volcanic floor"
 	baseturfs = /turf/open/misc/asteroid/basalt
-	icon = 'icons/turf/floors.dmi'
+	icon = '../assets/icons/turf/floors.dmi'
 	icon_state = "basalt"
 	base_icon_state = "basalt"
 	floor_variance = 15
@@ -202,8 +202,8 @@ GLOBAL_LIST_EMPTY(dug_up_basalt)
 	gender = PLURAL
 	name = "snow"
 	desc = "Looks cold."
-	icon = 'icons/turf/snow.dmi'
-	damaged_dmi = 'icons/turf/snow.dmi'
+	icon = '../assets/icons/turf/snow.dmi'
+	damaged_dmi = '../assets/icons/turf/snow.dmi'
 	baseturfs = /turf/open/misc/asteroid/snow
 	icon_state = "snow"
 	base_icon_state = "snow"
@@ -301,7 +301,7 @@ GLOBAL_LIST_EMPTY(dug_up_basalt)
 /turf/open/misc/asteroid/moon
 	name = "lunar surface"
 	baseturfs = /turf/open/misc/asteroid/moon
-	icon = 'icons/turf/floors.dmi'
+	icon = '../assets/icons/turf/floors.dmi'
 	icon_state = "moon"
 	base_icon_state = "moon"
 	floor_variance = 40
@@ -320,8 +320,8 @@ GLOBAL_LIST_EMPTY(dug_up_basalt)
 	name = "asteroid gravel"
 	desc = "It's coarse and rough and gets everywhere."
 	baseturfs = /turf/open/misc/asteroid
-	icon = 'icons/turf/floors.dmi'
-	damaged_dmi = 'icons/turf/floors.dmi'
+	icon = '../assets/icons/turf/floors.dmi'
+	damaged_dmi = '../assets/icons/turf/floors.dmi'
 	icon_state = "asteroid"
 	base_icon_state = "asteroid"
 	initial_gas_mix = "co2=173.4;n2=135.1;plasma=229.8;TEMP=351.9"

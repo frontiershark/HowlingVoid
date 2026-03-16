@@ -13,14 +13,14 @@
 /obj/item/locator
 	name = "bluespace locator"
 	desc = "A handheld device that locks onto the unique bluespace resonance of tracking implants, providing real-time directional and positional data."
-	icon = 'icons/obj/devices/tracker.dmi'
+	icon = '../assets/icons/obj/devices/tracker.dmi'
 	icon_state = "locator"
 	var/temp = null
 	obj_flags = CONDUCTS_ELECTRICITY
 	w_class = WEIGHT_CLASS_SMALL
 	inhand_icon_state = "electronic"
-	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/devices_righthand.dmi'
 	throw_speed = 3
 	throw_range = 7
 	custom_materials = list(/datum/material/iron= SMALL_MATERIAL_AMOUNT * 4)
@@ -74,12 +74,12 @@
 /obj/item/hand_tele
 	name = "hand tele"
 	desc = "A portable item using blue-space technology. One of the buttons opens a portal, the other re-opens your last destination."
-	icon = 'icons/obj/devices/tracker.dmi'
+	icon = '../assets/icons/obj/devices/tracker.dmi'
 	icon_state = "hand_tele"
 	inhand_icon_state = "electronic"
 	worn_icon_state = "electronic"
-	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/devices_righthand.dmi'
 	throwforce = 0
 	w_class = WEIGHT_CLASS_SMALL
 	throw_speed = 3
@@ -314,7 +314,7 @@
 /obj/item/syndicate_teleporter
 	name = "experimental teleporter"
 	desc = "A reverse-engineered version of the Nanotrasen handheld teleporter. Lacks the advanced safety features of its counterpart. A three-headed serpent can be seen on the back."
-	icon = 'icons/obj/devices/tracker.dmi'
+	icon = '../assets/icons/obj/devices/tracker.dmi'
 	icon_state = "syndi-tele"
 	throwforce = 5
 	w_class = WEIGHT_CLASS_SMALL
@@ -322,8 +322,8 @@
 	throw_range = 10
 	obj_flags = CONDUCTS_ELECTRICITY
 	inhand_icon_state = "electronic"
-	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/devices_righthand.dmi'
 	//Uses of the device left
 	var/charges = 4
 	//The maximum number of stored uses
@@ -362,7 +362,7 @@
 		if(ishuman(loc))
 			var/mob/living/carbon/human/holder = loc
 			balloon_alert(holder, "teleporter beeps")
-		playsound(src, 'sound/machines/beep/twobeep.ogg', 10, TRUE, extrarange = SILENCED_SOUND_EXTRARANGE, falloff_distance = 0)
+		playsound(src, '../assets/sound/machines/beep/twobeep.ogg', 10, TRUE, extrarange = SILENCED_SOUND_EXTRARANGE, falloff_distance = 0)
 
 /obj/item/syndicate_teleporter/emp_act(severity)
 	. = ..()
@@ -429,7 +429,7 @@
 		else
 			new /obj/effect/temp_visual/circle_wave/syndi_teleporter(destination)
 		playsound(current_location, SFX_PORTAL_ENTER, 50, 1, SHORT_RANGE_SOUND_EXTRARANGE)
-		playsound(destination, 'sound/effects/phasein.ogg', 25, 1, SHORT_RANGE_SOUND_EXTRARANGE)
+		playsound(destination, '../assets/sound/effects/phasein.ogg', 25, 1, SHORT_RANGE_SOUND_EXTRARANGE)
 		playsound(destination, SFX_PORTAL_ENTER, 50, 1, SHORT_RANGE_SOUND_EXTRARANGE)
 
 /obj/item/syndicate_teleporter/proc/malfunctioning(mob/guy_teleporting, turf/current_location)
@@ -467,9 +467,9 @@
 		else
 			new /obj/effect/temp_visual/circle_wave/syndi_teleporter(destination)
 		playsound(mobloc, SFX_PORTAL_ENTER, 50, 1, SHORT_RANGE_SOUND_EXTRARANGE)
-		playsound(emergency_destination, 'sound/effects/phasein.ogg', 25, 1, SHORT_RANGE_SOUND_EXTRARANGE)
+		playsound(emergency_destination, '../assets/sound/effects/phasein.ogg', 25, 1, SHORT_RANGE_SOUND_EXTRARANGE)
 		playsound(emergency_destination, SFX_PORTAL_ENTER, 50, 1, SHORT_RANGE_SOUND_EXTRARANGE)
-		playsound(src, 'sound/machines/warning-buzzer.ogg', 25, TRUE)
+		playsound(src, '../assets/sound/machines/warning-buzzer.ogg', 25, TRUE)
 	else //We tried to save. We failed. Death time.
 		get_fragged(user, destination)
 
@@ -481,7 +481,7 @@
 	new /obj/effect/temp_visual/teleport_abductor/syndi_teleporter(destination)
 	playsound(mobloc, SFX_PORTAL_ENTER, 50, TRUE, SHORT_RANGE_SOUND_EXTRARANGE)
 	playsound(destination, SFX_PORTAL_ENTER, 50, TRUE, SHORT_RANGE_SOUND_EXTRARANGE)
-	playsound(destination, 'sound/effects/magic/disintegrate.ogg', 50, TRUE, SHORT_RANGE_SOUND_EXTRARANGE)
+	playsound(destination, '../assets/sound/effects/magic/disintegrate.ogg', 50, TRUE, SHORT_RANGE_SOUND_EXTRARANGE)
 	if(!not_holding_tele)
 		to_chat(victim, span_userdanger("You teleport into [destination], [src] tries to save you, but..."))
 	else
@@ -514,7 +514,7 @@
 	// sometimes lose a lot
 	// average evens out to 10 per teleport, but the randomness spices things up
 	if(prob(25) && bleed_amount)
-		playsound(src, 'sound/effects/wounds/pierce1.ogg', 40, vary = TRUE)
+		playsound(src, '../assets/sound/effects/wounds/pierce1.ogg', 40, vary = TRUE)
 		visible_message(span_warning("Blood visibly spurts out of [user] as [src] fails to teleport [user.p_their()] body properly!"), \
 			span_boldwarning("Blood visibly spurts out of you as [src] fails to teleport your body properly!"))
 		carbon_user.bleed(bleed_amount * 0.75)

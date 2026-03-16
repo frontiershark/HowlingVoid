@@ -13,9 +13,9 @@
 	)
 	target_type = /obj/item/organ/brain
 	required_organ_flag = ORGAN_TYPE_FLAGS & ~ORGAN_ROBOTIC
-	preop_sound = 'sound/items/handling/surgery/scalpel1.ogg'
-	success_sound = 'sound/items/handling/surgery/scalpel2.ogg'
-	failure_sound = 'sound/items/handling/surgery/organ2.ogg'
+	preop_sound = '../assets/sound/items/handling/surgery/scalpel1.ogg'
+	success_sound = '../assets/sound/items/handling/surgery/scalpel2.ogg'
+	failure_sound = '../assets/sound/items/handling/surgery/organ2.ogg'
 	all_surgery_states_required = SURGERY_SKIN_OPEN|SURGERY_BONE_SAWED
 	any_surgery_states_blocked = SURGERY_VESSELS_UNCLAMPED
 
@@ -97,7 +97,7 @@
 		/obj/item/shard = 4,
 		/obj/item = 5,
 	)
-	preop_sound = 'sound/items/taperecorder/tape_flip.ogg'
-	success_sound = 'sound/items/taperecorder/taperecorder_close.ogg'
+	preop_sound = '../assets/sound/items/taperecorder/tape_flip.ogg'
+	success_sound = '../assets/sound/items/taperecorder/taperecorder_close.ogg'
 	required_organ_flag = ORGAN_ROBOTIC
 	operation_flags = parent_type::operation_flags | OPERATION_MECHANIC

@@ -2,7 +2,7 @@
 /mob/living/basic/mining/goldgrub
 	name = "goldgrub"
 	desc = "A worm that grows fat from eating everything in its sight. Seems to enjoy precious metals and other shiny things, hence the name."
-	icon = 'icons/mob/simple/lavaland/lavaland_monsters_wide.dmi'
+	icon = '../assets/icons/mob/simple/lavaland/lavaland_monsters_wide.dmi'
 	icon_state = "goldgrub"
 	icon_living = "goldgrub"
 	icon_dead = "goldgrub_dead"
@@ -19,7 +19,7 @@
 	melee_damage_upper = 0
 	attack_verb_continuous = "barrels into"
 	attack_verb_simple = "barrel into"
-	attack_sound = 'sound/items/weapons/punch1.ogg'
+	attack_sound = '../assets/sound/items/weapons/punch1.ogg'
 	combat_mode = FALSE
 	speak_emote = list("screeches")
 	death_message = "stops moving as green liquid oozes from the carcass!"
@@ -62,7 +62,7 @@
 	AddComponent(/datum/component/ai_listen_to_weather)
 	AddComponent(\
 		/datum/component/appearance_on_aggro,\
-		overlay_icon = 'icons/mob/simple/lavaland/lavaland_monsters_wide.dmi',\
+		overlay_icon = '../assets/icons/mob/simple/lavaland/lavaland_monsters_wide.dmi',\
 		overlay_state = "goldgrub_alert",\
 	)
 
@@ -91,7 +91,7 @@
 	return COMPONENT_BULLET_BLOCKED
 
 /mob/living/basic/mining/goldgrub/proc/barf_contents(gibbed)
-	playsound(src, 'sound/effects/splat.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/effects/splat.ogg', 50, TRUE)
 	for(var/obj/item/stack/ore/ore in src)
 		ore.forceMove(loc)
 
@@ -149,7 +149,7 @@
 		. += emissive_appearance(icon, "[icon_state]_e", src)
 
 /mob/living/basic/mining/goldgrub/baby
-	icon = 'icons/mob/simple/lavaland/lavaland_monsters.dmi'
+	icon = '../assets/icons/mob/simple/lavaland/lavaland_monsters.dmi'
 	name = "goldgrub baby"
 	icon_state = "grub_baby"
 	icon_living = "grub_baby"

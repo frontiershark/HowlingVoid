@@ -42,7 +42,7 @@
 /datum/action/cooldown/fly_buzz_sense
 	name = "Buzz Sense"
 	desc = "Focus your antennae to sense nearby death, rot, and filth."
-	button_icon = 'icons/mob/actions/actions_items.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_items.dmi'
 	button_icon_state = "bci_scan"
 	cooldown_time = 10 SECONDS
 	check_flags = AB_CHECK_CONSCIOUS

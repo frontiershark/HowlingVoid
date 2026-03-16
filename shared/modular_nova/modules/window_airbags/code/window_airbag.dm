@@ -64,7 +64,7 @@
 		return
 	clicked_atom.balloon_alert_to_viewers("disarming airbag...")
 	if(do_after(clicker, DISARM_TIME, clicked_atom))
-		playsound(clicked_atom, 'sound/machines/click.ogg', 75, TRUE, -3)
+		playsound(clicked_atom, '../assets/sound/machines/click.ogg', 75, TRUE, -3)
 		clicker.put_in_hands(new disarmed_type(clicker))
 		Detach(clicked_atom)
 
@@ -111,7 +111,7 @@
 
 /obj/item/airbag/afterattack(atom/attacked_atom, mob/user, list/modifiers, list/attack_modifiers)
 	if(attempt_attach(attacked_atom, user))
-		playsound(attacked_atom, 'sound/machines/click.ogg', 75, TRUE, -3)
+		playsound(attacked_atom, '../assets/sound/machines/click.ogg', 75, TRUE, -3)
 		attacked_atom.AddElement(/datum/element/airbag)
 		qdel(src)
 		return

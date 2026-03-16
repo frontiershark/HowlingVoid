@@ -268,7 +268,7 @@
 		generated_icon.GetPixel(1, 1)
 		generated_icons[icon_state] = generated_icon
 
-	var/icon/icon_bundle = generated_icons[""] || icon('icons/testing/greyscale_error.dmi')
+	var/icon/icon_bundle = generated_icons[""] || icon('../assets/icons/testing/greyscale_error.dmi')
 	icon_bundle.Scale(width, height)
 	generated_icons -= ""
 
@@ -328,7 +328,7 @@
 	if(!(target_bundle_state in icon_states))
 		CRASH("Invalid target bundle icon_state \"[target_bundle_state]\"! Valid icon_states: [icon_states.Join(", ")]")
 
-	var/datum/universal_icon/icon_bundle = GenerateLayerGroupUniversalIcon(colors, icon_states[target_bundle_state], last_external_icon) || uni_icon('icons/effects/effects.dmi', "nothing")
+	var/datum/universal_icon/icon_bundle = GenerateLayerGroupUniversalIcon(colors, icon_states[target_bundle_state], last_external_icon) || uni_icon('../assets/icons/effects/effects.dmi', "nothing")
 	icon_bundle.scale(width, height)
 	return icon_bundle
 

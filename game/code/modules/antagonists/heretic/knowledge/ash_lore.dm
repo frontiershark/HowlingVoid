@@ -4,7 +4,7 @@
 	complexity = "Easy"
 	complexity_color = COLOR_GREEN
 	icon = list(
-		"icon" = 'icons/obj/weapons/khopesh.dmi',
+		"icon" = '../assets/icons/obj/weapons/khopesh.dmi',
 		"state" = "ash_blade",
 		"frame" = 1,
 		"dir" = SOUTH,
@@ -58,7 +58,7 @@
 		/obj/item/match = 1,
 	)
 	result_atoms = list(/obj/item/melee/sickly_blade/ash)
-	research_tree_icon_path = 'icons/obj/weapons/khopesh.dmi'
+	research_tree_icon_path = '../assets/icons/obj/weapons/khopesh.dmi'
 	research_tree_icon_state = "ash_blade"
 	mark_type = /datum/status_effect/eldritch/ash
 	eldritch_passive = /datum/status_effect/heretic_passive/ash
@@ -137,7 +137,7 @@
 	)
 	result_atoms = list(/obj/item/clothing/mask/madness_mask)
 	cost = 2
-	research_tree_icon_path = 'icons/obj/clothing/masks.dmi'
+	research_tree_icon_path = '../assets/icons/obj/clothing/masks.dmi'
 	research_tree_icon_state = "mad_mask"
 
 /datum/heretic_knowledge/blade_upgrade/ash
@@ -147,7 +147,7 @@
 		His city, the people he swore to watch... and watch he did, as they all burnt to cinders."
 
 
-	research_tree_icon_path = 'icons/ui_icons/antags/heretic/knowledge.dmi'
+	research_tree_icon_path = '../assets/icons/ui_icons/antags/heretic/knowledge.dmi'
 	research_tree_icon_state = "blade_upgrade_ash"
 
 /datum/heretic_knowledge/blade_upgrade/ash/do_melee_effects(mob/living/source, mob/living/target, obj/item/melee/sickly_blade/blade)
@@ -184,7 +184,7 @@
 
 	ascension_achievement = /datum/award/achievement/misc/ash_ascension
 	announcement_text = "%SPOOKY% Fear the blaze, for the Ashlord, %NAME% has ascended! The flames shall consume all! %SPOOKY%"
-	announcement_sound = 'sound/music/antag/heretic/ascend_ash.ogg'
+	announcement_sound = '../assets/sound/music/antag/heretic/ascend_ash.ogg'
 	/// A static list of all traits we apply on ascension.
 	var/static/list/traits_to_apply = list(
 		TRAIT_BOMBIMMUNE,

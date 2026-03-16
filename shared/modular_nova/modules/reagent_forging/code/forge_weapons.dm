@@ -37,7 +37,7 @@
 	inhand_icon_state = "sword"
 	worn_icon_state = "sword_back"
 	inside_belt_icon_state = "sword_belt"
-	hitsound = 'sound/items/weapons/bladeslice.ogg'
+	hitsound = '../assets/sound/items/weapons/bladeslice.ogg'
 	block_chance = 20
 	slot_flags = ITEM_SLOT_BELT | ITEM_SLOT_BACK
 	w_class = WEIGHT_CLASS_BULKY
@@ -55,7 +55,7 @@
 	inhand_icon_state = "katana"
 	worn_icon_state = "katana_back"
 	inside_belt_icon_state = "katana_belt"
-	hitsound = 'sound/items/weapons/bladeslice.ogg'
+	hitsound = '../assets/sound/items/weapons/bladeslice.ogg'
 	block_chance = 10
 	slot_flags = ITEM_SLOT_BELT | ITEM_SLOT_BACK
 	w_class = WEIGHT_CLASS_BULKY
@@ -71,7 +71,7 @@
 	inhand_icon_state = "dagger"
 	worn_icon_state = "dagger_back"
 	inside_belt_icon_state = "dagger_belt"
-	hitsound = 'sound/items/weapons/bladeslice.ogg'
+	hitsound = '../assets/sound/items/weapons/bladeslice.ogg'
 	embed_type = /datum/embedding/forged_dagger
 	throwforce = 17
 	throw_speed = 4
@@ -124,7 +124,7 @@
 	embed_data = /datum/embedding/spear
 	slot_flags = ITEM_SLOT_BACK
 	w_class = WEIGHT_CLASS_BULKY
-	hitsound = 'sound/items/weapons/bladeslice.ogg'
+	hitsound = '../assets/sound/items/weapons/bladeslice.ogg'
 	attack_verb_continuous = list("attacks", "pokes", "jabs", "tears", "lacerates", "gores")
 	attack_verb_simple = list("attack", "poke", "jab", "tear", "lacerate", "gore")
 	wound_bonus = -15
@@ -208,7 +208,7 @@
 	material_flags = MATERIAL_EFFECTS | MATERIAL_ADD_PREFIX | MATERIAL_COLOR | MATERIAL_AFFECT_STATISTICS
 	obj_flags_nova = ANVIL_REPAIR
 	resistance_flags = FIRE_PROOF | LAVA_PROOF
-	shield_break_sound = 'sound/effects/bang.ogg'
+	shield_break_sound = '../assets/sound/effects/bang.ogg'
 	shield_break_leftover = /obj/item/forging/complete/plate
 
 /obj/item/shield/buckler/reagent_weapon/Initialize(mapload)
@@ -325,7 +325,7 @@
 	inhand_icon_state = "bokken"
 	worn_icon_state = "bokken_back"
 	block_chance = 20
-	block_sound = 'sound/items/weapons/parry.ogg'
+	block_sound = '../assets/sound/items/weapons/parry.ogg'
 	damtype = STAMINA
 	slot_flags = ITEM_SLOT_BELT | ITEM_SLOT_BACK
 	w_class = WEIGHT_CLASS_BULKY
@@ -357,9 +357,9 @@
 	. = ..()
 	if(!iscarbon(target_mob))
 		user.visible_message(span_warning("The [src] seems to be ineffective against the [target_mob]!"))
-		playsound(src, 'sound/items/weapons/genhit.ogg', 75, TRUE)
+		playsound(src, '../assets/sound/items/weapons/genhit.ogg', 75, TRUE)
 		return
-	playsound(src, pick('sound/items/weapons/genhit1.ogg', 'sound/items/weapons/genhit2.ogg', 'sound/items/weapons/genhit3.ogg'), 100, TRUE)
+	playsound(src, pick('../assets/sound/items/weapons/genhit1.ogg', '../assets/sound/items/weapons/genhit2.ogg', '../assets/sound/items/weapons/genhit3.ogg'), 100, TRUE)
 
 #undef FAUNA_MULTIPLIER
 #undef MEGAFAUNA_MULTIPLIER

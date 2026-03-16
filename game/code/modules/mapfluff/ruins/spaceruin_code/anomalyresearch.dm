@@ -72,7 +72,7 @@
 
 /area/misc/anomaly_research
 	name = "Anomaly Research Facility"
-	icon = 'icons/area/areas_ruins.dmi'
+	icon = '../assets/icons/area/areas_ruins.dmi'
 	icon_state = "anomaly_research"
 	requires_power = FALSE
 	area_flags = HIDDEN_AREA

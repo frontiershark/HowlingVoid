@@ -18,7 +18,7 @@
 	suicide_cry = "FOR MY LOVE!!"
 	preview_outfit = /datum/outfit/obsessed
 	hardcore_random_bonus = TRUE
-	stinger_sound = 'sound/music/antag/creepalert.ogg'
+	stinger_sound = '../assets/sound/music/antag/creepalert.ogg'
 	/// How many objectives should be generated
 	var/objectives_to_generate = 3
 	/// Brain trauma that causes the obsession
@@ -63,14 +63,14 @@
 	victim_dummy.set_hairstyle("Messy", update = TRUE)
 
 	var/icon/obsessed_icon = render_preview_outfit(preview_outfit)
-	var/icon/blood_icon = icon('icons/effects/blood.dmi', "uniformblood")
+	var/icon/blood_icon = icon('../assets/icons/effects/blood.dmi', "uniformblood")
 	blood_icon.Blend(BLOOD_COLOR_RED, ICON_MULTIPLY)
 	obsessed_icon.Blend(blood_icon, ICON_OVERLAY)
 
 	var/icon/final_icon = finish_preview_icon(obsessed_icon)
 
 	final_icon.Blend(
-		icon('icons/ui/antags/obsessed.dmi', "obsession"),
+		icon('../assets/icons/ui/antags/obsessed.dmi', "obsession"),
 		ICON_OVERLAY,
 		ANTAGONIST_PREVIEW_ICON_SIZE - 30,
 		20,

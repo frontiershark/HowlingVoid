@@ -24,7 +24,7 @@
 /obj/machinery/vitals_reader
 	name = "vitals display"
 	desc = "A screen that displays the vitals of a patient."
-	icon = 'icons/obj/machines/vitals_monitor.dmi'
+	icon = '../assets/icons/obj/machines/vitals_monitor.dmi'
 	icon_state = "frame"
 	verb_say = "beeps"
 	verb_ask = "beeps"
@@ -158,7 +158,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vitals_reader/advanced, 32)
 /obj/machinery/vitals_reader/wrench_act(mob/living/user, obj/item/tool)
 	balloon_alert(user, "detaching...")
 	if(tool.use_tool(src, user, 6 SECONDS, volume = 50))
-		playsound(src, 'sound/items/deconstruct.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/items/deconstruct.ogg', 50, TRUE)
 		deconstruct(TRUE)
 	return ITEM_INTERACT_SUCCESS
 
@@ -531,8 +531,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vitals_reader/advanced, 32)
 	switch(damage_type)
 		if(BRUTE)
 			if(machine_stat & BROKEN)
-				playsound(src, 'sound/effects/hit_on_shattered_glass.ogg', 70, TRUE)
+				playsound(src, '../assets/sound/effects/hit_on_shattered_glass.ogg', 70, TRUE)
 			else
-				playsound(src, 'sound/effects/glass/glasshit.ogg', 75, TRUE)
+				playsound(src, '../assets/sound/effects/glass/glasshit.ogg', 75, TRUE)
 		if(BURN)
-			playsound(src, 'sound/items/tools/welder.ogg', 100, TRUE)
+			playsound(src, '../assets/sound/items/tools/welder.ogg', 100, TRUE)

@@ -9,7 +9,7 @@
 GLOBAL_LIST_EMPTY(conveyors_by_id)
 
 /obj/machinery/conveyor
-	icon = 'icons/obj/machines/recycling.dmi'
+	icon = '../assets/icons/obj/machines/recycling.dmi'
 	icon_state = "conveyor_map"
 	base_icon_state = "conveyor"
 	name = "conveyor belt"
@@ -416,7 +416,7 @@ GLOBAL_LIST_EMPTY(conveyors_by_id)
 /obj/machinery/conveyor_switch
 	name = "conveyor switch"
 	desc = "A conveyor control switch."
-	icon = 'icons/obj/machines/recycling.dmi'
+	icon = '../assets/icons/obj/machines/recycling.dmi'
 	icon_state = "switch-off"
 	base_icon_state = "switch"
 	processing_flags = START_PROCESSING_MANUALLY
@@ -507,7 +507,7 @@ GLOBAL_LIST_EMPTY(conveyors_by_id)
 /// Updates the switch's `position` and `last_pos` variable. Useful so that the switch can properly cycle between the forwards, backwards and neutral positions.
 /obj/machinery/conveyor_switch/proc/update_position(direction)
 	if(position == CONVEYOR_OFF)
-		playsound(src, 'sound/machines/lever/lever_start.ogg', 40, TRUE)
+		playsound(src, '../assets/sound/machines/lever/lever_start.ogg', 40, TRUE)
 
 		if(oneway)   //is it a oneway switch
 			position = oneway
@@ -517,7 +517,7 @@ GLOBAL_LIST_EMPTY(conveyors_by_id)
 			else
 				position = CONVEYOR_BACKWARDS
 	else
-		playsound(src, 'sound/machines/lever/lever_stop.ogg', 40, TRUE)
+		playsound(src, '../assets/sound/machines/lever/lever_stop.ogg', 40, TRUE)
 		position = CONVEYOR_OFF
 
 /obj/machinery/conveyor_switch/proc/on_user_activation(mob/user, direction)
@@ -603,7 +603,7 @@ GLOBAL_LIST_EMPTY(conveyors_by_id)
 /obj/item/conveyor_switch_construct
 	name = "conveyor switch assembly"
 	desc = "A conveyor control switch assembly."
-	icon = 'icons/obj/machines/recycling.dmi'
+	icon = '../assets/icons/obj/machines/recycling.dmi'
 	icon_state = "switch-off"
 	w_class = WEIGHT_CLASS_BULKY
 	// ID of the switch-in-the-making, to link conveyor belts to it.
@@ -638,7 +638,7 @@ GLOBAL_LIST_EMPTY(conveyors_by_id)
 /obj/item/stack/conveyor
 	name = "conveyor belt assembly"
 	desc = "A conveyor belt assembly."
-	icon = 'icons/obj/machines/recycling.dmi'
+	icon = '../assets/icons/obj/machines/recycling.dmi'
 	icon_state = "conveyor_construct"
 	max_amount = 30
 	singular_name = "conveyor belt"
@@ -679,7 +679,7 @@ GLOBAL_LIST_EMPTY(conveyors_by_id)
 
 /obj/item/stack/conveyor/use(used, transfer, check)
 	. = ..()
-	playsound(src, 'sound/items/weapons/genhit.ogg', 30, TRUE)
+	playsound(src, '../assets/sound/items/weapons/genhit.ogg', 30, TRUE)
 
 /obj/item/stack/conveyor/thirty
 	amount = 30

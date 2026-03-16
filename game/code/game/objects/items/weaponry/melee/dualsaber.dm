@@ -4,12 +4,12 @@
 /obj/item/dualsaber
 	name = "double-bladed energy sword"
 	desc = "Handle with care."
-	icon = 'icons/obj/weapons/transforming_energy.dmi'
+	icon = '../assets/icons/obj/weapons/transforming_energy.dmi'
 	icon_state = "dualsaber0"
 	inhand_icon_state = "dualsaber0"
 	icon_angle = -45
-	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/swords_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/swords_righthand.dmi'
 	force = 3
 	throwforce = 5
 	throw_speed = 3
@@ -25,7 +25,7 @@
 	attack_verb_continuous = list("attacks", "slashes", "stabs", "slices", "tears", "lacerates", "rips", "dices", "cuts")
 	attack_verb_simple = list("attack", "slash", "stab", "slice", "tear", "lacerate", "rip", "dice", "cut")
 	block_chance = 75
-	block_sound = 'sound/items/weapons/block_blade.ogg'
+	block_sound = '../assets/sound/items/weapons/block_blade.ogg'
 	max_integrity = 200
 	armor_type = /datum/armor/item_dualsaber
 	resistance_flags = FIRE_PROOF
@@ -48,8 +48,8 @@
 	AddComponent(/datum/component/two_handed, \
 		force_unwielded = force, \
 		force_wielded = two_hand_force, \
-		wieldsound = 'sound/items/weapons/saberon.ogg', \
-		unwieldsound = 'sound/items/weapons/saberoff.ogg', \
+		wieldsound = '../assets/sound/items/weapons/saberon.ogg', \
+		unwieldsound = '../assets/sound/items/weapons/saberoff.ogg', \
 		wield_callback = CALLBACK(src, PROC_REF(on_wield)), \
 		unwield_callback = CALLBACK(src, PROC_REF(on_unwield)), \
 	)
@@ -64,7 +64,7 @@
 		to_chat(user, span_warning("You can't seem to hold [src] properly!"))
 		return COMPONENT_TWOHANDED_BLOCK_WIELD
 	update_weight_class(w_class_on)
-	hitsound = 'sound/items/weapons/blade1.ogg'
+	hitsound = '../assets/sound/items/weapons/blade1.ogg'
 	START_PROCESSING(SSobj, src)
 	set_light_on(TRUE)
 

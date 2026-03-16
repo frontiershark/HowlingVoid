@@ -5,8 +5,8 @@
 	bg_color = "#ffffff"
 	w_class = WEIGHT_CLASS_TINY
 	max_integrity = 130
-	drop_sound = 'sound/items/handling/disk_drop.ogg'
-	pickup_sound = 'sound/items/handling/disk_pickup.ogg'
+	drop_sound = '../assets/sound/items/handling/disk_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/disk_pickup.ogg'
 	contents_hidden = TRUE
 	paper_overlay_state = "paperbiscuit_paper"
 	folder_type_name = "biscuit"
@@ -37,7 +37,7 @@
 
 /obj/item/folder/biscuit/suicide_act(mob/living/user)
 	user.visible_message(span_suicide("[user] tries to eat [src]! [user.p_theyre()] trying to commit suicide!"))
-	playsound(get_turf(user), 'sound/effects/wounds/crackandbleed.ogg', 40, TRUE) //Don't eat plastic cards kids, they get really sharp if you chew on them.
+	playsound(get_turf(user), '../assets/sound/effects/wounds/crackandbleed.ogg', 40, TRUE) //Don't eat plastic cards kids, they get really sharp if you chew on them.
 	return BRUTELOSS
 
 /obj/item/folder/biscuit/get_paper_overlay()
@@ -97,7 +97,7 @@
 			return
 		cracked = TRUE
 		contents_hidden = FALSE
-		playsound(get_turf(user), 'sound/effects/wounds/crack1.ogg', 60)
+		playsound(get_turf(user), '../assets/sound/effects/wounds/crack1.ogg', 60)
 		icon_state = "[icon_state]_cracked"
 		update_appearance()
 
@@ -152,7 +152,7 @@
 	cracked = FALSE
 	has_been_sealed = TRUE
 	contents_hidden = TRUE
-	playsound(get_turf(user), 'sound/items/duct_tape/duct_tape_snap.ogg', 60)
+	playsound(get_turf(user), '../assets/sound/items/duct_tape/duct_tape_snap.ogg', 60)
 	icon_state = "[sealed_icon]"
 	update_appearance()
 

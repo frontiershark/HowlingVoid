@@ -36,7 +36,7 @@
 /obj/structure/firepit
 	name = "firepit"
 	desc = "Warm and toasty."
-	icon = 'icons/obj/fluff/fireplace.dmi'
+	icon = '../assets/icons/obj/fluff/fireplace.dmi'
 	icon_state = "firepit-active"
 	density = FALSE
 	var/active = TRUE
@@ -90,7 +90,7 @@
 	name = "lumbermill saw"
 	desc = "Faster then the cartoons!"
 	obj_flags = CAN_BE_HIT | EMAGGED
-	item_recycle_sound = 'sound/items/weapons/chainsawhit.ogg'
+	item_recycle_sound = '../assets/sound/items/weapons/chainsawhit.ogg'
 
 /obj/machinery/recycler/lumbermill/recycle_item(obj/item/grown/log/L)
 	if(!istype(L))
@@ -103,7 +103,7 @@
 /obj/structure/ladder/unbreakable/rune
 	name = "\improper Teleportation Rune"
 	desc = "Could lead anywhere."
-	icon = 'icons/obj/antags/cult/rune.dmi'
+	icon = '../assets/icons/obj/antags/cult/rune.dmi'
 	icon_state = "1"
 	color = rgb(0,0,255)
 

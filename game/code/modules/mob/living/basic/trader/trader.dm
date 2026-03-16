@@ -2,14 +2,14 @@
 	name = "Trader"
 	desc = "Come buy some!"
 	unique_name = FALSE
-	icon = 'icons/mob/simple/simple_human.dmi'
+	icon = '../assets/icons/mob/simple/simple_human.dmi'
 	maxHealth = 200
 	health = 200
 	melee_damage_lower = 10
 	melee_damage_upper = 10
 	attack_verb_continuous = "punches"
 	attack_verb_simple = "punch"
-	attack_sound = 'sound/items/weapons/punch1.ogg'
+	attack_sound = '../assets/sound/items/weapons/punch1.ogg'
 	basic_mob_flags = DEL_ON_DEATH
 	unsuitable_atmos_damage = 2.5
 	combat_mode = FALSE
@@ -21,7 +21,7 @@
 	ai_controller = /datum/ai_controller/basic_controller/trader
 
 	///Sound used when item sold/bought
-	var/sell_sound = 'sound/effects/cashregister.ogg'
+	var/sell_sound = '../assets/sound/effects/cashregister.ogg'
 	///The currency name
 	var/currency_name = MONEY_NAME
 	///The spawner we use to create our look
@@ -33,7 +33,7 @@
 	///Casing used to shoot during retaliation
 	var/ranged_attack_casing = /obj/item/ammo_casing/shotgun/buckshot
 	///Sound to make while doing a retalitory attack
-	var/ranged_attack_sound = 'sound/items/weapons/gun/pistol/shot.ogg'
+	var/ranged_attack_sound = '../assets/sound/items/weapons/gun/pistol/shot.ogg'
 	///Weapon path, for visuals
 	var/held_weapon_visual = /obj/item/gun/ballistic/shotgun
 
@@ -69,7 +69,7 @@
 
 	ai_controller = /datum/ai_controller/basic_controller/trader/jumpscare
 
-	sell_sound = 'sound/mobs/non-humanoids/hiss/hiss2.ogg'
+	sell_sound = '../assets/sound/mobs/non-humanoids/hiss/hiss2.ogg'
 	species_path = /datum/species/skeleton
 	spawner_path = /obj/effect/mob_spawn/corpse/human/skeleton/mrbones
 	loot = list(/obj/effect/decal/remains/human)

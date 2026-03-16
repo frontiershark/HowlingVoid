@@ -19,7 +19,7 @@
 	icon = 'modular_nova/modules/tribal_extended/icons/crafting.dmi'
 	icon_state = "wood_bowl"
 	fill_icon_state = "fullbowl"
-	fill_icon = 'icons/obj/mining_zones/ash_flora.dmi'
+	fill_icon = '../assets/icons/obj/mining_zones/ash_flora.dmi'
 	custom_materials = list(/datum/material/wood = SHEET_MATERIAL_AMOUNT * 3)
 
 /obj/item/reagent_containers/cup/bowl/mushroom_bowl/update_icon_state()

@@ -73,7 +73,7 @@
 /// Toggles the booster on/off
 /datum/component/gun_booster/proc/toggle_booster(obj/item/gun/source, mob/user)
 	amped = !amped
-	playsound(source, 'sound/items/weapons/empty.ogg', 100, TRUE)
+	playsound(source, '../assets/sound/items/weapons/empty.ogg', 100, TRUE)
 
 	if(amped)
 		source.projectile_damage_multiplier = amped_damage_mult

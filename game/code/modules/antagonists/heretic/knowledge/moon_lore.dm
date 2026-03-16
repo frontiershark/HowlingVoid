@@ -4,7 +4,7 @@
 	complexity = "Hard"
 	complexity_color = COLOR_RED
 	icon = list(
-		"icon" = 'icons/obj/weapons/khopesh.dmi',
+		"icon" = '../assets/icons/obj/weapons/khopesh.dmi',
 		"state" = "moon_blade",
 		"frame" = 1,
 		"dir" = SOUTH,
@@ -62,7 +62,7 @@
 		/obj/item/stack/sheet/glass = 2,
 	)
 	result_atoms = list(/obj/item/melee/sickly_blade/moon)
-	research_tree_icon_path = 'icons/obj/weapons/khopesh.dmi'
+	research_tree_icon_path = '../assets/icons/obj/weapons/khopesh.dmi'
 	research_tree_icon_state = "moon_blade"
 	mark_type = /datum/status_effect/eldritch/moon
 	eldritch_passive = /datum/status_effect/heretic_passive/moon
@@ -114,7 +114,7 @@
 	result_atoms = list(/obj/item/clothing/neck/heretic_focus/moon_amulet)
 	cost = 2
 
-	research_tree_icon_path = 'icons/obj/antags/eldritch.dmi'
+	research_tree_icon_path = '../assets/icons/obj/antags/eldritch.dmi'
 	research_tree_icon_state = "moon_amulette"
 	research_tree_icon_frame = 9
 
@@ -147,7 +147,7 @@
 			Deals more brain damage if your victim is insane or unconscious."
 	gain_text = "His wit was sharp as a blade, cutting through the lie to bring us joy."
 
-	research_tree_icon_path = 'icons/ui_icons/antags/heretic/knowledge.dmi'
+	research_tree_icon_path = '../assets/icons/ui_icons/antags/heretic/knowledge.dmi'
 	research_tree_icon_state = "blade_upgrade_moon"
 
 /datum/heretic_knowledge/blade_upgrade/moon/do_melee_effects(mob/living/source, mob/living/target, obj/item/melee/sickly_blade/blade)
@@ -196,7 +196,7 @@
 	ascension_achievement = /datum/award/achievement/misc/moon_ascension
 	announcement_text = "%SPOOKY% Laugh, for the ringleader %NAME% has ascended! \
 						The truth shall finally devour the lie! %SPOOKY%"
-	announcement_sound = 'sound/music/antag/heretic/ascend_moon.ogg'
+	announcement_sound = '../assets/sound/music/antag/heretic/ascend_moon.ogg'
 
 /datum/heretic_knowledge/ultimate/moon_final/is_valid_sacrifice(mob/living/sacrifice)
 

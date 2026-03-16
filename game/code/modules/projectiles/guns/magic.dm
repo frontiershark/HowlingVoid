@@ -1,12 +1,12 @@
 /obj/item/gun/magic
 	name = "staff of nothing"
 	desc = "This staff is boring to watch because even though it came first you've seen everything it can do in other staves for years."
-	icon = 'icons/obj/weapons/guns/magic.dmi'
+	icon = '../assets/icons/obj/weapons/guns/magic.dmi'
 	icon_state = "staffofnothing"
 	inhand_icon_state = "staff"
-	lefthand_file = 'icons/mob/inhands/weapons/staves_lefthand.dmi' //not really a gun and some toys use these inhands
-	righthand_file = 'icons/mob/inhands/weapons/staves_righthand.dmi'
-	fire_sound = 'sound/items/weapons/emitter.ogg'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/staves_lefthand.dmi' //not really a gun and some toys use these inhands
+	righthand_file = '../assets/icons/mob/inhands/weapons/staves_righthand.dmi'
+	fire_sound = '../assets/sound/items/weapons/emitter.ogg'
 	obj_flags = CONDUCTS_ELECTRICITY
 	w_class = WEIGHT_CLASS_HUGE
 	can_muzzle_flash = FALSE

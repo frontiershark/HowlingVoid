@@ -5,7 +5,7 @@
 /mob/living/basic/mining/legion
 	name = "legion"
 	desc = "You can still see what was once a human under the shifting mass of corruption."
-	icon = 'icons/mob/simple/lavaland/lavaland_monsters.dmi'
+	icon = '../assets/icons/mob/simple/lavaland/lavaland_monsters.dmi'
 	icon_state = "legion"
 	icon_living = "legion"
 	icon_dead = "legion"
@@ -21,7 +21,7 @@
 	attack_verb_continuous = "lashes out at"
 	attack_verb_simple = "lash out at"
 	speak_emote = list("gurgles")
-	attack_sound = 'sound/items/weapons/pierce.ogg'
+	attack_sound = '../assets/sound/items/weapons/pierce.ogg'
 	throw_blocked_message = "bounces harmlessly off of"
 	crusher_loot = /obj/item/crusher_trophy/legion_skull
 	death_message = "wails in chorus and dissolves into quivering flesh."
@@ -114,7 +114,7 @@
 /mob/living/basic/mining/legion/snow
 	name = "snow legion"
 	desc = "You can vaguely see what was once a human under the densely packed snow. Cute, but macabre."
-	icon = 'icons/mob/simple/icemoon/icemoon_monsters.dmi'
+	icon = '../assets/icons/mob/simple/icemoon/icemoon_monsters.dmi'
 	icon_state = "snowlegion"
 	icon_living = "snowlegion"
 	// icon_aggro = "snowlegion_alive"
@@ -150,7 +150,7 @@
 /mob/living/basic/mining/legion/large
 	name = "myriad"
 	desc = "A legion of legions, a dead end to whatever form the Necropolis was attempting to create."
-	icon = 'icons/mob/simple/lavaland/64x64megafauna.dmi'
+	icon = '../assets/icons/mob/simple/lavaland/64x64megafauna.dmi'
 	icon_state = "legion"
 	icon_living = "legion"
 	icon_dead = "legion"

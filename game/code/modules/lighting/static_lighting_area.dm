@@ -5,7 +5,7 @@
 /// In order to modify them you need to use set_starlight. Areas don't work with render sources it looks like
 GLOBAL_LIST_INIT_TYPED(starlight_objects, /obj, list(starlight_object(0)))
 /obj/starlight_appearance
-	icon = 'icons/effects/alphacolors.dmi'
+	icon = '../assets/icons/effects/alphacolors.dmi'
 	icon_state = "white"
 	layer = LIGHTING_PRIMARY_LAYER
 	blend_mode = BLEND_ADD

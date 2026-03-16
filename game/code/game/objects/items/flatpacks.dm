@@ -1,7 +1,7 @@
 /obj/item/flatpack
 	name = "flatpack"
 	desc = "A box containing a compactly packed machine. Use multitool to deploy."
-	icon = 'icons/obj/devices/circuitry_n_data.dmi'
+	icon = '../assets/icons/obj/devices/circuitry_n_data.dmi'
 	icon_state = "flatpack"
 	density = TRUE
 	w_class = WEIGHT_CLASS_HUGE //cart time
@@ -89,7 +89,7 @@
 	var/obj/machinery/new_machine = new leaving_circuit.build_path(loc, board = leaving_circuit)
 	new_machine.on_construction(user)
 	loc.visible_message(span_warning("[src] deploys!"))
-	playsound(src, 'sound/machines/terminal/terminal_eject.ogg', 70, TRUE)
+	playsound(src, '../assets/sound/machines/terminal/terminal_eject.ogg', 70, TRUE)
 	qdel(src)
 	return ITEM_INTERACT_SUCCESS
 
@@ -99,7 +99,7 @@
 /obj/structure/flatpack_cart
 	name = "flatpack cart"
 	desc = "A cart specifically made to hold flatpacks from a flatpacker, evenly distributing weight. Convenient!"
-	icon = 'icons/obj/structures.dmi'
+	icon = '../assets/icons/obj/structures.dmi'
 	icon_state = "flatcart"
 	density = TRUE
 	opacity = FALSE

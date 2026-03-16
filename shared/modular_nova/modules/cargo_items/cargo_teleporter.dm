@@ -32,7 +32,7 @@ GLOBAL_LIST_EMPTY(cargo_marks)
 
 	to_chat(user, span_notice("You place a cargo marker below your feet."))
 	var/obj/effect/decal/cleanable/cargo_mark/spawned_marker = new /obj/effect/decal/cleanable/cargo_mark(get_turf(src))
-	playsound(src, 'sound/machines/click.ogg', 50)
+	playsound(src, '../assets/sound/machines/click.ogg', 50)
 	spawned_marker.parent_item = src
 	marker_children += spawned_marker
 
@@ -92,7 +92,7 @@ GLOBAL_LIST_EMPTY(cargo_marks)
 		if(movable_content.anchored)
 			continue
 
-		do_teleport(movable_content, moving_turf, asoundout = 'sound/effects/magic/Disable_Tech.ogg')
+		do_teleport(movable_content, moving_turf, asoundout = '../assets/sound/effects/magic/Disable_Tech.ogg')
 
 	new /obj/effect/decal/cleanable/ash(target_turf)
 	COOLDOWN_START(src, use_cooldown, 8 SECONDS)
@@ -128,7 +128,7 @@ GLOBAL_LIST_EMPTY(cargo_marks)
 /obj/effect/decal/cleanable/cargo_mark/attackby(obj/item/attacking_item, mob/user, list/modifiers, list/attack_modifiers)
 	if(istype(attacking_item, /obj/item/cargo_teleporter))
 		to_chat(user, span_notice("You remove [src] using [attacking_item]."))
-		playsound(src, 'sound/machines/click.ogg', 50)
+		playsound(src, '../assets/sound/machines/click.ogg', 50)
 		qdel(src)
 		return
 

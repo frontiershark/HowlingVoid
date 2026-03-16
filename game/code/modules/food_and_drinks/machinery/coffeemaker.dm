@@ -3,7 +3,7 @@
 /obj/machinery/coffeemaker
 	name = "coffeemaker"
 	desc = "A Modello 3 Coffeemaker that brews coffee and holds it at the perfect temperature of 176 fahrenheit. Made by Piccionaia Home Appliances."
-	icon = 'icons/obj/machines/coffeemaker.dmi'
+	icon = '../assets/icons/obj/machines/coffeemaker.dmi'
 	icon_state = "coffeemaker_nopot_nocart"
 	base_icon_state = "coffeemaker"
 	resistance_flags = FIRE_PROOF | ACID_PROOF
@@ -31,14 +31,14 @@
 	var/creamer_packs = 10
 	var/max_creamer_packs = 10
 
-	var/static/radial_examine = image(icon = 'icons/hud/radial.dmi', icon_state = "radial_examine")
-	var/static/radial_brew = image(icon = 'icons/hud/radial_coffee.dmi', icon_state = "radial_brew")
-	var/static/radial_eject_pot = image(icon = 'icons/hud/radial_coffee.dmi', icon_state = "radial_eject_pot")
-	var/static/radial_eject_cartridge = image(icon = 'icons/hud/radial_coffee.dmi', icon_state = "radial_eject_cartridge")
-	var/static/radial_take_cup = image(icon = 'icons/hud/radial_coffee.dmi', icon_state = "radial_take_cup")
-	var/static/radial_take_sugar = image(icon = 'icons/hud/radial_coffee.dmi', icon_state = "radial_take_sugar")
-	var/static/radial_take_sweetener = image(icon = 'icons/hud/radial_coffee.dmi', icon_state = "radial_take_sweetener")
-	var/static/radial_take_creamer = image(icon = 'icons/hud/radial_coffee.dmi', icon_state = "radial_take_creamer")
+	var/static/radial_examine = image(icon = '../assets/icons/hud/radial.dmi', icon_state = "radial_examine")
+	var/static/radial_brew = image(icon = '../assets/icons/hud/radial_coffee.dmi', icon_state = "radial_brew")
+	var/static/radial_eject_pot = image(icon = '../assets/icons/hud/radial_coffee.dmi', icon_state = "radial_eject_pot")
+	var/static/radial_eject_cartridge = image(icon = '../assets/icons/hud/radial_coffee.dmi', icon_state = "radial_eject_cartridge")
+	var/static/radial_take_cup = image(icon = '../assets/icons/hud/radial_coffee.dmi', icon_state = "radial_take_cup")
+	var/static/radial_take_sugar = image(icon = '../assets/icons/hud/radial_coffee.dmi', icon_state = "radial_take_sugar")
+	var/static/radial_take_sweetener = image(icon = '../assets/icons/hud/radial_coffee.dmi', icon_state = "radial_take_sweetener")
+	var/static/radial_take_creamer = image(icon = '../assets/icons/hud/radial_coffee.dmi', icon_state = "radial_take_creamer")
 
 /obj/machinery/coffeemaker/Initialize(mapload)
 	. = ..()
@@ -419,7 +419,7 @@
 /obj/machinery/coffeemaker/proc/operate_for(time, silent = FALSE)
 	brewing = TRUE
 	if(!silent)
-		playsound(src, 'sound/machines/coffeemaker_brew.ogg', 20, vary = TRUE)
+		playsound(src, '../assets/sound/machines/coffeemaker_brew.ogg', 20, vary = TRUE)
 	toggle_steam()
 	use_energy(active_power_usage * time / (1 SECONDS)) // .1 needed here to convert time (in deciseconds) to seconds such that watts * seconds = joules
 	addtimer(CALLBACK(src, PROC_REF(stop_operating)), time / speed)
@@ -441,7 +441,7 @@
 /obj/item/coffee_cartridge
 	name = "coffeemaker cartridge- Caffè Generico"
 	desc = "A coffee cartridge manufactured by Piccionaia Coffee, for use with the Modello 3 system."
-	icon = 'icons/obj/food/cartridges.dmi'
+	icon = '../assets/icons/obj/food/cartridges.dmi'
 	icon_state = "cartridge_basic"
 	var/charges = 4
 	var/list/drink_type = list(/datum/reagent/consumable/coffee = 120)
@@ -491,14 +491,14 @@
 /obj/item/blank_coffee_cartridge
 	name = "blank coffee cartridge"
 	desc = "A blank coffee cartridge, ready to be filled with coffee paste."
-	icon = 'icons/obj/food/cartridges.dmi'
+	icon = '../assets/icons/obj/food/cartridges.dmi'
 	icon_state = "cartridge_blank"
 
 //now, how do you store coffee carts? well, in a rack, of course!
 /obj/item/storage/fancy/coffee_cart_rack
 	name = "coffeemaker cartridge rack"
 	desc = "A small rack for storing coffeemaker cartridges."
-	icon = 'icons/obj/food/containers.dmi'
+	icon = '../assets/icons/obj/food/containers.dmi'
 	icon_state = "coffee_cartrack1"
 	base_icon_state = "coffee_cartrack"
 	contents_tag = "coffee cartridge"

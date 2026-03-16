@@ -156,7 +156,7 @@
 	pushed_mob.Knockdown(3 SECONDS)
 	pushed_mob.apply_damage(10, BRUTE)
 	pushed_mob.apply_damage(40, STAMINA)
-	playsound(pushed_mob, 'sound/effects/tableslam.ogg', 90, TRUE)
+	playsound(pushed_mob, '../assets/sound/effects/tableslam.ogg', 90, TRUE)
 	pushed_mob.visible_message(span_danger("[user] slams [pushed_mob] onto \the [table]!"), \
 		span_userdanger("[user] slams you onto \the [table]!"))
 	log_combat(user, pushed_mob, "tabled", null, "onto [table]")
@@ -174,7 +174,7 @@
 		extra_wound = 20
 	pushed_mob.apply_damage(30, BRUTE, banged_limb, wound_bonus = extra_wound)
 	pushed_mob.apply_damage(60, STAMINA)
-	playsound(pushed_mob, 'sound/effects/bang.ogg', 90, TRUE)
+	playsound(pushed_mob, '../assets/sound/effects/bang.ogg', 90, TRUE)
 	pushed_mob.visible_message(span_danger("[user] smashes [pushed_mob]'s [banged_limb.plaintext_zone] against \the [table]!"),
 		span_userdanger("[user] smashes your [banged_limb.plaintext_zone] against \the [table]"))
 	log_combat(user, pushed_mob, "head slammed", null, "against [table]")

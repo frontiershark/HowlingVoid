@@ -200,7 +200,7 @@
 	if(FryLoss)
 		exposed_mob.emote("scream")
 		exposed_mob.adjust_fire_loss(FryLoss)
-	playsound(exposed_mob, 'sound/machines/fryer/deep_fryer_emerge.ogg', 25, TRUE)
+	playsound(exposed_mob, '../assets/sound/machines/fryer/deep_fryer_emerge.ogg', 25, TRUE)
 	ADD_TRAIT(exposed_mob, TRAIT_OIL_FRIED, "cooking_oil_react")
 	addtimer(CALLBACK(exposed_mob, TYPE_PROC_REF(/mob/living, unfry_mob)), 2 SECONDS)
 
@@ -1101,7 +1101,7 @@
 	required_drink_type = /datum/reagent/consumable/chocolatepudding
 	name = "chocolate pudding"
 	desc = "Tasty."
-	icon = 'icons/obj/drinks/shakes.dmi'
+	icon = '../assets/icons/obj/drinks/shakes.dmi'
 	icon_state = "chocolatepudding"
 
 /datum/reagent/consumable/vanillapudding
@@ -1117,7 +1117,7 @@
 	required_drink_type = /datum/reagent/consumable/vanillapudding
 	name = "vanilla pudding"
 	desc = "Tasty."
-	icon = 'icons/obj/drinks/shakes.dmi'
+	icon = '../assets/icons/obj/drinks/shakes.dmi'
 	icon_state = "vanillapudding"
 
 /datum/reagent/consumable/laughsyrup

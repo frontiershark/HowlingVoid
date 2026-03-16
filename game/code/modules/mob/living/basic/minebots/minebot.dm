@@ -2,7 +2,7 @@
 	name = "\improper Nanotrasen minebot"
 	desc = "The instructions printed on the side read: This is a small robot used to support miners, can be set to search and collect loose ore, or to help fend off wildlife."
 	gender = NEUTER
-	icon = 'icons/mob/silicon/aibots.dmi'
+	icon = '../assets/icons/mob/silicon/aibots.dmi'
 	icon_state = "mining_drone"
 	icon_living = "mining_drone"
 	basic_mob_flags = DEL_ON_DEATH
@@ -18,7 +18,7 @@
 	obj_damage = 10
 	attack_verb_continuous = "drills"
 	attack_verb_simple = "drill"
-	attack_sound = 'sound/items/weapons/circsawhit.ogg'
+	attack_sound = '../assets/sound/items/weapons/circsawhit.ogg'
 	sentience_type = SENTIENCE_MINEBOT
 	speak_emote = list("states")
 	mob_biotypes = MOB_ROBOTIC
@@ -63,8 +63,8 @@
 
 /mob/living/basic/mining_drone/Initialize(mapload)
 	. = ..()
-	neutral_overlay = mutable_appearance(icon = 'icons/mob/silicon/aibots.dmi', icon_state = "mining_drone_grey")
-	combat_overlay = mutable_appearance(icon = 'icons/mob/silicon/aibots.dmi', icon_state = "mining_drone_offense_grey")
+	neutral_overlay = mutable_appearance(icon = '../assets/icons/mob/silicon/aibots.dmi', icon_state = "mining_drone_grey")
+	combat_overlay = mutable_appearance(icon = '../assets/icons/mob/silicon/aibots.dmi', icon_state = "mining_drone_offense_grey")
 	AddComponent(/datum/component/obeys_commands, pet_commands)
 	AddElement(/datum/element/death_drops, /obj/effect/decal/cleanable/blood/gibs/robot_debris/old)
 	add_traits(list(TRAIT_LAVA_IMMUNE, TRAIT_ASHSTORM_IMMUNE, TRAIT_SNOWSTORM_IMMUNE, TRAIT_MINING_AOE_IMMUNE), INNATE_TRAIT)

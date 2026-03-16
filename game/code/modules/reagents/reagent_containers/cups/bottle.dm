@@ -48,7 +48,7 @@
 /obj/item/reagent_containers/cup/bottle/morphine
 	name = "morphine bottle"
 	desc = "A small bottle of morphine."
-	icon = 'icons/obj/medical/chemical.dmi'
+	icon = '../assets/icons/obj/medical/chemical.dmi'
 	list_reagents = list(/datum/reagent/medicine/morphine = 30)
 
 /obj/item/reagent_containers/cup/bottle/chloralhydrate
@@ -122,7 +122,7 @@
 /obj/item/reagent_containers/cup/bottle/adminordrazine
 	name = "Adminordrazine Bottle"
 	desc = "A small bottle. Contains the liquid essence of the gods."
-	icon = 'icons/obj/drinks/bottles.dmi'
+	icon = '../assets/icons/obj/drinks/bottles.dmi'
 	icon_state = "holyflask"
 	inhand_icon_state = "holyflask"
 	list_reagents = list(/datum/reagent/medicine/adminordrazine = 30)
@@ -150,7 +150,7 @@
 /obj/item/reagent_containers/cup/bottle/traitor
 	name = "syndicate bottle"
 	desc = "A small bottle. Contains a random nasty chemical."
-	icon = 'icons/obj/medical/chemical.dmi'
+	icon = '../assets/icons/obj/medical/chemical.dmi'
 	var/extra_reagent = null
 
 /obj/item/reagent_containers/cup/bottle/traitor/Initialize(mapload)
@@ -501,7 +501,7 @@
 /obj/item/reagent_containers/cup/bottle/syrup_bottle
 	name = "syrup bottle"
 	desc = "A bottle with a syrup pump to dispense the delicious substance directly into your coffee cup."
-	icon = 'icons/obj/food/containers.dmi'
+	icon = '../assets/icons/obj/food/containers.dmi'
 	icon_state = "syrup"
 	fill_icon_state = "syrup"
 	fill_icon_thresholds = list(0, 20, 40, 60, 80, 100)

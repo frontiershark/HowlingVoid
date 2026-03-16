@@ -85,7 +85,7 @@ GLOBAL_LIST_EMPTY(light_debugged_atoms)
 		qdel(button)
 
 /atom/movable/screen/light_button
-	icon = 'icons/testing/lighting_debug.dmi'
+	icon = '../assets/icons/testing/lighting_debug.dmi'
 	plane = BALLOON_CHAT_PLANE // We hijack runechat because we can get multiz niceness without making a new PM
 	layer = ABOVE_ALL_MOB_LAYER
 	alpha = 100
@@ -327,7 +327,7 @@ GLOBAL_LIST_EMPTY(light_debugged_atoms)
 	name = "Move Light"
 	desc = "Drag to move the light around"
 	icon_state = "light_move"
-	mouse_drag_pointer = 'icons/effects/mouse_pointers/light_drag.dmi'
+	mouse_drag_pointer = '../assets/icons/effects/mouse_pointers/light_drag.dmi'
 
 /atom/movable/screen/light_button/move/mouse_drop_dragged(atom/over_object)
 	if(!ismovable(loc))
@@ -338,7 +338,7 @@ GLOBAL_LIST_EMPTY(light_debugged_atoms)
 /datum/action/spawn_light
 	name = "Spawn Light"
 	desc = "Create a light from a template"
-	button_icon = 'icons/mob/actions/actions_construction.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_construction.dmi'
 	button_icon_state = "light_spawn"
 
 /datum/action/spawn_light/New(Target)

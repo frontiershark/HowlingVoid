@@ -1,10 +1,10 @@
 /obj/item/undertile_circuit
 	name = "circuit panel"
 	desc = "A panel for an integrated circuit. It needs to be fit under a floor tile to operate."
-	icon = 'icons/obj/science/circuits.dmi'
+	icon = '../assets/icons/obj/science/circuits.dmi'
 	inhand_icon_state = "flashtool"
-	lefthand_file = 'icons/mob/inhands/equipment/security_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/security_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/security_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/security_righthand.dmi'
 	icon_state = "undertile"
 
 /obj/item/undertile_circuit/Initialize(mapload)

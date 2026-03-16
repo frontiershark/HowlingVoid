@@ -4,9 +4,9 @@
 		Cannot be cast unless you are restrained. (Can be casted without a focus)"
 	background_icon_state = "bg_heretic"
 	overlay_icon_state = "bg_heretic_border"
-	button_icon = 'icons/mob/actions/actions_ecult.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_ecult.dmi'
 	button_icon_state = "uncuff"
-	sound = 'sound/effects/magic/swap.ogg'
+	sound = '../assets/sound/effects/magic/swap.ogg'
 
 	school = SCHOOL_EVOCATION
 	cooldown_time = 5 MINUTES
@@ -73,7 +73,7 @@
 	mover.safe_throw_at(throwtarget, 3, 1, force = MOVE_FORCE_STRONG)
 
 /obj/effect/temp_visual/knockblast
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	icon_state = "shield-flash"
 	alpha = 180
 	duration = 1 SECONDS

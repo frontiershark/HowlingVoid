@@ -3,7 +3,7 @@
 /datum/action/cooldown/mob_cooldown/bot/build_girder
 	name = "Build Girder"
 	desc = "Use iron rods to build a girder!"
-	button_icon = 'icons/obj/structures.dmi'
+	button_icon = '../assets/icons/obj/structures.dmi'
 	button_icon_state = "girder"
 	cooldown_time = 5 SECONDS
 	click_to_activate = TRUE
@@ -34,7 +34,7 @@
 		qdel(effect)
 		return TRUE
 
-	playsound(turf_target, 'sound/machines/click.ogg', 50, TRUE)
+	playsound(turf_target, '../assets/sound/machines/click.ogg', 50, TRUE)
 	new /obj/structure/girder(turf_target)
 	our_rods.use(2)
 	StartCooldown()
@@ -44,7 +44,7 @@
 /datum/action/repairbot_resources
 	name = "Resources"
 	desc = "Manage your resources."
-	button_icon = 'icons/obj/stack_objects.dmi'
+	button_icon = '../assets/icons/obj/stack_objects.dmi'
 	button_icon_state = "sheet-metal_3"
 	background_icon_state = "bg_tech_blue"
 	overlay_icon_state = "bg_tech_blue_border"
@@ -85,7 +85,7 @@
 
 /datum/action/repairbot_resources/ui_static_data(mob/user)
 	var/list/data = list()
-	data["repairbot_icon"] = 'icons/ui/repairbotmanagement/repairbot_smile.dmi'
+	data["repairbot_icon"] = '../assets/icons/ui/repairbotmanagement/repairbot_smile.dmi'
 	data["repairbot_icon_state"] = "repairbot_smile"
 	return data
 

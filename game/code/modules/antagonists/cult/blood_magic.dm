@@ -82,7 +82,7 @@
 	if(QDELETED(src) || owner.incapacitated || !BS || (rune && !(locate(/obj/effect/rune/empower) in range(1, owner))) || (length(spells) >= limit))
 		return
 	to_chat(owner,span_warning("You begin to carve unnatural symbols into your flesh!"))
-	SEND_SOUND(owner, sound('sound/items/weapons/slice.ogg',0,1,10))
+	SEND_SOUND(owner, sound('../assets/sound/items/weapons/slice.ogg',0,1,10))
 	if(!channeling)
 		channeling = TRUE
 	else
@@ -228,7 +228,7 @@
 	else
 		owner.visible_message(span_warning("A [summoned_blade] appears at [owner]'s feet!"), \
 			span_cult_italic("A [summoned_blade] materializes at your feet."))
-	SEND_SOUND(owner, sound('sound/effects/magic.ogg', FALSE, 0, 25))
+	SEND_SOUND(owner, sound('../assets/sound/effects/magic.ogg', FALSE, 0, 25))
 	charges--
 	SSblackbox.record_feedback("tally", "cult_spell_invoke", 1, "[name]")
 	if(charges <= 0)
@@ -260,9 +260,9 @@
 /datum/action/innate/cult/blood_spell/horror/do_ability(mob/living/clicker, mob/living/carbon/human/clicked_on)
 
 	clicked_on.set_hallucinations_if_lower(240 SECONDS)
-	SEND_SOUND(clicker, sound('sound/effects/ghost.ogg', FALSE, TRUE, 50))
+	SEND_SOUND(clicker, sound('../assets/sound/effects/ghost.ogg', FALSE, TRUE, 50))
 
-	var/image/sparkle_image = image('icons/effects/cult.dmi', clicked_on, "bloodsparkles", ABOVE_MOB_LAYER)
+	var/image/sparkle_image = image('../assets/icons/effects/cult.dmi', clicked_on, "bloodsparkles", ABOVE_MOB_LAYER)
 	clicked_on.add_alt_appearance(/datum/atom_hud/alternate_appearance/basic/has_antagonist/cult, "cult_apoc", sparkle_image, NONE)
 
 	addtimer(CALLBACK(clicked_on, TYPE_PROC_REF(/atom/, remove_alt_appearance), "cult_apoc", TRUE), 4 MINUTES, TIMER_OVERRIDE|TIMER_UNIQUE)
@@ -292,7 +292,7 @@
 		owner.visible_message(span_warning("Thin grey dust falls from [owner]'s hand!"), \
 			span_cult_italic("You invoke the veiling spell, hiding nearby runes."))
 		charges--
-		SEND_SOUND(owner, sound('sound/effects/magic/smoke.ogg',0,1,25))
+		SEND_SOUND(owner, sound('../assets/sound/effects/magic/smoke.ogg',0,1,25))
 		owner.whisper(invocation, language = /datum/language/common, forced = "cult invocation")
 		for(var/obj/effect/rune/R in range(5,owner))
 			R.conceal()
@@ -312,7 +312,7 @@
 			span_cult_italic("You invoke the counterspell, revealing nearby runes."))
 		charges--
 		owner.whisper(invocation, language = /datum/language/common, forced = "cult invocation")
-		SEND_SOUND(owner, sound('sound/effects/magic/enter_blood.ogg',0,1,25))
+		SEND_SOUND(owner, sound('../assets/sound/effects/magic/enter_blood.ogg',0,1,25))
 		for(var/obj/effect/rune/R in range(7,owner)) //More range in case you weren't standing in exactly the same spot
 			R.reveal()
 		for(var/obj/structure/destructible/cult/S in range(6,owner))
@@ -346,9 +346,9 @@
 /obj/item/melee/blood_magic
 	name = "\improper magical aura"
 	desc = "A sinister looking aura that distorts the flow of reality around it."
-	icon = 'icons/obj/weapons/hand.dmi'
-	lefthand_file = 'icons/mob/inhands/items/touchspell_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/touchspell_righthand.dmi'
+	icon = '../assets/icons/obj/weapons/hand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/touchspell_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/touchspell_righthand.dmi'
 	icon_state = "disintegrate"
 	inhand_icon_state = "disintegrate"
 	item_flags = NEEDS_PERMIT | ABSTRACT | DROPDEL
@@ -467,7 +467,7 @@
 		target.color = COLOR_HERETIC_GREEN
 		animate(target, color = old_color, time = 4 SECONDS, easing = SINE_EASING|EASE_IN)
 		target.mob_light(range = 1.5, power = 2.5, color = COLOR_HERETIC_GREEN, duration = 0.5 SECONDS)
-		playsound(target, 'sound/effects/magic/magic_block_mind.ogg', 150, TRUE) // insanely quiet
+		playsound(target, '../assets/sound/effects/magic/magic_block_mind.ogg', 150, TRUE) // insanely quiet
 
 		to_chat(user, span_warning("An eldritch force intervenes as you touch [target], absorbing most of the effects!"))
 		to_chat(target, span_warning("As [user] touches you with vile magicks, the Mansus absorbs most of the effects!"))
@@ -576,7 +576,7 @@
 
 /obj/item/melee/blood_magic/shackles/proc/CuffAttack(mob/living/carbon/C, mob/living/user)
 	if(!C.handcuffed)
-		playsound(loc, 'sound/items/weapons/cablecuff.ogg', 30, TRUE, -2)
+		playsound(loc, '../assets/sound/items/weapons/cablecuff.ogg', 30, TRUE, -2)
 		C.visible_message(span_danger("[user] begins restraining [C] with dark magic!"), \
 								span_userdanger("[user] begins shaping dark magic shackles around your wrists!"))
 		if(do_after(user, 3 SECONDS, C))
@@ -625,7 +625,7 @@
 		uses--
 		to_chat(user, span_warning("A dark cloud emanates from your hand and swirls around the iron, twisting it into a construct shell!"))
 		new /obj/structure/constructshell(T)
-		SEND_SOUND(user, sound('sound/effects/magic.ogg',0,1,25))
+		SEND_SOUND(user, sound('../assets/sound/effects/magic.ogg',0,1,25))
 		return ..()
 
 	if(istype(target, /obj/item/stack/sheet/plasteel))
@@ -637,7 +637,7 @@
 		uses--
 		new /obj/item/stack/sheet/runed_metal(T,quantity)
 		to_chat(user, span_warning("A dark cloud emanates from you hand and swirls around the plasteel, transforming it into runed metal!"))
-		SEND_SOUND(user, sound('sound/effects/magic.ogg',0,1,25))
+		SEND_SOUND(user, sound('../assets/sound/effects/magic.ogg',0,1,25))
 		return ..()
 
 	if(istype(target,/mob/living/silicon/robot))
@@ -645,7 +645,7 @@
 		if(candidate.mmi || candidate.shell)
 			channeling = TRUE
 			user.visible_message(span_danger("A dark cloud emanates from [user]'s hand and swirls around [candidate]!"))
-			playsound(T, 'sound/machines/airlock/airlock_alien_prying.ogg', 80, TRUE)
+			playsound(T, '../assets/sound/machines/airlock/airlock_alien_prying.ogg', 80, TRUE)
 			var/prev_color = candidate.color
 			candidate.color = "black"
 			if(!do_after(user, 9 SECONDS, target = candidate))
@@ -670,13 +670,13 @@
 		uses--
 		to_chat(user, span_warning("A dark cloud emanates from you hand and swirls around [candidate] - twisting it into a construct shell!"))
 		new /obj/structure/constructshell(T)
-		SEND_SOUND(user, sound('sound/effects/magic.ogg',0,1,25))
+		SEND_SOUND(user, sound('../assets/sound/effects/magic.ogg',0,1,25))
 		qdel(candidate)
 		return ..()
 
 	if(istype(target,/obj/machinery/door/airlock))
 		channeling = TRUE
-		playsound(T, 'sound/machines/airlock/airlockforced.ogg', 50, TRUE)
+		playsound(T, '../assets/sound/machines/airlock/airlockforced.ogg', 50, TRUE)
 		do_sparks(5, TRUE, target)
 		if(!do_after(user, 5 SECONDS, target = user) && !QDELETED(target))
 			channeling = FALSE
@@ -685,7 +685,7 @@
 		target.narsie_act()
 		uses--
 		user.visible_message(span_warning("Black ribbons suddenly emanate from [user]'s hand and cling to the airlock - twisting and corrupting it!"))
-		SEND_SOUND(user, sound('sound/effects/magic.ogg',0,1,25))
+		SEND_SOUND(user, sound('../assets/sound/effects/magic.ogg',0,1,25))
 		channeling = FALSE
 		return ..()
 
@@ -696,7 +696,7 @@
 
 		uses--
 		to_chat(user, span_warning("You corrupt [candidate]!"))
-		SEND_SOUND(user, sound('sound/effects/magic.ogg',0,1,25))
+		SEND_SOUND(user, sound('../assets/sound/effects/magic.ogg',0,1,25))
 		return ..()
 
 	to_chat(user, span_warning("The spell will not work on [target]!"))
@@ -797,7 +797,7 @@
 		construct_thing.adjust_health(-uses)
 		construct_thing.visible_message(span_warning("[construct_thing] is partially healed by [user]'s blood magic!"))
 		uses = 0
-	playsound(get_turf(construct_thing), 'sound/effects/magic/staff_healing.ogg', 25)
+	playsound(get_turf(construct_thing), '../assets/sound/effects/magic/staff_healing.ogg', 25)
 	user.Beam(construct_thing, icon_state="sendbeam", time = 1 SECONDS)
 	return TRUE
 
@@ -853,7 +853,7 @@
 	need_mob_update += human_bloodbag.adjust_brute_loss(damage_healed * (human_bloodbag.get_brute_loss() / overall_damage), updating_health = FALSE)
 	if(need_mob_update)
 		human_bloodbag.updatehealth()
-	playsound(get_turf(human_bloodbag), 'sound/effects/magic/staff_healing.ogg', 25)
+	playsound(get_turf(human_bloodbag), '../assets/sound/effects/magic/staff_healing.ogg', 25)
 	new /obj/effect/temp_visual/cult/sparks(get_turf(human_bloodbag))
 	if (user != human_bloodbag) //Dont create beam from the user to the user
 		user.Beam(human_bloodbag, icon_state="sendbeam", time = 15)
@@ -874,7 +874,7 @@
 	human_bloodbag.adjust_blood_volume(-BLOOD_DRAIN_GAIN * USES_TO_BLOOD)
 	uses += BLOOD_DRAIN_GAIN
 	user.Beam(human_bloodbag, icon_state="drainbeam", time = 1 SECONDS)
-	playsound(get_turf(human_bloodbag), 'sound/effects/magic/enter_blood.ogg', 50)
+	playsound(get_turf(human_bloodbag), '../assets/sound/effects/magic/enter_blood.ogg', 50)
 	human_bloodbag.visible_message(span_danger("[user] drains some of [human_bloodbag]'s blood!"))
 	to_chat(user,span_cult_italic("Your blood rite gains 50 charges from draining [human_bloodbag]'s blood."))
 	new /obj/effect/temp_visual/cult/sparks(get_turf(human_bloodbag))
@@ -898,7 +898,7 @@
 		return
 	user.Beam(our_turf,icon_state="drainbeam", time = 15)
 	new /obj/effect/temp_visual/cult/sparks(get_turf(user))
-	playsound(our_turf, 'sound/effects/magic/enter_blood.ogg', 50)
+	playsound(our_turf, '../assets/sound/effects/magic/enter_blood.ogg', 50)
 	to_chat(user, span_cult_italic("Your blood rite has gained [round(blood_to_gain)] charge\s from blood sources around you!"))
 	uses += max(1, round(blood_to_gain))
 
@@ -909,9 +909,9 @@
  */
 /obj/item/melee/blood_magic/manipulator/attack_self(mob/living/user)
 	var/static/list/spells = list(
-		"Bloody Halberd (150)" = image(icon = 'icons/obj/weapons/spear.dmi', icon_state = "occultpoleaxe0"),
-		"Blood Bolt Barrage (300)" = image(icon = 'icons/obj/weapons/guns/ballistic.dmi', icon_state = "arcane_barrage"),
-		"Blood Beam (500)" = image(icon = 'icons/obj/weapons/hand.dmi', icon_state = "disintegrate")
+		"Bloody Halberd (150)" = image(icon = '../assets/icons/obj/weapons/spear.dmi', icon_state = "occultpoleaxe0"),
+		"Blood Bolt Barrage (300)" = image(icon = '../assets/icons/obj/weapons/guns/ballistic.dmi', icon_state = "arcane_barrage"),
+		"Blood Beam (500)" = image(icon = '../assets/icons/obj/weapons/hand.dmi', icon_state = "disintegrate")
 		)
 	var/choice = show_radial_menu(user, src, spells, custom_check = CALLBACK(src, PROC_REF(check_menu), user), require_near = TRUE)
 	if(!check_menu(user))

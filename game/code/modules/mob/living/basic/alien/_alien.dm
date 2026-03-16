@@ -1,7 +1,7 @@
 /mob/living/basic/alien
 	name = "alien hunter"
 	desc = "Hiss!"
-	icon = 'icons/mob/nonhuman-player/alien.dmi'
+	icon = '../assets/icons/mob/nonhuman-player/alien.dmi'
 	icon_state = "alienh"
 	icon_living = "alienh"
 	icon_dead = "alienh_dead"
@@ -36,10 +36,10 @@
 	attack_verb_continuous = "slashes"
 	attack_verb_simple = "slash"
 
-	attack_sound = 'sound/items/weapons/bladeslice.ogg'
+	attack_sound = '../assets/sound/items/weapons/bladeslice.ogg'
 	attack_vis_effect = ATTACK_EFFECT_CLAW
 	gold_core_spawnable = NO_SPAWN
-	death_sound = 'sound/mobs/non-humanoids/hiss/hiss6.ogg'
+	death_sound = '../assets/sound/mobs/non-humanoids/hiss/hiss6.ogg'
 	death_message = "lets out a waning guttural screech, green blood bubbling from its maw..."
 
 	habitable_atmos = null
@@ -65,7 +65,7 @@
 	AddElement(/datum/element/footstep, footstep_type = FOOTSTEP_MOB_CLAW)
 
 /mob/living/basic/alien/get_butt_sprite()
-	return icon('icons/mob/butts.dmi', BUTT_SPRITE_XENOMORPH)
+	return icon('../assets/icons/mob/butts.dmi', BUTT_SPRITE_XENOMORPH)
 
 ///Places alien weeds on the turf the mob is currently standing on.
 /mob/living/basic/alien/proc/place_weeds()

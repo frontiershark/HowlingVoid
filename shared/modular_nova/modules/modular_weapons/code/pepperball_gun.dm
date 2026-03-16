@@ -7,17 +7,17 @@
 	custom_premium_price = PAYCHECK_COMMAND * 4
 	accepted_magazine_type = /obj/item/ammo_box/magazine/pepperball
 	can_suppress = FALSE
-	fire_sound = 'sound/effects/pop_expl.ogg'
-	rack_sound = 'sound/items/weapons/gun/pistol/rack.ogg'
-	lock_back_sound = 'sound/items/weapons/gun/pistol/slide_lock.ogg'
-	bolt_drop_sound = 'sound/items/weapons/gun/pistol/slide_drop.ogg'
+	fire_sound = '../assets/sound/effects/pop_expl.ogg'
+	rack_sound = '../assets/sound/items/weapons/gun/pistol/rack.ogg'
+	lock_back_sound = '../assets/sound/items/weapons/gun/pistol/slide_lock.ogg'
+	bolt_drop_sound = '../assets/sound/items/weapons/gun/pistol/slide_drop.ogg'
 	fire_sound_volume = 50
 
 /obj/item/gun/ballistic/automatic/pistol/pepperball/give_manufacturer_examine()
 	AddElement(/datum/element/manufacturer_examine, COMPANY_BOLT)
 
 /obj/item/gun/ballistic/automatic/pistol/pepperball/add_seclight_point()
-	AddComponent(/datum/component/seclite_attachable, light_overlay_icon = 'icons/obj/weapons/guns/flashlights.dmi', light_overlay = "flight")
+	AddComponent(/datum/component/seclite_attachable, light_overlay_icon = '../assets/icons/obj/weapons/guns/flashlights.dmi', light_overlay = "flight")
 
 /obj/item/ammo_box/magazine/pepperball
 	name = "pistol magazine (pepperball)"

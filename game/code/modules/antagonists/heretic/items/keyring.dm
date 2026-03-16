@@ -1,7 +1,7 @@
 /obj/effect/lock_portal
 	name = "crack in reality"
 	desc = "A crack in space, impossibly deep and painful to the eyes. Definitely not safe."
-	icon = 'icons/effects/eldritch.dmi'
+	icon = '../assets/icons/effects/eldritch.dmi'
 	icon_state = "realitycrack"
 	light_system = COMPLEX_LIGHT
 	light_power = 1
@@ -187,7 +187,7 @@
 	card.moveToNullspace()
 	access |= card.access
 	if(!isnull(user))
-		playsound(drop_location(), 'sound/items/eatfood.ogg', rand(10,30), TRUE)
+		playsound(drop_location(), '../assets/sound/items/eatfood.ogg', rand(10,30), TRUE)
 		balloon_alert(user, "consumed card")
 
 /obj/item/card/id/advanced/heretic/interact_with_atom(atom/target, mob/living/user, list/modifiers)

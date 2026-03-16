@@ -69,7 +69,7 @@
 		return MOD_ABORT_INSTALL
 	if(!anomalock.core)
 		balloon_alert(user, "no core!")
-		playsound(suit, 'sound/machines/scanner/scanbuzz.ogg', 25, TRUE, SILENCED_SOUND_EXTRARANGE)
+		playsound(suit, '../assets/sound/machines/scanner/scanbuzz.ogg', 25, TRUE, SILENCED_SOUND_EXTRARANGE)
 		return MOD_ABORT_INSTALL
 	var/datum/storage/bag_of_holding/other_bag
 	for(var/atom/nested_loc in get_nested_locs(suit))

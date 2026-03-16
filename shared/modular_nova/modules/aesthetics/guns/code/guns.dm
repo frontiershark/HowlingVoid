@@ -92,9 +92,9 @@
 
 // de-overrides this particular gun, it uses the tg file
 /obj/item/gun/ballistic/shotgun/automatic/combat/compact
-	icon = 'icons/obj/weapons/guns/ballistic.dmi'
-	lefthand_file = 'icons/mob/inhands/weapons/64x_guns_left.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/64x_guns_right.dmi'
+	icon = '../assets/icons/obj/weapons/guns/ballistic.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/64x_guns_left.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/64x_guns_right.dmi'
 	inhand_x_dimension = 64
 	inhand_y_dimension = 64
 	worn_icon = null
@@ -126,13 +126,13 @@
 	suppressor_x_offset = 17
 
 /obj/item/gun/ballistic/automatic/pistol/doorhickey
-	icon = 'icons/obj/weapons/guns/ballistic.dmi'
+	icon = '../assets/icons/obj/weapons/guns/ballistic.dmi'
 
 /obj/item/gun/ballistic/automatic/pistol/deagle
 	desc = "A robust .454 Trucidator handgun."
 
 /obj/item/gun/ballistic/automatic/pistol/deagle/regal
-	icon = 'icons/obj/weapons/guns/ballistic.dmi'
+	icon = '../assets/icons/obj/weapons/guns/ballistic.dmi'
 	desc = "A gold plated Desert Eagle folded over a million times by superior martian gunsmiths. Uses .454 Trucidator ammo."
 
 //BEAM SOUNDS
@@ -159,11 +159,11 @@
 	w_class = WEIGHT_CLASS_BULKY
 	inhand_icon_state = "sniper"
 	worn_icon_state = null
-	fire_sound = 'sound/items/weapons/gun/sniper/shot.ogg'
+	fire_sound = '../assets/sound/items/weapons/gun/sniper/shot.ogg'
 	fire_sound_volume = 90
-	load_sound = 'sound/items/weapons/gun/sniper/mag_insert.ogg'
-	rack_sound = 'sound/items/weapons/gun/sniper/rack.ogg'
-	suppressed_sound = 'sound/items/weapons/gun/general/heavy_shot_suppressed.ogg'
+	load_sound = '../assets/sound/items/weapons/gun/sniper/mag_insert.ogg'
+	rack_sound = '../assets/sound/items/weapons/gun/sniper/rack.ogg'
+	suppressed_sound = '../assets/sound/items/weapons/gun/general/heavy_shot_suppressed.ogg'
 	recoil = 2
 	weapon_weight = WEAPON_HEAVY
 	accepted_magazine_type = /obj/item/ammo_box/magazine/sniper_rounds
@@ -183,9 +183,9 @@
 /obj/item/gun/ballistic/automatic/sniper_rifle/reset_fire_cd()
 	. = ..()
 	if(suppressed)
-		playsound(src, 'sound/machines/eject.ogg', 25, TRUE, ignore_walls = FALSE, extrarange = SILENCED_SOUND_EXTRARANGE, falloff_distance = 0)
+		playsound(src, '../assets/sound/machines/eject.ogg', 25, TRUE, ignore_walls = FALSE, extrarange = SILENCED_SOUND_EXTRARANGE, falloff_distance = 0)
 	else
-		playsound(src, 'sound/machines/eject.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/machines/eject.ogg', 50, TRUE)
 
 /obj/item/gun/ballistic/automatic/sniper_rifle/syndicate
 	name = "syndicate sniper rifle"
@@ -233,8 +233,8 @@
 	suppressed_sound = 'modular_nova/modules/aesthetics/guns/sound/sniperrifle_s.ogg'
 	fire_sound_volume = 90
 	vary_fire_sound = FALSE
-	load_sound = 'sound/items/weapons/gun/sniper/mag_insert.ogg'
-	rack_sound = 'sound/items/weapons/gun/sniper/rack.ogg'
+	load_sound = '../assets/sound/items/weapons/gun/sniper/mag_insert.ogg'
+	rack_sound = '../assets/sound/items/weapons/gun/sniper/rack.ogg'
 	w_class = WEIGHT_CLASS_NORMAL
 	can_suppress = TRUE
 	can_unsuppress = TRUE

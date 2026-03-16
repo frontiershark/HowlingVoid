@@ -11,7 +11,7 @@
 		return
 	var/damage = rand(user.melee_damage_lower, user.melee_damage_upper)
 	if (prob(90))
-		playsound(loc, 'sound/items/weapons/slash.ogg', 25, TRUE, -1)
+		playsound(loc, '../assets/sound/items/weapons/slash.ogg', 25, TRUE, -1)
 		visible_message(span_danger("[user] slashes at [src]!"), \
 						span_userdanger("[user] slashes at you!"), null, null, user)
 		to_chat(user, span_danger("You slash at [src]!"))
@@ -20,7 +20,7 @@
 		adjust_brute_loss(damage)
 		log_combat(user, src, "attacked")
 	else
-		playsound(loc, 'sound/items/weapons/slashmiss.ogg', 25, TRUE, -1)
+		playsound(loc, '../assets/sound/items/weapons/slashmiss.ogg', 25, TRUE, -1)
 		visible_message(span_danger("[user]'s swipe misses [src]!"),
 						span_danger("You avoid [user]'s swipe!"), null, null, user)
 		to_chat(user, span_warning("Your swipe misses [src]!"))
@@ -71,7 +71,7 @@
 		return TRUE
 	if(user.combat_mode)
 		user.do_attack_animation(src, ATTACK_EFFECT_PUNCH)
-		playsound(src.loc, 'sound/effects/bang.ogg', 10, TRUE)
+		playsound(src.loc, '../assets/sound/effects/bang.ogg', 10, TRUE)
 		visible_message(span_danger("[user] punches [src], but doesn't leave a dent!"), \
 						span_warning("[user] punches you, but doesn't leave a dent!"), null, COMBAT_MESSAGE_RANGE, user)
 		to_chat(user, span_danger("You punch [src], but don't leave a dent!"))
@@ -92,7 +92,7 @@
 	if(. == SUCCESSFUL_BLOCK)
 		return SUCCESSFUL_BLOCK
 	if(damage_type == BRUTE && attack_type == UNARMED_ATTACK && attack_flag == MELEE && damage <= 10)
-		playsound(src, 'sound/effects/bang.ogg', 10, TRUE)
+		playsound(src, '../assets/sound/effects/bang.ogg', 10, TRUE)
 		visible_message(span_danger("[attack_text] doesn't leave a dent on [src]!"), vision_distance = COMBAT_MESSAGE_RANGE)
 		return SUCCESSFUL_BLOCK
 	return FAILED_BLOCK

@@ -11,7 +11,7 @@
 	production = 5
 	yield = 2
 	instability = 30
-	growing_icon = 'icons/obj/service/hydroponics/growing_fruits.dmi'
+	growing_icon = '../assets/icons/obj/service/hydroponics/growing_fruits.dmi'
 	icon_grow = "berry-grow" // Uses one growth icons set for all the subtypes
 	icon_dead = "berry-dead" // Same for the dead icon
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
@@ -128,7 +128,7 @@
 	production = 5
 	yield = 4
 	growthstages = 2
-	growing_icon = 'icons/obj/service/hydroponics/growing_fruits.dmi'
+	growing_icon = '../assets/icons/obj/service/hydroponics/growing_fruits.dmi'
 	icon_grow = "grape-grow"
 	icon_dead = "grape-dead"
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
@@ -183,7 +183,7 @@
 	production = 5
 	yield = 2
 	instability = 30
-	growing_icon = 'icons/obj/service/hydroponics/growing_fruits.dmi'
+	growing_icon = '../assets/icons/obj/service/hydroponics/growing_fruits.dmi'
 	icon_grow = "toechtauese-grow"
 	icon_dead = "toechtauese-dead"
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
@@ -214,7 +214,7 @@
 	production = 5
 	growthstages = 3
 	instability = 15
-	growing_icon = 'icons/obj/service/hydroponics/growing_fruits.dmi'
+	growing_icon = '../assets/icons/obj/service/hydroponics/growing_fruits.dmi'
 	icon_grow = "lanternfruit-grow"
 	icon_dead = "lanternfruit-dead"
 	icon_harvest = "lanternfruit-harvest"

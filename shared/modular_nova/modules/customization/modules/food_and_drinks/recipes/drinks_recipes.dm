@@ -79,7 +79,7 @@
 	results = list(/datum/reagent/consumable/ethanol/coggrog = 3)
 	required_reagents = list(/datum/reagent/consumable/ethanol/cognac = 1, /datum/reagent/fuel = 1, /datum/reagent/consumable/ethanol/screwdrivercocktail = 1)
 	mix_message = "You hear faint sounds of gears turning as it mixes."
-	mix_sound = 'sound/machines/clockcult/steam_whoosh.ogg'
+	mix_sound = '../assets/sound/machines/clockcult/steam_whoosh.ogg'
 
 /datum/chemical_reaction/drink/badtouch
 	results = list(/datum/reagent/consumable/ethanol/badtouch = 5)
@@ -113,19 +113,19 @@
 	results = list(/datum/reagent/consumable/ethanol/cringe_weaver = 10)
 	required_reagents = list(/datum/reagent/toxin/formaldehyde = 6, /datum/reagent/consumable/ethanol/fringe_weaver = 3, /datum/reagent/consumable/ice = 1) //9 'form'adelhyde, ice
 	mix_message = "The mix swells and turns a sickeningly pungent green, filling the air with a tangible miasma of cringe."
-	mix_sound = 'sound/effects/wounds/sizzle2.ogg'
+	mix_sound = '../assets/sound/effects/wounds/sizzle2.ogg'
 
 /datum/chemical_reaction/drink/blizzard_brew
 	results = list(/datum/reagent/consumable/ethanol/blizzard_brew = 3)
 	required_reagents = list(/datum/reagent/consumable/ethanol/iced_beer = 1, /datum/reagent/consumable/ice = 1, /datum/reagent/inverse/cryostylane = 1)
 	mix_message = "You hear crackling ice as it mixes."
-	mix_sound = 'sound/effects/ice_shovel.ogg'
+	mix_sound = '../assets/sound/effects/ice_shovel.ogg'
 
 /datum/chemical_reaction/drink/molten_mead
 	results = list(/datum/reagent/consumable/ethanol/molten_mead = 3)
 	required_reagents = list(/datum/reagent/consumable/condensedcapsaicin = 2, /datum/reagent/consumable/ethanol/mead = 2, /datum/reagent/consumable/ethanol/mauna_loa = 1)
 	mix_message = "You hear sizzling flesh and angry wasps buzzing as it mixes."
-	mix_sound = 'sound/effects/wounds/sizzle2.ogg'
+	mix_sound = '../assets/sound/effects/wounds/sizzle2.ogg'
 
 /datum/chemical_reaction/drink/hippie_hooch
 	results = list(/datum/reagent/consumable/ethanol/hippie_hooch = 5)
@@ -137,13 +137,13 @@
 	results = list(/datum/reagent/consumable/ethanol/research_rum = 4)
 	required_reagents = list(/datum/reagent/consumable/ethanol/bananahonk = 2, /datum/reagent/inverse/neurine = 1, /datum/reagent/consumable/ethanol/grog = 1)
 	mix_message = "You hear gurgling and dinging as it mixes."
-	mix_sound = 'sound/machines/microwave/microwave-end.ogg'
+	mix_sound = '../assets/sound/machines/microwave/microwave-end.ogg'
 
 /datum/chemical_reaction/drink/golden_grog
 	results = list(/datum/reagent/consumable/ethanol/golden_grog = 5)
 	required_reagents = list(/datum/reagent/consumable/ethanol/goldschlager = 10, /datum/reagent/gold = 1, /datum/reagent/silver = 1, /datum/reagent/cellulose = 1, /datum/reagent/spraytan = 1)
 	mix_message = "You hear golden coins and snobby rich laughing as it mixes."
-	mix_sound = 'sound/items/coinflip.ogg'
+	mix_sound = '../assets/sound/items/coinflip.ogg'
 
 // RACE SPECIFIC DRINKS
 

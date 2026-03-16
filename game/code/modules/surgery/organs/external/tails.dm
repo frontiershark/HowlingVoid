@@ -164,7 +164,7 @@
 	wag_flags = WAG_ABLE
 
 /obj/item/organ/tail/cat/get_butt_sprite()
-	return icon('icons/mob/butts.dmi', BUTT_SPRITE_CAT)
+	return icon('../assets/icons/mob/butts.dmi', BUTT_SPRITE_CAT)
 
 ///Cat tail bodypart overlay
 /datum/bodypart_overlay/mutant/tail/cat
@@ -193,7 +193,7 @@
 /obj/item/organ/tail/xeno_queen
 	name = "alien queen's tail"
 	desc = "An enormous serrated tail, used to deadly effect by its original owner but perhaps too heavy for a human spine."
-	icon = 'icons/mob/human/species/alien/tail_xenomorph_queen.dmi'
+	icon = '../assets/icons/mob/human/species/alien/tail_xenomorph_queen.dmi'
 	icon_state = "severedqueentail"
 	w_class = WEIGHT_CLASS_BULKY
 	slowdown = 2

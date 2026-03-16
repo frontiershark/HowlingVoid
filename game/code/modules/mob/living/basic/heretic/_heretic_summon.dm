@@ -2,7 +2,7 @@
 	name = "Eldritch Demon"
 	real_name = "Eldritch Demon"
 	desc = "A horror from beyond this realm, summoned by bad code."
-	icon = 'icons/mob/nonhuman-player/eldritch_mobs.dmi'
+	icon = '../assets/icons/mob/nonhuman-player/eldritch_mobs.dmi'
 	faction = list(FACTION_HERETIC)
 	basic_mob_flags = DEL_ON_DEATH
 	gender = NEUTER
@@ -14,7 +14,7 @@
 	speed = 0
 	melee_attack_cooldown = CLICK_CD_MELEE
 
-	attack_sound = 'sound/items/weapons/punch1.ogg'
+	attack_sound = '../assets/sound/items/weapons/punch1.ogg'
 	response_help_continuous = "thinks better of touching"
 	response_help_simple = "think better of touching"
 	response_disarm_continuous = "flails at"

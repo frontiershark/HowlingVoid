@@ -1,10 +1,10 @@
 /obj/item/clothing/under/abductor
 	desc = "The most advanced form of jumpsuit known to reality, looks uncomfortable."
 	name = "alien jumpsuit"
-	icon = 'icons/obj/clothing/under/syndicate.dmi'
+	icon = '../assets/icons/obj/clothing/under/syndicate.dmi'
 	icon_state = "abductor"
 	inhand_icon_state = "bl_suit"
-	worn_icon = 'icons/mob/clothing/under/syndicate.dmi'
+	worn_icon = '../assets/icons/mob/clothing/under/syndicate.dmi'
 	armor_type = /datum/armor/clothing_under/abductor
 	can_adjust = FALSE
 
@@ -15,7 +15,7 @@
 /obj/item/clothing/suit/armor/abductor/vest
 	name = "agent vest"
 	desc = "A vest outfitted with advanced stealth technology. It has two modes - combat and stealth."
-	icon = 'icons/obj/antags/abductor.dmi'
+	icon = '../assets/icons/obj/antags/abductor.dmi'
 	icon_state = "vest_stealth"
 	inhand_icon_state = "armor"
 	blood_overlay_type = "armor"

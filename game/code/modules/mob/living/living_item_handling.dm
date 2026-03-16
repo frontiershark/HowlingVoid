@@ -102,13 +102,13 @@
 		if(thrown_item.throw_verb)
 			verb_text = thrown_item.throw_verb
 	do_attack_animation(target, no_effect = 1)
-	var/sound/throwsound = 'sound/items/weapons/throw.ogg'
+	var/sound/throwsound = '../assets/sound/items/weapons/throw.ogg'
 	var/power_throw_text = "."
 	if(power_throw > 0) //If we have anything that boosts our throw power like hulk, we use the rougher heavier variant.
-		throwsound = 'sound/items/weapons/throwhard.ogg'
+		throwsound = '../assets/sound/items/weapons/throwhard.ogg'
 		power_throw_text = " really hard!"
 	if(power_throw < 0) //if we have anything that weakens our throw power like dward, we use a slower variant.
-		throwsound = 'sound/items/weapons/throwsoft.ogg'
+		throwsound = '../assets/sound/items/weapons/throwsoft.ogg'
 		power_throw_text = " flimsily."
 	frequency_number = frequency_number + (rand(-5,5)/100); //Adds a bit of randomness in the frequency to not sound exactly the same.
 	//The volume of the sound takes the minimum between the distance thrown or the max range an item, but no more than 50. Short throws are quieter. A fast throwing speed also makes the noise sharper.

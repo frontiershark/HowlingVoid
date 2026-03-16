@@ -144,7 +144,7 @@
 	existing?.drop_limb(special = TRUE)
 
 	var/obj/item/bodypart/bodypart_to_attach = newBodyPart(target_zone)
-	bodypart_to_attach.change_appearance(icon = 'icons/mob/augmentation/surplus_augments.dmi', id = BODYPART_ID_ROBOTIC, greyscale = FALSE, dimorphic = FALSE)
+	bodypart_to_attach.change_appearance(icon = '../assets/icons/mob/augmentation/surplus_augments.dmi', id = BODYPART_ID_ROBOTIC, greyscale = FALSE, dimorphic = FALSE)
 	bodypart_to_attach.try_attach_limb(src)
 	bodypart_to_attach.AddComponent(/datum/component/item_as_prosthetic_limb, some_thing, fall_prob)
 

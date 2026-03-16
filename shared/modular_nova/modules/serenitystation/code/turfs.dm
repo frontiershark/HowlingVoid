@@ -3,7 +3,7 @@
 	gender = PLURAL
 	name = "grass"
 	desc = "A patch of grass."
-	icon = 'icons/turf/floors.dmi'
+	icon = '../assets/icons/turf/floors.dmi'
 	icon_state = "grass"
 	base_icon_state = "grass"
 	baseturfs = /turf/open/misc/dirt/forest
@@ -16,13 +16,13 @@
 	smoothing_groups = SMOOTH_GROUP_TURF_OPEN + SMOOTH_GROUP_FLOOR_GRASS
 	canSmoothWith = SMOOTH_GROUP_FLOOR_GRASS + SMOOTH_GROUP_CLOSED_TURFS
 	layer = HIGH_TURF_LAYER
-	damaged_dmi = 'icons/turf/damaged.dmi'
+	damaged_dmi = '../assets/icons/turf/damaged.dmi'
 	initial_gas_mix = FOREST_DEFAULT_ATMOS
 	flags_1 = NONE
 	planetary_atmos = TRUE
 	dig_result = /obj/item/food/grown/grass
 	/// Which icon file to use for turf specific edge smoothing states.
-	var/smooth_icon = 'icons/turf/floors/grass.dmi'
+	var/smooth_icon = '../assets/icons/turf/floors/grass.dmi'
 
 /turf/open/misc/asteroid/forest/broken_states()
 	return list("grass_damaged")
@@ -53,7 +53,7 @@
 	base_icon_state = "mushroom"
 	smoothing_groups = SMOOTH_GROUP_TURF_OPEN + SMOOTH_GROUP_MUSHROOM
 	canSmoothWith = SMOOTH_GROUP_CLOSED_TURFS + SMOOTH_GROUP_MUSHROOM
-	damaged_dmi = 'icons/turf/damaged.dmi'
+	damaged_dmi = '../assets/icons/turf/damaged.dmi'
 	smooth_icon = 'modular_nova/modules/serenitystation/icons/turfs/floors/mushroom.dmi'
 	dig_result = /obj/item/food/grown/ash_flora
 	light_range = 2
@@ -87,7 +87,7 @@
 
 /turf/closed/mineral/random/forest
 	name = "forest mountainside"
-	icon = MAP_SWITCH('icons/turf/walls/mountain_wall.dmi', 'icons/turf/mining.dmi')
+	icon = MAP_SWITCH('../assets/icons/turf/walls/mountain_wall.dmi', '../assets/icons/turf/mining.dmi')
 	icon_state = "mountainrock"
 	base_icon_state = "mountain_wall"
 	smoothing_flags = SMOOTH_BITMASK | SMOOTH_BORDER
@@ -101,7 +101,7 @@
 /turf/closed/mineral/random/forest/Change_Ore(ore_type, random = 0)
 	. = ..()
 	if(mineralType)
-		icon = 'icons/turf/walls/icerock_wall.dmi'
+		icon = '../assets/icons/turf/walls/icerock_wall.dmi'
 		icon_state = "icerock_wall-0"
 		base_icon_state = "icerock_wall"
 		smoothing_flags = SMOOTH_BITMASK | SMOOTH_BORDER

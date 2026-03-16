@@ -6,14 +6,14 @@
 	icon_state = "staffofstorms"
 	inhand_icon_state = "staffofstorms"
 	icon_angle = -45
-	icon = 'icons/obj/weapons/guns/magic.dmi'
-	lefthand_file = 'icons/mob/inhands/weapons/staves_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/staves_righthand.dmi'
+	icon = '../assets/icons/obj/weapons/guns/magic.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/staves_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/staves_righthand.dmi'
 	slot_flags = ITEM_SLOT_BACK
 	w_class = WEIGHT_CLASS_BULKY
 	force = 20
 	damtype = BURN
-	hitsound = 'sound/items/weapons/taserhit.ogg'
+	hitsound = '../assets/sound/items/weapons/taserhit.ogg'
 	wound_bonus = -30
 	exposed_wound_bonus = 20
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
@@ -55,7 +55,7 @@
 		return
 	user.visible_message(span_warning("[user] holds [src] skywards as an orange beam travels into the sky!"), \
 	span_notice("You hold [src] skyward, dispelling the storm!"))
-	playsound(user, 'sound/effects/magic/staff_change.ogg', 200, FALSE)
+	playsound(user, '../assets/sound/effects/magic/staff_change.ogg', 200, FALSE)
 	var/old_color = user.color
 	user.color = list(340/255, 240/255, 0,0, 0,0,0,0, 0,0,0,0, 0,0,0,1, 0,0,0,0)
 	var/old_transform = user.transform
@@ -92,7 +92,7 @@
 		if((target_turf.z in weather.impacted_z_levels) && ispath(target_area.type, weather.area_type))
 			power_boosted = TRUE
 			break
-	playsound(src, 'sound/effects/magic/lightningshock.ogg', 10, TRUE, extrarange = SILENCED_SOUND_EXTRARANGE, falloff_distance = 0)
+	playsound(src, '../assets/sound/effects/magic/lightningshock.ogg', 10, TRUE, extrarange = SILENCED_SOUND_EXTRARANGE, falloff_distance = 0)
 	targeted_turfs += target_turf
 	balloon_alert(user, "you aim at [target_turf]...")
 	new /obj/effect/temp_visual/telegraphing/thunderbolt(target_turf)
@@ -104,7 +104,7 @@
 
 /obj/item/storm_staff/proc/recharge(mob/user)
 	thunder_charges = min(thunder_charges + 1, max_thunder_charges)
-	playsound(src, 'sound/effects/magic/charge.ogg', 10, TRUE, extrarange = SILENCED_SOUND_EXTRARANGE, falloff_distance = 0)
+	playsound(src, '../assets/sound/effects/magic/charge.ogg', 10, TRUE, extrarange = SILENCED_SOUND_EXTRARANGE, falloff_distance = 0)
 
 /obj/item/storm_staff/proc/throw_thunderbolt(turf/target, boosted)
 	targeted_turfs -= target
@@ -124,6 +124,6 @@
 
 		for(var/obj/hit_thing in turf)
 			hit_thing.take_damage(20, BURN, ENERGY, FALSE)
-	playsound(target, 'sound/effects/magic/lightningbolt.ogg', 100, TRUE)
+	playsound(target, '../assets/sound/effects/magic/lightningbolt.ogg', 100, TRUE)
 	target.visible_message(span_danger("A thunderbolt strikes [target]!"))
 	explosion(target, light_impact_range = (boosted ? 1 : 0), flame_range = (boosted ? 2 : 1), silent = TRUE)

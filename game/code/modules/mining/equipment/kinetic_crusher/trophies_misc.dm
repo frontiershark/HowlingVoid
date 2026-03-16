@@ -2,11 +2,11 @@
 /datum/atom_skin/crusher_skin
 	abstract_type = /datum/atom_skin/crusher_skin
 	change_base_icon_state = TRUE
-	new_icon = 'icons/obj/mining.dmi'
+	new_icon = '../assets/icons/obj/mining.dmi'
 	new_icon_state = "ipickaxe"
 	new_inhand_icon_state = "ipickaxe"
 	/// Specifies the icon file in which the crusher's projectile sprite is located.
-	var/new_projectile_icon = 'icons/obj/weapons/guns/projectiles.dmi'
+	var/new_projectile_icon = '../assets/icons/obj/weapons/guns/projectiles.dmi'
 	/// For if the retool kit changes the projectile's appearance.
 	var/new_projectile_icon_state
 	/// Specifies the X dimensions of the new inhand, only relevant with different inhand files.
@@ -82,7 +82,7 @@
 	if (isliving(attacked_atom))
 		var/mob/living/target = attacked_atom
 		if (source.last_projectile_pb)
-			image_override += image(icon = 'icons/obj/mining.dmi', icon_state = "crusher_dagger_blaster")
+			image_override += image(icon = '../assets/icons/obj/mining.dmi', icon_state = "crusher_dagger_blaster")
 			angle_override += 0
 			animation_override += ATTACK_ANIMATION_PIERCE
 			source.last_projectile_pb = FALSE
@@ -91,7 +91,7 @@
 		if (target.has_status_effect(/datum/status_effect/crusher_mark))
 			animation_override += ATTACK_ANIMATION_PIERCE
 
-	image_override += image(icon = 'icons/obj/mining.dmi', icon_state = "crusher_dagger_melee")
+	image_override += image(icon = '../assets/icons/obj/mining.dmi', icon_state = "crusher_dagger_melee")
 
 /datum/atom_skin/crusher_skin/dagger/proc/on_fired_blast(obj/item/kinetic_crusher/source, atom/target, mob/living/user, obj/projectile/destabilizer/destabilizer)
 	SIGNAL_HANDLER
@@ -104,8 +104,8 @@
 	preview_name = "Glaive"
 	new_icon_state = "crusher_glaive"
 	new_inhand_icon_state = "crusher_glaive"
-	new_lefthand_file = 'icons/mob/inhands/64x64_lefthand.dmi'
-	new_righthand_file = 'icons/mob/inhands/64x64_righthand.dmi'
+	new_lefthand_file = '../assets/icons/mob/inhands/64x64_lefthand.dmi'
+	new_righthand_file = '../assets/icons/mob/inhands/64x64_righthand.dmi'
 	new_inhandx = 64
 	new_inhandy = 64
 
@@ -123,7 +123,7 @@
 /obj/item/crusher_trophy/retool_kit
 	name = "crusher retool kit"
 	desc = "A toolkit for changing the crusher's appearance without affecting the device's function."
-	icon = 'icons/obj/mining.dmi'
+	icon = '../assets/icons/obj/mining.dmi'
 	icon_state = "retool_kit"
 	denied_type = /obj/item/crusher_trophy/retool_kit
 

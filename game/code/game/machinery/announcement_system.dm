@@ -4,7 +4,7 @@ GLOBAL_LIST_EMPTY(announcement_systems)
 	density = TRUE
 	name = "\improper Automated Announcement System"
 	desc = "An automated announcement system that handles minor announcements over the radio."
-	icon = 'icons/obj/machines/telecomms.dmi'
+	icon = '../assets/icons/obj/machines/telecomms.dmi'
 	icon_state = "AAS_On"
 	base_icon_state = "AAS"
 
@@ -137,7 +137,7 @@ GLOBAL_LIST_EMPTY(announcement_systems)
 		return
 	if(machine_stat & EMPED)
 		visible_message(span_warning("[src] buzzes."), span_hear("You hear a faint buzz."))
-		playsound(src.loc, 'sound/machines/buzz/buzz-two.ogg', 50, TRUE)
+		playsound(src.loc, '../assets/sound/machines/buzz/buzz-two.ogg', 50, TRUE)
 		return
 
 	add_fingerprint(usr)

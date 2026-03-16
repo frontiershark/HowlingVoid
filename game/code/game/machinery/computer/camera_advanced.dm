@@ -131,7 +131,7 @@
 
 	user.client.view_size.unsupress()
 
-	playsound(src, 'sound/machines/terminal/terminal_off.ogg', 25, FALSE)
+	playsound(src, '../assets/sound/machines/terminal/terminal_off.ogg', 25, FALSE)
 
 /obj/machinery/computer/camera_advanced/on_set_is_operational(old_value)
 	if(!is_operational)
@@ -209,7 +209,7 @@
 
 /datum/action/innate/camera_off
 	name = "End Camera View"
-	button_icon = 'icons/mob/actions/actions_silicon.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_silicon.dmi'
 	button_icon_state = "camera_off"
 
 /datum/action/innate/camera_off/Activate()
@@ -221,7 +221,7 @@
 
 /datum/action/innate/camera_jump
 	name = "Jump To Camera"
-	button_icon = 'icons/mob/actions/actions_silicon.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_silicon.dmi'
 	button_icon_state = "camera_jump"
 
 /datum/action/innate/camera_jump/Activate()
@@ -232,7 +232,7 @@
 
 	var/list/cameras_by_tag = SScameras.get_available_camera_by_tag_list(origin.networks, origin.z_lock)
 
-	playsound(origin, 'sound/machines/terminal/terminal_prompt.ogg', 25, FALSE)
+	playsound(origin, '../assets/sound/machines/terminal/terminal_prompt.ogg', 25, FALSE)
 	var/camera = tgui_input_list(usr, "Camera to view", "Cameras", cameras_by_tag)
 	if(isnull(camera))
 		return
@@ -241,17 +241,17 @@
 
 	var/obj/machinery/camera/chosen_camera = cameras_by_tag[camera]
 	if(isnull(chosen_camera))
-		playsound(origin, 'sound/machines/terminal/terminal_prompt_deny.ogg', 25, FALSE)
+		playsound(origin, '../assets/sound/machines/terminal/terminal_prompt_deny.ogg', 25, FALSE)
 		return
 
-	playsound(origin, 'sound/machines/terminal/terminal_prompt_confirm.ogg', 25, FALSE)
+	playsound(origin, '../assets/sound/machines/terminal/terminal_prompt_confirm.ogg', 25, FALSE)
 	remote_eye.setLoc(get_turf(chosen_camera))
 	owner.overlay_fullscreen("flash", /atom/movable/screen/fullscreen/flash/static)
 	owner.clear_fullscreen("flash", 3) //Shorter flash than normal since it's an ~~advanced~~ console!
 
 /datum/action/innate/camera_multiz_up
 	name = "Move up a floor"
-	button_icon = 'icons/mob/actions/actions_silicon.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_silicon.dmi'
 	button_icon_state = "move_up"
 
 /datum/action/innate/camera_multiz_up/Activate()
@@ -265,7 +265,7 @@
 
 /datum/action/innate/camera_multiz_down
 	name = "Move down a floor"
-	button_icon = 'icons/mob/actions/actions_silicon.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_silicon.dmi'
 	button_icon_state = "move_down"
 
 /datum/action/innate/camera_multiz_down/Activate()
@@ -333,7 +333,7 @@
 
 /datum/action/innate/camera_circuit_action
 	name = "Action"
-	button_icon = 'icons/mob/actions/actions_items.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_items.dmi'
 	button_icon_state = "bci_power"
 
 	var/obj/machinery/computer/camera_advanced/console

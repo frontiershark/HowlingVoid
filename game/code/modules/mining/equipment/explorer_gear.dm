@@ -3,8 +3,8 @@
 	name = "explorer suit"
 	desc = "An armoured suit for exploring harsh environments."
 	icon_state = "explorer"
-	icon = 'icons/obj/clothing/suits/utility.dmi'
-	worn_icon = 'icons/mob/clothing/suits/utility.dmi'
+	icon = '../assets/icons/obj/clothing/suits/utility.dmi'
+	worn_icon = '../assets/icons/mob/clothing/suits/utility.dmi'
 	inhand_icon_state = null
 	supports_variations_flags = CLOTHING_DIGITIGRADE_MASK
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
@@ -32,8 +32,8 @@
 /obj/item/clothing/head/hooded/explorer
 	name = "explorer hood"
 	desc = "An armoured hood for exploring harsh environments."
-	icon = 'icons/obj/clothing/head/utility.dmi'
-	worn_icon = 'icons/mob/clothing/head/utility.dmi'
+	icon = '../assets/icons/obj/clothing/head/utility.dmi'
+	worn_icon = '../assets/icons/mob/clothing/head/utility.dmi'
 	icon_state = "explorer"
 	body_parts_covered = HEAD
 	flags_inv = HIDEHAIR|HIDEFACE|HIDEEARS
@@ -105,8 +105,8 @@
 	visor_toggling()
 
 /obj/item/clothing/suit/hooded/cloak
-	icon = 'icons/obj/clothing/suits/armor.dmi'
-	worn_icon = 'icons/mob/clothing/suits/armor.dmi'
+	icon = '../assets/icons/obj/clothing/suits/armor.dmi'
+	worn_icon = '../assets/icons/mob/clothing/suits/armor.dmi'
 
 /obj/item/clothing/suit/hooded/cloak/goliath
 	name = "goliath cloak"
@@ -163,8 +163,8 @@
 
 /obj/item/clothing/head/hooded/cloakhood/goliath
 	name = "goliath cloak hood"
-	icon = 'icons/obj/clothing/head/helmet.dmi'
-	worn_icon = 'icons/mob/clothing/head/helmet.dmi'
+	icon = '../assets/icons/obj/clothing/head/helmet.dmi'
+	worn_icon = '../assets/icons/mob/clothing/head/helmet.dmi'
 	icon_state = "golhood"
 	desc = "A protective & concealing hood."
 	armor_type = /datum/armor/hooded_goliath
@@ -225,8 +225,8 @@
 	name = "syndicate explorer suit"
 	desc = "An armoured suit for exploring harsh environments, dyed in the sinister red and black of the Syndicate. This one seems better armored than the ones Nanotrasen gives out."
 	icon_state = "explorer_syndicate"
-	icon = 'icons/obj/clothing/suits/utility.dmi'
-	worn_icon = 'icons/mob/clothing/suits/utility.dmi'
+	icon = '../assets/icons/obj/clothing/suits/utility.dmi'
+	worn_icon = '../assets/icons/mob/clothing/suits/utility.dmi'
 	hoodtype = /obj/item/clothing/head/hooded/explorer/syndicate
 	armor_type = /datum/armor/hooded_explorer_syndicate
 

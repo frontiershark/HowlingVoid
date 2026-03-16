@@ -1,7 +1,7 @@
 /obj/item/clothing/head/helmet/space/beret
 	name = "CentCom officer's beret"
 	desc = "An armored beret commonly used by special operations officers. Uses advanced force field technology to protect the head from space."
-	icon = 'icons/map_icons/clothing/head/_head.dmi'
+	icon = '../assets/icons/map_icons/clothing/head/_head.dmi'
 	icon_state = "/obj/item/clothing/head/helmet/space/beret"
 	post_init_icon_state = "beret_badge"
 	greyscale_config = /datum/greyscale_config/beret_badge
@@ -33,8 +33,8 @@
 	name = "CentCom officer's coat"
 	desc = "An armored, space-proof coat used in special operations."
 	icon_state = "centcom_coat"
-	icon = 'icons/obj/clothing/suits/jacket.dmi'
-	worn_icon = 'icons/mob/clothing/suits/jacket.dmi'
+	icon = '../assets/icons/obj/clothing/suits/jacket.dmi'
+	worn_icon = '../assets/icons/mob/clothing/suits/jacket.dmi'
 	inhand_icon_state = "centcom"
 	blood_overlay_type = "coat"
 	slowdown = 0

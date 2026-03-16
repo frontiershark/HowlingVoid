@@ -12,9 +12,9 @@
 // Base type. Subtypes are found in /grown dir. Lavaland-based subtypes can be found in mining/ash_flora.dm
 /obj/item/food/grown
 	name = "fresh produce" // so recipe text doesn't say 'snack'
-	icon = 'icons/obj/service/hydroponics/harvest.dmi'
+	icon = '../assets/icons/obj/service/hydroponics/harvest.dmi'
 	icon_state = "berrypile"
-	worn_icon = 'icons/mob/clothing/head/hydroponics.dmi'
+	worn_icon = '../assets/icons/mob/clothing/head/hydroponics.dmi'
 	abstract_type = /obj/item/food/grown
 	max_volume = PLANT_REAGENT_VOLUME
 	w_class = WEIGHT_CLASS_SMALL
@@ -164,7 +164,7 @@
 		seed.desc = "A dusting of [LOWER_TEXT(seed.plantname)] spores have been deposited in a beautiful pattern on the surface of the paper. "
 		seed.icon_state = "spore_print[pick(1,2,3)]"
 		seed.forceMove(drop_location())
-		playsound(user, 'sound/items/paper_flip.ogg', 20)
+		playsound(user, '../assets/sound/items/paper_flip.ogg', 20)
 		seed = null
 		qdel(src)
 		return ITEM_INTERACT_SUCCESS

@@ -45,7 +45,7 @@
 
 /obj/item/ammo_box/foambox
 	name = "ammo box (Foam Darts)"
-	icon = 'icons/obj/weapons/guns/toy.dmi'
+	icon = '../assets/icons/obj/weapons/guns/toy.dmi'
 	icon_state = "foambox"
 	ammo_type = /obj/item/ammo_casing/foam_dart
 	max_ammo = 40

@@ -38,7 +38,7 @@
 	threshold_penalty = 40
 
 	severity = WOUND_SEVERITY_CRITICAL
-	sound_effect = 'sound/effects/dismember.ogg'
+	sound_effect = '../assets/sound/effects/dismember.ogg'
 	surgery_states = SURGERY_SKIN_OPEN | SURGERY_BONE_SAWED // Literally a cracked open skull, no vessels as it... doesn't bleed?
 
 	/// If TRUE we have been prepped for surgery (to repair)
@@ -50,7 +50,7 @@
 	ADD_TRAIT(limb, TRAIT_IMMUNE_TO_CRANIAL_FISSURE, type)
 	ADD_TRAIT(victim, TRAIT_HAS_CRANIAL_FISSURE, type)
 
-	victim.add_filter(CRANIAL_FISSURE_FILTER_DISPLACEMENT, 2, displacement_map_filter(icon('icons/effects/cranial_fissure.dmi', "displacement"), size = 3))
+	victim.add_filter(CRANIAL_FISSURE_FILTER_DISPLACEMENT, 2, displacement_map_filter(icon('../assets/icons/effects/cranial_fissure.dmi', "displacement"), size = 3))
 
 	RegisterSignal(victim, COMSIG_MOB_SLIPPED, PROC_REF(on_owner_slipped))
 
@@ -98,7 +98,7 @@
 		victim.balloon_alert(user, "no eyes to take!")
 		return TRUE
 
-	playsound(victim, 'sound/items/handling/surgery/organ2.ogg', 50, TRUE)
+	playsound(victim, '../assets/sound/items/handling/surgery/organ2.ogg', 50, TRUE)
 	victim.balloon_alert(user, "pulling out eyes...")
 	user.visible_message(
 		span_boldwarning("[user] reaches inside [victim]'s skull..."),
@@ -118,7 +118,7 @@
 
 	log_combat(user, victim, "pulled out the eyes of")
 
-	playsound(victim, 'sound/items/handling/surgery/organ1.ogg', 75, TRUE)
+	playsound(victim, '../assets/sound/items/handling/surgery/organ1.ogg', 75, TRUE)
 	user.visible_message(
 		span_boldwarning("[user] rips out [victim]'s eyes!"),
 		span_boldwarning("You rip out [victim]'s eyes!"),

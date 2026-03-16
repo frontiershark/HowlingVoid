@@ -7,7 +7,7 @@
 		/datum/crafting_recipe/food/donkpocket/deluxe/nocarb,
 		/datum/crafting_recipe/food/donkpocket/deluxe/vegan,
 	)
-	icon = 'icons/obj/service/bureaucracy.dmi'
+	icon = '../assets/icons/obj/service/bureaucracy.dmi'
 	icon_state = "docs_part"
 	uses = INFINITY
 	remarks = list(

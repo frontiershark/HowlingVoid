@@ -93,7 +93,7 @@
 	sleep(2 SECONDS)
 	user.visible_message(span_suicide("[user] climbs into an imaginary oven!"))
 	user.say("BOOORK!", forced = "chef hat suicide")
-	playsound(user, 'sound/machines/ding.ogg', 50, TRUE)
+	playsound(user, '../assets/sound/machines/ding.ogg', 50, TRUE)
 	return FIRELOSS
 
 //Captain
@@ -127,7 +127,7 @@
 /obj/item/clothing/head/caphat/beret
 	name = "captain's beret"
 	desc = "For the Captains known for their sense of fashion."
-	icon = 'icons/map_icons/clothing/head/_head.dmi'
+	icon = '../assets/icons/map_icons/clothing/head/_head.dmi'
 	icon_state = "/obj/item/clothing/head/caphat/beret"
 	post_init_icon_state = "beret_badge"
 	greyscale_config = /datum/greyscale_config/beret_badge
@@ -334,7 +334,7 @@
 		return
 
 	to_chat(user, span_notice("You install [item] into the [thtotext(contents.len)] slot of [src]."))
-	playsound(src, 'sound/machines/click.ogg', 30, TRUE)
+	playsound(src, '../assets/sound/machines/click.ogg', 30, TRUE)
 	set_phrase(desired_phrase,item)
 
 	return TRUE
@@ -388,7 +388,7 @@
 	name = "beret"
 	desc = "A beret, a mime's favorite headwear."
 	dog_fashion = /datum/dog_fashion/head/beret
-	icon = 'icons/map_icons/clothing/head/beret.dmi'
+	icon = '../assets/icons/map_icons/clothing/head/beret.dmi'
 	icon_state = "/obj/item/clothing/head/beret"
 	post_init_icon_state = "beret"
 	greyscale_config = /datum/greyscale_config/beret
@@ -441,7 +441,7 @@
 	name = "sturdy shako"
 	desc = "Wearing this makes you want to shout \"Down and give me twenty!\" at someone."
 	icon_state = "hosshako"
-	worn_icon = 'icons/mob/large-worn-icons/64x64/head.dmi'
+	worn_icon = '../assets/icons/mob/large-worn-icons/64x64/head.dmi'
 	worn_x_dimension = 64
 	worn_y_dimension = 64
 	custom_materials = list(/datum/material/alloy/plasteel = SHEET_MATERIAL_AMOUNT * 2, /datum/material/gold = SHEET_MATERIAL_AMOUNT * 2)
@@ -449,7 +449,7 @@
 /obj/item/clothing/head/hats/hos/beret
 	name = "head of security's beret"
 	desc = "A robust beret for the Head of Security, for looking stylish while not sacrificing protection."
-	icon = 'icons/map_icons/clothing/head/_head.dmi'
+	icon = '../assets/icons/map_icons/clothing/head/_head.dmi'
 	icon_state = "/obj/item/clothing/head/hats/hos/beret"
 	post_init_icon_state = "beret_badge"
 	greyscale_config = /datum/greyscale_config/beret_badge

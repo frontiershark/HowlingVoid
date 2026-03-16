@@ -314,13 +314,13 @@
 				return
 
 	if(((pack.order_flags & ORDER_GOODY) && (!(pack.order_flags & ORDER_DEPARTMENTAL_GOODY) || uses_cargo_budget)) && (!self_paid || !requestonly))
-		playsound(src, 'sound/machines/buzz/buzz-sigh.ogg', 50, FALSE)
+		playsound(src, '../assets/sound/machines/buzz/buzz-sigh.ogg', 50, FALSE)
 		say("ERROR: Small crates may only be purchased by private accounts.")
 		return
 
 	var/similar_count = SSshuttle.supply.get_order_count(pack)
 	if(similar_count == OVER_ORDER_LIMIT)
-		playsound(src, 'sound/machines/buzz/buzz-sigh.ogg', 50, FALSE)
+		playsound(src, '../assets/sound/machines/buzz/buzz-sigh.ogg', 50, FALSE)
 		say("ERROR: No more then [CARGO_MAX_ORDER] of any pack may be ordered at once")
 		return
 
@@ -328,7 +328,7 @@
 		account = personal_department
 		// NOVA EDIT ADDITION START
 		if ((uses_cargo_budget || !requestonly) && ((pack.order_flags & ORDER_COMPANY) == ORDER_COMPANY))
-			playsound(src, 'sound/machines/buzz/buzz-sigh.ogg', 50, FALSE)
+			playsound(src, '../assets/sound/machines/buzz/buzz-sigh.ogg', 50, FALSE)
 			say("ERROR: Small crates may only be purchased by private accounts.")
 			return
 		// NOVA EDIT ADDITION END

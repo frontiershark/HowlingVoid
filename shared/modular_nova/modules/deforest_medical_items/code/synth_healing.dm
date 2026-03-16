@@ -14,7 +14,7 @@
 	max_amount = 2
 	amount = 2
 	merge_type = /obj/item/stack/medical/wound_recovery/robofoam
-	treatment_sound = 'sound/effects/spray.ogg'
+	treatment_sound = '../assets/sound/effects/spray.ogg'
 	causes_pain = FALSE
 
 /obj/item/stack/medical/wound_recovery/robofoam/examine(mob/user)
@@ -48,7 +48,7 @@
 	max_amount = 2
 	amount = 2
 	merge_type = /obj/item/stack/medical/wound_recovery/robofoam_super
-	treatment_sound = 'sound/effects/spray.ogg'
+	treatment_sound = '../assets/sound/effects/spray.ogg'
 	causes_pain = FALSE
 
 /obj/item/stack/medical/wound_recovery/robofoam_super/examine(mob/user)

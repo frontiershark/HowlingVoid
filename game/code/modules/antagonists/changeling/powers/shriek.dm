@@ -16,7 +16,7 @@
 	if(user.movement_type & VENTCRAWLING)
 		user.balloon_alert(user, "can't shriek in pipes!")
 		return FALSE
-	playsound(user, 'sound/effects/screech.ogg', 100)
+	playsound(user, '../assets/sound/effects/screech.ogg', 100)
 	for(var/mob/living/living in get_hearers_in_view(4, user))
 		if(IS_CHANGELING(living) || !living.soundbang_act(SOUNDBANG_MASSIVE, stun_pwr = 0, damage_pwr = 0, deafen_pwr = 1 MINUTES, ignore_deafness = TRUE, send_sound = FALSE))
 			continue

@@ -5,7 +5,7 @@
 /mob/living/basic/voidwalker
 	name = "voidwalker"
 	desc = "A glass-like entity from the void between stars. You probably shouldn't stare."
-	icon = 'icons/mob/simple/voidwalker.dmi'
+	icon = '../assets/icons/mob/simple/voidwalker.dmi'
 	icon_state = "voidwalker"
 
 	mob_biotypes = MOB_SPECIAL
@@ -24,7 +24,7 @@
 
 	melee_damage_type = OXY
 
-	attack_sound = 'sound/items/weapons/shrink_hit.ogg'
+	attack_sound = '../assets/sound/items/weapons/shrink_hit.ogg'
 	attack_vis_effect = ATTACK_EFFECT_VOID
 
 	faction = list(FACTION_CARP)
@@ -309,7 +309,7 @@
 
 	if(!check_wall_validity(our_wall, src, silent = FALSE))
 		return COMPONENT_CANCEL_ATTACK_CHAIN
-	playsound(our_wall, 'sound/effects/magic/blind.ogg', 100, TRUE)
+	playsound(our_wall, '../assets/sound/effects/magic/blind.ogg', 100, TRUE)
 	new /obj/effect/temp_visual/transmute_tile_flash(our_wall)
 
 	var/obj/particles = new /obj/effect/abstract/particle_holder (our_wall, /particles/void_wall)
@@ -329,7 +329,7 @@
 		if(check_wall_validity(adjacent_wall))
 			target_walls += adjacent_wall
 
-	playsound(our_wall, 'sound/effects/magic/blind.ogg', 100, TRUE)
+	playsound(our_wall, '../assets/sound/effects/magic/blind.ogg', 100, TRUE)
 
 	for(var/turf/closed/wall/targeted_wall in target_walls)
 		new /obj/effect/temp_visual/transmute_tile_flash(targeted_wall)

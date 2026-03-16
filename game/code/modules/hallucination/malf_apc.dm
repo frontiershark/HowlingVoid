@@ -3,7 +3,7 @@
 	hallucination_tier = HALLUCINATION_TIER_COMMON
 
 	/// APC icon to use for the hallucination
-	var/apc_icon = 'icons/obj/machines/wallmounts.dmi'
+	var/apc_icon = '../assets/icons/obj/machines/wallmounts.dmi'
 	/// APC icon state to use for the hallucination
 	var/apc_icon_state = "apcemag"
 

@@ -3,7 +3,7 @@
 /obj/structure/closet/supplypod
 	name = "supply pod" //Names and descriptions are normally created with the set_style() proc during initialization, but we have these default values here as a failsafe
 	desc = "A Nanotrasen supply drop pod."
-	icon = 'icons/obj/supplypods.dmi'
+	icon = '../assets/icons/obj/supplypods.dmi'
 	icon_state = "pod" //This is a common base sprite shared by a number of pods
 	pixel_x = SUPPLYPOD_X_OFFSET //2x2 sprite
 	layer = BELOW_OBJ_LAYER //So that the crate inside doesn't appear underneath
@@ -41,7 +41,7 @@
 	var/list/reverse_dropoff_coords //Turf that the reverse pod will drop off its newly-acquired cargo to
 	var/create_sparks = TRUE // If true, the pod will create sparks before being deleted.
 	var/fallingSoundLength = 11
-	var/fallingSound = 'sound/items/weapons/mortar_long_whistle.ogg'//Admin sound to play before the pod lands
+	var/fallingSound = '../assets/sound/items/weapons/mortar_long_whistle.ogg'//Admin sound to play before the pod lands
 	var/landingSound //Admin sound to play when the pod lands
 	var/openingSound //Admin sound to play when the pod opens
 	var/leavingSound //Admin sound to play when the pod leaves
@@ -103,7 +103,7 @@
 	delays = list(POD_TRANSIT = 25, POD_FALLING = 4, POD_OPENING = 30, POD_LEAVING = 30)
 	reversing = TRUE
 	stay_after_drop = TRUE
-	leavingSound = 'sound/effects/podwoosh.ogg'
+	leavingSound = '../assets/sound/effects/podwoosh.ogg'
 	reverse_option_list = list("Mobs"=TRUE,"Objects"=FALSE,"Anchored"=FALSE,"Underfloor"=FALSE,"Wallmounted"=FALSE,"Floors"=FALSE,"Walls"=FALSE, "Mecha"=FALSE)
 
 /obj/structure/closet/supplypod/centcompod
@@ -604,7 +604,7 @@
 //------------------------------------TEMPORARY_VISUAL-------------------------------------//
 /obj/effect/supplypod_smoke //Falling pod smoke
 	name = ""
-	icon = 'icons/obj/supplypods_32x32.dmi'
+	icon = '../assets/icons/obj/supplypods_32x32.dmi'
 	icon_state = "smoke"
 	desc = ""
 	layer = PROJECTILE_HIT_THRESHHOLD_LAYER
@@ -613,7 +613,7 @@
 
 /obj/effect/engineglow //Falling pod smoke
 	name = ""
-	icon = 'icons/obj/supplypods.dmi'
+	icon = '../assets/icons/obj/supplypods.dmi'
 	icon_state = "pod_glow_green"
 	desc = ""
 	layer = GASFIRE_LAYER
@@ -632,7 +632,7 @@
 /obj/effect/supplypod_rubble
 	name = "debris"
 	desc = "A small crater of rubble. Closer inspection reveals the debris to be made primarily of space-grade metal fragments. You're pretty sure that this will disperse before too long."
-	icon = 'icons/obj/supplypods.dmi'
+	icon = '../assets/icons/obj/supplypods.dmi'
 	layer = PROJECTILE_HIT_THRESHHOLD_LAYER // We want this to go right below the layer of supplypods and supplypod_rubble's forground.
 	icon_state = "rubble_bg"
 	anchored = TRUE
@@ -641,7 +641,7 @@
 	var/verticle_offset = 0
 
 /obj/effect/supplypod_rubble/proc/get_foreground(obj/structure/closet/supplypod/pod)
-	var/mutable_appearance/rubble_overlay = mutable_appearance('icons/obj/supplypods.dmi', foreground)
+	var/mutable_appearance/rubble_overlay = mutable_appearance('../assets/icons/obj/supplypods.dmi', foreground)
 	rubble_overlay.appearance_flags = KEEP_APART|RESET_TRANSFORM
 	rubble_overlay.transform = matrix().Translate(SUPPLYPOD_X_OFFSET - pod.pixel_x, verticle_offset)
 	return rubble_overlay
@@ -667,7 +667,7 @@
 /obj/effect/pod_landingzone_effect
 	name = ""
 	desc = ""
-	icon = 'icons/obj/supplypods_32x32.dmi'
+	icon = '../assets/icons/obj/supplypods_32x32.dmi'
 	icon_state = "LZ_Slider"
 	layer = PROJECTILE_HIT_THRESHHOLD_LAYER
 
@@ -686,7 +686,7 @@
 /obj/effect/pod_landingzone //This is the object that forceMoves the supplypod to its location
 	name = "Landing Zone Indicator"
 	desc = "A holographic projection designating the landing zone of something. It's probably best to stand back."
-	icon = 'icons/obj/supplypods_32x32.dmi'
+	icon = '../assets/icons/obj/supplypods_32x32.dmi'
 	icon_state = "LZ"
 	layer = PROJECTILE_HIT_THRESHHOLD_LAYER
 	light_range = 2
@@ -730,7 +730,7 @@
 			target_living.Stun(pod.delays[POD_TRANSIT]+10, ignore_canstun = TRUE)//you ain't goin nowhere, kid.
 	if (arrival_time < pod.fallingSoundLength)
 		pod.fallingSoundLength = 3 //The default falling sound is a little long, so if the landing time is shorter than the default falling sound, use a special, shorter default falling sound
-		pod.fallingSound = 'sound/items/weapons/mortar_whistle.ogg'
+		pod.fallingSound = '../assets/sound/items/weapons/mortar_whistle.ogg'
 	var/soundStartTime = pod.delays[POD_TRANSIT] - pod.fallingSoundLength + pod.delays[POD_FALLING]
 	if (soundStartTime < 0)
 		soundStartTime = 1

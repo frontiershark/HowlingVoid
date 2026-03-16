@@ -38,40 +38,40 @@
 
 /datum/hallucination/fake_sound/normal/airlock
 	volume = 30
-	sound_type = 'sound/machines/airlock/airlock.ogg'
+	sound_type = '../assets/sound/machines/airlock/airlock.ogg'
 
 /datum/hallucination/fake_sound/normal/airlock_pry
 	volume = 100
-	sound_type = 'sound/machines/airlock/airlock_alien_prying.ogg'
+	sound_type = '../assets/sound/machines/airlock/airlock_alien_prying.ogg'
 
 /datum/hallucination/fake_sound/normal/airlock_pry/play_fake_sound(turf/source, sound_to_play)
 	. = ..()
-	queue_fake_sound(source, 'sound/machines/airlock/airlockforced.ogg', 50, TRUE, delay = 5 SECONDS)
+	queue_fake_sound(source, '../assets/sound/machines/airlock/airlockforced.ogg', 50, TRUE, delay = 5 SECONDS)
 
 /datum/hallucination/fake_sound/normal/console
 	volume = 25
-	sound_type = 'sound/machines/terminal/terminal_prompt.ogg'
+	sound_type = '../assets/sound/machines/terminal/terminal_prompt.ogg'
 
 /datum/hallucination/fake_sound/normal/boom
-	sound_type = list('sound/effects/explosion/explosion1.ogg', 'sound/effects/explosion/explosion2.ogg')
+	sound_type = list('../assets/sound/effects/explosion/explosion1.ogg', '../assets/sound/effects/explosion/explosion2.ogg')
 
 /datum/hallucination/fake_sound/normal/distant_boom
-	sound_type = 'sound/effects/explosion/explosionfar.ogg'
+	sound_type = '../assets/sound/effects/explosion/explosionfar.ogg'
 
 /datum/hallucination/fake_sound/normal/glass
-	sound_type = list('sound/effects/glass/glassbr1.ogg', 'sound/effects/glass/glassbr2.ogg', 'sound/effects/glass/glassbr3.ogg')
+	sound_type = list('../assets/sound/effects/glass/glassbr1.ogg', '../assets/sound/effects/glass/glassbr2.ogg', '../assets/sound/effects/glass/glassbr3.ogg')
 
 /datum/hallucination/fake_sound/normal/alarm
 	volume = 70
-	sound_type = 'sound/announcer/alarm/nuke_alarm.ogg'
+	sound_type = '../assets/sound/announcer/alarm/nuke_alarm.ogg'
 
 /datum/hallucination/fake_sound/normal/beepsky
 	volume = 35
-	sound_type = 'sound/mobs/non-humanoids/beepsky/freeze.ogg'
+	sound_type = '../assets/sound/mobs/non-humanoids/beepsky/freeze.ogg'
 
 /datum/hallucination/fake_sound/normal/mech
 	volume = 40
-	sound_type = 'sound/vehicles/mecha/mechstep.ogg'
+	sound_type = '../assets/sound/vehicles/mecha/mechstep.ogg'
 	/// The turf the mech started walking from.
 	var/turf/mech_source
 	/// What dir is the mech walking?
@@ -110,15 +110,15 @@
 		addtimer(CALLBACK(src, PROC_REF(mech_walk)), 1 SECONDS)
 
 /datum/hallucination/fake_sound/normal/wall_deconstruction
-	sound_type = 'sound/items/tools/welder.ogg'
+	sound_type = '../assets/sound/items/tools/welder.ogg'
 
 /datum/hallucination/fake_sound/normal/wall_deconstruction/play_fake_sound(turf/source, sound_to_play)
 	. = ..()
-	queue_fake_sound(source, 'sound/items/tools/welder2.ogg', delay = 10.5 SECONDS)
-	queue_fake_sound(source, 'sound/items/tools/ratchet.ogg', delay = 12 SECONDS)
+	queue_fake_sound(source, '../assets/sound/items/tools/welder2.ogg', delay = 10.5 SECONDS)
+	queue_fake_sound(source, '../assets/sound/items/tools/ratchet.ogg', delay = 12 SECONDS)
 
 /datum/hallucination/fake_sound/normal/door_hacking
-	sound_type = 'sound/items/tools/screwdriver.ogg'
+	sound_type = '../assets/sound/items/tools/screwdriver.ogg'
 	volume = 30
 
 /datum/hallucination/fake_sound/normal/door_hacking/play_fake_sound(turf/source, sound_to_play)
@@ -128,29 +128,29 @@
 
 	var/hacking_time = rand(4 SECONDS, 8 SECONDS)
 	// Multitool sound.
-	queue_fake_sound(source, 'sound/items/weapons/empty.ogg', delay = 0.8 SECONDS)
+	queue_fake_sound(source, '../assets/sound/items/weapons/empty.ogg', delay = 0.8 SECONDS)
 	if(hacking_time > 4.5 SECONDS)
 		// Another multitool sound if the hacking time is long.
-		queue_fake_sound(source, 'sound/items/weapons/empty.ogg', delay = 3 SECONDS)
+		queue_fake_sound(source, '../assets/sound/items/weapons/empty.ogg', delay = 3 SECONDS)
 		if(prob(50))
 			// Bonus multitool sound, rapidly after the last.
-			queue_fake_sound(source, 'sound/items/weapons/empty.ogg', delay = 3.5 SECONDS)
+			queue_fake_sound(source, '../assets/sound/items/weapons/empty.ogg', delay = 3.5 SECONDS)
 
 	if(hacking_time > 5.5 SECONDS)
 		// A final multitool sound if the hacking time is very long.
-		queue_fake_sound(source, 'sound/items/weapons/empty.ogg', delay = 5 SECONDS)
+		queue_fake_sound(source, '../assets/sound/items/weapons/empty.ogg', delay = 5 SECONDS)
 
 	// Crowbarring it open.
-	queue_fake_sound(source, 'sound/machines/airlock/airlockforced.ogg', delay = hacking_time)
+	queue_fake_sound(source, '../assets/sound/machines/airlock/airlockforced.ogg', delay = hacking_time)
 
 /datum/hallucination/fake_sound/normal/steam
 	volume = 75
-	sound_type = 'sound/machines/steam_hiss.ogg'
+	sound_type = '../assets/sound/machines/steam_hiss.ogg'
 
 /datum/hallucination/fake_sound/normal/flash
 	random_hallucination_weight = 2 // "it's revs"
 	volume = 90
-	sound_type = 'sound/items/weapons/flash.ogg'
+	sound_type = '../assets/sound/items/weapons/flash.ogg'
 
 /datum/hallucination/fake_sound/normal/ringtone
 	volume = 50
@@ -159,11 +159,11 @@
 	. = ..()
 	if(HAS_TRAIT(SSstation, STATION_TRAIT_PDA_GLITCHED))
 		sound_type = pick(
-			'sound/machines/beep/twobeep_voice1.ogg',
-			'sound/machines/beep/twobeep_voice2.ogg',
+			'../assets/sound/machines/beep/twobeep_voice1.ogg',
+			'../assets/sound/machines/beep/twobeep_voice2.ogg',
 		)
 	else
-		sound_type = 'sound/machines/beep/twobeep_high.ogg'
+		sound_type = '../assets/sound/machines/beep/twobeep_high.ogg'
 
 /datum/hallucination/fake_sound/normal/ringtone/play_fake_sound(turf/source, sound_to_play = sound_type)
 	if(prob(33))
@@ -193,24 +193,24 @@
 	sound_vary = FALSE
 	no_source = TRUE
 	sound_type = list(
-		'sound/music/antag/bloodcult/bloodcult_gain.ogg',
-		'sound/music/antag/clockcultalr.ogg',
-		'sound/music/antag/heretic/heretic_gain.ogg',
-		'sound/music/antag/ling_alert.ogg',
-		'sound/music/antag/malf.ogg',
-		'sound/music/antag/ops.ogg',
-		'sound/music/antag/spy.ogg',
-		'sound/music/antag/traitor/tatoralert.ogg',
+		'../assets/sound/music/antag/bloodcult/bloodcult_gain.ogg',
+		'../assets/sound/music/antag/clockcultalr.ogg',
+		'../assets/sound/music/antag/heretic/heretic_gain.ogg',
+		'../assets/sound/music/antag/ling_alert.ogg',
+		'../assets/sound/music/antag/malf.ogg',
+		'../assets/sound/music/antag/ops.ogg',
+		'../assets/sound/music/antag/spy.ogg',
+		'../assets/sound/music/antag/traitor/tatoralert.ogg',
 	)
 
 /datum/hallucination/fake_sound/weird/chimp_event
 	volume = 90
 	sound_vary = FALSE
 	no_source = TRUE
-	sound_type = 'sound/music/antag/monkey.ogg'
+	sound_type = '../assets/sound/music/antag/monkey.ogg'
 
 /datum/hallucination/fake_sound/weird/colossus
-	sound_type = 'sound/effects/magic/clockwork/invoke_general.ogg'
+	sound_type = '../assets/sound/effects/magic/clockwork/invoke_general.ogg'
 
 /datum/hallucination/fake_sound/weird/creepy
 	hallucination_tier = HALLUCINATION_TIER_COMMON
@@ -224,40 +224,40 @@
 	volume = 40
 	sound_vary = FALSE
 	no_source = TRUE
-	sound_type = 'sound/effects/magic/curse.ogg'
+	sound_type = '../assets/sound/effects/magic/curse.ogg'
 
 /datum/hallucination/fake_sound/weird/game_over
 	sound_vary = FALSE
-	sound_type = 'sound/machines/compiler/compiler-failure.ogg'
+	sound_type = '../assets/sound/machines/compiler/compiler-failure.ogg'
 	hallucination_tier = HALLUCINATION_TIER_RARE
 
 /datum/hallucination/fake_sound/weird/hallelujah
 	sound_vary = FALSE
-	sound_type = 'sound/effects/pray_chaplain.ogg'
+	sound_type = '../assets/sound/effects/pray_chaplain.ogg'
 
 /datum/hallucination/fake_sound/weird/highlander
 	sound_vary = FALSE
 	no_source = TRUE
-	sound_type = 'sound/misc/highlander.ogg'
+	sound_type = '../assets/sound/misc/highlander.ogg'
 
 /datum/hallucination/fake_sound/weird/hyperspace
 	sound_vary = FALSE
 	no_source = TRUE
-	sound_type = 'sound/runtime/hyperspace/hyperspace_begin.ogg'
+	sound_type = '../assets/sound/runtime/hyperspace/hyperspace_begin.ogg'
 	hallucination_tier = HALLUCINATION_TIER_COMMON
 
 /datum/hallucination/fake_sound/weird/laugher
 	hallucination_tier = HALLUCINATION_TIER_COMMON
 	sound_type = list(
-		'sound/mobs/humanoids/human/laugh/womanlaugh.ogg',
-		'sound/mobs/humanoids/human/laugh/manlaugh1.ogg',
-		'sound/mobs/humanoids/human/laugh/manlaugh2.ogg',
+		'../assets/sound/mobs/humanoids/human/laugh/womanlaugh.ogg',
+		'../assets/sound/mobs/humanoids/human/laugh/manlaugh1.ogg',
+		'../assets/sound/mobs/humanoids/human/laugh/manlaugh2.ogg',
 	)
 
 /datum/hallucination/fake_sound/weird/phone
 	volume = 15
 	sound_vary = FALSE
-	sound_type = 'sound/items/weapons/ring.ogg'
+	sound_type = '../assets/sound/items/weapons/ring.ogg'
 	hallucination_tier = HALLUCINATION_TIER_RARE
 
 /datum/hallucination/fake_sound/weird/phone/play_fake_sound(turf/source, sound_to_play)
@@ -269,27 +269,27 @@
 /datum/hallucination/fake_sound/weird/spell
 	hallucination_tier = HALLUCINATION_TIER_RARE
 	sound_type = list(
-		'sound/effects/magic/disintegrate.ogg',
-		'sound/effects/magic/ethereal_enter.ogg',
-		'sound/effects/magic/ethereal_exit.ogg',
-		'sound/effects/magic/fireball.ogg',
-		'sound/effects/magic/forcewall.ogg',
-		'sound/effects/magic/teleport_app.ogg',
-		'sound/effects/magic/teleport_diss.ogg',
+		'../assets/sound/effects/magic/disintegrate.ogg',
+		'../assets/sound/effects/magic/ethereal_enter.ogg',
+		'../assets/sound/effects/magic/ethereal_exit.ogg',
+		'../assets/sound/effects/magic/fireball.ogg',
+		'../assets/sound/effects/magic/forcewall.ogg',
+		'../assets/sound/effects/magic/teleport_app.ogg',
+		'../assets/sound/effects/magic/teleport_diss.ogg',
 	)
 
 /datum/hallucination/fake_sound/weird/spell/just_jaunt // A few antags use jaunts, so this sound specifically is fun to isolate
 	hallucination_tier = HALLUCINATION_TIER_RARE
-	sound_type = 'sound/effects/magic/ethereal_enter.ogg'
+	sound_type = '../assets/sound/effects/magic/ethereal_enter.ogg'
 
 /datum/hallucination/fake_sound/weird/summon_sound // Heretic circle sound, notably
 	volume = 75
 	hallucination_tier = HALLUCINATION_TIER_RARE
-	sound_type = 'sound/effects/magic/castsummon.ogg'
+	sound_type = '../assets/sound/effects/magic/castsummon.ogg'
 
 /datum/hallucination/fake_sound/weird/tesloose
 	volume = 35
-	sound_type = 'sound/effects/magic/lightningbolt.ogg'
+	sound_type = '../assets/sound/effects/magic/lightningbolt.ogg'
 	hallucination_tier = HALLUCINATION_TIER_RARE
 
 /datum/hallucination/fake_sound/weird/tesloose/play_fake_sound(turf/source, sound_to_play)
@@ -302,24 +302,24 @@
 	volume = 25
 	hallucination_tier = HALLUCINATION_TIER_RARE
 	sound_type = list(
-		'sound/mobs/non-humanoids/hiss/lowHiss1.ogg',
-		'sound/mobs/non-humanoids/hiss/lowHiss2.ogg',
-		'sound/mobs/non-humanoids/hiss/lowHiss3.ogg',
-		'sound/mobs/non-humanoids/hiss/lowHiss4.ogg',
-		'sound/mobs/non-humanoids/hiss/hiss1.ogg',
-		'sound/mobs/non-humanoids/hiss/hiss2.ogg',
-		'sound/mobs/non-humanoids/hiss/hiss3.ogg',
-		'sound/mobs/non-humanoids/hiss/hiss4.ogg',
+		'../assets/sound/mobs/non-humanoids/hiss/lowHiss1.ogg',
+		'../assets/sound/mobs/non-humanoids/hiss/lowHiss2.ogg',
+		'../assets/sound/mobs/non-humanoids/hiss/lowHiss3.ogg',
+		'../assets/sound/mobs/non-humanoids/hiss/lowHiss4.ogg',
+		'../assets/sound/mobs/non-humanoids/hiss/hiss1.ogg',
+		'../assets/sound/mobs/non-humanoids/hiss/hiss2.ogg',
+		'../assets/sound/mobs/non-humanoids/hiss/hiss3.ogg',
+		'../assets/sound/mobs/non-humanoids/hiss/hiss4.ogg',
 	)
 
 /datum/hallucination/fake_sound/weird/radio_static
 	volume = 75
 	no_source = TRUE
 	sound_vary = FALSE
-	sound_type = 'sound/effects/hallucinations/radio_static.ogg'
+	sound_type = '../assets/sound/effects/hallucinations/radio_static.ogg'
 
 /datum/hallucination/fake_sound/weird/ice_crack
 	random_hallucination_weight = 0
 	volume = 100
 	no_source = TRUE
-	sound_type = 'sound/effects/ice_shovel.ogg'
+	sound_type = '../assets/sound/effects/ice_shovel.ogg'

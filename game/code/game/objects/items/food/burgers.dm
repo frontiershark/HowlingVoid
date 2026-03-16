@@ -1,5 +1,5 @@
 /obj/item/food/burger
-	icon = 'icons/obj/food/burgerbread.dmi'
+	icon = '../assets/icons/obj/food/burgerbread.dmi'
 	icon_state = "hburger"
 	inhand_icon_state = "burger"
 	bite_consumption = 3
@@ -33,7 +33,7 @@
 	if(!prob(1))
 		return
 	new/obj/effect/particle_effect/fluid/smoke(get_turf(src))
-	playsound(src, 'sound/effects/smoke.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/effects/smoke.ogg', 50, TRUE)
 	visible_message(span_warning("Oh, ye gods! [src] is ruined! But what if...?"))
 	name = "steamed ham"
 	desc = pick("Ahh, Head of Personnel, welcome. I hope you're prepared for an unforgettable luncheon!",
@@ -248,7 +248,7 @@
 	switch(paranormal_activity)
 		if(97 to 100)
 			audible_message("[src] rattles a length of chain.")
-			playsound(loc, 'sound/misc/chain_rattling.ogg', 300, TRUE)
+			playsound(loc, '../assets/sound/misc/chain_rattling.ogg', 300, TRUE)
 		if(91 to 96)
 			say(pick("OoOoOoo.", "OoooOOooOoo!!"))
 		if(84 to 90)
@@ -264,7 +264,7 @@
 		if(61)
 			visible_message("[src] spews out a glob of ectoplasm!")
 			new /obj/effect/decal/cleanable/greenglow/ecto(loc)
-			playsound(loc, 'sound/effects/splat.ogg', 200, TRUE)
+			playsound(loc, '../assets/sound/effects/splat.ogg', 200, TRUE)
 
 /obj/item/food/burger/ghost/Destroy()
 	STOP_PROCESSING(SSobj, src)

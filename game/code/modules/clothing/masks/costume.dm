@@ -57,7 +57,7 @@
 	flags_inv = HIDEFACE|HIDEFACIALHAIR
 	custom_price = PAYCHECK_CREW
 	greyscale_colors = "#EEEEEE#AA0000"
-	icon = 'icons/map_icons/clothing/mask.dmi'
+	icon = '../assets/icons/map_icons/clothing/mask.dmi'
 	icon_state = "/obj/item/clothing/mask/kitsune"
 	post_init_icon_state = "kitsune"
 	greyscale_config = /datum/greyscale_config/kitsune
@@ -86,7 +86,7 @@
 	visor_flags = MASKINTERNALS
 	greyscale_colors = COLOR_VERY_LIGHT_GRAY
 	alternate_worn_layer = BENEATH_HAIR_LAYER
-	icon = 'icons/map_icons/clothing/mask.dmi'
+	icon = '../assets/icons/map_icons/clothing/mask.dmi'
 	icon_state = "/obj/item/clothing/mask/rebellion"
 	post_init_icon_state = "rebellion_mask"
 	greyscale_config = /datum/greyscale_config/rebellion_mask

@@ -7,11 +7,11 @@
 /obj/item/stock_parts/power_store/cell
 	name = "power cell"
 	desc = "A rechargeable electrochemical power cell."
-	icon = 'icons/obj/machines/cell_charger.dmi'
+	icon = '../assets/icons/obj/machines/cell_charger.dmi'
 	icon_state = "cell"
 	inhand_icon_state = "cell"
-	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/devices_righthand.dmi'
 	force = 5
 	throwforce = 5
 	throw_speed = 2
@@ -172,7 +172,7 @@
 /obj/item/stock_parts/power_store/cell/infinite/abductor
 	name = "void core"
 	desc = "An alien power cell that produces energy seemingly out of nowhere."
-	icon = 'icons/obj/antags/abductor.dmi'
+	icon = '../assets/icons/obj/antags/abductor.dmi'
 	icon_state = "cell"
 	maxcharge = STANDARD_CELL_CHARGE * 50
 	ratingdesc = FALSE
@@ -184,7 +184,7 @@
 /obj/item/stock_parts/power_store/cell/potato
 	name = "potato battery"
 	desc = "A rechargeable starch based power cell."
-	icon = 'icons/obj/service/hydroponics/harvest.dmi'
+	icon = '../assets/icons/obj/service/hydroponics/harvest.dmi'
 	icon_state = "potato"
 	maxcharge = STANDARD_CELL_CHARGE * 0.3
 	emp_damage_modifier = 0.5 //It's biological, so
@@ -217,7 +217,7 @@
 /obj/item/stock_parts/power_store/cell/emproof/slime
 	name = "EMP-proof slime core"
 	desc = "A yellow slime core infused with plasma. Its organic nature makes it immune to EMPs."
-	icon = 'icons/mob/simple/slimes.dmi'
+	icon = '../assets/icons/mob/simple/slimes.dmi'
 	icon_state = "yellow-core"
 	custom_materials = null
 	maxcharge = STANDARD_CELL_CHARGE * 5

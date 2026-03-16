@@ -3,14 +3,14 @@
 /obj/item/grapple_gun
 	name = "grapple gun"
 	desc = "A small specialised airgun capable of launching a climbing hook into a distant rock face and pulling the user toward it via motorised zip-line. A handy tool for traversing the craggy landscape of lavaland!"
-	icon = 'icons/obj/mining.dmi'
+	icon = '../assets/icons/obj/mining.dmi'
 	icon_state = "grapple_gun"
-	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/guns_righthand.dmi'
 	inhand_icon_state = "gun"
 	item_flags = NOBLUDGEON
 	///overlay when the hook is retracted
-	var/static/mutable_appearance/hook_overlay = mutable_appearance(icon = 'icons/obj/mining.dmi', icon_state = "grapple_gun_hooked")
+	var/static/mutable_appearance/hook_overlay = mutable_appearance(icon = '../assets/icons/obj/mining.dmi', icon_state = "grapple_gun_hooked")
 	///is the hook retracted
 	var/hooked = TRUE
 	///addtimer id for launching the user
@@ -64,7 +64,7 @@
 	if(attacked_atom.IsReachableBy(user))
 		return ITEM_INTERACT_BLOCKING
 
-	var/atom/bullet = fire_projectile(/obj/projectile/grapple_hook, attacked_atom, 'sound/items/weapons/zipline_fire.ogg')
+	var/atom/bullet = fire_projectile(/obj/projectile/grapple_hook, attacked_atom, '../assets/sound/items/weapons/zipline_fire.ogg')
 	zipline = user.Beam(bullet, icon_state = "zipline_hook", maxdistance = 9, layer = BELOW_MOB_LAYER)
 	hooked = FALSE
 	RegisterSignal(bullet, COMSIG_PROJECTILE_SELF_ON_HIT, PROC_REF(on_grapple_hit))
@@ -140,7 +140,7 @@
 		return
 
 	victim.apply_damage(DAMAGE_ON_IMPACT)
-	playsound(victim, 'sound/effects/hit_kick.ogg', 50)
+	playsound(victim, '../assets/sound/effects/hit_kick.ogg', 50)
 	var/turf/target_turf = get_ranged_target_turf(victim, source.dir, 3)
 	if(isnull(target_turf))
 		return
@@ -181,6 +181,6 @@
 	range = 9
 	speed = 10
 	can_hit_turfs = TRUE
-	hitsound = 'sound/items/weapons/zipline_hit.ogg'
+	hitsound = '../assets/sound/items/weapons/zipline_hit.ogg'
 
 #undef DAMAGE_ON_IMPACT

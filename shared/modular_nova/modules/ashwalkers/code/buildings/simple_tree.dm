@@ -369,7 +369,7 @@
 
 /// applying fertilizer to the tree; who did it, with what, how long, how much use, how much give, and whether you've forced it (bypasses the usage)
 /obj/structure/simple_tree/proc/do_fertilizer(mob/user, obj/item/tool, use_time = 2 SECONDS, use_amount = 1, given_amount = 1, forced_fertilizer = FALSE)
-	playsound(src, 'sound/effects/shovel_dig.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/effects/shovel_dig.ogg', 50, TRUE)
 	if(!forced_fertilizer)
 		if(!tool.use(use_amount))
 			to_chat(user, span_warning("You decide against using [tool] on [src]!"))
@@ -379,7 +379,7 @@
 		user.mind?.adjust_experience(/datum/skill/primitive, 5)
 
 	adjust_health(5)
-	playsound(src, 'sound/effects/shovel_dig.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/effects/shovel_dig.ogg', 50, TRUE)
 	fertilizer_amount += given_amount
 
 /// attempts to spawn a log, or damages it if it cannot

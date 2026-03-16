@@ -1,5 +1,5 @@
 /obj/structure/girder
-	icon = 'icons/obj/smooth_structures/girder.dmi'
+	icon = '../assets/icons/obj/smooth_structures/girder.dmi'
 	name = "girder"
 	base_icon_state = "girder"
 	icon_state = "girder-0"
@@ -167,7 +167,7 @@
 
 /obj/structure/girder/displaced
 	name = "displaced girder"
-	icon = 'icons/obj/structures.dmi'
+	icon = '../assets/icons/obj/structures.dmi'
 	icon_state = "displaced"
 	anchored = FALSE
 	state = GIRDER_DISPLACED
@@ -179,7 +179,7 @@
 
 /obj/structure/girder/reinforced
 	name = "reinforced girder"
-	icon = 'icons/obj/smooth_structures/reinforced_girder.dmi'
+	icon = '../assets/icons/obj/smooth_structures/reinforced_girder.dmi'
 	icon_state = "reinforced-0"
 	base_icon_state = "reinforced"
 	state = GIRDER_REINF
@@ -189,7 +189,7 @@
 /obj/structure/girder/tram
 	name = "tram girder"
 	desc = "Titanium framework to construct tram walls. Can be plated with <b>titanium glass</b> or other wall materials."
-	icon = 'icons/obj/structures.dmi'
+	icon = '../assets/icons/obj/structures.dmi'
 	icon_state = "tram"
 	state = GIRDER_TRAM
 	obj_flags = CAN_BE_HIT | BLOCK_Z_OUT_DOWN
@@ -206,7 +206,7 @@
 /obj/structure/girder/cult
 	name = "runed girder"
 	desc = "Framework made of a strange and shockingly cold metal. It doesn't seem to have any bolts."
-	icon = 'icons/obj/antags/cult/structures.dmi'
+	icon = '../assets/icons/obj/antags/cult/structures.dmi'
 	icon_state= "cultgirder"
 	can_displace = FALSE
 	smoothing_flags = NONE
@@ -253,7 +253,7 @@
 /obj/structure/girder/bronze
 	name = "wall gear"
 	desc = "A girder made out of sturdy bronze, made to resemble a gear."
-	icon = 'icons/obj/structures.dmi'
+	icon = '../assets/icons/obj/structures.dmi'
 	icon_state = "wall_gear"
 	can_displace = FALSE
 	smoothing_flags = NONE

@@ -7,10 +7,10 @@
 	name = "Experi-Scanner"
 	desc = "A handheld scanner used for completing the many experiments of modern science."
 	w_class = WEIGHT_CLASS_SMALL
-	icon = 'icons/obj/devices/scanner.dmi'
+	icon = '../assets/icons/obj/devices/scanner.dmi'
 	icon_state = "experiscanner"
-	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/devices_righthand.dmi'
 	sound_vary = TRUE
 	pickup_sound = SFX_GENERIC_DEVICE_PICKUP
 	drop_sound = SFX_GENERIC_DEVICE_DROP
@@ -41,8 +41,8 @@
 	icon_state = "experiscanner_closed"
 	add_atom_colour(COLOR_RED, ADMIN_COLOUR_PRIORITY)
 
-	playsound(src, 'sound/effects/pope_entry.ogg', 60, TRUE)
-	playsound(src, 'sound/machines/destructive_scanner/ScanDangerous.ogg', 40)
+	playsound(src, '../assets/sound/effects/pope_entry.ogg', 60, TRUE)
+	playsound(src, '../assets/sound/machines/destructive_scanner/ScanDangerous.ogg', 40)
 	user.emote("scream")
 
 	addtimer(CALLBACK(src, PROC_REF(make_meat_toilet), user), 5 SECONDS)

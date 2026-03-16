@@ -176,9 +176,9 @@
 		appearance_job = SSjob.get_job(JOB_ASSISTANT)
 
 	if(istype(appearance_job, /datum/job/ai))
-		human_image = icon('icons/mob/silicon/ai.dmi', icon_state = resolve_ai_icon(appearance_from_prefs.read_preference(/datum/preference/choiced/ai_core_display)), dir = SOUTH)
+		human_image = icon('../assets/icons/mob/silicon/ai.dmi', icon_state = resolve_ai_icon(appearance_from_prefs.read_preference(/datum/preference/choiced/ai_core_display)), dir = SOUTH)
 	else if(istype(appearance_job, /datum/job/cyborg))
-		human_image = icon('icons/mob/silicon/robots.dmi', icon_state = "robot")
+		human_image = icon('../assets/icons/mob/silicon/robots.dmi', icon_state = "robot")
 	else
 		human_image = get_flat_human_icon(null, appearance_job, appearance_from_prefs)
 	Show()
@@ -275,7 +275,7 @@
 		if((safe_read_pref(user.client, /datum/preference/toggle/enable_runechat) || (SSlag_switch.measures[DISABLE_RUNECHAT] && !HAS_TRAIT(src, TRAIT_BYPASS_MEASURES))))
 			speech_bubble_recipients.Add(user.client)
 
-	var/image/bubble = image('icons/mob/effects/talk.dmi', src, "[bubble_type][say_test(message)]", FLY_LAYER)
+	var/image/bubble = image('../assets/icons/mob/effects/talk.dmi', src, "[bubble_type][say_test(message)]", FLY_LAYER)
 	SET_PLANE_EXPLICIT(bubble, ABOVE_GAME_PLANE, src)
 	bubble.appearance_flags = APPEARANCE_UI_IGNORE_ALPHA
 	INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(flick_overlay_global), bubble, speech_bubble_recipients, 3 SECONDS)
@@ -393,7 +393,7 @@
 		return
 
 	var/turf/our_tile = get_turf(src)
-	var/obj/visual = image('icons/hud/screen_gen.dmi', our_tile, "arrow", FLY_LAYER)
+	var/obj/visual = image('../assets/icons/hud/screen_gen.dmi', our_tile, "arrow", FLY_LAYER)
 
 	INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(flick_overlay_global), visual, group_clients(), 2.5 SECONDS)
 	animate(visual, pixel_x = (tile.x - our_tile.x) * ICON_SIZE_X + pointed_atom.pixel_x, pixel_y = (tile.y - our_tile.y) * ICON_SIZE_Y + pointed_atom.pixel_y, time = 1.7, easing = SINE_EASING|EASE_OUT)
@@ -401,7 +401,7 @@
 /mob/eye/imaginary_friend/create_thinking_indicator()
 	if(active_thinking_indicator || active_typing_indicator || !HAS_TRAIT(src, TRAIT_THINKING_IN_CHARACTER))
 		return FALSE
-	active_thinking_indicator = image('icons/mob/effects/talk.dmi', src, "[bubble_icon]3", TYPING_LAYER)
+	active_thinking_indicator = image('../assets/icons/mob/effects/talk.dmi', src, "[bubble_icon]3", TYPING_LAYER)
 	add_image_to_clients(active_thinking_indicator, group_clients())
 
 /mob/eye/imaginary_friend/remove_thinking_indicator()
@@ -413,7 +413,7 @@
 /mob/eye/imaginary_friend/create_typing_indicator()
 	if(active_typing_indicator || active_thinking_indicator || !HAS_TRAIT(src, TRAIT_THINKING_IN_CHARACTER))
 		return FALSE
-	active_typing_indicator = image('icons/mob/effects/talk.dmi', src, "[bubble_icon]0", TYPING_LAYER)
+	active_typing_indicator = image('../assets/icons/mob/effects/talk.dmi', src, "[bubble_icon]0", TYPING_LAYER)
 	add_image_to_clients(active_typing_indicator, group_clients())
 
 /mob/eye/imaginary_friend/remove_typing_indicator()
@@ -450,7 +450,7 @@
 /datum/action/innate/imaginary_join
 	name = "Join"
 	desc = "Join your owner, following them from inside their mind."
-	button_icon = 'icons/mob/actions/actions_minor_antag.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_minor_antag.dmi'
 	background_icon_state = "bg_revenant"
 	overlay_icon_state = "bg_revenant_border"
 	button_icon_state = "join"
@@ -462,7 +462,7 @@
 /datum/action/innate/imaginary_hide
 	name = "Hide"
 	desc = "Hide yourself from your owner's sight."
-	button_icon = 'icons/mob/actions/actions_minor_antag.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_minor_antag.dmi'
 	background_icon_state = "bg_revenant"
 	overlay_icon_state = "bg_revenant_border"
 	button_icon_state = "hide"
@@ -541,7 +541,7 @@
 /mob/eye/imaginary_friend/trapped/setup_friend()
 	real_name = "[owner.real_name]?"
 	name = real_name
-	human_image = icon('icons/mob/simple/lavaland/lavaland_monsters.dmi', icon_state = "curseblob")
+	human_image = icon('../assets/icons/mob/simple/lavaland/lavaland_monsters.dmi', icon_state = "curseblob")
 
 #undef IMAGINARY_FRIEND_RANGE
 #undef IMAGINARY_FRIEND_SPEECH_RANGE

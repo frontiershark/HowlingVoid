@@ -17,7 +17,7 @@
 		apply_damage(damage, BRUTE, affecting)
 		log_combat(user, src, "attacked")
 	else
-		playsound(loc, 'sound/items/weapons/punchmiss.ogg', 25, TRUE, -1)
+		playsound(loc, '../assets/sound/items/weapons/punchmiss.ogg', 25, TRUE, -1)
 		visible_message(span_danger("[user]'s kick misses [src]!"), \
 						span_danger("You avoid [user]'s kick!"), span_hear("You hear a swoosh!"), COMBAT_MESSAGE_RANGE, user)
 		to_chat(user, span_warning("Your kick misses [src]!"))

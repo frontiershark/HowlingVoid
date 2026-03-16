@@ -13,7 +13,7 @@
 /obj/machinery/medical_kiosk
 	name = "medical kiosk"
 	desc = "A freestanding medical kiosk, which can provide a wide range of medical analysis for diagnosis."
-	icon = 'icons/obj/machines/medical_kiosk.dmi'
+	icon = '../assets/icons/obj/machines/medical_kiosk.dmi'
 	icon_state = "kiosk"
 	base_icon_state = "kiosk"
 	density = TRUE
@@ -143,7 +143,7 @@
 		patient_ref = target_ref
 		user.visible_message(span_notice("[wand.return_patient()] has been set as the current patient."))
 		wand.selected_target = null
-	playsound(src, 'sound/machines/click.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/machines/click.ogg', 50, TRUE)
 	scanner_wand = tool
 	return ITEM_INTERACT_SUCCESS
 
@@ -162,7 +162,7 @@
 		return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 	user.visible_message(span_notice("[user] unhooks the [scanner_wand] from [src]."))
 	balloon_alert(user, "scanner pulled")
-	playsound(src, 'sound/machines/click.ogg', 60, TRUE)
+	playsound(src, '../assets/sound/machines/click.ogg', 60, TRUE)
 	scanner_wand = null
 	return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 

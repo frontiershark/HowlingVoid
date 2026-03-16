@@ -9,7 +9,7 @@
 		if (buildstage == AIR_ALARM_BUILD_NO_WIRES)
 			to_chat(user, span_notice("You remove the air alarm electronics."))
 			new /obj/item/electronics/airalarm(drop_location())
-			playsound(loc, 'sound/items/deconstruct.ogg', 50, TRUE)
+			playsound(loc, '../assets/sound/items/deconstruct.ogg', 50, TRUE)
 			buildstage = AIR_ALARM_BUILD_NO_CIRCUIT
 			update_appearance()
 	return TRUE
@@ -179,7 +179,7 @@
 /obj/item/wallframe/airalarm
 	name = "air alarm frame"
 	desc = "Used for building Air Alarms."
-	icon = 'icons/obj/machines/wallmounts.dmi'
+	icon = '../assets/icons/obj/machines/wallmounts.dmi'
 	icon_state = "alarm_bitem"
 	result_path = /obj/machinery/airalarm
 	pixel_shift = 27

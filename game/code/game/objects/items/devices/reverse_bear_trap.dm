@@ -3,8 +3,8 @@
 /obj/item/reverse_bear_trap
 	name = "reverse bear trap"
 	desc = "A horrifying set of shut metal jaws, rigged to a kitchen timer and secured by padlock to a head-mounted clamp. To apply, hit someone with it."
-	icon = 'icons/obj/devices/syndie_gadget.dmi'
-	worn_icon = 'icons/mob/clothing/head/utility.dmi'
+	icon = '../assets/icons/obj/devices/syndie_gadget.dmi'
+	worn_icon = '../assets/icons/mob/clothing/head/utility.dmi'
 	icon_state = "reverse_bear_trap"
 	slot_flags = ITEM_SLOT_HEAD
 	obj_flags = CONDUCTS_ELECTRICITY
@@ -12,8 +12,8 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	max_integrity = 300
 	inhand_icon_state = "reverse_bear_trap"
-	lefthand_file = 'icons/mob/inhands/items_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items_righthand.dmi'
 
 	///Is the reverse bear trap active?
 	var/ticking = FALSE
@@ -47,7 +47,7 @@
 		trigger()
 
 /obj/item/reverse_bear_trap/proc/trigger()
-	playsound(src, 'sound/machines/microwave/microwave-end.ogg', 100, FALSE)
+	playsound(src, '../assets/sound/machines/microwave/microwave-end.ogg', 100, FALSE)
 	soundloop.stop()
 	soundloop2.stop()
 	to_chat(loc, span_userdanger("*ding*"))
@@ -112,7 +112,7 @@
 		source = src,
 		header = "Reverse bear trap armed",
 		notify_flags = NOTIFY_CATEGORY_NOFLASH,
-		ghost_sound = 'sound/machines/beep/beep.ogg',
+		ghost_sound = '../assets/sound/machines/beep/beep.ogg',
 		notify_volume = 75,
 	)
 
@@ -121,13 +121,13 @@
 	var/mob/living/carbon/human/victim = loc
 	if(!istype(victim) || victim.get_item_by_slot(ITEM_SLOT_HEAD) != src)
 		visible_message(span_warning("[src]'s jaws snap open with an ear-piercing crack!"))
-		playsound(src, 'sound/effects/snap.ogg', 75, TRUE)
+		playsound(src, '../assets/sound/effects/snap.ogg', 75, TRUE)
 	else
 		var/mob/living/carbon/human/jill = loc
 		jill.visible_message(span_boldwarning("[src] goes off in [jill]'s mouth, ripping [jill.p_their()] head apart!"), span_userdanger("[src] goes off!"))
 		jill.emote("scream")
-		playsound(src, 'sound/effects/snap.ogg', 75, TRUE, frequency = 0.5)
-		playsound(src, 'sound/effects/splat.ogg', 50, TRUE, frequency = 0.5)
+		playsound(src, '../assets/sound/effects/snap.ogg', 75, TRUE, frequency = 0.5)
+		playsound(src, '../assets/sound/effects/splat.ogg', 50, TRUE, frequency = 0.5)
 		jill.apply_damage(9999, BRUTE, BODY_ZONE_HEAD)
 		jill.investigate_log("has been killed by [src].", INVESTIGATE_DEATHS)
 		jill.death() //just in case, for some reason, they're still alive

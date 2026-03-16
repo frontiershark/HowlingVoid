@@ -9,7 +9,7 @@
 	layer = CLOSED_DOOR_LAYER
 	material_flags = MATERIAL_EFFECTS
 
-	icon = 'icons/obj/doors/mineral_doors.dmi'
+	icon = '../assets/icons/obj/doors/mineral_doors.dmi'
 	icon_state = "metal"
 	max_integrity = 200
 	armor_type = /datum/armor/structure_mineral_door
@@ -22,8 +22,8 @@
 	var/isSwitchingStates = FALSE //don't try to change stats if we're already opening
 
 	var/close_delay = -1 //-1 if does not auto close.
-	var/openSound = 'sound/effects/stonedoor_openclose.ogg'
-	var/closeSound = 'sound/effects/stonedoor_openclose.ogg'
+	var/openSound = '../assets/sound/effects/stonedoor_openclose.ogg'
+	var/closeSound = '../assets/sound/effects/stonedoor_openclose.ogg'
 
 	var/sheetType = /obj/item/stack/sheet/iron //what we're made of
 	var/sheetAmount = 10 //how much it takes to construct us.
@@ -265,8 +265,8 @@
 /obj/structure/mineral_door/wood
 	name = "wood door"
 	icon_state = "wood"
-	openSound = 'sound/effects/doorcreaky.ogg'
-	closeSound = 'sound/effects/doorcreaky.ogg'
+	openSound = '../assets/sound/effects/doorcreaky.ogg'
+	closeSound = '../assets/sound/effects/doorcreaky.ogg'
 	sheetType = /obj/item/stack/sheet/mineral/wood
 	resistance_flags = FLAMMABLE
 	max_integrity = 200
@@ -291,8 +291,8 @@
 /obj/structure/mineral_door/paperframe
 	name = "paper frame door"
 	icon_state = "paperframe"
-	openSound = 'sound/effects/doorcreaky.ogg'
-	closeSound = 'sound/effects/doorcreaky.ogg'
+	openSound = '../assets/sound/effects/doorcreaky.ogg'
+	closeSound = '../assets/sound/effects/doorcreaky.ogg'
 	sheetType = /obj/item/stack/sheet/paperframes
 	sheetAmount = 3
 	resistance_flags = FLAMMABLE

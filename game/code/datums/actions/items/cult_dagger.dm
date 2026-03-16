@@ -2,7 +2,7 @@
 /datum/action/item_action/cult_dagger
 	name = "Draw Blood Rune"
 	desc = "Use the ritual dagger to create a powerful blood rune"
-	button_icon = 'icons/mob/actions/actions_cult.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_cult.dmi'
 	button_icon_state = "draw"
 	buttontooltipstyle = "cult"
 	background_icon_state = "bg_demon"

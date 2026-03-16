@@ -322,7 +322,7 @@
 		tile.atmos_spawn_air("[GAS_WATER_VAPOR]=50;[TURF_TEMPERATURE(1000)]")
 	tile.balloon_alert_to_viewers("overloaded!")
 	tile.visible_message("<span class='danger'>[src] overloads, exploding in a cloud of hot steam!</span>")
-	playsound(tile, 'sound/effects/spray.ogg', 80)
+	playsound(tile, '../assets/sound/effects/spray.ogg', 80)
 	for(var/mob/living/collateral in victims)
 		collateral.set_jitter_if_lower(15 SECONDS)
 		collateral.set_eye_blur_if_lower(5 SECONDS)

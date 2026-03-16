@@ -1,5 +1,5 @@
 /obj/item/bodypart/head/lizard
-	icon_greyscale = 'icons/mob/human/species/lizard/bodyparts.dmi'
+	icon_greyscale = '../assets/icons/mob/human/species/lizard/bodyparts.dmi'
 	limb_id = SPECIES_LIZARD
 	is_dimorphic = FALSE
 	head_flags = HEAD_LIPS|HEAD_EYESPRITES|HEAD_EYECOLOR|HEAD_EYEHOLES|HEAD_DEBRAIN
@@ -7,35 +7,35 @@
 	teeth_count = 72
 
 /obj/item/bodypart/chest/lizard
-	icon_greyscale = 'icons/mob/human/species/lizard/bodyparts.dmi'
+	icon_greyscale = '../assets/icons/mob/human/species/lizard/bodyparts.dmi'
 	limb_id = SPECIES_LIZARD
 	is_dimorphic = TRUE
 	wing_types = list(/obj/item/organ/wings/functional/dragon)
 
 /obj/item/bodypart/chest/lizard/get_butt_sprite()
-	return icon('icons/mob/butts.dmi', BUTT_SPRITE_LIZARD)
+	return icon('../assets/icons/mob/butts.dmi', BUTT_SPRITE_LIZARD)
 
 /obj/item/bodypart/arm/left/lizard
-	icon_greyscale = 'icons/mob/human/species/lizard/bodyparts.dmi'
+	icon_greyscale = '../assets/icons/mob/human/species/lizard/bodyparts.dmi'
 	limb_id = SPECIES_LIZARD
 	unarmed_attack_verbs = list("slash", "scratch", "claw")
 	unarmed_attack_verbs = list("slashed", "scratched", "clawed")
 	grappled_attack_verb = "lacerate"
 	grappled_attack_verb_continuous = "lacerates"
 	unarmed_attack_effect = ATTACK_EFFECT_CLAW
-	unarmed_attack_sound = 'sound/items/weapons/slash.ogg'
-	unarmed_miss_sound = 'sound/items/weapons/slashmiss.ogg'
+	unarmed_attack_sound = '../assets/sound/items/weapons/slash.ogg'
+	unarmed_miss_sound = '../assets/sound/items/weapons/slashmiss.ogg'
 
 /obj/item/bodypart/arm/right/lizard
-	icon_greyscale = 'icons/mob/human/species/lizard/bodyparts.dmi'
+	icon_greyscale = '../assets/icons/mob/human/species/lizard/bodyparts.dmi'
 	limb_id = SPECIES_LIZARD
 	unarmed_attack_verbs = list("slash", "scratch", "claw")
 	unarmed_attack_verbs = list("slashed", "scratched", "clawed")
 	grappled_attack_verb = "lacerate"
 	grappled_attack_verb_continuous = "lacerates"
 	unarmed_attack_effect = ATTACK_EFFECT_CLAW
-	unarmed_attack_sound = 'sound/items/weapons/slash.ogg'
-	unarmed_miss_sound = 'sound/items/weapons/slashmiss.ogg'
+	unarmed_attack_sound = '../assets/sound/items/weapons/slash.ogg'
+	unarmed_miss_sound = '../assets/sound/items/weapons/slashmiss.ogg'
 
 /obj/item/bodypart/arm/left/lizard/ashwalker
 	bodypart_traits = list(TRAIT_CHUNKYFINGERS)
@@ -44,11 +44,11 @@
 	bodypart_traits = list(TRAIT_CHUNKYFINGERS)
 
 /obj/item/bodypart/leg/left/lizard
-	icon_greyscale = 'icons/mob/human/species/lizard/bodyparts.dmi'
+	icon_greyscale = '../assets/icons/mob/human/species/lizard/bodyparts.dmi'
 	limb_id = SPECIES_LIZARD
 
 /obj/item/bodypart/leg/right/lizard
-	icon_greyscale = 'icons/mob/human/species/lizard/bodyparts.dmi'
+	icon_greyscale = '../assets/icons/mob/human/species/lizard/bodyparts.dmi'
 	limb_id = SPECIES_LIZARD
 
 /// Checks if this mob is wearing anything that does not have a valid sprite set for digitigrade legs
@@ -76,7 +76,7 @@
 	return !uniform_compatible || !suit_compatible || !shoes_compatible
 
 /obj/item/bodypart/leg/left/digitigrade
-	icon_greyscale = 'icons/mob/human/species/lizard/bodyparts.dmi'
+	icon_greyscale = '../assets/icons/mob/human/species/lizard/bodyparts.dmi'
 	limb_id = BODYPART_ID_DIGITIGRADE
 	bodyshape = BODYSHAPE_HUMANOID | BODYSHAPE_DIGITIGRADE
 	footprint_sprite = FOOTPRINT_SPRITE_CLAWS
@@ -87,7 +87,7 @@
 	limb_id = owner?.is_digitigrade_squished() ? SPECIES_LIZARD : BODYPART_ID_DIGITIGRADE
 
 /obj/item/bodypart/leg/right/digitigrade
-	icon_greyscale = 'icons/mob/human/species/lizard/bodyparts.dmi'
+	icon_greyscale = '../assets/icons/mob/human/species/lizard/bodyparts.dmi'
 	limb_id = BODYPART_ID_DIGITIGRADE
 	bodyshape = BODYSHAPE_HUMANOID | BODYSHAPE_DIGITIGRADE
 	footprint_sprite = FOOTPRINT_SPRITE_CLAWS

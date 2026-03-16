@@ -1,18 +1,18 @@
 /obj/item/storage/belt
 	name = "not actually a toolbelt"
 	desc = "Can hold various things. This is the base type of /belt, are you sure you should have this?"
-	icon = 'icons/obj/clothing/belts.dmi'
+	icon = '../assets/icons/obj/clothing/belts.dmi'
 	icon_state = "utility"
 	inhand_icon_state = "utility"
 	worn_icon_state = "utility"
-	lefthand_file = 'icons/mob/inhands/equipment/belt_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/belt_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/belt_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/belt_righthand.dmi'
 	abstract_type = /obj/item/storage/belt
 	slot_flags = ITEM_SLOT_BELT
 	attack_verb_continuous = list("whips", "lashes", "disciplines")
 	attack_verb_simple = list("whip", "lash", "discipline")
 	max_integrity = 300
-	equip_sound = 'sound/items/equip/toolbelt_equip.ogg'
+	equip_sound = '../assets/sound/items/equip/toolbelt_equip.ogg'
 	w_class = WEIGHT_CLASS_BULKY
 	var/content_overlays = FALSE //If this is true, the belt will gain overlays based on what it's holding
 
@@ -40,8 +40,8 @@
 	worn_icon_state = "utility"
 	content_overlays = TRUE
 	custom_premium_price = PAYCHECK_CREW * 2
-	drop_sound = 'sound/items/handling/toolbelt_drop.ogg'
-	pickup_sound = 'sound/items/handling/toolbelt_pickup.ogg'
+	drop_sound = '../assets/sound/items/handling/toolbelt_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/toolbelt_pickup.ogg'
 	storage_type = /datum/storage/utility_belt
 
 /obj/item/storage/belt/utility/chief
@@ -193,8 +193,8 @@
 	icon_state = "medical"
 	inhand_icon_state = "medical"
 	worn_icon_state = "medical"
-	drop_sound = 'sound/items/handling/toolbelt_drop.ogg'
-	pickup_sound = 'sound/items/handling/toolbelt_pickup.ogg'
+	drop_sound = '../assets/sound/items/handling/toolbelt_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/toolbelt_pickup.ogg'
 	storage_type = /datum/storage/medical_belt
 
 /obj/item/storage/belt/medical/paramedic
@@ -319,8 +319,8 @@
 	icon_state = "soulstonebelt"
 	inhand_icon_state = "soulstonebelt"
 	worn_icon_state = "soulstonebelt"
-	drop_sound = 'sound/items/handling/toolbelt_drop.ogg'
-	pickup_sound = 'sound/items/handling/toolbelt_pickup.ogg'
+	drop_sound = '../assets/sound/items/handling/toolbelt_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/toolbelt_pickup.ogg'
 	storage_type = /datum/storage/soulstone_belt
 
 /obj/item/storage/belt/soulstone/full/PopulateContents()
@@ -397,7 +397,7 @@
 /obj/item/storage/belt/military/abductor
 	name = "agent belt"
 	desc = "A belt used by abductor agents."
-	icon = 'icons/obj/antags/abductor.dmi'
+	icon = '../assets/icons/obj/antags/abductor.dmi'
 	icon_state = "belt"
 	inhand_icon_state = "security"
 	worn_icon_state = "security"
@@ -439,8 +439,8 @@
 	icon_state = "grenadebeltnew"
 	inhand_icon_state = "security"
 	worn_icon_state = "grenadebeltnew"
-	drop_sound = 'sound/items/handling/toolbelt_drop.ogg'
-	pickup_sound = 'sound/items/handling/toolbelt_pickup.ogg'
+	drop_sound = '../assets/sound/items/handling/toolbelt_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/toolbelt_pickup.ogg'
 	storage_type = /datum/storage/grenade_belt
 
 /obj/item/storage/belt/grenade/full/PopulateContents()
@@ -484,8 +484,8 @@
 	icon_state = "janibelt"
 	inhand_icon_state = "janibelt"
 	worn_icon_state = "janibelt"
-	drop_sound = 'sound/items/handling/toolbelt_drop.ogg'
-	pickup_sound = 'sound/items/handling/toolbelt_pickup.ogg'
+	drop_sound = '../assets/sound/items/handling/toolbelt_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/toolbelt_pickup.ogg'
 	storage_type = /datum/storage/janitor_belt
 
 /obj/item/storage/belt/janitor/full/PopulateContents()
@@ -639,9 +639,9 @@
 /datum/action/innate/blade_counter
 	name = "Counterattack"
 	desc = "Anticipate an enemy's attack and strike back with your sheathed blade."
-	button_icon = 'icons/mob/actions/actions_spells.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_spells.dmi'
 	button_icon_state = "declaration"
-	ranged_mousepointer = 'icons/effects/mouse_pointers/honorbound.dmi'
+	ranged_mousepointer = '../assets/icons/effects/mouse_pointers/honorbound.dmi'
 
 	enable_text = "You prepare to counterattack a target..."
 	disable_text = "You relax your stance."
@@ -709,7 +709,7 @@
 	if(used_sheath.loc != forward_thinker || fool != eyed_fool.resolve() || !forward_thinker.put_in_active_hand(justicetool))
 		return FAILED_BLOCK
 	do_strike(fool, forward_thinker, justicetool)
-	playsound(forward_thinker, 'sound/items/unsheath.ogg', 50, TRUE)
+	playsound(forward_thinker, '../assets/sound/items/unsheath.ogg', 50, TRUE)
 	COOLDOWN_RESET(used_sheath, full_ability_cooldown)
 	return SUCCESSFUL_BLOCK
 

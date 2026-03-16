@@ -5,7 +5,7 @@
 	///Bitflags for special behavior such as kidnapping
 	var/car_traits = NONE
 	///Sound file(s) to play when we drive around
-	var/engine_sound = 'sound/vehicles/carrev.ogg'
+	var/engine_sound = '../assets/sound/vehicles/carrev.ogg'
 	///Set this to the length of the engine sound.
 	var/engine_sound_length = 2 SECONDS
 	///Time it takes to break out of the car.

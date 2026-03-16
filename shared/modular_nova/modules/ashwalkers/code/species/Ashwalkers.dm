@@ -192,29 +192,29 @@
 	if(locate(connected_organ.summoned_armblade) in connected_organ)
 		owner.put_in_active_hand(connected_organ.summoned_armblade)
 		owner.visible_message(span_warning("A grotesque blade forms around [owner]\'s arm!"), span_warning("Our arm twists and mutates, transforming it into a deadly blade."), span_hear("You hear organic matter ripping and tearing!"))
-		playsound(get_turf(owner), 'sound/effects/blob/blobattack.ogg', 30, TRUE)
+		playsound(get_turf(owner), '../assets/sound/effects/blob/blobattack.ogg', 30, TRUE)
 
 	else
 		connected_organ.summoned_armblade.forceMove(connected_organ)
 		owner.visible_message(span_warning("With a sickening crunch, [owner] reforms [owner.p_their()] [connected_organ.summoned_armblade] into an arm!"), span_notice("We assimilate the [connected_organ.summoned_armblade] back into our body."), span_italics("You hear organic matter ripping and tearing!"))
-		playsound(get_turf(owner), 'sound/effects/blob/blobattack.ogg', 30, TRUE)
+		playsound(get_turf(owner), '../assets/sound/effects/blob/blobattack.ogg', 30, TRUE)
 
 /obj/item/melee/ashen_blade
 	name = "ashen arm blade"
 	desc = "A grotesque blade made out of bone and flesh that cleaves through people as a hot knife through butter."
-	icon = 'icons/obj/weapons/changeling_items.dmi'
+	icon = '../assets/icons/obj/weapons/changeling_items.dmi'
 	icon_state = "arm_blade"
 	inhand_icon_state = "arm_blade"
 	icon_angle = 180
-	lefthand_file = 'icons/mob/inhands/antag/changeling_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/antag/changeling_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/antag/changeling_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/antag/changeling_righthand.dmi'
 	item_flags = NEEDS_PERMIT | ABSTRACT
 	w_class = WEIGHT_CLASS_HUGE
 	force = 5
 	throwforce = 0 //Just to be on the safe side
 	throw_range = 0
 	throw_speed = 0
-	hitsound = 'sound/items/weapons/bladeslice.ogg'
+	hitsound = '../assets/sound/items/weapons/bladeslice.ogg'
 	attack_verb_continuous = list("attacks", "slashes", "slices", "tears", "lacerates", "rips", "dices", "cuts")
 	attack_verb_simple = list("attack", "slash", "slice", "tear", "lacerate", "rip", "dice", "cut")
 	sharpness = SHARP_EDGED
@@ -262,7 +262,7 @@
 		if(opening.hasPower())
 			user.visible_message(span_warning("[user] jams [src] into the airlock and starts prying it open!"), span_warning("We start forcing the [opening] open."), \
 			span_hear("You hear a metal screeching sound."))
-			playsound(opening, 'sound/machines/airlock/airlock_alien_prying.ogg', 100, TRUE)
+			playsound(opening, '../assets/sound/machines/airlock/airlock_alien_prying.ogg', 100, TRUE)
 			if(!do_after(user, 10 SECONDS, target = opening))
 				return
 
@@ -278,7 +278,7 @@
 			return ITEM_INTERACT_BLOCKING
 
 		to_chat(user, span_warning("Your [src] consumes [tool]!"))
-		playsound(get_turf(src), 'sound/effects/magic/demon_attack1.ogg', 50, TRUE)
+		playsound(get_turf(src), '../assets/sound/effects/magic/demon_attack1.ogg', 50, TRUE)
 		qdel(tool)
 		consumed_trophies += 1
 		if(isliving(user)) //give a reason to consume past the increased damage

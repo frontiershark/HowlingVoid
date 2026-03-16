@@ -40,7 +40,7 @@
 	return ..()
 
 /obj/machinery/airlock_sensor
-	icon = 'icons/obj/machines/wallmounts.dmi'
+	icon = '../assets/icons/obj/machines/wallmounts.dmi'
 	icon_state = "airlock_sensor_off"
 	base_icon_state = "airlock_sensor"
 	name = "airlock sensor"

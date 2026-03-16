@@ -31,7 +31,7 @@
 			name = "sprouted vines"
 			desc = "It's an entanglement of vines."
 			icon_state = pick("kudzu1", "kudzu1", "kudzu3")
-			playsound(get_turf(src), 'sound/mobs/non-humanoids/venus_trap/venus_trap_hurt.ogg', 25, TRUE)
+			playsound(get_turf(src), '../assets/sound/mobs/non-humanoids/venus_trap/venus_trap_hurt.ogg', 25, TRUE)
 
 
 		if("water")
@@ -47,32 +47,32 @@
 			desc = "It's a storm of smoke."
 			icon_state = "smoke"
 			src.add_overlay(image('modular_nova/master_files/icons/effects/turf_effects.dmi', "smoke_top", EXTRA_ABOVE_MOB_LAYER))
-			playsound(get_turf(src), 'sound/effects/wounds/sizzle2.ogg', 25, TRUE)
+			playsound(get_turf(src), '../assets/sound/effects/wounds/sizzle2.ogg', 25, TRUE)
 
 		if("xenoresin")
 			name = "resin"
 			desc = "Looks like some kind of thick resin."
 			icon_state = "xenoresin"
-			playsound(get_turf(src), 'sound/effects/splat.ogg', 25, TRUE)
+			playsound(get_turf(src), '../assets/sound/effects/splat.ogg', 25, TRUE)
 
 		if("holobed")
 			name = "physical hologram"
 			desc = "It's a hologram of a pet bed."
 			icon_state = "holobed"
-			playsound(get_turf(src), 'sound/machines/compiler/compiler-stage2.ogg', 25, TRUE)
+			playsound(get_turf(src), '../assets/sound/machines/compiler/compiler-stage2.ogg', 25, TRUE)
 
 		if("holoseat")
 			name = "physical hologram"
 			desc = "It's a hologram of a barstool."
 			icon_state = "holoseat"
 			src.add_overlay(image('modular_nova/master_files/icons/effects/turf_effects.dmi', "holoseat_top", EXTRA_ABOVE_MOB_LAYER))
-			playsound(get_turf(src), 'sound/machines/compiler/compiler-stage2.ogg', 25, TRUE)
+			playsound(get_turf(src), '../assets/sound/machines/compiler/compiler-stage2.ogg', 25, TRUE)
 
 		if("slime")
 			name = "pile of oozing slime"
 			desc = "It's just a bunch of slime."
 			alpha = 155
-			playsound(get_turf(src), 'sound/misc/soggy.ogg', 25, TRUE)
+			playsound(get_turf(src), '../assets/sound/misc/soggy.ogg', 25, TRUE)
 			switch(rand(1,1000))
 				if(-INFINITY to 400)
 					icon_state = "slimeobj1"
@@ -107,7 +107,7 @@
 			icon_state = "borgmat"
 			pixel_x = -16
 			pixel_y = -4
-			playsound(get_turf(src), 'sound/items/handling/taperecorder_pickup.ogg', 25, TRUE)
+			playsound(get_turf(src), '../assets/sound/items/handling/taperecorder_pickup.ogg', 25, TRUE)
 
 		//bodyparts
 		if("tails")
@@ -119,57 +119,57 @@
 			var/mutable_appearance/overlay = mutable_appearance('modular_nova/master_files/icons/effects/turf_effects_64.dmi', "tails_top", EXTRA_ABOVE_MOB_LAYER, src)
 			overlay.appearance_flags = TILE_BOUND|PIXEL_SCALE|KEEP_TOGETHER
 			src.add_overlay(overlay)
-			playsound(get_turf(src), 'sound/items/weapons/thudswoosh.ogg', 25, TRUE)
+			playsound(get_turf(src), '../assets/sound/items/weapons/thudswoosh.ogg', 25, TRUE)
 
 		//prints
 		if("pawprint")
 			name = "pawprint"
 			desc = "It's a pawprint left on the ground."
 			icon_state = pick("pawprint", "pawprint1")
-			playsound(get_turf(src), pick('sound/effects/footstep/hardbarefoot1.ogg',
-			'sound/effects/footstep/hardbarefoot2.ogg',
-			'sound/effects/footstep/hardbarefoot3.ogg',
-			'sound/effects/footstep/hardbarefoot4.ogg',
-			'sound/effects/footstep/hardbarefoot5.ogg'), 50, TRUE)
+			playsound(get_turf(src), pick('../assets/sound/effects/footstep/hardbarefoot1.ogg',
+			'../assets/sound/effects/footstep/hardbarefoot2.ogg',
+			'../assets/sound/effects/footstep/hardbarefoot3.ogg',
+			'../assets/sound/effects/footstep/hardbarefoot4.ogg',
+			'../assets/sound/effects/footstep/hardbarefoot5.ogg'), 50, TRUE)
 
 		if("hoofprint")
 			name = "hoofprint"
 			desc = "It's a hoofprint left on the ground."
 			icon_state = pick("hoofprint", "hoofprint1")
-			playsound(get_turf(src), pick('sound/effects/footstep/hardbarefoot1.ogg',
-			'sound/effects/footstep/hardbarefoot2.ogg',
-			'sound/effects/footstep/hardbarefoot3.ogg',
-			'sound/effects/footstep/hardbarefoot4.ogg',
-			'sound/effects/footstep/hardbarefoot5.ogg'), 50, TRUE)
+			playsound(get_turf(src), pick('../assets/sound/effects/footstep/hardbarefoot1.ogg',
+			'../assets/sound/effects/footstep/hardbarefoot2.ogg',
+			'../assets/sound/effects/footstep/hardbarefoot3.ogg',
+			'../assets/sound/effects/footstep/hardbarefoot4.ogg',
+			'../assets/sound/effects/footstep/hardbarefoot5.ogg'), 50, TRUE)
 		if("footprint")
 			name = "footprint"
 			desc = "It's a footprint left on the ground."
 			icon_state = pick("footprint", "footprint1")
-			playsound(get_turf(src), pick('sound/effects/footstep/hardbarefoot1.ogg',
-			'sound/effects/footstep/hardbarefoot2.ogg',
-			'sound/effects/footstep/hardbarefoot3.ogg',
-			'sound/effects/footstep/hardbarefoot4.ogg',
-			'sound/effects/footstep/hardbarefoot5.ogg'), 50, TRUE)
+			playsound(get_turf(src), pick('../assets/sound/effects/footstep/hardbarefoot1.ogg',
+			'../assets/sound/effects/footstep/hardbarefoot2.ogg',
+			'../assets/sound/effects/footstep/hardbarefoot3.ogg',
+			'../assets/sound/effects/footstep/hardbarefoot4.ogg',
+			'../assets/sound/effects/footstep/hardbarefoot5.ogg'), 50, TRUE)
 
 		if("clawprint")
 			name = "clawprint"
 			desc = "It's a clawprint left on the ground."
 			icon_state = pick("clawprint", "clawprint1")
-			playsound(get_turf(src), pick('sound/effects/footstep/hardbarefoot1.ogg',
-			'sound/effects/footstep/hardbarefoot2.ogg',
-			'sound/effects/footstep/hardbarefoot3.ogg',
-			'sound/effects/footstep/hardbarefoot4.ogg',
-			'sound/effects/footstep/hardbarefoot5.ogg'), 50, TRUE)
+			playsound(get_turf(src), pick('../assets/sound/effects/footstep/hardbarefoot1.ogg',
+			'../assets/sound/effects/footstep/hardbarefoot2.ogg',
+			'../assets/sound/effects/footstep/hardbarefoot3.ogg',
+			'../assets/sound/effects/footstep/hardbarefoot4.ogg',
+			'../assets/sound/effects/footstep/hardbarefoot5.ogg'), 50, TRUE)
 
 		if("shoeprint")
 			name = "shoeprint"
 			desc = "It's a shoeprint left on the ground."
 			icon_state = pick("shoeprint", "shoeprint1")
-			playsound(get_turf(src), pick('sound/effects/footstep/floor1.ogg',
-			'sound/effects/footstep/floor2.ogg',
-			'sound/effects/footstep/floor3.ogg',
-			'sound/effects/footstep/floor4.ogg',
-			'sound/effects/footstep/floor5.ogg'), 50, TRUE)
+			playsound(get_turf(src), pick('../assets/sound/effects/footstep/floor1.ogg',
+			'../assets/sound/effects/footstep/floor2.ogg',
+			'../assets/sound/effects/footstep/floor3.ogg',
+			'../assets/sound/effects/footstep/floor4.ogg',
+			'../assets/sound/effects/footstep/floor5.ogg'), 50, TRUE)
 
 		else
 			return

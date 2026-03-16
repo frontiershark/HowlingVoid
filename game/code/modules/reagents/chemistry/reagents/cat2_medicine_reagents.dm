@@ -594,7 +594,7 @@
 	name = "Strong Heartbeat"
 	desc = "Your heart beats with great force!"
 	use_user_hud_icon = TRUE
-	overlay_icon = 'icons/obj/medical/syringe.dmi'
+	overlay_icon = '../assets/icons/obj/medical/syringe.dmi'
 	overlay_state = "luxpen"
 
 /datum/reagent/medicine/c2/penthrite/on_mob_metabolize(mob/living/user)

@@ -1,7 +1,7 @@
 /obj/machinery/mech_bay_recharge_port
 	name = "mech bay power port"
 	desc = "This port recharges a mech's internal power cell."
-	icon = 'icons/obj/machines/mech_bay.dmi'
+	icon = '../assets/icons/obj/machines/mech_bay.dmi'
 	icon_state = "recharge_port"
 	density = TRUE
 	dir = EAST

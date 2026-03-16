@@ -42,7 +42,7 @@
 	if(HAS_TRAIT(loc, TRAIT_ELEVATED_TURF))
 		layer = WATER_LEVEL_LAYER
 	create_reagents(1000, REAGENT_HOLDER_INSTANT_REACT)
-	playsound(src, 'sound/effects/bubbles/bubbles2.ogg', 80, TRUE, -3)
+	playsound(src, '../assets/sound/effects/bubbles/bubbles2.ogg', 80, TRUE, -3)
 	AddElement(/datum/element/atmos_sensitive, mapload)
 	SSfoam.start_processing(src)
 
@@ -332,7 +332,7 @@
 
 /// FOAM STRUCTURE. Formed by metal foams. Dense and opaque, but easy to break
 /obj/structure/foamedmetal
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	icon_state = "metalfoam"
 	density = TRUE
 	opacity = TRUE // changed in New()
@@ -366,7 +366,7 @@
 	return attack_hand(user, modifiers)
 
 /obj/structure/foamedmetal/play_attack_sound(damage_amount, damage_type = BRUTE, damage_flag = 0)
-	playsound(src.loc, 'sound/items/weapons/tap.ogg', 100, TRUE)
+	playsound(src.loc, '../assets/sound/items/weapons/tap.ogg', 100, TRUE)
 
 /obj/structure/foamedmetal/attack_hand(mob/user, list/modifiers)
 	. = ..()
@@ -375,7 +375,7 @@
 	user.changeNext_move(CLICK_CD_MELEE)
 	user.do_attack_animation(src, ATTACK_EFFECT_PUNCH)
 	to_chat(user, span_warning("You hit [src] but bounce off it!"))
-	playsound(src.loc, 'sound/items/weapons/tap.ogg', 100, TRUE)
+	playsound(src.loc, '../assets/sound/items/weapons/tap.ogg', 100, TRUE)
 
 /// A metal foam variant which produces slightly sturdier walls.
 /obj/effect/particle_effect/fluid/foam/metal/iron

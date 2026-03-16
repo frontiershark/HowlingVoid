@@ -1,6 +1,6 @@
 /obj/structure/spider/eggcluster
 	name = "egg cluster"
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	desc = "There's something alive in there, and sooner or later it's going to find its way out."
 	icon_state = "eggs"
 	/// Mob spawner handling the actual spawn of the spider
@@ -46,7 +46,7 @@
 	color = rgb(148, 0, 211)
 
 /obj/structure/spider/eggcluster/bloody
-	icon = 'icons/mob/simple/meteor_heart.dmi'
+	icon = '../assets/icons/mob/simple/meteor_heart.dmi'
 	icon_state = "eggs"
 	name = "bloody egg cluster"
 
@@ -56,7 +56,7 @@
 /obj/effect/mob_spawn/ghost_role/spider
 	name = "egg cluster"
 	desc = "They seem to pulse slightly with an inner life."
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	icon_state = "eggs"
 	move_resist = MOVE_FORCE_NORMAL
 	density = FALSE
@@ -174,7 +174,7 @@
 
 /obj/effect/mob_spawn/ghost_role/spider/bloody
 	name = "bloody egg cluster"
-	icon = 'icons/mob/simple/meteor_heart.dmi'
+	icon = '../assets/icons/mob/simple/meteor_heart.dmi'
 	icon_state = "eggs"
 	you_are_text = "You are a flesh spider."
 	flavour_text = "An abomination of nature set upon the station by changelings. Your only goal is to kill, terrorize, and survive."

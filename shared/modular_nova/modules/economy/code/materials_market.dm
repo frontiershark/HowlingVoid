@@ -8,6 +8,6 @@
 /obj/machinery/materials_market/item_interaction(mob/living/user, obj/item/stack/exportable, list/modifiers)
 	if(isstack(exportable))
 		say("Selling materials to the GMM is no longer available due to volatile logistics conditions in frontier space. Please export your materials via standard Union-NT cargo arrangements.")
-		playsound(src, 'sound/machines/scanner/scanbuzz.ogg', 25, FALSE)
+		playsound(src, '../assets/sound/machines/scanner/scanbuzz.ogg', 25, FALSE)
 		return TRUE
 	return ..()

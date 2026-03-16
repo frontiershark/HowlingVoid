@@ -52,7 +52,7 @@
 
 /obj/item/toy/dodgeball
 	name = "dodgeball"
-	icon = 'icons/obj/toys/balls.dmi'
+	icon = '../assets/icons/obj/toys/balls.dmi'
 	icon_state = "dodgeball"
 	inhand_icon_state = "dodgeball"
 	desc = "Used for playing the most violent and degrading of childhood games."
@@ -62,7 +62,7 @@
 	..()
 	if((ishuman(hit_atom)))
 		var/mob/living/carbon/M = hit_atom
-		playsound(src, 'sound/items/dodgeball.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/items/dodgeball.ogg', 50, TRUE)
 		M.apply_damage(10, STAMINA)
 		if(prob(5))
 			M.Paralyze(60)
@@ -75,7 +75,7 @@
 /obj/machinery/readybutton
 	name = "ready declaration device"
 	desc = "This device is used to declare ready. If all devices in an area are ready, the event will begin!"
-	icon = 'icons/obj/machines/wallmounts.dmi'
+	icon = '../assets/icons/obj/machines/wallmounts.dmi'
 	icon_state = "auth_off"
 	var/ready = 0
 	var/area/currentarea = null

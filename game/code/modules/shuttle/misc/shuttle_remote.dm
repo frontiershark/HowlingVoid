@@ -1,7 +1,7 @@
 /obj/item/shuttle_remote
 	name = "shuttle remote"
 	desc = "A remote to send away or call a shuttle."
-	icon = 'icons/obj/devices/remote.dmi'
+	icon = '../assets/icons/obj/devices/remote.dmi'
 	icon_state = "shuttleremote"
 	w_class = WEIGHT_CLASS_SMALL
 	/// if the docks may be changed
@@ -52,7 +52,7 @@
 	new_computer.remote_ref = WEAKREF(src)
 	computer_ref = WEAKREF(new_computer)
 	our_port = SSshuttle.getShuttle(new_computer.shuttleId)
-	playsound(src, 'sound/machines/beep/beep.ogg', 30)
+	playsound(src, '../assets/sound/machines/beep/beep.ogg', 30)
 	balloon_alert(user, "linked")
 	return ITEM_INTERACT_SUCCESS
 

@@ -55,7 +55,7 @@
 	taste_description = "an awful, strongly chemical taste"
 	color = "#270d03"
 	glass_price = DRINK_PRICE_HIGH
-	fallback_icon = 'icons/obj/drinks/drink_effects.dmi'
+	fallback_icon = '../assets/icons/obj/drinks/drink_effects.dmi'
 	fallback_icon_state = "failed_reaction_fallback"
 
 // Unique
@@ -80,7 +80,7 @@
 		if(!thing)
 			continue
 		affected_mob.put_in_hand(thing, index, forced = TRUE, ignore_anim = TRUE)
-		playsound(affected_mob, 'sound/effects/phasein.ogg', 20, TRUE)
+		playsound(affected_mob, '../assets/sound/effects/phasein.ogg', 20, TRUE)
 /*
 * Freezes the player in a block of ice, 1s = 1u
 * Will be removed when the required reagent is removed too

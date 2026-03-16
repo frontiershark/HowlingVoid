@@ -3,7 +3,7 @@
 /mob/living/basic/mega_arachnid
 	name = "mega arachnid"
 	desc = "Though physically imposing, it prefers to ambush its prey, and it will only engage with an already crippled opponent."
-	icon = 'icons/mob/simple/jungle/arachnid.dmi'
+	icon = '../assets/icons/mob/simple/jungle/arachnid.dmi'
 	icon_state = "arachnid"
 	icon_living = "arachnid"
 	icon_dead = "arachnid_dead"
@@ -30,7 +30,7 @@
 	mob_size = MOB_SIZE_LARGE
 
 	speak_emote = list("chitters")
-	attack_sound = 'sound/items/weapons/bladeslice.ogg'
+	attack_sound = '../assets/sound/items/weapons/bladeslice.ogg'
 	attack_vis_effect = ATTACK_EFFECT_SLASH
 	ai_controller = /datum/ai_controller/basic_controller/mega_arachnid
 	alpha = 40

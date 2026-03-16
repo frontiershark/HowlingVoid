@@ -62,8 +62,8 @@
 	name = "easter bunny suit"
 	desc = "Hop Hop Hop!"
 	icon_state = "bunnysuit"
-	icon = 'icons/obj/clothing/suits/costume.dmi'
-	worn_icon = 'icons/mob/clothing/suits/costume.dmi'
+	icon = '../assets/icons/obj/clothing/suits/costume.dmi'
+	worn_icon = '../assets/icons/mob/clothing/suits/costume.dmi'
 	inhand_icon_state = null
 	slowdown = -0.3
 	clothing_flags = THICKMATERIAL
@@ -84,9 +84,9 @@
 	icon_state = "egg"
 	resistance_flags = FLAMMABLE
 	w_class = WEIGHT_CLASS_TINY
-	icon = 'icons/obj/food/egg.dmi'
-	lefthand_file = 'icons/mob/inhands/items/food_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/food_righthand.dmi'
+	icon = '../assets/icons/obj/food/egg.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/food_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/food_righthand.dmi'
 	obj_flags = UNIQUE_RENAME
 
 /obj/item/surprise_egg/Initialize(mapload)
@@ -157,7 +157,7 @@
 /obj/item/food/scotchegg
 	name = "scotch egg"
 	desc = "A boiled egg wrapped in a delicious, seasoned meatball."
-	icon = 'icons/obj/food/egg.dmi'
+	icon = '../assets/icons/obj/food/egg.dmi'
 	icon_state = "scotchegg"
 	bite_consumption = 3
 	custom_materials = list(/datum/material/meat = MEATDISH_MATERIAL_AMOUNT)

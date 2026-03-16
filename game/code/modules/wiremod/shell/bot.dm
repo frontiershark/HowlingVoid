@@ -5,7 +5,7 @@
  */
 /obj/structure/bot
 	name = "bot"
-	icon = 'icons/obj/science/circuits.dmi'
+	icon = '../assets/icons/obj/science/circuits.dmi'
 	icon_state = "setup_medium_box"
 
 	density = FALSE

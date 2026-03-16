@@ -3,13 +3,13 @@
 /obj/item/evidencebag
 	name = "evidence bag"
 	desc = "An empty evidence bag."
-	icon = 'icons/obj/storage/storage.dmi'
+	icon = '../assets/icons/obj/storage/storage.dmi'
 	icon_state = "evidenceobj"
 	inhand_icon_state = ""
 	w_class = WEIGHT_CLASS_TINY
 	item_flags = NOBLUDGEON
-	drop_sound = 'sound/items/evidence_bag/evidence_bag_drop.ogg'
-	pickup_sound = 'sound/items/evidence_bag/evidence_bag_pickup.ogg'
+	drop_sound = '../assets/sound/items/evidence_bag/evidence_bag_drop.ogg'
+	pickup_sound = '../assets/sound/items/evidence_bag/evidence_bag_pickup.ogg'
 	sound_vary = TRUE
 
 /obj/item/evidencebag/Initialize(mapload)
@@ -17,8 +17,8 @@
 	create_storage(
 		max_slots = 1,
 		max_specific_storage = WEIGHT_CLASS_NORMAL,
-		rustle_sound = 'sound/items/evidence_bag/evidence_bag_zip.ogg',
-		remove_rustle_sound = 'sound/items/evidence_bag/evidence_bag_unzip.ogg',
+		rustle_sound = '../assets/sound/items/evidence_bag/evidence_bag_zip.ogg',
+		remove_rustle_sound = '../assets/sound/items/evidence_bag/evidence_bag_unzip.ogg',
 	)
 	atom_storage.allow_quick_gather = TRUE
 	atom_storage.collection_mode = COLLECT_ONE
@@ -70,5 +70,5 @@
 		return
 	user.visible_message(span_notice("[user] empties [src]."), span_notice("You empty [src]."),\
 	span_hear("You hear someone rustle around in a plastic bag, and remove something."))
-	playsound(src,'sound/items/evidence_bag/evidence_bag_unzip.ogg', 50, TRUE, SHORT_RANGE_SOUND_EXTRARANGE, ignore_walls = FALSE)
+	playsound(src,'../assets/sound/items/evidence_bag/evidence_bag_unzip.ogg', 50, TRUE, SHORT_RANGE_SOUND_EXTRARANGE, ignore_walls = FALSE)
 	atom_storage.remove_all()

@@ -4,7 +4,7 @@
 	actions_types = null
 
 	/// What do we play when the implantee deathgasps?
-	var/death_noise = 'sound/misc/sadtrombone.ogg'
+	var/death_noise = '../assets/sound/misc/sadtrombone.ogg'
 
 	implant_info = "Activates upon death. Plays a sad trombone sound."
 

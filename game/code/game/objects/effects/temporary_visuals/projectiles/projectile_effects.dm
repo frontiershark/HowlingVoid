@@ -1,6 +1,6 @@
 /obj/effect/projectile
 	name = "pew"
-	icon = 'icons/obj/weapons/guns/projectiles.dmi'
+	icon = '../assets/icons/obj/weapons/guns/projectiles.dmi'
 	icon_state = "nothing"
 	layer = HITSCAN_PROJECTILE_LAYER
 	anchored = TRUE

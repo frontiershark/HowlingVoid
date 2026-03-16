@@ -26,7 +26,7 @@
 	var/obj/structure/drain/drain_target = interacting_with
 	if(do_after(user, 2 SECONDS, target = interacting_with))
 		drain_target.deconstruct() //Let's not substract matter
-		playsound(get_turf(src), 'sound/machines/click.ogg', 50, TRUE)
+		playsound(get_turf(src), '../assets/sound/machines/click.ogg', 50, TRUE)
 		return ITEM_INTERACT_SUCCESS
 	return ITEM_INTERACT_BLOCKING
 

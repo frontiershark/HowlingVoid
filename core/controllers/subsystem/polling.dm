@@ -140,7 +140,7 @@ SUBSYSTEM_DEF(polling)
 		else if(!isnull(alert_pic))
 			poll_image = alert_pic
 		else
-			poll_image = image('icons/effects/effects.dmi', icon_state = "static")
+			poll_image = image('../assets/icons/effects/effects.dmi', icon_state = "static")
 
 		if(poll_image)
 			poll_image.layer = FLOAT_LAYER
@@ -166,9 +166,9 @@ SUBSYSTEM_DEF(polling)
 			if(polling_sound_pref != GHOST_POLL_PROMPT_DISABLED && polling_sound_volume)
 				var/polling_sound
 				if(polling_sound_pref == GHOST_POLL_PROMPT_1)
-					polling_sound = 'sound/misc/prompt1.ogg'
+					polling_sound = '../assets/sound/misc/prompt1.ogg'
 				else
-					polling_sound = 'sound/misc/prompt2.ogg'
+					polling_sound = '../assets/sound/misc/prompt2.ogg'
 				SEND_SOUND(candidate_mob, sound(polling_sound, volume = polling_sound_volume))
 
 			var/surrounding_icon

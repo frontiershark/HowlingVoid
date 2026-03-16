@@ -5,9 +5,9 @@
 		Additionally, you can click to fire the blades at a target, dealing damage and causing bleeding."
 	background_icon_state = "bg_heretic"
 	overlay_icon_state = "bg_heretic_border"
-	button_icon = 'icons/mob/actions/actions_ecult.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_ecult.dmi'
 	button_icon_state = "furious_steel"
-	sound = 'sound/items/weapons/guillotine.ogg'
+	sound = '../assets/sound/items/weapons/guillotine.ogg'
 
 	school = SCHOOL_FORBIDDEN
 	cooldown_time = 30 SECONDS
@@ -116,7 +116,7 @@
 
 /obj/projectile/floating_blade
 	name = "blade"
-	icon = 'icons/effects/eldritch.dmi'
+	icon = '../assets/icons/effects/eldritch.dmi'
 	icon_state = "dio_knife"
 	speed = 0.5
 	damage = 25
@@ -151,7 +151,7 @@
 
 /obj/projectile/floating_blade/haunted
 	name = "ritual blade"
-	icon = 'icons/obj/weapons/khopesh.dmi'
+	icon = '../assets/icons/obj/weapons/khopesh.dmi'
 	icon_state = "render"
 	damage = 35
 	wound_bonus = 25
@@ -171,9 +171,9 @@
 		Additionally, you can click to fire the blades at a target, dealing damage and causing bleeding."
 	background_icon_state = "bg_heretic" // kept intentionally
 	overlay_icon_state = "bg_cult_border"
-	button_icon = 'icons/mob/actions/actions_ecult.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_ecult.dmi'
 	button_icon_state = "cursed_steel"
-	sound = 'sound/items/weapons/guillotine.ogg'
+	sound = '../assets/sound/items/weapons/guillotine.ogg'
 
 	cooldown_time = 40 SECONDS
 	invocation = "IA!"

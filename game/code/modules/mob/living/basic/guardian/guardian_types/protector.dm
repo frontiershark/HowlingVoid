@@ -42,9 +42,9 @@
 /datum/action/cooldown/mob_cooldown/protector_shield
 	name = "Protection Mode"
 	desc = "Enter a defensive stance which slows you down and reduces your damage, but makes you almost invincible."
-	button_icon = 'icons/effects/effects.dmi'
+	button_icon = '../assets/icons/effects/effects.dmi'
 	button_icon_state = "shield-old"
-	background_icon = 'icons/hud/guardian.dmi'
+	background_icon = '../assets/icons/hud/guardian.dmi'
 	background_icon_state = "base"
 	cooldown_time = 1 SECONDS
 	click_to_activate = FALSE
@@ -79,7 +79,7 @@
 	if (isguardian(owner))
 		var/mob/living/basic/guardian/guardian_owner = owner
 		overlay_colour = guardian_owner.guardian_colour
-	shield_overlay = mutable_appearance('icons/effects/effects.dmi', "shield-grey")
+	shield_overlay = mutable_appearance('../assets/icons/effects/effects.dmi', "shield-grey")
 	shield_overlay.color = overlay_colour
 
 	owner.melee_damage_lower -= damage_penalty
@@ -120,6 +120,6 @@
 	SIGNAL_HANDLER
 	if (amount <= 0 && !QDELETED(our_mob))
 		return
-	var/image/flash_overlay = new('icons/effects/effects.dmi', owner, "shield-flash", dir = pick(GLOB.cardinals))
+	var/image/flash_overlay = new('../assets/icons/effects/effects.dmi', owner, "shield-flash", dir = pick(GLOB.cardinals))
 	flash_overlay.color = overlay_colour
 	owner.flick_overlay_view(flash_overlay, 0.5 SECONDS)

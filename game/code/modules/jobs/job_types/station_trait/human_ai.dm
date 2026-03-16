@@ -153,11 +153,11 @@
 /obj/item/secure_camera_console_pod
 	name = "pre-packaged advanced camera control"
 	desc = "A pre-packaged camera console used for all your AI stuff, programmed to only active in the SAT."
-	icon = 'icons/obj/devices/remote.dmi'
+	icon = '../assets/icons/obj/devices/remote.dmi'
 	icon_state = "botpad_controller"
 	inhand_icon_state = "radio"
-	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/devices_righthand.dmi'
 
 /obj/item/secure_camera_console_pod/attack_self(mob/user, modifiers)
 	. = ..()
@@ -169,6 +169,6 @@
 	user.balloon_alert(user, "unpacking...")
 	if(!do_after(user, 5 SECONDS, src))
 		return
-	playsound(src, 'sound/items/tools/drill_use.ogg', 40, TRUE)
+	playsound(src, '../assets/sound/items/tools/drill_use.ogg', 40, TRUE)
 	new /obj/machinery/computer/camera_advanced/human_ai(get_turf(src))
 	qdel(src)

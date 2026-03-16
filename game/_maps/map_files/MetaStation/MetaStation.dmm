@@ -64637,8 +64637,8 @@
 /area/station/security/courtroom)
 "vWO" = (
 /obj/machinery/door/airlock/wood{
-	doorClose = 'sound/effects/doorcreaky.ogg';
-	doorOpen = 'sound/effects/doorcreaky.ogg';
+	doorClose = '../assets/sound/effects/doorcreaky.ogg';
+	doorOpen = '../assets/sound/effects/doorcreaky.ogg';
 	name = "The Gobetting Barmaid"
 	},
 /obj/effect/mapping_helpers/airlock/abandoned,

@@ -1,7 +1,7 @@
 /obj/machinery/abductor/experiment
 	name = "experimentation machine"
 	desc = "A large man-sized tube sporting a complex array of surgical machinery."
-	icon = 'icons/obj/antags/abductor.dmi'
+	icon = '../assets/icons/obj/antags/abductor.dmi'
 	icon_state = "experiment-open"
 	density = FALSE
 	state_open = TRUE
@@ -164,12 +164,12 @@
 		if(point_reward > 0)
 			open_machine()
 			send_back(occupant)
-			playsound(src.loc, 'sound/machines/ding.ogg', 50, TRUE)
+			playsound(src.loc, '../assets/sound/machines/ding.ogg', 50, TRUE)
 			points += point_reward
 			credits += point_reward
 			return "Experiment successful! [point_reward] new data-points collected."
 		else
-			playsound(src.loc, 'sound/machines/buzz/buzz-sigh.ogg', 50, TRUE)
+			playsound(src.loc, '../assets/sound/machines/buzz/buzz-sigh.ogg', 50, TRUE)
 			return "Experiment failed! No replacement organ detected."
 	else
 		say("Brain activity nonexistent - disposing sample...")

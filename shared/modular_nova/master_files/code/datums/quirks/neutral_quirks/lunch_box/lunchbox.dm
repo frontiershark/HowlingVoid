@@ -145,7 +145,7 @@ GLOBAL_LIST_INIT(possible_player_lunchbox_design_choice, list(
 
 /datum/preference/choiced/lunchbox_design/icon_for(value)
 	if (value == "Random")
-		return uni_icon('icons/effects/random_spawners.dmi', "questionmark")
+		return uni_icon('../assets/icons/effects/random_spawners.dmi', "questionmark")
 	else
 		var/obj/item/storage/toolbox/selected_type = GLOB.possible_player_lunchbox_design_choice[value]
 		return uni_icon(selected_type::icon, selected_type::icon_state)
@@ -176,7 +176,7 @@ GLOBAL_LIST_INIT(possible_player_lunchbox_design_choice, list(
 
 /datum/preference/choiced/lunchbox_meal_choice/icon_for(value)
 	if (value == "Random")
-		return uni_icon('icons/effects/random_spawners.dmi', "questionmark")
+		return uni_icon('../assets/icons/effects/random_spawners.dmi', "questionmark")
 	else
 		var/obj/item/food/selected_type = GLOB.possible_player_lunchbox_meal_choice[value]
 		return uni_icon(selected_type::icon, selected_type::icon_state)
@@ -282,7 +282,7 @@ GLOBAL_LIST_INIT(possible_player_lunchbox_meal_choice, list(
 
 /datum/preference/choiced/lunchbox_first_snack_choice/icon_for(value)
 	if (value == "Random")
-		return uni_icon('icons/effects/random_spawners.dmi', "questionmark")
+		return uni_icon('../assets/icons/effects/random_spawners.dmi', "questionmark")
 	else
 		var/obj/item/food/selected_type = GLOB.possible_player_lunchbox_snack_choice[value]
 		return uni_icon(selected_type::icon, selected_type::icon_state)
@@ -396,7 +396,7 @@ GLOBAL_LIST_INIT(possible_player_lunchbox_snack_choice, list(
 
 /datum/preference/choiced/lunchbox_second_snack_choice/icon_for(value)
 	if (value == "Random")
-		return uni_icon('icons/effects/random_spawners.dmi', "questionmark")
+		return uni_icon('../assets/icons/effects/random_spawners.dmi', "questionmark")
 	else
 		var/obj/item/food/selected_type = GLOB.possible_player_lunchbox_snack_choice[value]
 		return uni_icon(selected_type::icon, selected_type::icon_state)
@@ -427,7 +427,7 @@ GLOBAL_LIST_INIT(possible_player_lunchbox_snack_choice, list(
 
 /datum/preference/choiced/lunchbox_drink_choice/icon_for(value)
 	if (value == "Random")
-		return uni_icon('icons/effects/random_spawners.dmi', "questionmark")
+		return uni_icon('../assets/icons/effects/random_spawners.dmi', "questionmark")
 	else
 		var/obj/item/food/selected_type = GLOB.possible_player_lunchbox_drink_choice[value]
 		return uni_icon(selected_type::icon, selected_type::icon_state)
@@ -515,7 +515,7 @@ GLOBAL_LIST_INIT(possible_player_lunchbox_drink_choice, list(
 
 /datum/preference/choiced/lunchbox_desert_choice/icon_for(value)
 	if (value == "Random")
-		return uni_icon('icons/effects/random_spawners.dmi', "questionmark")
+		return uni_icon('../assets/icons/effects/random_spawners.dmi', "questionmark")
 	else
 		var/obj/item/food/selected_type = GLOB.possible_player_lunchbox_desert_choice[value]
 		return uni_icon(selected_type::icon, selected_type::icon_state)

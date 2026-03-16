@@ -7,7 +7,7 @@
 /mob/living/basic/revenant
 	name = "revenant"
 	desc = "A malevolent spirit."
-	icon = 'icons/mob/simple/mob.dmi'
+	icon = '../assets/icons/mob/simple/mob.dmi'
 	icon_state = "revenant_idle"
 	mob_biotypes = MOB_SPIRIT | MOB_UNDEAD
 	incorporeal_move = INCORPOREAL_MOVE_JAUNT
@@ -126,7 +126,7 @@
 
 	generated_objectives_and_spells = TRUE
 	mind.set_assigned_role(SSjob.get_job_type(/datum/job/revenant))
-	SEND_SOUND(src, sound('sound/effects/ghost.ogg'))
+	SEND_SOUND(src, sound('../assets/sound/effects/ghost.ogg'))
 	mind.add_antag_datum(/datum/antagonist/revenant)
 	return TRUE
 
@@ -317,7 +317,7 @@
 
 	SetInvisibility(INVISIBILITY_NONE, id=type)
 	icon_state = "revenant_draining"
-	playsound(src, 'sound/effects/screech.ogg', 100, TRUE)
+	playsound(src, '../assets/sound/effects/screech.ogg', 100, TRUE)
 
 	animate(src, alpha = 0, time = 3 SECONDS)
 	addtimer(CALLBACK(src, PROC_REF(move_to_ectoplasm)), 3 SECONDS)

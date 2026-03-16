@@ -7,9 +7,9 @@ LINEN BINS
 /obj/item/bedsheet
 	name = "bedsheet"
 	desc = "A surprisingly soft linen bedsheet."
-	icon = 'icons/obj/bedsheets.dmi'
-	lefthand_file = 'icons/mob/inhands/items/bedsheet_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/bedsheet_righthand.dmi'
+	icon = '../assets/icons/obj/bedsheets.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/bedsheet_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/bedsheet_righthand.dmi'
 	icon_state = "sheetwhite"
 	inhand_icon_state = "sheetwhite"
 	drop_sound = SFX_CLOTH_DROP
@@ -573,7 +573,7 @@ LINEN BINS
 /obj/structure/bedsheetbin
 	name = "linen bin"
 	desc = "It looks rather cosy."
-	icon = 'icons/obj/structures.dmi'
+	icon = '../assets/icons/obj/structures.dmi'
 	icon_state = "linenbin-full"
 	base_icon_state = "linenbin"
 	anchored = TRUE

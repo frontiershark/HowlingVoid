@@ -1,6 +1,6 @@
 /datum/action/cooldown/mob_cooldown/create_legion_turrets
 	name = "Create Sentinels"
-	button_icon = 'icons/mob/simple/lavaland/lavaland_monsters.dmi'
+	button_icon = '../assets/icons/mob/simple/lavaland/lavaland_monsters.dmi'
 	button_icon_state = "legion_turret"
 	desc = "Create legion sentinels that fire at any enemies."
 	cooldown_time = 2 SECONDS
@@ -18,7 +18,7 @@
 
 /// Creates new legion turrets around the owner between the minimum and maximum
 /datum/action/cooldown/mob_cooldown/create_legion_turrets/proc/create(atom/target)
-	playsound(owner, 'sound/effects/magic/RATTLEMEBONES.ogg', 100, TRUE)
+	playsound(owner, '../assets/sound/effects/magic/RATTLEMEBONES.ogg', 100, TRUE)
 	var/list/possible_locations = list()
 	for(var/turf/checked_turf in oview(owner, 4)) //Only place the turrets on open turfs
 		if(checked_turf.is_blocked_turf())
@@ -32,7 +32,7 @@
 /obj/structure/legionturret
 	name = "\improper Legion sentinel"
 	desc = "The eye pierces your soul."
-	icon = 'icons/mob/simple/lavaland/lavaland_monsters.dmi'
+	icon = '../assets/icons/mob/simple/lavaland/lavaland_monsters.dmi'
 	icon_state = "legion_turret"
 	light_power = 0.5
 	light_range = 2
@@ -78,8 +78,8 @@
 		return
 	//Now we generate the tracer.
 	var/angle = get_angle(our_turf, target_turf)
-	our_turf.Beam(target_turf, 'icons/effects/beam.dmi', "blood_light", time = shot_delay)
-	playsound(src, 'sound/machines/airlock/airlockopen.ogg', 100, TRUE)
+	our_turf.Beam(target_turf, '../assets/icons/effects/beam.dmi', "blood_light", time = shot_delay)
+	playsound(src, '../assets/sound/machines/airlock/airlockopen.ogg', 100, TRUE)
 	addtimer(CALLBACK(src, PROC_REF(fire_beam), angle), shot_delay)
 
 /// Called shot_delay after the turret shot the tracer. Shoots a projectile into the same direction.
@@ -87,14 +87,14 @@
 	var/obj/projectile/ouchie = new projectile_type(loc)
 	ouchie.firer = src
 	ouchie.fire(angle)
-	playsound(src, 'sound/effects/bin/bin_close.ogg', 100, TRUE)
+	playsound(src, '../assets/sound/effects/bin/bin_close.ogg', 100, TRUE)
 	QDEL_IN(src, 0.5 SECONDS)
 
 /// Used for the legion turret.
 /obj/projectile/beam/legion
 	name = "blood pulse"
 	icon_state = null
-	hitsound = 'sound/effects/magic/magic_missile.ogg'
+	hitsound = '../assets/sound/effects/magic/magic_missile.ogg'
 	damage = 19
 	range = 6
 	light_color = COLOR_SOFT_RED
@@ -107,5 +107,5 @@
 
 /// Used for the legion turret beam.
 /obj/effect/projectile/tracer/legion
-	icon = 'icons/effects/beam.dmi'
+	icon = '../assets/icons/effects/beam.dmi'
 	icon_state = "blood"

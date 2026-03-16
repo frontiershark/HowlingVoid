@@ -99,7 +99,7 @@
 
 	if(play_wabbajack)
 		to_chat(hallucinator, span_hear("...wabbajack...wabbajack..."))
-		hallucinator.playsound_local(get_turf(hallucinator), 'sound/effects/magic/staff_change.ogg', 50, TRUE)
+		hallucinator.playsound_local(get_turf(hallucinator), '../assets/sound/effects/magic/staff_change.ogg', 50, TRUE)
 
 	if(duration > 0)
 		QDEL_IN(src, duration)
@@ -179,17 +179,17 @@
 	random_hallucination_weight = 2
 
 /datum/hallucination/delusion/preset/nothing
-	delusion_icon_file = 'icons/effects/effects.dmi'
+	delusion_icon_file = '../assets/icons/effects/effects.dmi'
 	delusion_icon_state = "nothing"
 	delusion_name = "..."
 
 /datum/hallucination/delusion/preset/curse
-	delusion_icon_file = 'icons/mob/simple/lavaland/lavaland_monsters.dmi'
+	delusion_icon_file = '../assets/icons/mob/simple/lavaland/lavaland_monsters.dmi'
 	delusion_icon_state = "curseblob"
 	delusion_name = "???"
 
 /datum/hallucination/delusion/preset/monkey
-	delusion_icon_file = 'icons/mob/human/human.dmi'
+	delusion_icon_file = '../assets/icons/mob/human/human.dmi'
 	delusion_icon_state = "monkey"
 	delusion_name = "monkey"
 
@@ -198,42 +198,42 @@
 	return ..()
 
 /datum/hallucination/delusion/preset/corgi
-	delusion_icon_file = 'icons/mob/simple/pets.dmi'
+	delusion_icon_file = '../assets/icons/mob/simple/pets.dmi'
 	delusion_icon_state = "corgi"
 	delusion_name = "corgi"
 
 /datum/hallucination/delusion/preset/carp
-	delusion_icon_file = 'icons/mob/simple/carp.dmi'
+	delusion_icon_file = '../assets/icons/mob/simple/carp.dmi'
 	delusion_icon_state = "carp"
 	delusion_name = "carp"
 
 /datum/hallucination/delusion/preset/skeleton
-	delusion_icon_file = 'icons/mob/human/human.dmi'
+	delusion_icon_file = '../assets/icons/mob/human/human.dmi'
 	delusion_icon_state = "skeleton"
 	delusion_name = "skeleton"
 
 /datum/hallucination/delusion/preset/zombie
-	delusion_icon_file = 'icons/mob/human/human.dmi'
+	delusion_icon_file = '../assets/icons/mob/human/human.dmi'
 	delusion_icon_state = "zombie"
 	delusion_name = "zombie"
 
 /datum/hallucination/delusion/preset/demon
-	delusion_icon_file = 'icons/mob/simple/demon.dmi'
+	delusion_icon_file = '../assets/icons/mob/simple/demon.dmi'
 	delusion_icon_state = "slaughter_demon"
 	delusion_name = "demon"
 
 /datum/hallucination/delusion/preset/cyborg
-	delusion_icon_file = 'icons/mob/silicon/robots.dmi'
+	delusion_icon_file = '../assets/icons/mob/silicon/robots.dmi'
 	delusion_icon_state = "robot"
 	delusion_name = "cyborg"
 	play_wabbajack = TRUE
 
 /datum/hallucination/delusion/preset/cyborg/make_delusion_image(mob/over_who)
 	. = ..()
-	hallucinator.playsound_local(get_turf(over_who), 'sound/mobs/non-humanoids/cyborg/liveagain.ogg', 75, TRUE)
+	hallucinator.playsound_local(get_turf(over_who), '../assets/sound/mobs/non-humanoids/cyborg/liveagain.ogg', 75, TRUE)
 
 /datum/hallucination/delusion/preset/ghost
-	delusion_icon_file = 'icons/mob/simple/mob.dmi'
+	delusion_icon_file = '../assets/icons/mob/simple/mob.dmi'
 	delusion_icon_state = "ghost"
 	delusion_name = "ghost"
 	affects_others = TRUE
@@ -288,7 +288,7 @@
 
 /// Hallucination used by the nightmare vision goggles to turn everyone except you into mares
 /datum/hallucination/delusion/preset/mare
-	delusion_icon_file = 'icons/obj/clothing/masks.dmi'
+	delusion_icon_file = '../assets/icons/obj/clothing/masks.dmi'
 	delusion_icon_state = "horsehead"
 	delusion_name = "mare"
 	affects_us = FALSE
@@ -297,7 +297,7 @@
 
 /// Hallucination used by the path of moon heretic to turn everyone into a lunar mass
 /datum/hallucination/delusion/preset/moon
-	delusion_icon_file = 'icons/mob/nonhuman-player/eldritch_mobs.dmi'
+	delusion_icon_file = '../assets/icons/mob/nonhuman-player/eldritch_mobs.dmi'
 	delusion_icon_state = "moon_mass"
 	delusion_name = "moon"
 	duration = 15 SECONDS

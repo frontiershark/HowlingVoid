@@ -176,7 +176,7 @@
  * cultist - the mob doing the destroying
  */
 /datum/component/cult_ritual_item/proc/do_destroy_girder(obj/structure/girder/cult/cult_girder, mob/living/cultist)
-	playsound(cult_girder, 'sound/items/weapons/resonator_blast.ogg', 40, TRUE, ignore_walls = FALSE)
+	playsound(cult_girder, '../assets/sound/items/weapons/resonator_blast.ogg', 40, TRUE, ignore_walls = FALSE)
 	cultist.visible_message(
 		span_warning("[cultist] strikes [cult_girder] with [parent]!"),
 		span_notice("You demolish [cult_girder].")
@@ -191,7 +191,7 @@
  * cultist - the mob doing the unanchoring.
  */
 /datum/component/cult_ritual_item/proc/do_unanchor_structure(obj/structure/cult_structure, mob/living/cultist)
-	playsound(cult_structure, 'sound/items/deconstruct.ogg', 30, TRUE, ignore_walls = FALSE)
+	playsound(cult_structure, '../assets/sound/items/deconstruct.ogg', 30, TRUE, ignore_walls = FALSE)
 	cult_structure.set_anchored(!cult_structure.anchored)
 	to_chat(cultist, span_notice("You [cult_structure.anchored ? "":"un"]secure \the [cult_structure] [cult_structure.anchored ? "to":"from"] the floor."))
 
@@ -211,7 +211,7 @@
 		if(!can_scrape_rune(rune, cultist))
 			return
 
-	SEND_SOUND(cultist, 'sound/items/sheath.ogg')
+	SEND_SOUND(cultist, '../assets/sound/items/sheath.ogg')
 	if(!do_after(cultist, rune.erase_time, target = rune))
 		return
 
@@ -323,7 +323,7 @@
 	if(scribe_failed)
 		failed = CALLBACK(GLOBAL_PROC, scribe_failed)
 
-	SEND_SOUND(cultist, sound('sound/items/weapons/slice.ogg', 0, 1, 10))
+	SEND_SOUND(cultist, sound('../assets/sound/items/weapons/slice.ogg', 0, 1, 10))
 	if(!do_after(cultist, scribe_mod, target = get_turf(cultist), timed_action_flags = IGNORE_SLOWDOWNS))
 		cleanup_shields()
 		failed?.Invoke()
@@ -375,7 +375,7 @@
 	var/static/cult_music_played = FALSE
 	priority_announce(
 		text = "Figments from an eldritch god are being summoned by [cultist.real_name] into [summon_location.get_original_area_name()] from an unknown dimension. Disrupt the ritual at all costs!",
-		sound = cult_music_played ? 'sound/announcer/notice/notice3.ogg' : 'sound/music/antag/bloodcult/bloodcult_scribe.ogg',
+		sound = cult_music_played ? '../assets/sound/announcer/notice/notice3.ogg' : '../assets/sound/music/antag/bloodcult/bloodcult_scribe.ogg',
 		sender_override = "[command_name()] Higher Dimensional Affairs",
 		has_important_message = TRUE,
 	)

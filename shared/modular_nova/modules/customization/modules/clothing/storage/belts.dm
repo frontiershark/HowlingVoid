@@ -76,7 +76,7 @@
 	if(contents.len == 2)
 		var/obj/item/drawn_item = contents[2]
 		add_fingerprint(user)
-		playsound(src, 'sound/items/unsheath.ogg', 50, TRUE, -5)
+		playsound(src, '../assets/sound/items/unsheath.ogg', 50, TRUE, -5)
 		if(!user.put_in_hands(drawn_item))
 			to_chat(user, span_notice("You fumble for [drawn_item] and it falls on the floor."))
 			update_appearance()
@@ -130,7 +130,7 @@
 /obj/item/storage/belt/holster/thigh
 	name = "thigh holster"
 	desc = "A fine leather holster, fastened to the hip and attached to a belt. Can hold a handgun and some ammo."
-	icon = 'icons/map_icons/items/_item.dmi'
+	icon = '../assets/icons/map_icons/items/_item.dmi'
 	icon_state = "/obj/item/storage/belt/holster/thigh"
 	post_init_icon_state = "cowboy_belt"
 	worn_icon_state = "cowboy_belt"

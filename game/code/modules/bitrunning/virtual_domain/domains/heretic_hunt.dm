@@ -57,7 +57,7 @@
 	else
 		rune.balloon_alert_to_viewers("sacrifice accepted")
 	flick("[rune.icon_state]_active", rune)
-	playsound(rune, 'sound/effects/magic/castsummon.ogg', 50, TRUE, extrarange = SILENCED_SOUND_EXTRARANGE, falloff_exponent = 10, ignore_walls = FALSE)
+	playsound(rune, '../assets/sound/effects/magic/castsummon.ogg', 50, TRUE, extrarange = SILENCED_SOUND_EXTRARANGE, falloff_exponent = 10, ignore_walls = FALSE)
 
 /datum/outfit/virtual_domain_heretic
 	name = "Virtual Domain Heretic"
@@ -133,7 +133,7 @@
 	desc = "How do you do, fellow crewmen?"
 	mob_biotypes = MOB_ORGANIC|MOB_HUMANOID
 	faction = list(FACTION_HOSTILE, "vdom_fake_crew")
-	icon = 'icons/mob/simple/simple_human.dmi'
+	icon = '../assets/icons/mob/simple/simple_human.dmi'
 	gender = MALE
 	basic_mob_flags = DEL_ON_DEATH
 
@@ -182,7 +182,7 @@
 	name = "engineer"
 	death_spawner = /obj/effect/mob_spawn/corpse/human/engineer
 	weapon = /obj/item/weldingtool
-	attack_sound = 'sound/items/tools/welder.ogg'
+	attack_sound = '../assets/sound/items/tools/welder.ogg'
 	melee_damage_type = BURN
 	damage_coeff = list(BRUTE = 1, BURN = 0.9, TOX = 1, STAMINA = 1, OXY = 1)
 
@@ -220,7 +220,7 @@
 
 /mob/living/basic/fake_crewman/boss/ce/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/ranged_attacks, /obj/item/ammo_casing/energy/plasma/adv, projectile_sound = 'sound/items/weapons/plasma_cutter.ogg', cooldown_time = 1.6 SECONDS)
+	AddComponent(/datum/component/ranged_attacks, /obj/item/ammo_casing/energy/plasma/adv, projectile_sound = '../assets/sound/items/weapons/plasma_cutter.ogg', cooldown_time = 1.6 SECONDS)
 
 /mob/living/basic/fake_crewman/boss/hos
 	name = "head of security"
@@ -231,4 +231,4 @@
 
 /mob/living/basic/fake_crewman/boss/hos/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/ranged_attacks, /obj/item/ammo_casing/energy/laser, projectile_sound = 'sound/items/weapons/laser.ogg', cooldown_time = 1.2 SECONDS)
+	AddComponent(/datum/component/ranged_attacks, /obj/item/ammo_casing/energy/laser, projectile_sound = '../assets/sound/items/weapons/laser.ogg', cooldown_time = 1.2 SECONDS)

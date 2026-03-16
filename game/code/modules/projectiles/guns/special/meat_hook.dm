@@ -9,9 +9,9 @@
 	icon_state = "hook"
 	inhand_icon_state = "hook"
 	icon_angle = 45
-	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
-	fire_sound = 'sound/items/weapons/batonextend.ogg'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/melee_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/melee_righthand.dmi'
+	fire_sound = '../assets/sound/items/weapons/batonextend.ogg'
 	pinless = TRUE
 	max_charges = 1
 	item_flags = NEEDS_PERMIT | NOBLUDGEON
@@ -38,7 +38,7 @@
 
 	playsound(get_turf(src), fire_sound, 50, TRUE, -1)
 	user.visible_message(span_suicide("[user] is using the [src] on their [user.p_their()] head! It looks like [user.p_theyre()] trying to commit suicide!"))
-	playsound(get_turf(src), 'sound/items/weapons/bladeslice.ogg', 70)
+	playsound(get_turf(src), '../assets/sound/items/weapons/bladeslice.ogg', 70)
 	removable.dismember(silent = FALSE)
 	return BRUTELOSS
 
@@ -52,16 +52,16 @@
 /obj/projectile/hook
 	name = "hook"
 	icon_state = "hook"
-	icon = 'icons/obj/mining_zones/artefacts.dmi'
+	icon = '../assets/icons/obj/mining_zones/artefacts.dmi'
 	pass_flags = PASSTABLE
 	damage = 20
 	stamina = 20
 	armour_penetration = 60
 	damage_type = BRUTE
-	hitsound = 'sound/effects/splat.ogg'
+	hitsound = '../assets/sound/effects/splat.ogg'
 	/// The chain we send out while we are in motion, referred to as "initial" to not get confused with the chain we use to reel the victim in.
 	var/datum/beam/initial_chain
-	var/chain_icon = 'icons/effects/beam.dmi' // NOVA EDIT ADDITION
+	var/chain_icon = '../assets/icons/effects/beam.dmi' // NOVA EDIT ADDITION
 
 /obj/projectile/hook/fire(setAngle)
 	if(firer)

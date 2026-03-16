@@ -20,7 +20,7 @@
 	AddComponent(\
 		/datum/component/ranged_attacks,\
 		projectile_type = /obj/projectile/guardian,\
-		projectile_sound = 'sound/effects/hit_on_shattered_glass.ogg',\
+		projectile_sound = '../assets/sound/effects/hit_on_shattered_glass.ogg',\
 		cooldown_time = 0.1 SECONDS, \
 	)
 	AddComponent(/datum/component/ranged_mob_full_auto, autofire_shot_delay = 0.1 SECONDS)
@@ -116,9 +116,9 @@
 /datum/action/cooldown/mob_cooldown/guardian_alarm_snare
 	name = "Surveillance Snare"
 	desc = "Place an invisible snare which will alert you when it is crossed."
-	button_icon = 'icons/mob/actions/actions_ecult.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_ecult.dmi'
 	button_icon_state = "eye"
-	background_icon = 'icons/hud/guardian.dmi'
+	background_icon = '../assets/icons/hud/guardian.dmi'
 	background_icon_state = "base"
 	cooldown_time = 2 SECONDS
 	melee_cooldown_time = 0

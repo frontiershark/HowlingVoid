@@ -1,11 +1,11 @@
 /obj/item/beacon
 	name = "\improper tracking beacon"
 	desc = "A beacon used by a teleporter."
-	icon = 'icons/obj/devices/tracker.dmi'
+	icon = '../assets/icons/obj/devices/tracker.dmi'
 	icon_state = "beacon"
 	inhand_icon_state = "beacon"
-	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/devices_righthand.dmi'
 	obj_flags = UNIQUE_RENAME
 	var/enabled = TRUE
 	var/renamed = FALSE

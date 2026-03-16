@@ -7,7 +7,7 @@
 /obj/machinery/mailsorter
 	name = "mail sorter"
 	desc = "A large mail sorting unit. Sorting mail since 1987!"
-	icon = 'icons/obj/machines/mailsorter.dmi'
+	icon = '../assets/icons/obj/machines/mailsorter.dmi'
 	icon_state = "mailsorter"
 	base_icon_state = "mailsorter"
 	layer = BELOW_OBJ_LAYER
@@ -36,9 +36,9 @@
 		DEPARTMENT_COMMAND,
 	)
 	var/static/list/choices = list(
-		"Eject" = icon('icons/hud/radial.dmi', "radial_eject"),
-		"Dump" = icon('icons/hud/radial.dmi', "mail_dump"),
-		"Sort" = icon('icons/hud/radial.dmi', "mail_sort"),
+		"Eject" = icon('../assets/icons/hud/radial.dmi', "radial_eject"),
+		"Dump" = icon('../assets/icons/hud/radial.dmi', "mail_dump"),
+		"Sort" = icon('../assets/icons/hud/radial.dmi', "mail_sort"),
 	)
 
 /// Steps one tile in the `output_dir`. Returns `turf`.
@@ -118,7 +118,7 @@
 		if ("Eject")
 			pick_mail(user)
 		if ("Dump")
-			playsound(src, 'sound/machines/buzz/buzz-sigh.ogg', 20, TRUE)
+			playsound(src, '../assets/sound/machines/buzz/buzz-sigh.ogg', 20, TRUE)
 			to_chat(user, span_notice("[src] dumps [length(mail_list)] envelope\s on the floor."))
 			dump_all_mail()
 		if ("Sort")
@@ -131,7 +131,7 @@
 		return
 	currentstate = STATE_SORTING
 	update_appearance(UPDATE_OVERLAYS)
-	playsound(src, 'sound/machines/mail_sort.ogg', 20, TRUE)
+	playsound(src, '../assets/sound/machines/mail_sort.ogg', 20, TRUE)
 	addtimer(CALLBACK(src, PROC_REF(continue_sort), user, sorting_dept), 5 SECONDS)
 
 /// Sorts the mail based on the picked department. Ejects the sorted envelopes onto the `unload_turf`.
@@ -161,13 +161,13 @@
 	if (length(sorted_mail) == 0)
 		currentstate = STATE_NO
 		update_appearance(UPDATE_OVERLAYS)
-		playsound(src, 'sound/machines/buzz/buzz-sigh.ogg', 20, TRUE)
+		playsound(src, '../assets/sound/machines/buzz/buzz-sigh.ogg', 20, TRUE)
 		say("No mail for the following department: [sorting_dept].")
 	else
 		currentstate = STATE_YES
 		update_appearance(UPDATE_OVERLAYS)
 		say("[sorted] envelope\s sorted successfully.")
-		playsound(src, 'sound/machines/ping.ogg', 20, TRUE)
+		playsound(src, '../assets/sound/machines/ping.ogg', 20, TRUE)
 		to_chat(user, span_notice("[src] ejects [length(sorted_mail)] envelope\s."))
 		var/turf/unload_turf = get_unload_turf()
 		for (var/obj/item/mail/mail_in_list in sorted_mail)
@@ -179,10 +179,10 @@
 /// Informs the player of the amount of processed envelopes.
 /obj/machinery/mailsorter/proc/check_sorted(mob/user, unable_to_sort, total_to_sort)
 	if (unable_to_sort > 0)
-		playsound(src, 'sound/machines/buzz/buzz-sigh.ogg', 20, TRUE)
+		playsound(src, '../assets/sound/machines/buzz/buzz-sigh.ogg', 20, TRUE)
 		say("Couldn't sort [unable_to_sort] envelope\s.")
 	else
-		playsound(src, 'sound/machines/ping.ogg', 20, TRUE)
+		playsound(src, '../assets/sound/machines/ping.ogg', 20, TRUE)
 		say("[total_to_sort] envelope\s processed.")
 	addtimer(CALLBACK(src, PROC_REF(update_state_after_sorting)), 1 SECONDS)
 
@@ -233,7 +233,7 @@
 		return
 	currentstate = STATE_SORTING
 	update_appearance(UPDATE_OVERLAYS)
-	playsound(src, 'sound/machines/mail_sort.ogg', 20, TRUE)
+	playsound(src, '../assets/sound/machines/mail_sort.ogg', 20, TRUE)
 	addtimer(CALLBACK(src, PROC_REF(pick_envelope), user, mail_throw), 50)
 
 /// Ejects a single envelope the player has picked onto the `unload_turf`.
@@ -275,7 +275,7 @@
 	if(!powered())
 		return
 	if(!(machine_stat & BROKEN))
-		var/image/mail_output = image(icon='icons/obj/doors/airlocks/station/overlays.dmi', icon_state="unres_[output_dir]")
+		var/image/mail_output = image(icon='../assets/icons/obj/doors/airlocks/station/overlays.dmi', icon_state="unres_[output_dir]")
 		switch(output_dir)
 			if(NORTH)
 				mail_output.pixel_z = 32

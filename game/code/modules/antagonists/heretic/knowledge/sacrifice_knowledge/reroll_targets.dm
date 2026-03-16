@@ -13,7 +13,7 @@
 		/obj/item/clothing/under = 1,
 	)
 	cost = 1
-	research_tree_icon_path = 'icons/mob/actions/actions_animal.dmi'
+	research_tree_icon_path = '../assets/icons/mob/actions/actions_animal.dmi'
 	research_tree_icon_state = "gaze"
 	is_shop_only = TRUE
 	drafting_tier = 2

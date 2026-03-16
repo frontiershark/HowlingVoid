@@ -4,7 +4,7 @@
 /obj/structure/chem_separator
 	name = "distillation apparatus"
 	desc = "A device that performs chemical separation by distillation."
-	icon = 'icons/obj/medical/chemical.dmi'
+	icon = '../assets/icons/obj/medical/chemical.dmi'
 	icon_state = "separator"
 	light_power = 1
 	custom_materials = list(/datum/material/glass = SHEET_MATERIAL_AMOUNT * 2, /datum/material/wood = SHEET_MATERIAL_AMOUNT, /datum/material/paper = HALF_SHEET_MATERIAL_AMOUNT / 2)
@@ -140,27 +140,27 @@
 
 	//burner overlays
 	if(burner_on)
-		. += mutable_appearance('icons/obj/medical/chemical.dmi', "separator_burn")
-		. += emissive_appearance('icons/obj/medical/chemical.dmi', "separator_burn", src)
+		. += mutable_appearance('../assets/icons/obj/medical/chemical.dmi', "separator_burn")
+		. += emissive_appearance('../assets/icons/obj/medical/chemical.dmi', "separator_burn", src)
 
 	var/static/list/fill_icon_thresholds = list(1, 30, 80)
 
 	//distilation flask overlays
 	if(reagents.total_volume)
-		var/mutable_appearance/overlay = reagent_threshold_overlay(reagents, 'icons/obj/medical/reagent_fillings.dmi', "separator_m_", fill_icon_thresholds)
+		var/mutable_appearance/overlay = reagent_threshold_overlay(reagents, '../assets/icons/obj/medical/reagent_fillings.dmi', "separator_m_", fill_icon_thresholds)
 		if(!isnull(overlay))
 			. += overlay
 
 	//dripping overlay
 	if(boiling)
-		var/mutable_appearance/filling = mutable_appearance('icons/obj/medical/reagent_fillings.dmi', "separator_dripping")
+		var/mutable_appearance/filling = mutable_appearance('../assets/icons/obj/medical/reagent_fillings.dmi', "separator_dripping")
 		filling.color = mix_color_from_reagents(reagents.reagent_list)
 		. += filling
 
 	//distilation beaker overlays
 	if(!QDELETED(distilled_container))
 		. += "separator_beaker"
-		var/mutable_appearance/overlay = reagent_threshold_overlay(distilled_container.reagents, 'icons/obj/medical/reagent_fillings.dmi', "separator_b_", fill_icon_thresholds)
+		var/mutable_appearance/overlay = reagent_threshold_overlay(distilled_container.reagents, '../assets/icons/obj/medical/reagent_fillings.dmi', "separator_b_", fill_icon_thresholds)
 		if(!isnull(overlay))
 			. += overlay
 
@@ -172,7 +172,7 @@
 			threshold = i
 	if(threshold)
 		var/fill_name = "separator_temp_[temperature_icon_thresholds[threshold]]"
-		var/mutable_appearance/filling = mutable_appearance('icons/obj/medical/chemical.dmi', fill_name)
+		var/mutable_appearance/filling = mutable_appearance('../assets/icons/obj/medical/chemical.dmi', fill_name)
 		. += filling
 
 /**

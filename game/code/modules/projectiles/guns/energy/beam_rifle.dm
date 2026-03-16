@@ -2,11 +2,11 @@
 	name = "\improper Event Horizon anti-existential beam rifle"
 	desc = "The deranged minds of Nanotrasen, in their great hubris and spite, have birthed forth the definitive conclusion to the arms race. Weaponized black holes, and a platform to deliver them.\
 		To look upon this existential maleficence is to know that the pursuit of profit has consigned all life to this pathetic conclusion; the destruction of reality itself."
-	icon = 'icons/obj/weapons/guns/energy.dmi'
+	icon = '../assets/icons/obj/weapons/guns/energy.dmi'
 	icon_state = "esniper"
 	inhand_icon_state = null
 	worn_icon_state = null
-	fire_sound = 'sound/items/weapons/beam_sniper.ogg'
+	fire_sound = '../assets/sound/items/weapons/beam_sniper.ogg'
 	slot_flags = ITEM_SLOT_BACK
 	force = 20 //This is maybe the sanest part of this weapon.
 	custom_materials = null
@@ -47,12 +47,12 @@
 	projectile_type = /obj/projectile/beam/event_horizon
 	select_name = "doomsday"
 	e_cost = LASER_SHOTS(1, STANDARD_CELL_CHARGE)
-	fire_sound = 'sound/items/weapons/beam_sniper.ogg'
+	fire_sound = '../assets/sound/items/weapons/beam_sniper.ogg'
 
 /obj/projectile/beam/event_horizon
 	name = "anti-existential beam"
 	icon_state = null
-	hitsound = 'sound/effects/explosion/explosion3.ogg'
+	hitsound = '../assets/sound/effects/explosion/explosion3.ogg'
 	damage = 100 // Does it matter?
 	damage_type = BURN
 	armor_flag = ENERGY

@@ -1,7 +1,7 @@
 /obj/item/stack/license_plates
 	name = "invalid plate"
 	desc = "someone fucked up"
-	icon = 'icons/obj/machines/prison.dmi'
+	icon = '../assets/icons/obj/machines/prison.dmi'
 	icon_state = "empty_plate"
 	novariants = FALSE
 	max_amount = 50

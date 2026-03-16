@@ -227,11 +227,11 @@
 /obj/effect/overlay/ai_detect_hud
 	name = ""
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
-	icon = 'icons/effects/alphacolors.dmi'
+	icon = '../assets/icons/effects/alphacolors.dmi'
 	icon_state = ""
 	alpha = 100
 	layer = ABOVE_ALL_MOB_LAYER
 	plane = ABOVE_GAME_PLANE
 
 /obj/effect/overlay/ai_detect_hud/camera_unseen
-	icon = 'icons/effects/cameravis.dmi'
+	icon = '../assets/icons/effects/cameravis.dmi'

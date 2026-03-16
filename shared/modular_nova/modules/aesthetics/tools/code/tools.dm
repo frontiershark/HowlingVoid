@@ -22,4 +22,4 @@
 	icon = 'modular_nova/modules/aesthetics/tools/icons/tools.dmi'
 
 /obj/item/wrench/combat
-	icon = 'icons/obj/tools.dmi'
+	icon = '../assets/icons/obj/tools.dmi'

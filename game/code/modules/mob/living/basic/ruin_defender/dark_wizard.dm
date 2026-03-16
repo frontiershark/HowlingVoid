@@ -2,7 +2,7 @@
 /mob/living/basic/dark_wizard
 	name = "Dark Wizard"
 	desc = "Killing amateurs since the dawn of times."
-	icon = 'icons/mob/simple/simple_human.dmi'
+	icon = '../assets/icons/mob/simple/simple_human.dmi'
 	icon_state = "dark_wizard"
 	icon_living = "dark_wizard"
 	maxHealth = 50
@@ -15,7 +15,7 @@
 	attack_verb_simple = "stave"
 	combat_mode = TRUE
 	speak_emote = list("chants")
-	attack_sound = 'sound/items/weapons/bladeslice.ogg'
+	attack_sound = '../assets/sound/items/weapons/bladeslice.ogg'
 	mob_biotypes = MOB_ORGANIC|MOB_HUMANOID
 	sentience_type = SENTIENCE_HUMANOID
 	faction = list(ROLE_WIZARD)
@@ -38,7 +38,7 @@
 	AddComponent(\
 		/datum/component/ranged_attacks,\
 		projectile_type = /obj/projectile/temp/earth_bolt,\
-		projectile_sound = 'sound/effects/magic/ethereal_enter.ogg',\
+		projectile_sound = '../assets/sound/effects/magic/ethereal_enter.ogg',\
 		cooldown_time = 2 SECONDS,\
 	)
 

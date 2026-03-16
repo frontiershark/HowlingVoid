@@ -1,5 +1,5 @@
 /atom/movable/screen/robot
-	icon = 'icons/hud/screen_cyborg.dmi'
+	icon = '../assets/icons/hud/screen_cyborg.dmi'
 	mouse_over_pointer = MOUSE_HAND_POINTER
 
 /atom/movable/screen/robot/module
@@ -76,7 +76,7 @@
 	R.uneq_active()
 
 /datum/hud/robot
-	ui_style = 'icons/hud/screen_cyborg.dmi'
+	ui_style = '../assets/icons/hud/screen_cyborg.dmi'
 
 /datum/hud/robot/New(mob/owner)
 	..()
@@ -167,7 +167,7 @@
 	static_inventory += robit.hands
 
 	pull_icon = new /atom/movable/screen/pull(null, src)
-	pull_icon.icon = 'icons/hud/screen_cyborg.dmi'
+	pull_icon.icon = '../assets/icons/hud/screen_cyborg.dmi'
 	pull_icon.screen_loc = ui_borg_pull
 	pull_icon.update_appearance()
 	hotkeybuttons += pull_icon
@@ -245,7 +245,7 @@
 
 /atom/movable/screen/robot/alerts
 	name = "Alert Panel"
-	icon = 'icons/hud/screen_ai.dmi'
+	icon = '../assets/icons/hud/screen_ai.dmi'
 	icon_state = "alerts"
 
 /atom/movable/screen/robot/alerts/Click()

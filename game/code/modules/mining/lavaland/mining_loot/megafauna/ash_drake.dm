@@ -3,7 +3,7 @@
 /obj/item/drake_remains
 	name = "drake remains"
 	desc = "The gathered remains of a drake. It still crackles with heat, and smells distinctly of brimstone."
-	icon = 'icons/obj/clothing/head/helmet.dmi'
+	icon = '../assets/icons/obj/clothing/head/helmet.dmi'
 	icon_state = "dragon"
 	custom_materials = list(/datum/material/bone = SHEET_MATERIAL_AMOUNT * 10)
 
@@ -47,8 +47,8 @@
 
 /obj/item/clothing/head/hooded/cloakhood/drake
 	name = "drake helm"
-	icon = 'icons/obj/clothing/head/helmet.dmi'
-	worn_icon = 'icons/mob/clothing/head/helmet.dmi'
+	icon = '../assets/icons/obj/clothing/head/helmet.dmi'
+	worn_icon = '../assets/icons/mob/clothing/head/helmet.dmi'
 	icon_state = "dragon"
 	desc = "The skull of a dragon."
 	armor_type = /datum/armor/cloak_drake
@@ -64,19 +64,19 @@
 /obj/item/melee/ghost_sword
 	name = "\improper spectral blade"
 	desc = "A rusted and dulled blade. It doesn't look like it'd do much damage. It glows weakly."
-	icon = 'icons/obj/weapons/sword.dmi'
+	icon = '../assets/icons/obj/weapons/sword.dmi'
 	icon_state = "spectral"
 	inhand_icon_state = "spectral"
 	icon_angle = -45
-	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/swords_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/swords_righthand.dmi'
 	obj_flags = CONDUCTS_ELECTRICITY
 	sharpness = SHARP_EDGED
 	w_class = WEIGHT_CLASS_BULKY
 	force = 5 // Breakpoint past which something counts as a weapon, usually
 	throwforce = 5
-	hitsound = 'sound/effects/ghost2.ogg'
-	block_sound = 'sound/items/weapons/parry.ogg'
+	hitsound = '../assets/sound/effects/ghost2.ogg'
+	block_sound = '../assets/sound/items/weapons/parry.ogg'
 	attack_verb_continuous = list("attacks", "slashes", "slices", "tears", "lacerates", "rips", "dices", "rends")
 	attack_verb_simple = list("attack", "slash", "slice", "tear", "lacerate", "rip", "dice", "rend")
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
@@ -159,7 +159,7 @@
 /obj/item/dragons_blood
 	name = "bottle of dragons blood"
 	desc = "You're not actually going to drink this, are you?"
-	icon = 'icons/obj/mining_zones/artefacts.dmi'
+	icon = '../assets/icons/obj/mining_zones/artefacts.dmi'
 	icon_state = "vial"
 
 /obj/item/dragons_blood/attack_self(mob/living/carbon/human/user)
@@ -202,7 +202,7 @@
 			to_chat(user, span_danger("You feel like you could walk straight through lava now."))
 			ADD_TRAIT(user, TRAIT_LAVA_IMMUNE, type)
 
-	playsound(user,'sound/items/drink.ogg', 30, TRUE)
+	playsound(user,'../assets/sound/items/drink.ogg', 30, TRUE)
 	qdel(src)
 
 // Lava staff
@@ -213,9 +213,9 @@
 	icon_state = "lavastaff"
 	inhand_icon_state = "lavastaff"
 	icon_angle = -45
-	lefthand_file = 'icons/mob/inhands/weapons/staves_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/staves_righthand.dmi'
-	icon = 'icons/obj/weapons/guns/magic.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/staves_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/staves_righthand.dmi'
+	icon = '../assets/icons/obj/weapons/guns/magic.dmi'
 	slot_flags = ITEM_SLOT_BACK
 	w_class = WEIGHT_CLASS_NORMAL
 	force = 18
@@ -223,7 +223,7 @@
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 	attack_verb_continuous = list("sears", "clubs", "burn")
 	attack_verb_simple = list("sear", "club", "burn")
-	hitsound = 'sound/items/weapons/sear.ogg'
+	hitsound = '../assets/sound/items/weapons/sear.ogg'
 	var/turf_type = /turf/open/lava/smooth/weak
 	var/transform_string = "lava"
 	var/reset_turf_type = /turf/open/misc/asteroid/basalt
@@ -261,7 +261,7 @@
 
 		COOLDOWN_START(src, use_cooldown, reset_cooldown)
 		user.visible_message(span_danger("[user] turns \the [old_name] into [reset_string]!"))
-		playsound(target_turf,'sound/effects/magic/fireball.ogg', 200, TRUE)
+		playsound(target_turf,'../assets/sound/effects/magic/fireball.ogg', 200, TRUE)
 		return ITEM_INTERACT_SUCCESS
 
 	var/obj/effect/temp_visual/lavastaff/lava_visual = new /obj/effect/temp_visual/lavastaff(target_turf)
@@ -285,7 +285,7 @@
 	message_admins("[ADMIN_LOOKUPFLW(user)] fired the lava staff at [ADMIN_VERBOSEJMP(target_turf)]")
 	user.log_message("fired the lava staff at [AREACOORD(target_turf)].", LOG_ATTACK)
 	COOLDOWN_START(src, use_cooldown, create_cooldown)
-	playsound(target_turf,'sound/effects/magic/fireball.ogg', 200, TRUE)
+	playsound(target_turf,'../assets/sound/effects/magic/fireball.ogg', 200, TRUE)
 	qdel(lava_visual)
 	return ITEM_INTERACT_SUCCESS
 

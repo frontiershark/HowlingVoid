@@ -1,5 +1,5 @@
 /particles/grav_field_down
-	icon = 'icons/effects/particles/generic.dmi'
+	icon = '../assets/icons/effects/particles/generic.dmi'
 	icon_state = "cross"
 	width = 100
 	height = 100
@@ -16,7 +16,7 @@
 	gravity = list(0, -1.75)
 
 /particles/grav_field_up
-	icon = 'icons/effects/particles/generic.dmi'
+	icon = '../assets/icons/effects/particles/generic.dmi'
 	icon_state = "cross"
 	width = 100
 	height = 100
@@ -30,7 +30,7 @@
 	color = "#0077ff"
 
 /particles/grav_field_float
-	icon = 'icons/effects/particles/generic.dmi'
+	icon = '../assets/icons/effects/particles/generic.dmi'
 	icon_state = "cross"
 	width = 100
 	height = 100

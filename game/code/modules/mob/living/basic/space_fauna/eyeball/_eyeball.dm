@@ -1,7 +1,7 @@
 /mob/living/basic/eyeball
 	name = "eyeball"
 	desc = "An odd looking creature, it won't stop staring..."
-	icon = 'icons/mob/simple/carp.dmi'
+	icon = '../assets/icons/mob/simple/carp.dmi'
 	icon_state = "eyeball"
 	icon_living = "eyeball"
 	icon_gib = ""
@@ -24,7 +24,7 @@
 
 	attack_verb_continuous = "bites"
 	attack_verb_simple = "bite"
-	attack_sound = 'sound/items/weapons/bite.ogg'
+	attack_sound = '../assets/sound/items/weapons/bite.ogg'
 	attack_vis_effect = ATTACK_EFFECT_BITE
 
 	faction = list(FACTION_SPOOKY)

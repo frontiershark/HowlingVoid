@@ -519,7 +519,7 @@
 	if(!damaged_clothes_icon)
 		damaged_clothes_icon = icon(icon, icon_state, , 1)
 		damaged_clothes_icon.Blend("#fff", ICON_ADD) //fills the icon_state with white (except where it's transparent)
-		damaged_clothes_icon.Blend(icon('icons/effects/item_damage.dmi', "itemdamaged"), ICON_MULTIPLY) //adds damage effect and the remaining white areas become transparant
+		damaged_clothes_icon.Blend(icon('../assets/icons/effects/item_damage.dmi', "itemdamaged"), ICON_MULTIPLY) //adds damage effect and the remaining white areas become transparant
 		damaged_clothes_icon = fcopy_rsc(damaged_clothes_icon)
 		damaged_clothes_icons[index] = damaged_clothes_icon
 	. += damaged_clothes_icon
@@ -537,7 +537,7 @@ BLIND     // can't see anything
 /proc/generate_female_clothing(index, t_color, icon, type)
 	var/icon/female_clothing_icon = icon("icon"=icon, "icon_state"=t_color)
 	var/female_icon_state = "female[type == FEMALE_UNIFORM_FULL ? "_full" : ((!type || type & FEMALE_UNIFORM_TOP_ONLY) ? "_top" : "")][type & FEMALE_UNIFORM_NO_BREASTS ? "_no_breasts" : ""]"
-	var/icon/female_cropping_mask = icon("icon" = 'icons/mob/clothing/under/masking_helpers.dmi', "icon_state" = female_icon_state)
+	var/icon/female_cropping_mask = icon("icon" = '../assets/icons/mob/clothing/under/masking_helpers.dmi', "icon_state" = female_icon_state)
 	female_clothing_icon.Blend(female_cropping_mask, ICON_MULTIPLY)
 	female_clothing_icon = fcopy_rsc(female_clothing_icon)
 	GLOB.female_clothing_icons[index] = female_clothing_icon
@@ -651,9 +651,9 @@ BLIND     // can't see anything
 
 	var/mutable_appearance/blood_overlay = null
 	if(clothing_flags & LARGE_WORN_ICON)
-		blood_overlay = mutable_appearance('icons/effects/64x64.dmi', "[blood_state]blood_large")
+		blood_overlay = mutable_appearance('../assets/icons/effects/64x64.dmi', "[blood_state]blood_large")
 	else
-		blood_overlay = mutable_appearance('icons/effects/blood.dmi', "[blood_state]blood")
+		blood_overlay = mutable_appearance('../assets/icons/effects/blood.dmi', "[blood_state]blood")
 
 	blood_overlay.color = get_blood_dna_color()
 

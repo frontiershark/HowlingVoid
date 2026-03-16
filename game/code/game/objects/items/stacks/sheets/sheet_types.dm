@@ -421,7 +421,7 @@ GLOBAL_LIST_INIT(wood_recipes, list ( \
 	singular_name = "wood plank"
 	icon_state = "sheet-wood"
 	inhand_icon_state = "sheet-wood"
-	icon = 'icons/obj/stack_objects.dmi'
+	icon = '../assets/icons/obj/stack_objects.dmi'
 	mats_per_unit = list(/datum/material/wood=SHEET_MATERIAL_AMOUNT)
 	construction_path_type = "wood"
 	armor_type = /datum/armor/mineral_wood
@@ -430,8 +430,8 @@ GLOBAL_LIST_INIT(wood_recipes, list ( \
 	material_type = /datum/material/wood
 	walltype = /turf/closed/wall/mineral/wood
 	stairs_type = /obj/structure/stairs/wood
-	pickup_sound = 'sound/items/handling/materials/wood_pick_up.ogg'
-	drop_sound = 'sound/items/handling/materials/wood_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/materials/wood_pick_up.ogg'
+	drop_sound = '../assets/sound/items/handling/materials/wood_drop.ogg'
 
 /datum/armor/mineral_wood
 	fire = 50
@@ -489,7 +489,7 @@ GLOBAL_LIST_INIT(bamboo_recipes, list ( \
 	singular_name = "cut bamboo stick"
 	icon_state = "sheet-bamboo"
 	inhand_icon_state = "sheet-bamboo"
-	icon = 'icons/obj/stack_objects.dmi'
+	icon = '../assets/icons/obj/stack_objects.dmi'
 	construction_path_type = "bamboo"
 	mats_per_unit = list(/datum/material/bamboo = SHEET_MATERIAL_AMOUNT)
 	throwforce = 15
@@ -566,8 +566,8 @@ GLOBAL_LIST_INIT(cloth_recipes, list ( \
 	force = 0
 	throwforce = 0
 	merge_type = /obj/item/stack/sheet/cloth
-	drop_sound = 'sound/items/handling/cloth/cloth_drop1.ogg'
-	pickup_sound = 'sound/items/handling/cloth/cloth_pickup1.ogg'
+	drop_sound = '../assets/sound/items/handling/cloth/cloth_drop1.ogg'
+	pickup_sound = '../assets/sound/items/handling/cloth/cloth_pickup1.ogg'
 	pickup_sound = SFX_CLOTH_PICKUP
 	drop_sound = SFX_CLOTH_DROP
 
@@ -601,8 +601,8 @@ GLOBAL_LIST_INIT(durathread_recipes, list ( \
 	force = 0
 	throwforce = 0
 	merge_type = /obj/item/stack/sheet/durathread
-	drop_sound = 'sound/items/handling/cloth/cloth_drop1.ogg'
-	pickup_sound = 'sound/items/handling/cloth/cloth_pickup1.ogg'
+	drop_sound = '../assets/sound/items/handling/cloth/cloth_drop1.ogg'
+	pickup_sound = '../assets/sound/items/handling/cloth/cloth_pickup1.ogg'
 
 /obj/item/stack/sheet/durathread/Initialize(mapload)
 	. = ..()
@@ -630,8 +630,8 @@ GLOBAL_LIST_INIT(durathread_recipes, list ( \
 	force = 0
 	throwforce = 0
 	merge_type = /obj/item/stack/sheet/cotton
-	drop_sound = 'sound/items/handling/cloth/cloth_drop1.ogg'
-	pickup_sound = 'sound/items/handling/cloth/cloth_pickup1.ogg'
+	drop_sound = '../assets/sound/items/handling/cloth/cloth_drop1.ogg'
+	pickup_sound = '../assets/sound/items/handling/cloth/cloth_pickup1.ogg'
 
 	var/loom_result = /obj/item/stack/sheet/cloth
 	var/loom_time = 1 SECONDS
@@ -741,8 +741,8 @@ GLOBAL_LIST_INIT(cardboard_recipes, list ( \
 	throwforce = 0
 	merge_type = /obj/item/stack/sheet/cardboard
 	material_type = /datum/material/cardboard
-	pickup_sound = 'sound/items/handling/materials/cardboard_pick_up.ogg'
-	drop_sound = 'sound/items/handling/materials/cardboard_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/materials/cardboard_pick_up.ogg'
+	drop_sound = '../assets/sound/items/handling/materials/cardboard_drop.ogg'
 
 /obj/item/stack/sheet/cardboard/Initialize(mapload, new_amount, merge, list/mat_override, mat_amt)
 	. = ..()
@@ -767,7 +767,7 @@ GLOBAL_LIST_INIT(cardboard_recipes, list ( \
 	if(istype(I, /obj/item/stamp/clown) && !istype(loc, /obj/item/storage))
 		var/atom/droploc = drop_location()
 		if(use(1))
-			playsound(I, 'sound/items/bikehorn.ogg', 50, TRUE, -1)
+			playsound(I, '../assets/sound/items/bikehorn.ogg', 50, TRUE, -1)
 			to_chat(user, span_notice("You stamp the cardboard! It's a clown box! Honk!"))
 			if (amount >= 0)
 				new/obj/item/storage/box/clown(droploc) //bugfix
@@ -806,10 +806,10 @@ GLOBAL_LIST_INIT(bronze_recipes, list ( \
 	singular_name = "bronze sheet"
 	icon_state = "sheet-brass"
 	inhand_icon_state = "sheet-brass"
-	icon = 'icons/obj/stack_objects.dmi'
+	icon = '../assets/icons/obj/stack_objects.dmi'
 	mats_per_unit = list(/datum/material/bronze = SHEET_MATERIAL_AMOUNT)
-	lefthand_file = 'icons/mob/inhands/items/sheets_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/sheets_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/sheets_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/sheets_righthand.dmi'
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	construction_path_type = "bronze"
 	force = 5
@@ -860,7 +860,7 @@ GLOBAL_LIST_INIT(bronze_recipes, list ( \
  */
 /obj/item/stack/sheet/bone
 	name = "bones"
-	icon = 'icons/obj/stack_objects.dmi'
+	icon = '../assets/icons/obj/stack_objects.dmi'
 	icon_state = "bone"
 	inhand_icon_state = null
 	mats_per_unit = list(/datum/material/bone = SHEET_MATERIAL_AMOUNT)
@@ -928,8 +928,8 @@ GLOBAL_LIST_INIT(plastic_recipes, list(
 	throwforce = 7
 	material_type = /datum/material/plastic
 	merge_type = /obj/item/stack/sheet/plastic
-	pickup_sound = 'sound/items/handling/materials/plastic_pick_up.ogg'
-	drop_sound = 'sound/items/handling/materials/plastic_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/materials/plastic_pick_up.ogg'
+	drop_sound = '../assets/sound/items/handling/materials/plastic_drop.ogg'
 
 /obj/item/stack/sheet/plastic/fifty
 	amount = 50

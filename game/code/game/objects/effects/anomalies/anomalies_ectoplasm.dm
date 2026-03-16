@@ -128,15 +128,15 @@
 /obj/structure/ghost_portal
 	name = "Spooky Portal"
 	desc = "A portal between our dimension and who-knows-where? It's emitting an absolutely ungodly wailing sound."
-	icon = 'icons/obj/anomaly.dmi'
+	icon = '../assets/icons/obj/anomaly.dmi'
 	icon_state = "anom"
 	anchored = TRUE
 	var/static/list/spooky_noises = list(
-		'sound/effects/hallucinations/growl1.ogg',
-		'sound/effects/hallucinations/growl2.ogg',
-		'sound/effects/hallucinations/growl3.ogg',
-		'sound/effects/hallucinations/veryfar_noise.ogg',
-		'sound/effects/hallucinations/wail.ogg'
+		'../assets/sound/effects/hallucinations/growl1.ogg',
+		'../assets/sound/effects/hallucinations/growl2.ogg',
+		'../assets/sound/effects/hallucinations/growl3.ogg',
+		'../assets/sound/effects/hallucinations/veryfar_noise.ogg',
+		'../assets/sound/effects/hallucinations/wail.ogg'
 	)
 	var/list/ghosts_spawned = list()
 
@@ -155,7 +155,7 @@
 		playsound(src, pick(spooky_noises), 100)
 
 /obj/structure/ghost_portal/play_attack_sound(damage_amount, damage_type = BRUTE, damage_flag = 0)
-	playsound(loc, 'sound/effects/empulse.ogg', 75, TRUE)
+	playsound(loc, '../assets/sound/effects/empulse.ogg', 75, TRUE)
 	if(prob(40))
 		playsound(src, pick(spooky_noises), 50)
 

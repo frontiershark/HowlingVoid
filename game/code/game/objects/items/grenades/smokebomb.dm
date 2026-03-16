@@ -6,7 +6,7 @@
 /obj/item/grenade/smokebomb
 	name = "smoke grenade"
 	desc = "Real bruh moment if you ever see this. Probably tell a c*der or something."
-	icon = 'icons/obj/weapons/grenade.dmi'
+	icon = '../assets/icons/obj/weapons/grenade.dmi'
 	icon_state = "smokewhite"
 	inhand_icon_state = "smoke"
 	slot_flags = ITEM_SLOT_BELT
@@ -42,7 +42,7 @@
 		return
 
 	update_mob()
-	playsound(src, 'sound/effects/smoke.ogg', 50, TRUE, -3)
+	playsound(src, '../assets/sound/effects/smoke.ogg', 50, TRUE, -3)
 	do_smoke(4, src, loc, smoke_type = /datum/effect_system/fluid_spread/smoke/bad)
 	for(var/obj/structure/blob/blob in view(8, src))
 		var/damage = round(30/(get_dist(blob, src) + 1))

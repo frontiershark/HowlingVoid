@@ -77,7 +77,7 @@
 /datum/computer_file/program/civilianbounties/proc/pick_bounty(datum/bounty/choice)
 	var/datum/bank_account/id_account = computer.stored_id?.registered_account
 	if(!id_account?.bounties?[choice])
-		playsound(computer.loc, 'sound/machines/synth/synth_no.ogg', 40 , TRUE)
+		playsound(computer.loc, '../assets/sound/machines/synth/synth_no.ogg', 40 , TRUE)
 		return
 	id_account.set_bounty(id_account.bounties[choice], computer.stored_id)
 	SSblackbox.record_feedback("tally", "bounties_assigned", 1, id_account.civilian_bounty.type)

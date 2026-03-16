@@ -1,9 +1,9 @@
 /obj/item/sparring_contract
 	desc = "A contract for setting up sparring matches. Both sparring partners must agree with the terms to begin."
-	icon = 'icons/obj/scrolls.dmi'
+	icon = '../assets/icons/obj/scrolls.dmi'
 	icon_state = "sparringcontract"
-	drop_sound = 'sound/items/handling/paper_drop.ogg'
-	pickup_sound = 'sound/items/handling/paper_pickup.ogg'
+	drop_sound = '../assets/sound/items/handling/paper_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/paper_pickup.ogg'
 	throw_range = 1
 	throw_speed = 1
 	w_class = WEIGHT_CLASS_TINY

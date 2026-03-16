@@ -2,7 +2,7 @@
 /obj/item/clothing/neck/necklace/memento_mori
 	name = "Memento Mori"
 	desc = "A mysterious pendant. An inscription on it says: \"Certain death tomorrow means certain life today.\""
-	icon = 'icons/obj/mining_zones/artefacts.dmi'
+	icon = '../assets/icons/obj/mining_zones/artefacts.dmi'
 	icon_state = "memento_mori"
 	worn_icon_state = "memento"
 	actions_types = list(/datum/action/item_action/hands_free/memento_mori)
@@ -66,13 +66,13 @@
 	guardian.locked = TRUE
 	guardian.forceMove(src)
 	to_chat(guardian, span_userdanger("You have been locked away in your summoner's pendant!"))
-	guardian.playsound_local(get_turf(guardian), 'sound/effects/magic/summonitems_generic.ogg', 50, TRUE)
+	guardian.playsound_local(get_turf(guardian), '../assets/sound/effects/magic/summonitems_generic.ogg', 50, TRUE)
 
 /obj/item/clothing/neck/necklace/memento_mori/proc/regurgitate_guardian(mob/living/basic/guardian/guardian)
 	guardian.locked = FALSE
 	guardian.recall(forced = TRUE)
 	to_chat(guardian, span_notice("You have been returned back from your summoner's pendant!"))
-	guardian.playsound_local(get_turf(guardian), 'sound/effects/magic/repulse.ogg', 50, TRUE)
+	guardian.playsound_local(get_turf(guardian), '../assets/sound/effects/magic/repulse.ogg', 50, TRUE)
 
 /datum/action/item_action/hands_free/memento_mori
 	check_flags = NONE

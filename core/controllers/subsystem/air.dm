@@ -730,7 +730,7 @@ GLOBAL_LIST_EMPTY(colored_images)
 			var/obj/effect/overlay/atmos_excited/suger_high = new()
 			SET_PLANE_W_SCALAR(suger_high, HIGH_GAME_PLANE, offset)
 			add_to += suger_high
-			var/image/shiny = new('icons/effects/effects.dmi', suger_high, "atmos_top")
+			var/image/shiny = new('../assets/icons/effects/effects.dmi', suger_high, "atmos_top")
 			SET_PLANE_W_SCALAR(shiny, HIGH_GAME_PLANE, offset)
 			shiny.color = sharp_color
 			GLOB.colored_images += shiny

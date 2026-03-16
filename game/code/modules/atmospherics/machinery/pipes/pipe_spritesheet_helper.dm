@@ -7,19 +7,19 @@ ADMIN_VERB(generate_pipe_spritesheet, R_DEBUG, "Generate Pipe Spritesheet", "Gen
 	fcopy(generator.generated_icons, "icons/obj/pipes_n_cables/!pipe_gas_overlays.dmi")
 
 /datum/pipe_icon_generator
-	var/static/icon/template_pieces = icon('icons/obj/pipes_n_cables/pipe_template_pieces.dmi')
+	var/static/icon/template_pieces = icon('../assets/icons/obj/pipes_n_cables/pipe_template_pieces.dmi')
 	var/static/list/icon/damage_masks = list(
-		"[NORTH]"=icon('icons/obj/pipes_n_cables/pipe_template_pieces.dmi', "damage_mask", NORTH),
-		"[EAST]"=icon('icons/obj/pipes_n_cables/pipe_template_pieces.dmi', "damage_mask", EAST),
-		"[SOUTH]"=icon('icons/obj/pipes_n_cables/pipe_template_pieces.dmi', "damage_mask", SOUTH),
-		"[WEST]"=icon('icons/obj/pipes_n_cables/pipe_template_pieces.dmi', "damage_mask", WEST),
+		"[NORTH]"=icon('../assets/icons/obj/pipes_n_cables/pipe_template_pieces.dmi', "damage_mask", NORTH),
+		"[EAST]"=icon('../assets/icons/obj/pipes_n_cables/pipe_template_pieces.dmi', "damage_mask", EAST),
+		"[SOUTH]"=icon('../assets/icons/obj/pipes_n_cables/pipe_template_pieces.dmi', "damage_mask", SOUTH),
+		"[WEST]"=icon('../assets/icons/obj/pipes_n_cables/pipe_template_pieces.dmi', "damage_mask", WEST),
 	)
 
 	var/static/list/icon/cap_masks = list(
-		"[NORTH]" = icon('icons/obj/pipes_n_cables/pipe_template_pieces.dmi', "cap_mask", NORTH),
-		"[EAST]" = icon('icons/obj/pipes_n_cables/pipe_template_pieces.dmi', "cap_mask", EAST),
-		"[SOUTH]" = icon('icons/obj/pipes_n_cables/pipe_template_pieces.dmi', "cap_mask", SOUTH),
-		"[WEST]" = icon('icons/obj/pipes_n_cables/pipe_template_pieces.dmi', "cap_mask", WEST),
+		"[NORTH]" = icon('../assets/icons/obj/pipes_n_cables/pipe_template_pieces.dmi', "cap_mask", NORTH),
+		"[EAST]" = icon('../assets/icons/obj/pipes_n_cables/pipe_template_pieces.dmi', "cap_mask", EAST),
+		"[SOUTH]" = icon('../assets/icons/obj/pipes_n_cables/pipe_template_pieces.dmi', "cap_mask", SOUTH),
+		"[WEST]" = icon('../assets/icons/obj/pipes_n_cables/pipe_template_pieces.dmi', "cap_mask", WEST),
 	)
 
 	var/icon/generated_icons
@@ -38,7 +38,7 @@ ADMIN_VERB(generate_pipe_spritesheet, R_DEBUG, "Generate Pipe Spritesheet", "Gen
 
 			outputs += GeneratePipeDir(icon_state_suffix, layer, combined_dirs)
 
-	generated_icons = icon('icons/testing/greyscale_error.dmi')
+	generated_icons = icon('../assets/icons/testing/greyscale_error.dmi')
 	for(var/icon/generated_icon as anything in outputs)
 		var/pending_icon_state = outputs[generated_icon]
 		generated_icons.Insert(generated_icon, pending_icon_state)
@@ -101,7 +101,7 @@ ADMIN_VERB(generate_pipe_spritesheet, R_DEBUG, "Generate Pipe Spritesheet", "Gen
 
 		completed[completion_key] = TRUE
 
-		var/icon/capped_mask = icon('icons/obj/pipes_n_cables/pipe_template_pieces.dmi', "blank_mask")
+		var/icon/capped_mask = icon('../assets/icons/obj/pipes_n_cables/pipe_template_pieces.dmi', "blank_mask")
 		for(var/i in 0 to 3)
 			var/dir = 1 << i
 			if(!(combined_dirs & dir))

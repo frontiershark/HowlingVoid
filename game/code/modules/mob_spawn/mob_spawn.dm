@@ -3,7 +3,7 @@
 	density = TRUE
 	anchored = TRUE
 	//So it shows up in the map editor
-	icon = 'icons/effects/mapping_helpers.dmi'
+	icon = '../assets/icons/effects/mapping_helpers.dmi'
 	icon_state = "mobspawner"
 	/// Can this spawner be used up?
 	var/infinite_use = FALSE
@@ -392,7 +392,7 @@
 
 /obj/effect/mob_spawn/ghost_role/human
 	//gives it a base sprite instead of a mapping helper. makes sense, right?
-	icon = 'icons/obj/machines/sleeper.dmi'
+	icon = '../assets/icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
 	mob_type = /mob/living/carbon/human
 

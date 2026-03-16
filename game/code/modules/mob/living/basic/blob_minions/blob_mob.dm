@@ -3,7 +3,7 @@
 	abstract_type = /mob/living/basic/blob_minion
 	name = "Blob Error"
 	desc = "A nonfunctional fungal creature created by bad code or celestial mistake. Point and laugh."
-	icon = 'icons/mob/nonhuman-player/blob.dmi'
+	icon = '../assets/icons/mob/nonhuman-player/blob.dmi'
 	icon_state = "blob_head"
 	base_icon_state = "blob_head"
 	unique_name = TRUE

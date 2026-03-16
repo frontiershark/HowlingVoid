@@ -1,7 +1,7 @@
 ///MOD Module - A special device installed in a MODsuit allowing the suit to do new stuff.
 /obj/item/mod/module
 	name = "MOD module"
-	icon = 'icons/obj/clothing/modsuit/mod_modules.dmi'
+	icon = '../assets/icons/obj/clothing/modsuit/mod_modules.dmi'
 	icon_state = "module"
 	abstract_type = /obj/item/mod/module
 	sound_vary = TRUE
@@ -34,11 +34,11 @@
 	/// Overlay given to the user when the module is used, lasts until cooldown finishes
 	var/overlay_state_use
 	/// Icon file for the overlay.
-	var/overlay_icon_file = 'icons/mob/clothing/modsuit/mod_modules.dmi'
+	var/overlay_icon_file = '../assets/icons/mob/clothing/modsuit/mod_modules.dmi'
 	/// Overlay given to the item icon of the control unit
 	var/overlay_state_item
 	/// Icon file for the item overlay
-	var/item_overlay_icon_file = 'icons/obj/clothing/modsuit/mod_modules.dmi'
+	var/item_overlay_icon_file = '../assets/icons/obj/clothing/modsuit/mod_modules.dmi'
 	/// Does the overlay use the control unit's colors?
 	var/use_mod_colors = FALSE
 	/// What modules are we incompatible with?
@@ -127,7 +127,7 @@
 			var/list/slot_list = parse_slot_flags(slot)
 			slot_strings += (length(slot_list) == 1 ? "" : "one of ") + english_list(slot_list, and_text = " or ")
 		to_chat(activator, span_warning("[src] requires these slots to be deployed: [english_list(slot_strings)]"))
-		playsound(src, 'sound/machines/scanner/scanbuzz.ogg', 25, TRUE, SILENCED_SOUND_EXTRARANGE)
+		playsound(src, '../assets/sound/machines/scanner/scanbuzz.ogg', 25, TRUE, SILENCED_SOUND_EXTRARANGE)
 		return
 	if(module_type != MODULE_USABLE)
 		if(active)

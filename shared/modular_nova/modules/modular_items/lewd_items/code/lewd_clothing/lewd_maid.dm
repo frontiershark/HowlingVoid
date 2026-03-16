@@ -4,7 +4,7 @@
 	desc = "A pin-up staple."
 	worn_icon = 'modular_nova/modules/modular_items/lewd_items/icons/mob/lewd_clothing/lewd_uniform/lewd_uniform.dmi'
 	greyscale_colors = "#383840#FFFFFF"
-	icon = 'icons/map_icons/clothing/under/costume.dmi'
+	icon = '../assets/icons/map_icons/clothing/under/costume.dmi'
 	icon_state = "/obj/item/clothing/under/costume/bunnylewd"
 	post_init_icon_state = "bunnysuit"
 	greyscale_config = /datum/greyscale_config/bunnysuitlewd

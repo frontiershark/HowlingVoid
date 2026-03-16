@@ -2,7 +2,7 @@
 /mob/living/basic/vatbeast
 	name = "vatbeast"
 	desc = "A strange molluscoidal creature carrying a busted growing vat.\nYou wonder if this burden is a voluntary undertaking in order to achieve comfort and protection, or simply because the creature is fused to its metal shell?"
-	icon = 'icons/mob/vatgrowing.dmi'
+	icon = '../assets/icons/mob/vatgrowing.dmi'
 	icon_state = "vat_beast"
 	icon_living = "vat_beast"
 	icon_dead = "vat_beast_dead"
@@ -18,7 +18,7 @@
 	melee_attack_cooldown = CLICK_CD_MELEE
 	obj_damage = 40
 	unsuitable_atmos_damage = 0
-	attack_sound = 'sound/items/weapons/punch3.ogg'
+	attack_sound = '../assets/sound/items/weapons/punch3.ogg'
 	attack_verb_continuous = "slaps"
 	attack_verb_simple = "slap"
 	// Greenish darkvision
@@ -99,12 +99,12 @@
 	desc = "Slap a creature with your tentacles."
 	background_icon_state = "bg_revenant"
 	overlay_icon_state = "bg_revenant_border"
-	button_icon = 'icons/mob/actions/actions_animal.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_animal.dmi'
 	button_icon_state = "tentacle_slap"
 	check_flags = AB_CHECK_CONSCIOUS | AB_CHECK_INCAPACITATED
 	cooldown_time = 12 SECONDS
 	click_to_activate = TRUE
-	ranged_mousepointer = 'icons/effects/mouse_pointers/supplypod_target.dmi'
+	ranged_mousepointer = '../assets/icons/effects/mouse_pointers/supplypod_target.dmi'
 
 /datum/action/cooldown/tentacle_slap/update_button_name(atom/movable/screen/movable/action_button/button, force)
 	if (button.our_hud?.mymob != owner)
@@ -156,7 +156,7 @@
 		span_warning("[owner] slaps [to_slap] with its tentacle!"),
 		span_notice("You slap [to_slap] with your tentacle."),
 	)
-	playsound(owner, 'sound/effects/emotes/assslap.ogg', 90)
+	playsound(owner, '../assets/sound/effects/emotes/assslap.ogg', 90)
 	var/atom/throw_target = get_edge_target_turf(to_slap, owner.dir)
 	living_to_slap.throw_at(throw_target, 6, 4, owner)
 	living_to_slap.apply_damage(30, BRUTE)

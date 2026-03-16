@@ -30,9 +30,9 @@
 			icon_state = "punchcard_[punches]"
 			COOLDOWN_START(src, gbp_punch_cooldown, 90 SECONDS)
 			log_econ("[user] punched a GAP card that is now at [punches]/[max_punches] punches.")
-			playsound(attacking_item, 'sound/items/boxcutter_activate.ogg', 100)
+			playsound(attacking_item, '../assets/sound/items/boxcutter_activate.ogg', 100)
 			if(punches == max_punches)
-				playsound(src, 'sound/items/party_horn.ogg', 100)
+				playsound(src, '../assets/sound/items/party_horn.ogg', 100)
 				say("Congratulations, you have finished your punchcard!")
 		else
 			balloon_alert(user, "no room!")
@@ -71,7 +71,7 @@
 		var/obj/item/gbp_punchcard/punchcard = attacking_item
 		var/amount_to_reward = punchcard.punches * GBP_PUNCH_REWARD
 		if(!punchcard.punches)
-			playsound(src, 'sound/machines/scanner/scanbuzz.ogg', 100)
+			playsound(src, '../assets/sound/machines/scanner/scanbuzz.ogg', 100)
 			say("You can't redeem an unpunched card!")
 			return
 
@@ -88,7 +88,7 @@
 			return
 
 		if(!card_used.registered_account || !istype(card_used.registered_account.account_job, /datum/job/assistant))
-			playsound(src, 'sound/machines/scanner/scanbuzz.ogg', 100)
+			playsound(src, '../assets/sound/machines/scanner/scanbuzz.ogg', 100)
 			say("You cannot redeem a punchcard without a valid assistant bank account!")
 			return
 
@@ -101,7 +101,7 @@
 
 		var/validated_punches = punchcard.punches
 		punchcard.punches = 0
-		playsound(src, 'sound/machines/printer.ogg', 100)
+		playsound(src, '../assets/sound/machines/printer.ogg', 100)
 		card_used.registered_account.adjust_money(amount_to_reward, "GAP: [validated_punches] punches")
 		log_econ("[amount_to_reward] credits were rewarded to [card_used.registered_account.account_holder]'s account for redeeming a GAP card.")
 		say("Rewarded [amount_to_reward] to your account, and dispensed a ration pack! Thank you for being a Good Assistant! Please take your new punchcard.")

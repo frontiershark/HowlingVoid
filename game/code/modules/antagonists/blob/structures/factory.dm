@@ -1,6 +1,6 @@
 /obj/structure/blob/special/factory
 	name = "factory blob"
-	icon = 'icons/mob/nonhuman-player/blob.dmi'
+	icon = '../assets/icons/mob/nonhuman-player/blob.dmi'
 	icon_state = "blob_factory"
 	desc = "A thick spire of tendrils."
 	max_integrity = BLOB_FACTORY_MAX_HP
@@ -81,7 +81,7 @@
 
 	modify_max_integrity(initial(max_integrity) * 0.25) //factories that produced a blobbernaut have much lower health
 	visible_message(span_boldwarning("The blobbernaut [pick("rips", "tears", "shreds")] its way out of the factory blob!"))
-	playsound(loc, 'sound/effects/splat.ogg', 50, TRUE)
+	playsound(loc, '../assets/sound/effects/splat.ogg', 50, TRUE)
 
 	blobbernaut = new_naut
 	blobbernaut.link_to_factory(src)

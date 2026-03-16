@@ -721,4 +721,4 @@
 	if(!icon_state || icon_state == SECHUD_UNKNOWN)
 		CRASH("[src.type] has no job icon state.")
 
-	return icon('icons/mob/huds/hud.dmi', icon_state)
+	return icon('../assets/icons/mob/huds/hud.dmi', icon_state)

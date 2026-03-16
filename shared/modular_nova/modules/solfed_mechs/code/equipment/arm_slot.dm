@@ -11,7 +11,7 @@
 	variance = 10
 	harmful = TRUE
 	ammo_type = MECHA_AMMO_RUBBER
-	fire_sound = 'sound/items/weapons/gun/shotgun/shot.ogg'
+	fire_sound = '../assets/sound/items/weapons/gun/shotgun/shot.ogg'
 	detachable = FALSE
 
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/solfed_rotary
@@ -30,7 +30,7 @@
 	projectile_delay = 1
 	harmful = TRUE
 	ammo_type = MECHA_AMMO_INCENDIARY
-	fire_sound = 'sound/items/weapons/gun/hmg/hmg.ogg'
+	fire_sound = '../assets/sound/items/weapons/gun/hmg/hmg.ogg'
 	detachable = FALSE
 
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/solfed_railgun
@@ -54,7 +54,7 @@
 	desc = "A weapon for peacekeeper exosuits. Launches primed tear gas grenades to disperse hostile crowds."
 	icon_state = "mecha_grenadelnchr"
 	projectile = /obj/item/grenade/chem_grenade/solfed/teargas
-	fire_sound = 'sound/items/weapons/gun/general/grenade_launch.ogg'
+	fire_sound = '../assets/sound/items/weapons/gun/general/grenade_launch.ogg'
 	projectiles = 6
 	projectiles_cache = 6
 	projectiles_cache_max = 24
@@ -144,7 +144,7 @@
 	desc = "A short-range mortar system mounted on Prometheus-class breach mechs. Fires incendiary gel shells engineered to cling, burn and flush entrenched targets without compromising hull integrity."
 	icon_state = "mecha_grenadelnchr"
 	projectile = /obj/item/grenade/chem_grenade/solfed/napalm
-	fire_sound = 'sound/items/weapons/gun/general/grenade_launch.ogg'
+	fire_sound = '../assets/sound/items/weapons/gun/general/grenade_launch.ogg'
 	projectiles = 6
 	projectiles_cache = 6
 	projectiles_cache_max = 24
@@ -188,7 +188,7 @@
 	projectile_delay = 0.5
 	harmful = TRUE
 	ammo_type = MECHA_AMMO_LMG
-	fire_sound = 'sound/items/weapons/gun/hmg/hmg.ogg'
+	fire_sound = '../assets/sound/items/weapons/gun/hmg/hmg.ogg'
 	detachable = FALSE
 
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/solfed_emp_cannon
@@ -204,7 +204,7 @@
 	variance = 2
 	harmful = TRUE
 	ammo_type = MECHA_AMMO_EMP
-	fire_sound = 'sound/items/weapons/gun/general/heavy_shot_suppressed.ogg'
+	fire_sound = '../assets/sound/items/weapons/gun/general/heavy_shot_suppressed.ogg'
 	detachable = FALSE
 
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/solfed_carbine
@@ -221,7 +221,7 @@
 	variance = 3
 	harmful = TRUE
 	ammo_type = MECHA_AMMO_LMG
-	fire_sound = 'sound/items/weapons/gun/general/heavy_shot_suppressed.ogg'
+	fire_sound = '../assets/sound/items/weapons/gun/general/heavy_shot_suppressed.ogg'
 	detachable = FALSE
 
 /obj/item/mecha_parts/mecha_equipment/medical/mechmedbeam/solfed
@@ -247,7 +247,7 @@
 	equip_cooldown = 1 SECONDS
 	force = 15
 	damtype = BURN
-	hitsound = 'sound/items/tools/welder.ogg'
+	hitsound = '../assets/sound/items/tools/welder.ogg'
 	energy_drain = 10
 	detachable = FALSE
 	///The actual welding tool used for the welding actions.
@@ -261,7 +261,7 @@
 	welding_tool.welding = TRUE
 	welding_tool.force = 15
 	welding_tool.damtype = BURN
-	welding_tool.hitsound = 'sound/items/tools/welder.ogg'
+	welding_tool.hitsound = '../assets/sound/items/tools/welder.ogg'
 
 /obj/item/mecha_parts/mecha_equipment/solfed_welder/action(mob/living/source, atom/target, list/modifiers)
 	if(!action_checks(target))

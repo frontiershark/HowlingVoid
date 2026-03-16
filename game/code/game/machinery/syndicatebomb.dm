@@ -2,7 +2,7 @@
 #define BUTTON_DELAY 50 //five seconds
 
 /obj/machinery/syndicatebomb
-	icon = 'icons/obj/devices/assemblies.dmi'
+	icon = '../assets/icons/obj/devices/assemblies.dmi'
 	name = "syndicate bomb"
 	icon_state = "syndicate-bomb"
 	desc = "A large and menacing device. Can be bolted down with a wrench."
@@ -30,7 +30,7 @@
 	/// Is the bomb counting down?
 	var/active = FALSE
 	/// What sound do we make as we beep down the timer?
-	var/beepsound = 'sound/items/timer.ogg'
+	var/beepsound = '../assets/sound/items/timer.ogg'
 	/// Is the delay wire pulsed?
 	var/delayedbig = FALSE
 	/// Is the activation wire pulsed?
@@ -241,7 +241,7 @@
 		bomb_wires.setup_wires(num_booms = boom_wires, num_duds = dud_wires)
 	else
 		bomb_wires.setup_wires(num_booms = 2, num_duds = 0)
-	playsound(src, 'sound/machines/click.ogg', 30, TRUE)
+	playsound(src, '../assets/sound/machines/click.ogg', 30, TRUE)
 	update_appearance()
 
 /obj/machinery/syndicatebomb/proc/defuse()
@@ -313,7 +313,7 @@
 	icon_state = "clown-bomb"
 	desc = "HONK."
 	payload = /obj/item/bombcore/badmin/summon/clown
-	beepsound = 'sound/items/bikehorn.ogg'
+	beepsound = '../assets/sound/items/bikehorn.ogg'
 
 /obj/machinery/syndicatebomb/empty
 	name = "bomb"
@@ -349,11 +349,11 @@
 /obj/item/bombcore
 	name = "bomb payload"
 	desc = "A powerful secondary explosive of syndicate design and unknown composition, it should be stable under normal conditions..."
-	icon = 'icons/obj/devices/assemblies.dmi'
+	icon = '../assets/icons/obj/devices/assemblies.dmi'
 	icon_state = "bombcore"
 	inhand_icon_state = "eshield"
-	lefthand_file = 'icons/mob/inhands/equipment/shields_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/shields_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/shields_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/shields_righthand.dmi'
 	w_class = WEIGHT_CLASS_NORMAL
 	flags_1 = PREVENT_CONTENTS_EXPLOSION_1 // We detonate upon being exploded.
 	resistance_flags = FLAMMABLE //Burnable (but the casing isn't)
@@ -467,7 +467,7 @@
 	amt_summon = 50
 
 /obj/item/bombcore/badmin/summon/clown/defuse()
-	playsound(src, 'sound/misc/sadtrombone.ogg', 50)
+	playsound(src, '../assets/sound/misc/sadtrombone.ogg', 50)
 	..()
 
 /obj/item/bombcore/large
@@ -545,14 +545,14 @@
 				reactants += S.reagents
 
 	if(!chem_splash(get_turf(src), reagents, spread_range, reactants, temp_boost))
-		playsound(loc, 'sound/items/tools/screwdriver2.ogg', 50, TRUE)
+		playsound(loc, '../assets/sound/items/tools/screwdriver2.ogg', 50, TRUE)
 		return // The Explosion didn't do anything. No need to log, or disappear.
 
 	if(adminlog)
 		message_admins(adminlog)
 		log_game(adminlog)
 
-	playsound(loc, 'sound/effects/bamf.ogg', 75, TRUE, 5)
+	playsound(loc, '../assets/sound/effects/bamf.ogg', 75, TRUE, 5)
 
 /obj/item/bombcore/chemical/attackby(obj/item/I, mob/user, list/modifiers, list/attack_modifiers)
 	if(I.tool_behaviour == TOOL_CROWBAR && beakers.len > 0)
@@ -712,11 +712,11 @@
 /obj/item/syndicatedetonator
 	name = "big red button"
 	desc = "Your standard issue bomb synchronizing button. Five second safety delay to prevent 'accidents'."
-	icon = 'icons/obj/devices/assemblies.dmi'
+	icon = '../assets/icons/obj/devices/assemblies.dmi'
 	icon_state = "bigred"
 	inhand_icon_state = "electronic"
-	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/devices_righthand.dmi'
 	w_class = WEIGHT_CLASS_TINY
 	var/timer = 0
 	var/detonated = 0
@@ -729,7 +729,7 @@
 				B.detonation_timer = world.time + BUTTON_DELAY
 				detonated++
 			existent++
-		playsound(user, 'sound/machines/click.ogg', 20, TRUE)
+		playsound(user, '../assets/sound/machines/click.ogg', 20, TRUE)
 		to_chat(user, span_notice("[existent] found, [detonated] triggered."))
 		if(detonated)
 			detonated--

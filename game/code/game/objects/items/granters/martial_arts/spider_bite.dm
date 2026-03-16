@@ -7,7 +7,7 @@
 	greet = span_sciradio("You have learned the Spider Clan's historic technique, The Spider's Bite. \
 		You are now able to kick standing targets who are staggered, potentially disarming them of their weapons. \
 		You can also tackle targets with great effectiveness, and have more solid grabs.")
-	icon = 'icons/obj/scrolls.dmi'
+	icon = '../assets/icons/obj/scrolls.dmi'
 	icon_state = "sleepingcarp"
 	worn_icon_state = "scroll"
 	remarks = list(

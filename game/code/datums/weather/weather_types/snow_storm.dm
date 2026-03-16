@@ -6,7 +6,7 @@
 	telegraph_message = span_warning("Drifting particles of snow begin to dust the surrounding area..")
 	telegraph_duration = 30 SECONDS
 	telegraph_overlay = "light_snow"
-	telegraph_sound = 'sound/ambience/weather/snowstorm/snow_start.ogg'
+	telegraph_sound = '../assets/sound/ambience/weather/snowstorm/snow_start.ogg'
 	telegraph_sound_vol = /datum/looping_sound/snowstorm::volume + 10
 
 	weather_message = span_userdanger("<i>Harsh winds pick up as dense snow begins to fall from the sky! Seek shelter!</i>")
@@ -17,7 +17,7 @@
 
 	end_duration = 10 SECONDS
 	end_message = span_bolddanger("The snowfall dies down, it should be safe to go outside again.")
-	end_sound = 'sound/ambience/weather/snowstorm/snow_end.ogg'
+	end_sound = '../assets/sound/ambience/weather/snowstorm/snow_end.ogg'
 	end_sound_vol = /datum/looping_sound/snowstorm::volume + 10
 
 	area_type = /area

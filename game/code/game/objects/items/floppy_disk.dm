@@ -41,14 +41,14 @@
 /obj/item/disk
 	name = "floppy disk"
 	desc = "A generic floppy disk. No way Nanotrasen still uses those, right?"
-	icon = 'icons/obj/devices/floppy_disks.dmi'
+	icon = '../assets/icons/obj/devices/floppy_disks.dmi'
 	icon_state = "datadisk3"
 	w_class = WEIGHT_CLASS_TINY
 	inhand_icon_state = "card-id"
-	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
-	drop_sound = 'sound/items/handling/disk_drop.ogg'
-	pickup_sound = 'sound/items/handling/disk_pickup.ogg'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/idcards_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/idcards_righthand.dmi'
+	drop_sound = '../assets/sound/items/handling/disk_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/disk_pickup.ogg'
 
 	/// Sticker icons to choose from (as icon states)
 	var/static/list/sticker_variants = list(
@@ -209,10 +209,10 @@
 	icon_state = null
 	w_class = WEIGHT_CLASS_SMALL
 	inhand_icon_state = "card-id"
-	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
-	drop_sound = 'sound/items/handling/disk_drop.ogg'
-	pickup_sound = 'sound/items/handling/disk_pickup.ogg'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/idcards_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/idcards_righthand.dmi'
+	drop_sound = '../assets/sound/items/handling/disk_drop.ogg'
+	pickup_sound = '../assets/sound/items/handling/disk_pickup.ogg'
 	/// List of references to the disks inside the stack
 	var/list/stacked_disks = list()
 

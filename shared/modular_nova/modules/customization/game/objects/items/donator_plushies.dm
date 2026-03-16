@@ -21,7 +21,7 @@
 /obj/item/toy/plush/nova/donator/immovable_rod/Bump(atom/clong)
 	. = ..()
 	if(isliving(clong))
-		playsound(src, 'sound/effects/bang.ogg', 50, TRUE)
+		playsound(src, '../assets/sound/effects/bang.ogg', 50, TRUE)
 		return
 
 // Donation reward for gamerguy14948
@@ -95,7 +95,7 @@
 		"eat",
 		"fin slap",
 		)
-	squeak_override = list('sound/items/weapons/bite.ogg' = 1)
+	squeak_override = list('../assets/sound/items/weapons/bite.ogg' = 1)
 
 //Other donation reward for Razurath
 /obj/item/toy/plush/nova/donator/plushie_razurath/second
@@ -257,7 +257,7 @@
 		"squirt",
 		"soap",
 		)
-	squeak_override = list('sound/machines/beep/twobeep.ogg' = 1)
+	squeak_override = list('../assets/sound/machines/beep/twobeep.ogg' = 1)
 
 //Donation reward for wivernshy
 /obj/item/toy/plush/nova/donator/plush_hemlock
@@ -335,9 +335,9 @@
 		"nuzzle",
 		)
 	squeak_override = list(
-		'sound/items/can/can_open1.ogg' = 1,
-		'sound/items/can/can_open2.ogg' = 1,
-		'sound/items/can/can_open3.ogg' = 1,
+		'../assets/sound/items/can/can_open1.ogg' = 1,
+		'../assets/sound/items/can/can_open2.ogg' = 1,
+		'../assets/sound/items/can/can_open3.ogg' = 1,
 		)
 	///the list that is chosen from depending on gaming skill
 	var/static/list/skill_response = list(
@@ -370,15 +370,15 @@
 /obj/item/toy/plush/nova/donator/zapp/attack_self(mob/user)
 	. = ..()
 	var/turf/src_turf = get_turf(src)
-	playsound(src_turf, 'sound/items/drink.ogg', 50, TRUE)
+	playsound(src_turf, '../assets/sound/items/drink.ogg', 50, TRUE)
 	var/skill_level = user.mind.get_skill_level(/datum/skill/gaming)
 	if(user.ckey == "cameronlancaster")
 		skill_level = (max(6, skill_level))
 	say(skill_response[skill_level])
 	if(skill_level == 7)
-		playsound(src_turf, 'sound/items/can/can_pop.ogg', 80, TRUE)
+		playsound(src_turf, '../assets/sound/items/can/can_pop.ogg', 80, TRUE)
 		new /obj/effect/abstract/liquid_turf/pwr_gamr(src_turf)
-		playsound(src_turf, 'sound/effects/bubbles/bubbles.ogg', 50, TRUE)
+		playsound(src_turf, '../assets/sound/effects/bubbles/bubbles.ogg', 50, TRUE)
 		qdel(src)
 
 //Keeping the Zapp related stuff together for organization purposes
@@ -449,7 +449,7 @@
 		"flap",
 		"squeak",
 		)
-	squeak_override = list('sound/mobs/humanoids/moth/moth_chitter.ogg' = 1)
+	squeak_override = list('../assets/sound/mobs/humanoids/moth/moth_chitter.ogg' = 1)
 	gender = MALE
 
 /obj/item/toy/plush/nova/donator/leaplush
@@ -542,7 +542,7 @@
 		"slap",
 		"challenge",
 		)
-	squeak_override = list('sound/items/weapons/slap.ogg' = 1)
+	squeak_override = list('../assets/sound/items/weapons/slap.ogg' = 1)
 
 /obj/item/toy/plush/nova/donator/seaduplush
 	name = "sneed plushie"
@@ -559,8 +559,8 @@
 		"sword",
 		)
 	squeak_override = list(
-		'sound/machines/synth/synth_yes.ogg' = 1,
-		'sound/machines/synth/synth_no.ogg' = 1,
+		'../assets/sound/machines/synth/synth_yes.ogg' = 1,
+		'../assets/sound/machines/synth/synth_no.ogg' = 1,
 		)
 
 /obj/item/toy/plush/nova/donator/lizzyplush
@@ -623,7 +623,7 @@
 		"boop",
 		"dance next to",
 		)
-	squeak_override = list('sound/machines/ping.ogg' = 1)
+	squeak_override = list('../assets/sound/machines/ping.ogg' = 1)
 
 /obj/item/toy/plush/nova/donator/skreking_vox
 	name = "skreking vox plushie"
@@ -657,9 +657,9 @@
 		"weld",
 		)
 	squeak_override = list(
-		'sound/items/tools/screwdriver.ogg' = 1,
-		'sound/items/tools/drill_use.ogg' = 1,
-		'sound/items/tools/welder.ogg' = 1,
+		'../assets/sound/items/tools/screwdriver.ogg' = 1,
+		'../assets/sound/items/tools/drill_use.ogg' = 1,
+		'../assets/sound/items/tools/welder.ogg' = 1,
 		)
 
 /obj/item/toy/plush/nova/donator/glitch_synth
@@ -676,7 +676,7 @@
 		"hug",
 		"health analyze",
 		)
-	squeak_override = list('sound/machines/beep/twobeep_high.ogg' = 1)
+	squeak_override = list('../assets/sound/machines/beep/twobeep_high.ogg' = 1)
 
 /obj/item/toy/plush/nova/donator/boom_bird
 	name = "boom bird plushie"
@@ -692,7 +692,7 @@
 		"explode on",
 		"peep",
 		)
-	squeak_override = list('sound/machines/sm/accent/delam/1.ogg' = 1)
+	squeak_override = list('../assets/sound/machines/sm/accent/delam/1.ogg' = 1)
 
 /obj/item/toy/plush/nova/donator/edgy_bird
 	name = "edgy birb plushie"
@@ -725,7 +725,7 @@
 		"detain",
 		"taze",
 		)
-	squeak_override = list('sound/mobs/humanoids/human/sneeze/female_sneeze1.ogg' = 1)
+	squeak_override = list('../assets/sound/mobs/humanoids/human/sneeze/female_sneeze1.ogg' = 1)
 
 /obj/item/toy/plush/nova/donator/xixi
 	name = "familiar looking harpy plushie"
@@ -753,7 +753,7 @@
 	desc = "It reminds you of a very, very, very huggable bee."
 	icon_state = "plushie_rubi"
 	gender = FEMALE
-	squeak_override = list('sound/items/weapons/thudswoosh.ogg' = 1)
+	squeak_override = list('../assets/sound/items/weapons/thudswoosh.ogg' = 1)
 	attack_verb_continuous = list("hugs")
 	attack_verb_simple = list("hug")
 
@@ -855,7 +855,7 @@
 		"pet",
 		)
 	squeak_override = list(
-		'sound/mobs/non-humanoids/mouse/mousesqueek.ogg' = 1,
+		'../assets/sound/mobs/non-humanoids/mouse/mousesqueek.ogg' = 1,
 		'modular_nova/modules/emotes/sound/voice/mothsqueak.ogg' = 1,
 		)
 	responses = list(
@@ -891,7 +891,7 @@
 		"pet",
 		)
 	squeak_override = list(
-		'sound/mobs/non-humanoids/mouse/mousesqueek.ogg' = 1,
+		'../assets/sound/mobs/non-humanoids/mouse/mousesqueek.ogg' = 1,
 		'modular_nova/modules/emotes/sound/voice/mothsqueak.ogg' = 1,
 		)
 	// All lowercase messages are intentional
@@ -927,9 +927,9 @@
 		"smoke",
 		)
 	squeak_override = list(
-		'sound/mobs/humanoids/human/cough/female_cough1.ogg' = 1,
-		'sound/mobs/humanoids/human/cough/female_cough2.ogg' = 1,
-		'sound/mobs/humanoids/human/cough/female_cough3.ogg' = 1,
+		'../assets/sound/mobs/humanoids/human/cough/female_cough1.ogg' = 1,
+		'../assets/sound/mobs/humanoids/human/cough/female_cough2.ogg' = 1,
+		'../assets/sound/mobs/humanoids/human/cough/female_cough3.ogg' = 1,
 		)
 	responses = list(
 		"The human body can survive three weeks without skiiiiiiiiiiin.",
@@ -963,7 +963,7 @@
 	desc = "What sits before you is a plushie of what looks like a crippled veteran dressed as a clown. <i>What sort of monster would do this to a man?</i> ...Sponsored by the <b>Comedy Council!</b>"
 	icon_state = "plushie_vethonk"
 	squeak_override = list(
-		'sound/effects/roll.ogg' = 1,
+		'../assets/sound/effects/roll.ogg' = 1,
 	)
 
 /obj/item/toy/plush/nova/donator/percy
@@ -971,5 +971,5 @@
 	desc = "Looks like a competent enough surgeon. Just don’t ask for too much paperwork or bedside manners."
 	icon_state = "percival-1"
 	squeak_override = list(
-		'sound/items/handling/surgery/saw.ogg' = 1,
+		'../assets/sound/items/handling/surgery/saw.ogg' = 1,
 	)

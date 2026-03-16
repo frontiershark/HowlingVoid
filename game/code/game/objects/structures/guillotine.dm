@@ -31,9 +31,9 @@
 /obj/structure/guillotine
 	name = "guillotine"
 	desc = "A large structure used to remove the heads of traitors and treasonists."
-	icon = 'icons/obj/guillotine.dmi'
+	icon = '../assets/icons/obj/guillotine.dmi'
 	icon_state = "guillotine_raised"
-	icon_preview = 'icons/obj/fluff/previews.dmi'
+	icon_preview = '../assets/icons/obj/fluff/previews.dmi'
 	icon_state_preview = "guilliotine"
 	can_buckle = TRUE
 	anchored = TRUE
@@ -49,7 +49,7 @@
 		/datum/material/glass = SMALL_MATERIAL_AMOUNT,
 	)
 	/// The sound the guillotine makes when it successfully cuts off a head
-	var/drop_sound = 'sound/items/weapons/guillotine.ogg'
+	var/drop_sound = '../assets/sound/items/weapons/guillotine.ogg'
 	/// The current state of the blade
 	var/blade_status = GUILLOTINE_BLADE_RAISED
 	/// How sharp the blade is
@@ -203,7 +203,7 @@
 					user.visible_message(span_notice("[user] sharpens the large blade of the guillotine."),
 						                 span_notice("You sharpen the large blade of the guillotine."))
 					blade_sharpness += 1
-					playsound(src, 'sound/items/unsheath.ogg', 100, TRUE)
+					playsound(src, '../assets/sound/items/unsheath.ogg', 100, TRUE)
 					return
 				else
 					blade_status = GUILLOTINE_BLADE_RAISED

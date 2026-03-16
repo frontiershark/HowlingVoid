@@ -3,7 +3,7 @@
 	name = "brimdust"
 	desc = "Dust from a brimdemon. It is considered valuable for its botanical abilities."
 	icon_state = "brimdust"
-	icon = 'icons/obj/mining.dmi'
+	icon = '../assets/icons/obj/mining.dmi'
 	plane = GAME_PLANE
 	layer = CLEANABLE_OBJECT_LAYER
 	mergeable_decal = FALSE
@@ -15,7 +15,7 @@
 	name = "ore sensor"
 	desc = "Using demonic frequencies, this ear-mounted tool detects ores in the nearby terrain."
 	icon_state = "oresensor"
-	icon = 'icons/obj/mining.dmi'
+	icon = '../assets/icons/obj/mining.dmi'
 	slot_flags = ITEM_SLOT_EARS
 	custom_materials = list(/datum/material/bone = SHEET_MATERIAL_AMOUNT)
 	var/range = 5

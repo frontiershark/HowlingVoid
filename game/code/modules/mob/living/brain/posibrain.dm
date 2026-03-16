@@ -3,7 +3,7 @@ GLOBAL_VAR(posibrain_notify_cooldown)
 /obj/item/mmi/posibrain
 	name = "positronic brain"
 	desc = "A cube of shining metal, four inches to a side and covered in shallow grooves."
-	icon = 'icons/obj/devices/assemblies.dmi'
+	icon = '../assets/icons/obj/devices/assemblies.dmi'
 	icon_state = "posibrain"
 	base_icon_state = "posibrain"
 	w_class = WEIGHT_CLASS_NORMAL
@@ -48,7 +48,7 @@ GLOBAL_VAR(posibrain_notify_cooldown)
 			source = src,
 			header = "Ghost in the Machine",
 			click_interact = TRUE,
-			ghost_sound = !newlymade ? 'sound/effects/ghost2.ogg':null,
+			ghost_sound = !newlymade ? '../assets/sound/effects/ghost2.ogg':null,
 			ignore_key = POLL_IGNORE_POSIBRAIN,
 			notify_flags = (GHOST_NOTIFY_IGNORE_MAPLOAD),
 			notify_volume = 75,
@@ -91,7 +91,7 @@ GLOBAL_VAR(posibrain_notify_cooldown)
 		return
 	if(brainmob.client)
 		visible_message(success_message)
-		playsound(src, 'sound/machines/ping.ogg', 15, TRUE)
+		playsound(src, '../assets/sound/machines/ping.ogg', 15, TRUE)
 	else
 		visible_message(fail_message)
 

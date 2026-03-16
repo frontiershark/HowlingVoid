@@ -17,7 +17,7 @@
 	melee_damage_upper = 15
 	attack_verb_continuous = "claws"
 	attack_verb_simple = "claw"
-	attack_sound = 'sound/items/weapons/pierce_slow.ogg'
+	attack_sound = '../assets/sound/items/weapons/pierce_slow.ogg'
 	minimum_survivable_temperature = 0
 	unsuitable_atmos_damage = 7.5
 	unsuitable_cold_damage = 7.5
@@ -29,7 +29,7 @@
 	/// How often can we shoot?
 	var/ranged_cooldown = 2 SECONDS
 	/// Projectile sound
-	var/projectilesound = 'sound/items/weapons/gun/pistol/shot.ogg'
+	var/projectilesound = '../assets/sound/items/weapons/gun/pistol/shot.ogg'
 	/// What gun shoot
 	var/casingtype = /obj/item/ammo_casing/c9mm
 	/// why he dead?
@@ -61,7 +61,7 @@
 	melee_damage_upper = 20
 	attack_verb_continuous = "slashes"
 	attack_verb_simple = "slash"
-	attack_sound = 'sound/items/weapons/bladeslice.ogg'
+	attack_sound = '../assets/sound/items/weapons/bladeslice.ogg'
 	attack_vis_effect = ATTACK_EFFECT_SLASH
 	ai_controller = /datum/ai_controller/basic_controller/voxraider
 	death_loot = list(
@@ -80,7 +80,7 @@
 	icon_dead = "voxdead"
 	melee_damage_lower = 10
 	melee_damage_upper = 10
-	attack_sound = 'sound/items/weapons/gun/pistol/shot.ogg'
+	attack_sound = '../assets/sound/items/weapons/gun/pistol/shot.ogg'
 	ai_controller = /datum/ai_controller/basic_controller/voxraider/ranged
 	ranged_attacker = TRUE
 	death_loot = list(
@@ -106,7 +106,7 @@
 	icon_state = "voxlaser"
 	icon_living = "voxlaser"
 	icon_dead = "voxsuitdead"
-	projectilesound = 'sound/items/weapons/laser3.ogg'
+	projectilesound = '../assets/sound/items/weapons/laser3.ogg'
 	casingtype = /obj/item/ammo_casing/energy/laser/hellfire
 	unsuitable_atmos_damage = 0
 	unsuitable_cold_damage = 0
@@ -122,7 +122,7 @@
 	icon_state = "voxspace"
 	icon_living = "voxspace"
 	icon_dead = "voxspacedead"
-	projectilesound = 'sound/items/weapons/gun/pistol/shot.ogg'
+	projectilesound = '../assets/sound/items/weapons/gun/pistol/shot.ogg'
 	unsuitable_atmos_damage = 0
 	minimum_survivable_temperature = 0
 	death_loot = list(
@@ -143,7 +143,7 @@
 	icon_state = "voxspacelaser"
 	icon_living = "voxspacelaser"
 	icon_dead = "voxspacedead"
-	projectilesound = 'sound/items/weapons/laser3.ogg'
+	projectilesound = '../assets/sound/items/weapons/laser3.ogg'
 	casingtype = /obj/item/ammo_casing/energy/laser/hellfire
 	death_loot = list(
 		/obj/effect/spawner/random/engineering/material_rare = 4,

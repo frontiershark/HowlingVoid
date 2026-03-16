@@ -11,7 +11,7 @@
 */
 /datum/action/innate/sign_language
 	name = "Sign Language"
-	button_icon = 'icons/hud/actions.dmi'
+	button_icon = '../assets/icons/hud/actions.dmi'
 	button_icon_state = "sign_language"
 	desc = "Allows you to communicate via sign language."
 	owner_has_control = FALSE

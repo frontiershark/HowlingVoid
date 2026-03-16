@@ -43,14 +43,14 @@
 		create_spider()
 
 	if(get_dist(owner, spider) <= 1)
-		playsound(owner, 'sound/effects/magic/demon_attack1.ogg', 50)
+		playsound(owner, '../assets/sound/effects/magic/demon_attack1.ogg', 50)
 		owner.visible_message(span_warning("[owner] is torn apart by invisible teeth!"), span_userdanger("Ghostly teeth tear your body apart!"))
 		owner.take_bodypart_damage(rand(20, 50), wound_bonus = CANT_WOUND)
 	else if(SPT_PROB(30, seconds_per_tick))
 		spider.forceMove(get_step_towards(spider, owner))
 	if(get_dist(owner, spider) <= 8)
 		if(!close_spider)
-			var/sound/slowbeat = sound('sound/effects/health/slowbeat.ogg', repeat = TRUE)
+			var/sound/slowbeat = sound('../assets/sound/effects/health/slowbeat.ogg', repeat = TRUE)
 			owner.playsound_local(owner, slowbeat, 40, 0, channel = CHANNEL_HEARTBEAT, use_reverb = FALSE)
 			close_spider = TRUE
 	else

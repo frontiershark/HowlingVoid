@@ -1,6 +1,6 @@
 /datum/action/cooldown/mob_cooldown/teleport
 	name = "Teleport"
-	button_icon = 'icons/mob/actions/actions_items.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_items.dmi'
 	button_icon_state = "sniper_zoom"
 	desc = "Allows you to teleport a certain distance away from a position in a random direction."
 	cooldown_time = 10 SECONDS

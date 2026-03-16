@@ -15,7 +15,7 @@
 	response_harm_simple = "kick"
 	attack_verb_continuous = "kicks"
 	attack_verb_simple = "kick"
-	attack_sound = 'sound/items/weapons/punch1.ogg'
+	attack_sound = '../assets/sound/items/weapons/punch1.ogg'
 	attack_vis_effect = ATTACK_EFFECT_KICK
 
 	butcher_results = list(/obj/item/food/meat/slab/grassfed = 4)
@@ -73,7 +73,7 @@
 		return
 
 	living_target.adjust_brute_loss(20)
-	playsound(src, 'sound/items/eatfood.ogg', rand(30, 50), TRUE)
+	playsound(src, '../assets/sound/items/eatfood.ogg', rand(30, 50), TRUE)
 	var/obj/item/bodypart/edible_bodypart
 
 	if(ishuman(living_target))
@@ -136,4 +136,4 @@
 
 	if(eaten && prob(10))
 		say("Nom") // bon appetit
-		playsound(src, 'sound/items/eatfood.ogg', rand(30, 50), TRUE)
+		playsound(src, '../assets/sound/items/eatfood.ogg', rand(30, 50), TRUE)

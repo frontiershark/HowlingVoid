@@ -22,7 +22,7 @@
 /mob/living/basic/living_limb_flesh
 	name = "living flesh"
 	desc = "A vaguely leg or arm shaped flesh abomination. It pulses, like a heart."
-	icon = 'icons/mob/simple/animal.dmi'
+	icon = '../assets/icons/mob/simple/animal.dmi'
 	icon_state = "limb"
 	icon_living = "limb"
 	mob_size = MOB_SIZE_SMALL
@@ -32,7 +32,7 @@
 	melee_damage_upper = 10
 	health = 20
 	maxHealth = 20
-	attack_sound = 'sound/items/weapons/bite.ogg'
+	attack_sound = '../assets/sound/items/weapons/bite.ogg'
 	attack_vis_effect = ATTACK_EFFECT_BITE
 	attack_verb_continuous = "tries desperately to attach to"
 	attack_verb_simple = "try to attach to"

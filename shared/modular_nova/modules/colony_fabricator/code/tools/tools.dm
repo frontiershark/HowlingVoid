@@ -10,8 +10,8 @@
 	inside_belt_icon_state = null
 	inhand_icon_state = "drill"
 	worn_icon_state = "drill"
-	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/tools_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/tools_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/tools_righthand.dmi'
 	custom_materials = list(
 		/datum/material/iron = SHEET_MATERIAL_AMOUNT * 1.75,
 		/datum/material/silver = HALF_SHEET_MATERIAL_AMOUNT * 1.5,
@@ -23,8 +23,8 @@
 	throw_range = 3
 	attack_verb_continuous = list("drills", "screws", "jabs", "whacks")
 	attack_verb_simple = list("drill", "screw", "jab", "whack")
-	hitsound = 'sound/items/tools/drill_hit.ogg'
-	usesound = 'sound/items/tools/drill_use.ogg'
+	hitsound = '../assets/sound/items/tools/drill_hit.ogg'
+	usesound = '../assets/sound/items/tools/drill_use.ogg'
 	w_class = WEIGHT_CLASS_SMALL
 	toolspeed = 1
 	random_color = FALSE
@@ -84,7 +84,7 @@
 		if("Screwdriver")
 			tool_behaviour = TOOL_SCREWDRIVER
 			sharpness = SHARP_POINTY
-	playsound(src, 'sound/items/tools/change_drill.ogg', 50, vary = TRUE)
+	playsound(src, '../assets/sound/items/tools/change_drill.ogg', 50, vary = TRUE)
 	update_appearance(UPDATE_ICON)
 
 /obj/item/screwdriver/omni_drill/proc/check_menu(mob/user)

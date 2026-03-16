@@ -4,12 +4,12 @@
 	airlock_wires = /datum/wires/airlock/ai
 	motion_monitored = TRUE
 
-	ambientsounds = list('sound/ambience/engineering/ambitech.ogg', 'sound/ambience/engineering/ambitech2.ogg', 'sound/ambience/engineering/ambiatmos.ogg', 'sound/ambience/engineering/ambiatmos2.ogg')
+	ambientsounds = list('../assets/sound/ambience/engineering/ambitech.ogg', '../assets/sound/ambience/engineering/ambitech2.ogg', '../assets/sound/ambience/engineering/ambiatmos.ogg', '../assets/sound/ambience/engineering/ambiatmos2.ogg')
 	/// Disables ambientsounds if TRUE. Used for mundane AI locations like the exterior or storage room.
 	var/secure = TRUE
 	/// Some sounds (like the space jam) are terrible when on loop.
 	/// We use this variable to add it to other AI areas, but override it to keep it from the AI's core.
-	var/annoying_ambience = list('sound/ambience/misc/ambimalf.ogg')
+	var/annoying_ambience = list('../assets/sound/ambience/misc/ambimalf.ogg')
 
 /area/station/ai/Initialize(mapload)
 	. = ..()

@@ -18,7 +18,7 @@
 
 /obj/item/hypospray/mkii
 	name = "hypospray Mk.II"
-	icon = 'icons/map_icons/items/_item.dmi'
+	icon = '../assets/icons/map_icons/items/_item.dmi'
 	icon_state = "hypo2"
 	icon = 'modular_nova/modules/hyposprays/icons/hyposprays.dmi'
 	greyscale_config = /datum/greyscale_config/hypospray_mkii
@@ -205,7 +205,7 @@
 		to_chat(user, span_notice("You remove [vial] from [src]."))
 		vial = null
 		update_icon()
-		playsound(loc, 'sound/items/weapons/empty.ogg', 50, 1)
+		playsound(loc, '../assets/sound/items/weapons/empty.ogg', 50, 1)
 	else
 		to_chat(user, span_notice("This hypo isn't loaded!"))
 		return
@@ -224,7 +224,7 @@
 			vial.forceMove(quickswap_loc)
 	vial = new_vial
 	user.visible_message(span_notice("[user] has loaded a vial into [src]."), span_notice("You have loaded [vial] into [src]."))
-	playsound(loc, 'sound/items/weapons/autoguninsert.ogg', 35, 1)
+	playsound(loc, '../assets/sound/items/weapons/autoguninsert.ogg', 35, 1)
 	update_appearance()
 
 /obj/item/hypospray/mkii/item_interaction(mob/living/user, obj/item/tool, list/modifiers)

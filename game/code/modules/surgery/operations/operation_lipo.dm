@@ -15,10 +15,10 @@
 	time = 6.4 SECONDS
 	required_bodytype = (~BODYTYPE_ROBOTIC & ~BODYTYPE_SYNTHETIC) // NOVA EDIT CHANGE - SYNTH FLAGS  -Orginal: required_bodytype = BODYTYPE_ROBOTIC
 	preop_sound = list(
-		/obj/item/circular_saw = 'sound/items/handling/surgery/saw.ogg',
-		/obj/item = 'sound/items/handling/surgery/scalpel1.ogg',
+		/obj/item/circular_saw = '../assets/sound/items/handling/surgery/saw.ogg',
+		/obj/item = '../assets/sound/items/handling/surgery/scalpel1.ogg',
 	)
-	success_sound = 'sound/items/handling/surgery/organ2.ogg'
+	success_sound = '../assets/sound/items/handling/surgery/organ2.ogg'
 	all_surgery_states_required = SURGERY_SKIN_OPEN
 	any_surgery_states_blocked = SURGERY_VESSELS_UNCLAMPED
 
@@ -103,7 +103,7 @@
 		TOOL_SCALPEL = 4,
 		/obj/item = 5,
 	)
-	preop_sound = 'sound/items/tools/ratchet.ogg'
-	success_sound = 'sound/items/handling/surgery/organ2.ogg'
+	preop_sound = '../assets/sound/items/tools/ratchet.ogg'
+	success_sound = '../assets/sound/items/handling/surgery/organ2.ogg'
 	required_bodytype = BODYTYPE_ROBOTIC
 	operation_flags = parent_type::operation_flags | OPERATION_MECHANIC

@@ -12,7 +12,7 @@
 /turf/closed/wall/mineral/gold
 	name = "gold wall"
 	desc = "A wall with gold plating. Swag!"
-	icon = 'icons/turf/walls/gold_wall.dmi'
+	icon = '../assets/icons/turf/walls/gold_wall.dmi'
 	icon_state = "gold_wall-0"
 	base_icon_state = "gold_wall"
 	sheet_type = /obj/item/stack/sheet/mineral/gold
@@ -26,7 +26,7 @@
 /turf/closed/wall/mineral/silver
 	name = "silver wall"
 	desc = "A wall with silver plating. Shiny!"
-	icon = 'icons/turf/walls/silver_wall.dmi'
+	icon = '../assets/icons/turf/walls/silver_wall.dmi'
 	icon_state = "silver_wall-0"
 	base_icon_state = "silver_wall"
 	sheet_type = /obj/item/stack/sheet/mineral/silver
@@ -39,7 +39,7 @@
 /turf/closed/wall/mineral/diamond
 	name = "diamond wall"
 	desc = "A wall with diamond plating. You monster."
-	icon = 'icons/turf/walls/diamond_wall.dmi'
+	icon = '../assets/icons/turf/walls/diamond_wall.dmi'
 	icon_state = "diamond_wall-0"
 	base_icon_state = "diamond_wall"
 	sheet_type = /obj/item/stack/sheet/mineral/diamond
@@ -58,7 +58,7 @@
 /turf/closed/wall/mineral/bananium
 	name = "bananium wall"
 	desc = "A wall with bananium plating. Honk!"
-	icon = 'icons/turf/walls/bananium_wall.dmi'
+	icon = '../assets/icons/turf/walls/bananium_wall.dmi'
 	icon_state = "bananium_wall-0"
 	base_icon_state = "bananium_wall"
 	sheet_type = /obj/item/stack/sheet/mineral/bananium
@@ -72,7 +72,7 @@
 /turf/closed/wall/mineral/sandstone
 	name = "sandstone wall"
 	desc = "A wall with sandstone plating. Rough."
-	icon = 'icons/turf/walls/sandstone_wall.dmi'
+	icon = '../assets/icons/turf/walls/sandstone_wall.dmi'
 	icon_state = "sandstone_wall-0"
 	base_icon_state = "sandstone_wall"
 	sheet_type = /obj/item/stack/sheet/mineral/sandstone
@@ -88,7 +88,7 @@
 	article = "a"
 	name = "uranium wall"
 	desc = "A wall with uranium plating. This is probably a bad idea."
-	icon = 'icons/turf/walls/uranium_wall.dmi'
+	icon = '../assets/icons/turf/walls/uranium_wall.dmi'
 	icon_state = "uranium_wall-0"
 	base_icon_state = "uranium_wall"
 	sheet_type = /obj/item/stack/sheet/mineral/uranium
@@ -145,7 +145,7 @@
 /turf/closed/wall/mineral/plasma
 	name = "plasma wall"
 	desc = "A wall with plasma plating. This is definitely a bad idea."
-	icon = 'icons/turf/walls/plasma_wall.dmi'
+	icon = '../assets/icons/turf/walls/plasma_wall.dmi'
 	icon_state = "plasma_wall-0"
 	base_icon_state = "plasma_wall"
 	sheet_type = /obj/item/stack/sheet/mineral/plasma
@@ -160,7 +160,7 @@
 /turf/closed/wall/mineral/wood
 	name = "wooden wall"
 	desc = "A wall with wooden plating. Stiff."
-	icon = 'icons/turf/walls/wood_wall.dmi'
+	icon = '../assets/icons/turf/walls/wood_wall.dmi'
 	icon_state = "wood_wall-0"
 	base_icon_state = "wood_wall"
 	sheet_type = /obj/item/stack/sheet/mineral/wood
@@ -196,7 +196,7 @@
 /turf/closed/wall/mineral/bamboo
 	name = "bamboo wall"
 	desc = "A wall with a bamboo finish."
-	icon = 'icons/turf/walls/bamboo_wall.dmi'
+	icon = '../assets/icons/turf/walls/bamboo_wall.dmi'
 	icon_state = "bamboo_wall-0"
 	base_icon_state = "bamboo_wall"
 	smoothing_flags = SMOOTH_BITMASK
@@ -209,7 +209,7 @@
 /turf/closed/wall/mineral/iron
 	name = "rough iron wall"
 	desc = "A wall with rough iron plating."
-	icon = 'icons/turf/walls/iron_wall.dmi'
+	icon = '../assets/icons/turf/walls/iron_wall.dmi'
 	icon_state = "iron_wall-0"
 	base_icon_state = "iron_wall"
 	sheet_type = /obj/item/stack/rods
@@ -224,7 +224,7 @@
 /turf/closed/wall/mineral/snow
 	name = "packed snow wall"
 	desc = "A wall made of densely packed snow blocks."
-	icon = 'icons/turf/walls/snow_wall.dmi'
+	icon = '../assets/icons/turf/walls/snow_wall.dmi'
 	icon_state = "snow_wall-0"
 	base_icon_state = "snow_wall"
 	smoothing_flags = SMOOTH_BITMASK
@@ -245,7 +245,7 @@
 /turf/closed/wall/mineral/abductor
 	name = "alien wall"
 	desc = "A wall with alien alloy plating."
-	icon = 'icons/turf/walls/abductor_wall.dmi'
+	icon = '../assets/icons/turf/walls/abductor_wall.dmi'
 	icon_state = "abductor_wall-0"
 	base_icon_state = "abductor_wall"
 	sheet_type = /obj/item/stack/sheet/mineral/abductor
@@ -263,7 +263,7 @@
 /turf/closed/wall/mineral/titanium //has to use this path due to how building walls works
 	name = "wall"
 	desc = "A light-weight titanium wall used in shuttles."
-	icon = 'icons/turf/walls/shuttle_wall.dmi'
+	icon = '../assets/icons/turf/walls/shuttle_wall.dmi'
 	icon_state = "shuttle_wall-0"
 	base_icon_state = "shuttle_wall"
 	explosive_resistance = 3
@@ -284,12 +284,12 @@
 	return ..()
 
 /turf/closed/wall/mineral/titanium/nodiagonal
-	icon = MAP_SWITCH('icons/turf/walls/shuttle_wall.dmi', 'icons/turf/walls/misc_wall.dmi')
+	icon = MAP_SWITCH('../assets/icons/turf/walls/shuttle_wall.dmi', '../assets/icons/turf/walls/misc_wall.dmi')
 	icon_state = MAP_SWITCH("shuttle_wall-0", "shuttle_nd")
 	smoothing_flags = SMOOTH_BITMASK
 
 /turf/closed/wall/mineral/titanium/overspace
-	icon = MAP_SWITCH('icons/turf/walls/shuttle_wall.dmi', 'icons/turf/walls/misc_wall.dmi')
+	icon = MAP_SWITCH('../assets/icons/turf/walls/shuttle_wall.dmi', '../assets/icons/turf/walls/misc_wall.dmi')
 	icon_state = MAP_SWITCH("shuttle_wall-0", "shuttle_overspace")
 	fixed_underlay = list("space" = TRUE)
 
@@ -304,7 +304,7 @@
 /turf/closed/wall/mineral/titanium/survival
 	name = "pod wall"
 	desc = "An easily-compressible wall used for temporary shelter."
-	icon = 'icons/turf/walls/survival_pod_walls.dmi'
+	icon = '../assets/icons/turf/walls/survival_pod_walls.dmi'
 	icon_state = "survival_pod_walls-0"
 	base_icon_state = "survival_pod_walls"
 	smoothing_flags = SMOOTH_BITMASK | SMOOTH_DIAGONAL_CORNERS
@@ -312,7 +312,7 @@
 	rust_resistance = RUST_RESISTANCE_TITANIUM
 
 /turf/closed/wall/mineral/titanium/survival/nodiagonal
-	icon = 'icons/turf/walls/survival_pod_walls.dmi'
+	icon = '../assets/icons/turf/walls/survival_pod_walls.dmi'
 	icon_state = "survival_pod_walls-0"
 	base_icon_state = "survival_pod_walls"
 	smoothing_flags = SMOOTH_BITMASK
@@ -334,7 +334,7 @@
 /turf/closed/wall/mineral/plastitanium
 	name = "wall"
 	desc = "A durable wall made of an alloy of plasma and titanium."
-	icon = 'icons/turf/walls/plastitanium_wall.dmi'
+	icon = '../assets/icons/turf/walls/plastitanium_wall.dmi'
 	icon_state = "plastitanium_wall-0"
 	base_icon_state = "plastitanium_wall"
 	explosive_resistance = 4
@@ -354,12 +354,12 @@
 
 
 /turf/closed/wall/mineral/plastitanium/nodiagonal
-	icon = MAP_SWITCH('icons/turf/walls/plastitanium_wall.dmi', 'icons/turf/walls/misc_wall.dmi')
+	icon = MAP_SWITCH('../assets/icons/turf/walls/plastitanium_wall.dmi', '../assets/icons/turf/walls/misc_wall.dmi')
 	icon_state = MAP_SWITCH("plastitanium_wall-0", "plastitanium_nd")
 	smoothing_flags = SMOOTH_BITMASK
 
 /turf/closed/wall/mineral/plastitanium/overspace
-	icon = MAP_SWITCH('icons/turf/walls/plastitanium_wall.dmi', 'icons/turf/walls/misc_wall.dmi')
+	icon = MAP_SWITCH('../assets/icons/turf/walls/plastitanium_wall.dmi', '../assets/icons/turf/walls/misc_wall.dmi')
 	icon_state = MAP_SWITCH("plastitanium_wall-0", "plastitanium_overspace")
 	fixed_underlay = list("space" = TRUE)
 

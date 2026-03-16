@@ -3,9 +3,9 @@
 	desc = "Causes severe bleeding on a target and several targets around them."
 	background_icon_state = "bg_heretic"
 	overlay_icon_state = "bg_heretic_border"
-	button_icon = 'icons/mob/actions/actions_ecult.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_ecult.dmi'
 	button_icon_state = "cleave"
-	ranged_mousepointer = 'icons/effects/mouse_pointers/throw_target.dmi'
+	ranged_mousepointer = '../assets/icons/effects/mouse_pointers/throw_target.dmi'
 
 	school = SCHOOL_FORBIDDEN
 	cooldown_time = 45 SECONDS
@@ -59,6 +59,6 @@
 	wound_type = /datum/wound/slash/flesh/severe
 
 /obj/effect/temp_visual/cleave
-	icon = 'icons/effects/eldritch.dmi'
+	icon = '../assets/icons/effects/eldritch.dmi'
 	icon_state = "cleave"
 	duration = 6

@@ -131,11 +131,11 @@
 		if(beat != BEAT_SLOW)
 			beat = BEAT_SLOW
 			to_chat(owner, span_notice("You feel your heart slow down..."))
-			SEND_SOUND(owner, sound('sound/effects/health/slowbeat.ogg', repeat = TRUE, channel = CHANNEL_HEARTBEAT, volume = 40))
+			SEND_SOUND(owner, sound('../assets/sound/effects/health/slowbeat.ogg', repeat = TRUE, channel = CHANNEL_HEARTBEAT, volume = 40))
 
 	else if(owner.stat == HARD_CRIT)
 		if(beat != BEAT_FAST && owner.has_status_effect(/datum/status_effect/jitter))
-			SEND_SOUND(owner, sound('sound/effects/health/fastbeat.ogg', repeat = TRUE, channel = CHANNEL_HEARTBEAT, volume = 40))
+			SEND_SOUND(owner, sound('../assets/sound/effects/health/fastbeat.ogg', repeat = TRUE, channel = CHANNEL_HEARTBEAT, volume = 40))
 			beat = BEAT_FAST
 
 	else if(beat != BEAT_NONE)
@@ -173,7 +173,7 @@
 
 /obj/item/organ/heart/cursed/attack(mob/living/carbon/human/accursed, mob/living/carbon/human/user, obj/target)
 	if(accursed == user && istype(accursed))
-		playsound(user,'sound/effects/singlebeat.ogg',40,TRUE)
+		playsound(user,'../assets/sound/effects/singlebeat.ogg',40,TRUE)
 		user.temporarilyRemoveItemFromInventory(src, TRUE)
 		Insert(user)
 	else
@@ -394,7 +394,7 @@
 /obj/item/organ/heart/evolved/sacred/proc/on_blocked()
 	apply_organ_damage(damage_per_block)
 	owner.vomit(VOMIT_CATEGORY_BLOOD)
-	playsound(owner, 'sound/effects/health/slowbeat.ogg', 80)
+	playsound(owner, '../assets/sound/effects/health/slowbeat.ogg', 80)
 
 /// We don't block magic if it would kill our heart
 /obj/item/organ/heart/evolved/sacred/proc/check_block()

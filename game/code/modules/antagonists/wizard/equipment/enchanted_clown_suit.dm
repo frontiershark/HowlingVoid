@@ -2,7 +2,7 @@
 /datum/action/cooldown/spell/conjure_item/clown_pockets
 	name = "Acquire Clowning Implement"
 	desc = "Pull an item out of your mysteriously expansive pants."
-	button_icon = 'icons/obj/clothing/masks.dmi'
+	button_icon = '../assets/icons/obj/clothing/masks.dmi'
 	button_icon_state = "clown"
 	school = SCHOOL_CONJURATION
 	spell_requirements = NONE

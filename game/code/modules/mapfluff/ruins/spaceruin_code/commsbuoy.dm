@@ -1,19 +1,19 @@
 /obj/structure/fluff/commsbuoy_receiver
 	name = "interstellar receiver"
 	desc = "A dish-shaped component of the Comms Buoy used to detect and record interstellar signals."
-	icon = 'icons/obj/machines/telecomms.dmi'
+	icon = '../assets/icons/obj/machines/telecomms.dmi'
 	icon_state = "broadcast receiver"
 
 /obj/structure/fluff/commsbuoy_processor
 	name = "comms buoy processor unit"
 	desc = "This machine is used to process and unscramble interstellar transmissions, to then be relayed and broadcast."
-	icon = 'icons/obj/machines/telecomms.dmi'
+	icon = '../assets/icons/obj/machines/telecomms.dmi'
 	icon_state = "processor"
 
 /obj/structure/fluff/commsbuoy_broadcaster
 	name = "interstellar broadcaster"
 	desc = "A dish-shaped component of the  Comms Buoy used to broadcast processed interstellar signals."
-	icon = 'icons/obj/machines/telecomms.dmi'
+	icon = '../assets/icons/obj/machines/telecomms.dmi'
 	icon_state = "broadcaster"
 
 /obj/structure/fluff/sat_dish
@@ -21,7 +21,7 @@
 	desc = "I wonder if they get any sports channels out here."
 	density = FALSE
 	deconstructible = TRUE
-	icon = 'icons/obj/fluff/general.dmi'
+	icon = '../assets/icons/obj/fluff/general.dmi'
 	icon_state = "sat_dish"
 
 /obj/item/keycard/nt_commsbuoy
@@ -40,14 +40,14 @@
 	sound_environment = SOUND_AREA_SMALL_ENCLOSED
 	default_gravity = ZERO_GRAVITY
 	ambientsounds = list(
-		'sound/ambience/engineering/ambisin2.ogg',
-		'sound/ambience/misc/signal.ogg',
-		'sound/ambience/misc/signal.ogg',
-		'sound/ambience/general/ambigen9.ogg',
-		'sound/ambience/engineering/ambitech.ogg',
-		'sound/ambience/engineering/ambitech2.ogg',
-		'sound/ambience/engineering/ambitech3.ogg',
-		'sound/ambience/misc/ambimystery.ogg',
+		'../assets/sound/ambience/engineering/ambisin2.ogg',
+		'../assets/sound/ambience/misc/signal.ogg',
+		'../assets/sound/ambience/misc/signal.ogg',
+		'../assets/sound/ambience/general/ambigen9.ogg',
+		'../assets/sound/ambience/engineering/ambitech.ogg',
+		'../assets/sound/ambience/engineering/ambitech2.ogg',
+		'../assets/sound/ambience/engineering/ambitech3.ogg',
+		'../assets/sound/ambience/misc/ambimystery.ogg',
 		) //same ambience as tcommsat
 
 /obj/item/paper/fluff/ruins/nt_commsbuoy

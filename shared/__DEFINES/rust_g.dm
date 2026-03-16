@@ -251,7 +251,7 @@
 /// "sprites" format:
 /// list(
 ///     "sprite_name" = list( // <--- this list is a [SPRITE_OBJECT]
-///         icon_file = 'icons/path_to/an_icon.dmi',
+///         icon_file = '../assets/icons/path_to/an_icon.dmi',
 ///         icon_state = "some_icon_state",
 ///         dir = SOUTH,
 ///         frame = 1,

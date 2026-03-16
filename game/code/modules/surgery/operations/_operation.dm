@@ -155,7 +155,7 @@
 		vision_distance = 5,
 		visible_message_flags = ALWAYS_SHOW_SELF_MESSAGE,
 	)
-	playsound(src, istype(tool, /obj/item/stack/medical/suture) ? SFX_SUTURE_BEGIN : 'sound/items/handling/surgery/cautery1.ogg', 50, TRUE)
+	playsound(src, istype(tool, /obj/item/stack/medical/suture) ? SFX_SUTURE_BEGIN : '../assets/sound/items/handling/surgery/cautery1.ogg', 50, TRUE)
 	if(!do_after(
 		user = src,
 		delay = /datum/surgery_operation/limb/close_skin::time * 2 * tool.toolspeed,
@@ -171,7 +171,7 @@
 		vision_distance = 5,
 		visible_message_flags = ALWAYS_SHOW_SELF_MESSAGE,
 	)
-	playsound(src, istype(tool, /obj/item/stack/medical/suture) ? SFX_SUTURE_END : 'sound/items/handling/surgery/cautery2.ogg', 50, TRUE)
+	playsound(src, istype(tool, /obj/item/stack/medical/suture) ? SFX_SUTURE_END : '../assets/sound/items/handling/surgery/cautery2.ogg', 50, TRUE)
 	limb.remove_surgical_state(ALL_SURGERY_STATES_UNSET_ON_CLOSE)
 	if(istype(tool, /obj/item/stack/medical/suture))
 		var/obj/item/stack/medical/suture/suture_tool = tool
@@ -719,7 +719,7 @@ GLOBAL_DATUM_INIT(operations, /datum/operation_holder, new)
  * Also used when generating icons for the wiki
  */
 /datum/surgery_operation/proc/get_default_radial_image()
-	return image(icon = 'icons/effects/random_spawners.dmi', icon_state = "questionmark")
+	return image(icon = '../assets/icons/effects/random_spawners.dmi', icon_state = "questionmark")
 
 /// Helper to get a generic limb radial image based on body zone
 /datum/surgery_operation/proc/get_generic_limb_radial_image(body_zone)
@@ -727,11 +727,11 @@ GLOBAL_DATUM_INIT(operations, /datum/operation_holder, new)
 	PROTECTED_PROC(TRUE)
 
 	if(body_zone == BODY_ZONE_HEAD || body_zone == BODY_ZONE_CHEST || body_zone == BODY_ZONE_PRECISE_EYES || body_zone == BODY_ZONE_PRECISE_MOUTH)
-		return image(icon = 'icons/obj/medical/surgery_ui.dmi', icon_state = "surgery_[body_zone]")
+		return image(icon = '../assets/icons/obj/medical/surgery_ui.dmi', icon_state = "surgery_[body_zone]")
 	if(body_zone == BODY_ZONE_L_ARM || body_zone == BODY_ZONE_R_ARM)
-		return image(icon = 'icons/obj/medical/surgery_ui.dmi', icon_state = "surgery_arms")
+		return image(icon = '../assets/icons/obj/medical/surgery_ui.dmi', icon_state = "surgery_arms")
 	if(body_zone == BODY_ZONE_L_LEG || body_zone == BODY_ZONE_R_LEG)
-		return image(icon = 'icons/obj/medical/surgery_ui.dmi', icon_state = "surgery_legs")
+		return image(icon = '../assets/icons/obj/medical/surgery_ui.dmi', icon_state = "surgery_legs")
 	return get_default_radial_image()
 
 /**

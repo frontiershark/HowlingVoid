@@ -1,7 +1,7 @@
 /obj/item/reagent_containers/blood
 	name = "blood pack"
 	desc = "Contains blood used for transfusion. Must be attached to an IV drip."
-	icon = 'icons/obj/medical/bloodpack.dmi'
+	icon = '../assets/icons/obj/medical/bloodpack.dmi'
 	icon_state = "bloodpack"
 	volume = 200
 	fill_icon_thresholds = list(10, 20, 30, 40, 50, 60, 70, 80, 90, 100)

@@ -2,7 +2,7 @@
 /obj/structure/ore_container/material_stand
 	name = "material stand"
 	desc = "Is everyone free to use this thing?"
-	icon = 'icons/mob/simple/jungle/mook.dmi'
+	icon = '../assets/icons/mob/simple/jungle/mook.dmi'
 	icon_state = "material_stand"
 	density = TRUE
 	anchored = TRUE

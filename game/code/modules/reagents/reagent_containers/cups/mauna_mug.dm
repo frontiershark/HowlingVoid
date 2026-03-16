@@ -1,7 +1,7 @@
 /obj/item/reagent_containers/cup/maunamug
 	name = "mauna mug"
 	desc = "A drink served in a classy mug. Now with built-in heating!"
-	icon = 'icons/obj/devices/mauna_mug.dmi'
+	icon = '../assets/icons/obj/devices/mauna_mug.dmi'
 	icon_state = "maunamug"
 	base_icon_state = "maunamug"
 	initial_reagent_flags = OPENCONTAINER
@@ -42,7 +42,7 @@
 	if(reagents.chem_temp >= max_temp)
 		change_power_status(FALSE)
 		audible_message(span_notice("The Mauna Mug lets out a happy beep and turns off!"))
-		playsound(src, 'sound/machines/chime.ogg', 50)
+		playsound(src, '../assets/sound/machines/chime.ogg', 50)
 
 /obj/item/reagent_containers/cup/maunamug/Destroy()
 	if(cell)

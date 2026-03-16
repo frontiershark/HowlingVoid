@@ -2,7 +2,7 @@
 /obj/item/ectoplasm/revenant
 	name = "glimmering residue"
 	desc = "A pile of fine blue dust. Small tendrils of violet mist swirl around it."
-	icon = 'icons/effects/effects.dmi'
+	icon = '../assets/icons/effects/effects.dmi'
 	icon_state = "revenantEctoplasm"
 	w_class = WEIGHT_CLASS_SMALL
 	/// Are we currently reforming?

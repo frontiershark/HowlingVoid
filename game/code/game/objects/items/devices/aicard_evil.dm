@@ -2,7 +2,7 @@
 /obj/item/aicard/syndie
 	name = "syndiCard"
 	desc = "A storage device for AIs. Nanotrasen forgot to make the patent, so the Syndicate made their own version!"
-	icon = 'icons/obj/aicards.dmi'
+	icon = '../assets/icons/obj/aicards.dmi'
 	icon_state = "syndicard"
 	base_icon_state = "syndicard"
 	item_flags = null
@@ -81,7 +81,7 @@
 	new_ai.add_faction(ROLE_SYNDICATE)
 
 	// Make it look evil!!!
-	new_ai.hologram_appearance = mutable_appearance('icons/mob/silicon/ai.dmi',"xeno_queen") //good enough
+	new_ai.hologram_appearance = mutable_appearance('../assets/icons/mob/silicon/ai.dmi',"xeno_queen") //good enough
 
 	new_ai.set_core_display_icon("hades")
 
@@ -102,7 +102,7 @@
 		AI.radio_enabled = TRUE
 
 	do_sparks(4, TRUE, src)
-	playsound(src, 'sound/machines/chime.ogg', 25, TRUE)
+	playsound(src, '../assets/sound/machines/chime.ogg', 25, TRUE)
 	return
 
 /obj/item/aicard/syndie/loaded/upload_ai(atom/to_what, mob/living/user)
@@ -129,13 +129,13 @@
 	else
 		AI = locate() in target
 	if(!AI || AI.interaction_range == INFINITY)
-		playsound(src,'sound/machines/buzz/buzz-sigh.ogg',50,FALSE)
+		playsound(src,'../assets/sound/machines/buzz/buzz-sigh.ogg',50,FALSE)
 		to_chat(user, span_notice("Error! Incompatible object!"))
 		return ..()
 	AI.interaction_range += 2
 	if(AI.interaction_range > 7)
 		AI.interaction_range = INFINITY
-	playsound(src,'sound/machines/beep/twobeep.ogg',50,FALSE)
+	playsound(src,'../assets/sound/machines/beep/twobeep.ogg',50,FALSE)
 	to_chat(user, span_notice("You insert [src] into [AI]'s compartment, and it beeps as it processes the data."))
 	to_chat(AI, span_notice("You process [src], and find yourself able to manipulate electronics from up to [AI.interaction_range] meters!"))
 	qdel(src)

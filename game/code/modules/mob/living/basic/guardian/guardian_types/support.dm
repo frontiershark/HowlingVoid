@@ -54,9 +54,9 @@
 /datum/action/cooldown/mob_cooldown/guardian_bluespace_beacon
 	name = "Place Bluespace Beacon"
 	desc = "Mark the ground under your feet as a teleportation point. Alt-click things to teleport them to your beacon."
-	button_icon = 'icons/effects/effects.dmi'
+	button_icon = '../assets/icons/effects/effects.dmi'
 	button_icon_state = "the_freezer"
-	background_icon = 'icons/hud/guardian.dmi'
+	background_icon = '../assets/icons/hud/guardian.dmi'
 	background_icon_state = "base"
 	cooldown_time = 5 MINUTES
 	melee_cooldown_time = 0
@@ -134,7 +134,7 @@
 /// Start teleporting
 /datum/action/cooldown/mob_cooldown/guardian_bluespace_beacon/proc/perform_teleport(mob/living/source, atom/target)
 	source.do_attack_animation(target)
-	playsound(target, 'sound/items/weapons/punch1.ogg', 50, TRUE, TRUE, frequency = -1)
+	playsound(target, '../assets/sound/items/weapons/punch1.ogg', 50, TRUE, TRUE, frequency = -1)
 	source.balloon_alert(source, "teleporting...")
 	target.visible_message(
 		span_danger("[target] starts to glow faintly!"), \
@@ -156,7 +156,7 @@
 /// Structure which acts as the landing point for a support guardian's teleportation effects
 /obj/structure/guardian_beacon
 	name = "guardian beacon"
-	icon = 'icons/turf/floors.dmi'
+	icon = '../assets/icons/turf/floors.dmi'
 	desc = "A glowing zone which acts as a beacon for teleportation."
 	icon_state = "light_on-8"
 	light_range = MINIMUM_USEFUL_LIGHT_RANGE

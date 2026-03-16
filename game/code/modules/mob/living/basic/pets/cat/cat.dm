@@ -1,7 +1,7 @@
 /mob/living/basic/pet/cat
 	name = "cat"
 	desc = "Kitty!!"
-	icon = 'icons/mob/simple/pets.dmi'
+	icon = '../assets/icons/mob/simple/pets.dmi'
 	icon_state = "cat2"
 	icon_living = "cat2"
 	icon_dead = "cat2_dead"
@@ -29,7 +29,7 @@
 	held_state = "cat2"
 	attack_verb_continuous = "claws"
 	attack_verb_simple = "claw"
-	attack_sound = 'sound/items/weapons/slash.ogg'
+	attack_sound = '../assets/sound/items/weapons/slash.ogg'
 	attack_vis_effect = ATTACK_EFFECT_CLAW
 	///icon of the collar we can wear
 	var/collar_icon_state = "cat"

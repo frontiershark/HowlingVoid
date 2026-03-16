@@ -2,7 +2,7 @@
 	name = "organ harvester"
 	desc = "An advanced machine used for harvesting organs and limbs from the deceased."
 	density = TRUE
-	icon = 'icons/obj/machines/harvester.dmi'
+	icon = '../assets/icons/obj/machines/harvester.dmi'
 	icon_state = "harvester"
 	base_icon_state = "harvester"
 	verb_say = "states"
@@ -76,15 +76,15 @@
 		for(var/obj/item/abiotic_item in carbon_occupant.held_items + carbon_occupant.get_equipped_items())
 			if(!(HAS_TRAIT(abiotic_item, TRAIT_NODROP)))
 				say("Subject may not have abiotic items on.")
-				playsound(src, 'sound/machines/buzz/buzz-sigh.ogg', 30, TRUE)
+				playsound(src, '../assets/sound/machines/buzz/buzz-sigh.ogg', 30, TRUE)
 				return
 	if(!(carbon_occupant.mob_biotypes & MOB_ORGANIC))
 		say("Subject is not organic.")
-		playsound(src, 'sound/machines/buzz/buzz-sigh.ogg', 30, TRUE)
+		playsound(src, '../assets/sound/machines/buzz/buzz-sigh.ogg', 30, TRUE)
 		return
 	if(!allow_living && !(carbon_occupant.stat == DEAD || HAS_TRAIT(carbon_occupant, TRAIT_FAKEDEATH)))     //I mean, the machines scanners arent advanced enough to tell you're alive
 		say("Subject is still alive.")
-		playsound(src, 'sound/machines/buzz/buzz-sigh.ogg', 30, TRUE)
+		playsound(src, '../assets/sound/machines/buzz/buzz-sigh.ogg', 30, TRUE)
 		return
 	return TRUE
 
@@ -115,7 +115,7 @@
 	if(!harvesting || state_open || !powered() || !occupant || !iscarbon(occupant))
 		end_harvesting(success = FALSE)
 		return
-	playsound(src, 'sound/machines/juicer.ogg', 20, TRUE)
+	playsound(src, '../assets/sound/machines/juicer.ogg', 20, TRUE)
 	var/mob/living/carbon/carbon_occupant = occupant
 	if(!LAZYLEN(operation_order)) //The list is empty, so we're done here
 		end_harvesting(success = TRUE)
@@ -141,10 +141,10 @@
 	open_machine()
 	if (!success)
 		say("Protocol interrupted. Aborting harvest.")
-		playsound(src, 'sound/machines/buzz/buzz-sigh.ogg', 30, TRUE)
+		playsound(src, '../assets/sound/machines/buzz/buzz-sigh.ogg', 30, TRUE)
 	else
 		say("Subject has been successfully harvested.")
-		playsound(src, 'sound/machines/microwave/microwave-end.ogg', 100, FALSE)
+		playsound(src, '../assets/sound/machines/microwave/microwave-end.ogg', 100, FALSE)
 
 /obj/machinery/harvester/screwdriver_act(mob/living/user, obj/item/tool)
 	. = TRUE

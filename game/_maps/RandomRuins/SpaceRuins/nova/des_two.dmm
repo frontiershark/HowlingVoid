@@ -429,7 +429,7 @@
 /obj/structure/showcase/cyborg{
 	desc = "A stand with the empty body of a Cybersun cyborg bolted to it.";
 	dir = 8;
-	icon = 'icons/mob/silicon/robots.dmi';
+	icon = '../assets/icons/mob/silicon/robots.dmi';
 	icon_state = "synd_sec";
 	name = "syndicate cyborg showcase";
 	pixel_x = 6
@@ -636,7 +636,7 @@
 /obj/structure/showcase/cyborg{
 	desc = "A stand with the empty body of a Cybersun cyborg bolted to it.";
 	dir = 4;
-	icon = 'icons/mob/silicon/robots.dmi';
+	icon = '../assets/icons/mob/silicon/robots.dmi';
 	icon_state = "synd_sec";
 	name = "syndicate cyborg showcase";
 	pixel_x = -6
@@ -1299,7 +1299,7 @@
 /obj/structure/showcase/cyborg{
 	desc = "A stand with the empty body of a Cybersun cyborg bolted to it.";
 	dir = 8;
-	icon = 'icons/mob/silicon/robots.dmi';
+	icon = '../assets/icons/mob/silicon/robots.dmi';
 	icon_state = "synd_sec";
 	name = "syndicate cyborg showcase";
 	pixel_x = 6
@@ -3986,7 +3986,7 @@
 /obj/structure/showcase/cyborg{
 	desc = "A stand with the empty body of a Cybersun cyborg bolted to it.";
 	dir = 4;
-	icon = 'icons/mob/silicon/robots.dmi';
+	icon = '../assets/icons/mob/silicon/robots.dmi';
 	icon_state = "synd_sec";
 	name = "syndicate cyborg showcase";
 	pixel_x = -6

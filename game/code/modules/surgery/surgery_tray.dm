@@ -7,7 +7,7 @@
 /obj/item/surgery_tray
 	name = "surgery tray"
 	desc = "A DeForest-brand medical cart. It is a folding model, meaning the wheels on the bottom can be retracted and the body used as a tray."
-	icon = 'icons/obj/medical/medicart.dmi'
+	icon = '../assets/icons/obj/medical/medicart.dmi'
 	icon_state = "tray"
 	w_class = WEIGHT_CLASS_BULKY
 	slowdown = 1
@@ -230,7 +230,7 @@
 
 /obj/effect/spawner/surgery_tray
 	name = "surgery tray spawner"
-	icon = 'icons/obj/medical/medicart.dmi'
+	icon = '../assets/icons/obj/medical/medicart.dmi'
 	icon_state = "tray"
 	/// Tray to usually spawn in.
 	var/tray_to_spawn = /obj/item/surgery_tray

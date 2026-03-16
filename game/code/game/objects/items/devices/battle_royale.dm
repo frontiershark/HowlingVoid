@@ -29,7 +29,7 @@ GLOBAL_LIST_INIT(battle_royale_regions, list(
 	desc = "Subtly implants people with rumble royale implants, \
 		preparing them to struggle for their life for the enjoyment of the Syndicate's paying audience. \
 		Implants may cause irritation at site of implantation."
-	icon = 'icons/obj/medical/syringe.dmi'
+	icon = '../assets/icons/obj/medical/syringe.dmi'
 	icon_state = "nanite_hypo"
 	w_class = WEIGHT_CLASS_SMALL
 	/// Do we have a linked remote? Just to prevent headdesk moments
@@ -73,7 +73,7 @@ GLOBAL_LIST_INIT(battle_royale_regions, list(
 /obj/item/royale_remote
 	name = "royale remote"
 	desc = "A single use device which will activate any linked rumble royale implants, starting the show."
-	icon = 'icons/obj/devices/remote.dmi'
+	icon = '../assets/icons/obj/devices/remote.dmi'
 	icon_state = "designator_syndicate"
 	w_class = WEIGHT_CLASS_SMALL
 	/// Minimum number of contestants we should have
@@ -238,7 +238,7 @@ GLOBAL_DATUM_INIT(battle_royale_master, /datum/battle_royale_master, new)
 			As a gesture of gratitude, we will be providing our premium broadcast to your entertainment monitors at no cost so that you can watch the excitement. \n\
 			Bystanders are advised not to intervene... but if you do, make it look good for the camera!",
 		title = "Rumble Royale Beginning",
-		sound = 'sound/announcer/alarm/nuke_alarm.ogg',
+		sound = '../assets/sound/announcer/alarm/nuke_alarm.ogg',
 		has_important_message = TRUE,
 		sender_override = "Rumble Royale Pirate Broadcast Station",
 		color_override = "red",
@@ -268,7 +268,7 @@ GLOBAL_DATUM_INIT(battle_royale_master, /datum/battle_royale_master, new)
 		priority_announce(
 			text = message,
 			title = "Rumble Royale Casualty Report",
-			sound = 'sound/announcer/notice/notice1.ogg',
+			sound = '../assets/sound/announcer/notice/notice1.ogg',
 			has_important_message = TRUE,
 			sender_override = "Rumble Royale Pirate Broadcast Station",
 			color_override = "red",
@@ -302,7 +302,7 @@ GLOBAL_DATUM_INIT(battle_royale_master, /datum/battle_royale_master, new)
 	priority_announce(
 		text = message,
 		title = "Rumble Royale Winner",
-		sound = 'sound/announcer/notice/notice1.ogg',
+		sound = '../assets/sound/announcer/notice/notice1.ogg',
 		has_important_message = TRUE,
 		sender_override = "Rumble Royale Pirate Broadcast Station",
 		color_override = "red",
@@ -317,7 +317,7 @@ GLOBAL_DATUM_INIT(battle_royale_master, /datum/battle_royale_master, new)
 	priority_announce(
 		text = "We're halfway done folks! And bad news to anyone who hasn't made it to the [chosen_area]... you're out!",
 		title = "Rumble Royale Update",
-		sound = 'sound/announcer/notice/notice1.ogg',
+		sound = '../assets/sound/announcer/notice/notice1.ogg',
 		has_important_message = TRUE,
 		sender_override = "Rumble Royale Pirate Broadcast Station",
 		color_override = "red",
@@ -335,7 +335,7 @@ GLOBAL_DATUM_INIT(battle_royale_master, /datum/battle_royale_master, new)
 			We're sorry to announce that this edition of Royal Rumble has no winner. \n\
 			Better luck next time!",
 		title = "Rumble Royale Concluded",
-		sound = 'sound/announcer/notice/notice1.ogg',
+		sound = '../assets/sound/announcer/notice/notice1.ogg',
 		has_important_message = TRUE,
 		sender_override = "Rumble Royale Pirate Broadcast Station",
 		color_override = "red",

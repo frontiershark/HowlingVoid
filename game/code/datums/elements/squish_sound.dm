@@ -7,7 +7,7 @@
 
 /datum/element/squish_sound/Attach(
 	datum/target,
-	sound = 'sound/effects/footstep/gib_step.ogg',
+	sound = '../assets/sound/effects/footstep/gib_step.ogg',
 )
 	. = ..()
 	sound_to_play = sound

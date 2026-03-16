@@ -5,7 +5,7 @@
 
 /obj/effect/mob_spawn/ghost_role/human/skeleton
 	name = "skeletal remains"
-	icon = 'icons/effects/blood.dmi'
+	icon = '../assets/icons/effects/blood.dmi'
 	icon_state = "remains"
 	mob_name = "skeleton"
 	prompt_name = "a skeletal guardian"
@@ -21,7 +21,7 @@
 
 /obj/effect/mob_spawn/ghost_role/human/zombie
 	name = "rotting corpse"
-	icon = 'icons/effects/blood.dmi'
+	icon = '../assets/icons/effects/blood.dmi'
 	icon_state = "remains"
 	mob_name = "zombie"
 	prompt_name = "an undead guardian"

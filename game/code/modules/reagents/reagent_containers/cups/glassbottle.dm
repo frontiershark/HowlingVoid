@@ -7,7 +7,7 @@
 /obj/item/reagent_containers/cup/glass/bottle
 	name = "glass bottle"
 	desc = "This blank bottle is unyieldingly anonymous, offering no clues to its contents."
-	icon = 'icons/obj/drinks/bottles.dmi'
+	icon = '../assets/icons/obj/drinks/bottles.dmi'
 	icon_state = "glassbottle"
 	worn_icon_state = "bottle"
 	icon_angle = 90
@@ -20,8 +20,8 @@
 	demolition_mod = 0.25
 	inhand_icon_state = "beer" //Generic held-item sprite until unique ones are made.
 	var/broken_inhand_icon_state = "broken_beer"
-	lefthand_file = 'icons/mob/inhands/items/drinks_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/drinks_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/drinks_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/drinks_righthand.dmi'
 	age_restricted = TRUE // wrryy can't set an init value to see if drink_type contains ALCOHOL so here we go
 	///Directly relates to the 'knockdown' duration. Lowered by armor (i.e. helmets)
 	var/bottle_knockdown_duration = BOTTLE_KNOCKDOWN_DEFAULT_DURATION
@@ -91,7 +91,7 @@
 		return ITEM_INTERACT_BLOCKING
 	user.visible_message(span_notice("[user] tosses [src] in [target]"), span_notice("You toss [src] in [target]"), span_notice("you hear a splash."))
 	SSpersistence.save_message_bottle(message_in_a_bottle, type)
-	playsound(target, 'sound/effects/bigsplash.ogg', 70)
+	playsound(target, '../assets/sound/effects/bigsplash.ogg', 70)
 	qdel(src)
 	return ITEM_INTERACT_SUCCESS
 
@@ -204,7 +204,7 @@
 		if(3)
 			intensity_state = "high"
 	///The froth fountain that we are sticking onto the bottle
-	var/mutable_appearance/froth = mutable_appearance('icons/obj/drinks/drink_effects.dmi', "froth_bottle_[intensity_state]")
+	var/mutable_appearance/froth = mutable_appearance('../assets/icons/obj/drinks/drink_effects.dmi', "froth_bottle_[intensity_state]")
 	froth.pixel_w = offset_x
 	froth.pixel_z = offset_y
 	add_overlay(froth)
@@ -214,7 +214,7 @@
 /obj/item/broken_bottle
 	name = "broken bottle"
 	desc = "A bottle with a sharp broken bottom."
-	icon = 'icons/obj/drinks/drink_effects.dmi'
+	icon = '../assets/icons/obj/drinks/drink_effects.dmi'
 	icon_state = "broken_bottle"
 	force = 9
 	throwforce = 5
@@ -223,17 +223,17 @@
 	demolition_mod = 0.25
 	w_class = WEIGHT_CLASS_TINY
 	inhand_icon_state = "broken_beer"
-	lefthand_file = 'icons/mob/inhands/items/drinks_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/drinks_righthand.dmi'
-	hitsound = 'sound/items/weapons/bladeslice.ogg'
+	lefthand_file = '../assets/icons/mob/inhands/items/drinks_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/drinks_righthand.dmi'
+	hitsound = '../assets/sound/items/weapons/bladeslice.ogg'
 	attack_verb_continuous = list("stabs", "slashes", "attacks")
 	attack_verb_simple = list("stab", "slash", "attack")
 	sharpness = SHARP_EDGED
 	custom_materials = list(/datum/material/glass=SMALL_MATERIAL_AMOUNT)
 	///The mask image for mimicking a broken-off bottom of the bottle
-	var/static/icon/broken_outline = icon('icons/obj/drinks/drink_effects.dmi', "broken")
+	var/static/icon/broken_outline = icon('../assets/icons/obj/drinks/drink_effects.dmi', "broken")
 	///The mask image for mimicking a broken-off neck of the bottle
-	var/static/icon/flipped_broken_outline = icon('icons/obj/drinks/drink_effects.dmi', "broken-flipped")
+	var/static/icon/flipped_broken_outline = icon('../assets/icons/obj/drinks/drink_effects.dmi', "broken-flipped")
 
 /obj/item/broken_bottle/Initialize(mapload)
 	. = ..()
@@ -391,7 +391,7 @@
 /obj/item/reagent_containers/cup/glass/bottle/holywater
 	name = "flask of holy water"
 	desc = "A flask of the chaplain's holy water."
-	icon = 'icons/obj/drinks/bottles.dmi'
+	icon = '../assets/icons/obj/drinks/bottles.dmi'
 	icon_state = "holyflask"
 	inhand_icon_state = "holyflask"
 	broken_inhand_icon_state = "broken_holyflask"
@@ -690,7 +690,7 @@
 		balloon_alert(user, "not strong enough!")
 		return ITEM_INTERACT_BLOCKING
 
-	playsound(user, 'sound/items/unsheath.ogg', 25, TRUE)
+	playsound(user, '../assets/sound/items/unsheath.ogg', 25, TRUE)
 	balloon_alert(user, "preparing to swing...")
 	if(!do_after(user, 2 SECONDS, src)) //takes longer because you are supposed to take the foil off the bottle first
 		return ITEM_INTERACT_BLOCKING
@@ -756,7 +756,7 @@
 			stunt_witness.add_mood_event("sabrage_witness", /datum/mood_event/sabrage_witness)
 
 	add_container_flags(OPENCONTAINER)
-	playsound(src, 'sound/items/champagne_pop.ogg', 70, TRUE)
+	playsound(src, '../assets/sound/items/champagne_pop.ogg', 70, TRUE)
 	update_appearance()
 	make_froth(offset_x = 0, offset_y = sabraged ? 13 : 15, intensity = froth_severity) //the y offset for sabraged is lower because the bottle's lip is smashed
 	///Type of cork to fire away
@@ -770,9 +770,9 @@
 
 /obj/projectile/bullet/champagne_cork
 	name = "champagne cork"
-	icon = 'icons/obj/drinks/drink_effects.dmi'
+	icon = '../assets/icons/obj/drinks/drink_effects.dmi'
 	icon_state = "champagne_cork"
-	hitsound = 'sound/items/weapons/genhit.ogg'
+	hitsound = '../assets/sound/items/weapons/genhit.ogg'
 	damage = 10
 	sharpness = NONE
 	impact_effect_type = null
@@ -797,7 +797,7 @@
 
 /obj/item/trash/champagne_cork
 	name = "champagne cork"
-	icon = 'icons/obj/drinks/drink_effects.dmi'
+	icon = '../assets/icons/obj/drinks/drink_effects.dmi'
 	icon_state = "champagne_cork"
 
 /obj/item/trash/champagne_cork/sabrage
@@ -958,7 +958,7 @@
 /obj/item/reagent_containers/cup/glass/bottle/pruno
 	name = "pruno mix"
 	desc = "A trash bag filled with fruit, sugar, yeast, and water, pulped together into a pungent slurry to be fermented in an enclosed space, traditionally the toilet. Security would love to confiscate this, one of the many things wrong with them."
-	icon = 'icons/obj/service/janitor.dmi'
+	icon = '../assets/icons/obj/service/janitor.dmi'
 	icon_state = "trashbag"
 	list_reagents = list(/datum/reagent/consumable/prunomix = 50)
 	var/fermentation_time = 30 SECONDS /// time it takes to ferment
@@ -1008,7 +1008,7 @@
 	for (var/mob/living/M in view(2, get_turf(src))) // letting people and/or narcs know when the pruno is done
 		if(HAS_TRAIT(M, TRAIT_ANOSMIA))
 			to_chat(M, span_info("A pungent smell emanates from [src], like fruit puking out its guts."))
-		playsound(get_turf(src), 'sound/effects/bubbles/bubbles2.ogg', 25, TRUE)
+		playsound(get_turf(src), '../assets/sound/effects/bubbles/bubbles2.ogg', 25, TRUE)
 
 /**
  * Cartons
@@ -1018,8 +1018,8 @@
 /obj/item/reagent_containers/cup/glass/bottle/juice
 	custom_price = PAYCHECK_CREW
 	inhand_icon_state = "carton"
-	lefthand_file = 'icons/mob/inhands/items/drinks_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/drinks_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/items/drinks_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/items/drinks_righthand.dmi'
 	isGlass = FALSE
 	age_restricted = FALSE
 	custom_materials = list(/datum/material/cardboard = SHEET_MATERIAL_AMOUNT * 1.5)
@@ -1027,7 +1027,7 @@
 /obj/item/reagent_containers/cup/glass/bottle/juice/orangejuice
 	name = "orange juice"
 	desc = "Full of vitamins and deliciousness!"
-	icon = 'icons/obj/drinks/boxes.dmi'
+	icon = '../assets/icons/obj/drinks/boxes.dmi'
 	icon_state = "orangejuice"
 	list_reagents = list(/datum/reagent/consumable/orangejuice = 100)
 	drink_type = FRUIT | BREAKFAST
@@ -1035,7 +1035,7 @@
 /obj/item/reagent_containers/cup/glass/bottle/juice/lemonjuice
 	name = "lemon juice"
 	desc = "Some like to pour a few drops of this over their fish."
-	icon = 'icons/obj/drinks/boxes.dmi'
+	icon = '../assets/icons/obj/drinks/boxes.dmi'
 	icon_state = "lemonjuice"
 	list_reagents = list(/datum/reagent/consumable/lemonjuice = 100)
 	drink_type = FRUIT
@@ -1043,7 +1043,7 @@
 /obj/item/reagent_containers/cup/glass/bottle/juice/cream
 	name = "milk cream"
 	desc = "It's cream. Made from milk. What else did you think you'd find in there?"
-	icon = 'icons/obj/drinks/boxes.dmi'
+	icon = '../assets/icons/obj/drinks/boxes.dmi'
 	icon_state = "cream"
 	list_reagents = list(/datum/reagent/consumable/cream = 100)
 	drink_type = DAIRY
@@ -1051,7 +1051,7 @@
 /obj/item/reagent_containers/cup/glass/bottle/juice/eggnog
 	name = "eggnog"
 	desc = "For enjoying the most wonderful time of the year."
-	icon = 'icons/obj/drinks/boxes.dmi'
+	icon = '../assets/icons/obj/drinks/boxes.dmi'
 	icon_state = "nog2"
 	list_reagents = list(/datum/reagent/consumable/ethanol/eggnog = 100)
 	drink_type = FRUIT
@@ -1059,7 +1059,7 @@
 /obj/item/reagent_containers/cup/glass/bottle/juice/dreadnog
 	name = "eggnog"
 	desc = "For when you want some nondescript soda inside of your eggnog!"
-	icon = 'icons/obj/drinks/boxes.dmi'
+	icon = '../assets/icons/obj/drinks/boxes.dmi'
 	icon_state = "dreadnog"
 	list_reagents = list(/datum/reagent/consumable/ethanol/dreadnog = 100)
 	drink_type = FRUIT | GROSS
@@ -1067,7 +1067,7 @@
 /obj/item/reagent_containers/cup/glass/bottle/juice/tomatojuice
 	name = "tomato juice"
 	desc = "Well, at least it LOOKS like tomato juice. You can't tell with all that redness."
-	icon = 'icons/obj/drinks/boxes.dmi'
+	icon = '../assets/icons/obj/drinks/boxes.dmi'
 	icon_state = "tomatojuice"
 	list_reagents = list(/datum/reagent/consumable/tomatojuice = 100)
 	drink_type = VEGETABLES
@@ -1075,7 +1075,7 @@
 /obj/item/reagent_containers/cup/glass/bottle/juice/limejuice
 	name = "lime juice"
 	desc = "Sweet-sour goodness."
-	icon = 'icons/obj/drinks/boxes.dmi'
+	icon = '../assets/icons/obj/drinks/boxes.dmi'
 	icon_state = "limejuice"
 	list_reagents = list(/datum/reagent/consumable/limejuice = 100)
 	drink_type = FRUIT
@@ -1083,7 +1083,7 @@
 /obj/item/reagent_containers/cup/glass/bottle/juice/pineapplejuice
 	name = "pineapple juice"
 	desc = "Extremely tart, yellow juice."
-	icon = 'icons/obj/drinks/boxes.dmi'
+	icon = '../assets/icons/obj/drinks/boxes.dmi'
 	icon_state = "pineapplejuice"
 	list_reagents = list(/datum/reagent/consumable/pineapplejuice = 100)
 	drink_type = FRUIT | PINEAPPLE

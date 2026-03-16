@@ -2,7 +2,7 @@
 /mob/living/basic/mining/lobstrosity
 	name = "arctic lobstrosity"
 	desc = "These hairy crustaceans creep and multiply in underground lakes deep below the ice. They have a particular taste for fingers."
-	icon = 'icons/mob/simple/icemoon/icemoon_monsters.dmi'
+	icon = '../assets/icons/mob/simple/icemoon/icemoon_monsters.dmi'
 	icon_state = "arctic_lobstrosity"
 	icon_living = "arctic_lobstrosity"
 	icon_dead = "arctic_lobstrosity_dead"
@@ -17,7 +17,7 @@
 	melee_damage_upper = 19
 	attack_verb_continuous = "snips"
 	attack_verb_simple = "snip"
-	attack_sound = 'sound/items/weapons/bite.ogg'
+	attack_sound = '../assets/sound/items/weapons/bite.ogg'
 	attack_vis_effect = ATTACK_EFFECT_BITE // Closer than a scratch to a crustacean pinching effect
 	melee_attack_cooldown = 1 SECONDS
 	butcher_results = list(
@@ -180,7 +180,7 @@
 	key_third_person = "chitters"
 	message = "chitters pleasantly!"
 	emote_type = EMOTE_VISIBLE | EMOTE_AUDIBLE
-	sound = 'sound/mobs/non-humanoids/insect/chitter.ogg'
+	sound = '../assets/sound/mobs/non-humanoids/insect/chitter.ogg'
 
 /mob/living/basic/mining/lobstrosity/juvenile/Initialize(mapload)
 	. = ..()
@@ -268,7 +268,7 @@
 /datum/pet_command/use_ability/lob_charge
 	command_name = "Charge"
 	command_desc = "Command your lobstrosity to charge against someone."
-	radial_icon = 'icons/mob/actions/actions_items.dmi'
+	radial_icon = '../assets/icons/mob/actions/actions_items.dmi'
 	radial_icon_state = "sniper_zoom"
 	speech_commands = list("charge", "slam", "tackle")
 	command_feedback = "growl"

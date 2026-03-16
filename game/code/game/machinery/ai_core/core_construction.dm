@@ -168,7 +168,7 @@
 	if(!user.transferItemToLoc(circuit, src))
 		return FALSE
 
-	playsound(src, 'sound/items/deconstruct.ogg', 50, TRUE)
+	playsound(src, '../assets/sound/items/deconstruct.ogg', 50, TRUE)
 	src.circuit = circuit
 	UPDATE_STATE(CORE_STATE_CIRCUIT)
 	return TRUE

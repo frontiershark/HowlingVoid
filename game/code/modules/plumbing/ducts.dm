@@ -1,6 +1,6 @@
 /obj/machinery/duct
 	name = "fluid duct"
-	icon = 'icons/obj/pipes_n_cables/hydrochem/fluid_ducts.dmi'
+	icon = '../assets/icons/obj/pipes_n_cables/hydrochem/fluid_ducts.dmi'
 	icon_state = "nduct"
 	layer = PLUMBING_PIPE_VISIBILE_LAYER
 	use_power = NO_POWER_USE
@@ -261,7 +261,7 @@
 	name = "stack of duct"
 	desc = "A stack of fluid ducts."
 	singular_name = "duct"
-	icon = 'icons/obj/pipes_n_cables/hydrochem/fluid_ducts.dmi'
+	icon = '../assets/icons/obj/pipes_n_cables/hydrochem/fluid_ducts.dmi'
 	icon_state = "ducts"
 	mats_per_unit = list(/datum/material/iron=SMALL_MATERIAL_AMOUNT*5)
 	w_class = WEIGHT_CLASS_TINY
@@ -339,7 +339,7 @@
 			return ITEM_INTERACT_FAILURE
 
 		new /obj/machinery/duct(open_turf, duct_color, duct_layer)
-		playsound(open_turf, 'sound/machines/click.ogg', 50, TRUE)
+		playsound(open_turf, '../assets/sound/machines/click.ogg', 50, TRUE)
 		use(1)
 		return ITEM_INTERACT_SUCCESS
 

@@ -15,7 +15,7 @@
 	melee_damage_upper = 18
 	attack_verb_continuous = "pipes"
 	attack_verb_simple = "bludgeon"
-	attack_sound = 'sound/items/weapons/smash.ogg'
+	attack_sound = '../assets/sound/items/weapons/smash.ogg'
 	unsuitable_atmos_damage = 7.5
 	unsuitable_cold_damage = 7.5
 	unsuitable_heat_damage = 7.5
@@ -28,7 +28,7 @@
 	/// How often can we shoot?
 	var/ranged_cooldown = 2 SECONDS
 	/// Projectile sound
-	var/projectilesound = 'sound/items/weapons/gun/pistol/shot.ogg'
+	var/projectilesound = '../assets/sound/items/weapons/gun/pistol/shot.ogg'
 	/// What gun shoot
 	var/casingtype = /obj/item/ammo_casing/c9mm
 	/// Lootbox
@@ -85,7 +85,7 @@
 	melee_damage_upper = 18
 	attack_verb_continuous = "smashes"
 	attack_verb_simple = "smash"
-	attack_sound = 'sound/items/weapons/bladeslice.ogg'
+	attack_sound = '../assets/sound/items/weapons/bladeslice.ogg'
 	ai_controller = /datum/ai_controller/basic_controller/looter
 	death_loot = list(
 		/obj/effect/decal/cleanable/blood/gibs,
@@ -104,7 +104,7 @@
 	icon_living = "scavshotgun"
 	maxHealth = 110
 	health = 110
-	projectilesound = 'sound/items/weapons/gun/shotgun/shot.ogg'
+	projectilesound = '../assets/sound/items/weapons/gun/shotgun/shot.ogg'
 	casingtype = /obj/item/ammo_casing/shotgun/buckshot
 	ai_controller = /datum/ai_controller/basic_controller/trooper/ranged/shotgunner/looter
 	ranged_attacker = TRUE
@@ -131,7 +131,7 @@
 	desc = "A scavenger with an outdated spacesuit, likely out here to get salvage."
 	icon_state = "scavsmg"
 	icon_living = "scavsmg"
-	projectilesound = 'sound/items/weapons/gun/pistol/shot.ogg'
+	projectilesound = '../assets/sound/items/weapons/gun/pistol/shot.ogg'
 	casingtype = /obj/item/ammo_casing/shotgun/buckshot
 	ai_controller = /datum/ai_controller/basic_controller/looter/ranged
 	unsuitable_atmos_damage = 0
@@ -151,7 +151,7 @@
 	icon_state = "scavlaser"
 	icon_living = "scavlaser"
 	ai_controller = /datum/ai_controller/basic_controller/looter/ranged
-	projectilesound = 'sound/items/weapons/lasercannonfire.ogg'
+	projectilesound = '../assets/sound/items/weapons/lasercannonfire.ogg'
 	casingtype = /obj/item/ammo_casing/energy/laser/hellfire
 	death_loot = list(
 		/obj/effect/spawner/random/maintenance/six,

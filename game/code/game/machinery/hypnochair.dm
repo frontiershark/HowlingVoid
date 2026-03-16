@@ -1,7 +1,7 @@
 /obj/machinery/hypnochair
 	name = "enhanced interrogation chamber"
 	desc = "A device used to perform \"enhanced interrogation\" through invasive mental conditioning."
-	icon = 'icons/obj/machines/implant_chair.dmi'
+	icon = '../assets/icons/obj/machines/implant_chair.dmi'
 	icon_state = "hypnochair"
 	base_icon_state = "hypnochair"
 	circuit = /obj/item/circuitboard/machine/hypnochair
@@ -91,11 +91,11 @@
 
 /obj/machinery/hypnochair/proc/interrogate()
 	if(!trigger_phrase)
-		playsound(get_turf(src), 'sound/machines/buzz/buzz-sigh.ogg', 25, TRUE)
+		playsound(get_turf(src), '../assets/sound/machines/buzz/buzz-sigh.ogg', 25, TRUE)
 		return
 	var/mob/living/carbon/C = occupant
 	if(!istype(C))
-		playsound(get_turf(src), 'sound/machines/buzz/buzz-sigh.ogg', 25, TRUE)
+		playsound(get_turf(src), '../assets/sound/machines/buzz/buzz-sigh.ogg', 25, TRUE)
 		return
 	victim = C
 	if(C.get_eye_protection() <= 0)
@@ -131,7 +131,7 @@
 	var/temp_trigger = trigger_phrase
 	trigger_phrase = "" //Erase evidence, in case the subject is able to look at the panel afterwards
 	audible_message(span_notice("[src] pings!"))
-	playsound(src, 'sound/machines/ping.ogg', 30, TRUE)
+	playsound(src, '../assets/sound/machines/ping.ogg', 30, TRUE)
 
 	if(QDELETED(victim) || victim != occupant)
 		victim = null

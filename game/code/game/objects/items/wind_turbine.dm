@@ -7,15 +7,15 @@
 
 /obj/item/portable_wind_turbine
 	name = "portable wind turbine"
-	icon = 'icons/obj/wind_turbine.dmi'
+	icon = '../assets/icons/obj/wind_turbine.dmi'
 	icon_state = "icon"
 	base_icon_state = "icon"
 	desc = "A portable wind turbine that can charge attached energy based weaponry, PDAs, and other devices. As a safety mechanism after an unprecedented amount of amputations, only charges when attached to your back / the floor."
-	worn_icon = 'icons/obj/wind_turbine.dmi'
+	worn_icon = '../assets/icons/obj/wind_turbine.dmi'
 	worn_icon_state = "base_turbine"
 	inhand_icon_state = "wind_turbine"
-	lefthand_file = 'icons/mob/inhands/64x64_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/64x64_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/64x64_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/64x64_righthand.dmi'
 	inhand_x_dimension = 64
 	inhand_y_dimension = 64
 	slot_flags = ITEM_SLOT_SUITSTORE | ITEM_SLOT_BACK
@@ -126,7 +126,7 @@
 /obj/item/portable_wind_turbine/proc/try_playsound()
 	if ((world.time - last_sound_time) < TURBINE_MIN_SECONDS_BETWEEN_SOUNDS)
 		return
-	playsound(src, 'sound/machines/woosh.ogg', 20, FALSE)
+	playsound(src, '../assets/sound/machines/woosh.ogg', 20, FALSE)
 	last_sound_time = world.time
 
 ///Sets the rotor animation tick to a new value. Returns TRUE if the rotor made a full rotation.
@@ -182,7 +182,7 @@
 	// even though imaginary friends can't put on a wind turbine I still have to do this
 	INVOKE_ASYNC(user, TYPE_PROC_REF(/mob/living/, emote), "scream")
 	user.apply_damage(5, BRUTE, head_to_bash, attacking_item=src)
-	playsound(source = src, soundin = 'sound/items/weapons/smash.ogg', vol = src.get_clamped_volume(), vary = TRUE)
+	playsound(source = src, soundin = '../assets/sound/items/weapons/smash.ogg', vol = src.get_clamped_volume(), vary = TRUE)
 
 /obj/item/portable_wind_turbine/wrench_act(mob/living/user, obj/item/tool)
 	. = NONE
@@ -316,7 +316,7 @@
 				charging_cell.give(power_to_give)
 				available_power -= power_to_give
 				if(charging_cell.charge == charging_cell.maxcharge)
-					playsound(src, 'sound/machines/ping.ogg', 30, TRUE)
+					playsound(src, '../assets/sound/machines/ping.ogg', 30, TRUE)
 					say("[charging] has finished recharging!")
 				else
 					using_power = TRUE

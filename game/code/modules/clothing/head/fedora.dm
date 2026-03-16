@@ -2,8 +2,8 @@
 	name = "fedora"
 	desc = "A really cool hat if you're a mobster. A really lame hat if you're not."
 	icon_state = "fedora"
-	icon = 'icons/obj/clothing/head/hats.dmi'
-	worn_icon = 'icons/mob/clothing/head/hats.dmi'
+	icon = '../assets/icons/obj/clothing/head/hats.dmi'
+	worn_icon = '../assets/icons/mob/clothing/head/hats.dmi'
 	hair_mask = /datum/hair_mask/standard_hat_low
 
 /obj/item/clothing/head/fedora/Initialize(mapload)
@@ -48,7 +48,7 @@
 
 /obj/item/clothing/head/fedora/greyscale
 	inhand_icon_state = null
-	icon = 'icons/map_icons/clothing/head/_head.dmi'
+	icon = '../assets/icons/map_icons/clothing/head/_head.dmi'
 	icon_state = "/obj/item/clothing/head/fedora/greyscale"
 	post_init_icon_state = "fedora_greyscale"
 	greyscale_config = /datum/greyscale_config/fedora

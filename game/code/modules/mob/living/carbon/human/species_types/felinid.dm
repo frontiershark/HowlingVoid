@@ -38,7 +38,7 @@
 	return ..()
 
 /datum/species/human/felinid/get_hiss_sound(mob/living/carbon/human/felinid)
-	return 'sound/mobs/humanoids/felinid/felinid_hiss.ogg'
+	return '../assets/sound/mobs/humanoids/felinid/felinid_hiss.ogg'
 
 /proc/mass_purrbation()
 	for(var/mob in GLOB.human_list)
@@ -86,7 +86,7 @@
 
 	if(!silent)
 		to_chat(soon_to_be_felinid, span_boldnotice("Something is nya~t right."))
-		playsound(get_turf(soon_to_be_felinid), 'sound/effects/meow1.ogg', 50, TRUE, -1)
+		playsound(get_turf(soon_to_be_felinid), '../assets/sound/effects/meow1.ogg', 50, TRUE, -1)
 
 /proc/purrbation_remove(mob/living/carbon/human/purrbated_human, silent = FALSE)
 	if(isfelinid(purrbated_human))

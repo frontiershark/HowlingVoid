@@ -5,7 +5,7 @@ GLOBAL_VAR_INIT(experimental_cloner_fuckup_chance, 50)
 /obj/machinery/experimental_cloner
 	name = "experimental cloning pod"
 	desc = "An early prototype of the currently-outlawed cloning pods used by Nanotrasen executives. I wonder if it still works?"
-	icon = 'icons/obj/machines/cloning.dmi'
+	icon = '../assets/icons/obj/machines/cloning.dmi'
 	icon_state = "pod_0"
 	base_icon_state = "pod"
 	density = TRUE
@@ -81,7 +81,7 @@ GLOBAL_VAR_INIT(experimental_cloner_fuckup_chance, 50)
 /// This one didn't make it
 /obj/machinery/experimental_cloner/proc/fail_growing()
 	new /obj/effect/gibspawner/human(drop_location())
-	playsound(src, 'sound/machines/toilet_flush.ogg', vol = 40, vary = TRUE)
+	playsound(src, '../assets/sound/machines/toilet_flush.ogg', vol = 40, vary = TRUE)
 	deltimer(running_timer)
 	on_finished()
 
@@ -100,7 +100,7 @@ GLOBAL_VAR_INIT(experimental_cloner_fuckup_chance, 50)
 	var/mob/living/result = create_result_mob()
 	result.mind_initialize()
 	mistake?.apply_to_mob(result)
-	playsound(src, 'sound/machines/microwave/microwave-end.ogg', vol = 100)
+	playsound(src, '../assets/sound/machines/microwave/microwave-end.ogg', vol = 100)
 
 	RegisterSignals(result, list(COMSIG_MOVABLE_MOVED, COMSIG_QDELETING, COMSIG_LIVING_DEATH), PROC_REF(on_clone_failed))
 

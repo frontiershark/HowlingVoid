@@ -6,8 +6,8 @@
 	icon = 'modular_nova/modules/clothing_improvements/icons/clothing.dmi'
 	worn_icon = 'modular_nova/modules/clothing_improvements/icons/clothing_worn.dmi'
 	worn_icon_teshari = 'modular_nova/master_files/icons/mob/clothing/species/teshari/back.dmi'
-	lefthand_file = 'icons/mob/inhands/equipment/backpack_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/backpack_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/backpack_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/backpack_righthand.dmi'
 
 /obj/item/storage/backpack/tinypaka
 	name = "waistpack"
@@ -17,8 +17,8 @@
 	icon = 'modular_nova/modules/clothing_improvements/icons/clothing.dmi'
 	worn_icon = 'modular_nova/modules/clothing_improvements/icons/clothing_worn.dmi'
 	worn_icon_teshari = 'modular_nova/master_files/icons/mob/clothing/species/teshari/back.dmi'
-	lefthand_file = 'icons/mob/inhands/equipment/backpack_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/backpack_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/backpack_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/backpack_righthand.dmi'
 
 /obj/item/storage/backpack/tinypakc
 	name = "chest pouch"
@@ -28,5 +28,5 @@
 	icon = 'modular_nova/modules/clothing_improvements/icons/clothing.dmi'
 	worn_icon = 'modular_nova/modules/clothing_improvements/icons/clothing_worn.dmi'
 	worn_icon_teshari = 'modular_nova/master_files/icons/mob/clothing/species/teshari/back.dmi'
-	lefthand_file = 'icons/mob/inhands/equipment/backpack_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/backpack_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/backpack_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/backpack_righthand.dmi'

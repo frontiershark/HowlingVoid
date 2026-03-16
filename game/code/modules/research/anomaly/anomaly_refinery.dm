@@ -14,7 +14,7 @@
 	name = "anomaly refinery"
 	desc = "An advanced machine capable of implosion-compressing raw anomaly cores into finished artifacts. Also equipped with state of the art bomb prediction software."
 	circuit = /obj/item/circuitboard/machine/anomaly_refinery
-	icon = 'icons/obj/machines/research.dmi'
+	icon = '../assets/icons/obj/machines/research.dmi'
 	base_icon_state = "explosive_compressor"
 	icon_state = "explosive_compressor"
 	density = TRUE
@@ -132,7 +132,7 @@
 		return
 
 	obj_flags |= EMAGGED
-	playsound(src, 'sound/machines/buzz/buzz-sigh.ogg', 50, vary = FALSE)
+	playsound(src, '../assets/sound/machines/buzz/buzz-sigh.ogg', 50, vary = FALSE)
 	say("ERROR: Unauthorized firmware access.")
 	return TRUE
 
@@ -158,7 +158,7 @@
 
 	if (obj_flags & EMAGGED)
 		say("ERROR: An firmware issue was detected while starting a process. Running autopatcher.")
-		playsound(src, 'sound/machines/ding.ogg', 50, vary = TRUE)
+		playsound(src, '../assets/sound/machines/ding.ogg', 50, vary = TRUE)
 		addtimer(CALLBACK(src, PROC_REF(error_test)), 2 SECONDS, TIMER_STOPPABLE | TIMER_UNIQUE | TIMER_NO_HASH_WAIT) // Synced with the sound.
 		return
 

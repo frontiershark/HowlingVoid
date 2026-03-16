@@ -16,7 +16,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 /obj/item/match
 	name = "match"
 	desc = "A simple match stick, used for lighting fine smokables."
-	icon = 'icons/obj/cigarettes.dmi'
+	icon = '../assets/icons/obj/cigarettes.dmi'
 	icon_state = "match_unlit"
 	inhand_icon_state = "cigoff"
 	base_icon_state = "match"
@@ -86,7 +86,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	if(lit)
 		matchburnout()
 
-	playsound(src, 'sound/effects/snap.ogg', 15, TRUE)
+	playsound(src, '../assets/sound/effects/snap.ogg', 15, TRUE)
 	broken = TRUE
 	attack_verb_continuous = string_list(list("flicks"))
 	attack_verb_simple = string_list(list("flick"))
@@ -100,11 +100,11 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	var/turf/my_turf = get_turf(src)
 	my_turf.pollute_turf(/datum/pollutant/sulphur, 5)
 	//NOVA EDIT END
-	playsound(src, 'sound/items/match_strike.ogg', 15, TRUE)
+	playsound(src, '../assets/sound/items/match_strike.ogg', 15, TRUE)
 	lit = TRUE
 	damtype = BURN
 	force = 3
-	hitsound = 'sound/items/tools/welder.ogg'
+	hitsound = '../assets/sound/items/tools/welder.ogg'
 	attack_verb_continuous = string_list(list("burns", "singes"))
 	attack_verb_simple = string_list(list("burn", "singe"))
 	if(isliving(loc))
@@ -198,8 +198,8 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 /obj/item/cigarette
 	name = "cigarette"
 	desc = "A roll of tobacco and nicotine. It is not food."
-	icon = 'icons/obj/cigarettes.dmi'
-	worn_icon = 'icons/mob/clothing/mask.dmi'
+	icon = '../assets/icons/obj/cigarettes.dmi'
+	worn_icon = '../assets/icons/mob/clothing/mask.dmi'
 	icon_state = "cigoff"
 	inhand_icon_state = "cigon" //gets overriden during intialize(), just have it for unit test sanity.
 	throw_speed = 0.5
@@ -418,7 +418,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		return
 
 	lit = TRUE
-	playsound(src.loc, 'sound/items/lighter/cig_light.ogg', 100, 1)
+	playsound(src.loc, '../assets/sound/items/lighter/cig_light.ogg', 100, 1)
 	make_cig_smoke()
 	set_light_on(TRUE)
 	if(!(flags_1 & INITIALIZED_1))
@@ -427,7 +427,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 
 	attack_verb_continuous = string_list(list("burns", "singes"))
 	attack_verb_simple = string_list(list("burn", "singe"))
-	hitsound = 'sound/items/tools/welder.ogg'
+	hitsound = '../assets/sound/items/tools/welder.ogg'
 	damtype = BURN
 	force = 4
 
@@ -483,7 +483,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	STOP_PROCESSING(SSobj, src)
 	reagents.flags |= NO_REACT
 	lit = FALSE
-	playsound(src.loc, 'sound/items/lighter/cig_snuff.ogg', 100, 1)
+	playsound(src.loc, '../assets/sound/items/lighter/cig_snuff.ogg', 100, 1)
 	update_appearance(UPDATE_ICON)
 	set_light_on(FALSE)
 	if(ismob(loc))
@@ -918,7 +918,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 /obj/item/cigbutt
 	name = "cigarette butt"
 	desc = "A manky old cigarette butt."
-	icon = 'icons/obj/cigarettes.dmi'
+	icon = '../assets/icons/obj/cigarettes.dmi'
 	icon_state = "cigbutt"
 	w_class = WEIGHT_CLASS_TINY
 	throwforce = 0
@@ -1034,7 +1034,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 /obj/item/rollingpaper
 	name = "rolling paper"
 	desc = "A thin piece of paper used to make fine smokeables."
-	icon = 'icons/obj/cigarettes.dmi'
+	icon = '../assets/icons/obj/cigarettes.dmi'
 	icon_state = "cig_paper"
 	w_class = WEIGHT_CLASS_TINY
 
@@ -1049,7 +1049,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 /obj/item/vape
 	name = "\improper E-Cigarette"
 	desc = "A classy and highly sophisticated electronic cigarette, for classy and dignified gentlemen. A warning label reads \"Warning: Do not fill with flammable materials.\""//<<< i'd vape to that.
-	icon = 'icons/map_icons/items/_item.dmi'
+	icon = '../assets/icons/map_icons/items/_item.dmi'
 	icon_state = "/obj/item/vape"
 	post_init_icon_state = "vape"
 	worn_icon_state = "vape_worn"
@@ -1222,7 +1222,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		do_chem_smoke(amount = smoke_amount, holder = src, location = loc, carry = reagents, carry_limit = 20, smoke_type = /datum/effect_system/fluid_spread/smoke/chem/smoke_machine)
 		reagents.remove_all(smoke_amount / 24)
 		if(prob(5)) //small chance for the vape to break and deal damage if it's emagged
-			playsound(get_turf(src), 'sound/effects/pop_expl.ogg', 50, FALSE)
+			playsound(get_turf(src), '../assets/sound/effects/pop_expl.ogg', 50, FALSE)
 			M.apply_damage(20, BURN, BODY_ZONE_HEAD)
 			M.Paralyze(300)
 			do_sparks(5, TRUE, src)

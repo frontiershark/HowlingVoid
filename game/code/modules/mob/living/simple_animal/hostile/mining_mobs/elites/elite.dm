@@ -9,7 +9,7 @@
 /mob/living/simple_animal/hostile/asteroid/elite
 	name = "elite"
 	desc = "An elite monster, found in one of the strange tumors on lavaland."
-	icon = 'icons/mob/simple/lavaland/lavaland_elites.dmi'
+	icon = '../assets/icons/mob/simple/lavaland/lavaland_elites.dmi'
 	abstract_type = /mob/living/simple_animal/hostile/asteroid/elite
 	faction = list(FACTION_MINING, FACTION_BOSS)
 	robust_searching = TRUE
@@ -69,7 +69,7 @@ While using this makes the system rely on OnFire, it still gives options for tim
 
 /datum/action/innate/elite_attack
 	name = "Elite Attack"
-	button_icon = 'icons/mob/actions/actions_elites.dmi'
+	button_icon = '../assets/icons/mob/actions/actions_elites.dmi'
 	button_icon_state = ""
 	background_icon_state = "bg_default"
 	overlay_icon_state = "bg_default_border"
@@ -125,7 +125,7 @@ While using this makes the system rely on OnFire, it still gives options for tim
 	desc = "An odd, pulsing tumor sticking out of the ground.  You feel compelled to reach out and touch it..."
 	armor_type = /datum/armor/structure_elite_tumor
 	resistance_flags = INDESTRUCTIBLE
-	icon = 'icons/obj/mining_zones/tumor.dmi'
+	icon = '../assets/icons/obj/mining_zones/tumor.dmi'
 	icon_state = "tumor"
 	pixel_x = -16
 	base_pixel_x = -16
@@ -172,7 +172,7 @@ While using this makes the system rely on OnFire, it still gives options for tim
 				span_boldwarning("[src] convulses as your arm enters its radius.  Your instincts tell you to step back."))
 			make_activator(user)
 			if(boosted)
-				mychild.playsound_local(get_turf(mychild), 'sound/effects/magic.ogg', 40, 0)
+				mychild.playsound_local(get_turf(mychild), '../assets/sound/effects/magic.ogg', 40, 0)
 				to_chat(mychild, "<b>Someone has activated your tumor.  You will be returned to fight shortly, get ready!</b>")
 			addtimer(CALLBACK(src, PROC_REF(return_elite)), 3 SECONDS)
 			INVOKE_ASYNC(src, PROC_REF(arena_checks))
@@ -193,7 +193,7 @@ While using this makes the system rely on OnFire, it still gives options for tim
 			if(chosen_one)
 				audible_message(span_boldwarning("The stirring sounds increase in volume!"))
 				elitemind = chosen_one
-				elitemind.playsound_local(get_turf(elitemind), 'sound/effects/magic.ogg', 40, 0)
+				elitemind.playsound_local(get_turf(elitemind), '../assets/sound/effects/magic.ogg', 40, 0)
 				to_chat(elitemind, "<b>You have been chosen to play as a Lavaland Elite.\nIn a few seconds, you will be summoned on Lavaland as a monster to fight your activator, in a fight to the death.\n\
 					Your attacks can be switched using the buttons on the top left of the HUD, and used by clicking on targets or tiles similar to a gun.\n\
 					While the opponent might have an upper hand with  powerful mining equipment and tools, you have great power normally limited by AI mobs.\n\
@@ -209,7 +209,7 @@ While using this makes the system rely on OnFire, it still gives options for tim
 	var/selectedspawn = pick(potentialspawns)
 	mychild = new selectedspawn(loc)
 	visible_message(span_boldwarning("[mychild] emerges from [src]!"))
-	playsound(loc,'sound/effects/phasein.ogg', 200, 0, 50, TRUE, TRUE)
+	playsound(loc,'../assets/sound/effects/phasein.ogg', 200, 0, 50, TRUE, TRUE)
 	if(boosted)
 		mychild.PossessByPlayer(elitemind.key)
 		mychild.sentience_act()
@@ -227,7 +227,7 @@ While using this makes the system rely on OnFire, it still gives options for tim
 /obj/structure/elite_tumor/proc/return_elite()
 	mychild.forceMove(loc)
 	visible_message(span_boldwarning("[mychild] emerges from [src]!"))
-	playsound(loc,'sound/effects/phasein.ogg', 200, 0, 50, TRUE, TRUE)
+	playsound(loc,'../assets/sound/effects/phasein.ogg', 200, 0, 50, TRUE, TRUE)
 	mychild.revive(HEAL_ALL)
 	if(boosted)
 		mychild.maxHealth *= 1 / ELITE_POST_BATTLE_HEALTH_MULTIPLIER //we multiply it back to its original value
@@ -325,14 +325,14 @@ While using this makes the system rely on OnFire, it still gives options for tim
 	if(activator != null && get_dist(src, activator) >= 12)
 		activator.forceMove(loc)
 		visible_message(span_boldwarning("[activator] suddenly reappears above [src]!"))
-		playsound(loc,'sound/effects/phasein.ogg', 200, 0, 50, TRUE, TRUE)
+		playsound(loc,'../assets/sound/effects/phasein.ogg', 200, 0, 50, TRUE, TRUE)
 	if(mychild != null && get_dist(src, mychild) >= 12)
 		mychild.forceMove(loc)
 		visible_message(span_boldwarning("[mychild] suddenly reappears above [src]!"))
-		playsound(loc,'sound/effects/phasein.ogg', 200, 0, 50, TRUE, TRUE)
+		playsound(loc,'../assets/sound/effects/phasein.ogg', 200, 0, 50, TRUE, TRUE)
 
 /obj/structure/elite_tumor/proc/onEliteLoss()
-	playsound(loc,'sound/effects/tendril_destroyed.ogg', 200, 0, 50, TRUE, TRUE)
+	playsound(loc,'../assets/sound/effects/tendril_destroyed.ogg', 200, 0, 50, TRUE, TRUE)
 	visible_message(span_boldwarning("[src] begins to convulse violently before beginning to dissipate."))
 	visible_message(span_boldwarning("As [src] closes, something is forced up from down below."))
 	var/obj/structure/closet/crate/necropolis/tendril/lootbox = new /obj/structure/closet/crate/necropolis/tendril(loc)
@@ -352,7 +352,7 @@ While using this makes the system rely on OnFire, it still gives options for tim
 		mychild.maxHealth *= ELITE_POST_BATTLE_HEALTH_MULTIPLIER
 		mychild.health = mychild.maxHealth
 	if(times_won == 1)
-		mychild.playsound_local(get_turf(mychild), 'sound/effects/magic.ogg', 40, 0)
+		mychild.playsound_local(get_turf(mychild), '../assets/sound/effects/magic.ogg', 40, 0)
 		to_chat(mychild, span_boldwarning("As the life in the activator's eyes fade, the forcefield around you dies out and you feel your power subside.\n\
 			Despite this inferno being your home, you feel as if you aren't welcome here anymore.\n\
 			Without any guidance, your purpose is now for you to decide."))
@@ -366,10 +366,10 @@ While using this makes the system rely on OnFire, it still gives options for tim
 /obj/item/tumor_shard
 	name = "tumor shard"
 	desc = "A strange, sharp, crystal shard from an odd tumor on Lavaland.  Stabbing the corpse of a lavaland elite with this will revive them, assuming their soul still lingers.  Revived lavaland elites only have half their max health, but are completely loyal to their reviver."
-	icon = 'icons/obj/mining_zones/artefacts.dmi'
+	icon = '../assets/icons/obj/mining_zones/artefacts.dmi'
 	icon_state = "crevice_shard"
-	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/tools_righthand.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/equipment/tools_lefthand.dmi'
+	righthand_file = '../assets/icons/mob/inhands/equipment/tools_righthand.dmi'
 	inhand_icon_state = "screwdriver_head"
 	throwforce = 5
 	w_class = WEIGHT_CLASS_SMALL
@@ -388,7 +388,7 @@ While using this makes the system rely on OnFire, it still gives options for tim
 	elite.set_faction(null)
 	elite.revive(HEAL_ALL)
 	user.visible_message(span_notice("[user] stabs [elite] with [src], reviving it."))
-	elite.playsound_local(get_turf(elite), 'sound/effects/magic.ogg', 40, 0)
+	elite.playsound_local(get_turf(elite), '../assets/sound/effects/magic.ogg', 40, 0)
 	to_chat(elite, span_userdanger("You have been revived by [user]. While you can't speak to them, you owe [user] a great debt.  Assist [user.p_them()] in achieving [user.p_their()] goals, regardless of risk."))
 	to_chat(elite, span_boldbig("Note that you now share the loyalties of [user].  You are expected not to intentionally sabotage their faction unless commanded to!"))
 	elite.maxHealth *= ELITE_POST_BATTLE_HEALTH_MULTIPLIER
@@ -401,7 +401,7 @@ While using this makes the system rely on OnFire, it still gives options for tim
 
 /obj/effect/temp_visual/elite_tumor_wall
 	name = "magic wall"
-	icon = 'icons/turf/walls/hierophant_wall_temp.dmi'
+	icon = '../assets/icons/turf/walls/hierophant_wall_temp.dmi'
 	icon_state = "hierophant_wall_temp-0"
 	base_icon_state = "hierophant_wall_temp"
 	smoothing_flags = SMOOTH_BITMASK

@@ -12,10 +12,10 @@
 /obj/item/gun/blastcannon
 	name = "blast cannon"
 	desc = "A surprisingly portable device used to concentrate a bomb's blast energy to a narrow wave. Small enough to stow in a bag."
-	icon = 'icons/obj/weapons/guns/wide_guns.dmi'
+	icon = '../assets/icons/obj/weapons/guns/wide_guns.dmi'
 	icon_state = "blastcannon_empty"
-	lefthand_file = 'icons/mob/inhands/weapons/64x_guns_left.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/64x_guns_right.dmi'
+	lefthand_file = '../assets/icons/mob/inhands/weapons/64x_guns_left.dmi'
+	righthand_file = '../assets/icons/mob/inhands/weapons/64x_guns_right.dmi'
 	inhand_x_dimension = 64
 	base_pixel_x = -2
 	pixel_x = -2
@@ -23,7 +23,7 @@
 	base_icon_state = "blastcannon"
 	w_class = WEIGHT_CLASS_NORMAL
 	force = 10
-	fire_sound = 'sound/items/weapons/blastcannon.ogg'
+	fire_sound = '../assets/sound/items/weapons/blastcannon.ogg'
 	item_flags = NONE
 	clumsy_check = FALSE
 	randomspread = FALSE

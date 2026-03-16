@@ -25,15 +25,15 @@ SUBSYSTEM_DEF(tgui)
 	var/basehtml
 
 /datum/controller/subsystem/tgui/PreInit()
-	basehtml = file2text('tgui/public/tgui.html')
+	basehtml = file2text('../interface/compiled/tgui.html')
 
 	// Inject inline helper functions
-	var/helpers = file2text('tgui/public/helpers.min.js')
+	var/helpers = file2text('../interface/native/bridge/helpers.js')
 	helpers = "<script type='text/javascript'>\n[helpers]\n</script>"
 	basehtml = replacetextEx(basehtml, "<!-- tgui:helpers -->", helpers)
 
 	// Inject inline ntos-error styles
-	var/ntos_error = file2text('tgui/public/ntos-error.min.css')
+	var/ntos_error = file2text('../interface/native/bridge/ntos-error.css')
 	ntos_error = "<style type='text/css'>\n[ntos_error]\n</style>"
 	basehtml = replacetextEx(basehtml, "<!-- tgui:ntos-error -->", ntos_error)
 
@@ -49,7 +49,7 @@ SUBSYSTEM_DEF(tgui)
 	if(CONFIG_GET(string/asset_transport) == "webroot")
 		var/datum/asset_transport/webroot/webroot = SSassets.transport
 
-		var/datum/asset_cache_item/item = webroot.register_asset("iframe.html", file("tgui/public/iframe.html"))
+		var/datum/asset_cache_item/item = webroot.register_asset("iframe.html", file("../interface/compiled/iframe.html"))
 		basehtml = replacetext(basehtml, "\[tgui:storagecdn\]", webroot.get_asset_url("iframe.html", item))
 		return
 

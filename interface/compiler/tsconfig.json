@@ -13,14 +13,12 @@
 		"moduleResolution": "Bundler",
 		"noEmit": true,
 		"paths": {
-			"app": ["src/app"],
+			"overlay": ["src/overlay"],
 			"app/*": ["src/app/*"],
 			"chat-panel": ["src/chat-panel"],
 			"chat-panel/*": ["src/chat-panel/*"],
 			"chat-input": ["src/chat-input"],
 			"chat-input/*": ["src/chat-input/*"],
-			"dev-server": ["src/dev-server"],
-			"dev-server/*": ["src/dev-server/*"]
 		},
 		"resolveJsonModule": true,
 		"skipLibCheck": true,
@@ -28,5 +26,5 @@
 		"strictNullChecks": true,
 		"target": "ESNext"
 	},
-	"include": ["./global.d.ts", "./src"]
+	"include": ["./src/common/global.d.ts", "./src"]
 }

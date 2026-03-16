@@ -1,6 +1,21 @@
 {
-	"name": "tgui-workspace",
-	"version": "6.0.0",
+	"dependencies": {
+		"color-blend": "4.0.0",
+		"dateformat": "^5.0.3",
+		"dompurify": "^3.2.5",
+		"es-toolkit": "^1.43.0",
+		"highlight.js": "^11.11.1",
+		"jotai": "^2.16.0",
+		"js-yaml": "^4.1.0",
+		"marked": "^15.0.11",
+		"marked-base-url": "^1.1.6",
+		"marked-smartypants": "^1.1.9",
+		"react": "^19.1.0",
+		"react-dom": "^19.1.0",
+		"react-json-tree": "^0.20.0",
+		"tgui-core": "^5.6.0",
+		"zod": "^4.2.1"
+	},
 	"devDependencies": {
 		"@biomejs/biome": "^2.3.10",
 		"@happy-dom/global-registrator": "^20.0.11",
@@ -20,15 +35,9 @@
 	"packageManager": "bun@1.2.16",
 	"private": true,
 	"scripts": {
-		"tgui:analyze": "rspack --analyze",
-		"tgui:build": "rspack build",
-		"tgui:dev": "bun --smol src/dev-server/index.ts",
-		"tgui:fix": "biome check --write --unsafe .",
-		"tgui:lint": "biome lint .",
-		"tgui:test": "bun test",
-		"tgui:tsc": "tsc"
-	},
-	"workspaces": [
-		"src/*"
-	]
+		"analyze": "rspack --analyze",
+		"build": "biome lint . && tsc && rspack build",
+		"watch": "biome lint . && tsc && rspack --watch",
+		"test": "bun test"
+	}
 }

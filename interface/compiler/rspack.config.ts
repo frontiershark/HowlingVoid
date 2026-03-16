@@ -3,7 +3,7 @@ import path from 'node:path';
 import { defineConfig } from '@rspack/cli';
 import rspack, { type StatsOptions } from '@rspack/core';
 
-export function createStats(verbose: boolean): StatsOptions {
+function createStats(verbose: boolean): StatsOptions {
   return {
     assets: verbose,
     builtAt: verbose,
@@ -22,14 +22,16 @@ export function createStats(verbose: boolean): StatsOptions {
 
 const dirname = path.resolve();
 
+const entries = {
+  overlay: './src/overlay',
+  'chat-panel': './src/chat-panel',
+  'chat-input': './src/chat-input',
+};
+
 export default defineConfig({
   context: dirname,
   devtool: false,
-  entry: {
-    tgui: './src/app',
-    'tgui-panel': './src/chat-panel',
-    'tgui-say': './src/chat-input',
-  },
+  entry: entries,
   mode: 'production',
   module: {
     rules: [
@@ -77,7 +79,6 @@ export default defineConfig({
           filename: '[name][ext]',
         },
       },
-
       {
         test: /\.svg$/,
         oneOf: [
@@ -100,8 +101,8 @@ export default defineConfig({
   },
   output: {
     path: path.resolve(dirname, '../compiled'),
-    filename: '[name].bundle.js',
-    chunkFilename: '[name].bundle.js',
+    filename: '[name]/[name].bundle.js',
+    chunkFilename: '[name]/[name].bundle.js',
     chunkLoadTimeout: 15000,
     publicPath: '/',
     assetModuleFilename: '[name][ext]',
@@ -111,8 +112,8 @@ export default defineConfig({
   },
   plugins: [
     new rspack.CssExtractRspackPlugin({
-      chunkFilename: '[name].bundle.css',
-      filename: '[name].bundle.css',
+      chunkFilename: '[name]/[name].bundle.css',
+      filename: '[name]/[name].bundle.css',
     }),
     new rspack.EnvironmentPlugin({
       NODE_ENV: 'production',
@@ -128,12 +129,12 @@ export default defineConfig({
   ],
   resolve: {
     extensions: ['.tsx', '.ts', '.js', '.jsx'],
-    alias: {
-      tgui: path.resolve(dirname, './src/app'),
-      'tgui-panel': path.resolve(dirname, './src/chat-panel'),
-      'tgui-say': path.resolve(dirname, './src/chat-input'),
-      'tgui-dev-server': path.resolve(dirname, './src/dev-server'),
-    },
+    alias: Object.fromEntries(
+      Object.entries(entries).map(([name, entry]) => [
+        name,
+        path.resolve(dirname, entry),
+      ]),
+    ),
   },
   stats: createStats(true),
   target: ['web', 'browserslist:edge >= 123'],
